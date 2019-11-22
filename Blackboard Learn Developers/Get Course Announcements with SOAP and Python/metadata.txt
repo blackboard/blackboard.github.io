@@ -1,0 +1,11 @@
+Id: 1141
+Title: Get Course Announcements with SOAP and Python
+Status: published
+Created: 2015-07-16T13:09:09.836+0000
+Tags: ['web services', 'soap', 'python', 'blackboard learn', 'example', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1363
+Author: Scott Hurrey
+Status: published
+Categories: ['Examples', 'SOAP Web Services']
+Status: published

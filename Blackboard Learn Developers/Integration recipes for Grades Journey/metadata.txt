@@ -1,0 +1,11 @@
+Id: 3551
+Title: Integration recipes for Grades Journey
+Status: published
+Created: 2017-04-14T18:19:32.054+0000
+Tags: ['developer']
+Space: Blackboard Learn Developers
+Content Id: 34467
+Author: Melanie Barker
+Status: published
+Categories: []
+Status: published

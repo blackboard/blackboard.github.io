@@ -1,0 +1,11 @@
+Id: 1128
+Title: Development Server Options
+Status: published
+Created: 2015-07-13T21:33:11.382+0000
+Tags: ['web services', 'building blocks', 'getting started', 'blackboard learn', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1310
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']
+Status: published

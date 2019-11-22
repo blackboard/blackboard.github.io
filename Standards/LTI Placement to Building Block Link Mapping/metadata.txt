@@ -1,0 +1,11 @@
+Id: 4475
+Title: LTI Placement to Building Block Link Mapping
+Status: published
+Created: 2018-03-20T16:11:50.850+0000
+Tags: ['lti', 'ims learning tools interoperability', 'standards', 'ims', 'ims global', 'developer']
+Space: Standards
+Content Id: 53144
+Author: Scott Hurrey
+Status: published
+Categories: ['LTI']
+Status: published

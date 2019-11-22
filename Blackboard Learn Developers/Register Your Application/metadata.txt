@@ -1,0 +1,11 @@
+Id: 4566
+Title: Register Your Application
+Status: published
+Created: 2018-04-04T16:21:54.257+0000
+Tags: ['developer']
+Space: Blackboard Learn Developers
+Content Id: 54075
+Author: Ryan Haber
+Status: published
+Categories: []
+Status: published

@@ -1,0 +1,11 @@
+Id: 1428
+Title: Where and How to Use Building Blocks and Other Integrations
+Status: published
+Created: 2015-11-30T20:41:23.936+0000
+Tags: ['design', 'building blocks', 'getting started', 'blackboard learn', 'migrated from edugage', 'webservices', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5559
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Getting Started', 'OpenDB', 'SOAP Web Services']
+Status: published

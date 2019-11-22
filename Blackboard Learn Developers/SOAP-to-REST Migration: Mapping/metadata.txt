@@ -1,0 +1,11 @@
+Id: 5285
+Title: SOAP-to-REST Migration: Mapping
+Status: published
+Created: 2018-10-25T18:10:18.382+0000
+Tags: ['rest', 'soap', 'learn', 'migration', 'soap to rest', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 61427
+Author: Scott Hurrey
+Status: published
+Categories: ['SOAP Web Services']
+Status: published

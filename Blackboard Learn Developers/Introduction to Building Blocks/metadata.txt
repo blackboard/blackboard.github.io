@@ -1,0 +1,11 @@
+Id: 1120
+Title: Introduction to Building Blocks
+Status: published
+Created: 2015-07-13T15:25:13.665+0000
+Tags: ['building blocks', 'blackboard learn', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1302
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

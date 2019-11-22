@@ -1,0 +1,11 @@
+Id: 1841
+Title: Web Services
+Status: published
+Created: 2016-06-17T20:04:21.808+0000
+Tags: ['developer']
+Space: Blackboard Learn Developers
+Content Id: 16538
+Author: Kelley MacEwen
+Status: published
+Categories: ['Tutorials']
+Status: published

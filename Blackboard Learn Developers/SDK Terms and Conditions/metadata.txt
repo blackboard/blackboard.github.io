@@ -1,0 +1,11 @@
+Id: 1418
+Title: SDK Terms and Conditions
+Status: published
+Created: 2015-11-30T17:00:20.117+0000
+Tags: ['develop', 'resources', 'migrated from edugarage', 'terms and conditions', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5541
+Author: Kelley MacEwen
+Status: published
+Categories: ['Getting Started']
+Status: published

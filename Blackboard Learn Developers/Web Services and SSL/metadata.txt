@@ -1,0 +1,11 @@
+Id: 1570
+Title: Web Services and SSL
+Status: published
+Created: 2015-12-11T16:47:07.490+0000
+Tags: ['web services', 'tutorials', 'webct', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 6252
+Author: Kelley MacEwen
+Status: published
+Categories: []
+Status: published

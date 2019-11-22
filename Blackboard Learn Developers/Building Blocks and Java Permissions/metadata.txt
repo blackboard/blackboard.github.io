@@ -1,0 +1,11 @@
+Id: 1125
+Title: Building Blocks and Java Permissions
+Status: published
+Created: 2015-07-13T19:32:42.308+0000
+Tags: ['building blocks', 'blackboard learn', 'permissions', 'bb-manifest.xml', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1307
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

@@ -1,0 +1,11 @@
+Id: 2018
+Title: Tutorial: Build a Java Command Line REST Application
+Status: published
+Created: 2016-07-27T13:34:00.666+0000
+Tags: ['rest', 'java', 'tutorial', 'developers', 'developer']
+Space: REST
+Content Id: 19446
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

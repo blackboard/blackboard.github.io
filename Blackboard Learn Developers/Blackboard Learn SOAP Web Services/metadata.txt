@@ -1,0 +1,11 @@
+Id: 1073
+Title: Blackboard Learn SOAP Web Services
+Status: published
+Created: 2015-06-25T16:51:06.556+0000
+Tags: ['web services', 'soap', 'blackboard learn', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1195
+Author: Scott Hurrey
+Status: published
+Categories: ['SOAP Web Services']
+Status: published

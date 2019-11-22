@@ -1,0 +1,11 @@
+Id: 1415
+Title: Schema Definitions
+Status: published
+Created: 2015-11-30T16:41:28.896+0000
+Tags: ['develop', 'opendb', 'schema.xml', 'schema definitions', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5537
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'OpenDB']
+Status: published

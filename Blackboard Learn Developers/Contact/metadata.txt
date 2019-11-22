@@ -1,0 +1,11 @@
+Id: 1416
+Title: Contact
+Status: published
+Created: 2015-11-30T16:51:43.207+0000
+Tags: ['contact', 'developers', 'developer community', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5539
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'SOAP Web Services']
+Status: published

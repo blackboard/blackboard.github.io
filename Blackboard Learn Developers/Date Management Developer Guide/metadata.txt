@@ -1,0 +1,11 @@
+Id: 2185
+Title: Date Management Developer Guide
+Status: published
+Created: 2016-08-04T14:52:46.960+0000
+Tags: ['blackboard learn', 'api', 'date management', 'extension points', 'datemanagement', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 19969
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks']
+Status: published

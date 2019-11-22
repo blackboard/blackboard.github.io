@@ -1,0 +1,11 @@
+Id: 1654
+Title: REST Demo Using Java
+Status: published
+Created: 2016-03-04T20:38:00.986+0000
+Tags: ['rest', 'java', 'blackboard learn', 'example', 'sample code', 'saas', 'developer']
+Space: REST
+Content Id: 10387
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

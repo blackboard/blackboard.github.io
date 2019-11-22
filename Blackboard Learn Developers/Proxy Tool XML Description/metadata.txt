@@ -1,0 +1,11 @@
+Id: 1445
+Title: Proxy Tool XML Description
+Status: published
+Created: 2015-12-02T15:52:21.386+0000
+Tags: ['web services', 'develop', 'proxy tools', 'sample code', 'xml', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5683
+Author: Kelley MacEwen
+Status: published
+Categories: []
+Status: published

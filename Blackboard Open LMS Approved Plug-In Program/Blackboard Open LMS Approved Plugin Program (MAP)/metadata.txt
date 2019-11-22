@@ -1,0 +1,11 @@
+Id: 1501
+Title: Blackboard Open LMS Approved Plugin Program (MAP)
+Status: published
+Created: 2015-12-03T17:03:39.450+0000
+Tags: ['developers', 'map', 'blackboard open lms', 'developer']
+Space: Blackboard Open LMS Approved Plug-In Program
+Content Id: 5785
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

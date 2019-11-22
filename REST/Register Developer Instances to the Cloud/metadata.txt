@@ -1,0 +1,11 @@
+Id: 1664
+Title: Register Developer Instances to the Cloud
+Status: published
+Created: 2016-03-04T14:27:35.369+0000
+Tags: ['rest', 'blackboard learn', 'developer virtual machine', 'saas', 'developer portal', 'java8', 'cloud connector', 'developer']
+Space: REST
+Content Id: 10362
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

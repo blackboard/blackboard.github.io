@@ -1,0 +1,11 @@
+Id: 4616
+Title: Guides for Learn REST Methods
+Status: published
+Created: 2018-05-04T15:24:07.321+0000
+Tags: ['developer']
+Space: Blackboard Learn Developers
+Content Id: 55097
+Author: Ryan Haber
+Status: published
+Categories: []
+Status: published

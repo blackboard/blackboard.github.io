@@ -1,0 +1,11 @@
+Id: 1592
+Title: Getting Started With REST
+Status: published
+Created: 2016-01-29T18:04:49.072+0000
+Tags: ['developer', 'rest', 'getting started', 'api', 'blackboard', 'developers']
+Space: REST
+Content Id: 7754
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

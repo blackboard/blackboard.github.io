@@ -1,0 +1,11 @@
+Id: 1399
+Title: BIRT report installable as Building Block
+Status: published
+Created: 2015-11-25T21:20:39.667+0000
+Tags: ['develop', 'guides', 'building blocks', 'birt', 'report', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5474
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Examples']
+Status: published

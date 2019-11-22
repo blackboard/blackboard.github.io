@@ -1,0 +1,11 @@
+Id: 1314
+Title: SOAP Web Services Sample Code: Build Java Client Library
+Status: published
+Created: 2015-09-24T20:55:11.433+0000
+Tags: ['web services', 'soap', 'java', 'tutorial', 'blackboard learn', 'sample code', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 4060
+Author: Scott Hurrey
+Status: published
+Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']
+Status: published

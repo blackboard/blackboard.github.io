@@ -1,0 +1,11 @@
+Id: 1595
+Title: Preparing Your Building Blocks For Learn SaaS and Newer Learn Versions
+Status: published
+Created: 2016-02-02T23:22:54.168+0000
+Tags: ['building blocks', 'blackboard learn', 'saas', 'learn', 'b2', 'building block', 'prepare', 'requirements', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 7911
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

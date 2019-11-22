@@ -1,0 +1,11 @@
+Id: 1398
+Title: Running code from the command line
+Status: published
+Created: 2015-11-25T21:14:34.441+0000
+Tags: ['develop', 'developer guides', 'blackboard learn', 'developers', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5473
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

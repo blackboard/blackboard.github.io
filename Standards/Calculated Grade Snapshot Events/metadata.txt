@@ -1,0 +1,11 @@
+Id: 4571
+Title: Calculated Grade Snapshot Events
+Status: published
+Created: 2018-04-03T21:35:29.071+0000
+Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'calculatedgradesnapshotevent', 'developer']
+Space: Standards
+Content Id: 54028
+Author: Scott Hurrey
+Status: published
+Categories: ['Caliper']
+Status: published

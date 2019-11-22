@@ -1,0 +1,11 @@
+Id: 1541
+Title: About Office Hours
+Status: published
+Created: 2015-12-09T20:23:03.093+0000
+Tags: ['community', 'calendar', 'office hours', 'blackboard learn', 'developers', 'technical office hours', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 6120
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

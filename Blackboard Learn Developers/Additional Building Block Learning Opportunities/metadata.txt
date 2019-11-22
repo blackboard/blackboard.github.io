@@ -1,0 +1,11 @@
+Id: 1430
+Title: Additional Building Block Learning Opportunities
+Status: published
+Created: 2015-11-30T20:57:17.270+0000
+Tags: ['develop', 'resources', 'help', 'web services', 'building blocks', 'getting started', 'developers', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5563
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']
+Status: published

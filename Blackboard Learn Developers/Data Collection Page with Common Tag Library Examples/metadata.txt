@@ -1,0 +1,11 @@
+Id: 1411
+Title: Data Collection Page with Common Tag Library Examples
+Status: published
+Created: 2015-11-30T15:25:29.086+0000
+Tags: ['develop', 'example', 'b2', 'sample code', 'migrated from edugarage', 'tag library', 'tag libraries', 'data collection', 'step', 'form', 'building blocks', 'taglibs', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5532
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Examples', 'Getting Started']
+Status: published

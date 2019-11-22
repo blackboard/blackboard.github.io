@@ -1,0 +1,11 @@
+Id: 1106
+Title: Developer Blogs
+Status: published
+Created: 2015-07-10T20:21:48.839+0000
+Tags: ['developer resources', 'blackboard learn', 'developer blogs', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1286
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Examples', 'Getting Started', 'SOAP Web Services', 'Tutorials']
+Status: published

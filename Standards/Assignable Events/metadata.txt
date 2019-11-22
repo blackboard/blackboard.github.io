@@ -1,0 +1,11 @@
+Id: 4554
+Title: Assignable Events
+Status: published
+Created: 2018-04-03T00:04:59.382+0000
+Tags: ['developer', 'standards', 'caliper', 'ims', 'ims global', 'assignableevent', 'submit an assignment', 'submit a group assignment']
+Space: Standards
+Content Id: 53953
+Author: Scott Hurrey
+Status: published
+Categories: ['Caliper']
+Status: published

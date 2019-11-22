@@ -1,0 +1,11 @@
+Id: 1400
+Title: Code Quality Initiative
+Status: published
+Created: 2015-11-25T21:30:56.125+0000
+Tags: ['develop', 'best practice', 'b2', 'tutorials', 'migrated from edugarage', 'sonar', 'pmd', 'static code analysis', 'code quality', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5475
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

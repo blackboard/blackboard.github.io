@@ -1,0 +1,11 @@
+Id: 1146
+Title: FAQs
+Status: published
+Created: 2015-07-16T17:14:18.296+0000
+Tags: ['blackboard learn', 'faqs', 'developers', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1396
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services', 'Tutorials']
+Status: published

@@ -1,0 +1,11 @@
+Id: 1878
+Title: Q2 2016 Installer Recording
+Status: published
+Created: 2016-06-30T14:25:08.561+0000
+Tags: ['learn', 'installer', 'new installer', 'q2 2016', 'admin office hours', 'self-hosted', 'managed-hosted', 'install', 'developer']
+Space: Technical Office Hours
+Content Id: 17154
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

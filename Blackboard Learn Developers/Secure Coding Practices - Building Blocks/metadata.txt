@@ -1,0 +1,11 @@
+Id: 1119
+Title: Secure Coding Practices - Building Blocks
+Status: published
+Created: 2015-07-13T15:11:46.735+0000
+Tags: ['building blocks', 'best practices', 'security', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1301
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

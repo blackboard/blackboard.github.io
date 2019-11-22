@@ -1,0 +1,11 @@
+Id: 1022
+Title: Developer Resources
+Status: published
+Created: 2015-06-19T13:09:19.300+0000
+Tags: ['developer resources', 'blackboard learn', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1093
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']
+Status: published

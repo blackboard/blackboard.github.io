@@ -1,0 +1,11 @@
+Id: 2372
+Title: Advanced REST - DevOps on the Desktop
+Status: published
+Created: 2016-08-24T16:41:30.383+0000
+Tags: ['developer', 'rest', 'devops']
+Space: Technical Office Hours
+Content Id: 21093
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

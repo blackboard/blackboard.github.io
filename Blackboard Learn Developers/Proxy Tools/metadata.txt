@@ -1,0 +1,11 @@
+Id: 1112
+Title: Proxy Tools
+Status: published
+Created: 2015-07-11T14:12:34.401+0000
+Tags: ['web services', 'soap', 'blackboard learn', 'proxy tools', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1291
+Author: Scott Hurrey
+Status: published
+Categories: ['SOAP Web Services']
+Status: published

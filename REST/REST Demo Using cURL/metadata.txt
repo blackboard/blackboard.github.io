@@ -1,0 +1,11 @@
+Id: 1767
+Title: REST Demo Using cURL
+Status: published
+Created: 2016-05-10T21:29:58.653+0000
+Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'api', 'curl', 'demo', '3lo', 'three-legged oauth', 'developer']
+Space: REST
+Content Id: 14118
+Author: Mark Bykerk Kauffman
+Status: published
+Categories: []
+Status: published

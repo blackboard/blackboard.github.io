@@ -1,0 +1,11 @@
+Id: 1419
+Title: Starter Building Block Readme
+Status: published
+Created: 2015-11-30T17:05:15.184+0000
+Tags: ['develop', 'resources', 'building blocks', 'getting started', 'starting block', 'migrated from edugarage', 'starter block', 'basic b2 template', 'deploy', 'deployb2', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5542
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Getting Started']
+Status: published

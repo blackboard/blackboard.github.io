@@ -1,0 +1,11 @@
+Id: 1681
+Title: REST Demo Using Python
+Status: published
+Created: 2016-03-06T16:30:54.651+0000
+Tags: ['rest', 'java', 'blackboard learn', 'example', 'sample code', 'saas', 'developer']
+Space: REST
+Content Id: 10428
+Author: Mark O'Neil
+Status: published
+Categories: []
+Status: published

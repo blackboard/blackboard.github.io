@@ -1,0 +1,11 @@
+Id: 1147
+Title: Developing Building Blocks with the Public Maven Repository
+Status: published
+Created: 2015-07-16T18:23:09.142+0000
+Tags: ['building blocks', 'gradle', 'blackboard learn', 'maven', 'repository', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1401
+Author: Scott Hurrey
+Status: published
+Categories: ['Building Blocks', 'Tutorials']
+Status: published

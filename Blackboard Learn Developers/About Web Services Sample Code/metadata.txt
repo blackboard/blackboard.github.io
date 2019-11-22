@@ -1,0 +1,11 @@
+Id: 1143
+Title: About Web Services Sample Code
+Status: published
+Created: 2015-07-16T14:57:06.083+0000
+Tags: ['web services', 'soap', 'blackboard learn', 'sample code', 'sample client', 'sample client libraries', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 1365
+Author: Scott Hurrey
+Status: published
+Categories: ['Getting Started', 'SOAP Web Services']
+Status: published

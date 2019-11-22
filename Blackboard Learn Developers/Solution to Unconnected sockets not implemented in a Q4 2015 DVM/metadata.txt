@@ -1,0 +1,11 @@
+Id: 1692
+Title: Solution to Unconnected sockets not implemented in a Q4 2015 DVM
+Status: published
+Created: 2016-03-26T00:18:05.884+0000
+Tags: ['dvm', 'patch', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 11658
+Author: Mark Bykerk Kauffman
+Status: published
+Categories: ['Building Blocks', 'Examples']
+Status: published

@@ -1,0 +1,11 @@
+Id: 2019
+Title: REST Hands-On Workshop - Developer Office Hours
+Status: published
+Created: 2016-07-27T20:29:58.670+0000
+Tags: ['rest', 'java', 'developer office hours', 'workshop', 'developer']
+Space: Technical Office Hours
+Content Id: 19473
+Author: Scott Hurrey
+Status: published
+Categories: []
+Status: published

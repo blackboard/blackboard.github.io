@@ -1,0 +1,11 @@
+Id: 1397
+Title: Spring in Building Blocks
+Status: published
+Created: 2015-11-25T21:00:53.186+0000
+Tags: ['develop', 'developer guides', 'blackboard learn', 'example', 'sample code', 'spring', 'migrated from edugarage', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5472
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Examples', 'Getting Started']
+Status: published

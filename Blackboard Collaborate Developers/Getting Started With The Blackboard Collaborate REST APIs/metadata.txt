@@ -1,0 +1,11 @@
+Id: 1787
+Title: Getting Started With The Blackboard Collaborate REST APIs
+Status: published
+Created: 2016-05-24T14:15:29.862+0000
+Tags: ['developer', 'getting started', 'collaborate', 'blackboard', 'developers']
+Space: Blackboard Collaborate Developers
+Content Id: 15003
+Author: Scott Hurrey
+Status: published
+Categories: ['Getting Started']
+Status: published

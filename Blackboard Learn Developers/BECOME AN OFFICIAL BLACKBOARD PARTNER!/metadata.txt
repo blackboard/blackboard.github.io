@@ -1,0 +1,11 @@
+Id: 1744
+Title: BECOME AN OFFICIAL BLACKBOARD PARTNER!
+Status: published
+Created: 2016-04-28T16:57:14.159+0000
+Tags: ['partner', 'behind the blackboard', 'partnership', 'access', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 13383
+Author: Mark Bykerk Kauffman
+Status: published
+Categories: ['Building Blocks', 'Getting Started']
+Status: published

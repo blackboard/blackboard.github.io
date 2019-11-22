@@ -1,0 +1,11 @@
+Id: 1421
+Title: Your First Building Blocks Project Using Eclipse - DevCon 2010
+Status: published
+Created: 2015-11-30T18:28:19.971+0000
+Tags: ['tutorials', 'b2', '9.1 sp4', 'devcon 2010', 'developer']
+Space: Blackboard Learn Developers
+Content Id: 5548
+Author: Kelley MacEwen
+Status: published
+Categories: ['Building Blocks', 'Getting Started', 'Tutorials']
+Status: published
