@@ -3,13 +3,13 @@
 *Categories: ['Getting Started']*  
 *Tags: ['developer', 'getting started', 'collaborate', 'blackboard', 'developers']*  
 <hr />
-This section is dedicated to getting developers up-to-speed quickly with the
+<p>This section is dedicated to getting developers up-to-speed quickly with the
 new REST APIs available for Blackboard Collaborate with the Ultra Experience.
 These APIs give the developer the ability to programmatically integrate common
 Collaborate functionality into a web application using the tried and true
-framework that is REST APIs.  
+framework that is REST APIs.</p> 
   
-Getting started requires a few key decisions on the developer's part. Firstly,
+<p>Getting started requires a few key decisions on the developer's part. Firstly,
 the Developer should decide what programming language best meets the use cases
 required for the application to be successful. Every language has strengths
 and weaknesses, and with a little research, one can balance ease of use,
@@ -20,7 +20,7 @@ the Developer must decide if this work is best completed in-house or via an
 engagement with Blackboard Collaborate's consulting group. Often times,
 consulting is a great option for building an integration based on best
 practices developed over many years of experience integrating with Blackboard
-Collaborate.
+Collaborate.</p>
 
 ## Requesting Access
 
