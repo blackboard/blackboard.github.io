@@ -91,12 +91,12 @@ are a large number of entries, an internal panel of integration and strategy
 experts will review the submissions and provide a group of semi-finalists to
 the judges.
 
-**[Visit the registration page](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fbbbb.blackboard.com%2Fhackboard-hackathon%3Futm_source%3DCommunity%26utm_medium%3DWeb%26utm_campaign%3DHackboard_Hackathon%26utm_term%3DEvent%26utm_content%3DLink_On_Community_Website) to join the hackathon.**
+**[Visit the registration page](https://community.blackboard.com/external-link.jspa?url=http%3A//bbbb.blackboard.com/hackboard-hackathon%3Futm_source%3DCommunity%26utm_medium%3DWeb%26utm_campaign%3DHackboard_Hackathon%26utm_term%3DEvent%26utm_content%3DLink_On_Community_Website) to join the hackathon.**
 
 At the conclusion of the contest, the competitors will be responsible for
 committing code changes to GitHub complete with the appropriate [Community
 Commons license](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby%2F4.0%2F) by
+link.jspa?url=https%3A//creativecommons.org/licenses/by/4.0/) by
 8am ET on Monday, July 19, 2017. A project should be created in this space,
 which should contain a link to the source code and a video demonstration of
 the application. Both of these must be received by the closing date and time

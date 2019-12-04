@@ -23,7 +23,7 @@ write data to the Building Block directory to save information necessary to
 the function of your Building Block.
 
 [Schema.xml Example Project](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-Schema-Sample)
+link.jspa?url=https%3A//github.com/blackboard/BBDN-Schema-Sample)
 contains a sample project demonstrating the use schema.xml within a building
 block.
 
@@ -346,15 +346,15 @@ For examples of schema.xml documents, take a look in the
 For an example of how a Building Block may create schema tables using
 schema.xml, see [Schema.xml Example
 Project](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-Schema-Sample).
+link.jspa?url=https%3A//github.com/blackboard/BBDN-Schema-Sample).
 
 ### Other useful information:
 
 [Schema.xml validator](https://community.blackboard.com/external-link.jspa?url
-=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Freleases%2Fbl
-ackboard%2Fplatform%2Fbb-schema-xsd%2F)
+=https%3A//bbprepo.blackboard.com/content/repositories/releases/bl
+ackboard/platform/bb-schema-xsd/)
 
 [Bb-manifest validator](https://community.blackboard.com/external-link.jspa?ur
-l=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Freleases%2Fb
-lackboard%2Fplatform%2Fbb-manifest-plugin%2F)
+l=https%3A//bbprepo.blackboard.com/content/repositories/releases/b
+lackboard/platform/bb-manifest-plugin/)
 

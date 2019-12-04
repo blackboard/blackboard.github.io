@@ -16,5 +16,5 @@ Schema.XML
 [View Document](https://community.blackboard.com/docs/DOC-1123)
 
 [View Repository](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-schema-sample)
+link.jspa?url=http%3A//github.com/blackboard/BBDN-schema-sample)
 

@@ -6,7 +6,7 @@
 Attached is the PowerPoint deck for the 3/16/2016 Webinar recording:
 [Preparing Your Building Block for Blackboard Learn 9.1.Q2
 2016](https://sa
-s.elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F279AEBB7C6
+s.elluminate.com/collab/ui/scheduler/resource/recording/279AEBB7C6
 0BDE9E0B7CC9B07120BB17). In this Webinar we reviewed the changes in the
 upcoming Learn 9.1 Q2 2016 release and how to prepare your Building Block for
 the release. Topics covered include - Java 8, Learn Versioning, B2 Versioning,
@@ -17,7 +17,7 @@ building-blocks-for-learn-saas-and-newer-learn-versions) by Scott Hurrey.
 
 The recording for the 3/22/2016 Webinar is
 [here](https://s
-as.elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2FDB2503BFA
+as.elluminate.com/collab/ui/scheduler/resource/recording/DB2503BFA
 4E9FF402B31858655506AD8). During the 3/22/2016 presentation one of the
 participants had questions around setting the minimum and maximum version in
 the bb-manifest, and setting the B2 version. I've updated the slide deck based

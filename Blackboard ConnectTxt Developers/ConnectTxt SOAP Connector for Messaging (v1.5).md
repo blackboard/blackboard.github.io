@@ -60,20 +60,20 @@ following guides:
 **HTTP**
 
 [http://www.w3.org/Protocols/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.w3.org%2FProtocols%2F)
+link.jspa?url=http%3A//www.w3.org/Protocols/)
 
 [http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fen.wiki
-pedia.org%2Fwiki%2FHypertext_Transfer_Protocol%2520)
+](https://community.blackboard.com/external-link.jspa?url=http%3A//en.wiki
+pedia.org/wiki/Hypertext_Transfer_Protocol%2520)
 
 **XML**
 
 [http://www.xml.com/pub/a/98/10/guide0.html](https://community.blackboard.com/
 external-
-link.jspa?url=http%3A%2F%2Fwww.xml.com%2Fpub%2Fa%2F98%2F10%2Fguide0.html)
+link.jspa?url=http%3A//www.xml.com/pub/a/98/10/guide0.html)
 
 [http://en.wikipedia.org/wiki/XML](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FXML)
+link.jspa?url=http%3A//en.wikipedia.org/wiki/XML)
 
 ## Useful Tools
 
@@ -92,7 +92,7 @@ as part of a standard Windows, MAC or Linux operating system distribution. The
 Soap UI is free and may be downloaded from the following url:
 
 [ http://www.soapui.org/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.soapui.org%2F)
+link.jspa?url=http%3A//www.soapui.org/)
 
 There are many other SOAP clients out there, but for the purposes of the
 tutorials and examples in this document I will assume you are using the Soap
@@ -102,13 +102,13 @@ You may also require some XML editing schema validation tools to help you
 create and validate your XML.
 
 [http://www.xmlcooktop.com/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.xmlcooktop.com%2F)
+link.jspa?url=http%3A//www.xmlcooktop.com/)
 
 If you would like to closely inspect the HTTP traffic between your client and
 the SOAP API then I suggest using the following application.
 
 [http://www.parosproxy.org](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.parosproxy.org%2F)
+link.jspa?url=http%3A//www.parosproxy.org/)
 
 ## What is SOAP?
 
@@ -118,11 +118,11 @@ For a detailed discussion of SOAP and WSDL files see:
 
 [ http://
 en.wikipedia.org/wiki/SOAP](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2F%2520en.wikipedia.org%2Fwiki%2FSOAP)
+link.jspa?url=http%3A//%2520en.wikipedia.org/wiki/SOAP)
 
 [http://en.wikipedia.org/wiki/Web_Services_Description_Language](https://commu
-nity.blackboard.com/external-link.jspa?url=http%3A%2F%2Fen.wikipedia.org%2Fwik
-i%2FWeb_Services_Description_Language)
+nity.blackboard.com/external-link.jspa?url=http%3A//en.wikipedia.org/wik
+i/Web_Services_Description_Language)
 
 The WSDL file is an XML document which describes the ports and end points of
 services which may be invoked by a call and the XML schema expected by each
@@ -181,8 +181,8 @@ defined by Oasis Open Standards Consortium. You can find more information at
 the following url:
 
 [ http:// www.oasisopen. org/committees/tc_home.php?wg_abbrev=wss](https://com
-munity.blackboard.com/external-link.jspa?url=http%3A%2F%2F%2520www.oasisopen.%
-2520org%2Fcommittees%2Ftc_home.php%3Fwg_abbrev%3Dwss)
+munity.blackboard.com/external-link.jspa?url=http%3A//%2520www.oasisopen.%
+2520org/committees/tc_home.php%3Fwg_abbrev%3Dwss)
 
 Clients must provide their credentials in plain text in the SOAP header of the
 message. It is strongly recommended you use HTTPS for all your communication
@@ -220,7 +220,7 @@ The txttools SMS Messaging WSDL file can be found at the following url:
 [ https://
 www.txttools.co.uk/connectors/soap/messagingk/txttoolsMessaging.wsdl
 ](https://%2520w
-ww.txttools.co.uk%2Fconnectors%2Fsoap%2Fmessagingk%2FtxttoolsMessaging.wsdl%25
+ww.txttools.co.uk/connectors/soap/messagingk/txttoolsMessaging.wsdl%25
 20)
 
 Processing this WSDL file reveals one service:
@@ -1042,7 +1042,7 @@ more details.
 
 Open up a browser and go to
 [http://www.soapui.org](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.soapui.org%2F). Download the latest free
+link.jspa?url=http%3A//www.soapui.org/). Download the latest free
 version of the Soap UI. Ensure your computer has the Java Runtime Environment
 installed.
 
@@ -1057,8 +1057,8 @@ Select File from the top menu bar and select New WSDL Project. Give the
 project a name and enter the txttools Messaging API WSDL url:
 
 [http:// www.txttools.co.uk/connectors/soap/messaging/txttoolsMessaging.wsdl](
-https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2F%2520www.
-txttools.co.uk%2Fconnectors%2Fsoap%2Fmessaging%2FtxttoolsMessaging.wsdl)
+https://community.blackboard.com/external-link.jspa?url=http%3A//%2520www.
+txttools.co.uk/connectors/soap/messaging/txttoolsMessaging.wsdl)
 
 Select to create default requests for all operations and hit OK. The Soap UI
 will now process the WSDL file and create default requests for all operations.

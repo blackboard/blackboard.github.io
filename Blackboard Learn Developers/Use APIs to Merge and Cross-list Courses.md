@@ -31,8 +31,8 @@ Users with administrative entitlements can merge courses.
 You need an authentication token from a user with administrative entitlements
 to merge courses. For a complete list of specific requirements for any
 particular method, see the [Blackboard Learn API
-reference](https://community.blackboard.com/external-link.jspa?url=https%3A%2F
-%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi%2FLearn).
+reference](https://community.blackboard.com/external-link.jspa?url=https%3A/
+/developer.blackboard.com/portal/displayApi/Learn).
 
 ## Merge a course
 

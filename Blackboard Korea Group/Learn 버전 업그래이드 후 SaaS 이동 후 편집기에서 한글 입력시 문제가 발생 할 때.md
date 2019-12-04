@@ -21,6 +21,6 @@ C%9E%90.png)](https://community.blackboard.com/servlet/JiveServlet/showImage/1
 관련 Blackboard Help page -
 
 [Manage Tools | Blackboard Help](https://community.blackboard.com/external-lin
-k.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FAdministrator%2FSaaS%2F
-Tools_Management%2FManage_Tools)
+k.jspa?url=https%3A//help.blackboard.com/Learn/Administrator/SaaS/
+Tools_Management/Manage_Tools)
 

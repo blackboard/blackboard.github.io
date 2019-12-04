@@ -161,7 +161,7 @@ Requests made to deprecated APIs return a header with the response to notify
 the consumer that the endpoint is deprecated. We use the warning header
 _Warning: 299 - 'Deprecated API; @since version'_. For more information, see [
 https://tools.ietf.org/html/rfc7234#section-5.5](https://community.blackboard.
-com/external-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7234).
+com/external-link.jspa?url=https%3A//tools.ietf.org/html/rfc7234).
 
 ## Implementing API Deprecations
 

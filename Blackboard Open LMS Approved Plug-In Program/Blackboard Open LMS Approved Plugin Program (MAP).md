@@ -19,7 +19,7 @@ codebase requires a Statement of Work (SOW) for a Code Review, plus Annual
 Support and Maintenance to continue in the program. Once added, clients can
 request to enable any approved plugin listed on our [Blackboard Open LMS
 Plugin Matrix](https://community.blackboard.com/external-link.jspa?url=https%3
-A%2F%2Fhelp.blackboard.com%2FBlackboard_Open_LMS%2FAdministrator%2FPlugin_Matr
+A//help.blackboard.com/Blackboard_Open_LMS/Administrator/Plugin_Matr
 ix).
 
 ## Code Review Process
@@ -47,8 +47,8 @@ Community Page](https://community.blackboard.com/groups/blackboardopenlms).
 You can look at our Plugin Matrix. It shows plugins currently available
 through the MAP Program. For more information [refer to the plug-in
 matrix](https://
-help.blackboard.com%2FMoodlerooms%2FAdministrator%2FGet_Started%2FAbout_Moodle
-rooms%2FPlugin_Matrix).
+help.blackboard.com/Moodlerooms/Administrator/Get_Started/About_Moodle
+rooms/Plugin_Matrix).
 
 ####
 
@@ -67,8 +67,8 @@ support levels.
 
 Support levels available for each approved plug-in are listed on[ our plugin
 matrix](https://
-help.blackboard.com%2FMoodlerooms%2FAdministrator%2FGet_Started%2FAbout_Moodle
-rooms%2FPlugin_Matrix%23what-do-the-support-levels-mean). (To see the support
+help.blackboard.com/Moodlerooms/Administrator/Get_Started/About_Moodle
+rooms/Plugin_Matrix%23what-do-the-support-levels-mean). (To see the support
 levels, click the link on the right, or scroll to the bottom of the page.)
 
 ### Contacting Support

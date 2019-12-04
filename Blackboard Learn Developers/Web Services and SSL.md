@@ -65,7 +65,7 @@ root certificates may not be able to access web sites via https (see
 
 Note: You could find more information here: [http://sunsolve.sun.com/search/do
 cument.do?assetkey=1-26-57436-1](https://community.blackboard.com/external-lin
-k.jspa?url=http%3A%2F%2Fsunsolve.sun.com%2Fsearch%2Fdocument.do%3Fassetkey%3D1
+k.jspa?url=http%3A//sunsolve.sun.com/search/document.do%3Fassetkey%3D1
 -26-57436-1)
 
 _This article originally authored by jni on the WebCT DevNet._

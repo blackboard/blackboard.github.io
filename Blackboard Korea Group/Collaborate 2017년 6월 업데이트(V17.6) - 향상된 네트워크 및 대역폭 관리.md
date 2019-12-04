@@ -32,6 +32,6 @@ Collaborate Community의 피드백을 받아 다음과 같이 이용자 경험�
 
 참고(영문): [https://help.blackboard.com/Collaborate/Ultra/Administrator/Release_N
 otes/Release_Notes_2017_06](https://community.blackboard.com/external-link.jsp
-a?url=https%3A%2F%2Fhelp.blackboard.com%2FCollaborate%2FUltra%2FAdministrator%
-2FRelease_Notes%2FRelease_Notes_2017_06)
+a?url=https%3A//help.blackboard.com/Collaborate/Ultra/Administrator%
+2FRelease_Notes/Release_Notes_2017_06)
 

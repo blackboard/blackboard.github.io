@@ -14,8 +14,8 @@ workflow is more complicated. For more general questions about REST and using
 REST APIs, see any of the numerous tutorials available online. Most commonly
 used resources include:
 
-  * Blackboard's [developer portal](https://developer.blackboard.com%2F)
-  * Blackboard's [Github repos](https://github.com%2Fsearch%3Fq%3Dbbdn)
+  * Blackboard's [developer portal](https://developer.blackboard.com/)
+  * Blackboard's [Github repos](https://github.com/search%3Fq%3Dbbdn)
 
 # Before You Get Started
 
@@ -42,7 +42,7 @@ to speak with us. To discuss deploying your application, please contact us at
 authenticate your project with Blackboard applications, you need to be a
 registered Blackboard developer.To register as a Blackboard developer:
 
-  1. Go to [https://developer.blackboard.com/](https://developer.blackboard.com%2F) and select **Sign Up**. Read and agree to the terms and conditions.
+  1. Go to [https://developer.blackboard.com/](https://developer.blackboard.com/) and select **Sign Up**. Read and agree to the terms and conditions.
   2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
   3. Select **Create Account** and you're on your way.
 
@@ -83,12 +83,12 @@ want to use depend on what you want to do.
 add files, text, and the like to Blackboard Learn
 
   1. [authenticate with Blackboard Learn](https://community.blackboard.com/docs/DOC-4457-use-oauth-20-to-authenticate-with-blackboard-learn) via REST API
-  2. check out our [Learn REST API reference](https://developer.blackboard.com%2Fportal%2FdisplayApi%2FLearn)
+  2. check out our [Learn REST API reference](https://developer.blackboard.com/portal/displayApi/Learn)
 
 bulk add users to Blackboard Learn
 
   1. [authenticate with Blackboard Learn](https://community.blackboard.com/docs/DOC-4457-use-oauth-20-to-authenticate-with-blackboard-learn) via REST API
-  2. check out our [Learn REST API reference](https://developer.blackboard.com%2Fportal%2FdisplayApi%2FLearn)
+  2. check out our [Learn REST API reference](https://developer.blackboard.com/portal/displayApi/Learn)
 
 set up video conference sessions
 
@@ -153,8 +153,8 @@ Servlet/showImage/102-1592-23-129105/pastedImage_5.png)
 # Look at the Learn REST Reference
 
 Check out the [Learn REST API
-Reference](https://community.blackboard.com/external-link.jspa?url=https%3A%2F
-%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi%2FLearn). In particular,
+Reference](https://community.blackboard.com/external-link.jspa?url=https%3A/
+/developer.blackboard.com/portal/displayApi/Learn). In particular,
 look at the range of endpoints available. Check the **Since** version for
 endpoint that interest you. This version number indicates the version since
 which the endpoint has been available. This way, you can make sure that your
@@ -164,7 +164,7 @@ Blackboard server is is able to use it.
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC
 Standard](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc6749). Essentially,
+link.jspa?url=https%3A//tools.ietf.org/html/rfc6749). Essentially,
 every developer has a unique key and secret associated with each application
 they create. They make an HTTP Post to the API requesting client_credentials,
 which returns an authorization token that grants the application access to the
@@ -183,7 +183,7 @@ token as a Bearer token in the Authorization header of your API calls. Review
 the authentication documentation in the above section for an overview, or find
 more specific details on the available API endpoints and APIs on the Developer
 Portal's [Swagger API document](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi).In
+link.jspa?url=https%3A//developer.blackboard.com/portal/displayApi).In
 its current implementation, Blackboard Learn REST APIs does not support Cross-
 Origin Resource Sharing (CORS). To learn about this and see an example to
 workaround this with Angular2, see the blog entitled [Cross-Origin Resource
@@ -238,8 +238,8 @@ Create, Read, Update, Delete
 We will continue to add new examples, tutorials, and code samples, so make
 sure to check these links regularly.
 
-  * [Developer Portal](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fdeveloper.blackboard.com%2F)
-  * [REST Documentation](https://developer.blackboard.com%2Fportal%2FdisplayApi)
+  * [Developer Portal](https://community.blackboard.com/external-link.jspa?url=http%3A//developer.blackboard.com/)
+  * [REST Documentation](https://developer.blackboard.com/portal/displayApi)
   * [Examples](https://community.blackboard.com/community/developers/learn/rest/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Bexamples%5D)
   * [Tutorials](https://community.blackboard.com/community/developers/learn/rest/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Btutorials%5D)
 

@@ -210,7 +210,7 @@ panel.
 In order to see your B2s logs in Kibana-Elasticsearch, the only SaaS interface
 for log files, your B2 must do the following:
 
-  1. Write the log files to the directory returned by **blackboard.platform.plugin.PlugInUtil.getLogDirectory.**[**PlugInUtil** (Building Blocks API 3000.1.0)](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Flibrary.blackboard.com%2Fref%2F16ce28ed-bbca-4c63-8a85-8427e135a710%2Fblackboard%2Fplatform%2Fplugin%2FPlugInUtil.html)
+  1. Write the log files to the directory returned by **blackboard.platform.plugin.PlugInUtil.getLogDirectory.**[**PlugInUtil** (Building Blocks API 3000.1.0)](https://community.blackboard.com/external-link.jspa?url=http%3A//library.blackboard.com/ref/16ce28ed-bbca-4c63-8a85-8427e135a710/blackboard/platform/plugin/PlugInUtil.html)
     1. Typically looks like **<blackboard home>/logs/plugins/<vendorId>-<handle>/...**
     2. Read the API documentation on how to get write permission.  
 
@@ -245,7 +245,7 @@ format is:
 
 </appender>
 
-**[Sample logging code that works in a SaaS environment.](https://github.com%2Fmark-b-kauffman%2Fbbdn-bblogbackb2)**
+**[Sample logging code that works in a SaaS environment.](https://github.com/mark-b-kauffman/bbdn-bblogbackb2)**
 
 # Statelessness
 
@@ -314,7 +314,7 @@ ing-jsps) when using Gradle.
 
 Tomcat 8.5 is substantially more configurable in the way that you can
 implement [jar scanning](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Ftomcat.apache.org%2Ftomcat-8.5-doc%2Fconfig%2Fjar-
+link.jspa?url=https%3A//tomcat.apache.org/tomcat-8.5-doc/config/jar-
 scanner.html). This file lives in the WEB-INF directory of your Building Block
 and provides the following options:
 
@@ -471,18 +471,18 @@ cycle is managed by the container, such as a Servlet or a Listener.
 Here is an example of what this will look like in your web.xml file:
 
 <web-app xmlns="[http://java.sun.com/xml/ns/javaee](https://community.blackboa
-rd.com/external-link.jspa?url=http%3A%2F%2Fjava.sun.com%2Fxml%2Fns%2Fjavaee)"
+rd.com/external-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)"
 
 xmlns:xsi="[http://www.w3.org/2001/XMLSchema-
 instance](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance)"
+link.jspa?url=http%3A//www.w3.org/2001/XMLSchema-instance)"
 
 xsi:schemaLocation="[http://java.sun.com/xml/ns/javaee](https://community.blac
 kboard.com/external-
-link.jspa?url=http%3A%2F%2Fjava.sun.com%2Fxml%2Fns%2Fjavaee)
+link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)
 [http://java.sun.com/xml/ns/javaee/web-
 app_3_0.xsd](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fjava.sun.com%2Fxml%2Fns%2Fjavaee%2Fweb-
+link.jspa?url=http%3A//java.sun.com/xml/ns/javaee/web-
 app_3_0.xsd)"
 
 version="3.0" metadata-complete="true">
@@ -584,20 +584,20 @@ faster.`
 Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
 curly braces ( { } ) or vertical bars, often referred to as pipes ( | ) in
 URLs. For backward compatibility, [Tomcat provides a way to override this
-behavior](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%
-2Ftomcat.apache.org%2Ftomcat-8.5-doc%2Fconfig%2Fsystemprops.html) by allowing
+behavior](https://community.blackboard.com/external-link.jspa?url=https%3A/%
+2Ftomcat.apache.org/tomcat-8.5-doc/config/systemprops.html) by allowing
 a system property tomcat.util.http.parser.HttpParser.requestTargetAllow to be
 defined. Please be advised that this exposes the application to a [known
 security issue](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fnvd.nist.gov%2Fvuln%2Fdetail%2FCVE-2016-6816).
+link.jspa?url=https%3A//nvd.nist.gov/vuln/detail/CVE-2016-6816).
 
 Future versions of Tomcat may not support this override. Therefore, all B2s
 must url-encode these characters. For example, an URL like [http://myuniversit
 y.blackboard.com/webapps/myb2/appController?options=](/external-link.jspa?url=
-http%3A%2F%2Fmyuniversity.blackboard.com%2Fwebapps%2Fmyb2%2FappController%3Fop
+http%3A//myuniversity.blackboard.com/webapps/myb2/appController%3Fop
 tions%3D){x|y} must be written by the application as [http://myuniversity.blac
 kboard.com/webapps/myb2/appController?options=%7bx%7cy%7d](/external-link.jspa
-?url=http%3A%2F%2Fmyuniversity.blackboard.com%2Fwebapps%2Fmyb2%2FappController
+?url=http%3A//myuniversity.blackboard.com/webapps/myb2/appController
 %3Foptions%3D%257bx%257cy%257d). Otherwise, Tomcat will reject the request.
 
 # Permissions

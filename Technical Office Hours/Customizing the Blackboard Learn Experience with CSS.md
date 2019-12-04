@@ -9,6 +9,6 @@ basics of customizing the Blackboard Learn user experience with CSS. This was
 a very informative session.
 
 Here is the [recording](https://community.blackboard.com/external-link.jspa?ur
-l=https%3A%2F%2Fus.bbcollab.com%2Frecording%2F90A9E8E7FB7D0FB74464C5C85A1436F7
+l=https%3A//us.bbcollab.com/recording/90A9E8E7FB7D0FB74464C5C85A1436F7
 )
 

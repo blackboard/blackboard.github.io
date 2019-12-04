@@ -20,7 +20,7 @@ ATTENTION -
   * Windows Server 2012 R2 is not supported in Learn Q2 2018 and later. Q2 2018 is compatible with Windows Server 2016
   * Always refer to the supported technologies page at help.blackboard.com for the Learn version your are installing or upgrading.
 
-  1. As of this writing, **Q2 2017** Learn only installs and runs on MS SQL Server 2014 Standard or Enterprise editions. **Q4 2016 and prior** only install on MS SQL Server 2012 Standard or Enterprise editions. We know **Learn does not work on MS SQL Web Edition or Express**. Your milage may vary on other editions. See the self-hosted requirements listed here for all current releases: [https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_All_91_Releases](https://help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FRelease_Notes%2FRelease_Notes_All_91_Releases)
+  1. As of this writing, **Q2 2017** Learn only installs and runs on MS SQL Server 2014 Standard or Enterprise editions. **Q4 2016 and prior** only install on MS SQL Server 2012 Standard or Enterprise editions. We know **Learn does not work on MS SQL Web Edition or Express**. Your milage may vary on other editions. See the self-hosted requirements listed here for all current releases: [https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_All_91_Releases](https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_All_91_Releases)
   2. **JAVA_HOME should not contain any spaces.** Install Java into a directory such that the path to the directory is space free. C:\Program Files will FAIL.
   3. Turn off virus protection during the install.
   4. Turn off firewalls during an install/upgrade.
@@ -37,8 +37,8 @@ LESS THAN 12 CHARACTERS!
 8. The account running the installation needs ALTER ANY SQL permission on the
 DB. See [https://msdn.microsoft.com/en-us/library/ms191291(v=sql.120).aspx](ht
 tps://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fmsdn.microsoft.com%2Fen-
-us%2Flibrary%2Fms191291%28v%3Dsql.120%29.aspx)
+link.jspa?url=https%3A//msdn.microsoft.com/en-
+us/library/ms191291%28v%3Dsql.120%29.aspx)
 
 9. A JRE will not work. Make certain you have a JDK installed.
 
@@ -102,6 +102,6 @@ attempting the Learn Q2 2016 upgrade/install
 
 Video Overview: [Dropbox -
 2017.10.01.WinInstallSetup.mov](https://community.blackboard.com/external-link
-.jspa?url=https%3A%2F%2Fwww.dropbox.com%2Fs%2F3hggaumngbtsvb8%2F2017.10.01.Win
+.jspa?url=https%3A//www.dropbox.com/s/3hggaumngbtsvb8/2017.10.01.Win
 InstallSetup.mov%3Fdl%3D0)
 

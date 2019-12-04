@@ -6,8 +6,8 @@
 This is the readme for the Starting Building Block. The Starter Building block
 is available in the [Blackboard maven
 repository](https://community.blackboard.com/external-link.jspa?url=https%3A%2
-F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fblackboard%2Fbb
-dn%2Fstarting-block).
+F/bbprepo.blackboard.com/content/repositories/public/blackboard/bb
+dn/starting-block).
 
 # Caveat
 
@@ -50,7 +50,7 @@ Building Block.
 ## Invocation Via Gradle
 
 The [Basic B2 Template](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2Fbasic-b2-template)
+link.jspa?url=https%3A//github.com/blackboard/basic-b2-template)
 project contains all the information you need to use the Starter Block from
 your Gradle build process. A Gradle task was added called '_deployB2_' that
 takes care of everything for you. To invoke, simply type '_gradle deployB2_'

@@ -14,7 +14,7 @@ Blackboard에서는 더 개선된 API인 Box View API로 대체하여 해당 기
 
 (Box View API 변경 안내 ([https://blog.box.com/blog/new-box-
 view/](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fblog.box.com%2Fblog%2Fnew-box-view%2F))
+link.jspa?url=https%3A//blog.box.com/blog/new-box-view/))
 
 Box View의 지원 버전은 Learn 9.1 2016 Q2 ~ 2017 Q4 이 될 것이기 때문에,
 

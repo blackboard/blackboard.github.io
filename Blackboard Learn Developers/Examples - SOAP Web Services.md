@@ -22,7 +22,7 @@ Python
 [View Document](https://community.blackboard.com/docs/DOC-1141)
 
 [View Repository](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-Web-Service-Python-
+link.jspa?url=https%3A//github.com/blackboard/BBDN-Web-Service-Python-
 Sample-Code)
 
 Get CourseMembership and Role
@@ -32,5 +32,5 @@ C#
 [View Document](https://community.blackboard.com/docs/DOC-1142)
 
 [View Repository](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-CSharp-WS-Sample)
+link.jspa?url=https%3A//github.com/blackboard/BBDN-CSharp-WS-Sample)
 

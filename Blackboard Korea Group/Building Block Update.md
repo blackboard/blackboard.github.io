@@ -11,5 +11,5 @@ Block(B2) 라고 합니다.
 자세한 사항은 첨부된 문서를 참고하시기 바랍니다.
 
   * 참고자료
-    * Recommended Building Block Upgrade Order and Best Practices - [https://blackboard.secure.force.com/btbb_articleview?id=kA270000000L10NCAS](https://blackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA270000000L10NCAS)
+    * Recommended Building Block Upgrade Order and Best Practices - [https://blackboard.secure.force.com/btbb_articleview?id=kA270000000L10NCAS](https://blackboard.secure.force.com/btbb_articleview%3Fid%3DkA270000000L10NCAS)
 

@@ -7,7 +7,7 @@ Caliper Analytics is an IMS Global standard focused on the delivery of
 consistent event tracking across campus applications. For more information on
 the Caliper Analytics specification, visit the IMS site
 [here](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fwww.imsglobal.org%2Factivity%2Fcaliperram).
+link.jspa?url=https%3A//www.imsglobal.org/activity/caliperram).
 
 Caliper is implemented in Blackboard Learn as the Learn Activity Stream. This
 data is stored in an external system called the Caliper Event Store. This
@@ -20,7 +20,7 @@ assignments when using Kaltura’s LTI integration and Blackboard Learn SaaS.
 
 For more information on Kaltura integrations, visit the Kaltura web site
 [here](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fcorp.kaltura.com%2FVideo-Solutions%2FTeaching-and-
+link.jspa?url=http%3A//corp.kaltura.com/Video-Solutions/Teaching-and-
 Learning).
 
 From a Developer standpoint, Caliper is available in two ways: sending events

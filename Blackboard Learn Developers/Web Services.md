@@ -79,7 +79,7 @@ with a web service.
 Access a web service's contextual menu and click _Permissions_. To learn more,
 go to [http://www.blackboard.com/Support/Extensions.aspx](https://community.bl
 ackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.blackboard.com%2FSupport%2FExtensions.aspx).
+link.jspa?url=http%3A//www.blackboard.com/Support/Extensions.aspx).
 
 # Download documentation
 

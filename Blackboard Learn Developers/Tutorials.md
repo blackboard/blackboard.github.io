@@ -39,29 +39,29 @@ line](https://community.blackboard.com/docs/DOC-1398)
 Web Services Tutorials Using Eclipse by Bruce Phillips (Kansas)
 
 [Part 1: Logging In Using a Proxy
-Tool](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww
-.brucephillips.name%2Fblog%2Findex.cfm%2F2010%2F8%2F3%2FUsing-Blackboard-
+Tool](https://community.blackboard.com/external-link.jspa?url=http%3A//www
+.brucephillips.name/blog/index.cfm/2010/8/3/Using-Blackboard-
 Learn-9-Web-Services--Part-1-Logging-In-Using-A-Proxy-Tool)
 
 [Part 2: Learning About the Web Service Classes and
-Methods](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2F
-www.brucephillips.name%2Fblog%2Findex.cfm%2F2010%2F8%2F4%2FUsing-Blackboard-
+Methods](https://community.blackboard.com/external-link.jspa?url=http%3A//
+www.brucephillips.name/blog/index.cfm/2010/8/4/Using-Blackboard-
 Learn-9-Web-Services--Part-2-Learning-About-The-Web-Service-Classes-And-
 Methods)
 
 [Part 3: Generating and Using Web Service Client
-Classes](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2F
-www.brucephillips.name%2Fblog%2Findex.cfm%2F2010%2F8%2F5%2FUsing-Blackboard-
+Classes](https://community.blackboard.com/external-link.jspa?url=http%3A//
+www.brucephillips.name/blog/index.cfm/2010/8/5/Using-Blackboard-
 Learn-9-Web-Services--Part-3-Generating-And-Using-Web-Service-Client-Classes)
 
 [Part 4: Getting, Creating, Updating and Deleting
-Users](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fww
-w.brucephillips.name%2Fblog%2Findex.cfm%2F2010%2F8%2F6%2FUsing-Blackboard-
+Users](https://community.blackboard.com/external-link.jspa?url=http%3A//ww
+w.brucephillips.name/blog/index.cfm/2010/8/6/Using-Blackboard-
 Learn-9-Web-Services--Part-4-Getting-Creating-Updating-Deleting-Users)
 
 [Web Services Tutorial Using Netbeans by Andrew Martin
 (Newcastle)](https://community.blackboard.com/external-link.jspa?url=http%3A%2
-F%2Fprojects.oscelot.org%2Fgf%2Fproject%2Fwebservices%2Fwiki%2F%3Fpagename%3Do
+F/projects.oscelot.org/gf/project/webservices/wiki/%3Fpagename%3Do
 ffalClient)
 
 ## Accessing and Saving Data

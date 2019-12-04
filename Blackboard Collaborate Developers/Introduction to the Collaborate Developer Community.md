@@ -28,7 +28,7 @@ Blackboard is phasing in REST APIs as the preferred method of integration. If
 you have an earlier SOAP-based intregration, you can migrate it to use the new
 API endpoints.
 
-  * **[Discussions](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2FfilterID%3Dcontentstatus%5Bpublished%5D%7Eobjecttype%7Eobjecttype%5Bthread%5D%26browseSite%3Dplace-content%26containerType%3D14%26userIDs%3D2011%26containerID%3D2055%26browseViewID%3DplaceContent%2F)**
+  * **[Discussions](https://community.blackboard.com/external-link.jspa?url=http%3A//filterID%3Dcontentstatus%5Bpublished%5D%7Eobjecttype%7Eobjecttype%5Bthread%5D%26browseSite%3Dplace-content%26containerType%3D14%26userIDs%3D2011%26containerID%3D2055%26browseViewID%3DplaceContent/)**
 
 Interact with other Collaborate developers as well as Blackboard team members.
 

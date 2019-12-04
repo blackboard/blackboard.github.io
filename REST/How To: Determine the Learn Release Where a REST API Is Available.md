@@ -14,7 +14,7 @@ APIs. Any help you can provide would be greatly appreciated.
 
 API End-point - GET : [/learn/api/public/v1/courses/{courseId}/contents](https
 ://na01.safelink
-s.protection.outlook.com%2F%3Furl%3Dhttps%253A%252F%252Furldefense.proofpoint.
+s.protection.outlook.com/%3Furl%3Dhttps%253A%252F%252Furldefense.proofpoint.
 com%252Fv2%252Furl%253Fu%253Dhttps-3A__developer.blackboard.com_assets_lib_swa
 gger-2Dui_swagger-2Dindex.html-3Furl-3D_portal_docs_apis_learn-2Dswagger.json-
 23-2521_content_get-5Flearn-5Fapi-5Fpublic-5Fv1-5Fcourses-5FcourseId-5Fcontent
@@ -34,8 +34,8 @@ API end-point - POST : /learn/api/public/v1/lti/domains
 Video solution:
 
 [Dropbox - DetermineLearnReleaseRESTapiIsIn.mp4](https://community.blackboard.
-com/external-link.jspa?url=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fjlrbotrrt2yxhyf
-%2FDetermineLearnReleaseRESTapiIsIn.mp4%3Fdl%3D0)
+com/external-link.jspa?url=https%3A//www.dropbox.com/s/jlrbotrrt2yxhyf
+/DetermineLearnReleaseRESTapiIsIn.mp4%3Fdl%3D0)
 
 Referenced links:
 

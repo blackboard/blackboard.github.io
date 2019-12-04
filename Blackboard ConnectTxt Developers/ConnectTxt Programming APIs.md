@@ -9,8 +9,8 @@ functionality into your existing application.
 
 # Java
 
-  * [Download Addressbook software version (v1.2) - zip 33MB](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2FTxttools_SOAP_Addressbook_API_Java_Client_1.2.zip)
-  * [Download Messaging software version (v1.2) - zip 33MB](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2FTxttools_SOAP_Messaging_API_Java_Client_1.2.zip)
+  * [Download Addressbook software version (v1.2) - zip 33MB](https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Addressbook_API_Java_Client_1.2.zip)
+  * [Download Messaging software version (v1.2) - zip 33MB](https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Messaging_API_Java_Client_1.2.zip)
 
 # PHP
 
@@ -20,12 +20,12 @@ v0.2, incorporates PHPUnit test classes, and is capable of retrieving account
 credit information from the ConnectTxt website. Future versions will
 incorporate support for the SOAP API and address book uploads.
 
-  * [Download latest software and documentation (v0.2.2)](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2Ftxttools_PHP_API_0.2.2.zip) - Tutorial available in HTML below.
+  * [Download latest software and documentation (v0.2.2)](https://www.txttools.co.uk/preloginjsp/docs/txttools_PHP_API_0.2.2.zip) - Tutorial available in HTML below.
 
 # .NET
 
-  * [Download Addressbook API version 1.0](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2FDotNet_SOAP_AddressbookClient_1.0.zip)
-  * [Download Messaging API version 1.1](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2FDotNet_SOAP_MessageClient_1.1.zip)
+  * [Download Addressbook API version 1.0](https://www.txttools.co.uk/preloginjsp/docs/DotNet_SOAP_AddressbookClient_1.0.zip)
+  * [Download Messaging API version 1.1](https://www.txttools.co.uk/preloginjsp/docs/DotNet_SOAP_MessageClient_1.1.zip)
 
 Any question or suggestions please [e-mail
 us](mailto:txttoolstechies@blackboard.com) or call +44 (0)113 234 2111.

@@ -36,7 +36,7 @@ redirect_uri
 Where to redirect the user once they have authorized the application
 
 redirect_uri=[https://my.edu/authorized](https://community.blackboard.com/exte
-rnal-link.jspa?url=https%3A%2F%2Fmy.edu%2Fauthorized)
+rnal-link.jspa?url=https%3A//my.edu/authorized)
 
 response_type
 
@@ -141,7 +141,7 @@ Starting in version 3700.4, Blackboard Learn's 3-Legged OAuth 2.0
 implementation supports the Proof Key for Code Exchange (PKCE) extension. For
 more information about PKCE, see [OAuth 2.0's RFC 7636: Proof Key for Code
 Exchange](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Foauth.net%2F2%2Fpkce%2F).
+link.jspa?url=https%3A//oauth.net/2/pkce/).
 
 To implement the PKCE extension:
 
@@ -152,7 +152,7 @@ code_challenge = BASE64URL_ENCODE( SHA256( ASCII( code_verifier )))
 For more information about the S256 hashing algorithm, see [RFC 7636 - Proof
 Key for Code Exchange by OAuth Public
 Clients](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7636%23section-4.2).
+link.jspa?url=https%3A//tools.ietf.org/html/rfc7636%23section-4.2).
 
   3. Make a request to /learn/api/public/v1/oauth2/authorizationcode, and provide a code_challenge and code_challenge_method in the query parameters. For code_challenge_method, the endpoint accepts only S256. Your request will look something like:  
 POST to learn/api/public/v1/oauth2/authorizationcode?client_id=YOUR_CLIENT_ID&
@@ -179,5 +179,5 @@ ent_id_OAuth2_Three_Legged__3LO](https://community.blackboard.com/docs/DOC-176
 [GitHub - blackboard/BBDN-3LO-REST-Swift: A sample application written in
 Swift demonstrating the new three-legged OAuth
 …](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-3LO-REST-Swift)
+link.jspa?url=https%3A//github.com/blackboard/BBDN-3LO-REST-Swift)
 

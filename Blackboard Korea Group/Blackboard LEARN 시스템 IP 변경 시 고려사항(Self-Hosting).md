@@ -43,8 +43,8 @@ DBMS (MSSQL/ORACLE) 의 경우, DBMS 서비스에 연동되어 있는 IP 주소�
 
 [https://help.blackboard.com/Learn/Administrator/Hosting/System_Management/Clo
 ud_Management/Cloud_FAQ](https://community.blackboard.com/external-link.jspa?u
-rl=https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FSyste
-m_Management%2FCloud_Management%2FCloud_FAQ)
+rl=https%3A//help.blackboard.com/Learn/Administrator/Hosting/Syste
+m_Management/Cloud_Management/Cloud_FAQ)
 
 여기에서 “Connecting to the Cloud and Firewall Configurations” 항목을 확인합니다.
 
@@ -53,7 +53,7 @@ m_Management%2FCloud_Management%2FCloud_FAQ)
   * Application Server 들이 DMZ 에 존재, 즉 Outbound 가 열려 있다면 outbound 는 신경 쓰시지 않으셔도 됩니다.
   * “softwareupdates.blackboard.com or softwareupdates.cloud.bb” 항목부터 보시기 바랍니다.
   * INGRESS(inbound) SOURCE: 107.23.34.151
-  * EGRESS(outbound) SOURCE: 69.196.227.60 / [AWS IP Address list](https://blackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkAC70000000008C) ß 해당 링크를 보시면 us-east-1 영역에 대해서 outbound 를 열어주셔야 합니다.
+  * EGRESS(outbound) SOURCE: 69.196.227.60 / [AWS IP Address list](https://blackboard.secure.force.com/btbb_articleview%3Fid%3DkAC70000000008C) ß 해당 링크를 보시면 us-east-1 영역에 대해서 outbound 를 열어주셔야 합니다.
   * Flickr MashUp 부터는 80, 443 포트만 사용하므로, 해당 IP 들에 대해 80, 443 포트를 양방향으로 열어주시면 됩니다. (아마, 대부분의 기관에서 이 포트들은 열려 있을 것입니다.)
 
 이러한 부분들을 확인하시고,

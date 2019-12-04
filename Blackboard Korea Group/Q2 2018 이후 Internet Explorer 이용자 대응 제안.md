@@ -5,7 +5,7 @@
 ---
 준비
 
-  * [JSHack](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fprojects-archive.oscelot.org%2Fgf%2Fproject%2Fjshack%2Ffrs%2F%3Faction%3DFrsReleaseView%26release_id%3D991)
+  * [JSHack](https://community.blackboard.com/external-link.jspa?url=http%3A//projects-archive.oscelot.org/gf/project/jshack/frs/%3Faction%3DFrsReleaseView%26release_id%3D991)
   * 스크립트 소스
   * 관련 대응 문서
 
@@ -32,7 +32,7 @@ Restriction List
 관련 대응 문서
 
 [크롬을 꼭 이용해야 하나요? – 온라인강의실](https://community.blackboard.com/external-link.jspa
-?url=https%3A%2F%2Fsejong.zendesk.com%2Fhc%2Fko%2Farticles%2F360026222971-%25E
+?url=https%3A//sejong.zendesk.com/hc/ko/articles/360026222971-%25E
 D%2581%25AC%25EB%25A1%25AC%25EC%259D%2584-%25EA%25BC%25AD-%25EC%259D%25B4%25EC
 %259A%25A9%25ED%2595%25B4%25EC%2595%25BC-%25ED%2595%2598%25EB%2582%2598%25EC%2
 59A%2594-)
@@ -47,7 +47,7 @@ D%2581%25AC%25EB%25A1%25AC%25EC%259D%2584-%25EA%25BC%25AD-%25EC%259D%25B4%25EC
 
 [https://drive.google.com/open?id=1esQJM2ZiRYqBQkYJo-5DwTi9wn-
 Y_K7S](https://d
-rive.google.com%2Fopen%3Fid%3D1esQJM2ZiRYqBQkYJo-5DwTi9wn-Y_K7S)
+rive.google.com/open%3Fid%3D1esQJM2ZiRYqBQkYJo-5DwTi9wn-Y_K7S)
 
 감사합니다.
 

@@ -10,5 +10,5 @@ him on again soon!
 
 Here is the recording: [https://us.bbcollab.com/recording/74250F5AF46CADAD5EDB
 7488F1E64069](https://community.blackboard.com/external-link.jspa?url=https%3A
-%2F%2Fus.bbcollab.com%2Frecording%2F74250F5AF46CADAD5EDB7488F1E64069)
+//us.bbcollab.com/recording/74250F5AF46CADAD5EDB7488F1E64069)
 

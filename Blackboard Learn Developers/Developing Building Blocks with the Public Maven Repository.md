@@ -30,13 +30,13 @@ repository that can be used to access any of the public API JARs from Learn
 for every release going back to 9.1 SP8. This article will show you how to
 integrate with the Maven repository using two popular build tools:
 [Maven](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fmaven.apache.org%2F) and
+link.jspa?url=http%3A//maven.apache.org/) and
 [Gradle](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.gradle.org%2F).
+link.jspa?url=http%3A//www.gradle.org/).
 
 **The Blackboard Maven repository is hosted at:**
 
-**[https://maven.blackboard.com/content/repositories/releases](https://maven.blackboard.com%2Fcontent%2Frepositories%2Freleases)**
+**[https://maven.blackboard.com/content/repositories/releases](https://maven.blackboard.com/content/repositories/releases)**
 
 ## When would you use the repository?
 

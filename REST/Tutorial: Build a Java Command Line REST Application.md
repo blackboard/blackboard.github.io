@@ -12,14 +12,14 @@ In order to begin this tutorial, there are a few pre-requisites that are
 assumed to be in place:
 
   * User has installed and started the latest [Developer Virtual Machine](https://community.blackboard.com/docs/DOC-1649-developer-virtual-machine-dvm).
-  * User has installed and configured [GIT](https://git-scm.com%2Fdownloads).
-  * User has cloned the [repository](https://github.com%2Fblackboard%2FBBDN-DevCon-REST-Workshop) to their local working directory.
+  * User has installed and configured [GIT](https://git-scm.com/downloads).
+  * User has cloned the [repository](https://github.com/blackboard/BBDN-DevCon-REST-Workshop) to their local working directory.
   * User has Java 8 installed and configured to JAVA_HOME.
-  * User has registered for an account on the [Developer Portal](https://developer.blackboard.com%2F), [registered an application](https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal), obtained the key and secret, and [configured](https://community.blackboard.com/docs/DOC-1580-managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators) the Developer Virtual Machine to accept it..
+  * User has registered for an account on the [Developer Portal](https://developer.blackboard.com/), [registered an application](https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal), obtained the key and secret, and [configured](https://community.blackboard.com/docs/DOC-1580-managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators) the Developer Virtual Machine to accept it..
 
 To watch a recording of the corresponding Webinar, click
 [here](https://u
-s.bbcollab.com%2Frecording%2FBBAA710721684484425FA10FBA7A1B93).
+s.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93).
 
 # About the Project
 
@@ -258,7 +258,7 @@ RestConstants.
 
 gradle run -Dexec.args="-t
 [https://localhost:9877](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2F)"
+link.jspa?url=https%3A//localhost%3A9877/)"
 
 -d
 Turn on DevMode. DevMode tells the sample application to ignore certificate
@@ -320,14 +320,14 @@ and-authentication) in this section.
 
 In the "1-Implement-OAuth" folder, you will find three files:
 [Authorizer.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FAuthorizer.java),
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/Authorizer.java),
 [Token.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FToken.java). and
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/Token.java). and
 [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FRestDemo.java).
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/RestDemo.java).
 
   * Authorizer is the service handler class. This does the actual work of requesting the token and retrieving the results.
   * Token is a JSON Model class. This is what we will use to interact with the token we receive from Blackboard Learn. Authorizer will request the token, and on receipt, will automatically serialize the JSON response into the Token object, allowing the application to simply interact with it as a normal Java object.
@@ -354,8 +354,8 @@ Let's get started:
   6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FRestDemo.java) in the
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in the
 1-Implement-OAuth folder to compare to your RestDemo.java if you have issues.
 
 ##
@@ -376,8 +376,8 @@ rest of our application to work properly.
 
 We first put our REST [Authorization
 service](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FAuthorizer.java) in place. So
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/Authorizer.java) in place. So
 with Basic Authentication and OAuth, there is really a few specific things
 that we need to do. First, we must hash our key and secret into a
 base64-encoded string. Once we have the utility in place to generate that
@@ -392,8 +392,8 @@ the oauth/token endpoint.
 
 The next step was to put our
 [Token](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FToken.java) object in place.
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/Token.java) object in place.
 This object is configured to allow the Jackson library to automatically
 serialize and deserialize our JSON payloads. It provides three basic
 properties that correspond directly to the JSON payload we expect to receive
@@ -402,8 +402,8 @@ expires_in. Once we have created and populated this object, we can then access
 this data whenever we need to.
 
 Lastly, we updated our [main class](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FRestDemo.java) in order to call
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in order to call
 the authorize method and retrieve the token.
 
 # Step 2: Datasources
@@ -416,14 +416,14 @@ create together and to your application.
 
 In the "2-Implement-Datasource" folder, you will find three files:
 [DatasourceHandler.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F2-Implement-Datasource%2FDatasourceHandler.java),
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/DatasourceHandler.java),
 [Datasource.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F2-Implement-Datasource%2FDatasource.java), and
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/Datasource.java), and
 [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F2-Implement-Datasource%2FRestDemo.java).
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/RestDemo.java).
 
   * DatasourceHandler is the service handler class. This does the actual work of building and processing HTTP requests and handling the incoming responses.
   * Datasource is a JSON Model class. This is what we will use to create datasources and to retrieve datasources from the REST responses we receive from Blackboard Learn. DatasourceHandler will automatically handle the serialization and deserialization of the datasource object, allowing the application to simply interact with it as a normal Java object.
@@ -468,8 +468,8 @@ Let's get started:
   6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F2-Implement-Datasource%2FRestDemo.java) in the
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/RestDemo.java) in the
 2-Implement-Datasource folder to compare to your RestDemo.java if you have
 issues.
 
@@ -533,8 +533,8 @@ necessary data to the sendRequest method to send the appropriate message and
 retrieve the appropriate response.
 
 Lastly, we updated our [main class](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FRestDemo.java) in order to call
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in order to call
 the appropriate methods to interact with the Datasource Service class.
 
 # Step 3: Terms
@@ -548,17 +548,17 @@ object to properly create and manipulate a Term.
 
 In the "3-Implement-Term" folder, you will find four files:
 [TermHandler.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F3-Implement-Term%2FTermHandler.java),
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/3-Implement-Term/TermHandler.java),
 [Term.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F3-Implement-Term%2FTerm.java),
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/3-Implement-Term/Term.java),
 [Availability.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F3-Implement-Term%2FAvailability.java), and
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/3-Implement-Term/Availability.java), and
 [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F3-Implement-Term%2FRestDemo.java)
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/3-Implement-Term/RestDemo.java)
 
   * TermHandler is the service handler class. This does the actual work of building and processing HTTP requests and handling the incoming responses.
   * Term is a JSON Model class. This is what we will use to create terms and to retrieve terms from the REST responses we receive from Blackboard Learn. TermHandler will automatically handle the serialization and deserialization of the term object, allowing the application to simply interact with it as a normal Java object.
@@ -600,8 +600,8 @@ Let's get started:
   6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F1-Implement-OAuth%2FRestDemo.java) in the
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in the
 3-Implementing-Term folder to compare to your RestDemo.java if you have
 issues.
 
@@ -664,8 +664,8 @@ the sendRequest method to send the appropriate message and retrieve the
 appropriate response.
 
 Lastly, we updated our [main class](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F3-Implement-Term%2FRestDemo.java) in order to call
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/3-Implement-Term/RestDemo.java) in order to call
 the appropriate methods to interact with the Term Service class.
 
 # Step 4: Remaining Objects
@@ -696,8 +696,8 @@ Let's get started:
   10. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-
-Workshop%2Fblob%2Fmaster%2F4-Implement-Remaining-Objects%2FRestDemo.java) in
+link.jspa?url=https%3A//github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/4-Implement-Remaining-Objects/RestDemo.java) in
 the 4-Implement-Remaining-Objects folder to compare to your RestDemo.java if
 you have issues.
 
@@ -778,7 +778,7 @@ expires_in=1639}
 
 > [main] INFO bbdn.rest.services.DatasourceHandler - URI is [http://localhost:
 9876/learn/api/public/v1/dataSources](https://community.blackboard.com/externa
-l-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fda
+l-link.jspa?url=http%3A//localhost%3A9876/learn/api/public/v1/da
 taSources)
 
 >
@@ -826,8 +826,8 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.DatasourceHandler - URI is
 [http://localhost:9876/learn/api/public/v1/dataSources/externalId:BBDN-DSK-
-JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ABBDN-
+JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/dataSources/externalId%3ABBDN-
 DSK-JAVA)
 
 >
@@ -873,8 +873,8 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.DatasourceHandler - URI is
 [http://localhost:9876/learn/api/public/v1/dataSources/externalId:BBDN-DSK-
-JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ABBDN-
+JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/dataSources/externalId%3ABBDN-
 DSK-JAVA)
 
 >
@@ -921,7 +921,7 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.TermHandler - URI is [http://localhost:9876/l
 earn/api/public/v1/terms](https://community.blackboard.com/external-link.jspa?
-url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fterms)
+url=http%3A//localhost%3A9876/learn/api/public/v1/terms)
 
 >
 
@@ -971,8 +971,8 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.TermHandler - URI is
 [http://localhost:9876/learn/api/public/v1/terms/externalId:BBDN-TERM-
-JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fterms%2FexternalId%3ABBDN-TERM-
+JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/terms/externalId%3ABBDN-TERM-
 JAVA)
 
 >
@@ -1021,8 +1021,8 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.TermHandler - URI is
 [http://localhost:9876/learn/api/public/v1/terms/externalId:BBDN-TERM-
-JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fterms%2FexternalId%3ABBDN-TERM-
+JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/terms/externalId%3ABBDN-TERM-
 JAVA)
 
 >
@@ -1082,7 +1082,7 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.CourseHandler - URI is [http://localhost:9876
 /learn/api/public/v1/courses](https://community.blackboard.com/external-link.j
-spa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fcourses)
+spa?url=http%3A//localhost%3A9876/learn/api/public/v1/courses)
 
 >
 
@@ -1140,8 +1140,8 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.CourseHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-
-Demo](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fcourses%2FexternalId%3ABBDN-Java-
+Demo](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/courses/externalId%3ABBDN-Java-
 REST-Demo)
 
 >
@@ -1208,8 +1208,8 @@ extrainfo=null]
 
 > [main] INFO bbdn.rest.services.CourseHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-
-Demo](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fcourses%2FexternalId%3ABBDN-Java-
+Demo](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/courses/externalId%3ABBDN-Java-
 REST-Demo)
 
 >
@@ -1277,7 +1277,7 @@ status=null, code=null, message=null, developerMessage=null, extrainfo=null]
 
 > [main] INFO bbdn.rest.services.UserHandler - URI is [http://localhost:9876/l
 earn/api/public/v1/users](https://community.blackboard.com/external-link.jspa?
-url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers)
+url=http%3A//localhost%3A9876/learn/api/public/v1/users)
 
 >
 
@@ -1338,8 +1338,8 @@ status=null, code=null, message=null, developerMessage=null, extrainfo=null]
 
 > [main] INFO bbdn.rest.services.UserHandler - URI is [http://localhost:9876/l
 earn/api/public/v1/users/externalId:bbdnrestdemojavauser](https://community.bl
-ackboard.com/external-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fap
-i%2Fpublic%2Fv1%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ackboard.com/external-link.jspa?url=http%3A//localhost%3A9876/learn/ap
+i/public/v1/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1406,8 +1406,8 @@ status=null, code=null, message=null, developerMessage=null, extrainfo=null]
 
 > [main] INFO bbdn.rest.services.UserHandler - URI is [http://localhost:9876/l
 earn/api/public/v1/users/externalId:bbdnrestdemojavauser](https://community.bl
-ackboard.com/external-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fap
-i%2Fpublic%2Fv1%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ackboard.com/external-link.jspa?url=http%3A//localhost%3A9876/learn/ap
+i/public/v1/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1475,9 +1475,9 @@ message=null, developerMessage=null, extrainfo=null]
 > [main] INFO bbdn.rest.services.MembershipHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-D
 emo/users/externalId:bbdnrestdemojavauser](https://community.blackboard.com/ex
-ternal-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1
-%2Fcourses%2FexternalId%3ABBDN-Java-REST-
-Demo%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ternal-link.jspa?url=http%3A//localhost%3A9876/learn/api/public/v1
+/courses/externalId%3ABBDN-Java-REST-
+Demo/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1528,9 +1528,9 @@ message=null, developerMessage=null, extrainfo=null]
 > [main] INFO bbdn.rest.services.MembershipHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-D
 emo/users/externalId:bbdnrestdemojavauser](https://community.blackboard.com/ex
-ternal-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1
-%2Fcourses%2FexternalId%3ABBDN-Java-REST-
-Demo%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ternal-link.jspa?url=http%3A//localhost%3A9876/learn/api/public/v1
+/courses/externalId%3ABBDN-Java-REST-
+Demo/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1587,9 +1587,9 @@ message=null, developerMessage=null, extrainfo=null]
 > [main] INFO bbdn.rest.services.MembershipHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-D
 emo/users/externalId:bbdnrestdemojavauser](https://community.blackboard.com/ex
-ternal-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1
-%2Fcourses%2FexternalId%3ABBDN-Java-REST-
-Demo%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ternal-link.jspa?url=http%3A//localhost%3A9876/learn/api/public/v1
+/courses/externalId%3ABBDN-Java-REST-
+Demo/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1639,9 +1639,9 @@ message=null, developerMessage=null, extrainfo=null]
 > [main] INFO bbdn.rest.services.MembershipHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-D
 emo/users/externalId:bbdnrestdemojavauser](https://community.blackboard.com/ex
-ternal-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1
-%2Fcourses%2FexternalId%3ABBDN-Java-REST-
-Demo%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ternal-link.jspa?url=http%3A//localhost%3A9876/learn/api/public/v1
+/courses/externalId%3ABBDN-Java-REST-
+Demo/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1677,8 +1677,8 @@ Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:08 GMT]}>
 
 > [main] INFO bbdn.rest.services.UserHandler - URI is [http://localhost:9876/l
 earn/api/public/v1/users/externalId:bbdnrestdemojavauser](https://community.bl
-ackboard.com/external-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2Flearn%2Fap
-i%2Fpublic%2Fv1%2Fusers%2FexternalId%3Abbdnrestdemojavauser)
+ackboard.com/external-link.jspa?url=http%3A//localhost%3A9876/learn/ap
+i/public/v1/users/externalId%3Abbdnrestdemojavauser)
 
 >
 
@@ -1715,8 +1715,8 @@ Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}>
 
 > [main] INFO bbdn.rest.services.CourseHandler - URI is
 [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-
-Demo](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fcourses%2FexternalId%3ABBDN-Java-
+Demo](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/courses/externalId%3ABBDN-Java-
 REST-Demo)
 
 >
@@ -1755,8 +1755,8 @@ Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}>
 
 > [main] INFO bbdn.rest.services.TermHandler - URI is
 [http://localhost:9876/learn/api/public/v1/terms/externalId:BBDN-TERM-
-JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2Fterms%2FexternalId%3ABBDN-TERM-
+JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/terms/externalId%3ABBDN-TERM-
 JAVA)
 
 >
@@ -1793,8 +1793,8 @@ Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}>
 
 > [main] INFO bbdn.rest.services.DatasourceHandler - URI is
 [http://localhost:9876/learn/api/public/v1/dataSources/externalId:BBDN-DSK-
-JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Floc
-alhost%3A9876%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ABBDN-
+JAVA](https://community.blackboard.com/external-link.jspa?url=http%3A//loc
+alhost%3A9876/learn/api/public/v1/dataSources/externalId%3ABBDN-
 DSK-JAVA)
 
 >

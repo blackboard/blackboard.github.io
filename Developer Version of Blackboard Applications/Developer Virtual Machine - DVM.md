@@ -40,8 +40,8 @@ may not download or use the Bb Virtual Machine._
 ## Prerequisites
 
   * Developer-class workstation or laptop that supports Linux virtual machines.
-  * [VirtualBox](https://www.virtualbox.org%2Fwiki%2FDownloads) 5.0.14 must be installed and operational.
-  * [Vagrant](https://www.vagrantup.com%2Fdownloads.html) 1.74 or later must be installed and operational.
+  * [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 5.0.14 must be installed and operational.
+  * [Vagrant](https://www.vagrantup.com/downloads.html) 1.74 or later must be installed and operational.
   * Behind the Blackboard Access - Read [Become a Blackboard Partner and Gain Access To Behind the Blackboard and Partner SaaS Systems.](https://community.blackboard.com/docs/DOC-1744-become-an-official-blackboard-partner)
 
 ## Installation
@@ -49,24 +49,24 @@ may not download or use the Bb Virtual Machine._
   1. Create a directory on your computer for your Vagrant VM. For example: $HOME/Vagrant/Learn
   2. Download the Vagrant virtual machine and Vagrantfile from Behind the Blackboard and place them in the directory listed in Step 1.
     * 9.1 Q4 2018 (3500) DVM release is held up by a technical difficulty. Install a recent version and see [Upgrade Your DVM](https://community.blackboard.com/community/developers/blog/2016/12/28/upgrade-your-dvm) if you need the latest version.
-    * [9.1 Q2 2018](https://behind.blackboard.com%2Fdownloads%2Fdetails.aspx%3Fd%3D1787) (3400)
-    * [9.1 Q4 2017](https://behind.blackboard.com%2Fdownloads%2Fdetails.aspx%3Fd%3D1784) (3300)
-    * [9.1 Q2 2017](https://behind.blackboard.com%2Fdownloads%2Fdetails.aspx%3Fd%3D1779) (3200)
-    * [9.1 Q4 2016](https://behind.blackboard.com%2Fdownloads%2Fdetails.aspx%3Fd%3D1770) (3100)
-    * [9.1 Q2 2016](https://behind.blackboard.com%2Fdownloads%2Fdetails.aspx%3Fd%3D1746) (3000)
+    * [9.1 Q2 2018](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1787) (3400)
+    * [9.1 Q4 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1784) (3300)
+    * [9.1 Q2 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1779) (3200)
+    * [9.1 Q4 2016](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1770) (3100)
+    * [9.1 Q2 2016](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1746) (3000)
   3. Run the following commands in that directory:  
 vagrant up
 
 vagrant ssh
 
-  4. If you are on a Windows host machine, you may experience issues logging into the VM because of Windows' management of SSH. Alternatively, you can log into the VM using any SSH client you want by connecting to _localhost:2222_ and using the credentials _vagrant/vagrant_. Additionally, help is available on the [Vagrant site](https://www.vagrantup.com%2Fdownloads.html).
+  4. If you are on a Windows host machine, you may experience issues logging into the VM because of Windows' management of SSH. Alternatively, you can log into the VM using any SSH client you want by connecting to _localhost:2222_ and using the credentials _vagrant/vagrant_. Additionally, help is available on the [Vagrant site](https://www.vagrantup.com/downloads.html).
   5. Blackboard Learn should automatically start when the machine is booted up.
 
 ## Using the Virtual Machine
 
 You can now access your developer instance of Learn at
 **[http://localhost:9876](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Flocalhost%3A9876%2F)**. The Learn administrator
+link.jspa?url=http%3A//localhost%3A9876/)**. The Learn administrator
 login credentials are _administrator_/password.
 
 ### Developer License

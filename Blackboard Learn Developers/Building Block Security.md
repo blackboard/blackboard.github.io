@@ -29,8 +29,8 @@ to look directly in the database.
 
 The easiest way to check entitlements is by using the static methods on the
 [SecurityUtil](https://community.blackboard.com/external-link.jspa?url=http%3A
-%2F%2Flibrary.blackboard.com%2Fref%2F15c9ac3f-f10f-44bc-91f9-1556e05cc5b6%2Fbl
-ackboard%2Fplatform%2Fsecurity%2FSecurityUtil.html) class.
+//library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/bl
+ackboard/platform/security/SecurityUtil.html) class.
 
 For example, to check whether a user has rights to modify an enrollment in a
 course, you could write.
@@ -45,8 +45,8 @@ if(SecurityUtil.userHasEntitlement("course.enrollment.MODIFY")) {
 
 If you wish to check a set of permissions in one go, you can use the method [S
 ecurityUtil.userHasAllEntitlements(java.lang.String[])](https://community.blac
-kboard.com/external-link.jspa?url=http%3A%2F%2Flibrary.blackboard.com%2Fref%2F
-15c9ac3f-f10f-44bc-91f9-1556e05cc5b6%2Fblackboard%2Fplatform%2Fsecurity%2FSecu
+kboard.com/external-link.jspa?url=http%3A//library.blackboard.com/ref/
+15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/blackboard/platform/security/Secu
 rityUtil.html%23userHasAllEntitlements%28java.lang.String%5B%5D%29)
 
 if (SecurityUtil.userHasAllEntitlements(new
@@ -66,8 +66,8 @@ String[]{"course.assessment.results.DELETE",
 
 To check that a user is authenticated, you can call the isAuthenticated()
 method on the user's [BbSession](https://community.blackboard.com/external-lin
-k.jspa?url=http%3A%2F%2Flibrary.blackboard.com%2Fref%2F15c9ac3f-f10f-44bc-91f9
--1556e05cc5b6%2Fblackboard%2Fplatform%2Fsession%2FBbSession.html) object.
+k.jspa?url=http%3A//library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9
+-1556e05cc5b6/blackboard/platform/session/BbSession.html) object.
 
 BbSession bbSession = BbSessionManagerServiceFactory.getInstance().getSession(
 ctx.getActionBeanContext().getRequest());
@@ -98,9 +98,9 @@ return;
 
 However, if you are using a framework like
 [Spring](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.springsource.org%2F) or
+link.jspa?url=http%3A//www.springsource.org/) or
 [Stripes](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.stripesframework.org%2F) calling
+link.jspa?url=http%3A//www.stripesframework.org/) calling
 HttpAuthManager.sendLoginRedirect may interfere with your application logic,
 and you may wish to just redirect to the root of your blackboard install.
 

@@ -18,10 +18,10 @@ search to find both free/open source and commercially-supported plugins for
 your Blackboard learning platform:
 
   * [Blackboard Building Blocks Catalog  
-](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.bla
-ckboard.com%2FCommunities%2FPartners%2FBuilding-Blocks.aspx)
+](https://community.blackboard.com/external-link.jspa?url=http%3A//www.bla
+ckboard.com/Communities/Partners/Building-Blocks.aspx)
 
-  * [OSCELOT Projects Site](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fprojects.oscelot.org%2F)
+  * [OSCELOT Projects Site](https://community.blackboard.com/external-link.jspa?url=http%3A//projects.oscelot.org/)
 
 As a member of the Developer Community, you also have access to technical
 documentation and other resources to help you build your own plug-ins

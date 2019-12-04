@@ -167,7 +167,7 @@ Content URL
 /courses/1/BOB101/content/_221_1
 
 Request [UUID](https://community.blackboard.com/external-link.jspa?url=http%3A
-%2F%2Fwww.opengroup.org%2Fonlinepubs%2F009629399%2Fapdxa.htm)
+//www.opengroup.org/onlinepubs/009629399/apdxa.htm)
 
 @X@request.id@X@
 

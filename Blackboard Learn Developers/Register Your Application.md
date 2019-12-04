@@ -12,7 +12,7 @@ authenticate your application with Blackboard Learn instances.
 
 To register your application:
 
-  1. Log into [https://developer.blackboard.com/](https://developer.blackboard.com%2F). If you do not have a login, you must sign up for one first.
+  1. Log into [https://developer.blackboard.com/](https://developer.blackboard.com/). If you do not have a login, you must sign up for one first.
   2. With the _My Applications_ tab highlighted, select the **+** (add) icon.
   3. Complete the required fields. The default developer group for your application is your name. You can change this later. For more information about developer groups, see [Developer Groups, Site Quotas, and Rate Limits](https://community.blackboard.com/docs/DOC-4258-developer-groups-site-quotas-and-rate-limits). Learn displays your application's name and description to Learn administrators when they connect your application to their system. This helps them make sure they have found the intended application.  
 The following fields are required:

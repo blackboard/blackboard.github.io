@@ -9,8 +9,8 @@ Building Blocks framework.
 
 ## Building Block Developer Tools
 
-  * [Blackboard Maven Repository](https://maven.blackboard.com%2Fcontent%2Frepositories%2Freleases%2F)
-  * [schema.xml validator](https://maven.blackboard.com%2Fcontent%2Frepositories%2Freleases%2Fblackboard%2Fplatform%2Fbb-schema-xsd%2F)
-  * [bb-manifest.xml validator](https://maven.blackboard.com%2Fcontent%2Frepositories%2Freleases%2Fblackboard%2Fplatform%2Fbb-manifest-plugin%2F)
-  * [Blackboard Github Repository](https://github.com%2Fblackboard)
+  * [Blackboard Maven Repository](https://maven.blackboard.com/content/repositories/releases/)
+  * [schema.xml validator](https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-schema-xsd/)
+  * [bb-manifest.xml validator](https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-manifest-plugin/)
+  * [Blackboard Github Repository](https://github.com/blackboard)
 

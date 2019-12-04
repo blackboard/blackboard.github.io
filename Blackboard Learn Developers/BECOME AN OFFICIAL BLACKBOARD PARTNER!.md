@@ -19,11 +19,11 @@ The BbDN includes the following benefits:
 
   * To request access, create a ticket on Behind the Blackboard with the subject line: “Access to the Partner SaaS Smoke Test Systems.” Include first and last names, email addresses and phone numbers for 1-3 users.
   * Ability to promote your integration through our Partner Catalog (now on our Community Site)
-  * Ability to sponsor at [BbWorld](https://bbworld.com%2F), our largest annual users conference
+  * Ability to sponsor at [BbWorld](https://bbworld.com/), our largest annual users conference
 
 Sign up for the BbDN agreement today on [our registration
-page](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fsec
-ureapp.blackboard.com%2Fpgforms%2Fpages%2Fregistration%2FOrder-Wizard.aspx),
+page](https://community.blackboard.com/external-link.jspa?url=http%3A//sec
+ureapp.blackboard.com/pgforms/pages/registration/Order-Wizard.aspx),
 or contact us at [BusDev&AlliancesInquiry@blackboard.com](mailto:BusDev&Allian
 cesInquiry@blackboard.com) to address any questions or discuss additional
 partnership levels.

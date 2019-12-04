@@ -38,11 +38,11 @@ To learn more about creating Building Blocks, start
 blocks). To see examples of Building Blocks that have already been created,
 take a look at released building blocks on the Blackboard Learn [extensions
 site](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.blackboardextensions.com%2F) which highlights
+link.jspa?url=http%3A//www.blackboardextensions.com/) which highlights
 Building Blocks produced by Blackboard Partners, or take a look at open source
 projects contributed by the Learn developer community at OSCELOT's
 [projects](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fprojects.oscelot.org%2F) site.
+link.jspa?url=http%3A//projects.oscelot.org/) site.
 
 ## Request a Developers License
 
@@ -52,14 +52,14 @@ the Community and Content Management modules turned on. It can be run on a
 development server or even a virtual machine image for development purposes.
 If you require a developer network account visit [Behind the
 Blackboard](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2F) (as an
+link.jspa?url=https%3A//blackboard.secure.force.com/) (as an
 administrator) or contact your sales representative.
 
 ## Commercial Partnerships
 
 If you are interested in becoming a Blackboard partner visit the [Blackboard
 Partnerships](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.blackboard.com%2Fpartnership%2Findex.aspx)™
+link.jspa?url=http%3A//www.blackboard.com/partnership/index.aspx)™
 program site. Partnering with Blackboard provides access to design guidance
 and support among other benefits.
 

@@ -21,7 +21,7 @@ which is accessible from the Blackboard GitHub project repository:
 
 [https://github.com/blackboard/basic-b2-template](https://community.blackboard
 .com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2Fbasic-b2-template)
+link.jspa?url=https%3A//github.com/blackboard/basic-b2-template)
 
 There are several ways which you may access the basic-b2-template. Notably:
 
@@ -183,7 +183,7 @@ required AND built into WAR
 
 Gradle Dependency Management Documentation: [http://www.gradle.org/docs/curren
 t/u...anagement.html](https://community.blackboard.com/external-link.jspa?url=
-http%3A%2F%2Fwww.gradle.org%2Fdocs%2Fcurrent%2Fuserguide%2Fdependency_manageme
+http%3A//www.gradle.org/docs/current/userguide/dependency_manageme
 nt.html)
 
 Blackboard jars should always be providedCompile to exclude them from the war

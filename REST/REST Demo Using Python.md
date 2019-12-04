@@ -46,8 +46,8 @@ knowledge necessary to build a REST-based Web Services integration.
 This help topic assumes the Developer:
 
   * is familiar with Python
-  * has obtained a copy of the[ source code](https://github.com%2Fblackboard%2FBBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://github.com%2Fblackboard%2FBBDN-REST-DEMO_Python%2Fblob%2Fmaster%2FREADME.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+  * has obtained a copy of the[ source code](https://github.com/blackboard/BBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.md) file.
+  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
 
 ### Code Walkthrough
 
@@ -373,7 +373,7 @@ objects .
 All of the code snippets included in this document are included in a sample
 REST Demo Python command line application available on
 [GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-REST-DEMO_Python).
+link.jspa?url=https%3A//github.com/blackboard/BBDN-REST-DEMO_Python).
 There is a README.md included that talks more specifically running the code.
 Feel free to review the code and run it against a test or development Learn
 instance to see how it works.

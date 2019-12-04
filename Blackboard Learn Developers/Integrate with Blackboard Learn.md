@@ -30,5 +30,5 @@ _
 # What's the Right Path For Me?
 
   * REST API integration is, in almost every case, the best path for you. For more information, see [Getting Started With REST](https://community.blackboard.com/docs/DOC-1592-getting-started-with-rest).
-  * If you need to integration with the Blackboard Learn user interface, you'll want to create an LTI tool provider as well. For more information, see [Learning Tools Interoperability | IMS Global Learning Consortium](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.imsglobal.org%2Factivity%2Flearning-tools-interoperability).
+  * If you need to integration with the Blackboard Learn user interface, you'll want to create an LTI tool provider as well. For more information, see [Learning Tools Interoperability | IMS Global Learning Consortium](https://community.blackboard.com/external-link.jspa?url=http%3A//www.imsglobal.org/activity/learning-tools-interoperability).
 

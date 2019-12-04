@@ -25,7 +25,7 @@ This document contains a map of the Caliper events emitted by Blackboard
 Learn. If you are interested in learning more about Moodle's Caliper
 implementation, please visit the [Moodle
 Documentation](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fdocs.moodle.org%2Fdev%2FCaliper).
+link.jspa?url=https%3A//docs.moodle.org/dev/Caliper).
 
 # SessionEvent
 

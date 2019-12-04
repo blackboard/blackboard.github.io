@@ -11,7 +11,7 @@ particular element.
 
 <tool-profile ltiVersion="2.0-July08" xmlns:locale="[http://www.ims.org/lti/lo
 calization](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.ims.org%2Flti%2Flocalization)">
+link.jspa?url=http%3A//www.ims.org/lti/localization)">
 
 <vendor>
 
@@ -48,15 +48,15 @@ Description</description>](https://community.blackboard.com/docs/DOC-1464)
 
 <base-url type="http">[http://your.server.com/proxyApp](https://community.blac
 kboard.com/external-
-link.jspa?url=http%3A%2F%2Fyour.server.com%2FproxyApp)</base-url>
+link.jspa?url=http%3A//your.server.com/proxyApp)</base-url>
 
 <base-url type="https">[https://your.server.com/proxyApp](https://community.bl
 ackboard.com/external-
-link.jspa?url=https%3A%2F%2Fyour.server.com%2FproxyApp)</base-url>
+link.jspa?url=https%3A//your.server.com/proxyApp)</base-url>
 
 <base-url type="server-to-server">[https://your.server.com/proxyApp](https://c
 ommunity.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fyour.server.com%2FproxyApp)</base-url>
+link.jspa?url=https%3A//your.server.com/proxyApp)</base-url>
 
 </base-urls>
 

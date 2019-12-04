@@ -27,7 +27,7 @@ Data collection page
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "[http://www.w3.org/TR/html4
 /strict.dtd](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.w3.org%2FTR%2Fhtml4%2Fstrict.dtd)">
+link.jspa?url=http%3A//www.w3.org/TR/html4/strict.dtd)">
 
 <%@ taglib uri="/bbNG" prefix="bbNG"%>
 

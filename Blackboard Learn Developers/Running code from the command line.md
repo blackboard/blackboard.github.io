@@ -34,15 +34,15 @@ context object - this includes parsing your licence file. When I began looking
 at this I wasn't sure whether or not I'd be able to manage this. George Kroner
 pointed me towards a key file [env.sh] and also the somewhat overwhelming
 **service-config-snapshot-jdbc.properties file**. I had a look, but ended up
-[posting](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2
-Fforums.edugarage.com%2Fthread.jspa%3FthreadID%3D164%26tstart%3D0) a question
+[posting](https://community.blackboard.com/external-link.jspa?url=http%3A/%2
+Fforums.edugarage.com/thread.jspa%3FthreadID%3D164%26tstart%3D0) a question
 about this in the edugarage forums. Peter Fokkinga, from the University of
 Groningen in the Netherlands came to my aid and posted details of a [custom
 BlackboardContext class](https://community.blackboard.com/external-link.jspa?u
-rl=http%3A%2F%2Fwww.edugarage.com%2Fdownload%2Fattachments%2F23855389%2FBlackb
+rl=http%3A//www.edugarage.com/download/attachments/23855389/Blackb
 oardContext.java%3Fversion%3D2%26modificationDate%3D1273652295650) (new:
 [version for 9.x](https://community.blackboard.com/external-link.jspa?url=http
-%3A%2F%2Fwww.edugarage.com%2Fdownload%2Fattachments%2F23855389%2FBlackboardCon
+%3A//www.edugarage.com/download/attachments/23855389/BlackboardCon
 text9.java%3Fversion%3D1%26modificationDate%3D1276594754277)) he'd written to
 help. Have a look at his code before attempting to run this - note that the
 code is currently written expecting an ORACLE database connection - Windows
@@ -680,7 +680,7 @@ BlackboardContext object");
 WorkHorse requires the following JARS:
 
   * **bb-platform.jar** provides access to the User and UserDbLoader objects and any of the Persistence exceptions thrown
-  * **log4j-1.2.15.jar** (or later) This is used to provide the logging required by Peter's BlackboardContext class. You can download it from [http://logging.apache.org/log4j/](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Flogging.apache.org%2Flog4j%2F)
+  * **log4j-1.2.15.jar** (or later) This is used to provide the logging required by Peter's BlackboardContext class. You can download it from [http://logging.apache.org/log4j/](https://community.blackboard.com/external-link.jspa?url=http%3A//logging.apache.org/log4j/)
   * **BlackboardContext.jar** - Peter's custom class posted by him to the forum, which I turned into a JAR. It is very well commented and creates nice JavaDocs
 
 # Other required files

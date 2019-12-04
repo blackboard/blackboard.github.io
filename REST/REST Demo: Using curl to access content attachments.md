@@ -308,8 +308,8 @@ Request:
 $ curl -k -X GET -H "Authorization: Bearer QvWicpu3kMA9coWMv7TKLPzYnq4nUnfr"
 [https://ultra-integ.int.bbpd.io/learn/api/public/v1/courses/_60054_1/contents
 /_382278_1/children](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fultra-integ.int.bbpd.io%2Flearn%2Fapi%2Fpublic%2Fv
-1%2Fcourses%2F_60054_1%2Fcontents%2F_382278_1%2Fchildren)
+link.jspa?url=https%3A//ultra-integ.int.bbpd.io/learn/api/public/v
+1/courses/_60054_1/contents/_382278_1/children)
 
 Response:
 
@@ -649,7 +649,7 @@ Expires: Tue, 28 Nov 2017 23:40:32 GMT
 
 Last-Modified: Sat, 28 Nov 1998 23:40:32 GMT
 
-**Location: [https://ultra-integ.int.bbpd.io/bbcswebdav/xid-21916142_1?VxJw3wfC56=1543449332&Kq3cZcYS15=a253d31a6d36425c81aaa457ee9e2f04&3cCnGYSz89=A9bgt2bWD7NXyIzsI5kHPQQKBCpZ%2FqnQZ6XM2cqmZPI%3D](https://community.blackboard.com/ultra-integ.int.bbpd.io/bbcswebdav/xid-21916142_1?VxJw3wfC56=1543449332&Kq3cZcYS15=a253d31a6d36425c81aaa457ee9e2f04&3cCnGYSz89=A9bgt2bWD7NXyIzsI5kHPQQKBCpZ%2FqnQZ6XM2cqmZPI%3D)**
+**Location: [https://ultra-integ.int.bbpd.io/bbcswebdav/xid-21916142_1?VxJw3wfC56=1543449332&Kq3cZcYS15=a253d31a6d36425c81aaa457ee9e2f04&3cCnGYSz89=A9bgt2bWD7NXyIzsI5kHPQQKBCpZ/qnQZ6XM2cqmZPI%3D](https://community.blackboard.com/ultra-integ.int.bbpd.io/bbcswebdav/xid-21916142_1?VxJw3wfC56=1543449332&Kq3cZcYS15=a253d31a6d36425c81aaa457ee9e2f04&3cCnGYSz89=A9bgt2bWD7NXyIzsI5kHPQQKBCpZ/qnQZ6XM2cqmZPI%3D)**
 
 P3P: CP="CAO PSA OUR"
 

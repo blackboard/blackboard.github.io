@@ -14,7 +14,7 @@
 BbML is a subset of HTML. The parameters of some methods accept BbML-formatted
 text. For more information about particular Learn REST endpoints, see the
 [REST API documentation](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi).
+link.jspa?url=https%3A//developer.blackboard.com/portal/displayApi).
 
 # BbML specification - version 1
 
@@ -30,7 +30,7 @@ a REST API GET method when you are patching/updating an existing resource. Do
 not use them to create a resource from scratch.
 
 [a](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fcommunity.blackboard.com%2F%23a)
+link.jspa?url=http%3A//community.blackboard.com/%23a)
 
 br
 
@@ -239,17 +239,17 @@ xmlns=Â¨[http://www.w3.org/1998/Math/MathMLÂ¨Â»Â«mnÂ»3Â«/mnÂ»Â«m
 nÂ»4Â«/mnÂ»Â«mrootÂ»Â«mnÂ»7Â«/mnÂ»Â«mnÂ»2Â«/mnÂ»Â«
 
 /mrootÂ»Â«/mathÂ»](https://community.blackboard.com/external-link.jspa?url=htt
-p%3A%2F%2Fwww.w3.org%2F1998%2FMath%2FMathML%25C2%25A8%25C2%25BB%25C2%25ABmn%25
-C2%25BB3%25C2%25AB%2Fmn%25C2%25BB%25C2%25ABmo%25C2%25BB%2F%25C2%25AB%2Fmo%25C2
-%25BB%25C2%25ABmn%25C2%25BB4%25C2%25AB%2Fmn%25C2%25BB%25C2%25ABmroot%25C2%25BB
-%25C2%25ABmn%25C2%25BB7%25C2%25AB%2Fmn%25C2%25BB%25C2%25ABmn%25C2%25BB2%25C2%2
-5AB%2Fmn%25C2%25BB%25C2%25AB%2Fmroot%25C2%25BB%25C2%25AB%2Fmath%25C2%25BB)">
+p%3A//www.w3.org/1998/Math/MathML%25C2%25A8%25C2%25BB%25C2%25ABmn%25
+C2%25BB3%25C2%25AB/mn%25C2%25BB%25C2%25ABmo%25C2%25BB/%25C2%25AB/mo%25C2
+%25BB%25C2%25ABmn%25C2%25BB4%25C2%25AB/mn%25C2%25BB%25C2%25ABmroot%25C2%25BB
+%25C2%25ABmn%25C2%25BB7%25C2%25AB/mn%25C2%25BB%25C2%25ABmn%25C2%25BB2%25C2%2
+5AB/mn%25C2%25BB%25C2%25AB/mroot%25C2%25BB%25C2%25AB/math%25C2%25BB)">
 
 </p>
 
 <p><a
 href="[http://www.blackboard.com](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.blackboard.com%2F)">Blackboard</a></p>
+link.jspa?url=http%3A//www.blackboard.com/)">Blackboard</a></p>
 
 </div>
 
@@ -309,9 +309,9 @@ For example, for the Attachment plugin, the generated bbml is as follows
 (minus unneccessary whitespace I've added for easy viewing):
 
 <a href="[https://ultra-integ.int.bbpd.io/bbcswebdav/pid-486306-dt-content-
-rid-13383141_1/xid-13383141_1](/external-link.jspa?url=https%3A%2F%2Fultra-
-integ.int.bbpd.io%2Fbbcswebdav%2Fpid-486306-dt-content-
-rid-13383141_1%2Fxid-13383141_1)" data-bbtype="attachment" data-bbfile="{&quot
+rid-13383141_1/xid-13383141_1](/external-link.jspa?url=https%3A//ultra-
+integ.int.bbpd.io/bbcswebdav/pid-486306-dt-content-
+rid-13383141_1/xid-13383141_1)" data-bbtype="attachment" data-bbfile="{&quot
 ;extension&quot;:&quot;pdf&quot;,&quot;linkName&quot;:&quot;1-23MB&quot;,&quot
 ;render&quot;:&quot;inline&quot;,&quot;alternativeText&quot;:&quot;1-23MB.pdf&
 quot;,&quot;mimeType&quot;:&quot;application/pdf&quot;,&quot;isDecorative&quot

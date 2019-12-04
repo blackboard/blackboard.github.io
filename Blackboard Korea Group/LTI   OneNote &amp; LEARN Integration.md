@@ -5,8 +5,8 @@
 ---
 해당 위치의 설명서를 참고하시기 바랍니다.
 
-  * LEARN LTI 연동 도움말: [ https://help.blackboard.com/ko-kr/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability#add-a-new-lti-to…](https://help.blackboard.com%2Fko-kr%2FLearn%2FAdministrator%2FSaaS%2FIntegrations%2FLearning_Tools_Interoperability%23add-a-new-lti-tool-provider_OTP-4)
-  * MS OneNote LTI 연동 가이드: [https://www.onenote.com/lti/integratelti?omkt=ko-KR](https://na01.safelinks.protection.outlook.com%2F%3Furl%3Dhttps%253A%252F%252Fwww.onenote.com%252Flti%252Fintegratelti%253Fomkt%253Dko-KR%26data%3D02%257C01%257Csoomyoung.yi%2540blackboard.com%257C104e9450131a455cf07208d62435f91a%257Cbf0b29a25e5c4aaaba4dac988df15ea6%257C0%257C0%257C636736211572484532%26sdata%3DNQePYv%252FkIW7YKS1v2GHSyUa86GehNfJaEiW5DT08Ba0%253D%26reserved%3D0)
+  * LEARN LTI 연동 도움말: [ https://help.blackboard.com/ko-kr/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability#add-a-new-lti-to…](https://help.blackboard.com/ko-kr/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability%23add-a-new-lti-tool-provider_OTP-4)
+  * MS OneNote LTI 연동 가이드: [https://www.onenote.com/lti/integratelti?omkt=ko-KR](https://na01.safelinks.protection.outlook.com/%3Furl%3Dhttps%253A%252F%252Fwww.onenote.com%252Flti%252Fintegratelti%253Fomkt%253Dko-KR%26data%3D02%257C01%257Csoomyoung.yi%2540blackboard.com%257C104e9450131a455cf07208d62435f91a%257Cbf0b29a25e5c4aaaba4dac988df15ea6%257C0%257C0%257C636736211572484532%26sdata%3DNQePYv%252FkIW7YKS1v2GHSyUa86GehNfJaEiW5DT08Ba0%253D%26reserved%3D0)
 
 OneNote 수업용 전자 필기장을 통합하는 방법>Blackboard 항목의 링크에서 열리는 Youtube 동영상을 참고하시면 됩니다.
 

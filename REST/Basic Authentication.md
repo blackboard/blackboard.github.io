@@ -7,7 +7,7 @@
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC
 Standard](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc6749). Each developer
+link.jspa?url=https%3A//tools.ietf.org/html/rfc6749). Each developer
 has a unique key and secret associated with each application they create. The
 developer makes an HTTP Post directly to the REST-enabled Learn server
 requesting an OAuth access token. The Learn instance forwards the request to
@@ -32,7 +32,7 @@ quotas-and-rate-limits).
 
 ## Before You Start
 
-  * Your Blackboard Learn instance must be registered at [developer.blackboard.com](https://developer.blackboard.com%2F).
+  * Your Blackboard Learn instance must be registered at [developer.blackboard.com](https://developer.blackboard.com/).
   * The application ID you receive when registering at developer.blackboard.com must then be registered on your Blackboard Learn instance. Registering your application on a Learn instance provides the application key:secret pair access to the Learn instance.
 
 ## To Get a Token Using Basic OAuth 2.0
@@ -79,7 +79,7 @@ Use cURL or an appropriate HTTP library to make a REST call to the appropriate
 endpoint. For a list of endpoints and the methods supported for each, see the
 Blackboard Learn REST reference docs at [https://developer.blackboard.com/port
 al/displayApi/Learn](https://community.blackboard.com/external-link.jspa?url=h
-ttps%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi%2FLearn).
+ttps%3A//developer.blackboard.com/portal/displayApi/Learn).
 
   * Headers must include:
     * Content-Type and Accept should be set as specified by the reference docs for the call you want.
@@ -134,5 +134,5 @@ you.
   * Tokens expire after 1 hour, as per the OAuth RFC examples.
   * Tokens are associated with a specific Learn site.
   * Any application may have only one token per Learn site. Asking for a token returns the existing one with an updated expiry time if it has not expired yet.
-  * Check the [REST API Documentation](https://developer.blackboard.com%2Fportal%2FdisplayApi) for error codes.
+  * Check the [REST API Documentation](https://developer.blackboard.com/portal/displayApi) for error codes.
 

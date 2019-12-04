@@ -8,20 +8,20 @@
 아래의 사이트에서 계정을 만드신 후
 
 [Uptime Robot ](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fuptimerobot.com%2F)uptimerobot.com
+link.jspa?url=https%3A//uptimerobot.com/)uptimerobot.com
 [https://uptimerobot.com/](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fuptimerobot.com%2F)
+link.jspa?url=https%3A//uptimerobot.com/)
 
 Dashboard에서 'Add New Monitor' 클릭
 
 아래와 같은 창에서 외부에서 접속이 가능한 Blackboard Learn URL 설정(아래 참고) 및 알람을 받고자 하는 메일 선택 ( 메일
 추가 등 설정 변경은 My settings 에서 가능)
 
-*Learn 의 모니터용 주소는 학교 [https://우리학교LearnURL/webapps/portal/healthCheck](https://%EC%9A%B0%EB%A6%AC%ED%95%99%EA%B5%90LearnURL%2Fwebapps%2Fportal%2FhealthCheck) 형식입니다. (healthCheck 중는 C 대문자)
+*Learn 의 모니터용 주소는 학교 [https://우리학교LearnURL/webapps/portal/healthCheck](https://%EC%9A%B0%EB%A6%AC%ED%95%99%EA%B5%90LearnURL/webapps/portal/healthCheck) 형식입니다. (healthCheck 중는 C 대문자)
 
 예) [https://blackboard.uni.ac.kr/webapps/potal/healthCheck](https://community.
-blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.uni.ac.kr%2Fweb
-apps%2Fpotal%2FhealthCheck)
+blackboard.com/external-link.jspa?url=https%3A//blackboard.uni.ac.kr/web
+apps/potal/healthCheck)
 
 [![Dashboard _ Uptime Robot.jpg](https://community.blackboard.com/servlet/Jive
 Servlet/downloadImage/102-3653-4-125493/957-527/Dashboard+_+Uptime+Robot.jpg)]
@@ -34,7 +34,7 @@ Hi,
 
 The monitor 우리학교Learn ([https://blackboard.uni.ac.kr/webapps/potal/healthCheck
 ](https://blackb
-oard.uni.ac.kr%2Fwebapps%2Fpotal%2FhealthCheck)) is currently DOWN (Connection
+oard.uni.ac.kr/webapps/potal/healthCheck)) is currently DOWN (Connection
 Timeout).
 
 Uptime Robot will alert you when it is back up.
@@ -49,7 +49,7 @@ Hi,
 
 The monitor 우리학교Learn ([https://blackboard.uni.ac.kr/webapps.potal/healthCheck
 ](https://blackb
-oard.uni.ac.kr%2Fwebapps.potal%2FhealthCheck)) is back UP (HTTP 401 -
+oard.uni.ac.kr/webapps.potal/healthCheck)) is back UP (HTTP 401 -
 Unauthorized) (It was down for 1 minutes and 27 seconds).
 
 Have a great day,

@@ -46,7 +46,7 @@ NOTE: Building Block installation is NOT supported on the AMIs.
 
 The easiest way to find the D\developer AMI is by searching the Amazon
 Marketplace for [Blackboard Learn](https://community.blackboard.com/external-l
-ink.jspa?url=https%3A%2F%2Faws.amazon.com%2Fmarketplace%2Fsearch%2Fresults%3Fx
+ink.jspa?url=https%3A//aws.amazon.com/marketplace/search/results%3Fx
 %3D0%26y%3D0%26searchTerms%3DBlackboard%2BLearn%26page%3D1%26ref_%3Dnav_search
 _box). The results show all of the currently available AMIs. Given the cadence
 or releases, you should locate the Learn instance you want.
@@ -82,11 +82,11 @@ Starting with version **3300.6.0** the Learn for REST and LTI Developers AMI
 supports free Let’s Encrypt SSL Certificates. At this time we do not support
 alternative SSL certificate processes.
 
-- you may read about Let’s Encrypt at [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org%2F)
+- you may read about Let’s Encrypt at [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 
-- you may read about certbot at [Certbot](https://certbot.eff.org%2F)
+- you may read about certbot at [Certbot](https://certbot.eff.org/)
 
-- you may read about how to get a free DNS at [Free Dynamic DNS - No-IP.com - Managed DNS Services](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Ffreeddns.noip.com%2F)
+- you may read about how to get a free DNS at [Free Dynamic DNS - No-IP.com - Managed DNS Services](https://community.blackboard.com/external-link.jspa?url=http%3A//freeddns.noip.com/)
 
 ## Setup
 
@@ -162,15 +162,15 @@ Page.jpeg)](https://community.blackboard.com/servlet/JiveServlet/showImage/102
 When you set up your instance of Blackboard Learn, you can configure different
 options. These options are discussed in [Enable Learn Tool Interoperability
 (LTI) Links and Text](https://community.blackboard.com/external-link.jspa?url=
-https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FAdministrator%2FSaaS%2FIntegration
-s%2FLearning_Tools_Interoperability%23enable-or-disable-lti-tools-for-courses-
+https%3A//help.blackboard.com/Learn/Administrator/SaaS/Integration
+s/Learning_Tools_Interoperability%23enable-or-disable-lti-tools-for-courses-
 and-organizations).
 
 # Triage Your AMI-based Blackboard Learn Instance
 
 **_Note that not stopping your EC2 when you encounter an error will continue to incur EC2 charges and we do not issue refunds.Always stop your EC2 if you encounter an error or do not require a 24x7 development instance._**
 
-  1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments | Blackboard Help](https://help.blackboard.com%2FLearn%2FAdministrator%2FSaaS)
+  1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments | Blackboard Help](https://help.blackboard.com/Learn/Administrator/SaaS)
   2. 504 Gateway Error
     1. Visiting https;//<EC2_Public_DNS> displays a 504 error in your browser:
       1. Shutdown the instance to stop accumulating charges and try again

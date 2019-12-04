@@ -5,7 +5,7 @@
 ---
   1. OS/DB 버전 확인 - 필요 시, 업그레이드
   2. JDK 8 버전 설치 - 시스템 변수 업데이트(JAVA_HOME)
-  3. 시스템 백업 - [https://help.blackboard.com/Learn/Administrator/Hosting/Backup_and_Recovery](https://help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FBackup_and_Recovery)
+  3. 시스템 백업 - [https://help.blackboard.com/Learn/Administrator/Hosting/Backup_and_Recovery](https://help.blackboard.com/Learn/Administrator/Hosting/Backup_and_Recovery)
     * 시스템 백업 시에는 콘텐츠/DB 일관성을 위해 모든 시스템을 내리고 백업합니다.
     * Application 서버 - blackboard 설치 디렉토리 전체.   
 Blackboard 설치 디렉토리 아래 backup, log 디렉토리, app\tomcat 아래 temp 디렉토리 등은 백업하지 않아도

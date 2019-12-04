@@ -46,7 +46,7 @@ Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens
 detailed information about the JWT Standard and to learn about available
 libraries for most of today's popular web application development languages,
 see [https://jwt.io](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fjwt.io%2F). For more information on Blackboard
+link.jspa?url=https%3A//jwt.io/). For more information on Blackboard
 Collaborate's implementation see [Authorize and Authenticate in Blackboard
 Collaborate](https://community.blackboard.com/docs/DOC-3115-authorize-and-
 authenticate-in-blackboard-collaborate).
@@ -59,9 +59,9 @@ are consistently at the top of the list. As part of the effort to assist
 Developers in getting up and running, Blackboard typically offers sample code
 and supporting documentation in a number of those popular languages:
 
-  * [Postman Collection](https://github.com%2Fblackboard%2FBBDN-Collab-Postman-REST)
+  * [Postman Collection](https://github.com/blackboard/BBDN-Collab-Postman-REST)
   * Java
-  * [Python](https://github.com%2Fblackboard%2FBBDN-Collab-REST-Demo-Python)
+  * [Python](https://github.com/blackboard/BBDN-Collab-REST-Demo-Python)
   * Ruby
   * PHP
   * C#/.NET

@@ -47,8 +47,8 @@ This help topic assumes the Developer:
 
   * is familiar with C#
   * has installed Microsoft Visual Studio
-  * has obtained a copy of the [source code](https://github.com%2Fblackboard%2FBBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com%2Fblackboard%2FBBDN-REST-Demo-CSharp%2Fblob%2Fmaster%2FREADME.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+  * has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.md) file.
+  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
 
 ### Code Walkthrough
 
@@ -626,7 +626,7 @@ Conclusion
 All of the code snippets included in this document at included in a sample
 REST Demo C# application available on
 [GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-REST-Demo-CSharp).
+link.jspa?url=https%3A//github.com/blackboard/BBDN-REST-Demo-CSharp).
 There is a README.md included that talks more specifically about building and
 running the code. Feel free to review the code and run it against a test or
 development Learn instance to see how it works.

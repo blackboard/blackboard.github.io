@@ -21,7 +21,7 @@ various types. Each 'question' is a slot for content that may not actually
 contain what you normally think of as a question. For more information about
 assignments and questions and how Learn users experience them, see [Ultra:
 Create an Assignment](https://community.blackboard.com/external-link.jspa?url=
-https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FInstructor%2FAssignments%2FCreate_
+https%3A//help.blackboard.com/Learn/Instructor/Assignments/Create_
 and_Edit_Assignments) in Blackboard Help.
 
 An assignment is made up of one or more questions. The following question

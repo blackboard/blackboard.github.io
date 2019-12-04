@@ -285,7 +285,7 @@ platform (Windows, Linux, Solaris), and maintenance strategy. Each of these
 can be relatively easily addressed.
 
 [OSCELOT](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.oscelot.org%2F) (the Open Source Community for
+link.jspa?url=http%3A//www.oscelot.org/) (the Open Source Community for
 Educational Learning Objects and Tools) has assisted many with open sourcing
 their projects in the past. To learn more, visit their web site.
 

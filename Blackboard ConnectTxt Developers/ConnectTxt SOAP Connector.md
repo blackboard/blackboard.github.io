@@ -10,6 +10,6 @@ real-time, including contact groups.
 
 ## Documentation
 
-  * Download latest [Address Book](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2FTxttools_SOAP_Addressbook_API_Documentation_1.5.pdf) SOAP connector documentation (v1.5) or [read it here](https://community.blackboard.com/docs/DOC-1184).
-  * Download latest [Messaging](https://www.txttools.co.uk%2Fpreloginjsp%2Fdocs%2FTxttools_SOAP_Messaging_API_Documentation_1.5.pdf) SOAP connector documentation (v1.5) or [read it here](https://community.blackboard.com/docs/DOC-1183).
+  * Download latest [Address Book](https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Addressbook_API_Documentation_1.5.pdf) SOAP connector documentation (v1.5) or [read it here](https://community.blackboard.com/docs/DOC-1184).
+  * Download latest [Messaging](https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Messaging_API_Documentation_1.5.pdf) SOAP connector documentation (v1.5) or [read it here](https://community.blackboard.com/docs/DOC-1183).
 

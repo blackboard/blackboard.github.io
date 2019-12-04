@@ -13,7 +13,7 @@ The process is really quite simple. The scanning tool can be turned on in a
 browser by loading the following URL:
 
 [https://](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2F)<your Blackboard
+link.jspa?url=https%3A//)<your Blackboard
 domain>/webapps/portal/support.jsp?Action=toggleDevOnlyRestEndpoints
 
 The resulting screen will look like this:
@@ -34,7 +34,7 @@ Once this is completed, you can scan any currently installed Building Block.
 Here are the details:
 
 Endpoint: [https://](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2F)<your Blackboard
+link.jspa?url=https%3A//)<your Blackboard
 domain>/learn/api/v1/healthCheck/deepb2s
 
 The endpoint takes the following query parameters
@@ -81,7 +81,7 @@ As an example, to test the building block in our example, you would load the
 following URL:
 
 [https://](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2F)<your Blackboard domain>/learn/api/v1/healthCheck
+link.jspa?url=https%3A//)<your Blackboard domain>/learn/api/v1/healthCheck
 /deepb2s?handle=myB2&vendor=bbdn&lookAtEverything=true&onlyReportDependencyPro
 blems=true&skipReportingB2Overrides=true&groupDependencyIssues=true
 

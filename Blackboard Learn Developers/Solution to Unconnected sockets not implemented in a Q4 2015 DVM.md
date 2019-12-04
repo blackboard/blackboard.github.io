@@ -71,8 +71,8 @@ Blackboard Learn, Version 9.1.201510.1171702, /usr/local/blackboard
 
 Package repository /usr/local/blackboard/content/bbpatch/repository, remote [h
 ttps://bbprepo.blackboard.com/content/repositories/packages](https://community
-.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbbprepo.blackboard.com%2F
-content%2Frepositories%2Fpackages)
+.blackboard.com/external-link.jspa?url=https%3A//bbprepo.blackboard.com/
+content/repositories/packages)
 
 Identifier : LRNSI-21817
 

@@ -34,7 +34,7 @@ cc9a-418f-ae9a-41c97e28c8cb; JSESSIONID=EA179B8DA4235A4761458623D78FE475" 695
 
 이 값을 웹에서 또는 다음의 사이트 [Parse a user
 agent](https://d
-evelopers.whatismybrowser.com%2Fuseragents%2Fparse%2F%23parse-useragent) 에서
+evelopers.whatismybrowser.com/useragents/parse/%23parse-useragent) 에서
 검색하시면
 
 IE10 on windows 7 을 사용한 것을 찾을 수 있습니다.

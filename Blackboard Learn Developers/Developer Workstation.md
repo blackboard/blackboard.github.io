@@ -31,7 +31,7 @@ available versions and many plugins that may enhance the software development
 experience. See the below Optional Downloads for a purpose built Eclipse. This
 section will cover the download and initial setup of your Eclipse environment.
 Visit the Eclipse [download](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.eclipse.org%2Fdownloads%2F) site and download
+link.jspa?url=http%3A//www.eclipse.org/downloads/) site and download
 the Eclipse IDE for Java EE Developers. This version provides the minimal
 tools necessary for Java web application development. After you have
 downloaded Eclipse expand the archive and start the IDE. Once you have started
@@ -48,7 +48,7 @@ are a web search away. Of course you may also use non-integrated command line
 or desktop tools of your choice. Finally, whether new to Learn extension
 development or not, you may find the [Blackboard Plugin for
 Eclipse](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Feclipse.justplainwiley.com%2Findex.php) by Wiley
+link.jspa?url=http%3A//eclipse.justplainwiley.com/index.php) by Wiley
 Fuller useful. It provides a form based wizard for setting up and one-click
 deployment to your Learn development server.
 
@@ -59,7 +59,7 @@ As with Eclipse, NetBeans also provides a comprehensive development
 environment and many supporting plugins, but lacks the Learn specific plugin
 support as possible in Eclipse. Go to the NetBeans
 [download](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fnetbeans.org%2Fdownloads%2F) site and download the
+link.jspa?url=https%3A//netbeans.org/downloads/) site and download the
 Java EE (or All) Bundle. The NetBeans Java EE Bundle includes support SVN and
 GIT code repository access. Instructions for use and setup are a web search
 away. Of course you may also use non-integrated command line or desktop tools
@@ -71,7 +71,7 @@ site:
 
 [http://plugins.netbeans.org/plugin/4...gradle-
 support](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fplugins.netbeans.org%2Fplugin%2F44510%2Fgradle-
+link.jspa?url=http%3A//plugins.netbeans.org/plugin/44510/gradle-
 support)
 
 Alternatively use the 'Tools>Plugins' action from the NetBeans IDE main menu.
@@ -86,7 +86,7 @@ documentation, however this document provides cursory instruction for using
 Gradle. For more comprehensive information about Gradle usage and
 configuration, visit the Gradle documentation site at[http://www.gradle.org/do
 cumentation](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.gradle.org%2Fdocumentation). Additional
+link.jspa?url=http%3A//www.gradle.org/documentation). Additional
 information for using Maven in your Learn extension development cycle is in
 the Getting Started with Maven Developer Resource topic. Both Eclipse and
 NetBeans support project development using Maven and Gradle. Both require
@@ -104,7 +104,7 @@ list of installed plugins:
   * NetBeans: Plugin Available. Tools>Plugins, select Available Plugins, enter Gradle in the search field, check the install box and then click the Install Button and follow presented instructions. This plugin allows the opening of of a Gradle project as a project in NetBeans.
 
 [http://www.gradle.org/documentation](https://community.blackboard.com/externa
-l-link.jspa?url=http%3A%2F%2Fwww.gradle.org%2Fdocumentation)
+l-link.jspa?url=http%3A//www.gradle.org/documentation)
 
 Downloading Gradle is not a requirement provided you are using the
 basic-b2-template as discussed below.
@@ -123,22 +123,22 @@ community. It is required for management of local repositories and for the
 command-line portions of this tutorial.
 
 [http://git-scm.com/downloads](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fgit-scm.com%2Fdownloads)
+link.jspa?url=http%3A//git-scm.com/downloads)
 
 [http://git-scm.com/downloads/guis](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fgit-scm.com%2Fdownloads%2Fguis)
+link.jspa?url=http%3A//git-scm.com/downloads/guis)
 
 Using GIT may be daunting for novice and expert SCM users alike. Two nice git
 write-ups that cover the highlights are:
 
 [http://classic.scottr.org/presentati...-in-5-minutes/](https://community.blac
 kboard.com/external-
-link.jspa?url=http%3A%2F%2Fclassic.scottr.org%2Fpresentations%2Fgit-
-in-5-minutes%2F)<
+link.jspa?url=http%3A//classic.scottr.org/presentations/git-
+in-5-minutes/)<
 
 [http://rogerdudler.github.io/git-
 guide/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Frogerdudler.github.io%2Fgit-guide%2F)
+link.jspa?url=http%3A//rogerdudler.github.io/git-guide/)
 
 ### Blackboard Starting-Block
 
@@ -196,11 +196,11 @@ Both NetBeans and Eclipse support remote debugging.
 ## Optional Downloads
 
 [Spring Tool Suite (STS)](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fspring.io%2Ftools)
+link.jspa?url=http%3A//spring.io/tools)
 
 [starting-block.war (version 1.6)](https://community.blackboard.com/external-l
-ink.jspa?url=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Fr
-eleases%2Fblackboard%2Fbbdn%2Fstarting-block%2F1.6%2Fstarting-block-1.6.war)
+ink.jspa?url=https%3A//bbprepo.blackboard.com/content/repositories/r
+eleases/blackboard/bbdn/starting-block/1.6/starting-block-1.6.war)
 
 The Building Block Starting-Block for rapid deployment of building blocks in
 development. _**DO NOT INSTALL ON A PRODUCTION SYSTEM OR ANY SYSTEM ACCESSIBLE
@@ -210,15 +210,15 @@ system presents a security risk.
 ## Additional Resources
 
 [Getting Started with Eclipse](https://community.blackboard.com/external-link.
-jspa?url=http%3A%2F%2Fwww.eclipse.org%2Fresources%2F%3Fcategory%3DGetting%2520
+jspa?url=http%3A//www.eclipse.org/resources/%3Fcategory%3DGetting%2520
 Started)
 
 [Eclipse Documentation](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.eclipse.org%2Fdocumentation%2F)
+link.jspa?url=http%3A//www.eclipse.org/documentation/)
 
 [NetBeans Documentation](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.netbeans.org%2Fkb%2F60%2Findex.html)
+link.jspa?url=http%3A//www.netbeans.org/kb/60/index.html)
 
 [NetBeans Quick Start Tutorial](https://community.blackboard.com/external-link
-.jspa?url=http%3A%2F%2Fwww.netbeans.org%2Fkb%2F60%2Fjava%2Fquickstart.html)
+.jspa?url=http%3A//www.netbeans.org/kb/60/java/quickstart.html)
 

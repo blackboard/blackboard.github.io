@@ -13,12 +13,12 @@ methods. As of Release 9.1 SP8, Flat File and legacy Blackboard XML formats
 have been added as supported integration methods.
 
 [Sample code](https://community.blackboard.com/external-link.jspa?url=https%3A
-%2F%2Fbehind.blackboard.com%2Fs%2Fdeveloper%2Fdlc%2Fdownload.aspx%3Fd%3D1569)
+//behind.blackboard.com/s/developer/dlc/download.aspx%3Fd%3D1569)
 exists to provide a template for building your own IMS LIS Building Block
 adapter. Much information can be found for [SIS Integration on
 help.blackboard.com](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fen-us.help.blackboard.com%2FLearn%2F9.1_2014_04%2F
-Administrator%2F070_Server_Management_and_Integrations%2FSystem_Integration%2F
+link.jspa?url=https%3A//en-us.help.blackboard.com/Learn/9.1_2014_04/
+Administrator/070_Server_Management_and_Integrations/System_Integration/
 SIS).
 
 # Types of Integrations
@@ -33,7 +33,7 @@ Integration types on a single system.
 
   * IMS Enterprise 1.1 - Vista
 
-  * IMS Learning Information Services ([Learning Information Services Specification Primer](https://www.imsglobal.org%2Flis%2Flisv2p0p1%2FLISSpecPrimerv2p0p1.html))
+  * IMS Learning Information Services ([Learning Information Services Specification Primer](https://www.imsglobal.org/lis/lisv2p0p1/LISSpecPrimerv2p0p1.html))
 
   * Snapshot Flat Files (text delimited, CSV)
 

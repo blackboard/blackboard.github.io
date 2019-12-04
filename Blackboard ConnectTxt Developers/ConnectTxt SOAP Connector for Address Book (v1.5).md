@@ -42,20 +42,20 @@ following guides:
 **HTTP**
 
 [http://www.w3.org/Protocols/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.w3.org%2FProtocols%2F)
+link.jspa?url=http%3A//www.w3.org/Protocols/)
 
 [http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol](https://community.b
-lackboard.com/external-link.jspa?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHy
+lackboard.com/external-link.jspa?url=http%3A//en.wikipedia.org/wiki/Hy
 pertext_Transfer_Protocol)
 
 **XML**
 
 [http://www.xml.com/pub/a/98/10/guide0.html](https://community.blackboard.com/
 external-
-link.jspa?url=http%3A%2F%2Fwww.xml.com%2Fpub%2Fa%2F98%2F10%2Fguide0.html)
+link.jspa?url=http%3A//www.xml.com/pub/a/98/10/guide0.html)
 
 [http://en.wikipedia.org/wiki/XML](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FXML)
+link.jspa?url=http%3A//en.wikipedia.org/wiki/XML)
 
 ## Useful tools
 
@@ -73,7 +73,7 @@ standard Windows, MAC or Linux operating system distribution. The Soap UI is
 free and may be downloaded from the following URI:
 
 [http://www.soapui.org/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.soapui.org%2F)
+link.jspa?url=http%3A//www.soapui.org/)
 
 There are many other SOAP clients out there, but for the purposes of the
 tutorials and examples in this document I will assume you are using the Soap
@@ -83,13 +83,13 @@ You may also require some XML editing schema validation tools to help you
 create and validate your XML.
 
 [http://www.xmlcooktop.com/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.xmlcooktop.com%2F)
+link.jspa?url=http%3A//www.xmlcooktop.com/)
 
 If you would like to closely inspect the HTTP traffic between your client and
 the SOAP API then I suggest using the following application.
 
 [http://www.parosproxy.org](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.parosproxy.org%2F)
+link.jspa?url=http%3A//www.parosproxy.org/)
 
 ## What is SOAP?
 
@@ -98,11 +98,11 @@ link.jspa?url=http%3A%2F%2Fwww.parosproxy.org%2F)
 For a detailed discussion of SOAP and WSDL files see:
 
 [http://en.wikipedia.org/wiki/SOAP](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSOAP)
+link.jspa?url=http%3A//en.wikipedia.org/wiki/SOAP)
 
 [http://en.wikipedia.org/wiki/Web_Services_Description_Language](https://commu
-nity.blackboard.com/external-link.jspa?url=http%3A%2F%2Fen.wikipedia.org%2Fwik
-i%2FWeb_Services_Description_Language)
+nity.blackboard.com/external-link.jspa?url=http%3A//en.wikipedia.org/wik
+i/Web_Services_Description_Language)
 
 The WSDL file is an XML document which describes the ports and end points of
 services which may be invoked by a call and the XML schema expected by each
@@ -151,8 +151,8 @@ defined by Oasis Open Standards Consortium, you can find more information at
 the following URI:
 
 [http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wss](https://commu
-nity.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.oasis-
-open.org%2Fcommittees%2Ftc_home.php%3Fwg_abbrev%3Dwss)
+nity.blackboard.com/external-link.jspa?url=http%3A//www.oasis-
+open.org/committees/tc_home.php%3Fwg_abbrev%3Dwss)
 
 Clients must provide their credentials in plain text in the SOAP header of the
 message. It is strongly recommended you use HTTPS for all your communication
@@ -187,8 +187,8 @@ username-token-profile-1.0#PasswordText">**_PASSWORD_**</wsse:Password>
 The txttools Address Book WSDL file can be found at:
 
 [http://www.txttools.co.uk/connectors/soap/addressbook/txttoolsAddressbook.wsd
-l](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.tx
-ttools.co.uk%2Fconnectors%2Fsoap%2Faddressbook%2FtxttoolsAddressbook.wsdl)
+l](https://community.blackboard.com/external-link.jspa?url=http%3A//www.tx
+ttools.co.uk/connectors/soap/addressbook/txttoolsAddressbook.wsdl)
 
 Processing the WSDL file reveals one service:
 

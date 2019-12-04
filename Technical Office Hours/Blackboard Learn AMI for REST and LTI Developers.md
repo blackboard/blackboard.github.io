@@ -11,6 +11,6 @@ Developers](https://community.blackboard.com/docs/DOC-4242-using-the-
 blackboard-learn-ami-for-rest-and-lti-development). For those that were unable
 to attend. The recording is available here: [Bb
 Collaborate](https://community.blackboard.com/external-link.jspa?url=https%3A%
-2F%2Fus.bbcollab.com%2Fcollab%2Fui%2Fsession%2Fplayback%2Fload%2F7c3ea12289074
+2F/us.bbcollab.com/collab/ui/session/playback/load/7c3ea12289074
 14485189798e7e36fd9).
 

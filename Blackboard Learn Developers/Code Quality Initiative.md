@@ -19,7 +19,7 @@
 # Sonar – Quality Management Platform
 
 [http://www.sonarsource.org/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.sonarsource.org%2F)
+link.jspa?url=http%3A//www.sonarsource.org/)
 
   * Open source and extensible
   * Manages code quality with:
@@ -64,7 +64,7 @@ How to use Blackboard's Java rule set:
 
 This is the powerpoint presentation from the Developer Office Hours held on
 March 13, 2013. [Click here](https://community.blackboard.com/external-link.js
-pa?url=https%3A%2F%2Fsas.elluminate.com%2Fsite%2Fexternal%2Fjwsdetect%2Fplayba
+pa?url=https%3A//sas.elluminate.com/site/external/jwsdetect/playba
 ck.jnlp%3Fpsid%3D2013-03-13.0843.M.62801D40DB97013341333A9CB874FF.vcr%26sid%3D
 2011010) to watch the recording.
 

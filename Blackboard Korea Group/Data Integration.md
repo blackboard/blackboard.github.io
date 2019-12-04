@@ -11,8 +11,8 @@ Data Integration Framework 는 Blackboard 와 학사(SIS;Student Information Sys
 이 Framework 의 구조와 사용 방법을 알아봅니다.
 
   * 참고자료
-    * [Student Information System (SIS) - Blackboard Help](https://en-us.help.blackboard.com%2FLearn%2F9.1_2014_04%2FAdministrator%2F070_Server_Management_and_Integrations%2FSystem_Integration%2FSIS)
-    * [SIS Feed File Headers and Object Types - Blackboard Help](https://help.blackboard.com%2Fko-kr%2FLearn%2FAdministrator%2FHosting%2FSystem_Integration%2FSIS%2FSIS_Integration_Legacy%2FSIS_Feed_File_Headers_and_Object_Types)
+    * [Student Information System (SIS) - Blackboard Help](https://en-us.help.blackboard.com/Learn/9.1_2014_04/Administrator/070_Server_Management_and_Integrations/System_Integration/SIS)
+    * [SIS Feed File Headers and Object Types - Blackboard Help](https://help.blackboard.com/ko-kr/Learn/Administrator/Hosting/System_Integration/SIS/SIS_Integration_Legacy/SIS_Feed_File_Headers_and_Object_Types)
 
   * **Case Study - 수동으로 생성된 코스에 사용자 등록하기**
     1. 코스를 생성합니다.

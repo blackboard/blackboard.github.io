@@ -15,7 +15,7 @@ New REST APIs are rolled out in new versions of Blackboard Learn, but never
 back-ported to previous releases. To be sure the endpoint you require is
 available, be sure to visit the [Developer
 Portal](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi)
+link.jspa?url=https%3A//developer.blackboard.com/portal/displayApi)
 and check the individual endpoints you need.
 
   * Announcements

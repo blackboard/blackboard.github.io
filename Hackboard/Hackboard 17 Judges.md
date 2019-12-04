@@ -179,12 +179,12 @@ media interviews and social media presence
 ([http://venturebeat.com/2013/12/16/ibm-reveals-its-top-five-predictions-for-
 the-next-five-years/?cm_mc_uid=15682333897014393948923&cm_mc_sid_50200000=1454
 354231](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fventurebeat.com%2F2013%2F12%2F16%2Fibm-reveals-its-
-top-five-predictions-for-the-next-five-years%2F%3Fcm_mc_uid%3D1568233389701439
+link.jspa?url=http%3A//venturebeat.com/2013/12/16/ibm-reveals-its-
+top-five-predictions-for-the-next-five-years/%3Fcm_mc_uid%3D1568233389701439
 3948923%26cm_mc_sid_50200000%3D1454354231)
 
 [http://www.youtube.com/watch?v=I7aPPP9nosY&feature=related](https://community
-.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3F
+.blackboard.com/external-link.jspa?url=http%3A//www.youtube.com/watch%3F
 v%3DI7aPPP9nosY%26feature%3Drelated)).
 
 He served on the Editorial Board of IEEE Lifesciences Portal. He is a former

@@ -6,7 +6,7 @@
 Blackboard REST API 를 이용하면 json 타입으로 전반적인 데이터를 받거나 생성할 수 있습니다.
 
   * REST API REST API 설정하기 - Developer.blackboard.com
-    1. [Blackboard API Services](https://developer.blackboard.com%2F) 에서 [REST Register and Manage Your Applications] 섹션의 REGISTER 버튼을 클릭합니다.
+    1. [Blackboard API Services](https://developer.blackboard.com/) 에서 [REST Register and Manage Your Applications] 섹션의 REGISTER 버튼을 클릭합니다.
     2. Terms & Condition 팝업에서 텍스트박스를 끝까지 스크롤해서 내린 후, Agree & Continue 를 클릭합니다.  
 
     3. Create New Account 팝업에서 이메일, 비밀번호, 이름 등을 입력하고 하단의 Create Account 버튼을 클릭합니다.  
@@ -38,7 +38,7 @@ ckboard.com/servlet/JiveServlet/showImage/102-4210-2-117185/FireShot+Capture+3
 pps.png)
 
     4. 상단의 "통합 생성/Create Integration" 을 클릭하여 생성 화면으로 갑니다.
-    5. [Blackboard API Services](https://developer.blackboard.com%2F) 에서 생성한 Application Key 와 2에서 생성한 사용자를 부여합니다.  
+    5. [Blackboard API Services](https://developer.blackboard.com/) 에서 생성한 Application Key 와 2에서 생성한 사용자를 부여합니다.  
 [![FireShot Capture 37 - Create Integration – Blackboard Learn_ - https___bsk.
 blackboard.com_webapps.png](https://community.blackboard.com/servlet/JiveServl
 et/downloadImage/102-4210-2-117194/FireShot+Capture+37+-+Create+Integration+%E
@@ -57,8 +57,8 @@ howImage/102-4210-2-117195/FireShot+Capture+38+-+REST+API+Integ_+-+https___bsk
 .blackboard.com_webapps_api-gateway_integrations_.png)
 
   * CASE STUDY - POSTMAN 을 이용한 REST API 로 공지사항 리스트 가져오기
-    1. REST Service의 [Explore APIs](https://developer.blackboard.com%2Fportal%2FdisplayApi) 페이지에서 API 리스트를 확인합니다.
-    2. POSTMAN 을 [Postman | Supercharge your API workflow](https://www.getpostman.com%2F) 에서 다운로드 받습니다.
+    1. REST Service의 [Explore APIs](https://developer.blackboard.com/portal/displayApi) 페이지에서 API 리스트를 확인합니다.
+    2. POSTMAN 을 [Postman | Supercharge your API workflow](https://www.getpostman.com/) 에서 다운로드 받습니다.
     3. 설치 후, POSTMAN 을 실행합니다.  
 [![스크린샷 2017-11-03 10.17.12.png](https://community.blackboard.com/servle
 t/JiveServlet/downloadImage/102-4210-2-117196/%E1%84%89%E1%85%B3%E1%84%8F%E1%8
@@ -107,7 +107,7 @@ t/JiveServlet/downloadImage/102-4210-2-117201/%E1%84%89%E1%85%B3%E1%84%8F%E1%8
 -2-117201/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%8
 4%89%E1%85%A3%E1%86%BA+2017-11-03+10.49.00.png)
 
-    5. 다음 스크린 샷은 [Explore APIs](https://developer.blackboard.com%2Fportal%2FdisplayApi) 사이트의 공지사항/announcement 의 전체 리스트를 가져오는 API 입니다.   
+    5. 다음 스크린 샷은 [Explore APIs](https://developer.blackboard.com/portal/displayApi) 사이트의 공지사항/announcement 의 전체 리스트를 가져오는 API 입니다.   
 [![스크린샷 2017-11-03 10.53.35.png](https://community.blackboard.com/servle
 t/JiveServlet/downloadImage/102-4210-2-117202/815-434/%E1%84%89%E1%85%B3%E1%84
 %8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2017-11-03+
@@ -117,9 +117,9 @@ t/JiveServlet/downloadImage/102-4210-2-117202/815-434/%E1%84%89%E1%85%B3%E1%84
 
 GET 방식으로 API URL 은 [/learn/api/public/v1/announcements](https://community.blac
 kboard.com/external-
-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fassets%2Flib%2Fswagger-
-ui%2Fswagger-index.html%3Furl%3D%2Fportal%2Fdocs%2Fapis%2Flearn-
-swagger.json%23%21%2Fannouncements%2Fget_learn_api_public_v1_announcements) 인
+link.jspa?url=https%3A//developer.blackboard.com/assets/lib/swagger-
+ui/swagger-index.html%3Furl%3D/portal/docs/apis/learn-
+swagger.json%23%21/announcements/get_learn_api_public_v1_announcements) 인
 것을 알 수 있습니다.
 
     6. 오른쪽 상단의 + 버튼을 클릭하여 새 탭을 만들고, 통신 방식은 GET, URL은 _기관_HOST_URL_ 수 있습니다

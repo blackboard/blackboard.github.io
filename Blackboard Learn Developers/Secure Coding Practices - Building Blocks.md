@@ -17,8 +17,8 @@ Java** and **ESAPI for JavaScript**.
 
 You may read more about the ESAPI library and secure development on Learn at
 [help.blackboard.com](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2Fen-us%2FLearn%2F9.1_2014_04%
-2FAdministrator%2F070_Server_Management_and_Integrations%2FSecurity).
+link.jspa?url=https%3A//help.blackboard.com/en-us/Learn/9.1_2014_04%
+2FAdministrator/070_Server_Management_and_Integrations/Security).
 
 ## Secure Coding Best Practices
 

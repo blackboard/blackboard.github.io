@@ -79,7 +79,7 @@ add-event-store.png)
 
 1: Service URL - This is the full URL to the Caliper Ingestion Service i.e.
 [https://mydomain.edu/caliper](/external-
-link.jspa?url=https%3A%2F%2Fmydomain.edu%2Fcaliper)
+link.jspa?url=https%3A//mydomain.edu/caliper)
 
 2: API Key - This is a value that is included with every Caliper Event
 transmission. Your Event Store should know this value and use it to validate

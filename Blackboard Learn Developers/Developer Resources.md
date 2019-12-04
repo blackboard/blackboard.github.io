@@ -10,7 +10,7 @@ links available for reference:
   * [Building Block API Java Docs](https://community.blackboard.com/docs/DOC-1115-building-block-api-documentation)
   * [Building Block Tag Library Docs](https://community.blackboard.com/docs/DOC-1115-building-block-api-documentation)
   * Getting Started Guides for [Building Blocks](https://community.blackboard.com/docs/DOC-1113-getting-started-with-building-blocks) and [Web Services](https://community.blackboard.com/docs/DOC-1116)
-  * [Behind the Blackboard](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fbehind.blackboard.com%2F)
+  * [Behind the Blackboard](https://community.blackboard.com/external-link.jspa?url=http%3A//behind.blackboard.com/)
 
 ## Setting Up
 
@@ -45,8 +45,8 @@ Blackboard Learn can integrate with virtually any Student Information System
 Additionally, the integration APIs are documented for custom integrations.
 
 [SIS Framework Information on Help](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fen-us.help.blackboard.com%2FLearn%2FAdministrator%
-2FHosting%2FSystem_Integration%2FSIS)
+link.jspa?url=https%3A//en-us.help.blackboard.com/Learn/Administrator%
+2FHosting/System_Integration/SIS)
 
 ## Web Services
 

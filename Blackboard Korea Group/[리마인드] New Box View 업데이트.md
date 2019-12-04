@@ -18,14 +18,14 @@ New Box View는 향상된 기능과 새로운 파일 유형에 대한 지원확�
 
 2017년 하반기 KBUG 발표 자료 중 New Box View 업데이트 사항 -
 [[보러가기]](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fonblackboard-my.sharepoint.com%2F%3Ab%3A%2Fg%2Fper
-sonal%2Fseyoung_yoon_blackboard_com%2FEbmrTMShGeJNvcw8mIAeHC8BlQQRYtzwYNRDMUg3
+link.jspa?url=https%3A//onblackboard-my.sharepoint.com/%3Ab%3A/g/per
+sonal/seyoung_yoon_blackboard_com/EbmrTMShGeJNvcw8mIAeHC8BlQQRYtzwYNRDMUg3
 3OVTXw%3Fe%3DtUnnhE)
 
 Blackboard Help 도움말 (영문, 한글 지원) -
 [[보러가기]](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2Fko-kr%2FLearn%2FInstructor%2
-FAssignments%2FGrade_Assignments%2FCrocodoc_to_New_Box_View)
+link.jspa?url=https%3A//help.blackboard.com/ko-kr/Learn/Instructor%2
+FAssignments/Grade_Assignments/Crocodoc_to_New_Box_View)
 
 - New Box View API 적용으로 개선된 기능
 

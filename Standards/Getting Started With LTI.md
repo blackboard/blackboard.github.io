@@ -9,7 +9,7 @@ Learning Tool Interoperability is a standard from the IMS Global consortium.
 This standard focuses on contextual launches and grade return. For more
 information about the standard, see [Learning Tools
 Interoperability](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fimsglobal.org%2Flti).
+link.jspa?url=https%3A//imsglobal.org/lti).
 
 # Make Your LTI Tool Available to Learn Servers
 

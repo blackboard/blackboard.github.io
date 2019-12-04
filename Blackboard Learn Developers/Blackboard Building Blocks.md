@@ -10,7 +10,7 @@ Services](https://community.blackboard.com/docs/DOC-1073-blackboard-learn-
 soap-web-services), [Proxy
 Tools](https://community.blackboard.com/docs/DOC-1112), and [Learning Tools
 Interoperability (LTI)](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fimsglobal.org%2Flti%2F).
+link.jspa?url=http%3A//imsglobal.org/lti/).
 
 # Getting Started
 

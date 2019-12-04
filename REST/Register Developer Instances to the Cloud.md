@@ -34,7 +34,7 @@ mage/102-1664-8-92928/Screen%2BShot%2B2016-04-24%2Bat%2B10.50.13.png)
 
 If you see this error message, try connecting to the Virtual Machine at
 [https://localhost:9877](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2F) and following the steps
+link.jspa?url=https%3A//localhost%3A9877/) and following the steps
 above. This should allow you to register to the cloud and then you should be
 able to use it in non-SSL mode.
 

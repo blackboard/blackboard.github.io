@@ -36,14 +36,14 @@ Blackboard 의 김이란입니다.
 
 [https://blackboard.secure.force.com/btbb_articleview?id=kA039000000H1zcCAC](h
 ttps://blackboar
-d.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000H1zcCAC)
+d.secure.force.com/btbb_articleview%3Fid%3DkA039000000H1zcCAC)
 
 **도움말 페이지(영문): **
 
 [https://help.blackboard.com/ko-kr/Learn/Administrator/Hosting/Release_Notes/R
 elease_Notes_for_Building_Blocks/Release_Notes_for_Mobile_Web_Services](https:
 //community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2Fko-kr%2FLearn%2FAdministrato
-r%2FHosting%2FRelease_Notes%2FRelease_Notes_for_Building_Blocks%2FRelease_Note
+link.jspa?url=https%3A//help.blackboard.com/ko-kr/Learn/Administrato
+r/Hosting/Release_Notes/Release_Notes_for_Building_Blocks/Release_Note
 s_for_Mobile_Web_Services)
 

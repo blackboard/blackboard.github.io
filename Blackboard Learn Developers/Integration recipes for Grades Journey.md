@@ -51,12 +51,12 @@ Other or Custom SIS can use flat file, REST API, or LIS integrations
   * If you need to lock the gradebook, enable _Lock on approval?_ in _Grade Approval and Transfer_ Settings.
 
 More on [Grades Journey for SaaS](https://community.blackboard.com/external-li
-nk.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FAdministrator%2FSaaS%2
-FIntegrations%2FStudent_Information_System%2FSIS_Integration_Types%2FGrades_Jo
+nk.jspa?url=https%3A//help.blackboard.com/Learn/Administrator/SaaS%2
+FIntegrations/Student_Information_System/SIS_Integration_Types/Grades_Jo
 urney)
 
 More on [Grades Journey for Self and Managed-
 Hosted](https://
-help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FSystem_Integration%2FS
-IS%2FSIS_Integration_Types%2FGrades_Journey)
+help.blackboard.com/Learn/Administrator/Hosting/System_Integration/S
+IS/SIS_Integration_Types/Grades_Journey)
 

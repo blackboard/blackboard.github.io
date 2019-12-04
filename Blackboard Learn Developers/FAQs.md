@@ -24,7 +24,7 @@ relationship owner. He or she will know who to contact.
 
 To reset forgotten passwords, please visit [Behind the
 Blackboard](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fbehind.blackboard.com%2F) and click the "Forgot
+link.jspa?url=http%3A//behind.blackboard.com/) and click the "Forgot
 your password?" link. A new password will be e-mailed to your account.
 
 ## License Questions
@@ -38,7 +38,7 @@ as access certain developer content that requires a login to access.
 
 Commercial entities are invited to join the program and purchase developer
 licenses at [this link](https://community.blackboard.com/external-link.jspa?ur
-l=https%3A%2F%2Fwww.blackboard.com%2FPlatforms%2FLearn%2FExtensions%2FPartners
+l=https%3A//www.blackboard.com/Platforms/Learn/Extensions/Partners
 hips-Program.aspx). If you have lost your license file or require a change in
 your license, please contact your sales representative or the partnership
 program.
@@ -70,7 +70,7 @@ If you believe you've found an issue with our APIs, please follow this process
 to receive support:
 
   1. Post your issue to our discussion forums on this site.
-  2. Search the [Blackboard Open Source listserv](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Flists.vcu.edu%2Fcgi-bin%2Fwa%3FA0%3DBB-OPEN_SRC) archives and optionally e-mail the listserv regarding your issue.
+  2. Search the [Blackboard Open Source listserv](https://community.blackboard.com/external-link.jspa?url=http%3A//lists.vcu.edu/cgi-bin/wa%3FA0%3DBB-OPEN_SRC) archives and optionally e-mail the listserv regarding your issue.
   3. Open a new case to Behind the Blackboard (or have your Blackboard administrator do this on your behalf)
 
 ## Product improvements/recommendations

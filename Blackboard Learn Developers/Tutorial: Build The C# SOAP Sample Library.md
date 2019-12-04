@@ -12,9 +12,9 @@ all of the code used herein.
 
 ## Prerequisites
 
-  * Microsoft™ [Web Services Extensions 2.0 Service Pack 3](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.microsoft.com%2Fdownloads%2Fdetails.aspx%3FFamilyID%3D1ba1f631-c3e7-420a-bc1e-ef18bab66122%26DisplayLang%3Den)
+  * Microsoft™ [Web Services Extensions 2.0 Service Pack 3](https://community.blackboard.com/external-link.jspa?url=http%3A//www.microsoft.com/downloads/details.aspx%3FFamilyID%3D1ba1f631-c3e7-420a-bc1e-ef18bab66122%26DisplayLang%3Den)
   * [Client.zip](https://community.blackboard.com/docs/DOC-1143) archive from the Blackboard Learn User Interface
-  * Web Services are [Available and Discoverable](https://help.blackboard.com%2Fen-us%2FLearn%2F9.1_2014_04%2FAdministrator%2F070_Server_Management_and_Integrations%2FSystem_Integration%2FIntegration_Development%2F030_Web_Services)
+  * Web Services are [Available and Discoverable](https://help.blackboard.com/en-us/Learn/9.1_2014_04/Administrator/070_Server_Management_and_Integrations/System_Integration/Integration_Development/030_Web_Services)
 
 ## Assumptions
 
@@ -113,7 +113,7 @@ WSDL.
 For more information and workarounds for this bug, see the Behind the
 Blackboard article [Gradebook.WS wsdl not Able to be Consumed due to Invalid
 RuntimeException Declaration](https://community.blackboard.com/external-link.j
-spa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA
+spa?url=https%3A//blackboard.secure.force.com/btbb_articleview%3Fid%3DkA
 370000000H5Fc).
 
 If you follow workaround 1, simply change the initial gradebookWS call:

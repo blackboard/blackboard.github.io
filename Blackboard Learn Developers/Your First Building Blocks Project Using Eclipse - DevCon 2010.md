@@ -31,7 +31,7 @@ hook into the system.
   2. XML > XML Catalog > Add
   * Location: /path/to/bb-manifest-plugin.xsd
   * Key type: Namespace name
-  * Key: [http://www.blackboard.com/bb-manifest-plugin.xsd](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.blackboard.com%2Fbb-manifest-plugin.xsd)
+  * Key: [http://www.blackboard.com/bb-manifest-plugin.xsd](https://community.blackboard.com/external-link.jspa?url=http%3A//www.blackboard.com/bb-manifest-plugin.xsd)
 
 What you get out of this
 

@@ -157,7 +157,7 @@ membership object based on the course pk1 and user pk1.
 
 All of the code snippets included in this document at included in a sample C#
 application available on[GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-CSharp-WS-Sample).
+link.jspa?url=https%3A//github.com/blackboard/BBDN-CSharp-WS-Sample).
 There is a README.md included that talks more specifically about building and
 running the code. Feel free to review the code and run it against a test or
 development Learn instance to see how it works.

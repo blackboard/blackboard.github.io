@@ -51,7 +51,7 @@ Bb Instructor는 2017년 7월 전 세계적으로 출시될 예정입니다.
 
 **Bb Student & Bb Instructor 를 위한 기술 요구사항:**
 
-  1. 2017년 5월 12일에 출시된 [Mobile Web Services Building Block 94.9.5](https://help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FRelease_Notes%2FRelease_Notes_for_Building_Blocks%2FRelease_Notes_for_Mobile_Web_Services) 빌딩블록 설치 (상세 내용: [https://community.blackboard.com/docs/DOC-3611](https://community.blackboard.com/docs/DOC-3611-blackboard-release-notes-mobile-web-services-release-9495))
+  1. 2017년 5월 12일에 출시된 [Mobile Web Services Building Block 94.9.5](https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_for_Building_Blocks/Release_Notes_for_Mobile_Web_Services) 빌딩블록 설치 (상세 내용: [https://community.blackboard.com/docs/DOC-3611](https://community.blackboard.com/docs/DOC-3611-blackboard-release-notes-mobile-web-services-release-9495))
   2. Blackboard Learn 9.1 의 Q4 2014, Q4 2015, Q2 2016, Q4 2016, Q2 2017, Learn SaaS 버전에서 지원   
 _(Note: Version 94.9.5 __빌딩블록은 현재로서는 Learn Q4 2015, Q2 2016, Q4 2016, Q2 2017에
 설치 가능합니다. 저희 Blackboard 에서는 위에 기술된 버전에서의 지원을 위해 노력 중이며, 2014 Q4와 Learn SaaS에서의
@@ -61,10 +61,10 @@ _(Note: Version 94.9.5 __빌딩블록은 현재로서는 Learn Q4 2015, Q2 2016,
 
 **참고자료: **
 
-  * [How to Transition from Mobile Learn to Bb Student and Bb Instructor](https://help.blackboard.com%2FBb_Student%2FAdministrator%2FHow_to_Transition_from_Mobile_Learn_to_Bb_Student_and_Bb_Instructor)
-  * [Release Notes for Mobile Web Services](https://help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FRelease_Notes%2FRelease_Notes_for_Building_Blocks%2FRelease_Notes_for_Mobile_Web_Services)
+  * [How to Transition from Mobile Learn to Bb Student and Bb Instructor](https://help.blackboard.com/Bb_Student/Administrator/How_to_Transition_from_Mobile_Learn_to_Bb_Student_and_Bb_Instructor)
+  * [Release Notes for Mobile Web Services](https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_for_Building_Blocks/Release_Notes_for_Mobile_Web_Services)
 
 **도움말(한글 페이지):**
 
-**[Mobile Learn에서 Bb Student로 이전하는 방법 | Blackboard 도움말](https://help.blackboard.com%2Fko-kr%2FBb_Student%2FAdministrator%2FHow_to_Transition_from_Mobile_Learn_to_Bb_Student_and_Bb_Instructor) **
+**[Mobile Learn에서 Bb Student로 이전하는 방법 | Blackboard 도움말](https://help.blackboard.com/ko-kr/Bb_Student/Administrator/How_to_Transition_from_Mobile_Learn_to_Bb_Student_and_Bb_Instructor) **
 

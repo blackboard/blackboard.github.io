@@ -12,6 +12,6 @@ session recordings will be preserved.
 # Sessions
 
 [2018-05-30](https://community.blackboard.com/external-link.jspa?url=https%3A%
-2F%2Fus.bbcollab.com%2Fcollab%2Fui%2Fsession%2Fplayback%2Fload%2F3972de9078ec4
+2F/us.bbcollab.com/collab/ui/session/playback/load/3972de9078ec4
 8d58d412bdcbe5a9362)
 

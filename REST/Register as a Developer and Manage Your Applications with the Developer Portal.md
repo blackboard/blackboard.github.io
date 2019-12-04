@@ -7,7 +7,7 @@
 
 The Blackboard developer portal is located at
 [https://developer.blackboard.com](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F). There, you can:
+link.jspa?url=https%3A//developer.blackboard.com/). There, you can:
 
   * Sign up for a Developer Account
   * Read API Reference Documentation
@@ -31,7 +31,7 @@ registered.
 
 To register as a Blackboard developer:
 
-  1. Go to [https://developer.blackboard.com/](/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F) and select Sign Up. Read and agree to the terms and conditions.
+  1. Go to [https://developer.blackboard.com/](/external-link.jspa?url=https%3A//developer.blackboard.com/) and select Sign Up. Read and agree to the terms and conditions.
   2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
   3. Select Create Account and you're on your way.
 
@@ -41,7 +41,7 @@ To register as a Blackboard developer:
 
 To view the API reference documentation go to
 [https://developer.blackboard.com/](/external-
-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F) and select **Explore
+link.jspa?url=https%3A//developer.blackboard.com/) and select **Explore
 APIs**.You can also browse [code examples](https://community.blackboard.com/co
 mmunity/developers/rest/content?filterID=contentstatus%5Bpublished%5D%7Ecatego
 ry%5Bexamples%5D) and participate in the [developer community

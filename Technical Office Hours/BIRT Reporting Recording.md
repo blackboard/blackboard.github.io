@@ -9,5 +9,5 @@ Hulme](https://community.blackboard.com/people/ahulme) for presenting on BIRT.
 
 If you missed it, you can view the recording
 [here](https://u
-s.bbcollab.com%2Frecording%2FD6C51275429B8EBF8FC870AC8763C8DD).
+s.bbcollab.com/recording/D6C51275429B8EBF8FC870AC8763C8DD).
 

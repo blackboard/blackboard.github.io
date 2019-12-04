@@ -45,14 +45,14 @@ the Community and Content Management modules turned on. It can be run on a
 development server or even a virtual machine image for development purposes.
 If you require a developer network account visit [Behind the
 Blackboard](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2F) (as an
+link.jspa?url=https%3A//blackboard.secure.force.com/) (as an
 administrator) or contact your sales representative.
 
 ## Commercial Partnerships
 
 If you are interested in becoming a Blackboard partner visit the [Blackboard
 Partnerships](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.blackboard.com%2Fpartnerships%2Fpartnerships-
+link.jspa?url=http%3A//www.blackboard.com/partnerships/partnerships-
 program.aspx)™ program site. Partnering with Blackboard provides access to
 design guidance and support among other benefits.
 

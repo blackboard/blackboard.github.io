@@ -11,7 +11,7 @@ LTI Developers AMIs.
 The Blackboard REST and LTI Developer Amazon Machine Image ("AMI") is an image
 of a Blackboard Learn server available in the [Amazon
 Marketplace](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Faws.amazon.com%2Fmarketplace%2Fpp%2FB077T4SX2B).
+link.jspa?url=https%3A//aws.amazon.com/marketplace/pp/B077T4SX2B).
 The AMI allows a developer to spin up a copy of Blackboard Learn for building
 applications that use the REST APIs and/or Learning Tool Interoperability
 ("LTI") to integrate with Learn. This image is a standalone copy of the SaaS

@@ -29,12 +29,12 @@ the FAQ. Interested entities are welcome to join our Developers Network.
 
 To learn more, visit [https://www.blackboard.com/Platforms/Learn/Extensions/Ov
 erview.aspx](https://community.blackboard.com/external-link.jspa?url=https%3A%
-2F%2Fwww.blackboard.com%2FPlatforms%2FLearn%2FExtensions%2FOverview.aspx).
+2F/www.blackboard.com/Platforms/Learn/Extensions/Overview.aspx).
 
 # Join the Developer Listserv
 
 The [developer listserv](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Flists.vcu.edu%2Fcgi-bin%2Fwa%3FA0%3Dbb-open_src) is
+link.jspa?url=http%3A//lists.vcu.edu/cgi-bin/wa%3FA0%3Dbb-open_src) is
 a great way to ask questions or seek advice from other Blackboard developers.
 
 # Join TechBUG
@@ -46,7 +46,7 @@ technical community.
 # Contribute to OSCELOT
 
 [OSCELOT](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fwww.oscelot.org%2F), the Open Source Community for
+link.jspa?url=https%3A//www.oscelot.org/), the Open Source Community for
 Educational Learning Objects and Tools, is a community of learning tool
 developers that creates innovative open source solutions for the challenges
 facing the eLearning community. They host code management infrastructure

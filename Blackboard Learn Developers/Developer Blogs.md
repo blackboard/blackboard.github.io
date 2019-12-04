@@ -13,7 +13,7 @@ our way.
 
 Blackboard Staff contribute via the [Blackboard blog
 site](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fblog.blackboard.com%2F), as well as the blogs here
+link.jspa?url=http%3A//blog.blackboard.com/), as well as the blogs here
 in the [community
 site](https://community.blackboard.com/community/developers/blackboard-learn-d
 evelopers/content?filterID=contentstatus[published]~objecttype~objecttype[blog
@@ -29,19 +29,19 @@ Learn Development - Getting Started
 
 [http://building-blocks-
 developer.com](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fbuilding-blocks-developer.com%2F)
+link.jspa?url=http%3A//building-blocks-developer.com/)
 
 Bruce Phillips
 
 Learn Development - Web Services - General Developer Interest
 
 [http://www.brucephillips.name](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fwww.brucephillips.name%2F)
+link.jspa?url=http%3A//www.brucephillips.name/)
 
 All The Ducks
 
 Learn Development - General Developer Interest
 
 [http://blog.alltheducks.com/](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fblog.alltheducks.com%2F)
+link.jspa?url=http%3A//blog.alltheducks.com/)
 

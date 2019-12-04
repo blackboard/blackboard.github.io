@@ -28,7 +28,7 @@ Calendar.
 June 12, 2013
 
 [SIS Framework in SP12](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fyoutu.be%2FIE5eWBzz9aw)
+link.jspa?url=http%3A//youtu.be/IE5eWBzz9aw)
 
 Mark O'Neil
 
@@ -36,7 +36,7 @@ May 22, 2013
 
 [SIS Flat File Automation and Monitoring in Blackboard Learn 9.1 Service Pack
 12 Pt.1](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fyoutu.be%2FLfORRpmDQgU)
+link.jspa?url=http%3A//youtu.be/LfORRpmDQgU)
 
 Mark O'Neil
 
@@ -44,26 +44,26 @@ May 8, 2013
 
 [BIRT Reporting in Blackboard
 Learn](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fqmu.adobeconnect.com%2Fp72jn2mt1s7%2F)
+link.jspa?url=http%3A//qmu.adobeconnect.com/p72jn2mt1s7/)
 
 Andrew Hulme
 
 March 23, 2013
 
 [Using Spring in Building Blocks](https://community.blackboard.com/external-li
-nk.jspa?url=https%3A%2F%2Fsas.elluminate.com%2Fp.jnlp%3Fpsid%3D2013-03-26.0840
+nk.jspa?url=https%3A//sas.elluminate.com/p.jnlp%3Fpsid%3D2013-03-26.0840
 .M.6F238ACC3018BE09CF5BE357FC7255.vcr%26sid%3D2011010) -
 [Video](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fyoutu.be%2FK5kEvf4m3e4)
+link.jspa?url=http%3A//youtu.be/K5kEvf4m3e4)
 
 David Ashman, Chief Architect, Blackboard Learn
 
 March 13, 2013
 
 [Secure Coding Practices](https://community.blackboard.com/external-link.jspa?
-url=http%3A%2F%2Fwww.edugarage.com%2Fdisplay%2FBBDN%2FSecure%2BCoding%2BPracti
+url=http%3A//www.edugarage.com/display/BBDN/Secure%2BCoding%2BPracti
 ces) - [Video](https://community.blackboard.com/external-
-link.jspa?url=http%3A%2F%2Fyoutu.be%2F4Rbd1dELAv4)
+link.jspa?url=http%3A//youtu.be/4Rbd1dELAv4)
 
 Scott Hurrey, Developer Relations Engineer, Blackboard Partnerships
 

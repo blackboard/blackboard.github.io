@@ -143,12 +143,12 @@ documentation to column A and the **privilege** will appear in column B.
 Here's a video demonstration: [https://www.dropbox.com/s/552vjf3vr5fwjyg/2018-
 10-25_12-53-22.CreatingYourUniqueSystemRoleForYourRESTAppIntegration.mp4?dl=0]
 (https://www.dro
-pbox.com%2Fs%2F552vjf3vr5fwjyg%2F2018-10-25_12-53-22.CreatingYourUniqueSystemR
+pbox.com/s/552vjf3vr5fwjyg/2018-10-25_12-53-22.CreatingYourUniqueSystemR
 oleForYourRESTAppIntegration.mp4%3Fdl%3D0)
 
 Should the spreadsheet not have what you're looking for, here's the way to
 find these manually: [Dropbox - 2018-10-30_13-39-25.FindingPrivilegeForGivenEn
 titlement.mp4](https://community.blackboard.com/external-link.jspa?url=https%3
-A%2F%2Fwww.dropbox.com%2Fs%2Fi6m80k7prqaxfcs%2F2018-10-30_13-39-25.FindingPriv
+A//www.dropbox.com/s/i6m80k7prqaxfcs/2018-10-30_13-39-25.FindingPriv
 ilegeForGivenEntitlement.mp4%3Fdl%3D0)
 
