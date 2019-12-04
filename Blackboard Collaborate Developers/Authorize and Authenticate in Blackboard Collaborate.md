@@ -10,11 +10,8 @@ it is digitally signed with mutually known credentials.
 
 Here is a very simple sample Python script that uses a correctly formed JWT
 assertion to request an access token and then uses the access token to make a
-single API request: [https://github.com/ryanhaber/Blackboard-REST-SDK-
-python/blob/master/bb-collab-simple-sample-get-
-users.py](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Fgithub.com%2Fryanhaber%2FBlackboard-REST-SDK-
-python%2Fblob%2Fmaster%2Fbb-collab-simple-sample-get-users.py).
+single API request: https://github.com/ryanhaber/Blackboard-REST-SDK-python/blob/master/bb-collab-simple-sample-get-
+users.py.
 
 ## JWT Assertion
 
@@ -108,6 +105,6 @@ JSON Web Tokens are a widely adopted standard in modern applications, and
 thus, there are a ton of resources available for developers interested in JWT
 beyond the scope of Blackboard Collaborate.
 
-  * [JWT.io](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fjwt.io%2F): This site is dedicated to assisting developers trying to build JWT-enabled applications. There is a debugger that allows you to manually input your secret and your header and payload and generate an assertion. There is also an extensive list of available libraries in multiple languages that handle the bulk of the JWT creation.
-  * [RFC 7519](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7519): This is the actual standard specification document.
+  * [JWT.io](https://jwt.io): This site is dedicated to assisting developers trying to build JWT-enabled applications. There is a debugger that allows you to manually input your secret and your header and payload and generate an assertion. There is also an extensive list of available libraries in multiple languages that handle the bulk of the JWT creation.
+  * [RFC 7519](https://tools.ietf.org/html/rfc7519): This is the actual standard specification document.
 
