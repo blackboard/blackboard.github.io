@@ -1,4 +1,8 @@
 # Configuring Caliper Event Store in Blackboard Learn
+*Author: Scott Hurrey*
+*Categories: ['Caliper']*
+*Tags: ['caliper', 'caliper event store', 'event store', 'telemetry building block', 'configure', 'enable', 'developer']*
+---
 Blackboard Learn was the first Learning Management System to be certified for
 Caliper Learning Analytics. Caliper is an IMS Global standard that allows a
 provider, in this case Learn, to stream usage data to an external system. This

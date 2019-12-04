@@ -1,4 +1,8 @@
 # Using the Blackboard Learn for REST and LTI Developers AMI
+*Author: Mark O'Neil*
+*Categories: []*
+*Tags: ['developer']*
+---
 Hello and welcome to the Blackboard Learn for REST and LTI Developers AMI help
 page.
 

@@ -1,4 +1,8 @@
 # Solution to Unconnected sockets not implemented in a Q4 2015 DVM
+*Author: Mark Bykerk Kauffman*
+*Categories: ['Building Blocks', 'Examples']*
+*Tags: ['dvm', 'patch', 'developer']*
+---
 You've run into the "Unconnected sockets not implemented error" in a Q4 2015
 Developer Virtual Machine. What can you do? This article will help. There is a
 patch that fixes the error, LRNSI-21817, but the Q4 2015 DVM is built from a

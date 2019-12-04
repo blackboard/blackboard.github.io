@@ -1,4 +1,8 @@
 # LTI Placement to Building Block Link Mapping
+*Author: Scott Hurrey*
+*Categories: ['LTI']*
+*Tags: ['lti', 'ims learning tools interoperability', 'standards', 'ims', 'ims global', 'developer']*
+---
 As new LTI Placement options are added to the Blackboard Learn platform, the
 naming conventions can be a bit confusing for Building Block Developers. The
 purpose of this document is to give a high-level mapping of the terminology

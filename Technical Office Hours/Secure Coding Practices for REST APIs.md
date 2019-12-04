@@ -1,4 +1,8 @@
 # Secure Coding Practices for REST APIs
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['best practices', 'security', 'developers', 'technical office hours', 'developer office hours', 'devcon2017', 'secure coding', 'developer']*
+---
 On October 4, 2017 Security Architect [Karen
 Hartman](https://community.blackboard.com/people/kh37222) gave a presentation
 on Developer Office Hours covering Secure Coding Best Practices. In case you

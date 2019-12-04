@@ -1,4 +1,8 @@
 # Assignable Events
+*Author: Scott Hurrey*
+*Categories: ['Caliper']*
+*Tags: ['developer', 'standards', 'caliper', 'ims', 'ims global', 'assignableevent', 'submit an assignment', 'submit a group assignment']*
+---
 Blackboard Learn's Caliper Analytics stream emits an AssignableEvent in four
 cases:
 

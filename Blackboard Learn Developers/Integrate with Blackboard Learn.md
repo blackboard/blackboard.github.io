@@ -1,4 +1,8 @@
 # Integrate with Blackboard Learn
+*Author: Ryan Haber*
+*Categories: []*
+*Tags: ['developer']*
+---
 # Overview
 
 To integrate with the Blackboard Learn server, you can use the following

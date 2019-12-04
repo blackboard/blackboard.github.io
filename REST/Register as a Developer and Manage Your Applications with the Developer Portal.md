@@ -1,4 +1,8 @@
 # Register as a Developer and Manage Your Applications with the Developer Portal
+*Author: Mark O'Neil*
+*Categories: []*
+*Tags: ['rest', 'api', 'developers', 'developer portal', 'rest api', 'application management', 'developer']*
+---
 **What's in the Box****?**
 
 The Blackboard developer portal is located at

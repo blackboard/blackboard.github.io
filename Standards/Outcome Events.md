@@ -1,4 +1,8 @@
 # Outcome Events
+*Author: Scott Hurrey*
+*Categories: ['Caliper']*
+*Tags: ['developer', 'standards', 'caliper', 'ims', 'ims global']*
+---
 Blackboard Learn's Caliper Analytics stream emits an OutcomeEvent to cover the
 following use cases:
 

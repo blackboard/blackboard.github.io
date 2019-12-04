@@ -1,4 +1,8 @@
 # Date Management APIs
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks']*
+*Tags: ['blackboard learn', 'api', 'date management', 'extension points', 'datemanagement', 'developer']*
+---
 ## DateRolloverManager
 
 Date Rollover Manager provides the methods to run a date rollover background

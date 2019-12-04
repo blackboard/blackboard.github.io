@@ -1,4 +1,8 @@
 # REST Demo Using Java
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'java', 'blackboard learn', 'example', 'sample code', 'saas', 'developer']*
+---
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting supported Learn objects.
@@ -43,8 +47,8 @@ This help topic assumes the Developer:
 
   * is familiar with Java
   * has Tomcat running somewhere the webapp can be installed
-  * has obtained a copy of the [source code](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-REST-Demo-Java-Webapp) and built and deployed it to Tomcat in conjunction with the project [README.md](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-REST-Demo-Java-Webapp%2Fblob%2Fmaster%2FREADME.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbehind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+  * has obtained a copy of the [source code](https://github.com%2Fblackboard%2FBBDN-REST-Demo-Java-Webapp) and built and deployed it to Tomcat in conjunction with the project [README.md](https://github.com%2Fblackboard%2FBBDN-REST-Demo-Java-Webapp%2Fblob%2Fmaster%2FREADME.md) file.
+  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
 
 ### Code Walkthrough
 

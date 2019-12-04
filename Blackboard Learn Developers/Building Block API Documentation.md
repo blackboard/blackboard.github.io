@@ -1,13 +1,17 @@
 # Building Block API Documentation
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started', 'OpenDB']*
+*Tags: ['building blocks', 'blackboard learn', 'taglibs', 'opendb', 'api', 'api documentation', 'javadocs', 'jdiff', 'apis', 'learn', 'developer']*
+---
 As of 3700.9.0, we will be uploading these files as part of the build process
 with each release of Blackboard Learn SaaS to test, to facilitate better
 readiness for SaaS releases to go to production. In order to accomplish this,
 we are automating this process and pushing to the public maven repository:
 
-  * [Javadocs](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Fjavadocs%2F)
-  * [Jdiff](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Fjdiff%2F)
-  * [Taglibs](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Ftaglibs%2F)
-  * [OpenDb](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Fschema%2F)
+  * [Javadocs](https://bbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Fjavadocs%2F)
+  * [Jdiff](https://bbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Fjdiff%2F)
+  * [Taglibs](https://bbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Ftaglibs%2F)
+  * [OpenDb](https://bbprepo.blackboard.com%2Fcontent%2Frepositories%2Fpublic%2Fbbdn%2Fschema%2F)
 
 Simply navigate to the link and select your version.
 

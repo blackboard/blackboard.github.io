@@ -1,4 +1,8 @@
 # Authorize and Authenticate in Blackboard Collaborate
+*Author: Scott Hurrey*
+*Categories: ['Getting Started']*
+*Tags: ['developer', 'rest', 'getting started', 'collaborate', 'api', 'jwt', 'json web token']*
+---
 Blackboard Collaborate relies on JSON web tokens (JWT) to authenticate and
 authorize incoming REST API calls. You can read more about the JWT standard
 [here](https://community.blackboard.com/external-
@@ -108,6 +112,6 @@ JSON Web Tokens are a widely adopted standard in modern applications, and
 thus, there are a ton of resources available for developers interested in JWT
 beyond the scope of Blackboard Collaborate.
 
-  * [JWT.io](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fjwt.io%2F): This site is dedicated to assisting developers trying to build JWT-enabled applications. There is a debugger that allows you to manually input your secret and your header and payload and generate an assertion. There is also an extensive list of available libraries in multiple languages that handle the bulk of the JWT creation.
-  * [RFC 7519](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7519): This is the actual standard specification document.
+  * [JWT.io](https://jwt.io%2F): This site is dedicated to assisting developers trying to build JWT-enabled applications. There is a debugger that allows you to manually input your secret and your header and payload and generate an assertion. There is also an extensive list of available libraries in multiple languages that handle the bulk of the JWT creation.
+  * [RFC 7519](https://tools.ietf.org%2Fhtml%2Frfc7519): This is the actual standard specification document.
 

@@ -1,4 +1,8 @@
 # Basic Authentication
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'api', 'developers', 'authentication', 'authorization', 'oauth', 'developer']*
+---
 ## Overview
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC
@@ -28,7 +32,7 @@ quotas-and-rate-limits).
 
 ## Before You Start
 
-  * Your Blackboard Learn instance must be registered at [developer.blackboard.com](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F).
+  * Your Blackboard Learn instance must be registered at [developer.blackboard.com](https://developer.blackboard.com%2F).
   * The application ID you receive when registering at developer.blackboard.com must then be registered on your Blackboard Learn instance. Registering your application on a Learn instance provides the application key:secret pair access to the Learn instance.
 
 ## To Get a Token Using Basic OAuth 2.0
@@ -130,5 +134,5 @@ you.
   * Tokens expire after 1 hour, as per the OAuth RFC examples.
   * Tokens are associated with a specific Learn site.
   * Any application may have only one token per Learn site. Asking for a token returns the existing one with an updated expiry time if it has not expired yet.
-  * Check the [REST API Documentation](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi) for error codes.
+  * Check the [REST API Documentation](https://developer.blackboard.com%2Fportal%2FdisplayApi) for error codes.
 

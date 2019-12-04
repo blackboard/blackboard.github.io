@@ -1,4 +1,8 @@
 # REST Demo Using Python
+*Author: Mark O'Neil*
+*Categories: []*
+*Tags: ['rest', 'java', 'blackboard learn', 'example', 'sample code', 'saas', 'developer']*
+---
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting supported Learn objects.
@@ -42,8 +46,8 @@ knowledge necessary to build a REST-based Web Services integration.
 This help topic assumes the Developer:
 
   * is familiar with Python
-  * has obtained a copy of the[ source code](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-REST-DEMO_Python%2Fblob%2Fmaster%2FREADME.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbehind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+  * has obtained a copy of the[ source code](https://github.com%2Fblackboard%2FBBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://github.com%2Fblackboard%2FBBDN-REST-DEMO_Python%2Fblob%2Fmaster%2FREADME.md) file.
+  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
 
 ### Code Walkthrough
 

@@ -1,4 +1,8 @@
 # Building Block Development Life Cycle
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started']*
+*Tags: ['building blocks', 'blackboard learn', 'development lifecycle', 'developer']*
+---
 There are many things to consider when developing a Blackboard Building Block.
 Here we describe the issues involved and provide an overview of the
 development process. This is meant to serve as a general guide of how most

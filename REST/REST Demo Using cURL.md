@@ -1,4 +1,8 @@
 # REST Demo Using cURL
+*Author: Mark Bykerk Kauffman*
+*Categories: []*
+*Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'api', 'curl', 'demo', '3lo', 'three-legged oauth', 'developer']*
+---
   * Introduction
   * Assumptions
   * Walkthrough
@@ -68,7 +72,7 @@ make a complete set of CRUD operations to the Learn REST endpoints.
 This help topic assumes the Developer:
 
   * is familiar with cURL.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbehind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com%2FSystem-Administrator%2FLearn%2FDownloads%2Fdownload.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
 
 # Walkthrough
 
@@ -107,7 +111,7 @@ Host>/learn/api/public/v1/oauth2/token
 
 Example:
 
-**curl -k --user d128e50d-c91e-47d3-a97e-9d0c8a87fb5d:kLpiuq34320jqreaiJIRoareASELERREv56 --data "grant_type=client_credentials" [https://localhost:9877/learn/api/public/v1/oauth2/token](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Foauth2%2Ftoken)**
+**curl -k --user d128e50d-c91e-47d3-a97e-9d0c8a87fb5d:kLpiuq34320jqreaiJIRoareASELERREv56 --data "grant_type=client_credentials" [https://localhost:9877/learn/api/public/v1/oauth2/token](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Foauth2%2Ftoken)**
 
 _{"access_token":"ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz","token_type":"bearer","exp
 ires_in":3444}_
@@ -233,7 +237,7 @@ Bearer will be the access_token value we got from the oauth2/token call above.
 
 Example:
 
-**curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL Demo DSK"}' [https://localhost:9877/learn/api/public/v1/dataSources](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources)**
+**curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL Demo DSK"}' [https://localhost:9877/learn/api/public/v1/dataSources](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources)**
 
 _{"id":"_5_1","externalId":"CURLDSK","description":"cURL Demo DSK"}_
 
@@ -245,7 +249,7 @@ Host>/learn/api/public/v1/dataSources/externalId:<externalId from create>
 
 Example:
 
-**curl -k -X GET -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fappublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
+**curl -k -X GET -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://localhost%3A9877%2Flearn%2Fappublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
 
 _{"id":"_7_1","externalId":"CURLDSK","description":"cURL Demo DSK"}_
 
@@ -259,11 +263,11 @@ Host>/learn/api/public/v1/dataSources/[<primary id>|externalId:<String>]
 
 Examples:
 
-**curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL DEMONSTRATION DSK"}' [https://localhost:9877/learn/api/public/v1/dataSources/_7_1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2F_7_1)**
+**curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL DEMONSTRATION DSK"}' [https://localhost:9877/learn/api/public/v1/dataSources/_7_1](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2F_7_1)**
 
 _{"id":"_7_1","externalId":"CURLDSK","description":"cURL DEMONSTRATION DSK"}_
 
-**curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL REST DEMO DSK"}' [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
+**curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL REST DEMO DSK"}' [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
 
 _{"id":"_7_1","externalId":"CURLDSK","description":"cURL REST DEMO DSK"}_
 
@@ -275,13 +279,13 @@ Host>/learn/api/public/v1/dataSources/[<primary id>|externalId:<String>]
 
 Examples:
 
-**curl -k -X DELETE -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
+**curl -k -X DELETE -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
 
 With delete, you don't see anything back on the command line to indicate your
 delete was successful. You can run it again and you'll see that the DSK is
 truly gone.
 
-**curl -k -X DELETE -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
+**curl -k -X DELETE -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2FdataSources%2FexternalId%3ACURLDSK)**
 
 _{"status":404,"message":"Could not find object with ID:
 externalId:CURLDSK","extraInfo":"416d7b944a58482aaed2df50f301861b"}_
@@ -302,7 +306,7 @@ link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi)
 
 Example:
 
-**curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"restdemouser","dataSourceId":"_7_1","userName":"restdemouser","password":"xyzzy","availability":{"available":"Yes"},"name":{"given":"demo","family":"user","title":"Mr"},"contact":{"email":"no.one@ereh.won"}}' [https://localhost:9877/learn/api/public/v1/users/](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)**
+**curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H "Content-Type: application/json" --data '{"externalId":"restdemouser","dataSourceId":"_7_1","userName":"restdemouser","password":"xyzzy","availability":{"available":"Yes"},"name":{"given":"demo","family":"user","title":"Mr"},"contact":{"email":"no.one@ereh.won"}}' [https://localhost:9877/learn/api/public/v1/users/](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)**
 
 _{"id":"_7_1","uuid":"de2198a86c6645cbafaab13e79529e05","externalId":"restdemo
 user","dataSourceId":"_7_1","userName":"restdemouser","educationLevel":"Unknow
@@ -344,7 +348,7 @@ sers%2F)[<primary id>|externalId:<String>]
 
 Examples:
 
-**curl -k -X GET -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)**
+**curl -k -X GET -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)**
 
 _{"id":"_7_1","uuid":"de2198a86c6645cbafaab13e79529e05","externalId":"restdemo
 user","dataSourceId":"_7_1","userName":"restdemouser","educationLevel":"Unknow
@@ -353,7 +357,7 @@ ser"],"availability":{"available":"Yes"},"name":{"given":"demo","family":"user
 ","title":"Mr"},"job":{},"contact":{"email":"no.one@ereh.won"},"address":{},"l
 ocale":{}}_
 
-**curl -k -X GET -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/users/_7_1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F_7_1%25200B)**
+**curl -k -X GET -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" [https://localhost:9877/learn/api/public/v1/users/_7_1](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F_7_1%25200B)**
 
 _{"id":"_7_1","uuid":"de2198a86c6645cbafaab13e79529e05","externalId":"restdemo
 user","dataSourceId":"_7_1","userName":"restdemouser","educationLevel":"Unknow
@@ -371,7 +375,7 @@ Host>/learn/api/public/v1/users/[<primary id>|externalId:<String>]
 
 Example:
 
-**curl -k --request PATCH -H "Authorization: Bearer **ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz**" -H "Content-Type: application/json" --data '{"externalId":"restdemouser","dataSourceId":"_7_1","userName":"restdemouser","availability":{"available":"Yes"},"name":{"given":"Jane","family":"Demo","title":"Ms"},"contact":{"email":"no.one@ereh.won"}}' [https://localhost:9877/learn/api/public/v1/users/_7_1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F_7_1)**
+**curl -k --request PATCH -H "Authorization: Bearer **ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz**" -H "Content-Type: application/json" --data '{"externalId":"restdemouser","dataSourceId":"_7_1","userName":"restdemouser","availability":{"available":"Yes"},"name":{"given":"Jane","family":"Demo","title":"Ms"},"contact":{"email":"no.one@ereh.won"}}' [https://localhost:9877/learn/api/public/v1/users/_7_1](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F_7_1)**
 
 _{"id":"_7_1","uuid":"de2198a86c6645cbafaab13e79529e05","externalId":"restdemo
 user","dataSourceId":"_7_1","userName":"restdemouser","educationLevel":"Unknow
@@ -388,13 +392,13 @@ Host>/learn/api/public/v1/users/[<primary id>|externalId:<String>]
 
 Example:
 
-**curl -k -X DELETE -H "Authorization: Bearer **ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz**" [https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)**
+**curl -k -X DELETE -H "Authorization: Bearer **ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz**" [https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)**
 
 As with the DSK delete there is no output to the console when the delete is
 successful. But, you can see that the user is gone by running the delete
 again:
 
-**curl -k -X DELETE -H "Authorization: Bearer **ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz**" [https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)**
+**curl -k -X DELETE -H "Authorization: Bearer **ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz**" [https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser](https://localhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)**
 
 _{"status":404,"message":"Could not find object with ID:
 externalId:restdemouser","extraInfo":"e709f6982af744dfae18d42f68e73fb1"}_
@@ -523,7 +527,7 @@ curl -X POST -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P"
 [https://bd-partner-a-original.blackboard.com/learn/api/public/v1](https://com
 munity.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2F
 learn%2Fapi%2Fpublic%2Fv1%2Fusers%2FexternalId%3Arestdemouser)[/uploads](https
-://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fmylearn.int.b
+://mylearn.int.b
 bpd.io%2Flearn%2Fapi%2Fpublic%2Fv1%2Fuploads) -F "[file=@/Users/mbk/Documents/
 2016.09.BlackboardPartnerUpdate.pdf](mailto:file=@/Users/mbk/Documents/2016.09
 .BlackboardPartnerUpdate.pdf)"
@@ -694,7 +698,7 @@ Your browser's address field will be redirected to a URL like the following.
 You SHOULD see something about being unreachable in the browser. That's OK.
 
 [https://localhost/?code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT&state=xyzzy](https:/
-/community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%2F%3F
+/localhost%2F%3F
 code%3Dg84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT%26state%3Dxyzzy)
 
 **Our code is: g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT This is the code we use in the next step to get an access token.**
@@ -708,7 +712,7 @@ code.
 curl -k --user d128e50d-c91e-47d3-a97e-9d0c8a77fb5d:sorryyoucanthavemysecret
 --data "grant_type=authorization_code" [https://bd-partner-a-ultra.blackboard.
 com/learn/api/public/v1/oauth2/token?code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT](ht
-tps://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbd-
+tps://bd-
 partner-a-original-new.blackboard.com%2Flearn%2Fapi%2Fpublic%2Fv1%2Foauth2%2Ft
 oken%3Fcode%3DIN5SC0fCMqm7Zn9SKqB2HEVgGWYsVPKW)\&redirect_uri=[https://localho
 st](https://community.blackboard.com/external-
@@ -726,7 +730,7 @@ It's temporary and needs to be used quickly
 
 curl -X POST -H "Authorization: Bearer **4mgoFlQoi4Jq4biKpU4R264wugsKF9R1**"
 [https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/uploads](https:
-//community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbd-partner-a-
+//bd-partner-a-
 ultra.blackboard.com%2Flearn%2Fapi%2Fpublic%2Fv1%2Fuploads) -F**"**[file=@/Use
 rs/mbk/Documents/2016.03.BlackboardPartnerUpdate.pdf](mailto:file=@/Users/mbk/
 Documents/2016.03.BlackboardPartnerUpdate.pdf)**"**
@@ -758,7 +762,7 @@ course/gradebook/columns/](https://community.blackboard.com/external-link.jspa
 ?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)**[
 _3297_1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2
 Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)**[/attempts](https:/
-/community.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A987
+/localhost%3A987
 7%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)
 
 We get back an attempt ID for an InProgress student submission. We use the
@@ -786,7 +790,7 @@ k.jspa?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%
 2F)[public/v2/courses/courseId:mbk-ultra-
 course/gradebook/columns/](https://community.blackboard.com/external-link.jspa
 ?url=https%3A%2F%2Flocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)[_3
-297_1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fl
+297_1](https://l
 ocalhost%3A9877%2Flearn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)[/attempts](https://com
 munity.blackboard.com/external-link.jspa?url=https%3A%2F%2Flocalhost%3A9877%2F
 learn%2Fapi%2Fpublic%2Fv1%2Fusers%2F)/**_528_1**

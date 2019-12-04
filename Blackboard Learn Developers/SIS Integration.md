@@ -1,4 +1,8 @@
 # SIS Integration
+*Author: Kelley MacEwen*
+*Categories: []*
+*Tags: ['develop', 'guides', 'learn', 'sis', 'developer']*
+---
 Blackboard Learn can be integrated with virtually any Student Information
 System. Options exist to batch process CSV and XML files. Blackboard
 Consulting can provide real-time adapters to many common SIS vendors. Please
@@ -29,7 +33,7 @@ Integration types on a single system.
 
   * IMS Enterprise 1.1 - Vista
 
-  * IMS Learning Information Services ([Learning Information Services Specification Primer](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fwww.imsglobal.org%2Flis%2Flisv2p0p1%2FLISSpecPrimerv2p0p1.html))
+  * IMS Learning Information Services ([Learning Information Services Specification Primer](https://www.imsglobal.org%2Flis%2Flisv2p0p1%2FLISSpecPrimerv2p0p1.html))
 
   * Snapshot Flat Files (text delimited, CSV)
 

@@ -1,4 +1,8 @@
 # Blackboard Learn AMI for REST and LTI Developers
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['developers', 'developer version of blackboard application', 'developer ami', 'blackboard rest and lti developer ami', 'developer']*
+---
 Big shout out to Blackboard's Technical Sherpa and Senior Product Manager for
 the Developer Platform [Mark
 O'Neil](https://community.blackboard.com/people/moneil) for presenting all the

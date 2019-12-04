@@ -1,4 +1,8 @@
 # Getting Started With LIS
+*Author: Scott Hurrey*
+*Categories: ['LIS']*
+*Tags: ['developer', 'developers', 'standards', 'lis', 'ims global', 'learning information services', 'getting started']*
+---
 Learning Information Services is a standard from IMS Global that allows
 Student Information Systems to integrate with Learning Management Systems to
 populate and retrieve Learner data. For more information, click

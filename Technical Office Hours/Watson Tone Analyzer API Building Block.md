@@ -1,4 +1,8 @@
 # Watson Tone Analyzer API Building Block
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['developer', 'rest', 'recording', 'developers', 'technical office hours', 'watson', 'ibm', 'tone analyzer']*
+---
 Thanks to [Andrew Hulme](https://community.blackboard.com/people/ahulme) for
 presenting the work he did on [Simple Project Using New Q2 Beta Rest API In a
 B2 With IBM Watson Tone Analyzer](https://community.blackboard.com/community/d

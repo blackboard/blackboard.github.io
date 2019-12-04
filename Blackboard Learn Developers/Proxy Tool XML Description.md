@@ -1,4 +1,8 @@
 # Proxy Tool XML Description
+*Author: Kelley MacEwen*
+*Categories: []*
+*Tags: ['web services', 'develop', 'proxy tools', 'sample code', 'xml', 'migrated from edugarage', 'developer']*
+---
 The following is a sample XML description that would be provided to the
 registerTool method. Click the links for detailed information on the
 particular element.

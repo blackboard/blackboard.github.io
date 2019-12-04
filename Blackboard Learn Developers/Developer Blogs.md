@@ -1,4 +1,8 @@
 # Developer Blogs
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Examples', 'Getting Started', 'SOAP Web Services', 'Tutorials']*
+*Tags: ['developer resources', 'blackboard learn', 'developer blogs', 'developer']*
+---
 The Blackboard Learn Developer Community is rich with experience and several
 Developers from the community and Blackboard Staff contribute their ideas and
 share their knowledge and solutions via Blogs. If you are aware of a blog that

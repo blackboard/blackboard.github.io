@@ -1,4 +1,8 @@
 # Contact
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'SOAP Web Services']*
+*Tags: ['contact', 'developers', 'developer community', 'developer']*
+---
 There are many ways to get in touch with us:
 
   * E-mail the Blackboard Developers Network Team: [developers@blackboard.com](mailto:developers@blackboard.com)

@@ -1,4 +1,8 @@
 # Blackboard Building Blocks
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks']*
+*Tags: ['building blocks', 'blackboard learn', 'developer resrouces', 'developer']*
+---
 Building Blocks are one means of extending the capabilities of Learn either by
 adding functionality or by integrating with external resources and services.
 Learn also supports [Web

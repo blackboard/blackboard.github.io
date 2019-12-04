@@ -1,4 +1,8 @@
 # Integration recipes for Grades Journey
+*Author: Melanie Barker*
+*Categories: []*
+*Tags: ['developer']*
+---
 Use the following resources for Grades Journey integration:
 
 Integration recipes for SIS Vendor types
@@ -52,7 +56,7 @@ FIntegrations%2FStudent_Information_System%2FSIS_Integration_Types%2FGrades_Jo
 urney)
 
 More on [Grades Journey for Self and Managed-
-Hosted](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2F
+Hosted](https://
 help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FSystem_Integration%2FS
 IS%2FSIS_Integration_Types%2FGrades_Journey)
 

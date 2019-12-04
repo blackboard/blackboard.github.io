@@ -1,4 +1,8 @@
 # Blackboard Markup Language - BbML
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'language', 'taglibs', 'blackboard', 'markup', 'bbml', 'developer']*
+---
   * Overview
   * BbML specification - version 1
   * Examples

@@ -1,4 +1,8 @@
 # Data Types for contentHandler
+*Author: Ryan Haber*
+*Categories: []*
+*Tags: ['developer']*
+---
 Blackboard Learn's /contents/ endpoints accommodate different types of content
 by using different handlers. Use the contentHandler field of requests and
 responses to indicate which content handler should be used. Available

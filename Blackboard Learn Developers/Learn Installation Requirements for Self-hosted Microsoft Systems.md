@@ -1,4 +1,8 @@
 # Learn Installation Requirements for Self-hosted Microsoft Systems
+*Author: Mark Bykerk Kauffman*
+*Categories: ['Getting Started']*
+*Tags: ['ms-sql-servrer-2012', 'sql-server', 'installation', 'microsoft', 'requirements', 'supported', 'developer']*
+---
 This page documents several requirements for those who are installing Learn on
 the Microsoft platform. The individual doing the install MUST read, complete
 any required action, and check off each item on this page. The only issues
@@ -16,7 +20,7 @@ ATTENTION -
   * Windows Server 2012 R2 is not supported in Learn Q2 2018 and later. Q2 2018 is compatible with Windows Server 2016
   * Always refer to the supported technologies page at help.blackboard.com for the Learn version your are installing or upgrading.
 
-  1. As of this writing, **Q2 2017** Learn only installs and runs on MS SQL Server 2014 Standard or Enterprise editions. **Q4 2016 and prior** only install on MS SQL Server 2012 Standard or Enterprise editions. We know **Learn does not work on MS SQL Web Edition or Express**. Your milage may vary on other editions. See the self-hosted requirements listed here for all current releases: [https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_All_91_Releases](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FRelease_Notes%2FRelease_Notes_All_91_Releases)
+  1. As of this writing, **Q2 2017** Learn only installs and runs on MS SQL Server 2014 Standard or Enterprise editions. **Q4 2016 and prior** only install on MS SQL Server 2012 Standard or Enterprise editions. We know **Learn does not work on MS SQL Web Edition or Express**. Your milage may vary on other editions. See the self-hosted requirements listed here for all current releases: [https://help.blackboard.com/Learn/Administrator/Hosting/Release_Notes/Release_Notes_All_91_Releases](https://help.blackboard.com%2FLearn%2FAdministrator%2FHosting%2FRelease_Notes%2FRelease_Notes_All_91_Releases)
   2. **JAVA_HOME should not contain any spaces.** Install Java into a directory such that the path to the directory is space free. C:\Program Files will FAIL.
   3. Turn off virus protection during the install.
   4. Turn off firewalls during an install/upgrade.

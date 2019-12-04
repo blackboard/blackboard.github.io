@@ -1,4 +1,8 @@
 # Data Collection Page with Common Tag Library Examples
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'Examples', 'Getting Started']*
+*Tags: ['develop', 'example', 'b2', 'sample code', 'migrated from edugarage', 'tag library', 'tag libraries', 'data collection', 'step', 'form', 'building blocks', 'taglibs', 'developer']*
+---
 # Sample Metadata
 
 **Title**: Data Collection Page with Common Tag Library Examples

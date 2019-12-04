@@ -1,4 +1,8 @@
 # Tutorials - SOAP Web Services
+*Author: Scott Hurrey*
+*Categories: ['SOAP Web Services', 'Tutorials']*
+*Tags: ['web services', 'soap', 'blackboard learn', 'tutorials', 'developer']*
+---
 This section will provide tutorials to enable you to accomplish specific tasks
 related to Blackboard Learn Web Services.
 

@@ -1,4 +1,8 @@
 # About Office Hours
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['community', 'calendar', 'office hours', 'blackboard learn', 'developers', 'technical office hours', 'migrated from edugarage', 'developer']*
+---
 Office hours are regular meetings geared toward technical discussion about
 developing and administering Blackboard Learn. Our community holds both Admin
 and Developer office hours on a weekly alternate schedule, so you can join the

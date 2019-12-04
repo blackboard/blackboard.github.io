@@ -1,4 +1,8 @@
 # Tutorial: Build a Java Command Line REST Application
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'java', 'tutorial', 'developers', 'developer']*
+---
 The purpose of this document is to allow a developer to walk through the REST
 Workshop from DevCon 2016. Please note that this sample code was built and
 tested on Mac. It is Java code, and therefore, should be operating system
@@ -8,13 +12,13 @@ In order to begin this tutorial, there are a few pre-requisites that are
 assumed to be in place:
 
   * User has installed and started the latest [Developer Virtual Machine](https://community.blackboard.com/docs/DOC-1649-developer-virtual-machine-dvm).
-  * User has installed and configured [GIT](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgit-scm.com%2Fdownloads).
-  * User has cloned the [repository](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-DevCon-REST-Workshop) to their local working directory.
+  * User has installed and configured [GIT](https://git-scm.com%2Fdownloads).
+  * User has cloned the [repository](https://github.com%2Fblackboard%2FBBDN-DevCon-REST-Workshop) to their local working directory.
   * User has Java 8 installed and configured to JAVA_HOME.
-  * User has registered for an account on the [Developer Portal](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F), [registered an application](https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal), obtained the key and secret, and [configured](https://community.blackboard.com/docs/DOC-1580-managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators) the Developer Virtual Machine to accept it..
+  * User has registered for an account on the [Developer Portal](https://developer.blackboard.com%2F), [registered an application](https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal), obtained the key and secret, and [configured](https://community.blackboard.com/docs/DOC-1580-managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators) the Developer Virtual Machine to accept it..
 
 To watch a recording of the corresponding Webinar, click
-[here](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fu
+[here](https://u
 s.bbcollab.com%2Frecording%2FBBAA710721684484425FA10FBA7A1B93).
 
 # About the Project

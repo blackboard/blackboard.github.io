@@ -1,4 +1,8 @@
 # Introduction to the Developer Community
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'Getting Started']*
+*Tags: ['getting started', 'design', 'develop', 'get started', 'developer']*
+---
 The Blackboard Developer Community, home of the Blackboard Developers Network
 (BbDN), is designed to provide you with key information and services about
 developing and deploying Building Blocks for the Blackboard Learn platform.

@@ -1,4 +1,8 @@
 # Secure Coding Practices - Building Blocks
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['building blocks', 'best practices', 'security', 'developer']*
+---
 Blackboard takes security seriously and extends that same outlook to
 developers by enabling them to apply industry standards of best practice to
 their Building Blocks.

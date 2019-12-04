@@ -1,4 +1,8 @@
 # About Web Services Sample Code
+*Author: Scott Hurrey*
+*Categories: ['Getting Started', 'SOAP Web Services']*
+*Tags: ['web services', 'soap', 'blackboard learn', 'sample code', 'sample client', 'sample client libraries', 'developer']*
+---
 Blackboard Learn provides access to sample code to help Developers build
 against the Blackboard Web Services. This sample code is accessible directly
 from the Blackboard Learn User Interface. The download comes in the form of a

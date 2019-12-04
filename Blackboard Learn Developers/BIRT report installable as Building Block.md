@@ -1,4 +1,8 @@
 # BIRT report installable as Building Block
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'Examples']*
+*Tags: ['develop', 'guides', 'building blocks', 'birt', 'report', 'migrated from edugarage', 'developer']*
+---
 # Sample Metadata
 
 **Title**: BIRT report installable as Building Block   

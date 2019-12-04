@@ -1,4 +1,8 @@
 # Caliper Metric Profiles
+*Author: Scott Hurrey*
+*Categories: ['Caliper']*
+*Tags: ['standards', 'caliper', 'ims global', 'caliper analytics', 'event stream', 'caliper metric profiles', 'developer']*
+---
 Caliper Metric Profiles provide a basic, consistent format for emitting and
 consuming learning events regardless of the Learning Management System or
 Educational Tool. These profiles leverage other IMS Global standards like LTI

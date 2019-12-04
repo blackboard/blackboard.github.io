@@ -1,4 +1,8 @@
 # Preparing Your Building Blocks For Learn SaaS and Newer Learn Versions
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['building blocks', 'blackboard learn', 'saas', 'learn', 'b2', 'building block', 'prepare', 'requirements', 'developer']*
+---
 Blackboard Building Blocks have long been a staple in the Blackboard Learn
 platform. These Java Web Apps allow you to customize the workflow and
 experience that you and your faculty use to interact with the system.
@@ -241,7 +245,7 @@ format is:
 
 </appender>
 
-**[Sample logging code that works in a SaaS environment.](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fmark-b-kauffman%2Fbbdn-bblogbackb2)**
+**[Sample logging code that works in a SaaS environment.](https://github.com%2Fmark-b-kauffman%2Fbbdn-bblogbackb2)**
 
 # Statelessness
 

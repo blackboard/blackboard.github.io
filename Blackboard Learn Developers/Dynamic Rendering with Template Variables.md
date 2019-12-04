@@ -1,4 +1,8 @@
 # Dynamic Rendering with Template Variables
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started']*
+*Tags: ['building blocks', 'blackboard learn', 'template variable', 'developer']*
+---
 Template variables allow for integration with other systems by exposing
 information about the user's context in a way that makes creating URLs to pass
 information to these systems easy.

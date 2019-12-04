@@ -1,4 +1,8 @@
 # Get Involved
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*
+*Tags: ['developer resources', 'community', 'blackboard learn', 'get involved', 'developer']*
+---
 Getting involved in the Developer community is easy and with options to suit
 your goals...
 
@@ -10,10 +14,10 @@ your goals...
     * The Developer Office Hours is interested in hosting your presentation. [Contact us](mailto:developers@blackboard.com) if you have a topic on which you would like to present.
   * [Contribute](https://community.blackboard.com/community/developers/create-idea!input.jspa?containerID=2008&containerType=14) an idea for a Building Block or LTI Tool
   * [Collaborate](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fprojects.oscelot.org%2F) on a project
-  * [Share](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fwww.blackboard.com%2FSelf-Service%2FBuilding-Blocks%2Flogin.aspx%3FReturnUrl%3D%252fSelf-Service%252fBuilding-Blocks%252fDefault.aspx) your solution
+  * [Share](https://www.blackboard.com%2FSelf-Service%2FBuilding-Blocks%2Flogin.aspx%3FReturnUrl%3D%252fSelf-Service%252fBuilding-Blocks%252fDefault.aspx) your solution
   * [Link](https://community.blackboard.com/docs/DOC-1105) to your blog
   * Present at a conference or user group event
-    * Check the [Calendar of Events](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsites.google.com%2Fa%2Fdeveloper.blackboard.com%2Fdeveloper%2Fhome%2Fcalendar) for upcoming deadlines or regularly meeting groups which may benefit from your experience
+    * Check the [Calendar of Events](https://sites.google.com%2Fa%2Fdeveloper.blackboard.com%2Fdeveloper%2Fhome%2Fcalendar) for upcoming deadlines or regularly meeting groups which may benefit from your experience
   * [Host](mailto:bbpartnerteam@blackboard.com) an event
     * E-mail [BbDN](mailto:bbpartnerteam@blackboard.com) with your event details so that we can add it to our events calendar.
   * [Give](mailto:developers@blackboard.com) us feedback

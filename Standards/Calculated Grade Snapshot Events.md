@@ -1,4 +1,8 @@
 # Calculated Grade Snapshot Events
+*Author: Scott Hurrey*
+*Categories: ['Caliper']*
+*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'calculatedgradesnapshotevent', 'developer']*
+---
 Blackboard Learn's Caliper Analytics stream emits a
 CalculatedGradeSnapshotEvent nightly for any grade that is recalculated.
 

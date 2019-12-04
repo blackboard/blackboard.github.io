@@ -1,7 +1,11 @@
 # Preparing Your Building Block for Blackboard Learn 9.1 Q2 2016
+*Author: Mark Bykerk Kauffman*
+*Categories: ['Building Blocks']*
+*Tags: ['9.1', 'q2 2016', 'developer']*
+---
 Attached is the PowerPoint deck for the 3/16/2016 Webinar recording:
 [Preparing Your Building Block for Blackboard Learn 9.1.Q2
-2016](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsa
+2016](https://sa
 s.elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F279AEBB7C6
 0BDE9E0B7CC9B07120BB17). In this Webinar we reviewed the changes in the
 upcoming Learn 9.1 Q2 2016 release and how to prepare your Building Block for
@@ -12,7 +16,7 @@ Versions](https://community.blackboard.com/docs/DOC-1595-preparing-your-
 building-blocks-for-learn-saas-and-newer-learn-versions) by Scott Hurrey.
 
 The recording for the 3/22/2016 Webinar is
-[here](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fs
+[here](https://s
 as.elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2FDB2503BFA
 4E9FF402B31858655506AD8). During the 3/22/2016 presentation one of the
 participants had questions around setting the minimum and maximum version in

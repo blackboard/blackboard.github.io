@@ -1,4 +1,8 @@
 # REST Demo: Using curl to access content attachments
+*Author: Mark O'Neil*
+*Categories: []*
+*Tags: ['developer']*
+---
 The Learn REST API supports accessing Content Item information and URLs for
 downloading content attachments.
 

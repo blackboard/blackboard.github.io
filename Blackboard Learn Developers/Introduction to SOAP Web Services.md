@@ -1,4 +1,8 @@
 # Introduction to SOAP Web Services
+*Author: Scott Hurrey*
+*Categories: ['SOAP Web Services']*
+*Tags: ['web services', 'soap', 'blackboard learn', 'developer']*
+---
 Blackboard Learn Web Services are a key component of Blackboard Learn's open
 architecture, allowing you to enhance the online education experience for
 their students and faculty through integration with external services and

@@ -1,4 +1,8 @@
 # Getting Started With The Blackboard Collaborate REST APIs
+*Author: Scott Hurrey*
+*Categories: ['Getting Started']*
+*Tags: ['developer', 'getting started', 'collaborate', 'blackboard', 'developers']*
+---
 This section is dedicated to getting developers up-to-speed quickly with the
 new REST APIs available for Blackboard Collaborate with the Ultra Experience.
 These APIs give the developer the ability to programmatically integrate common
@@ -55,9 +59,9 @@ are consistently at the top of the list. As part of the effort to assist
 Developers in getting up and running, Blackboard typically offers sample code
 and supporting documentation in a number of those popular languages:
 
-  * [Postman Collection](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-Collab-Postman-REST)
+  * [Postman Collection](https://github.com%2Fblackboard%2FBBDN-Collab-Postman-REST)
   * Java
-  * [Python](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fblackboard%2FBBDN-Collab-REST-Demo-Python)
+  * [Python](https://github.com%2Fblackboard%2FBBDN-Collab-REST-Demo-Python)
   * Ruby
   * PHP
   * C#/.NET

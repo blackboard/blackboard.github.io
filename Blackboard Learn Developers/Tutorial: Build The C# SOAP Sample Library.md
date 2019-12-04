@@ -1,4 +1,8 @@
 # Tutorial: Build The C# SOAP Sample Library
+*Author: Scott Hurrey*
+*Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']*
+*Tags: ['web services', 'soap', 'c#', 'tutorial', 'blackboard learn', 'sample code', 'sample client library', 'developer']*
+---
 The first step to building the .NET Web Services sample desktop application is
 to build the library that handles the communication between that client and
 Blackboard Learn. This library can also be used from within Microsoft™ Visual
@@ -10,7 +14,7 @@ all of the code used herein.
 
   * Microsoft™ [Web Services Extensions 2.0 Service Pack 3](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fwww.microsoft.com%2Fdownloads%2Fdetails.aspx%3FFamilyID%3D1ba1f631-c3e7-420a-bc1e-ef18bab66122%26DisplayLang%3Den)
   * [Client.zip](https://community.blackboard.com/docs/DOC-1143) archive from the Blackboard Learn User Interface
-  * Web Services are [Available and Discoverable](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2Fen-us%2FLearn%2F9.1_2014_04%2FAdministrator%2F070_Server_Management_and_Integrations%2FSystem_Integration%2FIntegration_Development%2F030_Web_Services)
+  * Web Services are [Available and Discoverable](https://help.blackboard.com%2Fen-us%2FLearn%2F9.1_2014_04%2FAdministrator%2F070_Server_Management_and_Integrations%2FSystem_Integration%2FIntegration_Development%2F030_Web_Services)
 
 ## Assumptions
 

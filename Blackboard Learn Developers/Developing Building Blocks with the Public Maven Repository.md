@@ -1,4 +1,8 @@
 # Developing Building Blocks with the Public Maven Repository
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['building blocks', 'gradle', 'blackboard learn', 'maven', 'repository', 'developer']*
+---
 As Blackboard shifts to a more modular delivery model, with more features
 delivered as Building Blocks at regular intervals, the importance of having a
 repository of build objects and documentation has never been more important.
@@ -32,7 +36,7 @@ link.jspa?url=http%3A%2F%2Fwww.gradle.org%2F).
 
 **The Blackboard Maven repository is hosted at:**
 
-**[https://maven.blackboard.com/content/repositories/releases](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fmaven.blackboard.com%2Fcontent%2Frepositories%2Freleases)**
+**[https://maven.blackboard.com/content/repositories/releases](https://maven.blackboard.com%2Fcontent%2Frepositories%2Freleases)**
 
 ## When would you use the repository?
 

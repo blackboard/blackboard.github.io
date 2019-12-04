@@ -1,4 +1,8 @@
 # Community
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*
+*Tags: ['developer resources', 'community', 'blackboard learn', 'developer']*
+---
 Blackboard sponsors and participates in events for and by the Learn Developer
 Community - Join in and participate!
 

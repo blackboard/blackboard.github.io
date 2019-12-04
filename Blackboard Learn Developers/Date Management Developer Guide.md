@@ -1,4 +1,8 @@
 # Date Management Developer Guide
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks']*
+*Tags: ['blackboard learn', 'api', 'date management', 'extension points', 'datemanagement', 'developer']*
+---
 Date Management allows users with the role of instructor to easily update
 content dates when they copy or restore a course from a previous term or
 calendar year containing course content items with dates. Supported date types

@@ -1,4 +1,8 @@
 # Three-Legged OAuth
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'authentication', 'authorization', '3lo', 'three-legged oauth', 'developer']*
+---
 One of the drawbacks associated with [Basic
 Authentication](https://community.blackboard.com/docs/DOC-1644-authorization-
 and-authentication) is that the application requires broad access, as the tool

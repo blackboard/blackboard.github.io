@@ -1,4 +1,8 @@
 # Developer Portal, Development and Production Groups
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'groups', 'developer portal', 'developer groups', 'application groups', 'rate limits', 'group', 'naming', 'production', 'convention', 'developer']*
+---
 **Contents**
 
   * What are Groups?

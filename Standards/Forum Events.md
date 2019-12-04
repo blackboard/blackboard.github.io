@@ -1,4 +1,8 @@
 # Forum Events
+*Author: Scott Hurrey*
+*Categories: ['Caliper']*
+*Tags: ['developer', 'standards', 'caliper', 'ims', 'ims global', 'forumevent']*
+---
 Blackboard Learn's Caliper Analytics stream emits a ForumEvent to cover five
 use cases:
 

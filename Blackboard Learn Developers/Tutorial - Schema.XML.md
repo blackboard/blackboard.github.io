@@ -1,4 +1,8 @@
 # Tutorial - Schema.XML
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['building blocks', 'tutorial', 'blackboard learn', 'schema.xml', 'developer']*
+---
 Building Blocks often require the means to store data specific to their
 function. This was often accomplished using local flat files stored in the
 Building Block directory or by utilizing an external database. Neither

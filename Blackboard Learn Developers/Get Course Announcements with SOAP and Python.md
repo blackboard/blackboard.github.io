@@ -1,4 +1,8 @@
 # Get Course Announcements with SOAP and Python
+*Author: Scott Hurrey*
+*Categories: ['Examples', 'SOAP Web Services']*
+*Tags: ['web services', 'soap', 'python', 'blackboard learn', 'example', 'developer']*
+---
 This project will provide the Developer with sample code demonstrating how to
 perform the following actions, as they pertain to Blackboard Learn 9.1 Web
 Services:

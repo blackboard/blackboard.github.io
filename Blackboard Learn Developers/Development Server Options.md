@@ -1,4 +1,8 @@
 # Development Server Options
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*
+*Tags: ['web services', 'building blocks', 'getting started', 'blackboard learn', 'developer']*
+---
 Setting up a development server is the same as installing Learn on a staging
 or production server. This requires several steps including selecting and
 installing the appropriately scaled hardware,installing and configuring the

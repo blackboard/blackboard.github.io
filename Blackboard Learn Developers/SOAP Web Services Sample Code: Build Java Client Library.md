@@ -1,4 +1,8 @@
 # SOAP Web Services Sample Code: Build Java Client Library
+*Author: Scott Hurrey*
+*Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']*
+*Tags: ['web services', 'soap', 'java', 'tutorial', 'blackboard learn', 'sample code', 'developer']*
+---
 The Blackboard Learn SOAP Web Services come out of the box with [sample
 code](https://community.blackboard.com/docs/DOC-1143) that can be downloaded
 directly from the user interface. This document will describe the process by

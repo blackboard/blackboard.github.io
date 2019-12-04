@@ -1,4 +1,8 @@
 # BECOME AN OFFICIAL BLACKBOARD PARTNER!
+*Author: Mark Bykerk Kauffman*
+*Categories: ['Building Blocks', 'Getting Started']*
+*Tags: ['partner', 'behind the blackboard', 'partnership', 'access', 'developer']*
+---
 While our Open Innovation Initiative (OII) is FREE to any developers and
 provides access to the Blackboard Learn AMI for REST and LTI development, API
 limits apply and Behind the Blackboard support access is not provided. A
@@ -15,7 +19,7 @@ The BbDN includes the following benefits:
 
   * To request access, create a ticket on Behind the Blackboard with the subject line: “Access to the Partner SaaS Smoke Test Systems.” Include first and last names, email addresses and phone numbers for 1-3 users.
   * Ability to promote your integration through our Partner Catalog (now on our Community Site)
-  * Ability to sponsor at [BbWorld](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fbbworld.com%2F), our largest annual users conference
+  * Ability to sponsor at [BbWorld](https://bbworld.com%2F), our largest annual users conference
 
 Sign up for the BbDN agreement today on [our registration
 page](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fsec

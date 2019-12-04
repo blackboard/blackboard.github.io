@@ -1,4 +1,8 @@
 # Using the Blackboard Learn AMI for REST and LTI Development
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'lti', 'developers', 'dvba', 'developer version of blackboard application', 'developer ami', 'blackboard rest and lti developer ami', 'developer']*
+---
 This document outlines usage of the Blackboard REST and LTI Developer AMI made
 available via the Amazon AWS Marketplace.
 
@@ -78,9 +82,9 @@ Starting with version **3300.6.0** the Learn for REST and LTI Developers AMI
 supports free Let’s Encrypt SSL Certificates. At this time we do not support
 alternative SSL certificate processes.
 
-- you may read about Let’s Encrypt at [Let's Encrypt - Free SSL/TLS Certificates](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fletsencrypt.org%2F)
+- you may read about Let’s Encrypt at [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org%2F)
 
-- you may read about certbot at [Certbot](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fcertbot.eff.org%2F)
+- you may read about certbot at [Certbot](https://certbot.eff.org%2F)
 
 - you may read about how to get a free DNS at [Free Dynamic DNS - No-IP.com - Managed DNS Services](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Ffreeddns.noip.com%2F)
 
@@ -166,7 +170,7 @@ and-organizations).
 
 **_Note that not stopping your EC2 when you encounter an error will continue to incur EC2 charges and we do not issue refunds.Always stop your EC2 if you encounter an error or do not require a 24x7 development instance._**
 
-  1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments | Blackboard Help](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fhelp.blackboard.com%2FLearn%2FAdministrator%2FSaaS)
+  1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments | Blackboard Help](https://help.blackboard.com%2FLearn%2FAdministrator%2FSaaS)
   2. 504 Gateway Error
     1. Visiting https;//<EC2_Public_DNS> displays a 504 error in your browser:
       1. Shutdown the instance to stop accumulating charges and try again

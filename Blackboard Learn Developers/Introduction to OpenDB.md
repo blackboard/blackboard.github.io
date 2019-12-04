@@ -1,4 +1,8 @@
 # Introduction to OpenDB
+*Author: Scott Hurrey*
+*Categories: ['Getting Started', 'OpenDB']*
+*Tags: ['blackboard learn', 'opendb', 'database', 'developer']*
+---
 In the summer of 2010, Blackboard made good on a commitment for platform
 openness by publishing details about the database structures that power the
 Blackboard Learn platform. Our Open Database initiative provides your

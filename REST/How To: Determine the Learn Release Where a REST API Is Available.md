@@ -1,4 +1,8 @@
 # How To: Determine the Learn Release Where a REST API Is Available
+*Author: Mark Bykerk Kauffman*
+*Categories: []*
+*Tags: ['rest', 'learn', 'blackboard learn', 'api', 'release', 'version', 'build', 'developer']*
+---
 The question keeps coming up. This document explains how you can determine the
 release of Learn where a REST API is available. The key is to take the release
 name, like Q4 2017, and convert it to a build number, like 3300.0. Here's an
@@ -9,7 +13,7 @@ at the least Q2 2017, Q4 2017. If not what version of Bb is supported by these
 APIs. Any help you can provide would be greatly appreciated.
 
 API End-point - GET : [/learn/api/public/v1/courses/{courseId}/contents](https
-://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fna01.safelink
+://na01.safelink
 s.protection.outlook.com%2F%3Furl%3Dhttps%253A%252F%252Furldefense.proofpoint.
 com%252Fv2%252Furl%253Fu%253Dhttps-3A__developer.blackboard.com_assets_lib_swa
 gger-2Dui_swagger-2Dindex.html-3Furl-3D_portal_docs_apis_learn-2Dswagger.json-

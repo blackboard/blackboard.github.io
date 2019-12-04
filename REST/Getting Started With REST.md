@@ -1,4 +1,8 @@
 # Getting Started With REST
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['developer', 'rest', 'getting started', 'api', 'blackboard', 'developers']*
+---
 # Get Started with REST
 
 Blackboard offers a suite of education technology tools, both software and
@@ -10,8 +14,8 @@ workflow is more complicated. For more general questions about REST and using
 REST APIs, see any of the numerous tutorials available online. Most commonly
 used resources include:
 
-  * Blackboard's [developer portal](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F)
-  * Blackboard's [Github repos](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dbbdn)
+  * Blackboard's [developer portal](https://developer.blackboard.com%2F)
+  * Blackboard's [Github repos](https://github.com%2Fsearch%3Fq%3Dbbdn)
 
 # Before You Get Started
 
@@ -38,7 +42,7 @@ to speak with us. To discuss deploying your application, please contact us at
 authenticate your project with Blackboard applications, you need to be a
 registered Blackboard developer.To register as a Blackboard developer:
 
-  1. Go to [https://developer.blackboard.com/](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F) and select **Sign Up**. Read and agree to the terms and conditions.
+  1. Go to [https://developer.blackboard.com/](https://developer.blackboard.com%2F) and select **Sign Up**. Read and agree to the terms and conditions.
   2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
   3. Select **Create Account** and you're on your way.
 
@@ -79,12 +83,12 @@ want to use depend on what you want to do.
 add files, text, and the like to Blackboard Learn
 
   1. [authenticate with Blackboard Learn](https://community.blackboard.com/docs/DOC-4457-use-oauth-20-to-authenticate-with-blackboard-learn) via REST API
-  2. check out our [Learn REST API reference](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi%2FLearn)
+  2. check out our [Learn REST API reference](https://developer.blackboard.com%2Fportal%2FdisplayApi%2FLearn)
 
 bulk add users to Blackboard Learn
 
   1. [authenticate with Blackboard Learn](https://community.blackboard.com/docs/DOC-4457-use-oauth-20-to-authenticate-with-blackboard-learn) via REST API
-  2. check out our [Learn REST API reference](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi%2FLearn)
+  2. check out our [Learn REST API reference](https://developer.blackboard.com%2Fportal%2FdisplayApi%2FLearn)
 
 set up video conference sessions
 
@@ -235,7 +239,7 @@ We will continue to add new examples, tutorials, and code samples, so make
 sure to check these links regularly.
 
   * [Developer Portal](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fdeveloper.blackboard.com%2F)
-  * [REST Documentation](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2Fportal%2FdisplayApi)
+  * [REST Documentation](https://developer.blackboard.com%2Fportal%2FdisplayApi)
   * [Examples](https://community.blackboard.com/community/developers/learn/rest/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Bexamples%5D)
   * [Tutorials](https://community.blackboard.com/community/developers/learn/rest/content?filterID=contentstatus%5Bpublished%5D%7Ecategory%5Btutorials%5D)
 

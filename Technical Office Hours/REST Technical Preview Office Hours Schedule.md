@@ -1,4 +1,8 @@
 # REST Technical Preview Office Hours Schedule
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['developer', 'office hours', 'rest', 'developers', 'technical office hours', 'developer portal', 'developer platform', 'developer office hours']*
+---
 [Mark O'Neil](https://community.blackboard.com/people/moneil) and [Scott
 Hurrey](https://community.blackboard.com/people/scott.hurrey) will be leading
 a series of webinars open to anyone interested in learning more about the
@@ -16,7 +20,7 @@ Date
 
 Time
 
-[1a](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsas
+[1a](https://sas
 .elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2FD9A0D9ADC93
 4B78C452D2066AA492F23)
 
@@ -27,7 +31,7 @@ Registration; REST Integration Workflows
 
 11AM EST
 
-[1b](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsas
+[1b](https://sas
 .elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F07A6115747B
 0572626C9BF92458D3440)
 
@@ -38,7 +42,7 @@ Registration; REST Integration Workflows
 
 11AM EST
 
-[2](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsas.
+[2](https://sas.
 elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F839E88100840
 73D5EC5E7ADE85786852)
 
@@ -48,7 +52,7 @@ Developer Virtual Machines; Application Authorization; Code Demo;
 
 11AM EST
 
-[3](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsas.
+[3](https://sas.
 elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F044B4D2FC453
 DAF6986D1FCCBEBC6A66)
 
@@ -58,7 +62,7 @@ Data Source APIs; Code Demo;
 
 11AM EST
 
-[4](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsas.
+[4](https://sas.
 elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F91129AC63822
 1DD902B3532C476B956A)
 
@@ -68,7 +72,7 @@ Course APIs; Code Demo;
 
 11AM EST
 
-[5](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fsas.
+[5](https://sas.
 elluminate.com%2Fcollab%2Fui%2Fscheduler%2Fresource%2Frecording%2F7FBA0A66C0F1
 E781C70DF8CF5161BEA3)
 
@@ -86,7 +90,7 @@ Membership and Term APIs; Code Demo;
 
 11AM EST
 
-[7](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fus.b
+[7](https://us.b
 bcollab.com%2Frecording%2FA4DA92A651A8AF8487DE724AF47EFC13)
 
 Content APIs and Collection Gets; Code Demo

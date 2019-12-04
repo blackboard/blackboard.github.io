@@ -1,4 +1,8 @@
 # Welcome To Standards
+*Author: Scott Hurrey*
+*Categories: ['Caliper', 'LIS', 'LTI', 'SCORM']*
+*Tags: ['developer', 'lti', 'scorm', 'tin can', 'xapi', 'standards', 'caliper', 'lis', 'adl', 'ims', 'ims global', 'imsglobal', 'advanced distributed learning', 'adlgov']*
+---
 This is space for the community to make contributions around working with
 educational technology standards. We are especially interested in standards
 put forth by [IMS Global](https://community.blackboard.com/external-

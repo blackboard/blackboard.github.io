@@ -1,4 +1,8 @@
 # Use APIs to Merge and Cross-list Courses
+*Author: Ryan Haber*
+*Categories: []*
+*Tags: ['developer']*
+---
 # Overview
 
 Your institution often needs to manage many courses or sections together. The

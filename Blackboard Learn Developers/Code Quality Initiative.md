@@ -1,4 +1,8 @@
 # Code Quality Initiative
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['develop', 'best practice', 'b2', 'tutorials', 'migrated from edugarage', 'sonar', 'pmd', 'static code analysis', 'code quality', 'developer']*
+---
 # Why Code Quality Matters
 
   * Your code is your asset

@@ -1,4 +1,8 @@
 # First Project: Gradle, Git, and b2-starter-template
+*Author: Scott Hurrey*
+*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*
+*Tags: ['building blocks', 'git', 'gradle', 'getting started', 'blackboard learn', 'technologies', 'b2-starter-template', 'developer']*
+---
 After setting up the development workstation as described in the Development
 Workstation topic you may now build your first project based on the Blackboard
 basic-b2-template and gradle build environment.

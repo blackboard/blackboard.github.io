@@ -1,4 +1,8 @@
 # SAML 2.0 Building Block
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['system administrator', 'technical office hours', 'admin', 'saml', 'sys admin', 'developer']*
+---
 Thanks to [Chris Jones](https://community.blackboard.com/people/bbchjones)
 from Blackboard support for walking us through the SAML 2.0 Building Block.
 What a fantastic session! Chris did such a fantastic job, that we hope to have

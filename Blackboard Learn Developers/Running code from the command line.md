@@ -1,4 +1,8 @@
 # Running code from the command line
+*Author: Kelley MacEwen*
+*Categories: ['Building Blocks', 'Tutorials']*
+*Tags: ['develop', 'developer guides', 'blackboard learn', 'developers', 'migrated from edugarage', 'developer']*
+---
 # Overview
 
 This example allows you to run code which makes calls to the Blackboard APIs

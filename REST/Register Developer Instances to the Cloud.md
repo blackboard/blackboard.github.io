@@ -1,4 +1,8 @@
 # Register Developer Instances to the Cloud
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'blackboard learn', 'developer virtual machine', 'saas', 'developer portal', 'java8', 'cloud connector', 'developer']*
+---
 You must register developer instances of Blackboard Learn to the Blackboard
 cloud. This is true of both developer virtual machines (DVM) that you host
 locally and AWS cloud-based instances created from the Blackboard Learn AMI.

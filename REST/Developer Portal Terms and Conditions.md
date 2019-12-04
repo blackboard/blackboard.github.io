@@ -1,4 +1,8 @@
 # Developer Portal Terms and Conditions
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['rest', 'api', 'developers', 'terms and conditions', 'developer portal', 'developer']*
+---
 **BLACKBOARD® REST DEVELOPER AGREEMENT**
 
 This Blackboard REST Developer Agreement (“**Agreement**”) enables the

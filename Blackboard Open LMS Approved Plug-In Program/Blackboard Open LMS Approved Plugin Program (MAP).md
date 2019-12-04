@@ -1,4 +1,8 @@
 # Blackboard Open LMS Approved Plugin Program (MAP)
+*Author: Scott Hurrey*
+*Categories: []*
+*Tags: ['developers', 'map', 'blackboard open lms', 'developer']*
+---
 Blackboard Open LMS is committed to providing its clients with everything they
 need. As an open-source SaaS provider, we have the opportunity to enhance our
 Blackboard Open LMS platform through modular code updates and third-party
@@ -42,7 +46,7 @@ Community Page](https://community.blackboard.com/groups/blackboardopenlms).
 
 You can look at our Plugin Matrix. It shows plugins currently available
 through the MAP Program. For more information [refer to the plug-in
-matrix](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2F
+matrix](https://
 help.blackboard.com%2FMoodlerooms%2FAdministrator%2FGet_Started%2FAbout_Moodle
 rooms%2FPlugin_Matrix).
 
@@ -62,7 +66,7 @@ support levels.
       * Community Plugin Support and Vendor Plugin Support
 
 Support levels available for each approved plug-in are listed on[ our plugin
-matrix](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2F
+matrix](https://
 help.blackboard.com%2FMoodlerooms%2FAdministrator%2FGet_Started%2FAbout_Moodle
 rooms%2FPlugin_Matrix%23what-do-the-support-levels-mean). (To see the support
 levels, click the link on the right, or scroll to the bottom of the page.)

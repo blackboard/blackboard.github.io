@@ -1,4 +1,8 @@
 # Public REST API Compatibility and Deprecation Policy
+*Author: Ryan Haber*
+*Categories: []*
+*Tags: ['developer']*
+---
   * Compatibility
     * Backward compatibility
     * Stable URIs

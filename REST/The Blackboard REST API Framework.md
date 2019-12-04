@@ -1,4 +1,8 @@
 # The Blackboard REST API Framework
+*Author: Mark O'Neil*
+*Categories: []*
+*Tags: ['apis', 'rest', 'api', 'technical preview', 'developer']*
+---
 Blackboard’s new REST API Framework is a giant step forward for integrating
 with Blackboard Learn. By moving the integration from in-process code to a
 separate machine the health of your Blackboard Learn instance is dramatically
@@ -17,7 +21,7 @@ There are three actors in the REST API use case:
 
         1. _ **Developer:**_** **This is the person who writes an application that uses the new REST APIs. Through the application the developer manages authorization using the registered application’s OAuth Key and Secret, any data sent to or received from Blackboard Learn, and tracks application entitlements required for operation. _Developers are limited to non-production testing pursuant to the applicable REST Developer Agreements._
         2. **_Blackboard Learn Administrator:_** By default, no Applications can access the REST APIs. A Blackboard Learn Administrator must enable each app from the Blackboard Learn Admin Panel before access is granted. This is done by creating an integration using the Blackboard Learn Admin REST API Integrations tool using the developer provided application Id* and a User with the required entitlements as specified by the developer. **_Important Note: _**By default NO integrations are enabled and the Blackboard Learn server will not allow integrations without a Blackboard Learn Administrator taking action.
-        3. **_Blackboard Learn Administrator:_**The Developer Portal: This is a new website ([https://developer.blackboard.com](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fdeveloper.blackboard.com%2F)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Blackboard Learn.
+        3. **_Blackboard Learn Administrator:_**The Developer Portal: This is a new website ([https://developer.blackboard.com](https://developer.blackboard.com%2F)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Blackboard Learn.
 
 [![RESTDiagram.png](https://community.blackboard.com/servlet/JiveServlet/downl
 oadImage/102-1733-3-92929/628-366/RESTDiagram.png)](https://community.blackboa
