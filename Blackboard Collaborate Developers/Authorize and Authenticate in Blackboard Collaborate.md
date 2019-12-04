@@ -1,8 +1,7 @@
 # Authorize and Authenticate in Blackboard Collaborate
 Blackboard Collaborate relies on JSON web tokens (JWT) to authenticate and
 authorize incoming REST API calls. You can read more about the JWT standard
-[here](https://community.blackboard.com/external-
-link.jspa?url=https%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc7519). A JSON web token
+[here](https://tools.ietf.org/html/rfc7519). A JSON web token
 can be signed with either RSA or HMAC. RSA allows the REST Client to sign the
 JWT with public and private keys via x.509 certificates. HMAC allows the JWT
 to be signed with a shared secret. Either way, the data can be trusted because
@@ -10,8 +9,7 @@ it is digitally signed with mutually known credentials.
 
 Here is a very simple sample Python script that uses a correctly formed JWT
 assertion to request an access token and then uses the access token to make a
-single API request: https://github.com/ryanhaber/Blackboard-REST-SDK-python/blob/master/bb-collab-simple-sample-get-
-users.py.
+single API request: https://github.com/ryanhaber/Blackboard-REST-SDK-python/blob/master/bb-collab-simple-sample-get-users.py.
 
 ## JWT Assertion
 
