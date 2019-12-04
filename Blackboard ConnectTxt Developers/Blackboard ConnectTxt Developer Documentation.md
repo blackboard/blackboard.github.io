@@ -1,8 +1,8 @@
 # Blackboard ConnectTxt Developer Documentation
-*Author: Scott Hurrey*
-*Categories: ['ConnectTxt Developer Documentation']*
-*Tags: ['developer', 'blackboard connecttxt']*
----
+*Author: Scott Hurrey*  
+*Categories: ['ConnectTxt Developer Documentation']*  
+*Tags: ['developer', 'blackboard connecttxt']*  
+<hr />
 Blackboard ConnectTxt: allows you to send and receive text messages to
 multiple people in an instant from your computer or your smartphone. Two-way
 communication that's quick, to the person, to the point, secure and cost

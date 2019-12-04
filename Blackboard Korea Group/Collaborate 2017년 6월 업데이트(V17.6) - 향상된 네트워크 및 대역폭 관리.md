@@ -1,8 +1,8 @@
 # Collaborate 2017년 6월 업데이트(V17.6) - 향상된 네트워크 및 대역폭 관리
-*Author: Yi Ran Kim*
-*Categories: ['[서포트] Release']*
-*Tags: ['collaborate', 'developer']*
----
+*Author: Yi Ran Kim*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['collaborate', 'developer']*  
+<hr />
 **2017년 6월 (v17.6) 릴리즈 노트 **
 
 2017년 6월 4일 Collaborate with Ultra v17.6가 모든 서비스 환경에 적용되었습니다.

@@ -1,8 +1,8 @@
 # Blackboard Collaborate 데이터센터 유지관리 기간 안내
-*Author: Seyoung Yoon*
-*Categories: ['[서포트] Release']*
-*Tags: ['developer']*
----
+*Author: Seyoung Yoon*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['developer']*  
+<hr />
 안녕하세요.
 
 아시다시피 Blackboard Collaborate는 매달 첫째주 토요일에 업데이트 됩니다. 그러나 Blackboard는 2018년 5월

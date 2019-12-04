@@ -1,8 +1,8 @@
 # Blackboard App for Students Launch Schema
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'mobile', 'bbstudent', 'blackboard mobile', 'app-to-app', 'custom url']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'mobile', 'bbstudent', 'blackboard mobile', 'app-to-app', 'custom url']*  
+<hr />
 ## Bb Student is now Blackboard
 
 As of June 2017, Bb Student is now known as Blackboard. The app’s functions

@@ -1,8 +1,8 @@
 # Changing the global navigation's menu
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['css', 'customization', 'user experience', 'ux', 'user interface', 'themes', 'ui', 'brands and themes', 'brands', 'customisation', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['css', 'customization', 'user experience', 'ux', 'user interface', 'themes', 'ui', 'brands and themes', 'brands', 'customisation', 'developer']*  
+<hr />
 From [Ester Muñoz Aparicio:](https://community.blackboard.com/people/emunoz)
 
 Someone in today's admin hours was asking about changing the global nav's

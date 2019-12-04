@@ -1,8 +1,8 @@
 # ConnectTxt SOAP Connector for Address Book (v1.5)
-*Author: Kelley MacEwen*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 #
 
   * Introduction

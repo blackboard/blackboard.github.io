@@ -1,8 +1,8 @@
 # Building Block Security
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Tutorials']*
-*Tags: ['develop', 'best practice', 'b2', 'building blocks', 'migrated from edugarage', 'authentication', 'entitlements', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Tutorials']*  
+*Tags: ['develop', 'best practice', 'b2', 'building blocks', 'migrated from edugarage', 'authentication', 'entitlements', 'developer']*  
+<hr />
 This page describes how to restrict access to a page in your building block.
 
 # Entitlements

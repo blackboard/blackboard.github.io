@@ -1,8 +1,8 @@
 # Learn 업데이트 정보 Release Note
-*Author: Benjamin Jin*
-*Categories: ['[서포트] Release']*
-*Tags: ['developer']*
----
+*Author: Benjamin Jin*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['developer']*  
+<hr />
 Learn 업데이트 정보가 필요하신 경우
 
 Blackboard Help 페이지에서 확인이 가능합니다.

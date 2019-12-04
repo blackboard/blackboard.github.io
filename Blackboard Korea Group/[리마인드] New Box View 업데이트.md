@@ -1,8 +1,8 @@
 # [리마인드] New Box View 업데이트
-*Author: Seyoung Yoon*
-*Categories: ['[서포트] Release']*
-*Tags: ['developer']*
----
+*Author: Seyoung Yoon*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['developer']*  
+<hr />
 지난 6월부터 지속적으로 업데이트 해드렸던 New Box View 업데이트 관련 사항을 다시 한번 업데이트해드립니다.
 
 과제물 첨삭지도 구현은 Blackboard의 Crocodoc API를 통해 제공되었으나, Box Inc.에서 해당 서비스를 중단하기로

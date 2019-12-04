@@ -1,8 +1,8 @@
 # Getting Started With SOAP Web Services
-*Author: Scott Hurrey*
-*Categories: ['Getting Started', 'SOAP Web Services']*
-*Tags: ['web services', 'soap', 'getting started', 'blackboard learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Getting Started', 'SOAP Web Services']*  
+*Tags: ['web services', 'soap', 'getting started', 'blackboard learn', 'developer']*  
+<hr />
 Blackboard Learn offers documentation and sample code for the SOAP-based Web
 Services directly in the user interface. The sample code gives you the ability
 to create re-usable libraries in both C# and Java. Once you build this

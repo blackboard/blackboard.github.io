@@ -1,8 +1,8 @@
 # Developer Groups, Site Quotas, and Rate Limits
-*Author: Ryan Haber*
-*Categories: []*
-*Tags: ['apis', 'rest', 'groups', 'rest apis', 'quota', 'developer groups', 'rate limits', 'rates', 'site quotas', 'developer']*
----
+*Author: Ryan Haber*  
+*Categories: []*  
+*Tags: ['apis', 'rest', 'groups', 'rest apis', 'quota', 'developer groups', 'rate limits', 'rates', 'site quotas', 'developer']*  
+<hr />
 In This Document
 
   *     * Overview

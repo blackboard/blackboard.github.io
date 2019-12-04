@@ -1,8 +1,8 @@
 # Developing Building Blocks with the Public Maven Repository
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Tutorials']*
-*Tags: ['building blocks', 'gradle', 'blackboard learn', 'maven', 'repository', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Tutorials']*  
+*Tags: ['building blocks', 'gradle', 'blackboard learn', 'maven', 'repository', 'developer']*  
+<hr />
 As Blackboard shifts to a more modular delivery model, with more features
 delivered as Building Blocks at regular intervals, the importance of having a
 repository of build objects and documentation has never been more important.

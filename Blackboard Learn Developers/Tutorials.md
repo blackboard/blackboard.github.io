@@ -1,8 +1,8 @@
 # Tutorials
-*Author: Kelley MacEwen*
-*Categories: ['Tutorials']*
-*Tags: ['tutorials', 'blackboard learn', 'developers', 'webct', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Tutorials']*  
+*Tags: ['tutorials', 'blackboard learn', 'developers', 'webct', 'migrated from edugarage', 'developer']*  
+<hr />
 # Building Blocks Tutorials
 
 ## Starting out and Setting up

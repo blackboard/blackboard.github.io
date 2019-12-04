@@ -1,8 +1,8 @@
 # Blackboard Learn SOAP Web Services
-*Author: Scott Hurrey*
-*Categories: ['SOAP Web Services']*
-*Tags: ['web services', 'soap', 'blackboard learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['SOAP Web Services']*  
+*Tags: ['web services', 'soap', 'blackboard learn', 'developer']*  
+<hr />
 NOTE: SOAP Web Services have been deprecated. See [Blackboard Deprecates SOAP
 Web Services](https://community.blackboard.com/community/developers/blog/2019/
 01/04/blackboard-deprecates-soap-web-services) Much of their functionality

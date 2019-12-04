@@ -1,8 +1,8 @@
 # BECOME AN OFFICIAL BLACKBOARD PARTNER!
-*Author: Mark Bykerk Kauffman*
-*Categories: ['Building Blocks', 'Getting Started']*
-*Tags: ['partner', 'behind the blackboard', 'partnership', 'access', 'developer']*
----
+*Author: Mark Bykerk Kauffman*  
+*Categories: ['Building Blocks', 'Getting Started']*  
+*Tags: ['partner', 'behind the blackboard', 'partnership', 'access', 'developer']*  
+<hr />
 While our Open Innovation Initiative (OII) is FREE to any developers and
 provides access to the Blackboard Learn AMI for REST and LTI development, API
 limits apply and Behind the Blackboard support access is not provided. A

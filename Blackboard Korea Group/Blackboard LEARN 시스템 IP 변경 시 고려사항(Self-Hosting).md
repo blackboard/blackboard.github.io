@@ -1,8 +1,8 @@
 # Blackboard LEARN 시스템 IP 변경 시 고려사항(Self-Hosting)
-*Author: Soomyoung Yi*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['ip address', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['ip address', 'developer']*  
+<hr />
 * 본 문서는 Self-Hosting(설치형) 고객을 대상으로 합니다.
 
   * 모든 작업은 Blackboard LEARN 서비스가 중지된 상태에서 작업이 이루어져야 합니다.

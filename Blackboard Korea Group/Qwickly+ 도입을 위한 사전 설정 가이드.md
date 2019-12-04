@@ -1,8 +1,8 @@
 # Qwickly+ 도입을 위한 사전 설정 가이드
-*Author: Soomyoung Yi*
-*Categories: ['[운영] 가이드 및 참고자료']*
-*Tags: ['qwickly', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[운영] 가이드 및 참고자료']*  
+*Tags: ['qwickly', 'developer']*  
+<hr />
 기관에서 Quickly 서비스를 사용하시려면 Qwickly ID 가 필요하며 이 ID 값은 Qwickly 빌딩블록에서 확인 가능합니다.
 
   1. 먼저 기관 정보를 등록하시고, 기관의 버전에 맞는 Qwickly 빌딩블록을 다운로드 합니다 - [https://www.goqwickly.com/download/](https://www.goqwickly.com/download/)

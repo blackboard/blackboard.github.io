@@ -1,8 +1,8 @@
 # Building Block Update
-*Author: Soomyoung Yi*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['developer']*  
+<hr />
 Blackboard 의 Core Engine 의 기능에 덧붙여 확장 기능을 제공하는 역할을 하는 Plugin 을 Building
 Block(B2) 라고 합니다.
 

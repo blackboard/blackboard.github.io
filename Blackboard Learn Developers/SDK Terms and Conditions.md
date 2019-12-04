@@ -1,8 +1,8 @@
 # SDK Terms and Conditions
-*Author: Kelley MacEwen*
-*Categories: ['Getting Started']*
-*Tags: ['develop', 'resources', 'migrated from edugarage', 'terms and conditions', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Getting Started']*  
+*Tags: ['develop', 'resources', 'migrated from edugarage', 'terms and conditions', 'developer']*  
+<hr />
 BLACKBOARD SOFTWARE DEVELOPER'S KIT LICENSE
 
 READ THESE TERMS CAREFULLY BEFORE ACCESSING THE BLACKBOARD SOFTWARE

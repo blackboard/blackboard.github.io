@@ -1,8 +1,8 @@
 # Blackboard REST API 사용하기
-*Author: Soomyoung Yi*
-*Categories: ['[시스템 관리] 가이드 및 참고자료', '[개발] 가이드 및 참고자료']*
-*Tags: ['rest api', 'blackboard rest api', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료', '[개발] 가이드 및 참고자료']*  
+*Tags: ['rest api', 'blackboard rest api', 'developer']*  
+<hr />
 Blackboard REST API 를 이용하면 json 타입으로 전반적인 데이터를 받거나 생성할 수 있습니다.
 
   * REST API REST API 설정하기 - Developer.blackboard.com

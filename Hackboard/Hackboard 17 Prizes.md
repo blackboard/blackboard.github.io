@@ -1,8 +1,8 @@
 # Hackboard 17 Prizes
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'hackboard', 'hackathon', 'prizes', 'open division', 'student division']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'hackboard', 'hackathon', 'prizes', 'open division', 'student division']*  
+<hr />
 The **Open Division** is open to anyone in the United States that wishes to
 participate. The winner will get the following:
 

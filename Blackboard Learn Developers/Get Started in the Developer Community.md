@@ -1,8 +1,8 @@
 # Get Started in the Developer Community
-*Author: Kelley MacEwen*
-*Categories: ['Getting Started']*
-*Tags: ['get started', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Getting Started']*  
+*Tags: ['get started', 'migrated from edugarage', 'developer']*  
+<hr />
 # Overview
 
 [About Building Blocks](https://community.blackboard.com/docs/DOC-1120)

@@ -1,8 +1,8 @@
 # Complete Refresh Is Evil
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['sis', 'technical office hours', 'admin', 'administrator', 'complete refresh', 'framework', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['sis', 'technical office hours', 'admin', 'administrator', 'complete refresh', 'framework', 'developer']*  
+<hr />
 Thank you everyone for joining this session, and thank you to [Mark
 O'Neil](https://community.blackboard.com/people/moneil) for presenting and
 [Tim Grady](https://community.blackboard.com/people/tim.grady@blackboard.com)

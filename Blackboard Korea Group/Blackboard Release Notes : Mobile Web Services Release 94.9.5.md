@@ -1,8 +1,8 @@
 # Blackboard Release Notes : Mobile Web Services Release 94.9.5
-*Author: Yi Ran Kim*
-*Categories: ['[서포트] Release']*
-*Tags: ['developer']*
----
+*Author: Yi Ran Kim*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['developer']*  
+<hr />
 안녕하세요?
 
 Blackboard 의 김이란입니다.

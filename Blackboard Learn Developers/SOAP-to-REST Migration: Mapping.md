@@ -1,8 +1,8 @@
 # SOAP-to-REST Migration: Mapping
-*Author: Scott Hurrey*
-*Categories: ['SOAP Web Services']*
-*Tags: ['rest', 'soap', 'learn', 'migration', 'soap to rest', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['SOAP Web Services']*  
+*Tags: ['rest', 'soap', 'learn', 'migration', 'soap to rest', 'developer']*  
+<hr />
 The purpose of this document is to provide a mapping from SOAP Web Service
 calls to REST API Endpoints. This is meant to be a quick-start guide to the
 migration process. With SOAP being deprecated in the near term future and

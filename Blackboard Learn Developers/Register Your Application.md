@@ -1,8 +1,8 @@
 # Register Your Application
-*Author: Ryan Haber*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Ryan Haber*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 For your application to work with Blackboard Learn, you must register it in
 the developer portal. When you register your application, you receive a unique
 key and secret. The key/secret combination is unique, identifies your

@@ -1,8 +1,8 @@
 # SIS Integration
-*Author: Kelley MacEwen*
-*Categories: []*
-*Tags: ['develop', 'guides', 'learn', 'sis', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: []*  
+*Tags: ['develop', 'guides', 'learn', 'sis', 'developer']*  
+<hr />
 Blackboard Learn can be integrated with virtually any Student Information
 System. Options exist to batch process CSV and XML files. Blackboard
 Consulting can provide real-time adapters to many common SIS vendors. Please

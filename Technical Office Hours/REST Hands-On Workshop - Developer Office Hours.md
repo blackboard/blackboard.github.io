@@ -1,8 +1,8 @@
 # REST Hands-On Workshop - Developer Office Hours
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['rest', 'java', 'developer office hours', 'workshop', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['rest', 'java', 'developer office hours', 'workshop', 'developer']*  
+<hr />
 Thanks for those that were able to attend Developer Office Hours today, July
 27, 2016. Here is a link to the recording:
 

@@ -1,8 +1,8 @@
 # Starter Building Block Readme
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Getting Started']*
-*Tags: ['develop', 'resources', 'building blocks', 'getting started', 'starting block', 'migrated from edugarage', 'starter block', 'basic b2 template', 'deploy', 'deployb2', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Getting Started']*  
+*Tags: ['develop', 'resources', 'building blocks', 'getting started', 'starting block', 'migrated from edugarage', 'starter block', 'basic b2 template', 'deploy', 'deployb2', 'developer']*  
+<hr />
 This is the readme for the Starting Building Block. The Starter Building block
 is available in the [Blackboard maven
 repository](https://community.blackboard.com/external-link.jspa?url=https%3A%2

@@ -1,8 +1,8 @@
 # Building Block Resources and Tools
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks']*
-*Tags: ['building blocks', 'github', 'blackboard learn', 'bb-manifest.xml', 'schema.xml', 'resources', 'links', 'maven', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks']*  
+*Tags: ['building blocks', 'github', 'blackboard learn', 'bb-manifest.xml', 'schema.xml', 'resources', 'links', 'maven', 'developer']*  
+<hr />
 This document contains a number of links to resources to assist a Building
 Block Developer in the quest to build an integration with the Blackboard
 Building Blocks framework.

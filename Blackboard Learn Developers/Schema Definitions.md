@@ -1,8 +1,8 @@
 # Schema Definitions
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'OpenDB']*
-*Tags: ['develop', 'opendb', 'schema.xml', 'schema definitions', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'OpenDB']*  
+*Tags: ['develop', 'opendb', 'schema.xml', 'schema definitions', 'migrated from edugarage', 'developer']*  
+<hr />
 This article discusses the configuration and data required to define schema
 elements in a Building Block.
 

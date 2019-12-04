@@ -1,8 +1,8 @@
 # The Blackboard REST API Framework
-*Author: Mark O'Neil*
-*Categories: []*
-*Tags: ['apis', 'rest', 'api', 'technical preview', 'developer']*
----
+*Author: Mark O'Neil*  
+*Categories: []*  
+*Tags: ['apis', 'rest', 'api', 'technical preview', 'developer']*  
+<hr />
 Blackboard’s new REST API Framework is a giant step forward for integrating
 with Blackboard Learn. By moving the integration from in-process code to a
 separate machine the health of your Blackboard Learn instance is dramatically

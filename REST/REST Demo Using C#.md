@@ -1,8 +1,8 @@
 # REST Demo Using C#
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'c#', '.net', 'csharp', 'visual studio', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'c#', '.net', 'csharp', 'visual studio', 'developer']*  
+<hr />
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting supported Learn objects.

@@ -1,8 +1,8 @@
 # Developer Virtual Machine - DVM
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer resources', 'blackboard learn', 'developer virtual machine', 'dvm', 'learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer resources', 'blackboard learn', 'developer virtual machine', 'dvm', 'learn', 'developer']*  
+<hr />
 Note: The DVM is only available to clients and partners with Behind the
 Blackboard access. You _**can**_ gain access to a developer instance of
 Blackboard for developing LTI and RESTful applications using our [Amazon Web

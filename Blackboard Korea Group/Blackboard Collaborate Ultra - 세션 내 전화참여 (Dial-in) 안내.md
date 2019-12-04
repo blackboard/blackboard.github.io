@@ -1,8 +1,8 @@
 # Blackboard Collaborate Ultra - 세션 내 전화참여 (Dial-in) 안내
-*Author: Yi Ran Kim*
-*Categories: ['[서포트] Release', '[운영] 가이드 및 참고자료']*
-*Tags: ['collaborate', 'developer']*
----
+*Author: Yi Ran Kim*  
+*Categories: ['[서포트] Release', '[운영] 가이드 및 참고자료']*  
+*Tags: ['collaborate', 'developer']*  
+<hr />
 안녕하세요?
 
 Blackboard 김이란입니다.

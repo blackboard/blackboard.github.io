@@ -1,8 +1,8 @@
 # REST Technical Preview Office Hours Schedule
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'office hours', 'rest', 'developers', 'technical office hours', 'developer portal', 'developer platform', 'developer office hours']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'office hours', 'rest', 'developers', 'technical office hours', 'developer portal', 'developer platform', 'developer office hours']*  
+<hr />
 [Mark O'Neil](https://community.blackboard.com/people/moneil) and [Scott
 Hurrey](https://community.blackboard.com/people/scott.hurrey) will be leading
 a series of webinars open to anyone interested in learning more about the

@@ -1,8 +1,8 @@
 # Examples - SOAP Web Services
-*Author: Scott Hurrey*
-*Categories: ['Examples', 'SOAP Web Services']*
-*Tags: ['web services', 'soap', 'blackboard learn', 'examples', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Examples', 'SOAP Web Services']*  
+*Tags: ['web services', 'soap', 'blackboard learn', 'examples', 'developer']*  
+<hr />
 This section will include concrete examples illustrating the use of the
 Blackboard Learn Web Services performing specific tasks in an effort to show
 how the Developer can build an application.

@@ -1,8 +1,8 @@
 # Solution to a PostgreSQL Error In the Developer Virtual Machine
-*Author: Mark Bykerk Kauffman*
-*Categories: []*
-*Tags: ['postgresql', 'developer virtual machine', 'dvm', 'developer']*
----
+*Author: Mark Bykerk Kauffman*  
+*Categories: []*  
+*Tags: ['postgresql', 'developer virtual machine', 'dvm', 'developer']*  
+<hr />
 Recently I ran across an interesting issue while helping a Partner who uses
 the DVM exclusively for development. Changing some user's Institution role
 resulted in a screen indicating a database error. Looking through the logs/bb-

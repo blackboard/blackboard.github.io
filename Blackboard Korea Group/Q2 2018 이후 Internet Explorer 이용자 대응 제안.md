@@ -1,8 +1,8 @@
 # Q2 2018 이후 Internet Explorer 이용자 대응 제안
-*Author: Nam-Su Yi*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Nam-Su Yi*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 준비
 
   * [JSHack](https://community.blackboard.com/external-link.jspa?url=http%3A//projects-archive.oscelot.org/gf/project/jshack/frs/%3Faction%3DFrsReleaseView%26release_id%3D991)

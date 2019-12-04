@@ -1,8 +1,8 @@
 # Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators
-*Author: Mark O'Neil*
-*Categories: []*
-*Tags: ['rest', 'blackboard learn', 'developers', 'system admin', 'rest integration', 'application id', 'role', 'entitlement', 'privilege', 'system role', 'developer']*
----
+*Author: Mark O'Neil*  
+*Categories: []*  
+*Tags: ['rest', 'blackboard learn', 'developers', 'system admin', 'rest integration', 'application id', 'role', 'entitlement', 'privilege', 'system role', 'developer']*  
+<hr />
 **Learn REST Integrations Tool for System Administrators**
 
   * Overview of the REST API Integrations Tool

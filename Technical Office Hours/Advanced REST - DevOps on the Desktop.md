@@ -1,8 +1,8 @@
 # Advanced REST - DevOps on the Desktop
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'rest', 'devops']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'rest', 'devops']*  
+<hr />
 Thank you to [Mark O'Neil](https://community.blackboard.com/people/moneil) for
 giving us the introduction to DevOps on the Desktop, a look at using free open
 source tools to automate and deploy REST applications to the cloud. Look for

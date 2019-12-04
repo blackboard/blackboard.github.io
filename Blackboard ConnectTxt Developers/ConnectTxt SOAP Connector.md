@@ -1,8 +1,8 @@
 # ConnectTxt SOAP Connector
-*Author: Scott Hurrey*
-*Categories: ['ConnectTxt Developer Documentation']*
-*Tags: ['blackboard connecttxt', 'soap connector', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['ConnectTxt Developer Documentation']*  
+*Tags: ['blackboard connecttxt', 'soap connector', 'developer']*  
+<hr />
 All the XML Connector functionality is also available using the industry
 standard SOAP protocol. In addition, the SOAP connector allows your address
 books to be managed remotely, automatically updating contact information in

@@ -1,8 +1,8 @@
 # Getting Started With LTI
-*Author: Scott Hurrey*
-*Categories: ['LTI']*
-*Tags: ['lti', 'ims learning tools interoperability', 'ims global', 'developer', 'developers', 'standards', 'getting started']*
----
+*Author: Scott Hurrey*  
+*Categories: ['LTI']*  
+*Tags: ['lti', 'ims learning tools interoperability', 'ims global', 'developer', 'developers', 'standards', 'getting started']*  
+<hr />
 # Overview
 
 Learning Tool Interoperability is a standard from the IMS Global consortium.

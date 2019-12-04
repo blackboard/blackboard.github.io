@@ -1,8 +1,8 @@
 # Blackboard Application Server 관리하기
-*Author: Soomyoung Yi*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['developer']*  
+<hr />
 Blackboard Application Server 관리에 대한 가이드입니다.
 
 자세한 내용은 첨부된 문서를 참고하시기 바랍니다.

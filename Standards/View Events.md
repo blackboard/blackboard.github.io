@@ -1,8 +1,8 @@
 # View Events
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'viewevent', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'viewevent', 'developer']*  
+<hr />
 Blackboard Learn's Caliper Analytics stream sends ViewEvent messages to cover
 four use cases:
 

@@ -1,8 +1,8 @@
 # Basic Authentication
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['rest', 'api', 'developers', 'authentication', 'authorization', 'oauth', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['rest', 'api', 'developers', 'authentication', 'authorization', 'oauth', 'developer']*  
+<hr />
 ## Overview
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC

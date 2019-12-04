@@ -1,8 +1,8 @@
 # Learn Installation Requirements for Self-hosted Microsoft Systems
-*Author: Mark Bykerk Kauffman*
-*Categories: ['Getting Started']*
-*Tags: ['ms-sql-servrer-2012', 'sql-server', 'installation', 'microsoft', 'requirements', 'supported', 'developer']*
----
+*Author: Mark Bykerk Kauffman*  
+*Categories: ['Getting Started']*  
+*Tags: ['ms-sql-servrer-2012', 'sql-server', 'installation', 'microsoft', 'requirements', 'supported', 'developer']*  
+<hr />
 This page documents several requirements for those who are installing Learn on
 the Microsoft platform. The individual doing the install MUST read, complete
 any required action, and check off each item on this page. The only issues

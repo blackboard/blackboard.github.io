@@ -1,8 +1,8 @@
 # Proxy Tools
-*Author: Scott Hurrey*
-*Categories: ['SOAP Web Services']*
-*Tags: ['web services', 'soap', 'blackboard learn', 'proxy tools', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['SOAP Web Services']*  
+*Tags: ['web services', 'soap', 'blackboard learn', 'proxy tools', 'developer']*  
+<hr />
 Administrators can link to a proxy tool descriptor which registers the tool,
 places access points according to defined properties, and enables access to
 the web service through the proxy tool.

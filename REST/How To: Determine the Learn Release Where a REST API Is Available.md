@@ -1,8 +1,8 @@
 # How To: Determine the Learn Release Where a REST API Is Available
-*Author: Mark Bykerk Kauffman*
-*Categories: []*
-*Tags: ['rest', 'learn', 'blackboard learn', 'api', 'release', 'version', 'build', 'developer']*
----
+*Author: Mark Bykerk Kauffman*  
+*Categories: []*  
+*Tags: ['rest', 'learn', 'blackboard learn', 'api', 'release', 'version', 'build', 'developer']*  
+<hr />
 The question keeps coming up. This document explains how you can determine the
 release of Learn where a REST API is available. The key is to take the release
 name, like Q4 2017, and convert it to a build number, like 3300.0. Here's an

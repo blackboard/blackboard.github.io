@@ -1,8 +1,8 @@
 # Blackboard Caliper Event Guide
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['blackboard learn', 'caliper', 'ims', 'ims global', 'standard', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['blackboard learn', 'caliper', 'ims', 'ims global', 'standard', 'developer']*  
+<hr />
 **Contents**
 
 #

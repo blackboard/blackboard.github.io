@@ -1,8 +1,8 @@
 # LTI / OneNote &amp; LEARN Integration
-*Author: Soomyoung Yi*
-*Categories: ['[운영] 가이드 및 참고자료']*
-*Tags: ['lti', 'onenote', 'microsoft onenote', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[운영] 가이드 및 참고자료']*  
+*Tags: ['lti', 'onenote', 'microsoft onenote', 'developer']*  
+<hr />
 해당 위치의 설명서를 참고하시기 바랍니다.
 
   * LEARN LTI 연동 도움말: [ https://help.blackboard.com/ko-kr/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability#add-a-new-lti-to…](https://help.blackboard.com/ko-kr/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability%23add-a-new-lti-tool-provider_OTP-4)

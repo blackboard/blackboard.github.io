@@ -1,8 +1,8 @@
 # Developer Workstation
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*
-*Tags: ['building blocks', 'gradle', 'eclipse', 'netbeans', 'getting started', 'blackboard learn', 'developer workstation', 'ide', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*  
+*Tags: ['building blocks', 'gradle', 'eclipse', 'netbeans', 'getting started', 'blackboard learn', 'developer workstation', 'ide', 'developer']*  
+<hr />
 This topic is meant to help you set up your Development workstation so that
 you can start setting up your Building Blocks projects and get developing
 quickly.

@@ -1,8 +1,8 @@
 # Learn 버전 업그래이드 후 SaaS 이동 후 편집기에서 한글 입력시 문제가 발생 할 때
-*Author: Benjamin Jin*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['language', 'blackboard admin', 'developer']*
----
+*Author: Benjamin Jin*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['language', 'blackboard admin', 'developer']*  
+<hr />
 SaaS 로 마이그레이션 이후 콘텐츠 편집기에서 한글 입력시 문제가 발생하는 경우가 있었습니다.
 
 이 경우 맞춤법 검사기가 기본으로 켜져 있어 문제가 발생한 경우 였습니다.

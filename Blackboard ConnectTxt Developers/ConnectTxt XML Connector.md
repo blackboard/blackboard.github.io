@@ -1,8 +1,8 @@
 # ConnectTxt XML Connector
-*Author: Scott Hurrey*
-*Categories: ['ConnectTxt Developer Documentation']*
-*Tags: ['blackboard connecttxt', 'xml', 'xml connector', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['ConnectTxt Developer Documentation']*  
+*Tags: ['blackboard connecttxt', 'xml', 'xml connector', 'developer']*  
+<hr />
 For web and application developers, the XML Post provides a flexible method to
 interface their own applications with ConnectTxt services.
 

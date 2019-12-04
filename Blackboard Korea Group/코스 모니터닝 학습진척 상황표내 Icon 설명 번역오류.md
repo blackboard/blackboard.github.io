@@ -1,8 +1,8 @@
 # 코스 모니터닝 학습진척 상황표내 Icon 설명 번역오류
-*Author: Benjamin Jin*
-*Categories: ['[서포트] Known Issues']*
-*Tags: ['language pack', '언어팩', 'developer']*
----
+*Author: Benjamin Jin*  
+*Categories: ['[서포트] Known Issues']*  
+*Tags: ['language pack', '언어팩', 'developer']*  
+<hr />
 코스내에서 아래의 위치에 있는 '학습완료 상태' 또는 '개인별 맞춤학습' 에서 Icon 설명이 잘못된 오류를 찾았습니다.
 
 코스 관리자 -> 모니터링 -> 학습진척 상황표

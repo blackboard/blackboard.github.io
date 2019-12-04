@@ -1,8 +1,8 @@
 # Collaborate API Objects
-*Author: Scott Hurrey*
-*Categories: ['Getting Started']*
-*Tags: ['rest', 'getting started', 'collaborate', 'api', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Getting Started']*  
+*Tags: ['rest', 'getting started', 'collaborate', 'api', 'developer']*  
+<hr />
 The Blackboard Collaborate API is built to allow a third-party application to
 perform scheduler operations. To handle this, the API exposes several objects
 that may or may not be familiar to you. In order to set the stage, here is a

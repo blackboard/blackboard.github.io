@@ -1,8 +1,8 @@
 # Use APIs to Work with Ultra Assignments
-*Author: Ryan Haber*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Ryan Haber*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 **Contents**
 
   * Overview

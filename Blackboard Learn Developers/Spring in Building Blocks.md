@@ -1,8 +1,8 @@
 # Spring in Building Blocks
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Examples', 'Getting Started']*
-*Tags: ['develop', 'developer guides', 'blackboard learn', 'example', 'sample code', 'spring', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Examples', 'Getting Started']*  
+*Tags: ['develop', 'developer guides', 'blackboard learn', 'example', 'sample code', 'spring', 'migrated from edugarage', 'developer']*  
+<hr />
 # Sample Metadata
 
 **Title**: Using Spring in Building Blocks

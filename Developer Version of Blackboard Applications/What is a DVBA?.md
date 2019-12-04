@@ -1,8 +1,8 @@
 # What is a DVBA?
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer virtual machine', 'developers', 'dvm', 'dvba', 'collaborate apis', 'developer version of blackboard application', 'ami', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer virtual machine', 'developers', 'dvm', 'dvba', 'collaborate apis', 'developer version of blackboard application', 'ami', 'developer']*  
+<hr />
 # Developer Versions of Blackboard Applications
 
 Blackboard makes developer versions of our applications available to

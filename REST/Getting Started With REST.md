@@ -1,8 +1,8 @@
 # Getting Started With REST
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'rest', 'getting started', 'api', 'blackboard', 'developers']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'rest', 'getting started', 'api', 'blackboard', 'developers']*  
+<hr />
 # Get Started with REST
 
 Blackboard offers a suite of education technology tools, both software and

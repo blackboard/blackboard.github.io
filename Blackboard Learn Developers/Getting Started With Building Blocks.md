@@ -1,8 +1,8 @@
 # Getting Started With Building Blocks
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started']*
-*Tags: ['building blocks', 'developer resources', 'getting started', 'blackboard learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started']*  
+*Tags: ['building blocks', 'developer resources', 'getting started', 'blackboard learn', 'developer']*  
+<hr />
 Developing extensions for Learn requires a development environment. Your
 development environment refers to (1) the development workstation on which you
 will be doing your development work - the actual coding, compiling, and

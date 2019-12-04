@@ -1,8 +1,8 @@
 # Blackboard Inline Grading - Box View API로의 이전
-*Author: Yi Ran Kim*
-*Categories: ['[서포트] Release']*
-*Tags: ['developer']*
----
+*Author: Yi Ran Kim*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['developer']*  
+<hr />
 안녕하세요?
 
 Blackboard 김이란입니다.

@@ -1,8 +1,8 @@
 # DevCon 2009 Presentations (Getting Started)
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks']*
-*Tags: ['presentations', 'archives', 'devcon', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks']*  
+*Tags: ['presentations', 'archives', 'devcon', 'migrated from edugarage', 'developer']*  
+<hr />
 # Getting Started
 
 **Getting Started with Blackboard Building Blocks (Part I)**

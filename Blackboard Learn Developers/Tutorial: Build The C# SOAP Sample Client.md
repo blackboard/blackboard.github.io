@@ -1,8 +1,8 @@
 # Tutorial: Build The C# SOAP Sample Client
-*Author: Scott Hurrey*
-*Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']*
-*Tags: ['web services', 'soap', 'tutorial', 'blackboard learn', 'sample code', 'sample client', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']*  
+*Tags: ['web services', 'soap', 'tutorial', 'blackboard learn', 'sample code', 'sample client', 'developer']*  
+<hr />
 The Blackboard Learn sample code contains a fully-functional client that
 provides form-based interaction with all of the available SOAP-based Web
 Services. This allows a Developer to interact with any of the Web Services,

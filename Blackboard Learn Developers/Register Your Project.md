@@ -1,8 +1,8 @@
 # Register Your Project
-*Author: Ryan Haber*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Ryan Haber*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 Blackboard Learn projects need to be registered with the Blackboard cloud.
 Registration identifies projects and allows Blackboard to study usage. When a
 project moves to production, registration helps Blackboard validate projects.

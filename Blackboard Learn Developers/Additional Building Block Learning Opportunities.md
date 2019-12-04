@@ -1,8 +1,8 @@
 # Additional Building Block Learning Opportunities
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*
-*Tags: ['develop', 'resources', 'help', 'web services', 'building blocks', 'getting started', 'developers', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*  
+*Tags: ['develop', 'resources', 'help', 'web services', 'building blocks', 'getting started', 'developers', 'migrated from edugarage', 'developer']*  
+<hr />
 Blackboard offers several ways to learn more about Building Blocks, including:
 
   * A yearly Developers Conference held in conjunction with our annual BbWorld conference.

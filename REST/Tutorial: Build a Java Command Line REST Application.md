@@ -1,8 +1,8 @@
 # Tutorial: Build a Java Command Line REST Application
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['rest', 'java', 'tutorial', 'developers', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['rest', 'java', 'tutorial', 'developers', 'developer']*  
+<hr />
 The purpose of this document is to allow a developer to walk through the REST
 Workshop from DevCon 2016. Please note that this sample code was built and
 tested on Mac. It is Java code, and therefore, should be operating system

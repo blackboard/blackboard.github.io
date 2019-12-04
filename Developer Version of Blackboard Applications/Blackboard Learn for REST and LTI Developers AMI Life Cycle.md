@@ -1,8 +1,8 @@
 # Blackboard Learn for REST and LTI Developers AMI Life Cycle
-*Author: Mark O'Neil*
-*Categories: []*
-*Tags: ['ami', 'developer ami', 'blackboard rest and lti developer ami', 'developer']*
----
+*Author: Mark O'Neil*  
+*Categories: []*  
+*Tags: ['ami', 'developer ami', 'blackboard rest and lti developer ami', 'developer']*  
+<hr />
 This document provides a listing of available Blackboard Learn for REST and
 LTI Developers AMIs.
 

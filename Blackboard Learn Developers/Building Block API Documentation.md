@@ -1,8 +1,8 @@
 # Building Block API Documentation
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started', 'OpenDB']*
-*Tags: ['building blocks', 'blackboard learn', 'taglibs', 'opendb', 'api', 'api documentation', 'javadocs', 'jdiff', 'apis', 'learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started', 'OpenDB']*  
+*Tags: ['building blocks', 'blackboard learn', 'taglibs', 'opendb', 'api', 'api documentation', 'javadocs', 'jdiff', 'apis', 'learn', 'developer']*  
+<hr />
 As of 3700.9.0, we will be uploading these files as part of the build process
 with each release of Blackboard Learn SaaS to test, to facilitate better
 readiness for SaaS releases to go to production. In order to accomplish this,

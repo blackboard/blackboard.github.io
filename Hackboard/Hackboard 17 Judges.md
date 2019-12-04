@@ -1,8 +1,8 @@
 # Hackboard 17 Judges
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'blackboard', 'developers', 'aws', 'ibm', 'hackboard', 'hackathon', 'judges', 'peter george', 'katie blot', 'michael king', 'chalapathy neti', 'leo zhadanovsky', 'warren santner']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'blackboard', 'developers', 'aws', 'ibm', 'hackboard', 'hackathon', 'judges', 'peter george', 'katie blot', 'michael king', 'chalapathy neti', 'leo zhadanovsky', 'warren santner']*  
+<hr />
 Please meet your Celebrity judges for Hackboard 17!
 
 # [![TimTom127x178.png](https://community.blackboard.com/servlet/JiveServlet/d

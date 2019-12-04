@@ -1,8 +1,8 @@
 # Guides for Learn REST Methods
-*Author: Ryan Haber*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Ryan Haber*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 Most of Blackboard Learn's REST methods are straightforward. To use them, you
 identify the correct method and call it with the appropriate parameters,
 receiving appropriate feedback. Other methods are intended to fit into one

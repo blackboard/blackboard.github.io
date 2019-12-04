@@ -1,8 +1,8 @@
 # Introduction to the Collaborate Developer Community
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['rest', 'collaborate', 'api', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['rest', 'collaborate', 'api', 'developer']*  
+<hr />
 Welcome to the Blackboard Collaborate™ Developer Community. Blackboard
 Collaborate is a simple, convenient, and reliable online collaborative
 learning solution. This solution delivers a level of engagement that makes

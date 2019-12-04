@@ -1,8 +1,8 @@
 # Preparing Your Building Block for Blackboard Learn 9.1 Q2 2016
-*Author: Mark Bykerk Kauffman*
-*Categories: ['Building Blocks']*
-*Tags: ['9.1', 'q2 2016', 'developer']*
----
+*Author: Mark Bykerk Kauffman*  
+*Categories: ['Building Blocks']*  
+*Tags: ['9.1', 'q2 2016', 'developer']*  
+<hr />
 Attached is the PowerPoint deck for the 3/16/2016 Webinar recording:
 [Preparing Your Building Block for Blackboard Learn 9.1.Q2
 2016](https://sa

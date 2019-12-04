@@ -1,8 +1,8 @@
 # Building Block Scan Tool for Blackboard Learn SaaS
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks']*
-*Tags: ['developer', 'building blocks', 'developers', 'saas', 'java11', 'scan']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks']*  
+*Tags: ['developer', 'building blocks', 'developers', 'saas', 'java11', 'scan']*  
+<hr />
 As of Blackboard Learn SaaS version 3700.11.0, you now have the ability to
 scan any installed Building Block for API changes and readiness for Java 11!
 

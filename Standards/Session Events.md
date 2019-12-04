@@ -1,8 +1,8 @@
 # Session Events
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'sessionevent', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'sessionevent', 'developer']*  
+<hr />
 Blackboard Learn's Caliper Analytics stream emits a SessionEvent to cover
 three use cases:
 

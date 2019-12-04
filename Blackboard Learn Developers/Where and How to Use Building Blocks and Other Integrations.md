@@ -1,8 +1,8 @@
 # Where and How to Use Building Blocks and Other Integrations
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Getting Started', 'OpenDB', 'SOAP Web Services']*
-*Tags: ['design', 'building blocks', 'getting started', 'blackboard learn', 'migrated from edugage', 'webservices', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Getting Started', 'OpenDB', 'SOAP Web Services']*  
+*Tags: ['design', 'building blocks', 'getting started', 'blackboard learn', 'migrated from edugage', 'webservices', 'developer']*  
+<hr />
 There are a number of ways with which you can use Building Blocks to extend
 and enhance the Blackboard experience. This tutorial will help you to
 understand where Building Blocks integrate with the native Blackboard user

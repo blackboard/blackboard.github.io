@@ -1,8 +1,8 @@
 # Blackboard Mobile Learn 에서 Bb Student &amp; Bb Instructor 로의 변화
-*Author: Yi Ran Kim*
-*Categories: ['[서포트] Release']*
-*Tags: ['developer']*
----
+*Author: Yi Ran Kim*  
+*Categories: ['[서포트] Release']*  
+*Tags: ['developer']*  
+<hr />
 안녕하세요?
 
 Blackboard의 김이란입니다.

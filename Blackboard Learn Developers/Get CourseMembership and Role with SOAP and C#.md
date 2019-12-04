@@ -1,8 +1,8 @@
 # Get CourseMembership and Role with SOAP and C#
-*Author: Scott Hurrey*
-*Categories: ['Examples', 'SOAP Web Services']*
-*Tags: ['web services', 'soap', 'c#', 'blackboard learn', 'example', '.net', 'csharp', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Examples', 'SOAP Web Services']*  
+*Tags: ['web services', 'soap', 'c#', 'blackboard learn', 'example', '.net', 'csharp', 'developer']*  
+<hr />
 This project will provide the Developer with sample code demonstrating how to
 perform the following actions, as they pertain to Blackboard Learn 9.1 Web
 Services:

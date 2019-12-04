@@ -1,8 +1,8 @@
 # Course Group Events
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'coursegroupevent', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'coursegroupevent', 'developer']*  
+<hr />
 Blackboard Learn's Caliper Analytics stream emits a CourseGroupEvent whenever
 an instructor creates, updates, or deletes a group in a course.
 

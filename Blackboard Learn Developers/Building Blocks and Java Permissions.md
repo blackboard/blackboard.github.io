@@ -1,8 +1,8 @@
 # Building Blocks and Java Permissions
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Tutorials']*
-*Tags: ['building blocks', 'blackboard learn', 'permissions', 'bb-manifest.xml', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Tutorials']*  
+*Tags: ['building blocks', 'blackboard learn', 'permissions', 'bb-manifest.xml', 'developer']*  
+<hr />
 Building Blocks are basically web applications which run in the Blackboard
 Learn web application container. As such they require specific permissions
 added to their bb-manifest.xml file to properly install, display, retrieve and

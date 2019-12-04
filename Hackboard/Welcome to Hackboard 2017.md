@@ -1,8 +1,8 @@
 # Welcome to Hackboard 2017
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'rest', 'lti', 'developers', 'hackboard', 'hackathon']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'rest', 'lti', 'developers', 'hackboard', 'hackathon']*  
+<hr />
 # Welcome to Hackboard!!
 
 ### The annual hackathon sponsored by Blackboard!

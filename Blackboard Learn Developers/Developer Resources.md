@@ -1,8 +1,8 @@
 # Developer Resources
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*
-*Tags: ['developer resources', 'blackboard learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*  
+*Tags: ['developer resources', 'blackboard learn', 'developer']*  
+<hr />
 Blackboard Learn provides resources for developers on Help, Behind the
 Blackboard, and EduGarage. When extending your environment, keep the following
 links available for reference:

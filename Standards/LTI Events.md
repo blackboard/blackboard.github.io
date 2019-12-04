@@ -1,8 +1,8 @@
 # LTI Events
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['lti', 'developers', 'standards', 'caliper', 'ims', 'ims global', 'ltievent', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['lti', 'developers', 'standards', 'caliper', 'ims', 'ims global', 'ltievent', 'developer']*  
+<hr />
 Blackboard Learn's Caliper Analytics stream emits an LTIEvent when any user:
 
   * **Clicks an LTI link**

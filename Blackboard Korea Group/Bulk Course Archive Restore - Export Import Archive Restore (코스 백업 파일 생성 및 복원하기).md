@@ -1,8 +1,8 @@
 # Bulk Course Archive/Restore - Export/Import/Archive/Restore (코스 백업 파일 생성 및 복원하기)
-*Author: Soomyoung Yi*
-*Categories: ['[운영] 관리자 배치파일 ', '[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['course archive', 'course restore', 'course export', 'course import', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[운영] 관리자 배치파일 ', '[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['course archive', 'course restore', 'course export', 'course import', 'developer']*  
+<hr />
 ### 1. Create Feed
 
 (첨부파일: crslist.csv)

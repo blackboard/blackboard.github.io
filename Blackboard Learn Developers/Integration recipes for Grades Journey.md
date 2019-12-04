@@ -1,8 +1,8 @@
 # Integration recipes for Grades Journey
-*Author: Melanie Barker*
-*Categories: []*
-*Tags: ['developer']*
----
+*Author: Melanie Barker*  
+*Categories: []*  
+*Tags: ['developer']*  
+<hr />
 Use the following resources for Grades Journey integration:
 
 Integration recipes for SIS Vendor types

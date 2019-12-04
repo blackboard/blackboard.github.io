@@ -1,8 +1,8 @@
 # Building Blocks API Overview
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started']*
-*Tags: ['building blocks', 'blackboard learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started']*  
+*Tags: ['building blocks', 'blackboard learn', 'developer']*  
+<hr />
 Building Blocks are capable of fulfilling predominantly, but not exclusively
 two scenarios:
 

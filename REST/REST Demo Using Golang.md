@@ -1,8 +1,8 @@
 # REST Demo Using Golang
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['devcon', 'rest', 'example', 'tlc', 'developers', 'golang', 'alltheducks', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['devcon', 'rest', 'example', 'tlc', 'developers', 'golang', 'alltheducks', 'developer']*  
+<hr />
 In August 2016, our friends at
 [AllTheDucks](https://community.blackboard.com/external-
 link.jspa?url=https%3A//alltheducks.com/) presented on their work

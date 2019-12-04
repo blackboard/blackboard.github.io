@@ -1,8 +1,8 @@
 # Web Services and SSL
-*Author: Kelley MacEwen*
-*Categories: []*
-*Tags: ['web services', 'tutorials', 'webct', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: []*  
+*Tags: ['web services', 'tutorials', 'webct', 'migrated from edugarage', 'developer']*  
+<hr />
 When HTTPS is enabled on the WebCT server, it is possible for a web service
 client to contact the WebCT services via SSL. This page will talk about the
 general procedures of calling WebCT web services via SSL, and discuss some

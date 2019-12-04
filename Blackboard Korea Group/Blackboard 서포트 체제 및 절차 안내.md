@@ -1,8 +1,8 @@
 # Blackboard 서포트 체제 및 절차 안내
-*Author: Yi Ran Kim*
-*Categories: ['[서포트] Release', '[서포트] Known Issues']*
-*Tags: ['developer']*
----
+*Author: Yi Ran Kim*  
+*Categories: ['[서포트] Release', '[서포트] Known Issues']*  
+*Tags: ['developer']*  
+<hr />
 안녕하세요?
 
 Blackboard 김이란입니다.

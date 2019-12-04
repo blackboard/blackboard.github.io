@@ -1,8 +1,8 @@
 # Your First Building Blocks Project Using Eclipse - DevCon 2010
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*
-*Tags: ['tutorials', 'b2', '9.1 sp4', 'devcon 2010', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*  
+*Tags: ['tutorials', 'b2', '9.1 sp4', 'devcon 2010', 'developer']*  
+<hr />
 # Tutorial recording
 
 This recording and sample code will help you get up and running with your

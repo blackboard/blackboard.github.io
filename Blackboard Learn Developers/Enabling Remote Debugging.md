@@ -1,8 +1,8 @@
 # Enabling Remote Debugging
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*
-*Tags: ['building blocks', 'eclipse', 'netbeans', 'getting started', 'blackboard learn', 'debugging', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*  
+*Tags: ['building blocks', 'eclipse', 'netbeans', 'getting started', 'blackboard learn', 'debugging', 'developer']*  
+<hr />
 This tutorial will show you how to enable Tomcat debugging so that you can
 connect to your Building Block application with a code-level debugger such as
 those built into Eclipse and NetBeans.

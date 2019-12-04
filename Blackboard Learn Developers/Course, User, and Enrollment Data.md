@@ -1,8 +1,8 @@
 # Course, User, and Enrollment Data
-*Author: Kelley MacEwen*
-*Categories: ['Building Blocks', 'Examples']*
-*Tags: ['tutorial', 'tutorials', 'blackboard learn', 'developers', 'migrated from edugarage', 'developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Building Blocks', 'Examples']*  
+*Tags: ['tutorial', 'tutorials', 'blackboard learn', 'developers', 'migrated from edugarage', 'developer']*  
+<hr />
 This tutorial will show you how to retrieve and save user information using
 various methods throughout the user interface.
 

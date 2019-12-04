@@ -1,8 +1,8 @@
 # Introduction to Building Blocks
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Tutorials']*
-*Tags: ['building blocks', 'blackboard learn', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Tutorials']*  
+*Tags: ['building blocks', 'blackboard learn', 'developer']*  
+<hr />
 Blackboard Building Blocks, a key component of Blackboard Learn's open
 architecture, allow you to enhance the online education experience for your
 students and faculty. You may assemble a solution of homegrown, commercial and

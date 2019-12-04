@@ -1,8 +1,8 @@
 # Blackboard Open LMS Approved Plugin Program (MAP)
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developers', 'map', 'blackboard open lms', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developers', 'map', 'blackboard open lms', 'developer']*  
+<hr />
 Blackboard Open LMS is committed to providing its clients with everything they
 need. As an open-source SaaS provider, we have the opportunity to enhance our
 Blackboard Open LMS platform through modular code updates and third-party

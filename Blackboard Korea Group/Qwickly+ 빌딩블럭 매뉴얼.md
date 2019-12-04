@@ -1,8 +1,8 @@
 # Qwickly+ 빌딩블럭 매뉴얼
-*Author: hayoung lee*
-*Categories: []*
-*Tags: ['qwickly', 'ajou', 'buildingblock', 'developer']*
----
+*Author: hayoung lee*  
+*Categories: []*  
+*Tags: ['qwickly', 'ajou', 'buildingblock', 'developer']*  
+<hr />
 안녕하세요? 아주대학교 교수학습개발센터 이하령입니다.
 
 저희 대학에서는 이번 학기부터 Qwickly+ 빌딩블럭을 도입하여 사용할 예정입니다.

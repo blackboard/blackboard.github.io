@@ -1,8 +1,8 @@
 # Caliper Sample Code Presentation
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'lti', 'technical office hours', 'standards', 'caliper', 'ims', 'ims global', 'developer edition']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'lti', 'technical office hours', 'standards', 'caliper', 'ims', 'ims global', 'developer edition']*  
+<hr />
 Please click [here](https://community.blackboard.com/external-link.jspa?url=ht
 tps%3A//us.bbcollab.com/recording/9DB3A241032A9D7277F02B0F31607F72) to
 watch the recording of the Technical Office Hours - Developer Edition from

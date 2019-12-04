@@ -1,8 +1,8 @@
 # Getting Started With The Blackboard Collaborate REST APIs
-*Author: Scott Hurrey*
-*Categories: ['Getting Started']*
-*Tags: ['developer', 'getting started', 'collaborate', 'blackboard', 'developers']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Getting Started']*  
+*Tags: ['developer', 'getting started', 'collaborate', 'blackboard', 'developers']*  
+<hr />
 This section is dedicated to getting developers up-to-speed quickly with the
 new REST APIs available for Blackboard Collaborate with the Ultra Experience.
 These APIs give the developer the ability to programmatically integrate common

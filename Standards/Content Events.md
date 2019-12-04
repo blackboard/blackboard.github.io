@@ -1,8 +1,8 @@
 # Content Events
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'forumevent', 'contentevent', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'forumevent', 'contentevent', 'developer']*  
+<hr />
 Blackboard Learn's Caliper Analytics stream emits a ContentEvent to cover a
 plethora of use cases. Rather than list them, here is a chart that tells you
 when a message is sent:

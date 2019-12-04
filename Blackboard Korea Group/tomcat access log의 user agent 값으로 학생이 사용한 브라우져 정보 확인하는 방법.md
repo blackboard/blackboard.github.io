@@ -1,8 +1,8 @@
 # tomcat access log의 user agent 값으로 학생이 사용한 브라우져 정보 확인하는 방법
-*Author: Benjamin Jin*
-*Categories: ['[서포트] Known Issues']*
-*Tags: ['user tracking', 'activity', 'access log', 'user agent', 'developer']*
----
+*Author: Benjamin Jin*  
+*Categories: ['[서포트] Known Issues']*  
+*Tags: ['user tracking', 'activity', 'access log', 'user agent', 'developer']*  
+<hr />
 안녕하세요.
 
 최근 학생이 온라인 시험 중 오류가 발생하여 재대로 시험을 못 치루었다는 case를 받은 적이 있습니다.

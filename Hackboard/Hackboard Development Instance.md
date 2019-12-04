@@ -1,8 +1,8 @@
 # Hackboard Development Instance
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['developer', 'developer virtual machine', 'hackboard', 'hackathon']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['developer', 'developer virtual machine', 'hackboard', 'hackathon']*  
+<hr />
 Hackboard is open to folks in the US regardless of their affiliation -- or
 lack there of -- with Blackboard. As such, some contestants may not have
 access to Behind the Blackboard to download the [Blackboard Learn 9.1 Q2 2017

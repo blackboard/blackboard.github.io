@@ -1,8 +1,8 @@
 # What Is the REST 9.1 Technical Preview?
-*Author: Mark O'Neil*
-*Categories: []*
-*Tags: ['apis', 'rest', 'api', 'technical preview', 'developer']*
----
+*Author: Mark O'Neil*  
+*Categories: []*  
+*Tags: ['apis', 'rest', 'api', 'technical preview', 'developer']*  
+<hr />
 The REST 9.1 Technical Preview is an effort to get the Blackboard Learn REST
 Framework into the hands of as many developers as possible. Think of it as an
 early test version of the REST Framework for Learn 9.1 self-hosted and

@@ -1,8 +1,8 @@
 # Data Integration
-*Author: Soomyoung Yi*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['sis integration', 'data integration', 'sis data integtation', 'feed file', '피드파일', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['sis integration', 'data integration', 'sis data integtation', 'feed file', '피드파일', 'developer']*  
+<hr />
 Blackboard 시스템 에서 중요한 역할을 하는 부분이 바로 학사 데이터 생성 및 연동입니다.
 
 Data Integration Framework 는 Blackboard 와 학사(SIS;Student Information System)과의

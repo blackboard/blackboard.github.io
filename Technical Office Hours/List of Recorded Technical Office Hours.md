@@ -1,8 +1,8 @@
 # List of Recorded Technical Office Hours
-*Author: Ryan Haber*
-*Categories: []*
-*Tags: ['office hours', 'officehours', 'technical office hours', 'admin office hours', 'developer']*
----
+*Author: Ryan Haber*  
+*Categories: []*  
+*Tags: ['office hours', 'officehours', 'technical office hours', 'admin office hours', 'developer']*  
+<hr />
 # Overview
 
 Not all office hours can be recorded. If recordings for a session are

@@ -1,8 +1,8 @@
 # REST Demo Using cURL
-*Author: Mark Bykerk Kauffman*
-*Categories: []*
-*Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'api', 'curl', 'demo', '3lo', 'three-legged oauth', 'developer']*
----
+*Author: Mark Bykerk Kauffman*  
+*Categories: []*  
+*Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'api', 'curl', 'demo', '3lo', 'three-legged oauth', 'developer']*  
+<hr />
   * Introduction
   * Assumptions
   * Walkthrough

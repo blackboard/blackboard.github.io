@@ -1,8 +1,8 @@
 # Preparing Your Building Blocks For Learn SaaS and Newer Learn Versions
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Tutorials']*
-*Tags: ['building blocks', 'blackboard learn', 'saas', 'learn', 'b2', 'building block', 'prepare', 'requirements', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Tutorials']*  
+*Tags: ['building blocks', 'blackboard learn', 'saas', 'learn', 'b2', 'building block', 'prepare', 'requirements', 'developer']*  
+<hr />
 Blackboard Building Blocks have long been a staple in the Blackboard Learn
 platform. These Java Web Apps allow you to customize the workflow and
 experience that you and your faculty use to interact with the system.

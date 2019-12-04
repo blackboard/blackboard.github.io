@@ -1,8 +1,8 @@
 # Blackboard LEARN SaaS 관련 소식 받기
-*Author: Soomyoung Yi*
-*Categories: ['[운영] 가이드 및 참고자료', '[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['learn saas', 'rss', 'feed', 'status', 'developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[운영] 가이드 및 참고자료', '[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['learn saas', 'rss', 'feed', 'status', 'developer']*  
+<hr />
 *** Blackboard LEARN SaaS 서비스는** 지속적인 업데이트가 발생하며, 이에 대한 상황등을 웹사이트와 RSS 피드로 제공하고 있습니다.
 
   * 각 서비스의 상태는 다음 웹 사이트에서 제공합니다 - [Blackboard Services Status](https://community.blackboard.com/external-link.jspa?url=http%3A//status.blackboard.com/)

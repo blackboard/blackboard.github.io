@@ -1,8 +1,8 @@
 # [Upgrade] 설치 전 준비사항 - JDK / Backup
-*Author: Soomyoung Yi*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['developer']*
----
+*Author: Soomyoung Yi*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['developer']*  
+<hr />
   1. OS/DB 버전 확인 - 필요 시, 업그레이드
   2. JDK 8 버전 설치 - 시스템 변수 업데이트(JAVA_HOME)
   3. 시스템 백업 - [https://help.blackboard.com/Learn/Administrator/Hosting/Backup_and_Recovery](https://help.blackboard.com/Learn/Administrator/Hosting/Backup_and_Recovery)

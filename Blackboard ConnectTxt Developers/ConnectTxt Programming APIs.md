@@ -1,8 +1,8 @@
 # ConnectTxt Programming APIs
-*Author: Scott Hurrey*
-*Categories: ['ConnectTxt Developer Documentation']*
-*Tags: ['apis', 'blackboard connecttxt', 'programming apis', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['ConnectTxt Developer Documentation']*  
+*Tags: ['apis', 'blackboard connecttxt', 'programming apis', 'developer']*  
+<hr />
 ConnectTxt now provide example code in several different programming
 languages. These programming APIs can be used to easily integrate ConnectTxt
 functionality into your existing application.

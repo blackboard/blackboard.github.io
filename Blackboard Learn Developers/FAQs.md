@@ -1,8 +1,8 @@
 # FAQs
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services', 'Tutorials']*
-*Tags: ['blackboard learn', 'faqs', 'developers', 'migrated from edugarage', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services', 'Tutorials']*  
+*Tags: ['blackboard learn', 'faqs', 'developers', 'migrated from edugarage', 'developer']*  
+<hr />
 ## Account questions
 
 Your Behind the Blackboard account will provide you with authenticated access

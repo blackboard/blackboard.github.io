@@ -1,8 +1,8 @@
 # Web Services
-*Author: Kelley MacEwen*
-*Categories: ['Tutorials']*
-*Tags: ['developer']*
----
+*Author: Kelley MacEwen*  
+*Categories: ['Tutorials']*  
+*Tags: ['developer']*  
+<hr />
 Administrators can view installed Web Services, render them available or
 unavailable for use, and manage the IP addresses that access a specific web
 services.

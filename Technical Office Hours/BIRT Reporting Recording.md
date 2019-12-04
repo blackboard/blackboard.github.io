@@ -1,8 +1,8 @@
 # BIRT Reporting Recording
-*Author: Scott Hurrey*
-*Categories: []*
-*Tags: ['reporting', 'birt', 'technical office hours', 'admin office hours', 'custom reports', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: []*  
+*Tags: ['reporting', 'birt', 'technical office hours', 'admin office hours', 'custom reports', 'developer']*  
+<hr />
 Thanks to all that were able to join today's Technical Office Hours - Admin
 edition, And a special thanks to [Andrew
 Hulme](https://community.blackboard.com/people/ahulme) for presenting on BIRT.

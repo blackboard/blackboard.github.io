@@ -1,8 +1,8 @@
 # Assessment Events
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['developer', 'caliper', 'ims', 'ims global', 'assessmentevent', 'assessmentitemevent']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['developer', 'caliper', 'ims', 'ims global', 'assessmentevent', 'assessmentitemevent']*  
+<hr />
 Blackboard Learn's Caliper Analytics stream has two event types dedicated to
 assessments:
 

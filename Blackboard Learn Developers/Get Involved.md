@@ -1,8 +1,8 @@
 # Get Involved
-*Author: Scott Hurrey*
-*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*
-*Tags: ['developer resources', 'community', 'blackboard learn', 'get involved', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*  
+*Tags: ['developer resources', 'community', 'blackboard learn', 'get involved', 'developer']*  
+<hr />
 Getting involved in the Developer community is easy and with options to suit
 your goals...
 

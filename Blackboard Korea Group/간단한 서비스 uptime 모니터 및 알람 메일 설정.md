@@ -1,8 +1,8 @@
 # 간단한 서비스 uptime 모니터 및 알람 메일 설정
-*Author: Benjamin Jin*
-*Categories: ['[시스템 관리] 가이드 및 참고자료']*
-*Tags: ['system monitoring', 'developer']*
----
+*Author: Benjamin Jin*  
+*Categories: ['[시스템 관리] 가이드 및 참고자료']*  
+*Tags: ['system monitoring', 'developer']*  
+<hr />
 아래의 간단한 방법으로 Learn 서비스 모니터링 및 알람 메일 설정이 가능합니다.
 
 아래의 사이트에서 계정을 만드신 후

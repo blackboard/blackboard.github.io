@@ -1,8 +1,8 @@
 # Getting Started With Caliper
-*Author: Scott Hurrey*
-*Categories: ['Caliper']*
-*Tags: ['getting started', 'standards', 'caliper', 'ims global', 'caliper analytics', 'event stream', 'developer']*
----
+*Author: Scott Hurrey*  
+*Categories: ['Caliper']*  
+*Tags: ['getting started', 'standards', 'caliper', 'ims global', 'caliper analytics', 'event stream', 'developer']*  
+<hr />
 Caliper Analytics is an IMS Global standard focused on the delivery of
 consistent event tracking across campus applications. For more information on
 the Caliper Analytics specification, visit the IMS site
