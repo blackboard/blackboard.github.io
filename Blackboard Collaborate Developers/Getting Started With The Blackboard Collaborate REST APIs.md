@@ -9,6 +9,7 @@ These APIs give the developer the ability to programmatically integrate common
 Collaborate functionality into a web application using the tried and true
 framework that is REST APIs.
   
+  
 Getting started requires a few key decisions on the developer's part. Firstly,
 the Developer should decide what programming language best meets the use cases
 required for the application to be successful. Every language has strengths
