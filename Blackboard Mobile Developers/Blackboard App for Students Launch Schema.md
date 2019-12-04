@@ -19,7 +19,7 @@ deprecation process, all new links will require the new blackboard:// URL
 scheme.
 
 Feature | Schema | Description | Release
-
+--- | --- | --- | ---
 Activity Stream | blackboard://activity | | Blackboard 3.0
 Course Base | blackboard://courses | | Blackboard 3.0
 Organization Base | blackboard://org | | Blackboard 3.2
