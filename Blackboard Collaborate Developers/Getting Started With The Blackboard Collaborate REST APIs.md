@@ -9,6 +9,7 @@ These APIs give the developer the ability to programmatically integrate common
 Collaborate functionality into a web application using the tried and true
 framework that is REST APIs.
 
+
 Getting started requires a few key decisions on the developer's part. Firstly,
 the Developer should decide what programming language best meets the use cases
 required for the application to be successful. Every language has strengths
@@ -40,16 +41,15 @@ Usually, the main hurdle is two-fold: What is the business logic behind the
 APIs, and how does an application authenticate to the services in order to
 send the REST calls necessary to perform the actions required.
 
+
 Most REST frameworks rely on some facet of the OAuth 2.0 standard and
 Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens
 (JWT) in order to accept the application as a trusted entity. For more
 detailed information about the JWT Standard and to learn about available
 libraries for most of today's popular web application development languages,
-see [https://jwt.io](https://community.blackboard.com/external-
-link.jspa?url=https%3A//jwt.io/). For more information on Blackboard
+see https://jwt.io. For more information on Blackboard
 Collaborate's implementation see [Authorize and Authenticate in Blackboard
-Collaborate](https://community.blackboard.com/docs/DOC-3115-authorize-and-
-authenticate-in-blackboard-collaborate).
+Collaborate](Authorize and Authenticate in Blackboard Collaborate.md).
 
 ## Examples
 
