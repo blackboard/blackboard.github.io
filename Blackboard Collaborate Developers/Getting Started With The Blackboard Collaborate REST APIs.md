@@ -8,8 +8,7 @@ new REST APIs available for Blackboard Collaborate with the Ultra Experience.
 These APIs give the developer the ability to programmatically integrate common
 Collaborate functionality into a web application using the tried and true
 framework that is REST APIs.
-
-
+  
 Getting started requires a few key decisions on the developer's part. Firstly,
 the Developer should decide what programming language best meets the use cases
 required for the application to be successful. Every language has strengths
@@ -49,7 +48,7 @@ detailed information about the JWT Standard and to learn about available
 libraries for most of today's popular web application development languages,
 see https://jwt.io. For more information on Blackboard
 Collaborate's implementation see [Authorize and Authenticate in Blackboard
-Collaborate](Authorize and Authenticate in Blackboard Collaborate.md).
+Collaborate](Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.md).
 
 ## Examples
 
