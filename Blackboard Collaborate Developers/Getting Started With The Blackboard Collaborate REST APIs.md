@@ -68,8 +68,6 @@ and supporting documentation in a number of those popular languages:
 
 As these samples are developed, the language above will be linked.
 
-##
-
 ## Tutorials
 
 The community site will also provide tutorials for how to perform specific
