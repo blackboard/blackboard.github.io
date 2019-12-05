@@ -8,7 +8,7 @@ available via the Amazon AWS Marketplace.
 
 **Contents**  
 
-  * Overview
+  * [Overview](#Overview)
   * Get the Blackboard REST and LTI Developer AMI
   * Use the Blackboard REST and LTI Developer AMI
   * Support for Let's Encrypt SSL Certificates
