@@ -3,21 +3,22 @@
 *Categories: []*  
 *Tags: ['developer resources', 'blackboard learn', 'developer virtual machine', 'dvm', 'learn', 'developer']*  
 <hr />
-Note: The DVM is only available to clients and partners with Behind the
-Blackboard access. You _**can**_ gain access to a developer instance of
+
+The DVM is only available to clients and partners with Behind the
+Blackboard access. You _*can*_ gain access to a developer instance of
 Blackboard for developing LTI and RESTful applications using our [Amazon Web
-Services Developer AMI](https://community.blackboard.com/docs/DOC-4242-using-
-the-blackboard-learn-ami-for-rest-and-lti-development), available in the
+Services Developer AMI](Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.md), available in the
 Amazon Marketplace. If you prefer the Virtual Machine, or you wish to develop
 Building Blocks, you must first be a contracted client or partner. For more
 information about becoming a Blackboard Partner, see [Become a Blackboard
 Partner and Gain Access To Behind the Blackboard and Partner SaaS
-Systems](https://community.blackboard.com/docs/DOC-1744-become-an-official-
-blackboard-partner).
+Systems](/blob/master/Blackboard%20Learn%20Developers/BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.md).
 
 Blackboard provides a preconfigured VirtualBox developer virtual machine (DVM)
 to help developers quickly test and validate Building Blocks and REST
 integrations. This article will help you set up the DVM.
+
+### License
 
 _You are downloading a Blackboard Learn Developer Virtual Machine instance
 (the “Bb Virtual Machine”) containing the Blackboard Learn™ developer
@@ -42,7 +43,7 @@ may not download or use the Bb Virtual Machine._
   * Developer-class workstation or laptop that supports Linux virtual machines.
   * [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 5.0.14 must be installed and operational.
   * [Vagrant](https://www.vagrantup.com/downloads.html) 1.74 or later must be installed and operational.
-  * Behind the Blackboard Access - Read [Become a Blackboard Partner and Gain Access To Behind the Blackboard and Partner SaaS Systems.](https://community.blackboard.com/docs/DOC-1744-become-an-official-blackboard-partner)
+  * Behind the Blackboard Access - Read [Become a Blackboard Partner and Gain Access To Behind the Blackboard and Partner SaaS Systems.](https://github.com/shurrey/test-docs/blob/master/Blackboard%20Learn%20Developers/BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.md)
 
 ## Installation
 
@@ -64,10 +65,7 @@ vagrant ssh
 
 ## Using the Virtual Machine
 
-You can now access your developer instance of Learn at
-**[http://localhost:9876](https://community.blackboard.com/external-
-link.jspa?url=http%3A//localhost%3A9876/)**. The Learn administrator
-login credentials are _administrator_/password.
+You can now access your developer instance of Learn at **http://localhost:9876** or **https//localhost:9877**. The Learn administrator login credentials are _administrator_/password.
 
 ### Developer License
 
@@ -84,8 +82,6 @@ limitations:
 
 This Building Block allows you to deploy your Building Block remotely, and is
 already installed and configured on this virtual machine.
-
-####
 
 #### bb-config.properties
 
@@ -115,8 +111,7 @@ have the change take affect.
 
 See the Shared Content Folder section of [Preparing Your Building Blocks For
 Learn SaaS and Newer Learn
-Versions](https://community.blackboard.com/docs/DOC-1595-preparing-your-
-building-blocks-for-learn-saas-and-newer-learn-versions) for a detailed
+Versions](/blob/master/Blackboard%20Learn%20Developers/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.md) for a detailed
 explanation of the differences between the SaaS-like configuration and the
 Enterprise 9.1 configuration.
 
@@ -131,17 +126,19 @@ and has the password of _vagrant_.
 
 After you have ssh'd to the virtual machine you have the need to perform root
 privileged operations:
-
+```
     vagrant ssh  
     su - root #the root password for the virtual machine is _vagrant_
+```
 
 ### Accessing the Database Directly
 
 To access the database directly (for running SQL), you must be logged in as
 the _postgres_ user:
-
+```
     vagrant ssh  
     sudo su - postgres -c "psql BBLEARN"
+```
 
 The user and password for accessing the database when not logged in as the
 postgres user is _postgres/postgres_.
@@ -160,8 +157,7 @@ value.
 
 The DVM must register with the cloud in order to use the API Gateway. Learn
 more about this process
-[here](https://community.blackboard.com/docs/DOC-1664-register-dvm-to-the-
-cloud).
+[here](/blob/master/REST/Register%20Developer%20Instances%20to%20the%20Cloud.md).
 
 ###
 
