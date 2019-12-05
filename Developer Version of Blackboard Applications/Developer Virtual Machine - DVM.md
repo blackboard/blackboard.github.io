@@ -50,7 +50,7 @@ may not download or use the Bb Virtual Machine._
 1. Create a directory on your computer for your Vagrant VM. For example: $HOME/Vagrant/Learn
 
 2. Download the Vagrant virtual machine and Vagrantfile from Behind the Blackboard and place them in the directory listed in Step 1.
-  * 9.1 Q4 2018 (3500) DVM release is held up by a technical difficulty. Install a recent version and see [Upgrade Your DVM](https://community.blackboard.com/blogs/61) if you need the latest version.
+  * 9.1 Q4 2018 (3500) or greater: Install a recent version and see [Upgrade Your DVM](https://community.blackboard.com/blogs/61) if you need the latest version.
   * [9.1 Q2 2018](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1787) (3400)
   * [9.1 Q4 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1784) (3300)
   * [9.1 Q2 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1779) (3200)
@@ -97,11 +97,11 @@ directory or a local cached copy. SaaS uses a local cached copy of the
 Building Block directory on each app server. Toggling this value to true
 mimics this behavior.
 
-bbconfig.plugins.cache.enabled=false // Default behavior, just like Learn 9.1
+`bbconfig.plugins.cache.enabled=false // Default behavior, just like Learn 9.1`
 
 -OR-
 
-bbconfig.plugins.cache.enabled=true //Mimics B2 behavior of Learn SaaS
+`bbconfig.plugins.cache.enabled=true //Mimics B2 behavior of Learn SaaS`
 
 You will also need to shutdown Learn and copy the content directory that is
 being used to the new location when making the switch. For example, the Q2
