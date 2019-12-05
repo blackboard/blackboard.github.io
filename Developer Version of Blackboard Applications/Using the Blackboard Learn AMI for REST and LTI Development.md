@@ -9,16 +9,16 @@ available via the Amazon AWS Marketplace.
 **Contents**  
 
   * [Overview](#Overview)
-  * Get the Blackboard REST and LTI Developer AMI
-  * Use the Blackboard REST and LTI Developer AMI
-  * Support for Let's Encrypt SSL Certificates
-    * Setup
-  * What does the Blackboard REST and LTI Developer AMI cost?
-  * Log into the Blackboard Learn Application on the AMI
-  * Configure Your AMI-based Blackboard Learn Instance
-  * Triage Your AMI-based Blackboard Learn Instance
-  * Migration Cookbook: Recreating Data between AMIs
-  * Notice RE: AVG on Windows Systems
+  * [Get the Blackboard REST and LTI Developer AMI](#Get the Blackboard REST and LTI Developer AMI)
+  * [Use the Blackboard REST and LTI Developer AMI](#Use the Blackboard REST and LTI Developer AMI)
+  * [Support for Let's Encrypt SSL Certificates](#Support for Let's Encrypt SSL Certificates)
+    * [Setup](#Setup)
+  * [What does the Blackboard REST and LTI Developer AMI cost?](#What does the Blackboard REST and LTI Developer AMI cost?)
+  * [Log into the Blackboard Learn Application on the AMI](#Log into the Blackboard Learn Application on the AMI)
+  * [Configure Your AMI-based Blackboard Learn Instance](#Configure Your AMI-based Blackboard Learn Instance)
+  * [Triage Your AMI-based Blackboard Learn Instance](#Triage Your AMI-based Blackboard Learn Instance)
+  * [Migration Cookbook: Recreating Data between AMIs](#Migration Cookbook: Recreating Data between AMIs)
+  * [Notice RE: AVG on Windows Systems](#Notice RE: AVG on Windows Systems)
 
 # Overview
 
