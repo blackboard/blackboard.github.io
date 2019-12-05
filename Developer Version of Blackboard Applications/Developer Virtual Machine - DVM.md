@@ -64,7 +64,8 @@ may not download or use the Bb Virtual Machine._
    vagrant ssh
 ```
 
-4. If you are on a Windows host machine, you may experience issues logging into the VM because of Windows' management of SSH. Alternatively, you can log into the VM using any SSH client you want by connecting to _localhost:2222_ and using the credentials _vagrant/vagrant_. Additionally, help is available on the [Vagrant site](https://www.vagrantup.com/downloads.html).
+4. If you are on a Windows host machine, you may experience issues logging into the VM because of Windows' management of SSH. Alternatively, you can log into the VM using any SSH client you want by connecting to _localhost:2222_ and using the credentials _vagrant/vagrant_. Additionally, help is available on the [Vagrant site](https://www.vagrantup.com/downloads.html).  
+
 5. Blackboard Learn should automatically start when the machine is booted up.
 
 ## Using the Virtual Machine
