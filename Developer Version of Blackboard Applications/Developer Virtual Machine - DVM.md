@@ -49,16 +49,16 @@ may not download or use the Bb Virtual Machine._
 
   1. Create a directory on your computer for your Vagrant VM. For example: $HOME/Vagrant/Learn
   2. Download the Vagrant virtual machine and Vagrantfile from Behind the Blackboard and place them in the directory listed in Step 1.
-    * 9.1 Q4 2018 (3500) DVM release is held up by a technical difficulty. Install a recent version and see [Upgrade Your DVM](https://community.blackboard.com/blogs/61) if you need the latest version.
-    * [9.1 Q2 2018](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1787) (3400)
-    * [9.1 Q4 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1784) (3300)
-    * [9.1 Q2 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1779) (3200)
-    * [9.1 Q4 2016](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1770) (3100)
-    * [9.1 Q2 2016](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1746) (3000)
+  ..* 9.1 Q4 2018 (3500) DVM release is held up by a technical difficulty. Install a recent version and see [Upgrade Your DVM](https://community.blackboard.com/blogs/61) if you need the latest version.
+  ..* [9.1 Q2 2018](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1787) (3400)
+  ..* [9.1 Q4 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1784) (3300)
+  ..* [9.1 Q2 2017](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1779) (3200)
+  ..* [9.1 Q4 2016](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1770) (3100)
+  ..* [9.1 Q2 2016](https://behind.blackboard.com/downloads/details.aspx%3Fd%3D1746) (3000)
   
   3. Run the following commands in that directory:  
 ```
-    vagrant up
+   vagrant up
 
    vagrant ssh
 ```
