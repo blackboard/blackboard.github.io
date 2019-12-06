@@ -10,4 +10,4 @@ November 2, 2016. The topic is the review and demonstration of the
 [Blackboard Sample LTI Tool](https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node) with a focus on the 
 [IMS Global Caliper](https://imsglobal.org/caliper) bits.
 
-Please click [here](https://us.bbcollab.com/recording/9DB3A241032A9D7277F02B0F31607F72) to
+
