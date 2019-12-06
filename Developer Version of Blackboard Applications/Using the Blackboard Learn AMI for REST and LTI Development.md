@@ -17,8 +17,8 @@ available via the Amazon AWS Marketplace.
   * [Log into the Blackboard Learn Application on the AMI](#log-into-the-blackboard-learn-application-on-the-ami)
   * [Configure Your AMI-based Blackboard Learn Instance](#configure-your-ami-based-blackboard-learn-instance)
   * [Triage Your AMI-based Blackboard Learn Instance](#triage-your-ami-based-blackboard-learn-instance)
-  * [Migration Cookbook: Recreating Data between AMIs](#migration-cookbook-recreating-data-between-amis)
-  * [Notice RE: AVG on Windows Systems](#notice-avg-on-windows-systems)
+  * [Migration Cookbook: Recreating Data between AMIs](#migration-cookbook---recreating-data-between-amis)
+  * [Notice RE: AVG on Windows Systems](#notice---avg-on-windows-systems)
 
 ## Overview
 
@@ -161,9 +161,7 @@ on the page you see.
 
 When you set up your instance of Blackboard Learn, you can configure different
 options. These options are discussed in [Enable Learn Tool Interoperability
-(LTI) Links and Text](https://help.blackboard.com/Learn/Administrator/SaaS/Integration
-s/Learning_Tools_Interoperability#enable-or-disable-lti-tools-for-courses-
-and-organizations).
+(LTI) Links and Text](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability#enable-or-disable-lti-tools-for-courses-and-organizations).
 
 ## Triage Your AMI-based Blackboard Learn Instance
 
