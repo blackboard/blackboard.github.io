@@ -13,7 +13,7 @@ available via the Amazon AWS Marketplace.
   * [Use the Blackboard REST and LTI Developer AMI](#Use%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI)
   * [Support for Let's Encrypt SSL Certificates](#Support%20for%20Let's%20Encrypt%20SSL%20Certificates)
     * [Setup](#Setup)
-  * [What does the Blackboard REST and LTI Developer AMI cost?](#What%20does%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI%20cost?)
+  * [What does the Blackboard REST and LTI Developer AMI cost?](#what-does-the-blackboard-rest-and-lti-developer-ami-cost)
   * [Log into the Blackboard Learn Application on the AMI](#Log%20into%20the%20Blackboard%20Learn%20Application%20on%20the%20AMI)
   * [Configure Your AMI-based Blackboard Learn Instance](#Configure%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
   * [Triage Your AMI-based Blackboard Learn Instance](#Triage%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
