@@ -14,11 +14,11 @@ available via the Amazon AWS Marketplace.
   * [Support for Let's Encrypt SSL Certificates](#Support%20for%20Let's%20Encrypt%20SSL%20Certificates)
     * [Setup](#Setup)
   * [What does the Blackboard REST and LTI Developer AMI cost?](#what-does-the-blackboard-rest-and-lti-developer-ami-cost)
-  * [Log into the Blackboard Learn Application on the AMI](#Log%20into%20the%20Blackboard%20Learn%20Application%20on%20the%20AMI)
-  * [Configure Your AMI-based Blackboard Learn Instance](#Configure%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
-  * [Triage Your AMI-based Blackboard Learn Instance](#Triage%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
-  * [Migration Cookbook: Recreating Data between AMIs](#Migration%20Cookbook%20-%20Recreating%20Data%20between%20AMIs)
-  * [Notice RE: AVG on Windows Systems](#Notice%20-%20AVG%20on%20Windows%20Systems)
+  * [Log into the Blackboard Learn Application on the AMI](#log-into-the-blackboard-learn-application-on-the-ami)
+  * [Configure Your AMI-based Blackboard Learn Instance](#configure-your-ami-based-blackboard-learn-instance)
+  * [Triage Your AMI-based Blackboard Learn Instance](#triage-your-ami-based-blackboard-learn-instance)
+  * [Migration Cookbook: Recreating Data between AMIs](#migration-cookbook-recreating-data-between-amis)
+  * [Notice RE: AVG on Windows Systems](#notice-avg-on-windows-systems)
 
 ## Overview
 
@@ -144,9 +144,7 @@ charge.
 If you have any questions, feel free to ask in this space or email us at
 [developers@blackboard.com](mailto:developers@blackboard.com).
 
-## Log into the Blackboard
-Learn Application
-on the AMI
+## Log into the Blackboard Learn Application on the AMI
 
 The username is administrator. The password is the instance ID, e.g.,
 i-234234234234. If you look at the log created when you spin it up it is also
