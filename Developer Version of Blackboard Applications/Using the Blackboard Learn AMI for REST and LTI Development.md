@@ -9,7 +9,7 @@ available via the Amazon AWS Marketplace.
 ## Contents 
 
   * [Overview](#Overview)
-  * [Get the Blackboard REST and LTI Developer AMI](#Get the Blackboard REST and LTI Developer AMI)
+  * [Get the Blackboard REST and LTI Developer AMI](#Get%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI)
   * [Use the Blackboard REST and LTI Developer AMI](#Use%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI)
   * [Support for Let's Encrypt SSL Certificates](#Support%20for%20Let's%20Encrypt%20SSL%20Certificates)
     * [Setup](#Setup)
@@ -17,8 +17,8 @@ available via the Amazon AWS Marketplace.
   * [Log into the Blackboard Learn Application on the AMI](#Log%20into%20the%20Blackboard%20Learn%20Application%20on%20the%20AMI)
   * [Configure Your AMI-based Blackboard Learn Instance](#Configure%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
   * [Triage Your AMI-based Blackboard Learn Instance](#Triage%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
-  * [Migration Cookbook: Recreating Data between AMIs](#Migration%20Cookbook:%20Recreating%20Data%20between%20AMIs)
-  * [Notice RE: AVG on Windows Systems](#Notice%20RE:%20AVG%20on%20Windows%20Systems)
+  * [Migration Cookbook: Recreating Data between AMIs](#Migration%20Cookbook%3A%20Recreating%20Data%20between%20AMIs)
+  * [Notice RE: AVG on Windows Systems](#Notice%20RE%3A%20AVG%20on%20Windows%20Systems)
 
 ## Overview
 
@@ -44,10 +44,8 @@ block to this AMI. It is meant only for REST and LTI development.
 
 ## Get the Blackboard REST and LTI Developer AMI
 
-The easiest way to find the D\developer AMI is by searching the Amazon
-Marketplace for [Blackboard Learn](https://aws.amazon.com/marketplace/search/results%3Fx
-%3D0%26y%3D0%26searchTerms%3DBlackboard%2BLearn%26page%3D1%26ref_%3Dnav_search
-_box). The results show all of the currently available AMIs. Given the cadence
+The easiest way to find the Developer AMI is by searching the Amazon
+Marketplace for [Blackboard Learn](https://aws.amazon.com/marketplace/search/results?x=33&y=19&searchTerms=blackboard). The results show all of the currently available AMIs. Given the cadence
 or releases, you should locate the Learn instance you want.
 
 ## Use the Blackboard REST and LTI Developer AMI
@@ -63,17 +61,23 @@ typically as follows.
 When configuring the instance, it is completely up to you how you set up the
 server. We do have a few recommendations, however.
 
-  1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.
-    * If you see 502 Gateway errors, you may need to increase the sizeof your AMI.
-  2. We recommend you adjust the security settings to allow:
-    * SSH from your IP only
-    * Enable HTTPS access
-  3. You must configure VPC for the EC2 to properly function. You do this by going to the VPC Console from the AWS Console:
-    1. Under Services open VPC under Networking and Content Delivery
-    2. Open Your VPCs
-    3. select the VPC connected to your EC2 and
-    4. select Actions => Edit DNS Hostnames **---> Change DNS hostnames: to YES**
-  4. **On initial startup the Original UX login screen appears. Note the messaging on that page as it informs you when the license expires. You _will_ need to subscribe to a new AMI release prior to license expiration if you wish to migrate data from the old EC2 to the new. _Licenses on AMIs are not extendible._**
+1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.
+  
+  * If you see 502 Gateway errors, you may need to increase the sizeof your AMI.
+  
+2. We recommend you adjust the security settings to allow:
+  
+  * SSH from your IP only
+  * Enable HTTPS access
+
+3. You must configure VPC for the EC2 to properly function. You do this by going to the VPC Console from the AWS Console:
+    
+  1. Under Services open VPC under Networking and Content Delivery
+  2. Open Your VPCs
+  3. select the VPC connected to your EC2 and
+  4. select Actions => Edit DNS Hostnames **---> Change DNS hostnames: to YES**
+
+4. **On initial startup the Original UX login screen appears. Note the messaging on that page as it informs you when the license expires. You _will_ need to subscribe to a new AMI release prior to license expiration if you wish to migrate data from the old EC2 to the new. _Licenses on AMIs are not extendible._**
 
 ## Support for Let's Encrypt SSL Certificates
 
@@ -93,26 +97,28 @@ After starting your AMI there are a few steps to installing and using Let’s
 Encrypt Certificates. After installing the certificate, management of the
 Let’s Encrypt SSL certificate is automatic.
 
-  1. Register the AWS provided EC2 public IP to your DNS as an A-record. The best practice as an introduction is to use a free DNS service such as freeddns.no-ip.com to provide the FQDN used for your Learn EC2.
-  2. Use the EC2 Security controls to open HTTP as an inbound security rule - you should have HTTP, HTTPS, and SSH (from your console IP) enabled at this point.
-  3. SSH to your EC2 instance and create a file containing your FQDN from freeddns.no-ip.com and your email address and save to /home/ubuntu/my_ssl_config. The format of this file is important and should follow the example below. The file contains only two lines specifying the key and value pairs used to configure the Let's Encrypt process, e.g.:
+1. Register the AWS provided EC2 public IP to your DNS as an A-record. The best practice as an introduction is to use a free DNS service such as freeddns.no-ip.com to provide the FQDN used for your Learn EC2.
 
-ssldomain : devmen.hopto.org
+2. Use the EC2 Security controls to open HTTP as an inbound security rule - you should have HTTP, HTTPS, and SSH (from your console IP) enabled at this point.
 
-sslemail : [developers@blackboard.com](mailto:developers@blackboard.com)
+3. SSH to your EC2 instance and create a file containing your FQDN from freeddns.no-ip.com and your email address and save to /home/ubuntu/my_ssl_config. The format of this file is important and should follow the example below. The file contains only two lines specifying the key and value pairs used to configure the Let's Encrypt process, e.g.:
+```
+  ssldomain : devmen.hopto.org
+  sslemail : [developers@blackboard.com](mailto:developers@blackboard.com)
+```
 
 4. SSH to your EC2 instance and from the command line reboot the instance
 using the command $ sudo reboot now
 
 **On reboot the server will generate your Let’s Encrypt SSL certificate, on future reboots or restarts the server will check whether the certificate requires renewal. If renewal is required reboot the server to renew the Let's Encrypt certificate. If your certificate is past expiration, because you ignored the renewal notices, sudo mv the /etc/letsencrypt directory to your home directory for safe keeping and reboot.**
 
-Warning: When you stop and start an existing EC2 instance, AWS resets the
+**Warning: When you stop and start an existing EC2 instance, AWS resets the
 public domain name and IP - you must update your DNS entry to reflect the new
-IP.
+IP.**
 
-Warning: Let's Encrypt has a limit of 20 certificate requests on a domain per
+**Warning: Let's Encrypt has a limit of 20 certificate requests on a domain per
 week. Repeated stop and starts of an AMI using the same domain may exceed the
-Let's Encrypt request limit, requiring you to provide a new domain name.
+Let's Encrypt request limit, requiring you to provide a new domain name. **
 
 ## What does the Blackboard REST and LTI Developer AMI cost?
 
@@ -126,12 +132,12 @@ entering the education software market.
 Use of the Developer AMI will result in two charges being made to your
 account:
 
-  1. **An AWS Infrastructure charge**  
+1. **An AWS Infrastructure charge**  
 This charge is based on the EC2 instance type selected to run the AMI and
 varies based on the instance type size and region. An example is $0.0464/hr
 for a t2.medium instance served from
 
-  2. **Software charge**  
+2. **Software charge**  
 A Software charge of $0.05/hr (US dollars) is added to the AWS infrastructure
 charge.
 
@@ -151,27 +157,29 @@ following. NOTE: There is no way to upgrade an AMI. You will need to get the
 latest AMI, and transfer any necessary data, BEFORE the expiration date shown
 on the page you see.
 
-[![2019.01.31.FirstTimeAMILoginPage.jpeg](/images/129881.jpeg)
+![Landing page seen the first time you login to the developer AMI](/images/129881.jpeg)
 
 # Configure Your AMI-based Blackboard Learn Instance
 
 When you set up your instance of Blackboard Learn, you can configure different
 options. These options are discussed in [Enable Learn Tool Interoperability
 (LTI) Links and Text](https:///help.blackboard.com/Learn/Administrator/SaaS/Integration
-s/Learning_Tools_Interoperability%23enable-or-disable-lti-tools-for-courses-
+s/Learning_Tools_Interoperability#enable-or-disable-lti-tools-for-courses-
 and-organizations).
 
 # Triage Your AMI-based Blackboard Learn Instance
 
 **_Note that not stopping your EC2 when you encounter an error will continue to incur EC2 charges and we do not issue refunds.Always stop your EC2 if you encounter an error or do not require a 24x7 development instance._**
 
-  1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments | Blackboard Help](https://help.blackboard.com/Learn/Administrator/SaaS)
-  2. 504 Gateway Error
-    1. Visiting https;//<EC2_Public_DNS> displays a 504 error in your browser:
-      1. Shutdown the instance to stop accumulating charges and try again
-      2. Or reboot the instance: 
-        1. Ssh into the instance 
-          1. Issue this command: $ sudo reboot now
+1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments | Blackboard Help](https://help.blackboard.com/Learn/Administrator/SaaS)
+
+2. 504 Gateway Error
+    
+  1. Visiting https://<EC2_Public_DNS> displays a 504 error in your browser:
+    1. Shutdown the instance to stop accumulating charges and try again
+    2. Or reboot the instance: 
+      1. Ssh into the instance 
+        1. Issue this command: $ sudo reboot now
         2. Issue a reboot from the AWS console
 
 The above restarts the instance and will typically correct the 504 error.
@@ -186,8 +194,8 @@ enrollments, etc. from an existing (source) EC2 and reinstate/recreate the
 data onto a (new) EC2. The resources linked below will guide you through this
 data transfer process:
 
-  1. [Bb Learn EC2 Data Transfer.docx](/attachments/DOC-5237-bb-learn-ec2-data-transferdocx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
-  2. [EC2 Migration SQL Scripts and Feed Files.zip](/attachments/DOC-5238-ec2-migration-sql-scripts-and-feed-fileszip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
+  1. [Bb Learn EC2 Data Transfer.docx](/attachments/Bb%20Learn%20EC2%20Data%20Transfer.docx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
+  2. [EC2 Migration SQL Scripts and Feed Files.zip](/attachments/EC2%20Migration%20SQL%20Scripts%20and%20Feed%20Files.zip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
 
 # Notice RE: AVG on Windows Systems
 
