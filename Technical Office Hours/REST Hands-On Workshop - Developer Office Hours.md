@@ -6,12 +6,8 @@
 Thanks for those that were able to attend Developer Office Hours today, July
 27, 2016. Here is a link to the recording:
 
-[https://us.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93](https://c
-ommunity.blackboard.com/external-link.jspa?url=https%3A//us.bbcollab.com%2
-Frecording/BBAA710721684484425FA10FBA7A1B93)
+https://us.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93
 
-I've also completed [Tutorial: Build a Java Command Line REST
-Application](https://community.blackboard.com/docs/DOC-2018-tutorial-build-a-
-java-command-line-rest-application), so feel free to follow along there, as
+I've also completed [Tutorial: Build a Java Command Line REST Application](/REST/Tutorial:%20Build%20a%20Java%20Command%20Line%20REST%20Application.md), so feel free to follow along there, as
 well.
 
