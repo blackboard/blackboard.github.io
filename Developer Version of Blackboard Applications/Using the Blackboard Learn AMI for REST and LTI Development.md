@@ -17,8 +17,8 @@ available via the Amazon AWS Marketplace.
   * [Log into the Blackboard Learn Application on the AMI](#Log%20into%20the%20Blackboard%20Learn%20Application%20on%20the%20AMI)
   * [Configure Your AMI-based Blackboard Learn Instance](#Configure%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
   * [Triage Your AMI-based Blackboard Learn Instance](#Triage%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
-  * [Migration Cookbook: Recreating Data between AMIs](#Migration%20Cookbook%3A%20Recreating%20Data%20between%20AMIs)
-  * [Notice RE: AVG on Windows Systems](#Notice%20RE%3A%20AVG%20on%20Windows%20Systems)
+  * [Migration Cookbook: Recreating Data between AMIs](#Migration%20Cookbook%20-%20Recreating%20Data%20between%20AMIs)
+  * [Notice RE: AVG on Windows Systems](#Notice%20-%20AVG%20on%20Windows%20Systems)
 
 ## Overview
 
@@ -159,15 +159,15 @@ on the page you see.
 
 ![Landing page seen the first time you login to the developer AMI](/images/129881.jpeg)
 
-# Configure Your AMI-based Blackboard Learn Instance
+## Configure Your AMI-based Blackboard Learn Instance
 
 When you set up your instance of Blackboard Learn, you can configure different
 options. These options are discussed in [Enable Learn Tool Interoperability
-(LTI) Links and Text](https:///help.blackboard.com/Learn/Administrator/SaaS/Integration
+(LTI) Links and Text](https://help.blackboard.com/Learn/Administrator/SaaS/Integration
 s/Learning_Tools_Interoperability#enable-or-disable-lti-tools-for-courses-
 and-organizations).
 
-# Triage Your AMI-based Blackboard Learn Instance
+## Triage Your AMI-based Blackboard Learn Instance
 
 **_Note that not stopping your EC2 when you encounter an error will continue to incur EC2 charges and we do not issue refunds.Always stop your EC2 if you encounter an error or do not require a 24x7 development instance._**
 
@@ -184,7 +184,7 @@ and-organizations).
 
 The above restarts the instance and will typically correct the 504 error.
 
-# Migration Cookbook: Recreating Data between AMIs
+## Migration Cookbook - Recreating Data between AMIs
 
 Currently, there is no formal migration/transfer tool to port Blackboard Learn
 data between AMI (EC2) instances. However, there are several existing
@@ -197,7 +197,7 @@ data transfer process:
   1. [Bb Learn EC2 Data Transfer.docx](/attachments/Bb%20Learn%20EC2%20Data%20Transfer.docx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
   2. [EC2 Migration SQL Scripts and Feed Files.zip](/attachments/EC2%20Migration%20SQL%20Scripts%20and%20Feed%20Files.zip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
 
-# Notice RE: AVG on Windows Systems
+## Notice - AVG on Windows Systems
 
 While using the AVG antivirus product on a Windows system and attempting to
 create a course using Blackboard Learn, AVG may manifest what we believe is a
