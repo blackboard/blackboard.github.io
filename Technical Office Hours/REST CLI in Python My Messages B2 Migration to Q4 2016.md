@@ -12,4 +12,4 @@ time to share today. To view a recording of the talk, click
 To access Michael's code on GitHub, click
 [here](https://github.com/elmiguel/bbdn-python-rest-2).
 
-aasas
+
