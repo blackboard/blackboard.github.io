@@ -6,21 +6,21 @@
 This document outlines usage of the Blackboard REST and LTI Developer AMI made
 available via the Amazon AWS Marketplace.
 
-**Contents**  
+## Contents 
 
   * [Overview](#Overview)
   * [Get the Blackboard REST and LTI Developer AMI](#Get the Blackboard REST and LTI Developer AMI)
-  * [Use the Blackboard REST and LTI Developer AMI](#Use)
+  * [Use the Blackboard REST and LTI Developer AMI](#Use%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI)
   * [Support for Let's Encrypt SSL Certificates](#Support%20for%20Let's%20Encrypt%20SSL%20Certificates)
     * [Setup](#Setup)
-  * [What does the Blackboard REST and LTI Developer AMI cost?](#What does the Blackboard REST and LTI Developer AMI cost?)
-  * [Log into the Blackboard Learn Application on the AMI](#Log into the Blackboard Learn Application on the AMI)
-  * [Configure Your AMI-based Blackboard Learn Instance](#Configure Your AMI-based Blackboard Learn Instance)
-  * [Triage Your AMI-based Blackboard Learn Instance](#Triage Your AMI-based Blackboard Learn Instance)
-  * [Migration Cookbook: Recreating Data between AMIs](#Migration Cookbook: Recreating Data between AMIs)
-  * [Notice RE: AVG on Windows Systems](#Notice RE: AVG on Windows Systems)
+  * [What does the Blackboard REST and LTI Developer AMI cost?](#What%20does%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI%20cost?)
+  * [Log into the Blackboard Learn Application on the AMI](#Log%20into%20the%20Blackboard%20Learn%20Application%20on%20the%20AMI)
+  * [Configure Your AMI-based Blackboard Learn Instance](#Configure%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
+  * [Triage Your AMI-based Blackboard Learn Instance](#Triage%20Your%20AMI-based%20Blackboard%20Learn%20Instance)
+  * [Migration Cookbook: Recreating Data between AMIs](#Migration%20Cookbook:%20Recreating%20Data%20between%20AMIs)
+  * [Notice RE: AVG on Windows Systems](#Notice%20RE:%20AVG%20on%20Windows%20Systems)
 
-# Overview
+## Overview
 
 The Blackboard REST and LTI Developer Amazon Machine Image ("AMI") is an image
 of a Blackboard Learn server available in the Amazon Marketplace. The AMI
@@ -40,18 +40,17 @@ without a formal paid partnership. Anyone who wants to test the Ultra
 experience can create copy. Note that you cannot deploy a custom building
 block to this AMI. It is meant only for REST and LTI development.
 
-NOTE: Building Block installation is NOT supported on the AMIs.
+**NOTE: Building Block installation is NOT supported on the AMIs.**
 
-# Get the Blackboard REST and LTI Developer AMI
+## Get the Blackboard REST and LTI Developer AMI
 
 The easiest way to find the D\developer AMI is by searching the Amazon
-Marketplace for [Blackboard Learn](https://community.blackboard.com/external-l
-ink.jspa?url=https%3A//aws.amazon.com/marketplace/search/results%3Fx
+Marketplace for [Blackboard Learn](https://aws.amazon.com/marketplace/search/results%3Fx
 %3D0%26y%3D0%26searchTerms%3DBlackboard%2BLearn%26page%3D1%26ref_%3Dnav_search
 _box). The results show all of the currently available AMIs. Given the cadence
 or releases, you should locate the Learn instance you want.
 
-# Use the Blackboard REST and LTI Developer AMI
+## Use the Blackboard REST and LTI Developer AMI
 
 Before you begin, you must have an Amazon AWS account. If you do not have an
 AWS account you will need to create one. The steps to set up an AMI are
@@ -64,8 +63,8 @@ typically as follows.
 When configuring the instance, it is completely up to you how you set up the
 server. We do have a few recommendations, however.
 
-  1. We recommend using the Medium Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.
-    * Should your usage often result in a 502 Gateway error, increase the size to the Large Tier.
+  1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.
+    * If you see 502 Gateway errors, you may need to increase the sizeof your AMI.
   2. We recommend you adjust the security settings to allow:
     * SSH from your IP only
     * Enable HTTPS access
@@ -76,7 +75,7 @@ server. We do have a few recommendations, however.
     4. select Actions => Edit DNS Hostnames **---> Change DNS hostnames: to YES**
   4. **On initial startup the Original UX login screen appears. Note the messaging on that page as it informs you when the license expires. You _will_ need to subscribe to a new AMI release prior to license expiration if you wish to migrate data from the old EC2 to the new. _Licenses on AMIs are not extendible._**
 
-# Support for Let's Encrypt SSL Certificates
+## Support for Let's Encrypt SSL Certificates
 
 Starting with version **3300.6.0** the Learn for REST and LTI Developers AMI
 supports free Let’s Encrypt SSL Certificates. At this time we do not support
@@ -86,9 +85,9 @@ alternative SSL certificate processes.
 
 - you may read about certbot at [Certbot](https://certbot.eff.org/)
 
-- you may read about how to get a free DNS at [Free Dynamic DNS - No-IP.com - Managed DNS Services](https://community.blackboard.com/external-link.jspa?url=http%3A//freeddns.noip.com/)
+- you may read about how to get a free DNS at [Free Dynamic DNS - No-IP.com - Managed DNS Services](https://freeddns.noip.com/)
 
-## Setup
+### Setup
 
 After starting your AMI there are a few steps to installing and using Let’s
 Encrypt Certificates. After installing the certificate, management of the
@@ -115,7 +114,7 @@ Warning: Let's Encrypt has a limit of 20 certificate requests on a domain per
 week. Repeated stop and starts of an AMI using the same domain may exceed the
 Let's Encrypt request limit, requiring you to provide a new domain name.
 
-# What does the Blackboard REST and LTI Developer AMI cost?
+## What does the Blackboard REST and LTI Developer AMI cost?
 
 The Open Innovation Initiative was created to lower the cost of entry for
 developing software solutions on the Blackboard Learn platform. This is
@@ -139,8 +138,8 @@ charge.
 If you have any questions, feel free to ask in this space or email us at
 [developers@blackboard.com](mailto:developers@blackboard.com).
 
-# Log into the Blackboard
-Learn![](https://community.blackboard.com/images/emojis/2122.png) Application
+## Log into the Blackboard
+Learn Application
 on the AMI
 
 The username is administrator. The password is the instance ID, e.g.,
@@ -152,17 +151,13 @@ following. NOTE: There is no way to upgrade an AMI. You will need to get the
 latest AMI, and transfer any necessary data, BEFORE the expiration date shown
 on the page you see.
 
-[![2019.01.31.FirstTimeAMILoginPage.jpeg](https://community.blackboard.com/ser
-vlet/JiveServlet/downloadImage/102-4242-43-129881/2019.01.31.FirstTimeAMILogin
-Page.jpeg)](https://community.blackboard.com/servlet/JiveServlet/showImage/102
--4242-43-129881/2019.01.31.FirstTimeAMILoginPage.jpeg)
+[![2019.01.31.FirstTimeAMILoginPage.jpeg](/images/129881.jpeg)
 
 # Configure Your AMI-based Blackboard Learn Instance
 
 When you set up your instance of Blackboard Learn, you can configure different
 options. These options are discussed in [Enable Learn Tool Interoperability
-(LTI) Links and Text](https://community.blackboard.com/external-link.jspa?url=
-https%3A//help.blackboard.com/Learn/Administrator/SaaS/Integration
+(LTI) Links and Text](https:///help.blackboard.com/Learn/Administrator/SaaS/Integration
 s/Learning_Tools_Interoperability%23enable-or-disable-lti-tools-for-courses-
 and-organizations).
 
@@ -191,8 +186,8 @@ enrollments, etc. from an existing (source) EC2 and reinstate/recreate the
 data onto a (new) EC2. The resources linked below will guide you through this
 data transfer process:
 
-  1. [Bb Learn EC2 Data Transfer.docx](https://community.blackboard.com/docs/DOC-5237-bb-learn-ec2-data-transferdocx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
-  2. [EC2 Migration SQL Scripts and Feed Files.zip](https://community.blackboard.com/docs/DOC-5238-ec2-migration-sql-scripts-and-feed-fileszip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
+  1. [Bb Learn EC2 Data Transfer.docx](/attachments/DOC-5237-bb-learn-ec2-data-transferdocx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
+  2. [EC2 Migration SQL Scripts and Feed Files.zip](/attachments/DOC-5238-ec2-migration-sql-scripts-and-feed-fileszip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
 
 # Notice RE: AVG on Windows Systems
 
