@@ -11,9 +11,7 @@ the use of common tools across platforms with the added ability to analyze the
 usage of that tool for all students regardless of the environment that student
 originates from.
 
-We also have documentation on the [specific events sent
-](https://community.blackboard.com/docs/DOC-4408-blackboard-caliper-event-
-guide)by Blackboard Learn,
+We also have documentation on the [specific events sent](/Blackboard%20Caliper%20Event%20Guide.md)by Blackboard Learn,
 
 The metric profiles are realized in the form of JSON for Linked Data (JSON-LD)
 payloads containing a set of common objects, each with the ability to add
@@ -28,9 +26,7 @@ specification itself.
 The overarching goal of these profiles is to encapsulate events and context in
 a shared semantic model so there is consistency from event to event.
 
-[![](https://community.blackboard.com/servlet/JiveServlet/downloadImage/102-29
-62-4-100509/pastedImage_0.png)](https://community.blackboard.com/servlet/JiveS
-ervlet/showImage/102-2962-4-100509/pastedImage_0.png)
+![Caliper Outcome Profile](/images/100509.png)
 
 Blackboard Learn was certified against the Caliper 1.0 specification in
 October of 2015 for 5 metric profiles:
@@ -52,54 +48,24 @@ format, containing a specific set of data. The top level of this document
 contains 9 defined objects and two Linked Data elements to illustrate what
 data is expected.
 
-**Object****Definition**
+### Objects
 
-@context
-
-Defines the short-hand names used throughout the Caliper event.
-
-@type
-
-Defines the type of event being sent.
-
-actor
-
-The entity performing the event.
-
-action
-
-What the actor actually did.
-
-object
-
-What the action was performed on.
-
-generated
-
-The result of the action.
-
-eventTime
-
-The ISO-compliant date and time that the event happened.
-
-edApp
-
-The application reporting the event.
-
-group
-
-The environment that the event took place in, e.g. a course. Can be nested.
-
-membership
-
-Information about the relationship between the actor and the group.
-
-federatedSession
-
-A unique identifier used to determine what system/tool is reporting data.
+| Object | Description |
+| ------ | ----------- |
+| @context | Defines the short-hand names used throughout the Caliper event. |
+| @type | Defines the type of event being sent. |
+| actor | The entity performing the event. |
+| action | What the actor actually did. |
+| object | What the action was performed on. |
+| generated | The result of the action. |
+| eventTime | The ISO-compliant date and time that the event happened. |
+| edApp | The application reporting the event. |
+| group | The environment that the event took place in, e.g. a course. Can be nested. |
+| membership | Information about the relationship between the actor and the group. |
+| federatedSession | A unique identifier used to determine what system/tool is reporting data. |
 
 ### Sample Caliper Event
-
+```
     {
         "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
         "@type": "http://purl.imsglobal.org/caliper/v1/AssignableEvent",
@@ -164,6 +130,7 @@ A unique identifier used to determine what system/tool is reporting data.
         },
         "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/sessions/21622015C7998FEA7A7824F053D514C8"
      } 
+```
 
 ## Caliper Event Envelopes
 
