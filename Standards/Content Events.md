@@ -4,305 +4,58 @@
 *Tags: ['developers', 'standards', 'caliper', 'ims', 'ims global', 'forumevent', 'contentevent', 'developer']*  
 <hr />
 Blackboard Learn's Caliper Analytics stream emits a ContentEvent to cover a
-plethora of use cases. Rather than list them, here is a chart that tells you
-when a message is sent:
-
-****
-
-**Object type**
-**ContentEvent when object is created**
-**ContentEvent when object is updated (by member value)**
-****ContentEvent when o**bject is deleted**
-
-** ****Name****URL****Description****Available****Parms****Score****Due Date****Start Date****End Date****Conversation****Group****Instructions****Questions**** **
-
-Folder
-
-Yes
-
-Yes
-
-N/A
-
-No
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Link
-
-Yes
-
-Yes
-
-Yes
-
-No
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-LTI
-
-Yes
-
-Yes
-
-Yes
-
-No
-
-Yes
-
-Yes
-
-No
-
-No
-
-Yes
-
-Yes
-
-ForumEvent
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Assignment
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-No
-
-No
-
-Yes
-
-Yes
-
-ForumEvent
-
-No
-
-Yes
-
-N/A
-
-Yes
-
-Forum
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-No
-
-No
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Content File Upload
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-Yes
-
-Test
-
-No
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-No
-
-No
-
-Yes
-
-Yes
-
-ForumEvent
-
-No
-
-No
-
-No
-
-Yes
-
-Document
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-Yes
-
-File Upload
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-N/A
-
-N/A
-
-Yes
-
-Yes
-
-N/A
-
-N/A
-
-Yes
-
-N/A
-
-Yes
+plethora of use cases. Here is when a message will be sent:
+
+
+### Content Item Created
+
+| Object | Message Sent |
+| ------ |:------------:|
+| Folder | :heavy_check_mark: |
+| Link | :heavy_check_mark: |
+| LTI | :heavy_check_mark: |
+| Assignment | :heavy_check_mark: |
+| Forum |:heavy_check_mark:  |
+| Content File Upload | :heavy_check_mark: |
+| Test | :heavy_multiplication_x: |
+| Document | :heavy_check_mark: |
+| File Upload | :heavy_check_mark: |
+
+### Content Item Updated (by member value)
+
+The columns contain attributes of the Content Item. 
+
+**Legend**<br />
+:heavy_check_mark: - Changing this value emits a caliper event<br />
+:heavy_multiplication_x: - Changing this value does not emit a caliper event<br />
+:heavy_minus_sign: - This value is not applicable for this attribute<br />
+:curly_loop: - This results in a ForumEvent<br />
+
+| Object | Name | URL | Desc | Avl | Parms | Score | DueDate | StartDate | EndDate | Disc | Group | Inst | Questions |
+| ------ |:----:|:---:|:----:|:---:|:-----:|:-----:|:-------:|:---------:|:-------:|:----:|:-----:|:----:|:---------:|
+| Folder | :heavy_check_mark: | :heavy_minus_sign: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Link | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_minus_sign: |
+| LTI | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :curly_loop: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Assignment | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :curly_loop: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_minus_sign: |
+| Forum |:heavy_check_mark:  | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Content File Upload | :heavy_check_mark: | :heavy_minus_sign:| :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign:  | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
+| Test | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :curly_loop: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_multiplication_x: |
+| Document | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
+| File Upload | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
+
+### Content Item Deleted
+
+| Object | Message Sent |
+| ------ |:------------:|
+| Folder | :heavy_check_mark: |
+| Link | :heavy_check_mark: |
+| LTI | :heavy_check_mark: |
+| Assignment | :heavy_check_mark: |
+| Forum |:heavy_check_mark:  |
+| Content File Upload | :heavy_check_mark: |
+| Test | :heavy_check_mark: |
+| Document | :heavy_check_mark: |
+| File Upload | :heavy_check_mark: |
 
 OutcomeEvents are sent in bulk nightly. Here is some of the key data that is
 associated with these events:
@@ -319,21 +72,12 @@ associated with these events:
 
 **membership.roles** - #Instructor
 
-**action** - …/action#Created
+**action** - …/action#Created _**or**_ …/action#Updated _**or**_ …/action#Deleted
 
-_**or**_
+## Sample Payload
 
-…/action#Updated
-
-_**or**_
-
-…/action#Deleted
-
-# Sample Payload
-
-Here is a sample of what a payload might look like:**
-
-**
+Here is a sample of what a payload might look like:
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2016-03-16T17:23:46.224Z",  
@@ -467,4 +211,4 @@ Here is a sample of what a payload might look like:**
                    "federatedSession": null  
          }]  
     }
-
+```
