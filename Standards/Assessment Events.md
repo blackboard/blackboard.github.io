@@ -5,9 +5,9 @@
 <hr />
 Blackboard Learn's Caliper Analytics stream has two event types dedicated to
 assessments:
-<br />
-  * **AssessmentEvent**
-  * **AssessmentItemEvent**
+
+* **AssessmentEvent**
+* **AssessmentItemEvent**
 
 These events work hand-in-hand. An AssessmentEvent is fired whenever a student
 starts or submits a test, and the AssessmentItemEvent is fired whenever a
