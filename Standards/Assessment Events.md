@@ -163,7 +163,7 @@ Here is a sample of what a workflow might look like:
                "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/3A1747CAC43F389806C29D111B94F0B0"  
           },
 
-Return to top
+[Return to top](#assessment-events)
 
 ## 2. Start a Question
 
@@ -299,7 +299,7 @@ Return to top
                "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/3A1747CAC43F389806C29D111B94F0B0"  
           },
 
-Return to top
+[Return to top](#assessment-events)
 
 ## 3. Submit a Question
 
@@ -453,7 +453,7 @@ Return to top
                "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/3A1747CAC43F389806C29D111B94F0B0"  
           },
 
-Return to top
+[Return to top](#assessment-events)
 
 ## 4. Submit a Test
 
@@ -565,5 +565,5 @@ Return to top
                "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/3A1747CAC43F389806C29D111B94F0B0"  
           }] }
 
-Return to top
+[Return to top](#assessment-events)
 
