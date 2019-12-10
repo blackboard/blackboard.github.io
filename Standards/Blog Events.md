@@ -17,9 +17,8 @@ the key data that is associated with these events:
 
 # Sample Payload
 
-Here is a sample of what an event payload might look like:**
-
-**
+Here is a sample of what an event payload might look like:
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2018-04-04T13:52:50.316Z",  
@@ -95,4 +94,5 @@ Here is a sample of what an event payload might look like:**
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/4549E0F1C88B7ABB2393B09DE166C1A7"  
          }]  
     }
+```
 
