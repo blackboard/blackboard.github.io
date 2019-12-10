@@ -26,9 +26,8 @@ Here is some of the key data that is associated with these events:
 
 # Sample Payload
 
-Here is a sample of what a payload might look like:**
-
-**
+Here is a sample of what a payload might look like:
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T21:31:13.439Z",  
@@ -122,4 +121,4 @@ Here is a sample of what a payload might look like:**
               }  
          ]  
     }
-
+```
