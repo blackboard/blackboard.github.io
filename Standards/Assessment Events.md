@@ -5,7 +5,7 @@
 <hr />
 Blackboard Learn's Caliper Analytics stream has two event types dedicated to
 assessments:
-
+<br />
   * **AssessmentEvent**
   * **AssessmentItemEvent**
 
@@ -21,11 +21,7 @@ Here is some of the key data that is associated with these events:
 
 **object.@id** - …/assessments/id - the primary key for the assessment ID
 
-**action** - …/action#Started
-
-_**or**_** **
-
-…/action#Completed
+**action** - …/action#Started _**or**_ …/action#Completed
 
 ## AssessmentItemEvent
 
@@ -35,11 +31,7 @@ _**or**_** **
 
 **object.ispartOf.@id** .../assessments/id - the primary key for the assessment this questions is a part of
 
-**action** - …/action#Started
-
-_**or**_** **
-
-…/action#Completed
+**action** - …/action#Started _**or**_ …/action#Completed
 
 # Sample Workflow
 
