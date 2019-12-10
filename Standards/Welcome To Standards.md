@@ -7,7 +7,7 @@ This is space for the community to make contributions around working with
 educational technology standards. We are especially interested in standards
 put forth by [IMS Global](https://www.imsglobal.org) and [Advanced Distributed
 Learning (ADL)](https://www.adlnet.gov/adl-research/scorm).
-<br />
+<br /><br />
 Any member of the community can contribute documentation. We do not intend to
 document specification completely but rather to demonstrate and document
 experiences of integrating with Blackboard using these standards.
