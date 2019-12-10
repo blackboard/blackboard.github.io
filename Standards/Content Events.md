@@ -31,8 +31,8 @@ The columns contain attributes of the Content Item.
 :heavy_minus_sign: - This value is not applicable for this attribute<br />
 :curly_loop: - This results in a ForumEvent<br />
 
-| Object | Name | URL | Desc | Avl | Parms | Score | DueDate | StartDate | EndDate | Disc | Group | Inst | Questions |
-| ------ |:----:|:---:|:----:|:---:|:-----:|:-----:|:-------:|:---------:|:-------:|:----:|:-----:|:----:|:---------:|
+| Object | Name | URL | Desc | Avl | Parm | Score | Due Date | Start Date | End Date | Disc | Group | Inst | Qs |
+| ------ |:----:|:---:|:----:|:---:|:----:|:-----:|:-------:|:---------:|:-------:|:----:|:-----:|:----:|:---------:|
 | Folder | :heavy_check_mark: | :heavy_minus_sign: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_minus_sign: |
 | Link | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_minus_sign: | :heavy_minus_sign: |
 | LTI | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :curly_loop: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
