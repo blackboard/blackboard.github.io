@@ -19,11 +19,7 @@ Here is some of the key data that is associated with these events:
 
 **object.@id** - …/gradableItems/id - the primary key for the content ID
 
-**action** - …/action#Started
-
-_**or**_** **
-
-…/action#Completed
+**action** - …/action#Started _**or**_ …/action#Completed
 
 ## AssignableEvent - Group Assignment
 
@@ -33,11 +29,7 @@ _**or**_** **
 
 **extensions.bb:group.users** - an array of users in the group. The batchUId field will contain the batch_uid for the user
 
-**action** - …/action#Started
-
-_**or**_** **
-
-…/action#Completed
+**action** - …/action#Started _**or**_ …/action#Completed
 
 For a completed group assignment, the course information is located one level
 lower in group.subOrganizationOf
@@ -164,7 +156,7 @@ Here is a sample of what a workflow might look like:
               "federatedSession": null  
          },
 
-Return to top
+[Return to top](#assignable-events)
 
 ## 2. Submit an Assignment
 
@@ -271,7 +263,7 @@ Return to top
          }]  
     }
 
-Return to top
+[Return to top](#assignable-events)
 
 ## 1. Start a Group Assignment
 
@@ -401,7 +393,7 @@ Return to top
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/7FE848A87F1021034F32BCDDE7F1F797"  
          },
 
-Return to top
+[Return to top](#assignable-events)
 
 ## 2. Submit a Group Assignment
 
@@ -529,5 +521,5 @@ Return to top
          }]  
     }
 
-Return to top
+[Return to top](#assignable-events)
 
