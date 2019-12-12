@@ -28,7 +28,7 @@ To navigate to the REST API Integrations tool:
   1. Select **System Admin** in the main screen of Blackboard Learn.
   2. Select the **REST API Integrations** link is in the Building Blocks section:
 
-![REST API Integrations](/images/86984.png)
+![REST API Integrations](/images/86894.png)
 
 The main page for the REST API Integrations tool:
 
