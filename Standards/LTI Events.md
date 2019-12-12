@@ -173,5 +173,5 @@ Here is a sample of what a workflow might look like:
     }
 ```
 
-[Return to top](#lti-event)
+[Return to top](#lti-events)
 
