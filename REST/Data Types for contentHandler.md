@@ -12,15 +12,15 @@ Supported handlers include:
 
 | contentHandler ID | Description | Supported since |
 | ----------------- | ----------- | --------------- |
-| resource/x-bb-document | (Original) base document type, consists of rich text with an associated title<br />(Ultra) basic content item | 3000.1.0 |
-| resource/x-bb-externallink | external link | 3000.1.0 |
-| resource/x-bb-folder | document that has child documents | 3000.1.0 |
-| resource/x-bb-courselink | link to a Blackboard course | 3100.5.0 |
-| resource/x-bb-forumlink | link to a discussion object | 3100.6.0 |
-| resource/x-bb-blti-link | link to an LTI object | 3200.6.0 |
-| resource/x-bb-file | represents a file object within Learn | 3200.6.0 |
-| resource/x-bb-asmt-test-link | (Ultra only) Ultra assignment or test object | 3300.5.0 |
-| resource/x-bb-assignment | (Original only) | 3400.9.0 |
+| [resource/x-bb-document](#resourcex-bb-document) | (Original) base document type, consists of rich text with an associated title<br />(Ultra) basic content item | 3000.1.0 |
+| [resource/x-bb-externallink](#resourcex-bb-externallink) | external link | 3000.1.0 |
+| [resource/x-bb-folder](#resourcex-bb-folder) | document that has child documents | 3000.1.0 |
+| [resource/x-bb-courselink](#resourcex-bb-courselink) | link to a Blackboard course | 3100.5.0 |
+| [resource/x-bb-forumlink](#resourcex-bb-forumlink) | link to a discussion object | 3100.6.0 |
+| [resource/x-bb-blti-link](#resourcex-bb-blti-link) | link to an LTI object | 3200.6.0 |
+| [resource/x-bb-file](#resourcex-bb-file) | represents a file object within Learn | 3200.6.0 |
+| [resource/x-bb-asmt-test-link](#resourcex-bb-asmt-test-link) | (Ultra only) Ultra assignment or test object | 3300.5.0 |
+| [resource/x-bb-assignment](#resourcex-bb-assignment) | (Original only) | 3400.9.0 |
 
 ## resource/x-bb-document
 
