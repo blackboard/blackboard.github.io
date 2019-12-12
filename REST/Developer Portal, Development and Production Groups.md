@@ -3,16 +3,17 @@
 *Categories: []*  
 *Tags: ['rest', 'groups', 'developer portal', 'developer groups', 'application groups', 'rate limits', 'group', 'naming', 'production', 'convention', 'developer']*  
 <hr />
+
 **Contents**
 
-  * What are Groups?
-  * Group Naming Requirements
-  * Creating Groups in the Developer Portal
-  * Managing Group Applications
-  * Managing Group Developers
-  * The Developer View
+* [What are Groups?](#what-are-groups?)
+* [Group Naming Requirements](#group-nameing-requirements)
+* [Creating Groups in the Developer Portal](#creating-groups-in-the-developer-portal)
+* [Managing Group Applications](#managing-group-applications)
+* [Managing Group Developers](#managing-group-developers)
+* [The Developer View](#the-developer-view)
 
-# What are Groups?
+## What are Groups?
 
 The Blackboard Developer Portal provides the means to manage application
 releases and associated developers through the concept of Groups. You can
@@ -40,7 +41,7 @@ groups will all have default developer account settings.
 
 This document explains how to create and manage your groups.
 
-# Group Naming Requirements
+## Group Naming Requirements
 
 This is a very important topic because the name you give the group is the name
 that shows up in the Blackboard Learn system that is associated with the
@@ -53,26 +54,20 @@ ID:
 For developers you could use following name. Notice how we include the company
 name, the product name, and who the group belongs to:
 
-SuperSoftware - Sudoku For Learners - Development Team 1
-
-SuperSoftware - Sudoku For Learners - Development Team 2
+* SuperSoftware - Sudoku For Learners - Development Team 1
+* SuperSoftware - Sudoku For Learners - Development Team 2
 
 Then your production group name could be the following:
 
-SuperSoftware - Sudoku For Learners
-
-or
-
-SuperSoftware, Sudoku For Learners
+* SuperSoftware - Sudoku For Learners; or
+* SuperSoftware, Sudoku For Learners
 
 If your company had a different product, say Multinote, it will have a
 different application ID and you will associate it with different groups, say:
 
-SuperSoftware - Multinote - Development Team 1
-
-SuperSoftware - Multinote - Development Team 2
-
-SuperSoftware - Multinote
+* SuperSoftware - Multinote - Development Team 1
+* SuperSoftware - Multinote - Development Team 2
+* SuperSoftware - Multinote
 
 If your company name indicates your product, and your product name is
 trademarked, then you have several choices for a production group name. For
@@ -80,9 +75,9 @@ example if your company is Mark's Software and your Trademarked' application
 is Multinote then you can have your production group name be one of the
 following:
 
-  * Mark's Software
-  * Multinote
-  * Mark's Software - Multinote
+* Mark's Software
+* Multinote
+* Mark's Software - Multinote
 
 **We ask that you not add other, unnecessary information to a production group name. For example, including text indicating that the group name is associated with Blackboard REST APIs is not necessary, nor is an indication of server type such as '-test', '-stage', or '-production', as given the context, we and the Learn Administrator know that's where and how the group name is being used.** It doesn't matter if you have a SOAP Web Service proxy of the same name as that shows up on a different page.
 
@@ -90,7 +85,7 @@ following:
 
 Next, let's take a look at how you create Groups.
 
-# Creating Groups in the Developer Portal
+## Creating Groups in the Developer Portal
 
 Management of Groups and Applications requires that you have logged into the
 Developer Portal. Once logged in you are taken to the Application Management
@@ -105,10 +100,7 @@ If you created your Developer Portal account before we introduced groups that
 is not a problem, you will now have a group based on your account information
 and you may edit this group name.
 
-[![1 - Sterling Moss apps - cropped.png](https://community.blackboard.com/serv
-let/JiveServlet/downloadImage/102-3336-11-102916/1392-900/1+-+Sterling+Moss+ap
-ps+-+cropped.png)](https://community.blackboard.com/servlet/JiveServlet/showIm
-age/102-3336-11-102916/1+-+Sterling+Moss+apps+-+cropped.png)
+![1 - Sterling Moss apps - cropped.png](/images/102916.png)
 
 When Sterling clicks on the My Groups link he is taken to the Groups
 management page (1) where he may view groups in which he is a member (2), view
@@ -118,10 +110,7 @@ administrator (4), and create groups and rename groups he is administering
 
 Groups are created by clicking the Create link next to the Group chooser.
 
-[![2 - Sterling Moss groups - cropped.png](https://community.blackboard.com/se
-rvlet/JiveServlet/downloadImage/102-3336-11-102917/1406-900/2+-+Sterling+Moss+
-groups+-+cropped.png)](https://community.blackboard.com/servlet/JiveServlet/sh
-owImage/102-3336-11-102917/2+-+Sterling+Moss+groups+-+cropped.png)
+![2 - Sterling Moss groups - cropped.png](/images/102917.png)
 
 When Stirling clicks Create, a dialog is displayed where he may enter the name
 of his group. Clicking the Create button will saves the group.
@@ -135,10 +124,7 @@ Applications later in this document.
 Sterling chooses to add a group. In this case Sterling is creating a group for
 his company's production software.
 
-[![3 - Sterling Moss add group - cropped.png](https://community.blackboard.com
-/servlet/JiveServlet/downloadImage/102-3336-11-102918/1409-899/3+-+Sterling+Mo
-ss+add+group+-+cropped.png)](https://community.blackboard.com/servlet/JiveServ
-let/showImage/102-3336-11-102918/3+-+Sterling+Moss+add+group+-+cropped.png)
+![3 - Sterling Moss add group - cropped.png](/images/102918.png)
 
 Note that on creating a group you are automatically added to the group with
 administrator privileges. This allows you to add developers or otherwise
@@ -150,25 +136,16 @@ to this new group to assist with administrating the group.
 
 Let's take a look at managing a group's applications...
 
-[![4 - Sterling Moss groups after add group - cropped.png](https://community.b
-lackboard.com/servlet/JiveServlet/downloadImage/102-3336-11-102919/1407-900/4+
--+Sterling+Moss+groups+after+add+group+-+cropped.png)](https://community.black
-board.com/servlet/JiveServlet/showImage/102-3336-11-102919/4+-+Sterling+Moss+g
-roups+after+add+group+-+cropped.png)
+![4 - Sterling Moss groups after add group - cropped.png](/images/102919.png)
 
-# Managing Group Applications
-
-#
+## Managing Group Applications
 
 As the owner of several applications and several groups you can associate
 applications with different developer groups.
 
 Let's log in as Steve Ranger, owner of RangerSoft.
 
-[![5 - Steve Ranger login - cropped.png](https://community.blackboard.com/serv
-let/JiveServlet/downloadImage/102-3336-11-102920/1409-899/5+-+Steve+Ranger+log
-in+-+cropped.png)](https://community.blackboard.com/servlet/JiveServlet/showIm
-age/102-3336-11-102920/5+-+Steve+Ranger+login+-+cropped.png)
+![5 - Steve Ranger login - cropped.png](/images/102920.png)
 
 When clicking the My Apps link Steve can now see his applications and the
 groups with which they are associated.
@@ -176,20 +153,13 @@ groups with which they are associated.
 Steve has his personal group "STEVE RANGER" (1), a development group -
 "RangerSoft - dev" (2), and his production group "RangerSoft" (3).
 
-[![6 - Steve Ranger apps - cropped.png](https://community.blackboard.com/servl
-et/JiveServlet/downloadImage/102-3336-11-102921/1407-900/6+-+Steve+Ranger+apps
-+-+cropped.png)](https://community.blackboard.com/servlet/JiveServlet/showImag
-e/102-3336-11-102921/6+-+Steve+Ranger+apps+-+cropped.png)
+![6 - Steve Ranger apps - cropped.png](/images/102921.png)
 
 Steve's groups have specific applications associated with them. Steve has his
 experimental application - Steve's Experiment - under his personal group. This
 application may be deleted by using the Trash can icon.
 
-[![7 - Steve Ranger change app group - cropped.png](https://community.blackboa
-rd.com/servlet/JiveServlet/downloadImage/102-3336-11-102922/1404-900/7+-+Steve
-+Ranger+change+app+group+-+cropped.png)](https://community.blackboard.com/serv
-let/JiveServlet/showImage/102-3336-11-102922/7+-+Steve+Ranger+change+app+group
-+-+cropped.png)
+![7 - Steve Ranger change app group - cropped.png](/images/102922.png)
 
 Steve also has an application in development - Multinote Plus. This is under
 his RangerSoft - dev group. This application also may be deleted by using the
@@ -209,7 +179,7 @@ Note that deleting an application **will** break any deployments. Also note
 that changing an application's group may change the rate_limit for that
 application.
 
-# Managing Group Developers
+## Managing Group Developers
 
 Developers who have been added to groups may see applications that are
 associated with a group and may also be designated as administrators of a
@@ -221,10 +191,7 @@ Groups management page.
 
 He then clicks the Add Developers icon as indicated by the arrow.
 
-[![8 - Steve Ranger groups - cropped.png](https://community.blackboard.com/ser
-vlet/JiveServlet/downloadImage/102-3336-11-102924/1404-900/8+-+Steve+Ranger+gr
-oups+-+cropped.png)](https://community.blackboard.com/servlet/JiveServlet/show
-Image/102-3336-11-102924/8+-+Steve+Ranger+groups+-+cropped.png)
+![8 - Steve Ranger groups - cropped.png](/images/102924.png)
 
 Clicking the Add Developer Icon opens a dialog for entering the email address
 of the developer he wants to add to his group.
@@ -236,11 +203,7 @@ registered.
 Steve enters the email address for one of his developers and clicks the Add
 Developer button.
 
-[![9 - Steve Ranger add dev to group - cropped.png](https://community.blackboa
-rd.com/servlet/JiveServlet/downloadImage/102-3336-11-102925/1404-900/9+-+Steve
-+Ranger+add+dev+to+group+-+cropped.png)](https://community.blackboard.com/serv
-let/JiveServlet/showImage/102-3336-11-102925/9+-+Steve+Ranger+add+dev+to+group
-+-+cropped.png)
+![9 - Steve Ranger add dev to group - cropped.png](/images/102925.png)
 
 Adding a developer to your group allows that developer to see all your
 applications. The administrator setting on the developer for a specific group
@@ -251,21 +214,14 @@ The default when adding a developer is that they have no admin privileges.
 Steve wants Junior to admin the applications associated with the RangerSoft -
 dev group, so Steve changes to that group and changes Junior's privileges.
 
-[![10 - Steve Ranger change group - cropped.png](https://community.blackboard.
-com/servlet/JiveServlet/downloadImage/102-3336-11-102926/1407-900/10+-+Steve+R
-anger+change+group+-+cropped.png)](https://community.blackboard.com/servlet/Ji
-veServlet/showImage/102-3336-11-102926/10+-+Steve+Ranger+change+group+-+croppe
-d.png)
+![10 - Steve Ranger change group - cropped.png](/images/102926.png)
 
-# The Developer View
+## The Developer View
 
 When Junior Developer logs into the Developer Portal he now sees the two
 RangerSoft groups that Steve created.
 
-[![11 - Picture1.png](https://community.blackboard.com/servlet/JiveServlet/dow
-nloadImage/102-3336-11-102927/1252-608/11+-+Picture1.png)](https://community.b
-lackboard.com/servlet/JiveServlet/showImage/102-3336-11-102927/11+-+Picture1.p
-ng)
+![11 - Picture1.png](/images/102927.png)
 
 Junior may admin the application association for the Multinote Plus
 application which is associated with the RangerSoft - dev group because Steve
