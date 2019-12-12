@@ -33,9 +33,8 @@ associated with these events:
 
 # Sample Workflow
 
-Here is a sample of what a workflow might look like:**
-
-**
+Here is a sample of what a workflow might look like:
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T21:34:20.220Z",  
@@ -270,4 +269,4 @@ Here is a sample of what a workflow might look like:**
               "federatedSession": null  
          }]  
     }
-
+```
