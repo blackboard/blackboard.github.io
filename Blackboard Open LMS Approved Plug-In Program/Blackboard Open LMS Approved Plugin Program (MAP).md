@@ -31,7 +31,7 @@ request to enable any approved plugin listed on our [Blackboard Open LMS Plugin 
 
 * Blackboard reviews all plugins included in the Open LMS codebase to ensure issues are not introduced for our client base. 
 * When an issue is identified with a plugin, the plugin maintainer is provided information of fixes required. An updated plugin should be submitted for review and inclusion in the next Blackboard Open LMS release.
-* Plugin maintainers can submit an updated plugin by [submitting a support case](/attachments/MAP+Support+Case+Process.pdf) through the Behind the Blackboard portal. 
+* Plugin maintainers can submit an updated plugin by [submitting a support case](/attachments/MAP%20Support%20Case%20Process.pdf) through the Behind the Blackboard portal. 
 
 ## Release Dates and Code Submission Due Dates
 
@@ -62,5 +62,5 @@ matrix](https://help.blackboard.com/Blackboard_Open_LMS/Administrator/Plugin_Mat
 
 ### Contacting Support
 
-[Reference the MAP Support Case Process](/attachments/MAP+Support+Case+Process.pdf)
+[Reference the MAP Support Case Process](/attachments/MAP%20Support%20Case%20Process.pdf)
 
