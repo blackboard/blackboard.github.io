@@ -22,23 +22,17 @@ Here is some of the key data that is associated with these events:
 
 **group.courseNumber** - the course batch_uid (i.e. the ID sent in by LIS or Data Integration)
 
-**action** - …/action#LTILaunch
+**action** - …/action#LTILaunch _**or**_ …/action#LTILaunchReturn
 
-or
+## Sample Workflow
 
-…/action#LTILaunchReturn
+Here is a sample of what a workflow might look like:
 
-# Sample Workflow
+  1. [User Clicks LTI Link](#1-user-clicks-lti-link)
+  2. [User Returns From LTI Tool](#2-user-returns-from-lti-tool)
 
-Here is a sample of what a workflow might look like:**
-
-**
-
-  1. User Clicks LTI Link
-  2. User Returns From LTI Tool
-
-## 1. User Clicks LTI Link
-
+### 1. User Clicks LTI Link
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T21:31:13.439Z",  
@@ -108,11 +102,12 @@ Here is a sample of what a workflow might look like:**
               "federatedSession": "session123"  
          }]  
     }
+```
 
-Return to top
+[Return to top](#lti-events)
 
-## 2. User Returns From LTI Tool
-
+### 2. User Returns From LTI Tool
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T21:31:13.439Z",  
@@ -176,6 +171,7 @@ Return to top
               "federatedSession": "session123"  
          }]  
     }
+```
 
-Return to top
+[Return to top](#lti-event)
 
