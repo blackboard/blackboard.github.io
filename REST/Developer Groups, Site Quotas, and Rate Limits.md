@@ -5,12 +5,12 @@
 <hr />
 In This Document
 
-  *     * Overview
-    * Developer Groups
-    * Production Groups
-    * Site Quotas
-    * Rate Limits
-    * Increasing Site Quota and Rate Limits
+* [Overview](#overview)
+* [Developer Groups](#developer-groups)
+* [Production Groups](#production-groups)
+* [Site Quotas](#site-quotas)
+* [Rate Limits](#rate-limits)
+* [Increasing Site Quota and Rate Limits](#increasing-site-quota-and-rate-limits)
 
 ## Overview
 
@@ -40,8 +40,7 @@ group can access it.
 Before moving to production, you must designate one group as the production
 group. The best practice is to name your production group after your
 organization. [See the Group Naming Requirements in this document for further
-details](https://community.blackboard.com/docs/DOC-3336-developer-portal-
-development-and-production-groups#jive_content_id_Group_Naming_Requirements).
+details](Developer%20Portal%2C%20Development%20and%20Production%20Groups.md#group-naming-requirements).
 
 Each developer group is subject to maximum site quotas and to daily limits on
 the number of API requests made. These limits start relatively low because
@@ -49,9 +48,7 @@ they are intended for development and testing only. To qualify for production-
 level site quotas and rate limits, you must designate a production group. To
 designate one of your groups as a production follow the steps provided at the
 end of this document. For more information about using, managing, and naming
-groups, see [https://community.blackboard.com/docs/DOC-3336-developer-portal-
-and-groups](https://community.blackboard.com/docs/DOC-3336-developer-portal-
-development-and-production-groups)
+groups, see [Developer Portal Development and Production Groups](Developer%20Portal%2C%20Development%20and%20Production%20Groups.md)
 
 ## Production Groups
 
@@ -83,19 +80,11 @@ have a 100K limit and three applications, each application will use a portion
 of that 100K limit. You can monitor the number of requests used so far at an
 application level using the http headers provided in each request response.
 
-**HTTP Header** **Description**
-
-X-Rate-Limit-Limit
-
-The rate limit ceiling for the given development group
-
-X-Rate-Limit-Remaining
-
-The number of requests left for the 24-hour period for the development group
-
-X-Rate-Limit-Reset
-
-The remaining time before the rate limit resets, given in UTC epoch seconds
+| HTTP Header | Description |
+| ----------- | ----------- |
+| X-Rate-Limit-Limit | The rate limit ceiling for the given development group |
+| X-Rate-Limit-Remaining | The number of requests left for the 24-hour period for the development group |
+| X-Rate-Limit-Reset | The remaining time before the rate limit resets, given in UTC epoch seconds |
 
 ## Increasing Site Quota and Rate Limits
 
@@ -103,17 +92,15 @@ If you are a Blackboard partner or licensed client when you need to increase
 the site quota and rate limit for your production group, **please open a
 ticket on Behind the Blackboard**. Provide the following in your request:
 
-• Production group name. Designate one of your groups as a production group if
+* **Production group name**. Designate one of your groups as a production group if
 you haven’t. Follow the process described above for creating the group name.
 This should be your CamelCaseCompanyName. Tell us the name in the ticket.
-
-• Developer email that owns the production group. One of your developers
+* **Developer email that owns the production group**. One of your developers
 created the account that is creating REST API apps and groups on
 developer.blackboard.com. When that developer creates your
 CamelCaseCompanyName production group, that developer's email is the
 "Developer email" referenced here.
-
-• A description of the application, both what it does and which APIs used.
+* A description of the application, both what it does and which APIs used.
 
 If you are an open-initiative developer please make your request by email to
 [developers@blackboard.com](mailto:developers@blackboard.com). In your
