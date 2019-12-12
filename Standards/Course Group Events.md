@@ -5,18 +5,17 @@
 <hr />
 Blackboard Learn's Caliper Analytics stream emits a CourseGroupEvent whenever
 an instructor creates, updates, or deletes a group in a course.
-
+<br/>
 Here is some of the key data that is associated with these events:
 
 ## CourseGroupEvent
 
 **extensions** - contains bb:group.users with list of course membership ids in the group
 
-# Sample Payload
+## Sample Payload
 
-Here is a sample of what a payload might look like:**
-
-**
+Here is a sample of what a payload might look like:
+```
          {  
               "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
               "@type": "http://caliper.blackboard.com/caliper/v1/CourseGroupEvent",  
@@ -133,4 +132,4 @@ Here is a sample of what a payload might look like:**
               },  
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/5076C35A57C7222B3327BD455FA57FAE"  
          }
-
+```
