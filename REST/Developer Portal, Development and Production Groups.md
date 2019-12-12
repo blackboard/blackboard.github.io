@@ -7,7 +7,7 @@
 **Contents**
 
 * [What are Groups?](#what-are-groups)
-* [Group Naming Requirements](#group-nameing-requirements)
+* [Group Naming Requirements](#group-naming-requirements)
 * [Creating Groups in the Developer Portal](#creating-groups-in-the-developer-portal)
 * [Managing Group Applications](#managing-group-applications)
 * [Managing Group Developers](#managing-group-developers)
