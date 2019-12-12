@@ -17,24 +17,21 @@ added to the Blackboard Open LMS codebase from our community or vendor
 partners. To join the MAP program and add a plugin to the Blackboard Open LMS
 codebase requires a Statement of Work (SOW) for a Code Review, plus Annual
 Support and Maintenance to continue in the program. Once added, clients can
-request to enable any approved plugin listed on our [Blackboard Open LMS
-Plugin Matrix](https://community.blackboard.com/external-link.jspa?url=https%3
-A//help.blackboard.com/Blackboard_Open_LMS/Administrator/Plugin_Matr
-ix).
+request to enable any approved plugin listed on our [Blackboard Open LMS Plugin Matrix](https://help.blackboard.com/Blackboard_Open_LMS/Administrator/Plugin_Matrix).
 
 ## Code Review Process
 
-      * Blackboard Open LMS performs code reviews of all code received from an outside party. If you wish to submit code, integrate a 3rd party tool, or integrate a Moodle plugin, the code must first be submitted to the MAP Program and pass a code review process. [Download a copy of the code review guide](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-31279/2018.09.26.CodeReviewGuidelines_Plugin_Program.pdf)[](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-31279/2018.09.26.CodeReviewGuidelines_Plugin_Program.pdf).
-      * **GDPR Compliance** - All plugins must comply with the requirements specified in [this document.](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-32400/2019.03.11.GDPR.Privacy_API_Compliance.pdf)
-      * If you are developing a Moodle plugin, download and read the [Blackboard Open LMS best practices and code review guidelines](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-31279/2018.09.26.CodeReviewGuidelines_Plugin_Program.pdf) to ensure that your code complies. For more information, [download the complete code review process guide](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-31280/2018.09.27.CodeReviewProcess_Plugin_Program.pdf).
-      * Note that starting with Blackboard Open LMS 3.2 release requires PHP 7.1. Plugins must be compatible with that version of PHP.
-      * Once we receive your submission, our Blackboard Open LMS Client Development team estimates the effort to review the code. They will then deliver a statement of work (SOW). Code review estimates are based on the length, complexity, and quality of the code. Once a signed SOW is in place, the Blackboard Open LMS team will review the code and determine whether it performs sufficiently within our hosted installation and meets our code quality standards. We add code that passes review to our codebase at the next Blackboard Open LMS release. If we do not pass your code, we will provide a detailed summary indicating the changes to make to assure its inclusion.
+* Blackboard Open LMS performs code reviews of all code received from an outside party. If you wish to submit code, integrate a 3rd party tool, or integrate a Moodle plugin, the code must first be submitted to the MAP Program and pass a code review process. [Download a copy of the code review guide](/attachments/2018.09.26.CodeReviewGuidelines_Plugin_Program.pdf).
+* **GDPR Compliance** - All plugins must comply with the requirements specified in [this document.](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-32400/2019.03.11.GDPR.Privacy_API_Compliance.pdf)
+* If you are developing a Moodle plugin, download and read the [Blackboard Open LMS best practices and code review guidelines](/attachments/2018.09.26.CodeReviewGuidelines_Plugin_Program.pdf) to ensure that your code complies. For more information, [download the complete code review process guide](/attachments/2018.09.27.CodeReviewProcess_Plugin_Program.pdf).
+* Note that starting with Blackboard Open LMS 3.2 release requires PHP 7.1. Plugins must be compatible with that version of PHP.
+* Once we receive your submission, our Blackboard Open LMS Client Development team estimates the effort to review the code. They will then deliver a statement of work (SOW). Code review estimates are based on the length, complexity, and quality of the code. Once a signed SOW is in place, the Blackboard Open LMS team will review the code and determine whether it performs sufficiently within our hosted installation and meets our code quality standards. We add code that passes review to our codebase at the next Blackboard Open LMS release. If we do not pass your code, we will provide a detailed summary indicating the changes to make to assure its inclusion.
 
 ## Annual Support & Maintenance
 
-      * Blackboard reviews all plugins included in the Open LMS codebase to ensure issues are not introduced for our client base. 
-      * When an issue is identified with a plugin, the plugin maintainer is provided information of fixes required. An updated plugin should be submitted for review and inclusion in the next Blackboard Open LMS release.
-      * Plugin maintainers can submit an updated plugin by [submitting a support case](https://community.blackboard.com/servlet/JiveServlet/download/1501-47-31696/MAP+Support+Case+Process.pdf) through the Behind the Blackboard portal. 
+* Blackboard reviews all plugins included in the Open LMS codebase to ensure issues are not introduced for our client base. 
+* When an issue is identified with a plugin, the plugin maintainer is provided information of fixes required. An updated plugin should be submitted for review and inclusion in the next Blackboard Open LMS release.
+* Plugin maintainers can submit an updated plugin by [submitting a support case](/attachments/MAP+Support+Case+Process.pdf) through the Behind the Blackboard portal. 
 
 ## Release Dates and Code Submission Due Dates
 
@@ -45,12 +42,7 @@ desired release date. Release dates are listed on the Blackboard Open LMS[
 Community Page](https://community.blackboard.com/groups/blackboardopenlms).
 
 You can look at our Plugin Matrix. It shows plugins currently available
-through the MAP Program. For more information [refer to the plug-in
-matrix](https://
-help.blackboard.com/Moodlerooms/Administrator/Get_Started/About_Moodle
-rooms/Plugin_Matrix).
-
-####
+through the MAP Program. For more information refer to the [plug-in matrix](https://help.blackboard.com/Blackboard_Open_LMS/Administrator/Plugin_Matrix).
 
 ## Who Supports What?
 
@@ -59,20 +51,16 @@ support levels.
 
 ### Support Levels
 
-      * Full Support
-      * Moodle Core Plugin Support
-      * Hosted Components Support and Channel Partner Support
-      * Blackboard Open LMS Maintained Vendor Support
-      * Community Plugin Support and Vendor Plugin Support
+* Full Support
+* Moodle Core Plugin Support
+* Hosted Components Support and Channel Partner Support
+* Blackboard Open LMS Maintained Vendor Support
+* Community Plugin Support and Vendor Plugin Support
 
-Support levels available for each approved plug-in are listed on[ our plugin
-matrix](https://
-help.blackboard.com/Moodlerooms/Administrator/Get_Started/About_Moodle
-rooms/Plugin_Matrix%23what-do-the-support-levels-mean). (To see the support
-levels, click the link on the right, or scroll to the bottom of the page.)
+Support levels available for each approved plug-in are listed on [our plugin
+matrix](https://help.blackboard.com/Blackboard_Open_LMS/Administrator/Plugin_Matrix#what-do-the-support-levels-mean_OTP-5).
 
 ### Contacting Support
 
-[Reference the MAP Support Case Process](https://community.blackboard.com/serv
-let/JiveServlet/download/1501-47-31696/MAP+Support+Case+Process.pdf)
+[Reference the MAP Support Case Process](/attachments/MAP+Support+Case+Process.pdf)
 
