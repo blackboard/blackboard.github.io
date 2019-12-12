@@ -5,8 +5,8 @@
 <hr />
 Caliper Analytics is an IMS Global standard focused on the delivery of
 consistent event tracking across campus applications. For more information on
-the Caliper Analytics specification, visit the IMS site [here](https://www.imsglobal.org/activity/caliperram).
-
+the Caliper Analytics specification, visit the IMS site [here](https://www.imsglobal.org/activity/caliper).
+<br /><br />
 Caliper is implemented in Blackboard Learn as the Learn Activity Stream. This
 data is stored in an external system called the Caliper Event Store. This
 server lives in the Blackboard Cloud and is not externally accessible at this
