@@ -3,11 +3,11 @@
 *Categories: []*  
 *Tags: ['rest', 'api', 'developers', 'authentication', 'authorization', 'oauth', 'developer']*  
 <hr />
+
 ## Overview
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC
-Standard](https://community.blackboard.com/external-
-link.jspa?url=https%3A//tools.ietf.org/html/rfc6749). Each developer
+Standard](https://tools.ietf.org/html/rfc6749). Each developer
 has a unique key and secret associated with each application they create. The
 developer makes an HTTP Post directly to the REST-enabled Learn server
 requesting an OAuth access token. The Learn instance forwards the request to
@@ -18,17 +18,12 @@ access to the Learn REST API for one hour. The developer uses this token in
 subsequent REST calls until the token expires. This workflow is illustrated in
 the following diagram:
 
-[![OAuth Workflow
-Diagram](https://bbuniversity.blackboard.com/bbcswebdav/pid-65012-dt-content-r
-id-132617_1/xid-132617_1)](https://bbuniversity.blackboard.com/bbcswebdav/pid-
-65012-dt-content-rid-132617_1/xid-132617_1)
+![OAuth Workflow Diagram](https://bbuniversity.blackboard.com/bbcswebdav/pid-65012-dt-content-rid-132617_1/xid-132617_1)
 
 **WARNING: Never share or expose an application's key/secret pair. These are used for requesting OAuth tokens, which enable the holder to issue REST requests. Exposing an application key/secret pair or token is a serious security risk. If you think you have exposed a key/secret pair you may request a new pair for the application using the Developer Portal My Applications management page.**
 
 REST calls are subject to quotas and limits. For more information, see
-[Developer Groups, Site Quotas, and Rate
-Limits](https://community.blackboard.com/docs/DOC-4258-developer-groups-site-
-quotas-and-rate-limits).
+[Developer Groups, Site Quotas, and Rate Limits](Developer%20Groups%2C%20Site%20Quotas%2C%20and%20Rate%20Limits.md).
 
 ## Before You Start
 
@@ -44,27 +39,27 @@ Learn instance. Registering your application with your Learn instance provides
 you with an application key and secret.
 
 Use cURL or an appropriate HTTP library to make a POST REST call to the
-/learn/api/public/v1/oauth2/token endpoint.
+`/learn/api/public/v1/oauth2/token` endpoint.
 
-  * Headers must include:
-    * Content-Type set to application/x-www-form-urlencoded
-    * Authorization set to Basic followed by a space and with your base64-encoded credentials appended. Credentials must be formatted as application-key:secret before encoding.  
-For example, if your application key were 12345678-1234-5678-1234-1234567890ab
-and your secret were abcdefghijklmnopqrstuvwxyzabcdef, you would encode the
-string 12345678-1234-5678-1234-1234567890ab:abcdefghijklmnopqrstuvwxyzabcdef,
-yielding the encoded value MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmF
-iY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6YWJjZGVm
+Headers must include:
+* Content-Type set to application/x-www-form-urlencoded
+* Authorization set to Basic followed by a space and with your base64-encoded credentials appended. Credentials must be formatted as application-key:secret before encoding.  
+
+For example, if your application key were `12345678-1234-5678-1234-1234567890ab
+and your secret were abcdefghijklmnopqrstuvwxyzabcdef`, you would encode the
+string `12345678-1234-5678-1234-1234567890ab:abcdefghijklmnopqrstuvwxyzabcdef`,
+yielding the encoded value `MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmF
+iY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6YWJjZGVm`.
 
 Prepending Basic to that value gives
 
-Basic MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmFiY2RlZmdoaWprbG1ub3Bx
-cnN0dXZ3eHl6YWJjZGVm
+`Basic MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmFiY2RlZmdoaWprbG1ub3Bx
+cnN0dXZ3eHl6YWJjZGVm`
 
 which would be your Authorization header value. Some REST libraries and
 clients like cURL handle this encoding for you.
 
-  * The body must include:
-    * grant_type set to client_credentials.
+The body must include: grant_type=client_credentials.
 
 If everything is working correctly, the server will return an HTTP 200
 response and a data body. The data body includes a field access_token. Your
@@ -77,14 +72,12 @@ authorize other REST calls.
 
 Use cURL or an appropriate HTTP library to make a REST call to the appropriate
 endpoint. For a list of endpoints and the methods supported for each, see the
-Blackboard Learn REST reference docs at [https://developer.blackboard.com/port
-al/displayApi/Learn](https://community.blackboard.com/external-link.jspa?url=h
-ttps%3A//developer.blackboard.com/portal/displayApi/Learn).
+Blackboard Learn REST reference docs at https://developer.blackboard.com/portal/displayApi/Learn.
 
-  * Headers must include:
-    * Content-Type and Accept should be set as specified by the reference docs for the call you want.
-    * Authorization set to Bearer followed by a space and your access token. For example, Bearer abcdefghijklmnopqrstuvwxyzabcdef
-  * The body and URL parameters must be set as specified by the reference docs for the call you want.
+Headers must include:
+* Content-Type and Accept should be set as specified by the reference docs for the call you want.
+* Authorization set to Bearer followed by a space and your access token. For example, `Bearer abcdefghijklmnopqrstuvwxyzabcdef`
+* The body and URL parameters must be set as specified by the reference docs for the call you want.
 
 If everything is working correctly, the server will return an HTTP 200
 response and a response body as specified by the reference docs for the call
@@ -93,19 +86,17 @@ you made.
 ## Example: Using cURL to Get a Token and Make a REST Call
 
 The easist way to test is using cURL. We will assume you have already
-registered through the [Developer
-Portal](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal) and
+registered through the [Developer Portal](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) and
 retrieved your application ID, key, and secret, as well as [added your
-application ID](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-administrators) to
+application ID](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) to
 the Learn server you wish to integrate with:
 
-  1. From the command line, use cURL to send a token request to Learn, signed with their application key and secret:   
-
+1. From the command line, use cURL to send a token request to Learn, signed with their application key and secret:   
+```
     key=<your key>  
     secret=<your secret>   
     curl -i -X POST -u "$key:$secret" [https://](https://community.blackboard.com/)<your server>/learn/api/public/v1/oauth2/token -d "grant_type=client_credentials"
+```
 
 The cURL statement calls and HTTP POST request. This POST request contains an
 Authorization header that states this is Basic authentication. The cURL
@@ -113,8 +104,8 @@ command uses the -u switch to create and send a Base64-encoded version of
 key:secret. cURL sets content-type to application/x-www-form-urlencoded for
 you.
 
-  2. The developer portal returns a standard OAuth 2.0 response, which is passed back to the developer. For example:  
-
+2. The developer portal returns a standard OAuth 2.0 response, which is passed back to the developer. For example:  
+```
     HTTP/1.1 200 OK   
     Content-Type: application/json;charset=UTF-8   
     Cache-Control: no-store   
@@ -124,15 +115,17 @@ you.
          "token_type": "bearer",  
          "expires_in": 3600   
     }  
+```
 
-  3. Use the returned access token to make further REST calls. For example:  
-
+3. Use the returned access token to make further REST calls. For example:  
+```
     curl -X GET -H "authorization: Bearer abcdefghijklmnopqrstuvwxyz" https://yourserver/learn/api/public/v1/users?query=userName
+```
 
 ### Implementation notes:
 
-  * Tokens expire after 1 hour, as per the OAuth RFC examples.
-  * Tokens are associated with a specific Learn site.
-  * Any application may have only one token per Learn site. Asking for a token returns the existing one with an updated expiry time if it has not expired yet.
-  * Check the [REST API Documentation](https://developer.blackboard.com/portal/displayApi) for error codes.
+* Tokens expire after 1 hour, as per the OAuth RFC examples.
+* Tokens are associated with a specific Learn site.
+* Any application may have only one token per Learn site. Asking for a token returns the existing one with an updated expiry time if it has not expired yet.
+* Check the [REST API Documentation](https://developer.blackboard.com/portal/displayApi) for error codes.
 
