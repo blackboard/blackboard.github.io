@@ -200,8 +200,7 @@ link.jspa?url=http%3A//www.blackboard.com/)">Blackboard</a></p>
 
 It would render as follows in Ultra UI:
 
-[![BbMLrender.png](https://community.blackboard.com/servlet/JiveServlet/downlo
-adImage/102-3851-18-112323/BbMLrender.png)](/images/112323.png)
+![BbMLrender.png](/images/112323.png)
 
 ## Uploaded files
 
@@ -225,7 +224,7 @@ recommened to also include a data-bbfile attribute. An example value of this
 can be seen above in the BbML specification section. However, to describe it a
 bit more, the data-bbfile attribute's value is an HTML encoded json string:
 
-HTML encoded: `{"render":"inline","linkName":"1.jpg","mimeType":"image/jpeg"}`
+HTML encoded: `{"render":"inline","linkName":"1.jpg","mimeType":"image/jpeg"}`<br/>
 HTML decoded: `{"render":"inline","linkName":"filename.ext","mimeType":"image/jpeg"}`
 
 * render: At this time, it is recommended to only use 'inline.'
@@ -269,8 +268,8 @@ Tags without a `data-bbfile` attribute, or with an unrecognized value for
 
 * **linkName** - the name of the file
 * **render** - 
---* "inline" to render images/video/audio/etc inline
---* "attachment" to show as a block
+  * "inline" to render images/video/audio/etc inline
+  * "attachment" to show as a block
 * **alternativeText** - alt text for accessibility
 * **mimeType** - the mime type of the file
 * **isDecorative** - a flag indicating whether the image is decorative. Currently always false for images generated in Ultra.
@@ -329,14 +328,14 @@ Notes:
 * **linkType** - 'resource/x-bb-bltiplacement'
 * **linkRefId** - The PK of the placement record
 * **Partner Cloud**
---* "linkType" - 'resource/x-bbgs-partner-cloud'
---* "linkRefId" - The partner tool ID. Usually some concatenation of partner ID + the tool ID
+  * "linkType" - 'resource/x-bbgs-partner-cloud'
+  * "linkRefId" - The partner tool ID. Usually some concatenation of partner ID + the tool ID
 * **LTI Link**
---* "linkType" - 'resource/x-bb-blti-link'
---* "linkRefId" - The PK of the parent IMS Deep Linking placement. Used to look up key/secret at launch
---* "url" - LTI Tool Url
---* "launchInNewWindow" - Whether to launch in an iframe or new window
---* "customParameters" - Custom parameters to pass with the launch as JSON
+  * "linkType" - 'resource/x-bb-blti-link'
+  * "linkRefId" - The PK of the parent IMS Deep Linking placement. Used to look up key/secret at launch
+  * "url" - LTI Tool Url
+  * "launchInNewWindow" - Whether to launch in an iframe or new window
+  * "customParameters" - Custom parameters to pass with the launch as JSON
 
 Notes:
 
