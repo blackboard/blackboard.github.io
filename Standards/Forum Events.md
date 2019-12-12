@@ -6,8 +6,7 @@
 Blackboard Learn's Caliper Analytics stream emits a ForumEvent to cover five
 use cases:
 
-  * **User posts a non-gradable thread  
-**
+  * **User posts a non-gradable thread**  
   * **User posts a gradable thread**
   * **User posts an assignment conversation comment**
   * **User posts a non-gradable thread for group discussion**
@@ -21,15 +20,7 @@ Here is some of the key data that is associated with these events:
 
 **extensions** - contains a tag called bb:user.externalId with the batch_uid for the user
 
-**action** - …/action#Create
-
-_**or**_
-
-…/action#Update
-
-_**or**_
-
-…/action#Draft
+**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
 ## ForumEvent - Gradable Thread
 
@@ -39,15 +30,7 @@ _**or**_
 
 **object.forumPointsPossible** - number of possible points
 
-**action** - …/action#Create
-
-_**or**_
-
-…/action#Update
-
-_**or**_
-
-…/action#Draft
+**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
 ## ForumEvent - Assignment Conversation Comment
 
@@ -57,15 +40,7 @@ _**or**_
 
 **object.forumPointsPossible** - number of possible points
 
-**action** - …/action#Create
-
-_**or**_
-
-…/action#Update
-
-_**or**_
-
-…/action#Draft
+**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
 ## ForumEvent - Non-Gradable Group Thread
 
@@ -75,15 +50,7 @@ _**or**_
 
 **group.subOrganizationOf - **course information
 
-**action** - …/action#Create
-
-_**or**_
-
-…/action#Update
-
-_**or**_
-
-…/action#Draft
+**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
 ## ForumEvent - Group Conversation Comment
 
@@ -95,26 +62,18 @@ _**or**_
 
 **group.subOrganizationOf - **course information
 
-**action** - …/action#Create
+**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
-_**or**_
-
-…/action#Update
-
-_**or**_
-
-…/action#Draft
-
-# Sample Payloads
+## Sample Payloads
 
 Here are two sample payloads to illustrate the difference between a gradable
 and non-gradable ForumEvent:
 
-  1. Non-Gradable Thread
-  2. Gradable Thread
+  1. [Non-Gradable Thread](#non-gradable-thread)
+  2. [Gradable Thread](#gradable-thread)
 
-## 1. Non-Gradable Thread
-
+### 1. Non-Gradable Thread
+```
     {  
          "sensor": "d29571de-6527-410a-a26f-ff7416e16512",  
          "sendTime": "2016-03-14T22:26:21.638Z",  
@@ -193,11 +152,12 @@ and non-gradable ForumEvent:
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/sessions/F134BF7AC8648E9DEE822876CCE17AAE"  
          }]  
     }
+```
 
-Return to top
+[Return to top](#forum-events)
 
-## 2. Gradable Thread
-
+### 2. Gradable Thread
+```
     {  
          "sensor": "d29571de-6527-410a-a26f-ff7416e16512",  
          "sendTime": "2016-03-14T22:26:21.638Z",  
@@ -276,6 +236,7 @@ Return to top
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/sessions/F134BF7AC8648E9DEE822876CCE17AAE"  
          }]  
     }
+```
 
-Return to top
+[Return to top](#forum-events)
 
