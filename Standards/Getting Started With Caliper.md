@@ -5,7 +5,7 @@
 <hr />
 Caliper Analytics is an IMS Global standard focused on the delivery of
 consistent event tracking across campus applications. 
-<br /><br />
+
 For more information on
 the Caliper Analytics specification, visit the IMS site [here](https://www.imsglobal.org/caliper).
 <br /><br />
