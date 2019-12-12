@@ -8,26 +8,26 @@ multiple people in an instant from your computer or your smartphone. Two-way
 communication that's quick, to the person, to the point, secure and cost
 effective. Simple . Clever .
 
-## [XML Connector](https://community.blackboard.com/docs/DOC-1150)
+## [XML Connector](ConnectTxt%20XML%20Connector.md)
 
 In this section, the XML 1.1 Post integration methodology is documented.
 
-## [SOAP Connector](https://community.blackboard.com/docs/DOC-1151)
+## [SOAP Connector](ConnectTxt%20SOAP%20Connector%20for%20Messaging%20(v1.5).md)
 
 The SOAP Connector is simply a SOAP interface to implement the XML Post data
 integration
 
-## [email2text](https://community.blackboard.com/docs/DOC-1152)
+## [email2text](ConnectTxt%20Email2Text.md)
 
 The email2text application allows users to send email that can be sent via SMS
 to mobile handsets.
 
-## [Address Book Middleware](https://community.blackboard.com/docs/DOC-1153)
+## [Address Book Middleware](ConnectTxt%20SOAP%20Connector%20for%20Address%20Book%20(v1.5).md)
 
 This middleware allows an Institution the ability to automatically update the
 address book based on that institution's contact database.
 
-## [Programming APIs](https://community.blackboard.com/docs/DOC-1154)
+## [Programming APIs](ConnectTxt%20Programming%20APIs.md)
 
 The Programming APIs section contains sample code in several languages to help
 the developer get started.
