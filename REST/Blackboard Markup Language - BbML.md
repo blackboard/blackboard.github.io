@@ -56,8 +56,7 @@ For more information about each accepted element, see below.
 | Attribute | Comment |
 | --------- | ------- |
 | data-bbid | **Deprecated** Internal use only. |
-| data-bbfile | Rendering control for use with Ultra UI. `data-bbfile="{&quot;render&quot;:&quot;inline&quot;,&quot;linkName&quot;:&quot
-;1.jpg&quot;,&quot;mimeType&quot;:&quot;image/jpeg&quot;}"` |
+| data-bbfile | Rendering control for use with Ultra UI. `data-bbfile="{&quot;render&quot;:&quot;inline&quot;,&quot;linkName&quot;:&quot;1.jpg&quot;,&quot;mimeType&quot;:&quot;image/jpeg&quot;}"` |
 | data-bbtype | Internal use only. |
 | data-mce-href | Internal use only. |
 | href | |
