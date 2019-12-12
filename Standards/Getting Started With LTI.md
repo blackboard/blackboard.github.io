@@ -3,14 +3,15 @@
 *Categories: ['LTI']*  
 *Tags: ['lti', 'ims learning tools interoperability', 'ims global', 'developer', 'developers', 'standards', 'getting started']*  
 <hr />
-# Overview
+
+## Overview
 
 Learning Tool Interoperability is a standard from the IMS Global consortium.
 This standard focuses on contextual launches and grade return. For more
 information about the standard, see [Learning Tools
 Interoperability](https://imsglobal.org/lti).
 
-# Make Your LTI Tool Available to Learn Servers
+## Make Your LTI Tool Available to Learn Servers
 
 Once you have developed an LTI tool, you can share it with Learn
 administrators so that they can configure their Learn servers to work with it.
