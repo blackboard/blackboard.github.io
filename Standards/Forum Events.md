@@ -48,7 +48,7 @@ Here is some of the key data that is associated with these events:
 
 **extensions** - contains a tag called bb:user.externalId with the batch_uid for the user
 
-**group.subOrganizationOf - **course information
+**group.subOrganizationOf** - course information
 
 **action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
@@ -60,7 +60,7 @@ Here is some of the key data that is associated with these events:
 
 **object.forumPointsPossible** - number of possible points
 
-**group.subOrganizationOf - **course information
+**group.subOrganizationOf** - course information
 
 **action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
 
@@ -69,8 +69,8 @@ Here is some of the key data that is associated with these events:
 Here are two sample payloads to illustrate the difference between a gradable
 and non-gradable ForumEvent:
 
-  1. [Non-Gradable Thread](#non-gradable-thread)
-  2. [Gradable Thread](#gradable-thread)
+  1. [Non-Gradable Thread](#1-non-gradable-thread)
+  2. [Gradable Thread](#2-gradable-thread)
 
 ### 1. Non-Gradable Thread
 ```
