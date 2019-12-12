@@ -36,7 +36,7 @@ Here is a sample of what a workflow might look like:
 
   1. [User Logs In](#1-user-logs-in)
   2. [User Logs Out](#2-user-logs-out)
-  3. [Session Times Out](3-session-times-out)
+  3. [Session Times Out](#3-session-times-out)
 
 ### 1. User Logs In
 ```
