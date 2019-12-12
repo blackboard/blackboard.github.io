@@ -18,11 +18,7 @@ Here is some of the key data that is associated with these events:
 
 **extensions** - contains a tag called bb:user.externalId with the batch_uid for the user
 
-**action** - …/action#LoggedIn
-
-_**or**_
-
-…/action#LoggedOut
+**action** - …/action#LoggedIn _**or**_ …/action#LoggedOut
 
 ## SessionEvent -Timeout
 
@@ -34,18 +30,16 @@ _**or**_
 
 **action** - …/action#TimedOut
 
-# Sample Workflow
+## Sample Workflow
 
 Here is a sample of what a workflow might look like:
 
-**Assignment**
+  1. [User Logs In](#1-user-logs-in)
+  2. [User Logs Out](#2-user-logs-out)
+  3. [Session Times Out](3-session-times-out)
 
-  1. User Logs In
-  2. User Logs Out
-  3. Session Times Out
-
-## 1. User Logs In
-
+### 1. User Logs In
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T21:31:13.439Z",  
@@ -142,11 +136,12 @@ Here is a sample of what a workflow might look like:
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/CE26A89D1ED944324EBD52E0E6192490"  
          }]  
     }
+```
 
-Return to top
+[Return to top](#session-events)
 
-## 2. User Logs Out
-
+### 2. User Logs Out
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T21:32:44.239Z",  
@@ -226,11 +221,12 @@ Return to top
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/CE26A89D1ED944324EBD52E0E6192490"  
          }]  
     }  
+```
 
-Return to top
+[Return to top](#session-events)
 
-## 3. Session Times Out
-
+### 3. Session Times Out
+```
     {  
          "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
          "sendTime": "2015-12-10T19:35:44.159Z",  
@@ -298,6 +294,6 @@ Return to top
               "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/62AF2230B2921CCE4E7AA17139839CB1"  
          }]  
     }
+```
 
-Return to top
-
+[Return to top](#session-events)
