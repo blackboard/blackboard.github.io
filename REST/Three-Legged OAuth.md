@@ -42,7 +42,7 @@ The result of this action is that Marlee is presented with her school's
 Blackboard Learn login screen. She logs in and is presented with the following
 screen, asking her to authorize the application.
 
-![auth-screen.png](/images/113292.png)
+![auth-screen.png](/images/113292.png | width=100)
 
 Once Marlee clicks 'Allow', the URL sent as the redirect uri is called with
 the authorization code as a query parameter, for example:
@@ -132,6 +132,6 @@ client that sent the authorization code request.
 
 ## Examples
 
-* [Three-legged OAuth in Curl](Three-Legged%20OAuth.md#oauth2-three-legged---3LO)
+* [Three-legged OAuth in Curl](REST%20Demo%20Using%20cURL.md#oauth2-three-legged---3LO)
 * [BBDN-3LO-REST-Swift](https://github.com/blackboard/BBDN-3LO-REST-Swift)
 
