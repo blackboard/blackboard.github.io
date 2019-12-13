@@ -42,10 +42,8 @@ implement each step of the tutorial. Let's break down the base files:
 File | Package | Description
 ---- | ------- | -----------
 RestConstants.java | bbdn.rest | This class contains Constant values for running the code.
-RestDemo.java | bbdn.rest | This class is the main class for the project. We will discuss other classes as
-we move them into place, but this is the only file we will modify.
-UnSecurityUtil.java | bbdn.unsecurity | This class allows us to create a RestTemplate object based on whether we are
-testing on the DVM or in an environment with a valid SSL certificate.
+RestDemo.java | bbdn.rest | This class is the main class for the project. We will discuss other classes as we move them into place, but this is the only file we will modify.
+UnSecurityUtil.java | bbdn.unsecurity | This class allows us to create a RestTemplate object based on whether we are testing on the DVM or in an environment with a valid SSL certificate.
 
 ## RestConstants
 
