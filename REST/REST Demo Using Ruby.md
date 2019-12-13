@@ -7,55 +7,44 @@ The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting supported Learn objects.
 
-_Before running the example code you must register a developer account and
-application as described on the Developer Community [What is the Developer
-Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal)[What is the
-Developer Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal) and
-[Managing REST Integrations in Learn: The REST Integrations Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-
-administrators)[Managing REST Integrations in Learn: The REST Integrations
-Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-administrators)
-pages. You must also configure the script as outlined in the below Configure
-the Script section._
+## Prerequisites
+
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must 
+[register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+* You must also configure the script as outlined in the README for the project
 
 This Ruby command line Application allows you to:
 
-  * Authenticate
-  * Create, Read, and Update a Data Source
-  * Create, Read, and Update a Term
-  * Create, Read, and Update a Course
-  * Create, Read, and Update a User
-  * Create, Read, and Update a Membership
-  * Delete created objects in reverse order of create - membership, user, course, term, datasource.
+* Authenticate
+* Create, Read, and Update a Data Source
+* Create, Read, and Update a Term
+* Create, Read, and Update a Course
+* Create, Read, and Update a User
+* Create, Read, and Update a Membership
+* Delete created objects in reverse order of create - membership, user, course, term, datasource.
 
 All generated output is sent to the terminal.
 
-This is not meant to be a Ruby tutorial. It will not teach you to write code
+**This is not meant to be a Ruby tutorial. It will not teach you to write code
 in Ruby. It will, however, give a Developer familiar with Ruby the knowledge
-necessary to build a Web Services integration.
+necessary to build a Web Services integration.**
 
 ### Assumptions
 
 This help topic assumes the Developer:
 
-  * is familiar with Ruby
-  * has installed Ruby and the Ruby rest-client gem.
-  * has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Ruby) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Ruby/blob/master/README.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+* is familiar with Ruby
+* has installed Ruby and the Ruby rest-client gem.
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Ruby) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Ruby/blob/master/README.md) file.
+* has a REST-enabled Blackboard Learn instance.
 
 ### Code Walkthrough
 
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](https://community.blackboard.com/docs/DOC-1644-authorization-and-authentication) document.
+  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.md) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
 #### Authorization and Authentication
@@ -70,7 +59,7 @@ token with an updated expiry time until such time that the token has expired.
 There is no refresh token and currently no revoke token method.
 
 The Ruby code handles this with the following code:
-
+```
     bb_rest = RestClient::Resource.new $AUTH_PATH, $KEY, $SECRET
     bb_rest.post('grant_type=client_credentials', :accept => :json){ |response, request, result, &block|
               case response.code
@@ -85,6 +74,7 @@ The Ruby code handles this with the following code:
                         response.return!(request, result, &block)
                    end
       }
+```
 
 The JSON response is serialized into the Token object, and you may then
 retrieve those values from that object.
@@ -98,13 +88,13 @@ you need to control the content-type, which you do) when necessary, and then
 generating the appropriate HTTP Request, shipping it to Learn, and serializing
 the JSON response back into the appropriate object.
 
-End points are generally defined as /learn/api/public/v1/<object
-type>/<objectId>. Object ID can be either the pk1, like _1_1, or as the
+End points are generally defined as `/learn/api/public/v1/<object
+type>/<objectId>`. Object ID can be either the pk1, like `_1_1`, or as the
 batchuid. This value should be prepended by externalId:, like
-externalId:test101.
+`externalId:test101`.
 
-For example, to retrieve a course by the pk1 _1_1, you would call **GET
-/learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid test101, you
+For example, to retrieve a course by the pk1 `_1_1`, you would call **GET
+/learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid `test101`, you
 would call **GET /learn/api/public/v1/courses/externalId:test101.**
 
 Create is sent to Learn as a HTTP POST message with a JSON body that defines
@@ -120,9 +110,12 @@ the object. The endpoint should include the objectId being updated.
 Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
 should include the objectId being deleted.
 
+<hr />
+
 #### Datasources
 
 **Create**
+```
     payload = "{ \"externalId\":\"BBDN-DSK-RUBY\", \"description\": \"Demo Data Source used for REST Ruby Demo\" }"
     RestClient.post($DSK_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
            case response.code
@@ -136,8 +129,10 @@ should include the objectId being deleted.
                     response.return!(request, result, &block)
              end
     }
+```
 
 **Read**
+```
     RestClient.get($DSK_PATH + $dsk_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
                case response.code
                  when 200
@@ -147,8 +142,10 @@ should include the objectId being deleted.
                    response.return!(request, result, &block)
                  end
                }
+```
 
 **Update**
+```
     payload = "{ \"externalId\":\"BBDN-DSK-RUBY\", \"description\": \"Demo Data Source used for REST Ruby Demo - Updated\" }"
       
         RestClient.patch($DSK_PATH + $dsk_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
@@ -160,8 +157,10 @@ should include the objectId being deleted.
             response.return!(request, result, &block)
           end
         }
+```
 
 **Delete**
+```
     RestClient.delete($DSK_PATH + $dsk_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 204
@@ -171,10 +170,14 @@ should include the objectId being deleted.
                   response.return!(request, result, &block)
                 end
               }
+```
 
-Terms
+<hr />
+
+#### Terms
 
 **Create**
+```
     payload = "{ \"externalId\":\"BBDN-TERM-RUBY\", \"dataSourceId\":\"" + $dsk_id + "\", \"name\" : \"REST Demo Term - Ruby\", \"description\": \"Term Used For REST Demo - Ruby\", \"availability\" : { \"available\" : \"Yes\" } }"
     RestClient.post($TERM_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
          case response.code
@@ -188,8 +191,10 @@ Terms
                       response.return!(request, result, &block)
                end
     }
+```
 
 **Read**
+```
     RestClient.get($TERM_PATH + $term_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 200
@@ -199,8 +204,10 @@ Terms
                   response.return!(request, result, &block)
                 end
               }
+```
 
 **Update**
+```
     payload = "{ \"externalId\":\"BBDN-TERM-RUBY\", \"dataSourceId\":\"" + $dsk_id + "\", \"name\" : \"REST Demo Term - Ruby\", \"description\": \"Updated Term Used For REST Demo - Ruby\", \"availability\" : { \"available\" : \"Yes\" } }"
         RestClient.patch($TERM_PATH + $term_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
@@ -211,8 +218,10 @@ Terms
             response.return!(request, result, &block)
           end
         }
+```
 
 **Delete**
+```
     RestClient.delete($TERM_PATH + $term_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 204
@@ -222,10 +231,14 @@ Terms
                   response.return!(request, result, &block)
                 end
               }
+```
+
+<hr />
 
 #### Course
 
 **Create**
+```
     payload = "{ \"externalId\" : \"BBDN-Java-Ruby-Demo\", \"courseId\" : \"BBDN-Java-Ruby-Demo\", \"name\" : \"Course Used For REST Demo - Ruby\", \"description\" : \"Course Used For REST Demo - Ruby\", \"allowGuests\" : \"true\", \"readOnly\" : \"false\", \"termId\" : \"" + $term_id + "\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
         RestClient.post($COURSE_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
@@ -239,8 +252,10 @@ Terms
             response.return!(request, result, &block)
           end
         }
+```
 
 **Read**
+```
     RestClient.get($COURSE_PATH + $course_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 200
@@ -250,8 +265,10 @@ Terms
                   response.return!(request, result, &block)
                 end
               }
+```
 
 **Update**
+```
     payload = "{ \"externalId\" : \"BBDN-Java-Ruby-Demo\", \"courseId\" : \"BBDN-Java-Ruby-Demo\", \"name\" : \"Course Used For REST Demo - Ruby\", \"description\" : \"Updated Course Used For REST Demo - Ruby\", \"allowGuests\" : \"true\", \"readOnly\" : \"false\", \"termId\" : \"" + $term_id + "\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
         RestClient.patch($COURSE_PATH + $course_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
@@ -262,8 +279,10 @@ Terms
             response.return!(request, result, &block)
           end
         }
+```
 
 **Delete**
+```
     RestClient.delete($COURSE_PATH + $course_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 204
@@ -273,10 +292,14 @@ Terms
                   response.return!(request, result, &block)
                 end
               }
+```
+
+<hr />
 
 #### Users
 
 **Create**
+```
     payload = "{ \"externalId\" : \"bbdnrestdemorubyuser\", \"userName\" : \"restrubyuser\", \"password\" : \"Bl@ckb0ard!\", \"studentId\" : \"restrubyuser\", \"dataSourceId\" : \"" + $dsk_id + "\", \"name\" : { \"given\" : \"Ruby\", \"family\" : \"Rest Demo\" }, \"contact\" : { \"email\" : \"developers@blackboard.com\" }, \"availability\" : { \"available\" : \"Yes\" } }"
       
           RestClient.post($USER_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
@@ -291,8 +314,10 @@ Terms
               response.return!(request, result, &block)
             end
           }
+```
 
 **Read**
+```
     RestClient.get($USER_PATH + $user_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
                 case response.code
                   when 200
@@ -302,8 +327,10 @@ Terms
                     response.return!(request, result, &block)
                   end
                 } 
+```
 
 **Update**
+```
     payload = "{ \"externalId\" : \"bbdnrestdemorubyuser\", \"userName\" : \"restrubyuser\", \"password\" : \"Bl@ckb0ard!\", \"studentId\" : \"restrubyuser\", \"dataSourceId\" : \"" + $dsk_id + "\", \"name\" : { \"given\" : \"Ruby\", \"family\" : \"Rest Demo\", \"middle\" : \"updated\" }, \"contact\" : { \"email\" : \"developers@blackboard.com\" }, \"availability\" : { \"available\" : \"Yes\" } }"
       
           RestClient.patch($USER_PATH + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
@@ -315,8 +342,10 @@ Terms
               response.return!(request, result, &block)
             end
           }
+```
 
 **Delete**
+```
     RestClient.delete($USER_PATH + $user_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 204
@@ -326,10 +355,14 @@ Terms
                   response.return!(request, result, &block)
                 end
               }
+```
+
+<hr />
 
 #### Memberships
 
 **Create**
+```
     payload = "{ \"userId\" : \"" + $user_id + "\", \"courseId\" : \"" + $course_id + "\", \"courseRoleId\" : \"Student\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
       
           RestClient.put($COURSE_PATH + $course_id + '/users/' + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
@@ -344,8 +377,10 @@ Terms
               response.return!(request, result, &block)
             end
           }
+```
 
 **Read**
+```
     RestClient.get($COURSE_PATH + $course_id + '/users/' + $user_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
               case response.code
                 when 200
@@ -355,8 +390,10 @@ Terms
                   response.return!(request, result, &block)
                 end
               }
+```
 
 **Update**
+```
     payload = "{ \"userId\" : \"" + $user_id + "\", \"courseId\" : \"" + $course_id + "\", \"courseRoleId\" : \"Instructor\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
       
           RestClient.patch($COURSE_PATH + $course_id + '/users/' + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
@@ -368,8 +405,10 @@ Terms
               response.return!(request, result, &block)
             end
           }
+```
 
 **Delete**
+```
     RestClient.delete($COURSE_PATH + $course_id + '/users/' + $user_id, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
             case response.code
               when 204
@@ -379,13 +418,13 @@ Terms
                 response.return!(request, result, &block)
               end
             }
+```
 
-Conclusion
+### Conclusion
 
 All of the code snippets included in this document at included in a sample
 REST Demo Ruby application available on
-[GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-REST-Demo-Ruby).
+[GitHub](https://github.com/blackboard/BBDN-REST-Demo-Ruby).
 There is a README.md included that talks more specifically about building and
 running the code. Feel free to review the code and run it against a test or
 development Learn instance to see how it works.
