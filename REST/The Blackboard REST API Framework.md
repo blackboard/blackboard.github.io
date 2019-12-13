@@ -9,28 +9,24 @@ separate machine the health of your Blackboard Learn instance is dramatically
 improved by lowering complexity and reducing the amount of code running in a
 single location. The new REST API and Developer Portal are a work in progress
 and will continually grow in functionality as Blackboard Learn, the REST APIs,
-and the Developer Portal continue to mature. For additional information,
-please refer to the [Technical Preview document for REST
-APIs](https://community.blackboard.com/docs/DOC-1734). Feedback may be
-provided via the Developer area of Blackboard Community in the [REST Technical
-Preview discussion forum.](https://community.blackboard.com/thread/1930)
+and the Developer Portal continue to mature. 
 
 **The Actors in REST API Use Cases**
 
 There are three actors in the REST API use case:
 
-        1. _ **Developer:**_** **This is the person who writes an application that uses the new REST APIs. Through the application the developer manages authorization using the registered application’s OAuth Key and Secret, any data sent to or received from Blackboard Learn, and tracks application entitlements required for operation. _Developers are limited to non-production testing pursuant to the applicable REST Developer Agreements._
-        2. **_Blackboard Learn Administrator:_** By default, no Applications can access the REST APIs. A Blackboard Learn Administrator must enable each app from the Blackboard Learn Admin Panel before access is granted. This is done by creating an integration using the Blackboard Learn Admin REST API Integrations tool using the developer provided application Id* and a User with the required entitlements as specified by the developer. **_Important Note: _**By default NO integrations are enabled and the Blackboard Learn server will not allow integrations without a Blackboard Learn Administrator taking action.
-        3. **_Blackboard Learn Administrator:_**The Developer Portal: This is a new website ([https://developer.blackboard.com](https://developer.blackboard.com/)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Blackboard Learn.
+1. **Developer:**: This is the person who writes an application that uses the new REST APIs. Through the application the developer manages authorization using the registered application’s OAuth Key and Secret, any data sent to or received from Blackboard Learn, and tracks application entitlements required for operation. _Developers are limited to non-production testing pursuant to the applicable REST Developer Agreements._
 
-[![RESTDiagram.png](https://community.blackboard.com/servlet/JiveServlet/downl
-oadImage/102-1733-3-92929/628-366/RESTDiagram.png)](https://community.blackboa
-rd.com/servlet/JiveServlet/showImage/102-1733-3-92929/RESTDiagram.png)
+2. **Blackboard Learn Administrator**: By default, no Applications can access the REST APIs. A Blackboard Learn Administrator must enable each app from the Blackboard Learn Admin Panel before access is granted. This is done by creating an integration using the Blackboard Learn Admin REST API Integrations tool using the developer provided application Id* and a User with the required entitlements as specified by the developer. 
 
-Figure 1: The REST API Framework Actors, interactions, and data paths (click
-image to enlarge)
+**_Important Note_**: By default NO integrations are enabled and the Blackboard Learn server will not allow integrations without a Blackboard Learn Administrator taking action.
 
-* NOTE: We do NOT support a model where the developer of the REST Application requires the Learn Administrator to get the Application ID, key, and secret for installing the developer’s application on the Learn system. The developer will get one APP ID, key and secret for the one application. The developer is responsible for configuring the key and secret on their server. For security reasons, the key and secret should never be shared with the client or any other another party. The REST Application can determine which institution requests are coming from by examining the FQDN in the requests. There is no need for installing a separate Application ID for a given vendors application on each Learn instance.
+3. **Blackboard Learn Administrator**: The Developer Portal: This is a new website ([https://developer.blackboard.com](https://developer.blackboard.com/)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Blackboard Learn.
+
+![RESTDiagram.png](/images/92929.png)
+Figure 1: The REST API Framework Actors, interactions, and data paths
+
+* **NOTE**: We do NOT support a model where the developer of the REST Application requires the Learn Administrator to get the Application ID, key, and secret for installing the developer’s application on the Learn system. The developer will get one APP ID, key and secret for the one application. The developer is responsible for configuring the key and secret on their server. For security reasons, the key and secret should never be shared with the client or any other another party. The REST Application can determine which institution requests are coming from by examining the FQDN in the requests. There is no need for installing a separate Application ID for a given vendors application on each Learn instance.
 
 **How These Three Actors Work Together to Enable Blackboard Learn REST Integrations**
 
@@ -64,11 +60,12 @@ already available in Learn by assigning the user role READ only entitlements.
 
 **Data Exchange between the Actors**
 
-The request BODY or response is _never_ sent to the developer portal**.
+The request BODY or response is _never_ sent to the developer portal.
+
 **Personal data is exchanged between the application and Blackboard Learn
 system only - no personally identifiable data is shared with the portal.
 Therefore, all data may remain within the Learn server and REST application
-regions.
+regions.**
 
 Primary key identifiers (e.g. Learn PK1 for User or Course) are shared with
 the portal for purposes of request logging and error messages. Note that in an
@@ -100,19 +97,19 @@ response to the application or returns a 401 Invalid client credentials.
 1. Once authorized, the application may then make data oriented requests to
 Learn by including the issued Token.
 
-4. Developer data oriented requests are processed by Learn which returns
+2. Developer data oriented requests are processed by Learn which returns
 response data to the requesting application.
 
-a. Learn checks the local cache to validate the TOKEN – if valid it runs and
+   a. Learn checks the local cache to validate the TOKEN – if valid it runs and
 returns the request response.
 
-b. In a background thread Learn contacts the developer portal indicating a
+   b. In a background thread Learn contacts the developer portal indicating a
 specified request was used by a TOKEN on a Learn server.
 
-c. The developer portal responds to Learn to indicate if the TOKEN is still
+   c. The developer portal responds to Learn to indicate if the TOKEN is still
 valid (not revoked) and is still running under the rate limits.
 
-      * If the TOKEN has been revoked or rate limits have been reached, all future requests for that token will fail.
+* If the TOKEN has been revoked or rate limits have been reached, all future requests for that token will fail.
 
 **Note**: Learn sends REST transaction and error log messages to the portal for purposes of API management and usage. The data sent to the portal includes the Learn Instance ID, Developer Application ID, and the REST API used (GET /users/ for instance).
 
