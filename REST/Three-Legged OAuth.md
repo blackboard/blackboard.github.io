@@ -42,7 +42,7 @@ The result of this action is that Marlee is presented with her school's
 Blackboard Learn login screen. She logs in and is presented with the following
 screen, asking her to authorize the application.
 
-![auth-screen.png](/images/113292.png | width=100)
+<img src='/images/113292.png' width='300' alt='Blackboard Learn three-legged oauth authorization screen shot'/>
 
 Once Marlee clicks 'Allow', the URL sent as the redirect uri is called with
 the authorization code as a query parameter, for example:
