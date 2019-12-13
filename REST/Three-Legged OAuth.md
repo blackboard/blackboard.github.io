@@ -4,8 +4,7 @@
 *Tags: ['rest', 'authentication', 'authorization', '3lo', 'three-legged oauth', 'developer']*  
 <hr />
 One of the drawbacks associated with [Basic
-Authentication](https://community.blackboard.com/docs/DOC-1644-authorization-
-and-authentication) is that the application requires broad access, as the tool
+Authentication](Basic%20Authentication.md) is that the application requires broad access, as the tool
 is acting as a system-level user and enacting for the user. Three-legged OAuth
 (3LO) allows an application to act as a user. This sounds scary, but it
 actually allows for much more granular access control. Rather than a system
@@ -17,56 +16,22 @@ applications now have the ability to implement 3LO to authorize a user against
 the APIs and act as that user. In the spirit of sharing pretty pictures, here
 is a nice diagram displaying the workflow:
 
-[![3_legged_oauth_workflow.png](https://community.blackboard.com/servlet/JiveS
-ervlet/downloadImage/102-3976-8-113291/3_legged_oauth_workflow.png)](https://c
-ommunity.blackboard.com/servlet/JiveServlet/showImage/102-3976-8-113291/3_legg
-ed_oauth_workflow.png)
+![3_legged_oauth_workflow.png](/images/113291.png)
 
 So let's talk a bit about what is happening here. Let's pretend that we have
 built a mobile app that allows a student to get his or her grades. Today, we
 will be Marlee. Marlee picks up her iPhone and opens the GetMyGrades app. The
 first time Marlee opens the app, the app will send a GET request to
-/learn/api/public/v1/oauth2/authorizationcode with the Content-Type set to
-form/urlencoded and the following data as query parameters:
+`/learn/api/public/v1/oauth2/authorizationcode` with the Content-Type set to
+`form/urlencoded` and the following data as query parameters:
 
-**Parameter****Definition****Example**
-
-redirect_uri
-
-Where to redirect the user once they have authorized the application
-
-redirect_uri=[https://my.edu/authorized](https://community.blackboard.com/exte
-rnal-link.jspa?url=https%3A//my.edu/authorized)
-
-response_type
-
-Must be set to code. Tells the endpoint to return an authorization code
-
-response_type=code
-
-client_id
-
-The application's OAuth **key**, from the **key**/secret pair as registered in
-the developer portal. **NOTE: This is NOT the Application ID!!**
-
-client_id=8DBBA050-B830-414F-B7F1-0B448A6320C9
-
-scope
-
-The application's permissions: read, write, delete, and/or offline. Offline is
-required to use Refresh Tokens
-
-CAUTION: If you do not **set the scope appropriately** you will still be able
-to get an access_token, but when using the access_token you will not be able
-to GET, POST, or UPDATE as expected. Instead you will get error responses.
-
-scope=read
-
-state
-
-Opaque value used to prevent Cross Site Request Forgery
-
-state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0
+Parameter | Definition | Example
+--------- | ---------- | -------
+redirect_uri | Where to redirect the user once they have authorized the application | redirect_uri=https://my.edu/authorized
+response_type | Must be set to code. Tells the endpoint to return an authorization code | response_type=code
+client_id | The application's OAuth **key**, from the **key**/secret pair as registered in the developer portal.<br />**NOTE: This is NOT the Application ID!!** | client_id=8DBBA050-B830-414F-B7F1-0B448A6320C9
+scope | The application's permissions: read, write, delete, and/or offline.<br />Offline is required to use Refresh Tokens<br />_**CAUTION**_: If you do not **set the scope appropriately** you will still be able to get an access_token, but when using the access_token you will not be able to GET, POST, or UPDATE as expected. Instead you will get error responses. | scope=read
+state | Opaque value used to prevent Cross Site Request Forgery | state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0
 
 So in this example, my request would look like:
 
