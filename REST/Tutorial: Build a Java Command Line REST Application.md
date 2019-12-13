@@ -305,23 +305,23 @@ In the "1-Implement-OAuth" folder, you will find three files:
 
 Let's get started:
 
-  1. Move `/1-Implement-OAuth/Authorizer.java` to the `bbdn.rest` package.
-  2. Create a new package called `bbdn.rest.objects`.
-  3. Move `/1-Implement-OAuth/Token.java` to the `bbdn.rest.objects` package.
-  4. If you want a shortcut, you can copy the `/1-Implement-OAuth/RestDemo.java` file to the `bbdn.rest` package, otherwise open `bbdn.rest.RestDemo.java` and make the following edits:
-    1. Add an import to the top of your RestDemo to include the `bbdn.rest.objects` space:  
+1. Move `/1-Implement-OAuth/Authorizer.java` to the `bbdn.rest` package.
+2. Create a new package called `bbdn.rest.objects`.
+3. Move `/1-Implement-OAuth/Token.java` to the `bbdn.rest.objects` package.
+4. If you want a shortcut, you can copy the `/1-Implement-OAuth/RestDemo.java` file to the `bbdn.rest` package, otherwise open `bbdn.rest.RestDemo.java` and make the following edits:
+   1. Add an import to the top of your RestDemo to include `bbdn.rest.objects` space:  
 ``` java
     import bbdn.rest.objects.*;
 ```
-    2. Now highlight the log statement that prints our hello developer message and replace it with:  
+   2. Now highlight the log statement that prints our hello developer message and replace it with:  
 ``` java
     // Obtain Bearer Token
     Authorizer auth = new Authorizer(); // Instantiate Authorizer class
     Token token = auth.authorize(); // Authorize application and grab the Token object.
     log.debug("token: " + token.toString());
 ```
-  5. Save the file.
-  6. At the command line in the project directory, type `gradle run` and watch as the token is printed to the screen.
+5. Save the file.
+6. At the command line in the project directory, type `gradle run` and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in the `1-Implement-OAuth` folder to compare to your RestDemo.java if you have issues.
 
@@ -381,16 +381,16 @@ Workshop/blob/master/2-Implement-Datasource/RestDemo.java).
 
 Let's get started:
 
-  1. Move /2-Implement-Datasource/Datasource.java to the bbdn.rest.objects package.
-  2. Create a new package called bbdn.rest.services.
-  3. Move /2-Implement-Datasource/DatasourceHandler.java to the bbdn.rest.services package.
-  4. If you want a shortcut, you can copy the /2-Implement-Datasource/RestDemo.java file to the bbdn.rest package, otherwise open bbdn.rest.RestDemo.java and make the following edits:
-    1. Add an import to the top of your RestDemo to include the bbdn.rest.services space:  
-```
+1. Move /2-Implement-Datasource/Datasource.java to the bbdn.rest.objects package.
+2. Create a new package called bbdn.rest.services.
+3. Move /2-Implement-Datasource/DatasourceHandler.java to the bbdn.rest.services package.
+4. If you want a shortcut, you can copy the /2-Implement-Datasource/RestDemo.java file to the bbdn.rest package, otherwise open bbdn.rest.RestDemo.java and make the following edits:
+   1. Add an import to the top of your RestDemo to include the bbdn.rest.services space:  
+``` java
     import bbdn.rest.services.*;
 ```
-    2. Directly above the Authorizer instantiation, add the following code:  
-```
+   2. Directly above the Authorizer instantiation, add the following code:  
+``` java
     // Declare Datasource
     Datasource ds = null;
     // Declare Result to receive Delete response
@@ -398,8 +398,8 @@ Let's get started:
     // Initialize Handlers
     DatasourceHandler datasourceHandler = new DatasourceHandler(_hostname);
 ```
-    3. Directly below the log statement that writes the token information to the screen, add the following code:  
-```
+   3. Directly below the log statement that writes the token information to the screen, add the following code:  
+``` java
     // Datasource object
     if( OPER_ALL || OPER_DATASOURCE) {
       ds = datasourceHandler.createObject(token.getToken());
@@ -414,8 +414,8 @@ Let's get started:
       log.debug("Delete DS: " + result);
     }
 ```
-  5. Save the file.
-  6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
+5. Save the file.
+6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://github.com/blackboard/BBDN-DevCon-REST-
 Workshop/blob/master/2-Implement-Datasource/RestDemo.java) in the
@@ -486,19 +486,20 @@ In the "3-Implement-Term" folder, you will find four files:
 
 Let's get started:
 
-  1. Move /3-Implement-Term/TermHandler.java to the bbdn.rest.services package.
-  2. Move /3-Implement-Term/Term.java to the bbdn.rest.objects package.
-  3. Move /3-Implement-Term/Availability.java to the bbdn.rest.objects package.
-  4. If you want a shortcut, you can copy the /3-Implement-Term/RestDemo.java file to the bbdn.rest package, otherwise open bbdn.rest.RestDemo.java and make the following edits:
-    1. Directly below _Datasource ds = null;_, add:  
+1. Move /3-Implement-Term/TermHandler.java to the bbdn.rest.services package.
+2. Move /3-Implement-Term/Term.java to the bbdn.rest.objects package.
+3. Move /3-Implement-Term/Availability.java to the bbdn.rest.objects package.
+4. If you want a shortcut, you can copy the /3-Implement-Term/RestDemo.java file to the bbdn.rest package, otherwise open bbdn.rest.RestDemo.java and make the following edits:
+   1. Directly below _Datasource ds = null;_, add:  
 ``` java
     Term tm = null;
 ```
-    2. Directly below _DatasourceHandler datasourceHandler = new DatasourceHandler(_hostname);_, add:  
+   2. Directly below _DatasourceHandler datasourceHandler = new DatasourceHandler(_hostname);_, add:  
 ``` java
     TermHandler termHandler = new TermHandler(_hostname);
 ```
-    3. Between the closing curly bracket for the first _if( OPER_ALL || OPER_DATASOURCE) {_ and the start of the second, add:  ``` java
+   3. Between the closing curly bracket for the first _if( OPER_ALL || OPER_DATASOURCE) {_ and the start of the second, add:
+``` java
     // Term object
     if( OPER_ALL || OPER_TERM) {
       tm = termHandler.createObject(token.getToken(), ds.getId());
@@ -515,8 +516,9 @@ Let's get started:
       log.debug("Delete TM: " + result);
     }
 ```
-  5. Save the file.
-  6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
+
+5. Save the file.
+6. At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.
 
 Review the [RestDemo.java](https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in the
 3-Implementing-Term folder to compare to your RestDemo.java if you have
