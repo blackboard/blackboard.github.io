@@ -27,14 +27,10 @@ If you are working with a developer virtual machine (DVM) rather than an AMI,
 you may need an SSL connection to register successfully. In these cases, you
 receive an error message like the following:
 
-[![Screen+Shot+2016-04-24+at+10.50.13.png](https://community.blackboard.com/se
-rvlet/JiveServlet/downloadImage/102-1664-8-92928/Screen%2BShot%2B2016-04-24%2B
-at%2B10.50.13.png)](https://community.blackboard.com/servlet/JiveServlet/showI
-mage/102-1664-8-92928/Screen%2BShot%2B2016-04-24%2Bat%2B10.50.13.png)
+![Screen+Shot+2016-04-24+at+10.50.13.png](/images/92928.png)
 
 If you see this error message, try connecting to the Virtual Machine at
-[https://localhost:9877](https://community.blackboard.com/external-
-link.jspa?url=https%3A//localhost%3A9877/) and following the steps
+[https://localhost:9877](https://localhost:9877/) and following the steps
 above. This should allow you to register to the cloud and then you should be
 able to use it in non-SSL mode.
 
