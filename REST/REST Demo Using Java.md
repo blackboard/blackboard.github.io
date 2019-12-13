@@ -7,55 +7,44 @@ The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting supported Learn objects.
 
-_Before running the example code you must register a developer account and
-application as described on the Developer Community [What is the Developer
-Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal)[What is the
-Developer Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal) and
-[Managing REST Integrations in Learn: The REST Integrations Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-
-administrators)[Managing REST Integrations in Learn: The REST Integrations
-Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-administrators)
-pages. You must also configure the script as outlined in the below Configure
-the Script section._
+## Prerequisites
+
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must 
+[register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+* You must also configure the script as outlined in the README for the project
 
 This webapp allows you to:
 
-  * Authenticate
-  * Create, Read, and Update a Data Source
-  * Create, Read, and Update a Term
-  * Create, Read, and Update a Course
-  * Create, Read, and Update a User
-  * Create, Read, and Update a Membership
-  * Delete created objects in reverse order of create - membership, user, course, term, datasource.
+* Authenticate
+* Create, Read, and Update a Data Source
+* Create, Read, and Update a Term
+* Create, Read, and Update a Course
+* Create, Read, and Update a User
+* Create, Read, and Update a Membership
+* Delete created objects in reverse order of create - membership, user, course, term, datasource.
 
 All generated output is sent to the browser.
 
-This is not meant to be a Java tutorial. It will not teach you to write code
+**This is not meant to be a Java tutorial. It will not teach you to write code
 in Java. It will, however, give a Developer familiar with Java the knowledge
-necessary to build a Web Services integration.
+necessary to build a Web Services integration.**
 
-### Assumptions
+## Assumptions
 
 This help topic assumes the Developer:
 
-  * is familiar with Java
-  * has Tomcat running somewhere the webapp can be installed
-  * has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp) and built and deployed it to Tomcat in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp/blob/master/README.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+* is familiar with Java
+* has Tomcat running somewhere the webapp can be installed
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp) and built and deployed it to Tomcat in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp/blob/master/README.md) file.
+* has a REST-enabled Blackboard Learn instance.
 
-### Code Walkthrough
+## Code Walkthrough
 
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](https://community.blackboard.com/docs/DOC-1644-authorization-and-authentication) document.
+  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.md) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
 #### Authorization and Authentication
@@ -69,8 +58,8 @@ one hour, and subsequent calls to retrieve the token will return the same
 token with an updated expiry time until such time that the token has expired.
 There is no refresh token and currently no revoke token method.
 
-The java code handles this in bbdn.rest.Authorizer:
-
+The java code handles this in `bbdn.rest.Authorizer`:
+```
       HttpHeaders headers = new HttpHeaders();
       headers.add("Authorization", "Basic " + getHash());
       headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
@@ -80,6 +69,7 @@ The java code handles this in bbdn.rest.Authorizer:
       ResponseEntity<Token> response = restTemplate.exchange(uri, HttpMethod.POST, request, Token.class);
             
       Token token = response.getBody();
+```
 
 The JSON response is serialized into the Token object, and you may then
 retrieve those values from that object.
@@ -87,24 +77,24 @@ retrieve those values from that object.
 #### Calling Services
 
 The individual service calls are handled by Java Classes in service specific
-packages, that all implement the bbdn.rest.RestHandler interface. The
+packages, that all implement the `bbdn.rest.RestHandler` interface. The
 interface is used to normalize each service handler to make additional service
 implementation standardized as new endpoints are added.
 
 RestHandler dictates that four methods must be implemented:
 
-  * String createObject(String access_token);
-  * String readObject(String access_token);
-  * String updateObject(String access_token);
-  * String deleteObject(String access_token);
+* String createObject(String access_token);
+* String readObject(String access_token);
+* String updateObject(String access_token);
+* String deleteObject(String access_token);
 
 Each of these methods creates the JSON body when appropriate and then calls
-bbdn.rest.RestRequest to generate the appropriate HTTP Request, ship it to
+`bbdn.rest.RestRequest` to generate the appropriate HTTP Request, ship it to
 Learn, and return the JSON response as a String to be displayed in the browser
 window.
 
 This all happens with the following code:
-
+```
     public static String sendRequest(String sUri, HttpMethod method, String access_token, String body) {
          try {
               RestTemplate restTemplate = new RestTemplate();
@@ -136,16 +126,15 @@ This all happens with the following code:
               return(e.getMessage());
          }
     }
+```
 
-####
-
-End points are generally defined as /learn/api/public/v1/<object
-type>/<objectId>. Object ID can be either the pk1, like _1_1, or as the
+End points are generally defined as `/learn/api/public/v1/<object
+type>/<objectId>`. Object ID can be either the pk1, like `_1_1`, or as the
 batchuid. This value should be prepended by externalId:, like
-externalId:test101.
+`externalId:test101`.
 
-For example, to retrieve a course by the pk1 _1_1, you would call **GET
-/learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid test101, you
+For example, to retrieve a course by the pk1 `_1_1`, you would call **GET
+/learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid `test101`, you
 would call **GET /learn/api/public/v1/courses/externalId:test101.**
 
 Create is sent to Learn as a HTTP POST message with a JSON body that defines
@@ -161,37 +150,48 @@ the object. The endpoint should include the objectId being updated.
 Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
 should include the objectId being deleted.
 
-#### Datasources
+<hr />
 
-Datasources are handled in bbdn.rest.datasources.DatasourceHandler. As
+### Datasources
+
+Datasources are handled in `bbdn.rest.datasources.DatasourceHandler`. As
 illustrated above, this Class implements the RestHandler interface and exposes
 four methods. It also includes a private method to create the JSON payload.
 
 **Create**
+```
     @Override
     public String createObject(String access_token) {
           return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH, HttpMethod.POST, access_token, getBody()));
     }
+```
 
 **Read**
+```
     @Override
     public String readObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH + "/externalId:" + RestConstants.DATASOURCE_ID, HttpMethod.GET, access_token, ""));
     }
+```
 
 **Update**
+```
     @Override
     public String updateObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH + "/externalId:" + RestConstants.DATASOURCE_ID, HttpMethod.PATCH, access_token, getBody()));
     }
+```
 
 **Delete**
+```
      @Override
     public String deleteObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH + "/externalId:" + RestConstants.DATASOURCE_ID, HttpMethod.DELETE, access_token, ""));
     }
+```
 
-**Create** **Body**
+**Create Body**
+```
     private String getBody() {
          ObjectMapper objMapper = new ObjectMapper();
          JsonNode datasource = objMapper.createObjectNode();
@@ -205,10 +205,13 @@ four methods. It also includes a private method to create the JSON payload.
          }
          return(body);
     }
+```
+
+<hr />
 
 ### Terms
 
-Terms are handled in bbdn.rest.terms.TermHandler. As illustrated above, this
+Terms are handled in `bbdn.rest.terms.TermHandler`. As illustrated above, this
 Class implements the RestHandler interface and exposes four methods. It also
 includes a private method to create the JSON payload. In this initial release,
 we are omitting the datasource. This is because the externalId version of the
@@ -217,30 +220,39 @@ CONSTANT and set it to what we think it will be, but the ID isn't set until
 the Datasource is created, so we don't know for sure what it will be.
 
 **Create**
+```
     @Override
     public String createObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.TERM_PATH, HttpMethod.POST, access_token, getBody()));
     }
+```
 
 **Read**
+```
     @Override
     public String readObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.TERM_PATH + "/externalId:" + RestConstants.TERM_ID, HttpMethod.GET, access_token, ""));
     }
+```
 
 **Update**
+```
     @Override
     public String updateObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.TERM_PATH + "/externalId:" + RestConstants.TERM_ID, HttpMethod.PATCH, access_token, getBody()));
     }
+```
 
 **Delete**
+```
     @Override
     public String deleteObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.TERM_PATH + "/externalId:" + RestConstants.TERM_ID, HttpMethod.DELETE, access_token, ""));
     }
+```
 
 **Create Body**
+```
     private String getBody() {
          ObjectMapper objMapper = new ObjectMapper();
          ObjectNode term = objMapper.createObjectNode();
@@ -260,12 +272,13 @@ the Datasource is created, so we don't know for sure what it will be.
          }
          return(body);
     }
+```
 
-###
+<hr />
 
 ### Courses
 
-Course are handled in bbdn.rest.course.CourseHandler. As illustrated above,
+Course are handled in `bbdn.rest.course.CourseHandler`. As illustrated above,
 this Class implements the RestHandler interface and exposes four methods. It
 also includes a private method to create the JSON payload. In this initial
 release, we are omitting the datasource. This is because the externalId
@@ -275,30 +288,39 @@ isn't set until the Datasource is created, so we don't know for sure what it
 will be.
 
 **Create**
+```
     @Override
     public String createObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH, HttpMethod.POST, access_token, getBody()));
     }
+```
 
 **Read**
+```
     @Override
     public String readObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID, HttpMethod.GET, access_token, ""));
     }
+```
 
 **Update**
+```
     @Override
     public String updateObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID, HttpMethod.PATCH, access_token, getBody()));
     }
+```
 
 **Delete**
+```
     @Override
     public String deleteObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID, HttpMethod.DELETE, access_token, ""));
     }
+```
 
 **Create Body**
+```
     private String getBody() {
          ObjectMapper objMapper = new ObjectMapper();
          ObjectNode course = objMapper.createObjectNode();
@@ -320,10 +342,13 @@ will be.
          }
          return(body);
     }
+```
+
+<hr />
 
 ### Users
 
-Users are handled in bbdn.rest.users.UserHandler. As illustrated above, this
+Users are handled in `bbdn.rest.users.UserHandler`. As illustrated above, this
 Class implements the RestHandler interface and exposes four methods. It also
 includes a private method to create the JSON payload. In this initial release,
 we are omitting the datasource. This is because the externalId version of the
@@ -332,30 +357,39 @@ CONSTANT and set it to what we think it will be, but the ID isn't set until
 the Datasource is created, so we don't know for sure what it will be.
 
 **Create**
+```
     @Override
     public String createObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.USER_PATH, HttpMethod.POST, access_token, getBody()));
     }
+```
 
 **Read**
+```
     @Override
     public String readObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.USER_PATH + "/externalId:" + RestConstants.USER_ID, HttpMethod.GET, access_token, ""));
     }
+```
 
 **Update**
+```
     @Override
     public String updateObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.USER_PATH + "/externalId:" + RestConstants.USER_ID, HttpMethod.PATCH, access_token, getBody()));
     }
+```
 
 **Delete**
+```
     @Override
     public String deleteObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.USER_PATH + "/externalId:" + RestConstants.USER_ID, HttpMethod.DELETE, access_token, ""));
     }
+```
 
 **Create Body**
+```
     private String getBody() {
          ObjectMapper objMapper = new ObjectMapper();
          ObjectNode user = objMapper.createObjectNode();
@@ -378,10 +412,13 @@ the Datasource is created, so we don't know for sure what it will be.
          }
           return(body);
     }
+```
+
+<hr />
 
 ### Memberships
 
-Memberships are handled in bbdn.rest.memberships.MemberHandler. As illustrated
+Memberships are handled in `bbdn.rest.memberships.MemberHandler`. As illustrated
 above, this Class implements the RestHandler interface and exposes four
 methods. It also includes a private method to create the JSON payload. In this
 initial release, we are omitting the datasource. This is because the
@@ -390,33 +427,42 @@ time. We could create a CONSTANT and set it to what we think it will be, but
 the ID isn't set until the Datasource is created, so we don't know for sure
 what it will be. In addition, the endpoint for memberships is a bit different,
 in that it is a sub-call to courses, so the endpoint would look like
-/learn/api/public/v1/courses/<courseId>/users/<userId>.
+`/learn/api/public/v1/courses/<courseId>/users/<userId>`.
 
 **Create**
+```
     @Override
     public String createObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.PUT, access_token, getBody()));
     }
+```
 
 **Read**
+```
     @Override
     public String readObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.GET, access_token, ""));
     }
+```
 
 **Update**
+```
     @Override
     public String updateObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.PATCH, access_token, getBody()));
     }
+```
 
 **Delete**
+```
     @Override
     public String deleteObject(String access_token) {
          return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.DELETE, access_token, ""));
     }
+```
 
 **Create Body**
+```
     private String getBody() {
          ObjectMapper objMapper = new ObjectMapper();
          ObjectNode membership = objMapper.createObjectNode();
@@ -432,14 +478,13 @@ in that it is a sub-call to courses, so the endpoint would look like
          }
          return(body);
     }
+```
 
-### Conclusion
+## Conclusion
 
 All of the code snippets included in this document at included in a sample
 REST Demo Java Webapp application available on
-[GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-REST-Demo-Java-
-Webapp). There is a README.md included that talks more specifically about
+[GitHub](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp). There is a README.md included that talks more specifically about
 building and running the code. Feel free to review the code and run it against
 a test or development Learn instance to see how it works.
 
