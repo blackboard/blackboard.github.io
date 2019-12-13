@@ -7,58 +7,47 @@ The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting supported Learn objects.
 
-_Before running the example code you must register a developer account and
-application as described on the Developer Community [What is the Developer
-Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal)[What is the
-Developer Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal) and
-[Managing REST Integrations in Learn: The REST Integrations Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-
-administrators)[Managing REST Integrations in Learn: The REST Integrations
-Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-administrators)
-pages. You must also configure the script as outlined in the below Configure
-the Script section._
+## Prerequisites
+
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must 
+[register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+* You must also configure the script as outlined in the README for the project
 
 This PHP command line Application allows you to:
 
-  * Authenticate
-  * Create, Read, and Update a Data Source
-  * Create, Read, and Update a Term
-  * Create, Read, and Update a Course
-  * Create, Read, and Update a User
-  * Create, Read, and Update a Membership
-  * Delete created objects in reverse order of create - membership, user, course, term, datasource.
+* Authenticate
+* Create, Read, and Update a Data Source
+* Create, Read, and Update a Term
+* Create, Read, and Update a Course
+* Create, Read, and Update a User
+* Create, Read, and Update a Membership
+* Delete created objects in reverse order of create - membership, user, course, term, datasource.
 
 All generated output is sent to the terminal.
 
-This is not meant to be a PHP tutorial. It will not teach you to write code in
+**This is not meant to be a PHP tutorial. It will not teach you to write code in
 PHP. It will, however, give a Developer familiar with PHP the knowledge
-necessary to build a Web Services integration.
+necessary to build a Web Services integration.**
 
-### Assumptions
+## Assumptions
 
 This help topic assumes the Developer:
 
-  * is familiar with PHP
-  * has installed PHP and the HTTP_Request2 PHP Library
-  * has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-PHP) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-PHP/blob/master/README.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+* is familiar with PHP
+* has installed PHP and the HTTP_Request2 PHP Library
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-PHP) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-PHP/blob/master/README.md) file.
+* has a REST-enabled Blackboard Learn instance.
 
-### Code Walkthrough
+## Code Walkthrough
 
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](https://community.blackboard.com/docs/DOC-1644-authorization-and-authentication) document.
+  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.md) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
-#### Authorization and Authentication
+### Authorization and Authentication
 
 The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
 request is made to the token endpoint with a Basic Authorization header
@@ -69,8 +58,8 @@ one hour, and subsequent calls to retrieve the token will return the same
 token with an updated expiry time until such time that the token has expired.
 There is no refresh token and currently no revoke token method.
 
-The PHP code handles this in classes/Rest.class.php:
-
+The PHP code handles this in `classes/Rest.class`.php:
+```
     public function authorize() {
            $constants = new Constants();
            $token = new Token();
@@ -94,11 +83,12 @@ The PHP code handles this in classes/Rest.class.php:
            }
            return $token;
       }
+```
 
 The JSON response is serialized into the Token object, and you may then
 retrieve those values from that object.
 
-#### Calling Services
+### Calling Services
 
 The individual service calls are handled by the classes/Rest.class.php file.
 Each operation and object combination has its own method. Each of these
@@ -107,13 +97,13 @@ classes directory when necessary, and then generates the appropriate HTTP
 Request, ships it to Learn, and serializes the JSON response back into the
 appropriate model.
 
-End points are generally defined as /learn/api/public/v1/<object
-type>/<objectId>. Object ID can be either the pk1, like _1_1, or as the
+End points are generally defined as `/learn/api/public/v1/<object
+type>/<objectId>`. Object ID can be either the pk1, like `_1_1`, or as the
 batchuid. This value should be prepended by externalId:, like
-externalId:test101.
+`externalId:test101`.
 
-For example, to retrieve a course by the pk1 _1_1, you would call **GET
-/learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid test101, you
+For example, to retrieve a course by the pk1 `_1_1`, you would call **GET
+/learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid `test101`, you
 would call **GET /learn/api/public/v1/courses/externalId:test101.**
 
 Create is sent to Learn as a HTTP POST message with a JSON body that defines
@@ -129,525 +119,663 @@ the object. The endpoint should include the objectId being updated.
 Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
 should include the objectId being deleted.
 
-#### Datasources
+<hr />
 
-Datasources are handled in classes/Rest.class.php .
+### Datasources
+
+Datasources are handled in `classes/Rest.class.php`.
 
 **Create**
+```
     public function createDatasource($access_token) {
       $constants = new Constants();
       $datasource = new Datasource();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH, HTTP_Request2::METHOD_POST);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH, HTTP_Request2::METHOD_POST);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($datasource));
-      try {
-      $response = $request->send();
-      if (201 == $response->getStatus()) {
-      print "\n Create Datasource...\n";
-      $datasource = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+          $response = $request->send();
+          
+          if (201 == $response->getStatus()) {
+              print "\n Create Datasource...\n";
+              $datasource = json_decode($response->getBody());
+          } else {
+              print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+              $BbRestException = json_decode($response->getBody());
+              var_dump($BbRestException);
+          }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+          print 'Error: ' . $e->getMessage();
       }
-      return $datasource;
-      }
+      
+      return $datasource;
+    }
+```
 
 **Read**
+```
     public function readDatasource($access_token, $dsk_id) {
       $constants = new Constants();
       $datasource = new Datasource();
+      
       $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH . '/' . $dsk_id, HTTP_Request2::METHOD_GET);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Read Datasource...\n";
-      $datasource = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException)
-     }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Read Datasource...\n";
+          $datasource = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException)
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
-      return $datasource;
-      }
+      
+      return $datasource;
+    }
+```
 
 **Update**
+```
     public function updateDatasource($access_token, $dsk_id) {
       $constants = new Constants();
       $datasource = new Datasource();
-      $datasource->id = $dsk_id;
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH . '/' . $dsk_id, 'PATCH');
+      
+      $datasource->id = $dsk_id;
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH . '/' . $dsk_id, 'PATCH');
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($datasource));
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Update Datasource...\n";
-      $datasource = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Update Datasource...\n";
+          $datasource = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
-      return $datasource;
-      }
+      
+      return $datasource;
+    }
+```
 
 **Delete**
+```
     public function deleteDatasource($access_token, $dsk_id) {
       $constants = new Constants();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH . '/' . $dsk_id, HTTP_Request2::METHOD_DELETE);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->DSK_PATH . '/' . $dsk_id, HTTP_Request2::METHOD_DELETE);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
-      try {
-      $response = $request->send();
-      if (204 == $response->getStatus()) {
-      print "Datasource Deleted";
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      return FALSE;
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (204 == $response->getStatus()) {
+          print "Datasource Deleted";
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+          return FALSE;
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
-      return FALSE;
+        print 'Error: ' . $e->getMessage();
+        return FALSE;
       }
-      return TRUE;
-      }
+      
+      return TRUE;
+    }
+```
 
-#### Terms
+<hr />
 
-Terms are handled in classes/Rest.class.php .
+### Terms
+
+Terms are handled in `classes/Rest.class.php`.
 
 **Create**
+```
     public function createTerm($access_token, $dsk_id) {
       $constants = new Constants();
       $term = new Term();
-      $term->dataSourceId = $dsk_id;
+      
+      $term->dataSourceId = $dsk_id;
       $term->availability = new Availability();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH, HTTP_Request2::METHOD_POST);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH, HTTP_Request2::METHOD_POST);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($term));
-      try {
-      $response = $request->send();
-      if (201 == $response->getStatus()) {
-      print "\n Create Term...\n";
-      $term = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (201 == $response->getStatus()) {
+          print "\n Create Term...\n";
+          $term = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $term;
-      }
+    }
+```
 
 **Read**
+```
     public function readTerm($access_token, $term_id) {
       $constants = new Constants();
       $term = new Term();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH . '/' . $term_id, HTTP_Request2::METHOD_GET);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH . '/' . $term_id, HTTP_Request2::METHOD_GET);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Read Term...\n";
-      $datasource = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Read Term...\n";
+          $datasource = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
-      return $term;
-      }
+      
+      return $term;
+    }
+```
 
 **Update**
+```
     public function updateTerm($access_token, $dsk_id, $term_id) {
       $constants = new Constants();
       $term = new Term();
-      $term->id = $term_id;
+      
+      $term->id = $term_id;
       $term->dataSourceId = $dsk_id;
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH . '/' . $term_id, 'PATCH');
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH . '/' . $term_id, 'PATCH');
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($term));
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Update Term...\n";
-      $datasource = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Update Term...\n";
+          $datasource = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
-      return $term;
-      }
+      
+      return $term;
+    }
+```
 
 **Delete**
+```
     public function deleteTerm($access_token, $term_id) {
       $constants = new Constants();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH . '/' . $term_id, HTTP_Request2::METHOD_DELETE);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->TERM_PATH . '/' . $term_id, HTTP_Request2::METHOD_DELETE);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
-      try {
-      $response = $request->send();
-      if (204 == $response->getStatus()) {
-      print "Term Deleted";
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      return FALSE;
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (204 == $response->getStatus()) {
+          print "Term Deleted";
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+          return FALSE;
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
-      return FALSE;
+        print 'Error: ' . $e->getMessage();
+        return FALSE;
       }
-      return TRUE;
-      }
+      
+      return TRUE;
+    }
+```
 
-#### Course
+<hr />
 
-Courses are handled in classes/Rest.class.php .
+### Course
+
+Courses are handled in `classes/Rest.class.php`.
 
 **Create**
+```
     public function createCourse($access_token, $dsk_id, $term_id) {
       $constants = new Constants();
       $course = new Course();
-      $course->dataSourceId = $dsk_id;
+      
+      $course->dataSourceId = $dsk_id;
       $course->termId = $term_id;
       $course->availability = new Availability();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH, HTTP_Request2::METHOD_POST);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH, HTTP_Request2::METHOD_POST);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($course));
-      try {
-      $response = $request->send();
-      if (201 == $response->getStatus()) {
-      print "\n Create Course...\n";
-      $course = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (201 == $response->getStatus()) {
+          print "\n Create Course...\n";
+          $course = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $course;
-      }
+    }
+```
 
 **Read**
+```
     public function readCourse($access_token, $course_id) {
       $constants = new Constants();
       $course = new Course();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id, HTTP_Request2::METHOD_GET);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id, HTTP_Request2::METHOD_GET);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Read Course...\n";
-      $course = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+     
+        if (200 == $response->getStatus()) {
+          print "\n Read Course...\n";
+          $course = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $course;
-      }
+    }
+```
 
 **Update**
+```
     public function updateCourse($access_token, $dsk_id, $course_id, $course_uuid, $course_created) {
       $constants = new Constants();
       $course = new Course();
-      $course->id = $course_id;
+      
+      $course->id = $course_id;
       $course->uuid = $course_uuid;
       $course->created = $course_created;
       $course->dataSourceId = $dsk_id;
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id, 'PATCH');
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id, 'PATCH');
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($course));
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Update Course...\n";
-      $course = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Update Course...\n";
+          $course = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $course;
-      }
+    }
+```
 
 **Delete**
+```
     public function deleteCourse($access_token, $course_id) {
       $constants = new Constants();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id, HTTP_Request2::METHOD_DELETE);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id, HTTP_Request2::METHOD_DELETE);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
-      try {
-      $response = $request->send();
-      if (204 == $response->getStatus()) {
-      print "Course Deleted";
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      return FALSE;
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (204 == $response->getStatus()) {
+          print "Course Deleted";
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+          return FALSE;
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
-      return FALSE;
+        print 'Error: ' . $e->getMessage();
+        return FALSE;
       }
+      
       return TRUE;
-      }
+    }
+```
 
-#### Users
+<hr />
 
-Users are handled in classes/Rest.class.php .
+### Users
+
+Users are handled in `classes/Rest.class.php`.
 
 **Create**
+```
     public function createUser($access_token, $dsk_id) {
       $constants = new Constants();
       $user = new User();
-      $user->dataSourceId = $dsk_id;
+      
+      $user->dataSourceId = $dsk_id;
       $user->availability = new Availability();
       $user->name = new Name();
       $user->contact = new Contact();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH, HTTP_Request2::METHOD_POST);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH, HTTP_Request2::METHOD_POST);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($user));
-      try {
-      $response = $request->send();
-      if (201 == $response->getStatus()) {
-      print "\n Create User...\n";
-      $user = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (201 == $response->getStatus()) {
+          print "\n Create User...\n";
+          $user = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $user;
-      }
+    }
+```
 
 **Read**
+```
     public function readUser($access_token, $user_id) {
       $constants = new Constants();
       $user = new User();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH . '/' . $user_id, HTTP_Request2::METHOD_GET);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH . '/' . $user_id, HTTP_Request2::METHOD_GET);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Read User...\n";
-      $user = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Read User...\n";
+          $user = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $user;
-      }
+    }
+```
 
 **Update**
+```
     public function updateUser($access_token, $dsk_id, $user_id, $user_uuid, $user_created) {
       $constants = new Constants();
       $user = new User();
-      $user->id = $user_id;
+      
+      $user->id = $user_id;
       $user->uuid = $user_uuid;
       $user->created = $user_created;
       $user->dataSourceId = $dsk_id;
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH . '/' . $user_id, 'PATCH');
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH . '/' . $user_id, 'PATCH');
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($user));
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Update User...\n";
-      $user = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Update User...\n";
+          $user = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $user;
-      }
+    }
+```
 
 **Delete**
+```
     public function deleteUser($access_token, $user_id) {
       $constants = new Constants();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH . '/' . $user_id, HTTP_Request2::METHOD_DELETE);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->USER_PATH . '/' . $user_id, HTTP_Request2::METHOD_DELETE);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
-      try {
-      $response = $request->send();
-      if (204 == $response->getStatus()) {
-      print "User Deleted";
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      return FALSE;
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (204 == $response->getStatus()) {
+          print "User Deleted";
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+          return FALSE;
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
-      return FALSE;
+        print 'Error: ' . $e->getMessage();
+        return FALSE;
       }
+      
       return TRUE;
-      }
+    }
+```
 
-#### Memberships
+<hr />
 
-Memberships are handled in classes/Rest.class.php .
+### Memberships
+
+Memberships are handled in `classes/Rest.class.php`.
 
 **Create**
+```
     public function createMembership($access_token, $dsk_id, $course_id, $user_id) {
       $constants = new Constants();
       $membership = new Membership();
-      $membership->dataSourceId = $dsk_id;
+      
+      $membership->dataSourceId = $dsk_id;
       $membership->availability = new Availability();
       $membership->userId = $user_id;
       $membership->courseId = $course_id;
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, HTTP_Request2::METHOD_PUT);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, HTTP_Request2::METHOD_PUT);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($membership));
-      try {
-      $response = $request->send();
-      if (201 == $response->getStatus()) {
-      print "\n Create Membership...\n";
-      $membership = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (201 == $response->getStatus()) {
+          print "\n Create Membership...\n";
+          $membership = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $membership;
-      }
+    }
+```
 
 **Read**
+```
     public function readMembership($access_token, $course_id, $user_id) {
       $constants = new Constants();
       $membership = new Membership();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id,  HTTP_Request2::METHOD_GET);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id,  HTTP_Request2::METHOD_GET);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Read Membership...\n";
-      $membership = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Read Membership...\n";
+          $membership = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $membership;
-      }
+    }
+```
 
 **Update**
+```
     public function updateMembership($access_token, $dsk_id, $course_id, $user_id, $membership_created) {
       $constants = new Constants();
       $membership = new Membership();
-      $membership->dataSourceId = $dsk_id;
+      
+      $membership->dataSourceId = $dsk_id;
       $membership->userId = $user_id;
       $membership->courseId = $course_id;
       $membership->created = $membership_created;
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, 'PATCH');
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, 'PATCH');
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
       $request->setBody(json_encode($membership));
-      try {
-      $response = $request->send();
-      if (200 == $response->getStatus()) {
-      print "\n Update Membership...\n";
-      $membership = json_decode($response->getBody());
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      }
+      
+      try {
+        $response = $request->send();
+      
+        if (200 == $response->getStatus()) {
+          print "\n Update Membership...\n";
+          $membership = json_decode($response->getBody());
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
+        print 'Error: ' . $e->getMessage();
       }
+      
       return $membership;
-      }
+    }
+```
 
 **Delete**
+```
     public function deleteMembership($access_token, $course_id, $user_id) {
       $constants = new Constants();
-      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, HTTP_Request2::METHOD_DELETE);
+      
+      $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, HTTP_Request2::METHOD_DELETE);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
       $request->setHeader('Content-Type', 'application/json');
-      try {
-      $response = $request->send();
-      if (204 == $response->getStatus()) {
-      print "Membership Deleted";
-      } else {
-      print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
-      $BbRestException = json_decode($response->getBody());
-      var_dump($BbRestException);
-      return FALSE;
-      }
+      
+      try {
+        $response = $request->send();
+        
+        if (204 == $response->getStatus()) {
+          print "Membership Deleted";
+        } else {
+          print 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .  $response->getReasonPhrase();
+          $BbRestException = json_decode($response->getBody());
+          var_dump($BbRestException);
+          return FALSE;
+        }
       } catch (HTTP_Request2_Exception $e) {
-      print 'Error: ' . $e->getMessage();
-      return FALSE;
+        print 'Error: ' . $e->getMessage();
+        return FALSE;
       }
+      
       return TRUE;
-      }
+    }
+```
 
-Conclusion
+## Conclusion
 
 All of the code snippets included in this document at included in a sample
 REST Demo PHP application available on
-[GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-REST-Demo-PHP).
+[GitHub](https://github.com/blackboard/BBDN-REST-Demo-PHP).
 There is a README.md included that talks more specifically about building and
 running the code. Feel free to review the code and run it against a test or
 development Learn instance to see how it works.
