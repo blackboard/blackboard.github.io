@@ -3,11 +3,10 @@
 *Categories: []*  
 *Tags: ['rest', 'api', 'developers', 'developer portal', 'rest api', 'application management', 'developer']*  
 <hr />
+
 **What's in the Box****?**
 
-The Blackboard developer portal is located at
-[https://developer.blackboard.com](https://community.blackboard.com/external-
-link.jspa?url=https%3A//developer.blackboard.com/). There, you can:
+The Blackboard developer portal is located at https://developer.blackboard.com. There, you can:
 
   * Sign up for a Developer Account
   * Read API Reference Documentation
@@ -31,7 +30,7 @@ registered.
 
 To register as a Blackboard developer:
 
-  1. Go to [https://developer.blackboard.com/](/external-link.jspa?url=https%3A//developer.blackboard.com/) and select Sign Up. Read and agree to the terms and conditions.
+  1. Go to https://developer.blackboard.com and select Sign Up. Read and agree to the terms and conditions.
   2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
   3. Select Create Account and you're on your way.
 
@@ -40,12 +39,9 @@ To register as a Blackboard developer:
 # Read API Reference Documentation
 
 To view the API reference documentation go to
-[https://developer.blackboard.com/](/external-
-link.jspa?url=https%3A//developer.blackboard.com/) and select **Explore
-APIs**.You can also browse [code examples](https://community.blackboard.com/co
-mmunity/developers/rest/content?filterID=contentstatus%5Bpublished%5D%7Ecatego
-ry%5Bexamples%5D) and participate in the [developer community
-site](https://community.blackboard.com/community/developers).
+https://developer.blackboard.com and select **Explore
+APIs**.You can also browse [code examples](https://github.com/search?q=org%3Ablackboard+BBDN-REST&unscoped_q=BBDN-REST) and participate in the [developer community
+site](https://community.blackboard.com/developers).
 
 # Register a REST Application or an LTI Tool
 
@@ -58,10 +54,11 @@ To register an application or LTI tool:
 
   1. Select **Register** below the heading "Register and Manage Your Applications".  
 If you do not already have any registered applications, you will see a screen
-like the one shown below.[![manageapps.png](https://community.blackboard.com/s
-ervlet/JiveServlet/downloadImage/102-1579-12-129822/823-316/manageapps.png)](h
-ttps://community.blackboard.com/servlet/JiveServlet/showImage/102-1579-12-1298
-22/manageapps.png)If you do not already have any applications registered,
+like the one shown below.
+
+![manageapps.png](/images/129822.png)
+
+If you do not already have any applications registered,
 select **Register**.
 
 Otherwise you will see a list of your registered applications. Select the
