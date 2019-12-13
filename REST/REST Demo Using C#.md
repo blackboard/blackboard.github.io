@@ -3,59 +3,51 @@
 *Categories: []*  
 *Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'c#', '.net', 'csharp', 'visual studio', 'developer']*  
 <hr />
-The rest demo script demonstrates authenticating a REST application,
-management and use of the authorization token, and creating, updating,
-discovering, and deleting supported Learn objects.
 
-_Before running the example code you must register a developer account and
-application as described on the Developer Community [What is the Developer
-Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal)[What is the
-Developer Portal: Developer Registration and Application
-Management](https://community.blackboard.com/docs/DOC-1579-register-as-a-
-developer-and-manage-your-applications-with-the-developer-portal) and
-[Managing REST Integrations in Learn: The REST Integrations Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-
-administrators)[Managing REST Integrations in Learn: The REST Integrations
-Tool for System
-Administrators](https://community.blackboard.com/docs/DOC-1580-managing-rest-
-integrations-in-learn-the-rest-integrations-tool-for-system-administrators)
-pages. You must also configure the script as outlined in the below Configure
-the Script section._
+<p>The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting supported Learn objects.</p>
+
+## Prerequisites
+
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must [register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+* You must also configure the script as outlined in the README for the project
+
+
+## Overview
 
 This C# Console Application allows you to:
 
-  * Authenticate
-  * Create, Read, and Update a Data Source
-  * Create, Read, and Update a Term
-  * Create, Read, and Update a Course
-  * Create, Read, and Update a User
-  * Create, Read, and Update a Membership
-  * Delete created objects in reverse order of create - membership, user, course, term, datasource.
+* Authenticate
+* Create, Read, and Update a Data Source
+* Create, Read, and Update a Term
+* Create, Read, and Update a Course
+* Create, Read, and Update a User
+* Create, Read, and Update a Membership
+* Delete created objects in reverse order of create - membership, user, course, term, datasource.
 
 All generated output is sent to the console.
 
-This is not meant to be a C# tutorial. It will not teach you to write code in
+**This is not meant to be a C# tutorial. It will not teach you to write code in
 C#. It will, however, give a Developer familiar with C# the knowledge
-necessary to build a Web Services integration.
+necessary to build a Web Services integration.**
 
 ### Assumptions
 
 This help topic assumes the Developer:
 
-  * is familiar with C#
-  * has installed Microsoft Visual Studio
-  * has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.md) file.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+* is familiar with C#
+* has installed Microsoft Visual Studio
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.md) file.
+* has a REST-enabled Blackboard Learn instance, like the [Developer AMI](/Developer%20Version%20of%20Blackboard%20Applications/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.md).
 
 ### Code Walkthrough
 
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](https://community.blackboard.com/docs/DOC-1644-authorization-and-authentication) document.
+  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.md) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
 #### Authorization and Authentication
@@ -70,7 +62,7 @@ token with an updated expiry time until such time that the token has expired.
 There is no refresh token and currently no revoke token method.
 
 The C# code handles this in bbdn.rest.Authorizer:
-
+```
     var authData = string.Format ("{0}:{1}", Constants.KEY, Constants.SECRET);
     var authHeaderValue = Convert.ToBase64String (Encoding.UTF8.GetBytes (authData));
     client = new HttpClient ();
@@ -86,6 +78,7 @@ The C# code handles this in bbdn.rest.Authorizer:
         {
              var content = await response.Content.ReadAsStringAsync();
               token = JsonConvert.DeserializeObject<Token>(content);
+```
 
 The JSON response is serialized into the Token object, and you may then
 retrieve those values from that object.
@@ -93,19 +86,19 @@ retrieve those values from that object.
 #### Calling Services
 
 The individual service calls are handled by C# Classes in the
-bbdn.rest.services package, and each individual service class implements the
-bbd.rest.services.IRestService interface. The interface is used to normalize
+`bbdn.rest.services` package, and each individual service class implements the
+`bbdn.rest.services.IRestService` interface. The interface is used to normalize
 each service handler to make additional service implementation standardized as
 new endpoints are added.
 
 IRestService dictates that four methods must be implemented:
 
-  * Task<TRestModel> CreateObject (TRestModel T);
-  * Task<TRestModel> ReadObject ();
-  * Task<TRestModel> UpdateObject (TRestModel T);
-  * Task<TRestModel> DeleteObject ();
+* Task<TRestModel> CreateObject (TRestModel T);
+* Task<TRestModel> ReadObject ();
+* Task<TRestModel> UpdateObject (TRestModel T);
+* Task<TRestModel> DeleteObject ();
 
-The Task<TRestModel> allows the code to run asynchronously, but specify when
+The `Task<TRestModel>` allows the code to run asynchronously, but specify when
 an operation should be handled synchronously before proceeding with the
 remaining code. TRestModel is a generic class place holder that allows the
 code to implement the Interface, but pass it an Object type when it is
@@ -114,20 +107,21 @@ upon the Rest endpoint being implemented.
 
 The individual service class must be defined in the following way, to ensure
 the Interface is using the appropriate class type for TRestModel:
-
+```
     public class DatasourceService : IRestService<Datasource>, IDisposable
+```
 
 Each of these methods creates the JSON body by instantiating the appropriate
 model from the bbdn.rest.models package when necessary, and then generates the
 appropriate HTTP Request, ships it to Learn, and serializes the JSON response
 back into the appropriate model.
 
-End points are generally defined as /learn/api/public/v1/<object
-type>/<objectId>. Object ID can be either the pk1, like _1_1, or as the
+End points are generally defined as `/learn/api/public/v1/<object
+type>/<objectId>`. Object ID can be either the pk1, like `_1_1`, or as the
 batchuid. This value should be prepended by externalId:, like
-externalId:test101.
+`externalId:test101`.
 
-For example, to retrieve a course by the pk1 _1_1, you would call **GET
+For example, to retrieve a course by the pk1 `_1_1`, you would call **GET
 /learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid test101, you
 would call **GET /learn/api/public/v1/courses/externalId:test101.**
 
@@ -144,14 +138,17 @@ the object. The endpoint should include the objectId being updated.
 Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
 should include the objectId being deleted.
 
-#### Datasources
+<hr />
 
-Datasources are handled in bbd.rest.services.DatasourceService. As illustrated
+### Datasources
+
+Datasources are handled in `bbdn.rest.services.DatasourceService`. As illustrated
 above, this Class implements the IRestService interface and exposes four
 methods. It also includes methods required to implement the IDisposible
 interface which is required to use the async/await functionality..
 
 **Create**
+```
     public async Task<Datasource> CreateObject (Datasource dataSource)
     {
            Datasource datasource = new Datasource();
@@ -170,10 +167,10 @@ interface which is required to use the async/await functionality..
            }
            return datasource;
     }
-
-####
+```
 
 **Read**
+```
     public async Task<Datasource> ReadObject ()
     {
       Datasource datasource = new Datasource();
@@ -189,8 +186,10 @@ interface which is required to use the async/await functionality..
       }
       return datasource;
     }
+```
 
 **Update**
+```
     public async Task<Datasource> UpdateObject (Datasource updateDataSource)
     {
            Datasource datasource = new Datasource();
@@ -208,8 +207,10 @@ interface which is required to use the async/await functionality..
            }
            return (datasource);
     }
+```
 
 **Delete**
+```
     public async Task<Datasource> DeleteObject ()
     {
            Datasource datasource = new Datasource();
@@ -226,15 +227,19 @@ interface which is required to use the async/await functionality..
            }
            return (datasource);
     }
+```
 
-Terms
+<hr />
 
-Terms are handled in bbdn.rest.services.TermService. As illustrated above,
+### Terms
+
+Terms are handled in `bbdn.rest.services.TermService`. As illustrated above,
 this Class implements the IRestService interface and exposes four methods. It
 also includes methods required to implement the IDisposible interface which is
 required to use the async/await functionality..
 
 **Create**
+```
             public async Task<Term> CreateObject(Term newTerm)
             {
                      Term term = new Term();
@@ -257,8 +262,10 @@ required to use the async/await functionality..
                      }
                      return term;
             }
+```
 
 **Read**
+```
     public async Task<Term> ReadObject()
     {
                 Term term = new Term();
@@ -278,8 +285,10 @@ required to use the async/await functionality..
                 }
                 return term;
     }
+```
 
 **Update**
+```
             public async Task<Term> UpdateObject(Term updateTerm)
             {
                 Term term = new Term();
@@ -301,8 +310,10 @@ required to use the async/await functionality..
                 }
                 return (term);
             }
+```
 
 **Delete**
+```
             public async Task<Term> DeleteObject()
             {
                 Term term = new Term();
@@ -323,15 +334,19 @@ required to use the async/await functionality..
                 }
                 return (term);
             }
+```
+
+<hr />
 
 ### Courses
 
-Course are handled in bbdn.rest.services.CourseService. As illustrated above,
+Course are handled in `bbdn.rest.services.CourseService`. As illustrated above,
 this Class implements the IRestService interface and exposes four methods. It
 also includes methods required to implement the IDisposible interface which is
 required to use the async/await functionality..
 
 **Create**
+```
             public async Task<Course> CreateObject(Course newCourse)
             {
                 Course course = new Course();
@@ -354,8 +369,10 @@ required to use the async/await functionality..
                 }
                 return course;
             }
+```
 
 **Read**
+```
             public async Task<Course> ReadObject()
             {
                 Course course = new Course();
@@ -375,8 +392,10 @@ required to use the async/await functionality..
                 }
                 return course;
             }
+```
 
 **Update**
+```
             public async Task<Course> UpdateObject(Course updateCourse)
             {
                 Course course = new Course();
@@ -398,8 +417,10 @@ required to use the async/await functionality..
                 }
                 return (course);
             }
+```
 
 **Delete**
+```
             public async Task<Course> DeleteObject()
             {
                 Course course = new Course();
@@ -420,15 +441,19 @@ required to use the async/await functionality..
                 }
                 return (course);
             }
+```
+
+<hr />
 
 ### Users
 
-Users are handled in bbdn.rest.services.UserService. As illustrated above,
+Users are handled in `bbdn.rest.services.UserService`. As illustrated above,
 this Class implements the IRestService interface and exposes four methods. It
 also includes methods required to implement the IDisposible interface which is
 required to use the async/await functionality..
 
 **Create**
+```
             public async Task<User> CreateObject(User newUser)
             {
                 User user = new User();
@@ -451,8 +476,10 @@ required to use the async/await functionality..
                 }
                 return user;
             }
+```
 
 **Read**
+```
             public async Task<User> ReadObject()
             {
                 User user = new User();
@@ -472,8 +499,10 @@ required to use the async/await functionality..
                 }
                 return user;
             }
+```
 
 **Update**
+```
             public async Task<User> UpdateObject(User updateUser)
             {
                 User user = new User();
@@ -498,8 +527,10 @@ required to use the async/await functionality..
                 }
                 return user; 
             }
+```
 
 **Delete**
+```
             public async Task<User> DeleteObject()
             {
                 User user = new User();
@@ -520,18 +551,22 @@ required to use the async/await functionality..
                 }
                 return (user);
             }
+```
+
+<hr />
 
 ### Memberships
 
-Memberships are handled in bbdn.rest.services.MemberService. As illustrated
+Memberships are handled in `bbdn.rest.services.MemberService`. As illustrated
 above, this Class implements the IRestService interface and exposes four
 methods. It also includes methods required to implement the IDisposible
 interface which is required to use the async/await functionality.. In
 addition, the endpoint for memberships is a bit different, in that it is a
 sub-call to courses, so the endpoint would look like
-/learn/api/public/v1/courses/<courseId>/users/<userId>.
+`/learn/api/public/v1/courses/<courseId>/users/<userId>`.
 
 **Create**
+```
             public async Task<Membership> CreateObject(Membership newMembership)
             {
                 Membership membership = new Membership();
@@ -554,8 +589,10 @@ sub-call to courses, so the endpoint would look like
                 }
                 return membership;
             }
+```
 
 **Read**
+```
             public async Task<Membership> ReadObject()
             {
                 Membership membership = new Membership();
@@ -575,8 +612,10 @@ sub-call to courses, so the endpoint would look like
                 }
                 return membership;
             }
+```
 
 **Update**
+```
             public async Task<Membership> UpdateObject(Membership updateMembership)
             {
                 Membership membership = new Membership();
@@ -598,8 +637,10 @@ sub-call to courses, so the endpoint would look like
                 }
                 return (membership);
             }
+```
 
 **Delete**
+```
             public async Task<Membership> DeleteObject()
             {
                 Membership membership = new Membership();
@@ -620,13 +661,13 @@ sub-call to courses, so the endpoint would look like
                 }
                 return (membership);
             }
+```
 
-Conclusion
+## Conclusion
 
 All of the code snippets included in this document at included in a sample
 REST Demo C# application available on
-[GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-REST-Demo-CSharp).
+[GitHub](https://github.com/blackboard/BBDN-REST-Demo-CSharp).
 There is a README.md included that talks more specifically about building and
 running the code. Feel free to review the code and run it against a test or
 development Learn instance to see how it works.
