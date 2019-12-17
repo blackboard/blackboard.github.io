@@ -24,20 +24,11 @@ knowledge necessary to build a Web Services integration.
 
 ### Glossary
 
-TermDefinition
-
-Python
-
-A powerful Web Development language
-
-SUDS
-
-A Python module that facilitates the use of SOAP Web Services
-
-WSDL
-
-Web Service Definition Language - and XML document describing the endpoints,
-methods, and attributes associated with a given Web Service
+Term | Definition
+---|---
+Python | A powerful Web Development language
+SUDS | A Python module that facilitates the use of SOAP Web Services
+WSDL | Web Service Definition Language - and XML document describing the endpoints, methods, and attributes associated with a given Web Service
 
 ### Assumptions
 
@@ -89,7 +80,7 @@ will be using the built-in tools to generate the XML.
 
 The first step is to create the Soap Header XML. This is an example of what
 that header might look like:
-
+```
         <SOAP-ENV:Header>  
               <wsa:Action>initialize</wsa:Action>  
               <wsa:MessageID>uuid:98d134de-b7bc-11e4-af96-14109fe5b7e1</wsa:MessageID>  
@@ -110,6 +101,7 @@ that header might look like:
                   <wsu:Timestamp wsu:Id="Timestamp-98d2457d-b7bc-11e4-a804-14109fe5b7e1"/>  
               </wsse:Security>  
           </SOAP-ENV:Header>
+```
 
 At first glance, it looks a bit daunting, but Python makes it pretty easy.
 
@@ -124,30 +116,35 @@ argument passed to the createHeaders() method. The value of this tag should be
 set equal to the method this SOAP Envelope will be passed to. In the example
 above, this SOAP-ENV will be passed to the ContextWS.initialize() Web Service,
 so the action is set to 'initialize'.
-
+```
         wsa_action = Element('Action', ns=wsa_ns).setText(action)  
+```
 
 The next tag we add is the MessageId. This is a unique identifier tied to this
 specific SOAP envelope. To generate this identifier, the sample code uses the
 built-in Python method uuid.uuid1().
-
+```
         wsa_uuid = Element('MessageID', ns=wsa_ns).setText('uuid:' + str(uuid1()))
+```
 
 To add the ReplyTo and Address Tags, we must first build the address and then
 add it to the ReplyTo tag. This is done in a straight-forward manner.
-
+```
         wsa_address = Element('Address', ns=wsa_ns).setText('http://schemas.xmlsoap.org/ws/2004/0...role/anonymous')       wsa_replyTo = Element('ReplyTo', ns=wsa_ns).insert(wsa_address)
+```
 
 Adding the To tag is also straight-foward.
-
+```
         wsa_to = Element('To', ns=wsa_ns).setText(url_header + endpoint)
+```
 
 Now we must add the WS-Security bits. This is the methodology that keeps each
 session secure. The following code adds the wsse:Security tag at the same
 level as the above elements.
-
+```
         security = Element('Security', ns=wsse)  
         security.set('SOAP-ENV:mustUnderstand', '1')
+```
 
 The contents of the Security headers is what allows a Web Service call to be
 authorized to take an action against the Learn API. It is imperative that this
@@ -172,7 +169,7 @@ server, or the API call will fail. All times should be in UTC format.
 SUDS does include a WS-Security module, but it is not flexible enough to allow
 this script to format things as needed, so the security headers are built
 dynamically
-
+```
         usernametoken = Element('UsernameToken', ns=wsse)  
         usernametoken.set('xmlns:wsu', 'http://docs.oasis-open.org/wss/2004/...tility-1.0.xsd')  
         usernametoken.set('wsu:Id', 'SecurityToken-' + str(uuid1()))  
@@ -190,6 +187,7 @@ dynamically
         timestamp = Element('Timestamp', ns=wsu)  
         timestamp.set('wsu:Id','Timestamp-' + str(uuid1()))  
         security.insert(timestamp)
+```
 
 The SOAP headers have now been created dynamically in just a few lines of re-
 usable code. The only thing left to do is to add the headers to our Web
@@ -204,16 +202,18 @@ protocol being used. This sample code assumes SOAP 1.2 and SSL.
 Thanks to the inclusion of SUDS and the introduction of re-usable code to
 handle the header generation, a web application really only needs four lines
 of code to make a service call.
-
+```
         # returns [wsa_action, wsa_uuid, wsa_replyTo, wsa_to, security]  
         headers = createHeaders('initialize', 'session', 'nosession', 'Context.WS')  
         contextWS.set_options(soapheaders=headers, port='Context.WSSOAP12port_https')
+```
 
 The last thing to do is to call the method. The SUDS Python module does all
 the work for the application automatically. All the this Python script has to
 do is call the service method.
-
+```
         sessionId = contextWS.service.initialize()
+```
 
 In just a handful lines of code, the application has authenticated against the
 Blackboard Learn Web Services and created a secure session.
@@ -227,10 +227,11 @@ The ContextWS.initialize() method returns the sessionID, as demonstrated in
 the previous section. The next step in the process is to login as either a
 Blackboard user or a Proxy Tool. In this sample code, the application logs in
 as the Administrator user on the Developer Virtual Machine.
-
+```
         headers = createHeaders('login', 'session', sessionId, 'Context.WS')  
         contextWS.set_options(soapheaders=headers, port='Context.WSSOAP12port_https')  
         loggedIn = contextWS.service.login("administrator", "password", "bb", "blackboard", "", 3600)
+```
 
 One important thing to note is the in the createHeaders() call is two-fold:
 the action is set to 'login' to denote the new method call being made, and the
@@ -246,10 +247,11 @@ or CAS, the application should login as a Proxy Tool
 
 In this case, the application is pulling Course Announcements. As such, the
 AnnouncementWS service must be initialized.
-
+```
         headers = createHeaders('initializeAnnouncementWS', 'session', sessionId, 'Announcement.WS')  
         announcementWS.set_options(soapheaders=headers, port='Announcement.WSSOAP12port_https')  
         annInit = announcementWS.service.initializeAnnouncementWS(False)
+```
 
 This application has now initialized the ContextWS and the AnnouncementWS
 SoapClients. These two Web Service end points can now be called successfully.
@@ -262,16 +264,17 @@ course. As has been the case throughout this tutorial, Python and SUDS combine
 to make this very simple.
 
 First, the application needs the Course Memberships.
-
+```
         headers = createHeaders('getMyMemberships', 'session', sessionId, 'Context.WS')  
         contextWS.set_options(soapheaders=headers, port='Context.WSSOAP12port_https')  
         myMemberships = contextWS.service.getMyMemberships()
+```
 
 The getMyMemberships() method returns a list containing Course and
 Organization IDs, in the form of the pk1. This is the value needed going
 forward, so the next step is to retrieve each pk1 and retrieve the
 announcements for that course.
-
+```
         headers = createHeaders('getCourseAnnouncements', 'session', sessionId, 'Announcement.WS')  
         announcementWS.set_options(soapheaders=headers, port='Announcement.WSSOAP12port_https')  
         for membership in myMemberships:  
@@ -281,6 +284,7 @@ announcements for that course.
              annFilter.startDate = '0'  
              annFilter.userId = ""  
              announcements = announcementWS.service.getCourseAnnouncements(str(externalId),annFilter)
+```
 
 The annFilter variable above looks a little different. The
 getCourseAnnouncements() method requires a Complex data type. The SUDS module
@@ -294,19 +298,16 @@ be sent to an archive, or anything else one might require.
 
 The last step is to logout to invalidate the sessionId currently in use and
 prevent Cross-Site Scripting or Session hijacking. This will look familiar.
-
+```
         headers = createHeaders( 'logout' , 'session' , sessionId)  
         contextWS.set_options(soapheaders=headers, port= 'Context.WSSOAP12port_https' )  
         loggedOut = contextWS.service.logout()
-
-###
+```
 
 ### Conclusion
 
 All of the code snippets included in this document are included in a sample
-Python module available on [GitHub](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-Web-Service-Python-
-Sample-Code). There is a README.md included that talks more specifically about
+Python module available on [GitHub](https://github.com/blackboard/BBDN-Web-Service-Python-Sample-Code). There is a README.md included that talks more specifically about
 building and running the code. Feel free to review the code and run it against
 a test or development Learn instance to see how it works.
 

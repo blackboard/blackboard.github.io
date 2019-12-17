@@ -19,9 +19,7 @@ files.
 Blackboard provides a gradle-based template for Building Block development
 which is accessible from the Blackboard GitHub project repository:
 
-[https://github.com/blackboard/basic-b2-template](https://community.blackboard
-.com/external-
-link.jspa?url=https%3A//github.com/blackboard/basic-b2-template)
+[https://github.com/blackboard/basic-b2-template](https://github.com/blackboard/basic-b2-template)
 
 There are several ways which you may access the basic-b2-template. Notably:
 
@@ -110,21 +108,11 @@ to reflect your project requirements.
 
 You will make edits to three areas of the file:
 
-TermDefinition
-
-ext or project.ext
-
-this specifies replacement variables for the build
-
-repository
-
-this specifies the location of the maven repository
-
-dependencies
-
-management of project dependencies
-
-####
+Term | Definition
+---|---
+ext or project.ext | this specifies replacement variables for the build
+repository | this specifies the location of the maven repository
+dependencies | management of project dependencies
 
 #### ext (or project.ext)
 
@@ -136,20 +124,11 @@ Set this section to reflect your remote development settings:
          deployInstance = "BBLEARN"  
        }  
 
-TermDefinition
-
-learnVersion
-
-used in pulling the appropriate library jars for target version
-
-deployServer
-
-the IP or server name for the target development server (add ":<port&rt;" if
-not served from port 80)
-
-deployInstance
-
-the DB instance for the target development server
+Term | Definition
+---|---
+learnVersion | used in pulling the appropriate library jars for target version
+deployServer | the IP or server name for the target development server (add ":<port&rt;" if not served from port 80)
+deployInstance | the DB instance for the target development server
 
 #### repository
 
@@ -171,31 +150,25 @@ You may add additional maven repositories:
 
 Set this section to reflect project dependencies:
 
-TermDefinition
+Term | Definition
+---|---
+providedCompile | required but NOT built into WAR
+compile | required AND built into WAR
 
-providedCompile
-
-required but NOT built into WAR
-
-compile
-
-required AND built into WAR
-
-Gradle Dependency Management Documentation: [http://www.gradle.org/docs/curren
-t/u...anagement.html](https://community.blackboard.com/external-link.jspa?url=
-http%3A//www.gradle.org/docs/current/userguide/dependency_manageme
-nt.html)
+[Gradle Dependency Management Documentation](https://www.gradle.org/docs/current/userguide/dependency_management.html)
 
 Blackboard jars should always be providedCompile to exclude them from the war
 file:
-
+```
     providedCompile( "blackboard.platform:bb-platform:$ext.learnVersion”)  { transitive = false }  
     providedCompile( "blackboard.platform:bb-cms-admin:$ext.learnVersion" ) { transitive = false }   
     providedCompile( "blackboard.platform:bb-taglibs:$ext.learnVersion" ) { transitive = false }  
+```
 
 **NOTE: _'transitive' determines whether to pull all related library dependencies onto the build path._**
 
 Supporting Libraries which need to be built into the war are added as
+```
 ‘compile’:
 
     compile "org.springframework:spring-aop:$ext.springVersion",   
@@ -204,13 +177,14 @@ Supporting Libraries which need to be built into the war are added as
             "commons-logging:commons-logging:1.1.1",   
             "junit:junit:4.5",   
             "org.json:json:20090211"      
-        
+```        
 
 Setting transitive to 'true' specifies a dependency that is reconciled by
 Gradle and places all libraries required to satisfy the dependencies on the
 build path.
-
+```
     compile( "org.hibernate:hibernate-core:$ext.hibernateVersion" ) { transitive = true }
+```
 
 ### bb-manifest.xml and bb-manifest-en_US.properties
 
@@ -228,35 +202,37 @@ Both these files are located in the project WEB-INF directory.
 
 The basic-b2-template bb-manifest minimally requires edits to the following
 noted areas for use in your cloned project.
-
-                      
+```                      
         <name value="b2.name" /> <--- this is changed in bb-manifest-en_US.properties       
         <handle value="template" /> <--- this should be changed to reflect the project name - such as my-gradleB2       
         <description value="b2.description" /> <--- this is changed in bb-manifest-en_US.properties       
         <default-locale value="en_US" /> <--- this may be left unchanged       
         <version value="1.0" /> <--- this may be changed to reflect the extension version       
         <requires>  
-            <bbversion value="9.1.110082.0" /> <--- this should be changed to reflect the minimal target Learn version     </requires>        
+            <bbversion value="9.1.110082.0" /> <--- this should be changed to reflect the minimal target Learn version</requires>        
         <vendor>  
-            <id value="mnmt" /> <--- this should be changed to a four character id that reflects the extension origin          <name value="Monument University" /> <--- this should be changed to the vendor name          
+            <id value="mnmt" /> <--- this should be changed to a four character id that reflects the extension origin 
+            <name value="Monument University" /> <--- this should be changed to the vendor name          
             <url value="http://www.monument.edu/" /> <--- this should be changed to vendor URL         
             <description value="Monument University" /> <--- this should be a brief description of the vendor       
         </vendor>  
+```
 
 #### bb-manifest-en_US.properties
 
 Bundle *.properties files provide the means to internationalize the bb-
 manifest sections that are visible in the UI and any text that is displayed as
 part of the extension's user interface.
-
+```
     b2.name=B2 Template  <--- this should be changed to reflect the name of your extension, such as my-gradleB2   
     b2.description=Simple B2 template for starting new B2 projects.  <--- this should contain a brief description of the extension's function.  
+```
 
 ### Build and Deploy
 
 Building and deploying is conveniently done via a terminal by running the
 gradle deployB2 task from within the top level directory of your project.
-
+```
     $ gradle deployB2  
      :compileJava UP-TO-DATE   
      :processResources UP-TO-DATE  
@@ -265,6 +241,7 @@ gradle deployB2 task from within the top level directory of your project.
      :deployB2  
      BUILD SUCCESSFUL  
      Total time: 12.423 secs  
+```
 
 Note that launching custom tasks may be configurable within your IDE. Adding a
 custom task enables a build and deploy cycle to be run entirely from within

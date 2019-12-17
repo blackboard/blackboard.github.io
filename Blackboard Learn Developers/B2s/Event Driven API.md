@@ -63,27 +63,17 @@ save, delete).
 
 The following Persisters are found in the Event Driven API:
 
-CourseSitePersister
-
-OrganizationPersister
-
-EnrollmentPersister
-
-OrganizationMembershipPersister
-
-StaffStudentPersister
-
-PersonPersister
-
-CourseCategoryPersister
-
-OrganizationCategoryPersister
-
-CourseCategoryMembershipPersister
-
-OrganizationCategoryMembershipPersister
-
-PortalRolePersister
+* CourseSitePersister
+* OrganizationPersister
+* EnrollmentPersister
+* OrganizationMembershipPersister
+* StaffStudentPersister
+* PersonPersister
+* CourseCategoryPersister
+* OrganizationCategoryPersister
+* CourseCategoryMembershipPersister
+* OrganizationCategoryMembershipPersister
+* PortalRolePersister
 
 Persist methods include changeKey, insert, remove, save, update, clone. Change
 key is not relevant for membership type items. Clone is only relevant for
@@ -94,65 +84,41 @@ in the API specifications.
 
 The following Loaders are found in the Event Driven API:
 
-SourseSiteLoader
-
-OrganizationLoader
-
-EnrollmentLoader
-
-OrganizationMembershipLoader
-
-StaffStudentLoader
-
-PersonLoader
-
-CourseCategoryLoader
-
-OrganizationCategoryLoader
-
-CourseCategoryMembershipLoader
-
-OrganizationCategoryMembershipLoader
-
-PortalRoleLoader
+* SourseSiteLoader
+* OrganizationLoader
+* EnrollmentLoader
+* OrganizationMembershipLoader
+* StaffStudentLoader
+* PersonLoader
+* CourseCategoryLoader
+* OrganizationCategoryLoader
+* CourseCategoryMembershipLoader
+* OrganizationCategoryMembershipLoader
+* PortalRoleLoader
 
 Load methods include load by batch_uid and load by template. More information
 about Load methods can be found in the API specifications.
-
-##
 
 ## Data source loader and persister
 
 The following Data Source Loader and Persister are found in the Event Driven
 API:
 
-DataSourceLoader
+**DataSourceLoader**
 
-loadAll()
-
-loadAdminObjectCount()
-
-loadAllAdminObjectCounts()
-
-loadByBatchUid()
-
-DataSourcePersister
-
-create()
-
-disableAdminObjectsByDataType()
-
-disableAllAdminObjects()
-
-modify()
-
-purgeAdminObjectsByDataType()
-
-purgeAllAdmiObjects()
-
-purgeSnapshotSessions()
-
-removeByBatchUid()
+* loadAll()
+* loadAdminObjectCount()
+* loadAllAdminObjectCounts()
+* loadByBatchUid()
+* DataSourcePersister
+* create()
+* disableAdminObjectsByDataType()
+* disableAllAdminObjects()
+* modify()
+* purgeAdminObjectsByDataType()
+* purgeAllAdmiObjects()
+* purgeSnapshotSessions()
+* removeByBatchUid()
 
 # Persistence package
 
@@ -169,6 +135,7 @@ save, and delete for the entity objects. The framework includes:
   * DbPersistenceManager: This class maintains the reference points for each individual loader/persister. An instance of any persister/loader is requested through it.
   * PersisterInterfaces: This includes the PersonPersister, CoursesitePersister, and so forth.
 
+```
 blackboard.platform.BbServiceManager.init( serviceConfig,bbprops );
 
 blackboard.platform.persistence.PersistenceService pService =
@@ -181,6 +148,7 @@ CoursesiteLoader cLoader=
 (CoursesiteLoader)bManager.getLoader(CoursesiteLoader.TYPE);
 
 PersistenceManager.getLoader=PersonPersister.Default.getInstance()
+```
 
 The user must initialize the BbServiceManager before attempting any
 persistence of the admin data objects. After BbServiceManager is initialized
@@ -207,6 +175,7 @@ blackboard.admin.data.course.CourseSite();
 
   5. The following code sample assumes a “SERVICE_CONFIG_DIR” and “VIRTUAL_HOST_KEY” properties will be set, probably through –D parameters if it is used in a command line application. The SERVICE_CONFIG_DIR should be set to the full path of the Blackboard config directory, while the VIRTUAL_HOST_KEY needs to be the virtual installation you want to test, by default it is bb_bb60.
 
+```
 // Initialize the BbServiceManager and set the context
 
 Follow the steps below to determine the relationships between the entity and
@@ -258,10 +227,11 @@ e.toString() + "..exiting.\n");
 System.exit(0);
 
 }
+```
 
   6. The controller creates an entity object and sets its attributes.
   7. The controller requests a persist action off the Loader / Persister.
-
+```
 CourseSiteLoader cLoader=
 
 (CourseSiteLoader)BbServiceManager.getPersistenceService().getDbPersistenceMan
@@ -273,6 +243,7 @@ CourseSitePersister cPersister=
 Manager().getPersister(CoursesSitePersister.TYPE);
 
 PersistenceManager.getLoader=PersonPersister.Default.getInstance()
+```
 
   8. The controller catches any persistence exceptions that occur.
 

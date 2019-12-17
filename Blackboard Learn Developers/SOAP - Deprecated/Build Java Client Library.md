@@ -3,8 +3,9 @@
 *Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']*  
 *Tags: ['web services', 'soap', 'java', 'tutorial', 'blackboard learn', 'sample code', 'developer']*  
 <hr />
+
 The Blackboard Learn SOAP Web Services come out of the box with [sample
-code](https://community.blackboard.com/docs/DOC-1143) that can be downloaded
+code](About%20Web%20Services%20Sample%20Code.md) that can be downloaded
 directly from the user interface. This document will describe the process by
 which a developer can build the java client library contained within that
 code.
@@ -16,8 +17,8 @@ called client.zip, so when you unzip it, it will be called client. This is
 referred to as the top-level client directory in this document. This document
 specifically deals with a subfolder of that directory, which is also called
 client. When top-level client directory is specified, this refers to
-_/path/client_. When top-level is not specified, it refers to
-_/path/client/client_.
+`_/path/client_`. When top-level is not specified, it refers to
+`_/path/client/client_`.
 
 # Preparing the Development Environment
 
@@ -26,50 +27,14 @@ several years ago. As a result, it is dependent upon some older technology. It
 is suggested that the technologies installed for this tutorial be segmented
 for this purpose.
 
-**Library****Download Link****Comments  
-**
-
-Ant 1.6
-
-[http://archive.apache.org/dist/ant/binaries/apache-
-ant-1.6.0-bin.zip](https://community.blackboard.com/external-link.jspa?url=htt
-p%3A//archive.apache.org/dist/ant/binaries/apache-
-ant-1.6.0-bin.zip)
-
-SED
-
-If building on Windows, you must install sed, either stand-alone, or from
-cygwin
-
-Java
-
-Script tested on Java 7, should work with Java 8
-
-Axis2 1.3
-
-[http://archive.apache.org/dist/ws/axis2/1_3/axis2-1.3-bin.zip](https://commun
-ity.blackboard.com/external-link.jspa?url=http%3A//archive.apache.org/di
-st/ws/axis2/1_3/axis2-1.3-bin.zip)
-
-Axis2 1.3 Source
-
-[http://archive.apache.org/dist/ws/axis2/1_3/axis2-1.3-src.zip
-](https://community.blackboard.com/external-link.jspa?url=http%3A//archive
-.apache.org/dist/ws/axis2/1_3/axis2-1.3-src.zip)
-
-Rampart 1.4
-
-[http://archive.apache.org/dist/ws/rampart/1_4/rampart-
-dist-1.4-bin.zip](https://community.blackboard.com/external-link.jspa?url=http
-%3A//archive.apache.org/dist/ws/rampart/1_4/rampart-
-dist-1.4-bin.zip)
-
-In order to set the development environment up with these technologies without
-overriding newer versions that may be being used in other projects, it is
-recommended that a separate directory be set up in the top-level client
-directory and environment variables be temporarily pointed to them. In this
-example, a tools directory has been added to the client directory, an Ant,
-Axis, and Rampart were unzipped here.
+Library | Download Link | Comments  
+---|---|---
+Ant 1.6 | [apache-ant-1.6.0-bin.zip](https://archive.apache.org/dist/ant/binaries/apache-ant-1.6.0-bin.zip) |
+SED |  | If building on Windows, you must install sed, either stand-alone, or from cygwin
+Java |  | Script tested on Java 7, should work with Java 8
+Axis2 1.3 | [axis2-1.3-bin.zip](https://archive.apache.org/dist/ws/axis2/1_3/axis2-1.3-bin.zip) |
+Axis2 1.3 Source | [axis2-1.3-src.zip](https://archive.apache.org/dist/ws/axis2/1_3/axis2-1.3-src.zip) | 
+Rampart 1.4 | [rampart-dist-1.4-bin.zip](https://archive.apache.org/dist/ws/rampart/1_4/rampart-dist-1.4-bin.zip) | In order to set the development environment up with these technologies without overriding newer versions that may be being used in other projects, it is recommended that a separate directory be set up in the top-level client directory and environment variables be temporarily pointed to them. In this example, a tools directory has been added to the client directory, an Ant, Axis, and Rampart were unzipped here.
 
 Now open a terminal or cmd window, and navigate to the client directory, by
 typing: **_cd <pathtodirectory>/client/client_ **and pressing <ENTER>. You
@@ -103,19 +68,16 @@ Java Web Services Library.
 
 The first step is to generate the code. This is done at the command line and
 in the _client/client_ directory. Simply run _**sampleGenClient.[cmd|sh]
-[http://](https://community.blackboard.com/external-
-link.jspa?url=http%3A//)<your learn server>**_. There are two caveats
+<your learn server>. There are two caveats
 here. Firstly, if you are running this on Mac or Linux, the
 _sampleGenClient.sh_ file contains Windows ctrl-M line endings. This will
-cause the script to fail. The easiest way to fix this is to use sed (_**sed -e
-"s/^M//" sampleGenClient.sh > sampleGenClient1.sh)**_. Please note that the ^M
+cause the script to fail. The easiest way to fix this is to use sed `sed -e
+"s/^M//" sampleGenClient.sh > sampleGenClient1.sh)`. Please note that the ^M
 actually refers to the control character, so to enter, you will need to hold
 down the ctrl key and press v and then m. The second caveat is that this file
-will fail if you use [https://](https://community.blackboard.com/external-
-link.jspa?url=https%3A//) and building against a self-signed certificate
+will fail if you use `https://` and building against a self-signed certificate
 like the Developer Virtual Machine. Just use
-[http://](https://community.blackboard.com/external-
-link.jspa?url=http%3A//).
+`http://`.
 
 You will now end up with a _generated-src_ directory. You can build the
 library using ant, by simply typing **_$ANT_HOME/bin/ant build_** and pressing

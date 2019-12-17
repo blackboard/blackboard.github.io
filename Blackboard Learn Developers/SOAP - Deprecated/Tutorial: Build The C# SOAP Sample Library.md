@@ -12,8 +12,8 @@ all of the code used herein.
 
 ## Prerequisites
 
-  * Microsoft™ [Web Services Extensions 2.0 Service Pack 3](https://community.blackboard.com/external-link.jspa?url=http%3A//www.microsoft.com/downloads/details.aspx%3FFamilyID%3D1ba1f631-c3e7-420a-bc1e-ef18bab66122%26DisplayLang%3Den)
-  * [Client.zip](https://community.blackboard.com/docs/DOC-1143) archive from the Blackboard Learn User Interface
+  * Microsoft™ [Web Services Extensions 2.0 Service Pack 3](https://www.microsoft.com/downloads/details.aspx%3FFamilyID%3D1ba1f631-c3e7-420a-bc1e-ef18bab66122%26DisplayLang%3Den)
+  * [Client.zip](About%20Web%20Services%20Sample%20Code.md) archive from the Blackboard Learn User Interface
   * Web Services are [Available and Discoverable](https://help.blackboard.com/en-us/Learn/9.1_2014_04/Administrator/070_Server_Management_and_Integrations/System_Integration/Integration_Development/030_Web_Services)
 
 ## Assumptions
@@ -42,29 +42,22 @@ by the script. This file may be located in several locations depending upon
 the version of Visual Studio and Windows. You might find this file in the
 following locations.
 
-OSApplicationWSDL.exe Location
-
-Windows 7
-
-Visual Studio 2010 Express
-
-C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin
-
-Windows Server 2008 R2
-
-Visual Studio 2010 Express
-
-C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin
+OS | Application | WSDL.exe Location
+---|---|---
+Windows 7 | Visual Studio 2010 Express | C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin
+Windows Server 2008 R2 | Visual Studio 2010 Express | C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin
 
 Once this edit has been made, save the file. Now from the command line, and in
 the dotnetclient directory, type the following:
-
+```
     sampleGenClient.cmd http://<blackboard learn domain>
+```
 
 WARNING: _You will see error messages similar to the one below. You can safely
 ignore these messages._
-
+```
     Schema validation warning: Schema item 'element' named 'getServerVersion' from namespace 'http://util.ws.blackboard' is invalid. Namespace 'http://ws.platform.blackboard/xsd' is not available to be referenced in this schema. Schema validation warning: Schema item 'element' named 'getServerVersionResponse' from namespace 'http://util.ws.blackboard' is invalid. Namespace 'http://ws.platform.blackboard/xsd' is not available to be referenced in this schema. Schema validation warning: Schema item 'element' named ‘getDataSourcesResponse' from namespace 'http://util.ws.blackboard' is invalid. Namespace 'http://util.ws.blackboard/xsd' is not available to be referenced in this schema. Schema validation warning: Schema item 'element' named 'checkEntitlement' from namespace 'http://util.ws.blackboard' is invalid. Namespace 'http://ws.platform.blackboard/xsd' is not available to be referenced in this schema. Warning: Schema could not be validated. Class generation may fail or may produce incorrect results. Writing file 'C:\Users\username\Blackboard\Developer Tools\Web Services\dotnetclient\BbWsClient\gen\UtilWS.cs'.
+```
 
 Once the sample code has been generated, the next step is to build the code
 into a re-usable library. To do this, you must first open Microsoft Visual
@@ -79,17 +72,19 @@ initialize call.
 
 For example, the initAnnoucement(UsernameToken userToken) method looks like
 the following:
-
+```
     announcement = new AnnouncementWS();  
     announcement.Url = baseUrl + "/Announcement.WS";   
     announcement.RequestSoapContext.Security.Tokens.Add(userToken);  
+```
 
 Simply modify the method as illustrated below to enable the cookie container.
-
+```
     announcement = new AnnouncementWS();   
     announcement.CookieContainer = new System.Net.CookieContainer();  //HANDLE STICKY COOKIES   
     announcement.Url = baseUrl + "/Announcement.WS";   
     announcement.RequestSoapContext.Security.Tokens.Add(userToken);
+```
 
 You must make this change to all of the init<WebService> methods you plan to
 implement.
@@ -112,17 +107,17 @@ WSDL.
 
 For more information and workarounds for this bug, see the Behind the
 Blackboard article [Gradebook.WS wsdl not Able to be Consumed due to Invalid
-RuntimeException Declaration](https://community.blackboard.com/external-link.j
-spa?url=https%3A//blackboard.secure.force.com/btbb_articleview%3Fid%3DkA
-370000000H5Fc).
+RuntimeException Declaration](https://blackboard.secure.force.com/btbb_articleview?id=kA370000000H5Fc).
 
 If you follow workaround 1, simply change the initial gradebookWS call:
-
+```
     url = url_header + 'Gradebook.WS?wsdl'
+```
 
 with this:
-
+```
     url = 'file:///Users/username/wsdl/Gradebook.xml'
+```
 
 Just be sure to replace my absolute path to the absolute path on your file
 system.

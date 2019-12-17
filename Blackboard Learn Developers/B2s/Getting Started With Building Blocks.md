@@ -53,9 +53,7 @@ development project.
 The following tutorials are available to help you get started with Building
 Block development:
 
-  * [Building Block Development Life Cycle](https://community.blackboard.com/docs/DOC-1126)
-  * [Learn Development Server](https://community.blackboard.com/docs/DOC-1128)
-  * [Development Work Station](https://community.blackboard.com/docs/DOC-1137-developer-workstation)
-  * [Enabling Debugging](https://community.blackboard.com/docs/DOC-1138)
-  * [First Project: Gradle, Git, and basic-b2-template](https://community.blackboard.com/docs/DOC-1139)
+  * [Building Block Development Life Cycle](Building%20Block%20Development%20Life%20Cycle.md)
+  * [Enabling Debugging](Enabling%20Remote%20Debugging.md)
+  * [First Project: Gradle, Git, and basic-b2-template](First%20Project:%20Gradle,%20Git,%20and%20b2-starter-template.md)
 

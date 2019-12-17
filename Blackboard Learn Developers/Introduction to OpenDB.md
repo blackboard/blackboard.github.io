@@ -25,11 +25,6 @@ With each recent Service Pack for Learn, Blackboard provides current version
 schema details and a PDF document that details the changes from the previous
 Service Pack.
 
-Also, Join the [BB_OPEN_DATABASE-L](https://community.blackboard.com/external-
-link.jspa?url=http%3A//lists.blackboard.com/SCRIPTS/WA-
-BLACKBOARD.EXE%3FA0%3DBB_OPEN_DATABASE-L) listserv to discuss best practices
-and share queries.
-
 ### Mitigating Risk
 
 Having access to your data is exciting, but as with all enterprise software

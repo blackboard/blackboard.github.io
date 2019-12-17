@@ -12,10 +12,9 @@ your Web Services integration, and even to troubleshoot an existing
 integration from release-to-release.
 
 This help article assumes that you have downloaded the [Web Services Sample
-Code](https://community.blackboard.com/docs/DOC-1143) and that you have built
+Code](About%20Web%20Services%20Sample%20Code.md) and that you have built
 the [.NET Web Services
-Library](https://community.blackboard.com/docs/DOC-1144-tutorial-build-the-c-
-soap-sample-library).
+Library](Tutirial:%20Build%The%20C#%20SOAP%20Sample%20Library.md).
 
 ### How to Build
 

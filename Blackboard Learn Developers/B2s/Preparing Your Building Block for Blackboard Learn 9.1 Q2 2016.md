@@ -4,21 +4,15 @@
 *Tags: ['9.1', 'q2 2016', 'developer']*  
 <hr />
 Attached is the PowerPoint deck for the 3/16/2016 Webinar recording:
-[Preparing Your Building Block for Blackboard Learn 9.1.Q2
-2016](https://sa
-s.elluminate.com/collab/ui/scheduler/resource/recording/279AEBB7C6
-0BDE9E0B7CC9B07120BB17). In this Webinar we reviewed the changes in the
+[Preparing Your Building Block for Blackboard Learn 9.1.Q2 2016](https://sas.elluminate.com/collab/ui/scheduler/resource/recording/279AEBB7C60BDE9E0B7CC9B07120BB17). In this Webinar we reviewed the changes in the
 upcoming Learn 9.1 Q2 2016 release and how to prepare your Building Block for
 the release. Topics covered include - Java 8, Learn Versioning, B2 Versioning,
 New Installer, and Development Resources. **Another must-read is** [Preparing
 Your Building Blocks For Learn SaaS and Newer Learn
-Versions](https://community.blackboard.com/docs/DOC-1595-preparing-your-
-building-blocks-for-learn-saas-and-newer-learn-versions) by Scott Hurrey.
+Versions](Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.md) by Scott Hurrey.
 
 The recording for the 3/22/2016 Webinar is
-[here](https://s
-as.elluminate.com/collab/ui/scheduler/resource/recording/DB2503BFA
-4E9FF402B31858655506AD8). During the 3/22/2016 presentation one of the
+[here](https://sas.elluminate.com/collab/ui/scheduler/resource/recording/DB2503BFA4E9FF402B31858655506AD8). During the 3/22/2016 presentation one of the
 participants had questions around setting the minimum and maximum version in
 the bb-manifest, and setting the B2 version. I've updated the slide deck based
 on that conversation and further internal conversations. The slide on B2
@@ -28,9 +22,7 @@ works in SaaS, it will also work in 9.1 Q2 2016 and future releases of Learn.
 There is no reason to create two versions. Further discussion on B2 versioning
 and setting the Learn minimum and maximum version # in the bb-manifest follows
 in the comments section below. How to set Java compatibility settings is
-discussed in [the attached powerpoint slide deck.](https://community.blackboar
-d.com/servlet/JiveServlet/download/1677-11-10380/2016.03.27.PreparingYourBuild
-ingBlockForLearnQ2-2016.pptx)
+discussed in [the attached powerpoint slide deck.](attachments/2016.03.27.PreparingYourBuildingBlockForLearnQ2-2016.pptx)
 
 Regarding setting the minimum and maximum version of Learn in the bb-manifest
 file, and setting the version of your B2, there are many different possible

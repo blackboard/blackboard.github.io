@@ -34,15 +34,12 @@ Data that can be accessed includes:
 ## Learn More
 
 To learn more about creating Building Blocks, start
-[here](https://community.blackboard.com/docs/DOC-1111-blackboard-building-
-blocks). To see examples of Building Blocks that have already been created,
+[here](Getting%20Started%20With%20Building%20Blocks.md). To see examples of Building Blocks that have already been created,
 take a look at released building blocks on the Blackboard Learn [extensions
-site](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.blackboardextensions.com/) which highlights
+site](https://www.blackboardextensions.com/) which highlights
 Building Blocks produced by Blackboard Partners, or take a look at open source
 projects contributed by the Learn developer community at OSCELOT's
-[projects](https://community.blackboard.com/external-
-link.jspa?url=http%3A//projects.oscelot.org/) site.
+[projects](https://github.com/oscelot) site.
 
 ## Request a Developers License
 
@@ -51,15 +48,13 @@ cost. A developers license is a "small footprint" version of Blackboard with
 the Community and Content Management modules turned on. It can be run on a
 development server or even a virtual machine image for development purposes.
 If you require a developer network account visit [Behind the
-Blackboard](https://community.blackboard.com/external-
-link.jspa?url=https%3A//blackboard.secure.force.com/) (as an
+Blackboard](https://blackboard.secure.force.com/) (as an
 administrator) or contact your sales representative.
 
 ## Commercial Partnerships
 
 If you are interested in becoming a Blackboard partner visit the [Blackboard
-Partnerships](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.blackboard.com/partnership/index.aspx)™
+Partnerships](https://www.blackboard.com/partnership/index.aspx)™
 program site. Partnering with Blackboard provides access to design guidance
 and support among other benefits.
 

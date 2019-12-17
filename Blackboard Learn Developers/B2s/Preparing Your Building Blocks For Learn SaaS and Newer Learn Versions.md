@@ -18,33 +18,32 @@ likely need to be modified to run in the new Blackboard.
 
 ***Note:** Building Blocks cannot surface content in an Ultra course, **ever**. B2s meant designed to work with Original Experience courses can continue to work in SaaS, provided they meet the requirements documented here. Ultra Courses surface content from the Content Market - which are built on Partner Cloud, or the LTI standard & Blackboard Learn REST APIs.
 
-  * APIs
-  * Database
-  * Shared Content Folder
-  * Logging Changes
-  * Statelessness
-  * Java 8
-  * Tomcat 8
-    * JSP Precompilation
-    * bb-context-config.properties
-      * com.blackboard.tomcat.servletcontainer.jarscanner.tldJars
-      * com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars
-      * com.blackboard.tomcat.servletcontainer.context.containerSciFilter
-      * com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup
-    * web.xml
-      * Faster Startup
-    * URL Encoding
-  * Permissions
-  * Original UI
-  * Ultra UI
-  * Continuous Delivery
-  * Installing Building Blocks in Learn SaaS
+  * [APIs](#apis)
+  * [Database](#database)
+  * [Shared Content Folder](#shared-content-folder)
+  * [Logging Changes](#logging-changes)
+  * [Statelessness](#statelessness)
+  * [Java 8](#java-8)
+  * [Tomcat 8](#tomcat-8)
+    * [JSP Precompilation](#jsp-precompilation)
+    * [bb-context-config.properties](#bb-context-config.properties)
+      * [com.blackboard.tomcat.servletcontainer.jarscanner.tldJars](#com.blackboard.tomcat.servletcontainer.jarscanner.tldJars)
+      * [com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars](#com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars)
+      * [com.blackboard.tomcat.servletcontainer.context.containerSciFilter](#com.blackboard.tomcat.servletcontainer.context.containerSciFilter)
+      * [com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup](#com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup)
+    * [web.xml](#web.xml)
+      * [Faster Startup](#faster-startup)
+    * [URL Encoding](#url-encoding)
+  * [Permissions](#permissions)
+  * [Original UI](#original-ui)
+  * [Ultra UI](#ultra-ui)
+  * [Continuous Delivery](#continuous-delivery)
+  * [Installing Building Blocks in Learn SaaS](#installing-building-blocks-in-learn-saas)
 
 # APIs
 
 Only use the [published
-APIs](https://community.blackboard.com/docs/DOC-1115-building-block-api-
-documentation). If it's not published, it's private. Our product development
+APIs](Building%20Block%20API%10Documentation). If it's not published, it's private. Our product development
 team is cleaning up and refactoring a lot of code. If you're using private
 APIs, there is a good chance they will stop working. So, remove all use of
 private APIs. For example we've discovered that B2s that depend on
@@ -56,8 +55,7 @@ private APIs.
 
 In SaaS, the database schema name will no longer be **BBLEARN** or
 **bb_bb60**. Your B2 code must determine the actual schema name if it has any
-dependency on the value. See [Bye Bye BBLEARN & bb_bb60](https://community.bla
-ckboard.com/community/developers/learn/blog/2017/05/14/bye-bye-bblearn-bbbb60)
+dependency on the value. See [Bye Bye BBLEARN & bb_bb60](https://community.blackboard.com/blogs/4/23)
 
 Also, in SaaS, the database is Postgres. If you’ve been testing your code on
 the Developer Virtual Machine, this isn’t that big of a deal. Schema.xml will
@@ -66,45 +64,34 @@ in the form of stored procedures, post_schema_updates, etc, you will just need
 to be sure to supply those files in postgres form, as well. These files will
 take the suffix, **db-pgsql**. If a self or managed-hosted client is migrating
 your B2 to SaaS via a "full database migration" be certain to read [SaaS
-Migrations - Sequences and Tables](https://community.blackboard.com/community/
-developers/learn/blog/2017/05/29/saas-migrations-sequences-and-tables)
+Migrations - Sequences and Tables](https://community.blackboard.com/blogs/4/24
 
 In addition, its important to note that Exceptions encountered during postgres
 transactions stop all processing. You must code to handle this occurrence. One
 approach is to create a save point before you start the transaction and roll
 back to that save point upon exception. Here’s a small sample demonstrating
 this.
-
+```
 // Much of the error handling stripped for space
 
 public static T withSavePoint(Callable c, Connection con) throws SQLException
 {
+  Savepoint savepoint = null;
 
-Savepoint savepoint = null;
+  try {
+    if ( null != con && !con.getAutoCommit() ) {
+      savepoint = con.setSavepoint();
+    }
 
-try {
-
-if ( null != con && !con.getAutoCommit() ) {
-
-savepoint = con.setSavepoint();
-
+    return c.call();
+  } catch ( SQLException e ) {
+    if ( con != null && savepoint != null ) {
+      con.rollback( savepoint );
+    }
+    throw e;
+  }
 }
-
-return c.call();
-
-} catch ( SQLException e ) {
-
-if ( con != null && savepoint != null ) {
-
-con.rollback( savepoint );
-
-}
-
-throw e;
-
-}
-
-}
+```
 
 Postgres handles timestamps differently. There are two types of timestamps:
 **localtimestamp** and **clock_timestamp::timestamp**. The **localtimestamp**
@@ -118,8 +105,6 @@ managed through the bb-manifest.xml file. This includes rows in tables like
 application, navigation_item, and entitlements. The use of data-templates both
 adds risk to live-upgrades and loses customizations (application status,
 entitlement-to-role mappings, etc.).
-
-##
 
 # Shared Content Folder
 
@@ -151,42 +136,34 @@ returning what you expect it to.
 
 As an example, with prior versions of Learn you could use the following code
 to write to a file in your plugin’s folder and create a configuration file:
-
+```
 PlugInManager manager = PlugInManagerFactory.getInstance();
-
-File myDir = manager.getPlugInDir( manager.getPlugIn( "myVendorId",
-"myB2Handle" ) );
-
+File myDir = manager.getPlugInDir( manager.getPlugIn( "myVendorId","myB2Handle" ) );
 File myConfigDir = new File( myDir, "config" );
-
 File myConfigFile = new File( myConfigDir, "config.txt" );
 
 // read/write myConfigFile
+```
 
 You will now need to re-write the above code code to look like the following:
-
-File myConfigDir = PlugInUtil.getConfigDirectory( "myVendorId", "myB2Handle"
-);
-
+```
+File myConfigDir = PlugInUtil.getConfigDirectory( "myVendorId", "myB2Handle");
 File myConfigFile = new File(myConfigDir, “config.txt”);
 
 // read/write myConfigFile
+```
 
 If you just need to read from a file that is included with in your Building
 Block, you can use the following code snippet to access the cached copy.
-
+```
 PlugInManager manager = PlugInManagerFactory.getInstance();
-
-File myDir = manager.getPlugInDir( manager.getPlugIn( "myVendorId",
-"myB2Handle" ) );
-
+File myDir = manager.getPlugInDir( manager.getPlugIn( "myVendorId","myB2Handle" ) );
 File myStaticDirectory = new File (myDir, "webapp/myStaticStuff");
 
 // read from myStaticDirectory - files as originally present in war file
+```
 
-See the bb-config.properties section in [Developer Virtual Machine -
-DVM](https://community.blackboard.com/docs/DOC-1649-developer-virtual-machine-
-dvm) for how to configure your DVM to behave like Learn SaaS in regards to the
+See the bb-config.properties section in [Developer Virtual Machine - DVM](/Developer%20Versions%20of%20Blackboard%20Applications/Developer%20Virtual%20Machine%20-%20DVM.md) for how to configure your DVM to behave like Learn SaaS in regards to the
 shared content folder.
 
 Eventually, all write access to the shared folder will be phased out, and
@@ -194,10 +171,6 @@ write access for logging will be limited to the log directory returned by
 PlugInUtil.getLogDirectory(). Prior to this change, a new way will be
 documented to achieve the same goal without writing directly to the backend of
 the server.
-
-##
-
-#
 
 # Logging Changes
 
@@ -210,26 +183,21 @@ panel.
 In order to see your B2s logs in Kibana-Elasticsearch, the only SaaS interface
 for log files, your B2 must do the following:
 
-  1. Write the log files to the directory returned by **blackboard.platform.plugin.PlugInUtil.getLogDirectory.**[**PlugInUtil** (Building Blocks API 3000.1.0)](https://community.blackboard.com/external-link.jspa?url=http%3A//library.blackboard.com/ref/16ce28ed-bbca-4c63-8a85-8427e135a710/blackboard/platform/plugin/PlugInUtil.html)
-    1. Typically looks like **<blackboard home>/logs/plugins/<vendorId>-<handle>/...**
-    2. Read the API documentation on how to get write permission.  
+  1. Write the log files to the directory returned by **blackboard.platform.plugin.PlugInUtil.getLogDirectory.**[**PlugInUtil** (Building Blocks API 3000.1.0)](https://library.blackboard.com/ref/16ce28ed-bbca-4c63-8a85-8427e135a710/blackboard/platform/plugin/PlugInUtil.html)
+     1. Typically looks like **<blackboard home>/logs/plugins/<vendorId>-<handle>/...**
+     2. Read the API documentation on how to get write permission.  
 
   2. Use this format, with four columns that are pipe separated:  
-
-2016-03-15 01:00:00 | DEBUG | 41:c.b.c.i.task.UsageReportingTask | Generating
-Usage Report...
-
-2016-03-15 01:00:00 | ERROR | 68:o.s.s.support.MethodInvokingRunnable |
-Invocation of method 'doUsageReport' on target class ...failed
-
+```
+2016-03-15 01:00:00 | DEBUG | 41:c.b.c.i.task.UsageReportingTask | Generating Usage Report...
+2016-03-15 01:00:00 | ERROR | 68:o.s.s.support.MethodInvokingRunnable | Invocation of method 'doUsageReport' on target class ...failed
 java.lang.NullPointerException: null
-
-at com.blackboard.consulting.internships.task.UsageReportingTask.getFirstTimeA
-ctivationDateModified(UsageReportingTask.java:68)
+  at com.blackboard.consulting.internships.task.UsageReportingTask.getFirstTimeActivationDateModified(UsageReportingTask.java:68)
+```
 
 The b2 logging configuration in the logback.xml file that produces this log
 format is:
-
+```
 <appender ... >
 
 ...
@@ -244,6 +212,7 @@ format is:
 ...
 
 </appender>
+```
 
 **[Sample logging code that works in a SaaS environment.](https://github.com/mark-b-kauffman/bbdn-bblogbackb2)**
 
@@ -259,20 +228,18 @@ database.
 
 As an example, if you currently employ code like the following to store an
 object in the session:
-
+```
 request.getSession().setAttribute( "myKey", "myValue" );
-
 request.getSession().setAttribute( "myObjectKey", myObject );
+```
 
 You will need to refactor to look like this:
-
-ContextManagerFactory.getInstance().getContext().getSession().setGlobalKey(
-"myVendorId.myB2Handle.myKey", "myValue" );
+```
+ContextManagerFactory.getInstance().getContext().getSession().setGlobalKey("myVendorId.myB2Handle.myKey", "myValue" );
+```
 
 Non-String values need to be serialized to save on the **BbSession** -
 refactor to avoid if at all possible.
-
-##
 
 # Java 8
 
@@ -281,12 +248,7 @@ be installed in the cloud, or on 9.1 Q2 2016 or later, need to be built with
 Java 8. For Learn Java 8 releases, Spring 4.2.0+ will be required for B2s that
 use Spring. For more information see [Preparing Your Building Block for
 Blackboard Learn 9.1 Q2
-2016](https://community.blackboard.com/docs/DOC-1677-preparing-your-building-
-block-for-blackboard-learn-91-q2-2016)
-
-##
-
-#
+2016](Preparing%20Your%20Building%20Block%20for%20Blackboard%20Learn%209.1%20Q2%202016.md)
 
 # Tomcat 8
 
@@ -297,25 +259,17 @@ successful, but requires some refactoring of your code.
 
 ## JSP Precompilation
 
-####
-
 It is expected that going forward, all Building Blocks will precompile JSPs.
 This simple step will assure that your JSP files render properly in Blackboard
 Learn. All bundled Building Blocks are required to take this step, while
 currently optional, this could become mandatory in the future.
 
-This blog post describes one way to [precompile you Java Server Pages](https:/
-/community.blackboard.com/community/developers/learn/blog/2017/06/09/precompil
-ing-jsps) when using Gradle.
+This blog post describes one way to [precompile you Java Server Pages](https://community/blackboard.com/blogs/4/25) when using Gradle.
 
 ## bb-context-config.properties
 
-####
-
 Tomcat 8.5 is substantially more configurable in the way that you can
-implement [jar scanning](https://community.blackboard.com/external-
-link.jspa?url=https%3A//tomcat.apache.org/tomcat-8.5-doc/config/jar-
-scanner.html). This file lives in the WEB-INF directory of your Building Block
+implement [jar scanning](https://tomcat.apache.org/tomcat-8.5-doc/config/jar-scanner.html). This file lives in the WEB-INF directory of your Building Block
 and provides the following options:
 
 ### com.blackboard.tomcat.servletcontainer.jarscanner.tldJars
@@ -330,21 +284,26 @@ expression matching all Blackboard jar files containing TLDs.
 Here are a few examples:
 
   * **RECOMMENDED**: Building Block uses several Blackboard Tag Libraries  
+```
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@
-
+```
   * Default  
-
+```
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=
+```
 
   * Building Block uses Struts and the bbNG Tags  
+```
 
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=bb-
 taglibs.jar|struts-taglib-.*\\.jar
+```
 
   * Building Block uses several Blackboard libraries and Struts  
-
+```
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@|s
 truts-taglib-.*\\.jar
+```
 
 ### com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars
 
@@ -358,9 +317,10 @@ matches all Blackboard jar files containing such components.
 Here is an example:
 
   * A Building Block contains classes that implement Spring's WebApplicationInitializer  
-
+```
 com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=spring-
 web-.*\\.jar
+```
 
 ### com.blackboard.tomcat.servletcontainer.context.containerSciFilter
 
@@ -371,22 +331,19 @@ matches ALL SCIs and assumes that the Building Block does not use any.
 Examples:
 
   * Building Block does not use SCIs and does not have any uncompiled jsps  
-
+```
 com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*$
+```
 
   * If for some reason, your JSP is not compiled, use  
-
-com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.Ja
-sperInitializer)$
+```
+com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.JasperInitializer)$
+```
 
   * If the JSPs are compiled, but your code relies on classes that implement Spring's WebAppplicationInitializer  
-
-com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.Sp
-ringServletContainerInitializer)$
-
-#####
-
-###
+```
+com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.SpringServletContainerInitializer)$
+```
 
 ### com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup
 
@@ -394,42 +351,34 @@ This is not required to be in the bb-context-config.properties file. You would
 include this and set it to true only if the Building Block or one of the jar
 files it contains defines a listener in a TLD that the Building Block
 requires.
-
-com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup=true**
-
-**
-
-_\.jar_
+```
+com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup=true
+```
 
 Here is a final example of a typical /WEB-INF/bb-context-config.properties
 file:
-
+```
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=
-
 com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=
-
 com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*$
+```
 
 If you see errors like:
-
+```
 Unable to compile <myclass> root cause:
-
 INFO | jvm 1 | 2018/02/06 00:51:17 | java.lang.NullPointerException
-
 INFO | jvm 1 | 2018/02/06 00:51:17 | at org.apache.jasper.JspCompilationContex
 t.getTldResourcePath(JspCompilationContext.java:566)
-
 INFO | jvm 1 | 2018/02/06 00:51:17 | at
 org.apache.jasper.compiler.Parser.parseTaglibDirective
+```
 
 try adding making your bb-config-context.properties file look like this:
-
+```
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@
-
 com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=
-
-com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.Ja
-sperInitializer)$
+com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.JasperInitializer)$
+```
 
 ## web.xml
 
@@ -469,23 +418,16 @@ require the setting to be false if they are placed in an object whose life-
 cycle is managed by the container, such as a Servlet or a Listener.
 
 Here is an example of what this will look like in your web.xml file:
-
-<web-app xmlns="[http://java.sun.com/xml/ns/javaee](https://community.blackboa
+```
+<web-app 
+  xmlns="[http://java.sun.com/xml/ns/javaee](https://community.blackboa
 rd.com/external-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)"
-
-xmlns:xsi="[http://www.w3.org/2001/XMLSchema-
-instance](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.w3.org/2001/XMLSchema-instance)"
-
-xsi:schemaLocation="[http://java.sun.com/xml/ns/javaee](https://community.blac
-kboard.com/external-
-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)
-[http://java.sun.com/xml/ns/javaee/web-
-app_3_0.xsd](https://community.blackboard.com/external-
-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee/web-
-app_3_0.xsd)"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-
+app_3_0.xsd"
 
 version="3.0" metadata-complete="true">
+```
 
 In addition to metadata-complete, another new tag should be included at the
 end of the web.xml file: absolute-ordering. Generally, this should be an empty
@@ -496,16 +438,16 @@ initialization of other unused fragments in the class path.
 For example:
 
   * The Building Block does NOT use web fragments  
-
+```
 <absolute-ordering/>
+```
 
   * The Building block uses web fragments from the spring-web jar  
-
+```
 <absolute-ordering>
-
-<name>spring_web</name>
-
+  <name>spring_web</name>
 </absolute-ordering>
+```
 
 ### Faster Startup
 
@@ -515,19 +457,11 @@ first access, but that is not always appropriate for every situation. The
 following table illustrates the tags and their meanings. Be sure to select the
 one that is right for your Building Block.
 
-**Tag Value****Description**
-
-<load-on-startup>1</load-on-startup>
-
-Load the servlet during system initialization.
-
-<load-on-startup>-1</load-on-startup>
-
-Load the servlet the first time it is accessed.
-
-<load-on-startup>-9876</load-on-startup>
-
-Load the servlet immediately following the Learn system initialization
+Tag Value | Description
+---|---
+<load-on-startup>1</load-on-startup> | Load the servlet during system initialization.
+<load-on-startup>-1</load-on-startup> | Load the servlet the first time it is accessed.
+<load-on-startup>-9876</load-on-startup> | Load the servlet immediately following the Learn system initialization
 
 Be sure to evaluate your individual integration before deferring your startup.
 If this or another Building Block depends on the servlet code being registered
@@ -548,61 +482,45 @@ required to be executed before user activity then please defer it by calling
 ContextInitThreadRunner.startThread(Thread) or .startDaemonThread(Thread).
 
 Here is a snippet from the Javadoc explaining this method:
+```
+/**
 
-`/**`
+* This method can be used in place of thread.start() when you are starting a thread typically during system startup
 
-```* This method can be used in place of thread.start() when you are starting
-a thread typically during system startup`
+* and you do not absolutely NEED that thread to start immediately. Once the system has completed normal startup of
 
-```* and you do not absolutely NEED that thread to start immediately. Once the
-system has completed normal startup of`
+* all webapps (b2s) and is ready to accept requests, any threads registered via this method will be started. <br>
 
-```* all webapps (b2s) and is ready to accept requests, any threads registered
-via this method will be started. <br>`
+* <br>
 
-```* <br>`
+* It is safe to call this at any point in time though - if the server has already started then this will merely start
+* the thread.<br>`
 
-```* It is safe to call this at any point in time though - if the server has
-already started then this will merely start`
+* <br>
 
-```* the thread.<br>`
+* The reason we are doing this is to make sure all resources can be
+dedicated to pure startup tasks and not diverted
 
-```* <br>`
+* to 'background' activity, thus getting the system to a ready state a bit
+faster.
 
-```* The reason we are doing this is to make sure all resources can be
-dedicated to pure startup tasks and not diverted`
-
-```* to 'background' activity, thus getting the system to a ready state a bit
-faster.`
-
-```*/`
-
-##
+*/
+```
 
 ## URL Encoding
 
 Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
 curly braces ( { } ) or vertical bars, often referred to as pipes ( | ) in
 URLs. For backward compatibility, [Tomcat provides a way to override this
-behavior](https://community.blackboard.com/external-link.jspa?url=https%3A/%
-2Ftomcat.apache.org/tomcat-8.5-doc/config/systemprops.html) by allowing
+behavior](https://tomcat.apache.org/tomcat-8.5-doc/config/systemprops.html) by allowing
 a system property tomcat.util.http.parser.HttpParser.requestTargetAllow to be
 defined. Please be advised that this exposes the application to a [known
-security issue](https://community.blackboard.com/external-
-link.jspa?url=https%3A//nvd.nist.gov/vuln/detail/CVE-2016-6816).
+security issue](https://nvd.nist.gov/vuln/detail/CVE-2016-6816).
 
 Future versions of Tomcat may not support this override. Therefore, all B2s
-must url-encode these characters. For example, an URL like [http://myuniversit
-y.blackboard.com/webapps/myb2/appController?options=](/external-link.jspa?url=
-http%3A//myuniversity.blackboard.com/webapps/myb2/appController%3Fop
-tions%3D){x|y} must be written by the application as [http://myuniversity.blac
-kboard.com/webapps/myb2/appController?options=%7bx%7cy%7d](/external-link.jspa
-?url=http%3A//myuniversity.blackboard.com/webapps/myb2/appController
-%3Foptions%3D%257bx%257cy%257d). Otherwise, Tomcat will reject the request.
+must url-encode these characters. For example, an URL like `http://myuniversity.blackboard.com/webapps/myb2/appController?options={x|y}` must be written by the application as `http://myuniversity.blackboard.com/webapps/myb2/appController?options=%7bx%7cy%7d`. Otherwise, Tomcat will reject the request.
 
 # Permissions
-
-#
 
 As Blackboard continues to modernize the Blackboard Learn platform and move
 services out of the Learn code line and into microservices, the need to secure
@@ -613,36 +531,13 @@ developers ample runway for adjusting to the new restrictions. As new
 restrictions are added, this page will list them, so be sure you are following
 this page to receive updates.
 
-**Permission****Mitigating Factors****Current Action**
-
-java.security.AllPermission
-
-Filtered Out
-
-java.lang.RuntimePermission
-
-createSecurityManager, setSecurityManager
-
-Filtered Out
-
-java.lang.RuntimePermission
-
-* or other action implying createSecurityManager or setSecurityManager
-Warning Message
-
-java.util.PropertyPermission
-
-write
-
-Warning Message
-
-java.io.FilePermission
-
-ALL FILES
-
-Warning Message
-
-#
+Permission | Mitigating Factors | Current Action**
+---|---|---
+java.security.AllPermission |  | Filtered Out 
+java.lang.RuntimePermission | createSecurityManager, setSecurityManager | Filtered Out
+java.lang.RuntimePermission | action implying createSecurityManager or setSecurityManager | Warning Message
+java.util.PropertyPermission | write | Warning Message
+java.io.FilePermission | ALL FILES | Warning Message
 
 Many Building Blocks rely on the ALL FILES permission for writing to the file
 system. This will be filtered out soon. The Building Block should request
@@ -652,20 +547,16 @@ an example of a bad permission and a good permission for writing to a log file
 from a Building Block.
 
 # BAD
+```
+<permission type="java.io.FilePermission"name="&lt;&lt;ALLFILES&gt;&gt;" actions="read,write,delete,wxecute"/>
+```
 
-`<permission type=``"java.io.FilePermission"` `name=``"&lt;&lt;ALL
-FILES&gt;&gt;"` `actions=``"read,write,delete,execute"``/>`
-
-# GOOD ( A couple examples. See [ALL FILES No More](https://community.blackboa
-rd.com/community/developers/blog/2017/04/18/all-files-no-more) for a full
-set.)
-
-<permission type="java.io.FilePermission" name="BB_HOME/-"
-actions="read,write,delete"/>
-
-`<permission type=``"java.io.FilePermission"` `name=``"BB_HOME/logs/"`
-`actions=``"read,write,delete"``/>`
-
+# GOOD 
+( A couple examples. See [ALL FILES No More](https://community.blackboard.com/blogs/4/26) for a full set.)
+```
+<permission type="java.io.FilePermission" name="BB_HOME/-" actions="read,write,delete"/>
+<permission type="java.io.FilePermission" name="BB_HOME/logs/" actions="read,write,delete"/>
+```
 # Original UI
 
 Original courses run in an iframe on Learn SaaS. This shouldn’t affect your
@@ -676,13 +567,11 @@ Building Block, except in the two following cases:
   * To meet accepted best practices in web design, there is a new maximum browser width of **1920px**. Make sure you plan accordingly.
   * B2s using the bbUI and bbData tag libraries should be refactored were at all possible to use bbNG.
 
-##
 
 # Ultra UI
 
 There are currently no extension points for Building Blocks in the Ultra UI.
 
-##
 
 # Continuous Delivery
 
@@ -691,7 +580,6 @@ be using only public APIs whenever possible, as the continuous delivery model,
 coupled with the possibility of undocumented private API changes without
 warning, makes using private APIs extremely risky.
 
-##
 
 # Installing Building Blocks in Learn SaaS
 

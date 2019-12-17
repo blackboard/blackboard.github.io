@@ -61,14 +61,12 @@ may contain the following elements:
   * foreign-key. Any number of foreign keys may be defined.
 
 **Table names MUST be prefixed with the vendor-id from the bb-manifest.xml**
-
+```
 <table name="bb_custom_table">
-
-<comment>A table to store custom data for the sample</comment>
-
-<!-- additional definitions -->
-
+  <comment>A table to store custom data for the sample</comment>
+  <!-- additional definitions -->
 </table>
+```
 
 ## Column Element
 
@@ -123,10 +121,10 @@ An integer value, mapped to numeric(38) in Oracle and 'int' on SQL Server
 **char**
 A fixed length, non-internationalized string. A length specifier must be
 provided.
-
+```
 <column name="batch_uid" data-type="nvarchar(256)" nullable="true" />
-
 <column name="user_id" data-type="nvarchar(50)" nullable="false" />
+```
 
 ## Some Blackboard Conventions
 
@@ -136,8 +134,6 @@ defined schema.
   * Mapping boolean values. Data type char(1), with a constraint limiting the values to Y/N, named with a _ind (for "indicator") suffix.
   * Primary keys. Data type int, name with _pk1 suffix.
 
-##
-
 ## Column Constraints
 
 Constraints on the columns values are defined with the value-constraint
@@ -145,19 +141,14 @@ element. A single, required name attribute must be provided to identify the
 constraint. Each accepted value is defined with a child accepted-value
 element, with a single, mandatory value attribute. Unlike default values
 defined on columns, constraint values do not need the quote literals.
-
-<column name="available_ind" data-type="char(1)" default="'Y'"
-nullable="false">
-
-<value-constraint name="indicator57">
-
-<accepted-value value="Y"/>
-
-<accepted-value value="N"/>
-
-</value-constraint>
-
+```
+<column name="available_ind" data-type="char(1)" default="'Y'" nullable="false">
+  <value-constraint name="indicator57">
+    <accepted-value value="Y"/>
+    <accepted-value value="N"/>
+  </value-constraint>
 </column>
+```
 
 ## Primary Key
 
@@ -171,13 +162,11 @@ incremented value. On Oracle, a sequence is automatically created with the
 table name plus _seq suffix.
 
 **Keep that in mind when creating table names, as there is an Oracle limit of 30 characters for object names. So, in practice, names defined in the schema XML must be shorter than 26 characters (because the automatically applied suffixes will extend the object name)**
-
-<primary-key name="domain_pk" comment="[Table:domain][Primary-key:domain_pk]
-on Column pk1 .">
-
-<columnref name="pk1" />
-
+```
+<primary-key name="domain_pk" comment="[Table:domain][Primary-key:domain_pk] on Column pk1 .">
+  <columnref name="pk1" />
 </primary-key>
+```
 
 ## Indexes and Uniqueness Constraints
 
@@ -189,17 +178,14 @@ the table name with a suffix of 'if', 'ak', or 'ie', followed by a number.
 
 **unique**
 True/false flag indicating whether a uniqueness constraint should be applied
-
+```
 <index name="course_users_ak1" unique="true">
-
-<columnref name="users_pk1" />
-
-<columnref name="crsmain_pk1" />
-
+  <columnref name="users_pk1" />
+  <columnref name="crsmain_pk1" />
 </index>
 
-<index name="course_users_ie1" unique="false"> <columnref
-name="enrollment_date" /> </index>
+<index name="course_users_ie1" unique="false"> <columnref name="enrollment_date" /> </index>
+```
 
 ## Foreign Keys
 
@@ -222,14 +208,11 @@ delete, which means the row should be deleted. If setnull is specified, the
 column specified in columnref must have nullable="true".
 
 **Although on-delete is not a required attribute, it is very important to consider how a core Blackboard table is being referenced. Failure to specify an appropriate on-delete action could result in core functionality breaking (e.g. it could cause deletion of a core object to fail).**
-
-<foreign-key name="course_users_fk2" reference-table="course_main"
-comment="This is a Foreign Key referencing the primary key of the
-[AS_CORE].course_main table. ">
-
-<columnref name="crsmain_pk1" />
-
+```
+<foreign-key name="course_users_fk2" reference-table="course_main" comment="This is a Foreign Key referencing the primary key of the [AS_CORE].course_main table. ">
+  <columnref name="crsmain_pk1" />
 </foreign-key>
+```
 
 ## Comments
 

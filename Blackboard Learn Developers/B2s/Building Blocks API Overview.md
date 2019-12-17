@@ -56,8 +56,7 @@ to add and remove content, create links to content, create sequentially-
 ordered lessons, and access data related to user interaction with a given
 piece of content.
 
-### Content System (for those clients who license the Blackboard Content
-System)
+### Content System (for those clients who license the Blackboard Content System)
 
 The Blackboard Content System allows users to upload and share content within
 the context of a content management system. The Content System APIs allow

@@ -28,92 +28,67 @@ to look directly in the database.
 # Enforcing entitlements
 
 The easiest way to check entitlements is by using the static methods on the
-[SecurityUtil](https://community.blackboard.com/external-link.jspa?url=http%3A
-//library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/bl
-ackboard/platform/security/SecurityUtil.html) class.
+[SecurityUtil](https:////library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/blackboard/platform/security/SecurityUtil.html) class.
 
 For example, to check whether a user has rights to modify an enrollment in a
 course, you could write.
-
+```
 if(SecurityUtil.userHasEntitlement("course.enrollment.MODIFY")) {
-
-...
-
-...
-
+  ...
+  ...
 }
+```
 
-If you wish to check a set of permissions in one go, you can use the method [S
-ecurityUtil.userHasAllEntitlements(java.lang.String[])](https://community.blac
-kboard.com/external-link.jspa?url=http%3A//library.blackboard.com/ref/
-15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/blackboard/platform/security/Secu
-rityUtil.html%23userHasAllEntitlements%28java.lang.String%5B%5D%29)
-
-if (SecurityUtil.userHasAllEntitlements(new
-String[]{"course.assessment.results.DELETE",
-
-"course.assessment.results.MODIFY", "course.assessment.results.VIEW"})) {
-
-...
-
-...
-
+If you wish to check a set of permissions in one go, you can use the method [SecurityUtil.userHasAllEntitlements(java.lang.String[])](https://library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/blackboard/platform/security/SecurityUtil.html%23userHasAllEntitlements%28java.lang.String%5B%5D%29)
+```
+if (SecurityUtil.userHasAllEntitlements(new String[]{"course.assessment.results.DELETE",
+  "course.assessment.results.MODIFY", "course.assessment.results.VIEW"})) {
+  ...
+  ...
 }
+```
 
 **The PlugInUtil class also has several methods you can use to check permissions, such as PlugInUtil.authorizeForCourseControlPanel(request, response). However, these methods will also generate a redirect to the front page if the check fails, which may interfere with your application logic.**
 
 # Ensuring that a user is authenticated
 
 To check that a user is authenticated, you can call the isAuthenticated()
-method on the user's [BbSession](https://community.blackboard.com/external-lin
-k.jspa?url=http%3A//library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9
--1556e05cc5b6/blackboard/platform/session/BbSession.html) object.
-
-BbSession bbSession = BbSessionManagerServiceFactory.getInstance().getSession(
-ctx.getActionBeanContext().getRequest());
+method on the user's [BbSession](https://library.blackboard.com/ref/15c9ac3f-f10f-44bc-91f9-1556e05cc5b6/blackboard/platform/session/BbSession.html) object.
+```
+BbSession bbSession = BbSessionManagerServiceFactory.getInstance().getSession(ctx.getActionBeanContext().getRequest());
 
 if (!bbSession.isAuthenticated()) {
-
-.... REDIRECT THE USER TO THE LOGIN PAGE ....
-
+  .... REDIRECT THE USER TO THE LOGIN PAGE ....
 }
+```
 
 If this code is in a JSP, you can redirect the user by calling
-HttpAuthManager.sendLoginRedirect(request,response)
+`HttpAuthManager.sendLoginRedirect(request,response)`
 
 JSP example:
-
+```
 BbSession bbSession = BbSessionManagerServiceFactory.getInstance().getSession(
 ctx.getActionBeanContext().getRequest());
 
 if (! bbSession.isAuthenticated())
-
 {
-
-HttpAuthManager.sendLoginRedirect(request,response);
-
-return;
-
+  HttpAuthManager.sendLoginRedirect(request,response);
+  return;
 }
+```
 
 However, if you are using a framework like
-[Spring](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.springsource.org/) or
-[Stripes](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.stripesframework.org/) calling
-HttpAuthManager.sendLoginRedirect may interfere with your application logic,
+[Spring](https://www.springsource.org/) or
+[Stripes](https://www.stripesframework.org/) calling
+`HttpAuthManager.sendLoginRedirect` may interfere with your application logic,
 and you may wish to just redirect to the root of your blackboard install.
 
 Stripes example:
-
-BbSession bbSession = BbSessionManagerServiceFactory.getInstance().getSession(
-ctx.getActionBeanContext().getRequest());
+```
+BbSession bbSession = BbSessionManagerServiceFactory.getInstance().getSession(ctx.getActionBeanContext().getRequest());
 
 if (! bbSession.isAuthenticated())
-
 {
-
-return new RedirectResolution("/", false);
-
+  return new RedirectResolution("/", false);
 }
-
+```

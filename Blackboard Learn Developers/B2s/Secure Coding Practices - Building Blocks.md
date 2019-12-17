@@ -16,9 +16,7 @@ Block developers leverage this new Security API based on **OWASP ESAPI for
 Java** and **ESAPI for JavaScript**.
 
 You may read more about the ESAPI library and secure development on Learn at
-[help.blackboard.com](https://community.blackboard.com/external-
-link.jspa?url=https%3A//help.blackboard.com/en-us/Learn/9.1_2014_04%
-2FAdministrator/070_Server_Management_and_Integrations/Security).
+[help.blackboard.com](https://help.blackboard.com/en-us/Learn/9.1_2014_04/Administrator/070_Server_Management_and_Integrations/Security).
 
 ## Secure Coding Best Practices
 

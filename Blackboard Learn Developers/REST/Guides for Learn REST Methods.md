@@ -10,14 +10,13 @@ workflow or require background knowledge for easy use.
 
 # Available Guides
 
-[Assignments](https://community.blackboard.com/docs/DOC-4615-use-apis-to-work-
-with-assignments)
+[Assignments](Use%20APIs%20to%20Work%20with%20Ultra%20Assignments.md)
 
-[Authenticate with Blackboard
-Learn](https://community.blackboard.com/docs/DOC-4457-use-oauth-20-to-
-authenticate-with-blackboard-learn)
+Authenticate with Blackboard
+Learn:
+* [Basic Authentication](Basic%20Authentication.md)
+* [Three-Legged OAuth](Three-Legged%20OAuth.md)
 
 [Merge and Cross-list
-Courses](https://community.blackboard.com/docs/DOC-4619-use-apis-to-merge-and-
-cross-list-courses)
+Courses](Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.md)
 

@@ -3,6 +3,7 @@
 *Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services', 'Tutorials']*  
 *Tags: ['blackboard learn', 'faqs', 'developers', 'migrated from edugarage', 'developer']*  
 <hr />
+
 ## Account questions
 
 Your Behind the Blackboard account will provide you with authenticated access
@@ -23,8 +24,7 @@ contact your institution's Blackboard System Administrator or primary business
 relationship owner. He or she will know who to contact.
 
 To reset forgotten passwords, please visit [Behind the
-Blackboard](https://community.blackboard.com/external-
-link.jspa?url=http%3A//behind.blackboard.com/) and click the "Forgot
+Blackboard](https://behind.blackboard.com/) and click the "Forgot
 your password?" link. A new password will be e-mailed to your account.
 
 ## License Questions
@@ -37,9 +37,7 @@ and contribute to the content on the wiki and forum areas of this site as well
 as access certain developer content that requires a login to access.
 
 Commercial entities are invited to join the program and purchase developer
-licenses at [this link](https://community.blackboard.com/external-link.jspa?ur
-l=https%3A//www.blackboard.com/Platforms/Learn/Extensions/Partners
-hips-Program.aspx). If you have lost your license file or require a change in
+licenses at [this link](https://www.blackboard.com/Platforms/Learn/Extensions/Partnerships-Program.aspx). If you have lost your license file or require a change in
 your license, please contact your sales representative or the partnership
 program.
 
@@ -47,30 +45,20 @@ program.
 
 ## Installation assistance
 
-The easiest way to get started is to use a [virtual machine
-](https://community.blackboard.com/docs/DOC-1104-developer-virtual-
-machine)which provides a full developer installation of Learn and supporting
-database. These are available for download. Instructions for downloading and
-requirements for running are located on the Virtual Machine for Developers
-page.
-
-There is plenty of guidance on how to set up and configure your [development
-environment](https://community.blackboard.com/docs/DOC-1113-getting-started-
-with-building-blocks) based on the type of development you are interested in
-using.
-
 Commercial BbDN members are entitled to 30 days of technical support to assist
 with the installation of the Learning System product. For assistance, please
 call our Client Support Team at (888) 788-5264. Have your six-digit company ID
 ready when you call.
+
+All others should read up on the available [DVBA](/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA?.md) or request help on the [Developer forums](https://community.blackboard.com/developers)
 
 ## API/known issues
 
 If you believe you've found an issue with our APIs, please follow this process
 to receive support:
 
-  1. Post your issue to our discussion forums on this site.
-  2. Search the [Blackboard Open Source listserv](https://community.blackboard.com/external-link.jspa?url=http%3A//lists.vcu.edu/cgi-bin/wa%3FA0%3DBB-OPEN_SRC) archives and optionally e-mail the listserv regarding your issue.
+  1. Post your issue to our discussion forums on the [community site](https://community.blackboard.com/developers).
+  2. Search the [Blackboard Techies Slack Space](https://blackboardtechies.s;ack.com) archives and optionally e-mail the listserv regarding your issue.
   3. Open a new case to Behind the Blackboard (or have your Blackboard administrator do this on your behalf)
 
 ## Product improvements/recommendations

@@ -22,8 +22,7 @@ longer need to establish 'out-of-band' communication to external databases or
 write data to the Building Block directory to save information necessary to
 the function of your Building Block.
 
-[Schema.xml Example Project](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-Schema-Sample)
+[Schema.xml Example Project](https://github.com/blackboard/BBDN-Schema-Sample)
 contains a sample project demonstrating the use schema.xml within a building
 block.
 
@@ -86,7 +85,7 @@ are referenced via the schema-dirs element in the bb-manifest, as follows (it
 is recommended practice to specify using a vendor ID prefix):
 
 ### bb-manifest.xml
-
+```
         <?xml version="1.0" encoding="UTF-8"?>  
          <manifest>  
              <plugin>  
@@ -102,13 +101,14 @@ is recommended practice to specify using a vendor ID prefix):
              </plugin>  
              ...  
          </manifest>
+```
 
 The dir-name attribute is evaluated first against the webapp root, then
 against WEB-INF. The schema.xml should be in the WEB-INF directory in a sub-
 directory labeled 'schema'. All other schema related files and scripts are in
 sub-directories. Below is the start of a WEB-INF directory structure for a
 Building block based on the above bb-manifest.xml entry:
-
+```
         WEB-INF  
              web.xml  
              bb-manifest  
@@ -117,6 +117,7 @@ Building block based on the above bb-manifest.xml entry:
                      schema.xml  
                  zeta-stats  
                      schema.xml
+```
 
 The database attribute, noted as the dir-name in the above entry, indicates
 which schema the objects should be created in. By default, the objects are
@@ -143,7 +144,7 @@ which may be created under the database directory:
 
 Adding these directories for a schema could result in the following directory
 structure:
-
+```
         WEB-INF  
              web.xml  
              bb-manifest  
@@ -164,6 +165,7 @@ structure:
                      post_schema_update_sql  
                      post_update_sql  
                    
+```
 
 **NOTE**: _You are not required to specify files for each operation - only those required for proper instantiation of the Building Block schema per it's functional requirements._
 
@@ -183,11 +185,9 @@ supports, but any SQL used in creation, updating, configuration, triggers,
 etc., must be database specific. This is supported by adding the appropriate
 extension to the SQL files that you add to the operation directories:
 
-Oracle: .db-oracle
-
-MSSQL: .db-mssql
-
-PostgreSQL: .db-pgsql
+* Oracle: .db-oracle
+* MSSQL: .db-mssql
+* PostgreSQL: .db-pgsql
 
 **NOTE**: _generic SQL may use a .sql extension_
 
@@ -275,13 +275,14 @@ element. A single, required name attribute must be provided to identify the
 constraint. Each accepted value is defined with a child accepted-value
 element, with a single, mandatory value attribute. Unlike default values
 defined on columns, constraint values do not need the quote literals.
-
+```
          <column name="available_ind" data-type="char(1)" default="'Y'" nullable="false">  
                <value-constraint name="indicator57">  
                <accepted-value value="Y"/>  
                <accepted-value value="N"/>  
                </value-constraint>  
           </column>
+```
 
 ### **Primary Key**
 
@@ -304,6 +305,7 @@ Indexes may be defined via the index element.
 
   * **_name_**: An identifier for the index; Blackboard naming conventions typically include the table name with a suffix of 'if', 'ak', or 'ie', followed by a number.
   * **_unique_**: True/false flag indicating whether a uniqueness constraint should be applied
+```
          <index name="course_users_ak1" unique="true">  
                <columnref name="users_pk1" />  
                <columnref name="crsmain_pk1" />  
@@ -311,24 +313,26 @@ Indexes may be defined via the index element.
            <index name="course_users_ie1" unique="false">  
                <columnref name="enrollment_date" />  
             </index>
+```
 
 ### **Foreign Keys**
 
 References to data stored in other tables are defined via the foreign-key
 element.
 
-    * **_name_**: **Required**. An identifier for the referential integrity constraint created by the key. The Blackboard naming convention is table name, followed by 'fk', followed by a numeric suffix to distinguish multiple constraints. For example: announcements_fk2.
-    * **_reference-table_**: **Required**. Indicates which table is referenced by columnref.
-    * **_on-delete_**: Indicates what action should be taken if the referenced column is deleted. Valid values are setnull, which means the column should be set to null, and delete, which means the row should be deleted. If setnull is specified, the column specified in columnref must have nullable="true".
+* **_name_**: **Required**. An identifier for the referential integrity constraint created by the key. The Blackboard naming convention is table name, followed by 'fk', followed by a numeric suffix to distinguish multiple constraints. For example: announcements_fk2.
+* **_reference-table_**: **Required**. Indicates which table is referenced by columnref.
+* **_on-delete_**: Indicates what action should be taken if the referenced column is deleted. Valid values are setnull, which means the column should be set to null, and delete, which means the row should be deleted. If setnull is specified, the column specified in columnref must have nullable="true".
 
 Although on-delete is not a required attribute, it is very important to
 consider how a core Blackboard table is being referenced. Failure to specify
 an appropriate on-delete action could result in core functionality breaking
 (for example, it could cause deletion of a core object to fail).
-
+```
          <foreign-key name="course_users_fk2" reference-table="course_main" comment="This is a Foreign Key referencing the primary key of the [AS_CORE].course_main table. ">  
                <columnref name="crsmain_pk1" />  
          </foreign-key>
+```
 
 ### **Comments**
 
@@ -345,16 +349,11 @@ For examples of schema.xml documents, take a look in the
 
 For an example of how a Building Block may create schema tables using
 schema.xml, see [Schema.xml Example
-Project](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-Schema-Sample).
+Project](https://github.com/blackboard/BBDN-Schema-Sample).
 
 ### Other useful information:
 
-[Schema.xml validator](https://community.blackboard.com/external-link.jspa?url
-=https%3A//bbprepo.blackboard.com/content/repositories/releases/bl
-ackboard/platform/bb-schema-xsd/)
+[Schema.xml validator](https://bbprepo.blackboard.com/content/repositories/releases/blackboard/platform/bb-schema-xsd/)
 
-[Bb-manifest validator](https://community.blackboard.com/external-link.jspa?ur
-l=https%3A//bbprepo.blackboard.com/content/repositories/releases/b
-lackboard/platform/bb-manifest-plugin/)
+[Bb-manifest validator](https://bbprepo.blackboard.com/content/repositories/releases/blackboard/platform/bb-manifest-plugin/)
 

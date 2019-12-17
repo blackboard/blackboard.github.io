@@ -9,12 +9,7 @@ show how the Developer can build an application.
 
 ## Examples
 
-OperationsDocumentationProject Repository
-
-Schema.XML
-
-[View Document](https://community.blackboard.com/docs/DOC-1123)
-
-[View Repository](https://community.blackboard.com/external-
-link.jspa?url=http%3A//github.com/blackboard/BBDN-schema-sample)
+Operations | Documentation | Project Repository
+---|---|---
+Schema.XML | [View Document](Tutorial%20-%20Schema%20XML.md) | [View Repository](https://github.com/blackboard/BBDN-schema-sample)
 

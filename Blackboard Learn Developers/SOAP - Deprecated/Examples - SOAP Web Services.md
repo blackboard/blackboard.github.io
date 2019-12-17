@@ -13,24 +13,8 @@ the end goal and the language of choice.
 
 ## Examples
 
-OperationsLanguageDocumentationProject Repository
-
-Get Course Announcements
-
-Python
-
-[View Document](https://community.blackboard.com/docs/DOC-1141)
-
-[View Repository](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-Web-Service-Python-
-Sample-Code)
-
-Get CourseMembership and Role
-
-C#
-
-[View Document](https://community.blackboard.com/docs/DOC-1142)
-
-[View Repository](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/BBDN-CSharp-WS-Sample)
+Operations | Language | Documentation | Project Repository
+---|---|---|---
+Get Course Announcements | Python | [View Document](Get%20Course%20Announcements%20with%20SOAP%20and%20Python.md) | [View Repository](https://github.com/blackboard/BBDN-Web-Service-Python-Sample-Code)
+Get CourseMembership and Role | C# | [View Document](Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C#.md) | [View Repository](https://github.com/blackboard/BBDN-CSharp-WS-Sample)
 

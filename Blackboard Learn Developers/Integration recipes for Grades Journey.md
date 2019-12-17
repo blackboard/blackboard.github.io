@@ -50,13 +50,8 @@ Other or Custom SIS can use flat file, REST API, or LIS integrations
   * Develop programs to generate and make web service calls to invoke provisioning transactions, and to generate and make web service calls to invoke grade extract transactions.
   * If you need to lock the gradebook, enable _Lock on approval?_ in _Grade Approval and Transfer_ Settings.
 
-More on [Grades Journey for SaaS](https://community.blackboard.com/external-li
-nk.jspa?url=https%3A//help.blackboard.com/Learn/Administrator/SaaS%2
-FIntegrations/Student_Information_System/SIS_Integration_Types/Grades_Jo
-urney)
+More on [Grades Journey for SaaS](https://help.blackboard.com/Learn/Administrator/SaaS%2FIntegrations/Student_Information_System/SIS_Integration_Types/Grades_Journey)
 
 More on [Grades Journey for Self and Managed-
-Hosted](https://
-help.blackboard.com/Learn/Administrator/Hosting/System_Integration/S
-IS/SIS_Integration_Types/Grades_Journey)
+Hosted](https://help.blackboard.com/Learn/Administrator/Hosting/System_Integration/SIS/SIS_Integration_Types/Grades_Journey)
 

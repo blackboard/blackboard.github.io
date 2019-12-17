@@ -5,9 +5,7 @@
 <hr />
 This is the readme for the Starting Building Block. The Starter Building block
 is available in the [Blackboard maven
-repository](https://community.blackboard.com/external-link.jspa?url=https%3A%2
-F/bbprepo.blackboard.com/content/repositories/public/blackboard/bb
-dn/starting-block).
+repository](https://bbprepo.blackboard.com/content/repositories/public/blackboard/bbdn/starting-block).
 
 # Caveat
 
@@ -33,7 +31,7 @@ The Starting Block is invoked directly via URL. To access the help screen
 (which lists all available actions/options) install the Starting Block on your
 server and then go to the following URL:
 
-http://<server>/webapps/bb-starting-block-<schema>/execute/help
+`http://<server>/webapps/bb-starting-block-<schema>/execute/help`
 
 The above URL assumes the Starting Block was installed on the default Virtual
 Installation. Replace <server> with your servers domain and <schema> with your
@@ -49,8 +47,7 @@ Building Block.
 
 ## Invocation Via Gradle
 
-The [Basic B2 Template](https://community.blackboard.com/external-
-link.jspa?url=https%3A//github.com/blackboard/basic-b2-template)
+The [Basic B2 Template](https://github.com/blackboard/basic-b2-template)
 project contains all the information you need to use the Starter Block from
 your Gradle build process. A Gradle task was added called '_deployB2_' that
 takes care of everything for you. To invoke, simply type '_gradle deployB2_'

@@ -8,14 +8,8 @@ related to Blackboard Learn Web Services.
 
 ## Examples
 
-TaskDocumentation
-
-Build the .NET Web Services Library
-
-[View Document](https://community.blackboard.com/docs/DOC-1144-tutorial-build-
-the-c-soap-sample-library)
-
-Build the .NET Web Services Sample Client
-
-[View Document](https://community.blackboard.com/docs/DOC-1145)
+Task | Documentation
+---|---
+Build the .NET Web Services Library | [View Document](Tutorial:%20Build%20The%20C#%20SOAP%20Sample%20Library.md)
+Build the .NET Web Services Sample Client | [View Document](Tutorial:%20Build%20The%20C#%20SOAP%20Sample%20Client.md)
 

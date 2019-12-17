@@ -50,14 +50,12 @@ The schema is defined primarily via a file called schema.xml, which is part of
 a directory structure that also defines various SQL scripts - procedures,
 functions, views, etc. One or more schema definition directories are
 referenced via the schema-dirs element in the manifest, as follows:
-
+```
 <schema-dirs>
-
-<schema-dir dir-name="test"/>
-
-<schema-dir dir-name="statstest" database="stats"/>
-
+  <schema-dir dir-name="test"/>
+  <schema-dir dir-name="statstest" database="stats"/>
 </schema-dirs>
+```
 
 The dir-name attribute is evaluated first against the webapp root, then
 against WEB-INF. The schema.xml should be in that directory; all other scripts
@@ -68,14 +66,14 @@ features of your Building Block, you would not need to define this value.
 Tables and other objects can also be created in the reporting schema by using
 the value "stats". As of R9.1SP1, there are no other supported values.
 
-See [Schema Definitions](https://community.blackboard.com/docs/DOC-1415) for
+See [Schema Definitions](Schema%20Definitions.md) for
 more information on the structure of schema.xml, the containing directory
 structure, and the supporting scripts.
 
 # Next Steps
 
 Take a look at [Tutorial -
-Schema.XML](https://community.blackboard.com/docs/DOC-1123) for an in-depth
+Schema.XML](Tutorial%20-%20Schema%20.xml) for an in-depth
 look and working example using schema.xml to store building block
 configuration details in a custom database table.
 
