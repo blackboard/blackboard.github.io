@@ -14,6 +14,7 @@ version is included in the list of compatible versions, re-build the patch,
 and apply it. Because there are no database changes involved, just inserting a
 couple of class files, BbPatch.sh ran without a hitch with this modified file.
 Following are the details. Hope this helps another developer!
+
 ```
 $ vagrant up
 $ vagrant ssh
