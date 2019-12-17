@@ -7,6 +7,7 @@ Recently I ran across an interesting issue while helping a Partner who uses
 the DVM exclusively for development. Changing some user's Institution role
 resulted in a screen indicating a database error. Looking through the logs/bb-
 sqlerror-log.txt file we saw entries like the following:
+
 ```
 2016-02-19 22:39:34 +0000 - { call user_roles_cr(users_pk1 := , institution_roles_pk1 := , row_status := , data_src_pk1 := , ) } failed. - org.postgresql.util.PSQLException: ERROR: cursor "
 
@@ -33,8 +34,9 @@ opened a terminal.
 we're just after the cut/paste ability.
 
 4. Switch to root.
-
+```
 $ sudo su -
+```
 
 5. Shutdown Learn.
 ```
