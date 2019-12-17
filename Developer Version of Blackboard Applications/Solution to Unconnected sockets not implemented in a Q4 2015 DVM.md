@@ -15,60 +15,37 @@ and apply it. Because there are no database changes involved, just inserting a
 couple of class files, BbPatch.sh ran without a hitch with this modified file.
 Following are the details. Hope this helps another developer!
 
+```
 $ vagrant up
-
 $ vagrant ssh
-
 # yum install zip
-
 # yum install unzip
-
 # cd /usr/local/blackboard/tools/admin
-
 # ./ServiceController.sh services.stop
-
 # ./BbPatch.sh download LRNSI-21817
-
 # mkdir tmp
-
 # mv ./LRNSI-21817-1.bbp tmp/
-
 # cd tmp
-
 # mkdir zipdir
-
 # cp LRNSI-21817-1.bbp zipdir/LRNSI-21817-1.zip
-
 # cd zipdir
-
 # unzip LRNSI-21817-1.zip
-
 # rm LRNSI-21817-1.zip
-
 # vi bbpatch.mf
-
-**Change: ** Compatible: 9.1.201510/9.1.201510.1171621-9.1.201510.1171621 
-
-**To: **Compatible: 9.1.201510/9.1.201510.1171621-9.1.201510.1171702 
+  
+  **Change: ** Compatible: 9.1.201510/9.1.201510.1171621-9.1.201510.1171621 
+  **To: **Compatible: 9.1.201510/9.1.201510.1171621-9.1.201510.1171702 
 
 #  zip -r foo.zip .
-
 # mv foo.zip LRNSI-21817_4DVM.bbp
-
 # cp LRNSI-21817_4DVM.bbp ../..
-
 # cd ../..
-
 [root@localhost admin]# ./BbPatch.sh apply ./LRNSI-21817_4DVM.bbp
-
 [root@localhost admin]# ./BbPatch.sh apply LRNSI-21817_4DVM.bbp
 
 Blackboard Patch Client version 2.2.7
-
 apply
-
 Blackboard Learn, Version 9.1.201510.1171702, /usr/local/blackboard
-
 Package repository /usr/local/blackboard/content/bbpatch/repository, remote [h
 ttps://bbprepo.blackboard.com/content/repositories/packages](https://community
 .blackboard.com/external-link.jspa?url=https%3A//bbprepo.blackboard.com/
@@ -145,4 +122,5 @@ tomcat-bootstrap.jar
 Package LRNSI-21817 applied successfully.
 
 [SUCCESS] Apply operation succeeded.
+```
 
