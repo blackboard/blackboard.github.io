@@ -22,9 +22,7 @@ The BbDN includes the following benefits:
   * Ability to sponsor at [BbWorld](https://bbworld.com/), our largest annual users conference
 
 Sign up for the BbDN agreement today on [our registration
-page](https://community.blackboard.com/external-link.jspa?url=http%3A//sec
-ureapp.blackboard.com/pgforms/pages/registration/Order-Wizard.aspx),
-or contact us at [BusDev&AlliancesInquiry@blackboard.com](mailto:BusDev&Allian
-cesInquiry@blackboard.com) to address any questions or discuss additional
+page](https://secureapp.blackboard.com/pgforms/pages/registration/Order-Wizard.aspx),
+or contact us at [BusDev&AlliancesInquiry@blackboard.com](mailto:BusDev&AlliancesInquiry@blackboard.com) to address any questions or discuss additional
 partnership levels.
 
