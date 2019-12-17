@@ -64,7 +64,7 @@ in the form of stored procedures, post_schema_updates, etc, you will just need
 to be sure to supply those files in postgres form, as well. These files will
 take the suffix, **db-pgsql**. If a self or managed-hosted client is migrating
 your B2 to SaaS via a "full database migration" be certain to read [SaaS
-Migrations - Sequences and Tables](https://community.blackboard.com/blogs/4/24
+Migrations - Sequences and Tables](https://community.blackboard.com/blogs/4/24).
 
 In addition, its important to note that Exceptions encountered during postgres
 transactions stop all processing. You must code to handle this occurrence. One
