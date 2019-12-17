@@ -18,8 +18,7 @@
 
 # Sonar – Quality Management Platform
 
-[http://www.sonarsource.org/](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.sonarsource.org/)
+[http://www.sonarsource.org/](https://www.sonarsource.org)
 
   * Open source and extensible
   * Manages code quality with:
@@ -41,8 +40,7 @@ link.jspa?url=http%3A//www.sonarsource.org/)
 
 ## Blackboard Learn custom PMD rules and Sonar Java profile
 
-The latest version is [attached](https://community.blackboard.com/servlet/Jive
-Servlet/download/1400-1-7880/bb_sonar_01.zip) to this post. Please install
+The latest version is [attached](/attachments/bb_sonar_01.zip) to this post. Please install
 Blackboard custom PMD rules before importing Java rule set.
 
 How to install Blackboard custom PMD rules:
@@ -60,11 +58,4 @@ How to use Blackboard's Java rule set:
   4. Select bb-sonar-profile-java.xml and click on "Restore profile" button
   5. Specify the Sonar analysis configuration to use the restored profile
 
-# Secure Coding Practices
-
-This is the powerpoint presentation from the Developer Office Hours held on
-March 13, 2013. [Click here](https://community.blackboard.com/external-link.js
-pa?url=https%3A//sas.elluminate.com/site/external/jwsdetect/playba
-ck.jnlp%3Fpsid%3D2013-03-13.0843.M.62801D40DB97013341333A9CB874FF.vcr%26sid%3D
-2011010) to watch the recording.
 
