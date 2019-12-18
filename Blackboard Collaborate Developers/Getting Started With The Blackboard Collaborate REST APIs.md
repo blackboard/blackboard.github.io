@@ -1,3 +1,7 @@
+---
+layout: collab
+title: Blackboard Collaborate
+---
 # Getting Started With The Blackboard Collaborate REST APIs
 *Author: Scott Hurrey*  
 *Categories: ['Getting Started']*  

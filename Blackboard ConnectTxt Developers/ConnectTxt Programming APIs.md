@@ -1,3 +1,6 @@
+---
+layout: connecttxt
+---
 # ConnectTxt Programming APIs
 *Author: Scott Hurrey*  
 *Categories: ['ConnectTxt Developer Documentation']*  

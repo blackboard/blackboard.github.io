@@ -1,3 +1,6 @@
+---
+layout: main
+---
 # Get Involved
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services']*  

@@ -1,0 +1,486 @@
+I"=<h1 id="blackboard-app-for-students-launch-schema">Blackboard App for Students Launch Schema</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘developer’, ‘mobile’, ‘bbstudent’, ‘blackboard mobile’, ‘app-to-app’, ‘custom url’]</em></p>
+<hr />
+
+<h2 id="bb-student-is-now-blackboard">Bb Student is now Blackboard</h2>
+
+<p>As of June 2017, Bb Student is now known as Blackboard. The app’s functions
+remain the same. For consistency, the app-to-app launch schemas will change
+and the older ones using the bbstudent:// prefix will be deprecated. As with
+any deprecation, we are informing you, the developer, that we plan to remove
+this functionality at a later date. The purpose of this deprecation is to
+provide the time necessary to migrate your application from one scheme to the
+other. At this time, there is no firm date at which this change will take
+place. We will use usage data to inform that decision, and once a date is
+selected and confirmed, we will make an announcement. As part of the
+deprecation process, all new links will require the new blackboard:// URL
+scheme.</p>
+
+<hr />
+
+<h3 id="activity-stream">Activity Stream</h3>
+
+<p><strong>Endpoint</strong>: blackboard://activity 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="course-base">Course Base</h3>
+
+<p><strong>Endpoint</strong>: blackboard://courses 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="organization-base">Organization Base</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org 
+<strong>Version</strong>: Blackboard 3.2</p>
+
+<hr />
+
+<h3 id="grades">Grades</h3>
+
+<p><strong>Endpoint</strong>: blackboard://grades 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="due-dates">Due Dates</h3>
+
+<p><strong>Endpoint</strong>: blackboard://calendar 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="profile">Profile</h3>
+
+<p><strong>Endpoint</strong>: blackboard://profile 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="settings">Settings</h3>
+
+<p><strong>Endpoint</strong>: blackboard://settings 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="linked-accounts">Linked Accounts</h3>
+
+<p><strong>Endpoint</strong>: blackboard://settings/linkedAccounts
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="feedback">Feedback</h3>
+
+<p><strong>Endpoint</strong>: blackboard://feedback 
+<strong>Version</strong>: Blackboard 3.0</p>
+
+<hr />
+
+<h3 id="course-overview">Course Overview</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/overview
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organization-overview">Organization Overview</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/overview
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursecontent">Course/Content</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/content
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationcontent">Organization/Content</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/content
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="courseannouncements">Course/Announcements</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/announcement
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationannouncements">Organization/Announcements</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/announcement
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursecalendar">Course/Calendar</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/calendar
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationcalendar">Organization/Calendar</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/calendar
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursegrades">Course/Grades</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/grades
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationgrades">Organization/Grades</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/grades
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursediscussion-panel">Course/Discussion Panel</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/discussion
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationdiscussion-panel">Organization/Discussion Panel</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/discussion
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="courseassignmentoverview">Course/Assignment/Overview</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/assessment/assignment/[assignment_id]/overview
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the assignment resides in</li>
+  <li>[assignment_id] is the id of the assignment you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationassignmentoverview">Organization/Assignment/Overview</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/assessment/assignment/[assignment_id]/overview
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open</li>
+  <li>[assignment_id] is the id of the assignment you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="courseassignmentsubmissions">Course/Assignment/Submissions</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/assessment/assignment/[assignment_id]/submissions
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the assignment resides in</li>
+  <li>[assignment_id] is the id of the assignment you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationassignmentsubmissions">Organization/Assignment/Submissions</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/assessment/assignment/[assignment_id]/submissions
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the organization you would like to open</li>
+  <li>[assignment_id] is the id of the assignment you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursetestoverview">Course/Test/Overview</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/assessment/test/[test_id]/overview
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the test resides in</li>
+  <li>[test_id] is the id of the test you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationtestoverview">Organization/Test/Overview</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/assessment/test/[test_id]/overview
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the test resides in</li>
+  <li>[test_id] is the id of the test you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursetestsubmissions">Course/Test/Submissions</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/assessment/test/[test_id]/submissions
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the test resides in</li>
+  <li>[test_id] is the id of the test you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationtestsubmissions">Organization/Test/Submissions</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/assessment/test/[test_id]/submissions
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the test resides in</li>
+  <li>[test_id] is the id of the test you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursecontent-item">Course/Content Item</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/item/[item_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the item is linked to</li>
+  <li>[item_id] is the id of the item you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationcontent-item">Organization/Content Item</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/item/[item_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the item is linked to</li>
+  <li>[item_id] is the id of the item you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursecontent-file">Course/Content File</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/file/[file_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the file is linked to</li>
+  <li>[file_id] is the id of the file you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationcontent-file">Organization/Content File</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/file/[file_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the file is linked to</li>
+  <li>[file_id] is the id of the file you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="original-coursediscussion-group">Original Course/Discussion Group</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/discussion/discussionBoard/[discussion_board_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the discussion board is linked to</li>
+  <li>[discussion_board_id] is the id of the discussion board you would like to open 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="original-organizationdiscussion-group">Original Organization/Discussion Group</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/discussion/discussionBoard/[discussion_board_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the discussion board is linked to</li>
+  <li>[discussion_board_id] is the id of the discussion board you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="original-coursediscussion-thread">Original Course/Discussion Thread</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/discussion/discussionThread/[discussion_thread_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the discussion thread is linked to</li>
+  <li>[discussion_thread_id] is the id of the discussion thread you would like to open
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="original-organizationdiscussion-thread">Original Organization/Discussion Thread</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/discussion/discussionThread/[discussion_thread_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the discussion thread is linked to</li>
+  <li>[discussion_thread_id] is the id of the discussion thread you would like to open 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="ultra-coursediscussion-thread">Ultra Course/Discussion Thread</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/discussion/discussionThread/[discussion_thread_id]/discussionGroup/[discussion_group_id]/contentId/[content_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the discussion thread is linked to</li>
+  <li>[discussion_thread_id] is the id of the discussion thread you would like to open</li>
+  <li>[discussion_group_id] is the id of a virtual discussion group the discussion thread is linked to</li>
+  <li>[content_id] is the content id of this discussion thread</li>
+  <li><em>[discussion_group_id] and [content_id] are ultra course required only</em> 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="ultra-organizationdiscussion-thread">Ultra Organization/Discussion Thread</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/discussion/discussionThread/[discussion_thread_id]/discussionGroup/[discussion_group_id]/contentId/[content_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the discussion thread is linked to</li>
+  <li>[discussion_thread_id] is the id of the discussion thread you would like to open</li>
+  <li>[discussion_group_id] is the id of a virtual discussion group the discussion thread is linked to</li>
+  <li>[content_id] is the content id of this discussion thread</li>
+  <li><em>[discussion_group_id] and [content_id] are ultra course required only</em> 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="ultra-coursediscussion-folder">Ultra Course/Discussion Folder</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/discussion/discussionFolder/contentId/[content_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the discussion folder is linked to</li>
+  <li>[content_id] is the content id of this discussion folder</li>
+  <li><em>[content_id] are ultra course required only</em> 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="ultra-organizationdiscussion-folder">Ultra Organization/Discussion Folder</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/discussion/discussionFolder/contentId/[content_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[org_id] is the id of the course the discussion folder is linked to</li>
+  <li>[content_id] is the content id of this discussion folder</li>
+  <li><em>[content_id] are ultra course required only</em> 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+
+<hr />
+
+<h3 id="coursecontent-folder">Course/Content Folder</h3>
+
+<p><strong>Endpoint</strong>: blackboard://course/[course_id]/folder/[folder_id]
+<strong>Notes</strong>:</p>
+<ul>
+  <li>[course_id] is the id of the course the content folder resides in</li>
+  <li>[folder_id] is the folder id of the content folder 
+<strong>Version</strong>: Blackboard 3.0</li>
+</ul>
+
+<hr />
+
+<h3 id="organizationcontent-folder">Organization/Content Folder</h3>
+
+<p><strong>Endpoint</strong>: blackboard://org/[org_id]/folder/[folder_id]</p>
+<ul>
+  <li>[org_id] is the id of the course the content folder resides in</li>
+  <li>[folder_id] is the folder id of the content folder 
+<strong>Version</strong>: Blackboard 3.2</li>
+</ul>
+:ET

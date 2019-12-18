@@ -1,3 +1,6 @@
+---
+layout: connecttxt
+---
 # ConnectTxt SOAP Connector
 *Author: Scott Hurrey*  
 *Categories: ['ConnectTxt Developer Documentation']*  

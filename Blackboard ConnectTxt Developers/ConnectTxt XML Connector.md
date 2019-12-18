@@ -1,3 +1,6 @@
+---
+layout: connecttxt
+---
 # ConnectTxt XML Connector
 *Author: Scott Hurrey*  
 *Categories: ['ConnectTxt Developer Documentation']*  

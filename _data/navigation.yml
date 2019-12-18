@@ -1,0 +1,26 @@
+- name: Home
+  link: /
+- name: Learn
+  link: /Blackboard%20Learn%20Developers/
+- name: Collab
+  link: /Blackboard%20Collaborate%20Developers/
+- name: ConnectTxt
+  link: /Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html
+- name: Mobile
+  link: /Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html
+- name: OpenLMS
+  link: /Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html
+- name: DVBA
+  link: /Developer%20Version%20of%20Blackboard%20Applications/
+- name: Standards
+  link: /Standards/
+- name: Get Involved
+  link: /Get%20Involved.html
+- name: Become a Partner
+  link: BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html
+- name: Contact Us
+  link: Contact.html
+- name: Community
+  link: https://community.blackboard.com/developers
+- name: Developer Portal
+  link: https://developer.blackboard.com

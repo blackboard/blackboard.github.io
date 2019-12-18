@@ -1,3 +1,6 @@
+---
+layout: connecttxt
+---
 # Blackboard ConnectTxt Developer Documentation
 *Author: Scott Hurrey*  
 *Categories: ['ConnectTxt Developer Documentation']*  

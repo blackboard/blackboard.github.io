@@ -1,0 +1,45 @@
+I"�<h1 id="collaborate-api-objects">Collaborate API Objects</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Getting Started’]</em><br />
+<em>Tags: [‘rest’, ‘getting started’, ‘collaborate’, ‘api’, ‘developer’]</em></p>
+<hr />
+
+<p>The Blackboard Collaborate API is built to allow a third-party application to
+perform scheduler operations. To handle this, the API exposes several objects
+that may or may not be familiar to you. In order to set the stage, here is a
+glossary of the API Objects in play.</p>
+
+<h3 id="session">Session</h3>
+
+<p>Sessions are the life-blood of Collaborate’s API. A session is equivalent to a
+meeting room. If you login to the scheduler and create a room, you are
+creating a session.</p>
+
+<h3 id="instance">Instance</h3>
+
+<p>An instance is an individual meeting in a session. An instance is created when
+the first person logs into the Collaborate session, and is terminated when the
+last person leaves the session.</p>
+
+<h3 id="enrollment">Enrollment</h3>
+
+<p>An enrollment is a User that has been invited to a session. Enrolling a user
+allows you to provide an individual URL to an individual user, such that when
+they enter the room, Collaborate knows who the user is.</p>
+
+<h3 id="user">User</h3>
+
+<p>As you would expect, this object corresponds to a session attendee</p>
+
+<h3 id="context">Context</h3>
+
+<p>Context is a container for grouping sessions. Typically in an LMS integration,
+the Context would correspond to a course or section, and all the sessions in
+that course would belong to that context. Context is not required, and it can
+be used for any logical grouping. It doesn’t have to be a course.</p>
+
+<h3 id="recording">Recording</h3>
+
+<p>A stored recording of a session instance.</p>
+
+:ET

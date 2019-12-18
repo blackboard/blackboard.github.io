@@ -1,0 +1,19 @@
+I"_<h1 id="connecttxt-soap-connector">ConnectTxt SOAP Connector</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘ConnectTxt Developer Documentation’]</em><br />
+<em>Tags: [‘blackboard connecttxt’, ‘soap connector’, ‘developer’]</em></p>
+<hr />
+
+<p>All the XML Connector functionality is also available using the industry
+standard SOAP protocol. In addition, the SOAP connector allows your address
+books to be managed remotely, automatically updating contact information in
+real-time, including contact groups.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<ul>
+  <li>Download latest <a href="https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Addressbook_API_Documentation_1.5.pdf">Address Book</a> SOAP connector documentation (v1.5) or <a href="https://community.blackboard.com/docs/DOC-1184">read it here</a>.</li>
+  <li>Download latest <a href="https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Messaging_API_Documentation_1.5.pdf">Messaging</a> SOAP connector documentation (v1.5) or <a href="https://community.blackboard.com/docs/DOC-1183">read it here</a>.</li>
+</ul>
+
+:ET
