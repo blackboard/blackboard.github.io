@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: best-practices-b2
+---
 # Developing Building Blocks with the Public Maven Repository
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Tutorials']*  

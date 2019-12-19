@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: about-b2
+---
 # FAQs
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started', 'SOAP Web Services', 'Tutorials']*  
@@ -50,7 +55,7 @@ with the installation of the Learning System product. For assistance, please
 call our Client Support Team at (888) 788-5264. Have your six-digit company ID
 ready when you call.
 
-All others should read up on the available [DVBA](/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA?.md) or request help on the [Developer forums](https://community.blackboard.com/developers)
+All others should read up on the available [DVBA](/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA?.html) or request help on the [Developer forums](https://community.blackboard.com/developers)
 
 ## API/known issues
 

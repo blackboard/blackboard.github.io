@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: soap
+category: about-soap
+---
 # Blackboard Learn SOAP Web Services
 *Author: Scott Hurrey*  
 *Categories: ['SOAP Web Services']*  
@@ -19,7 +24,7 @@ reading and writing data.
 ## Getting Started
 
 In the [Getting Started
-](Getting%20Started%20With%20SOAP%20Web%20Services.md)section you will find
+](Getting%20Started%20With%20SOAP%20Web%20Services.html)section you will find
 instructions for setting up your development environment, generating a
 reusable .NET or Java library for use in your application from sample code
 available inside the Blackboard Learn User Interface, and building the QA app,
@@ -28,18 +33,18 @@ functioning desktop application.
 
 ## Examples
 
-These [examples](Examples%20-%20SOAP%20Web%20Services.md) are are
+These [examples](Examples%20-%20SOAP%20Web%20Services.html) are are
 provided as reference implementations of API the usage of Blackboard Web
 Service end points to interact with Blackboard Learn from various languages,
 such as C#, Java and PHP.
 
 ## Tutorials
 
-These [tutorials](Tutorials%20-%20SOAP%20Web%20Services.md) are provided
+These [tutorials](Tutorials%20-%20SOAP%20Web%20Services.html) are provided
 as short ramp up for concepts and APIs behind the development of Web Service
 integrations.
 
 ## Documentation
 
-* [Building Block API Documentation](/Blackboard%20Learn%20Developers/B2s/Building%20Block%20API%20Documentation.md)
+* [Building Block API Documentation](/Blackboard%20Learn%20Developers/B2s/Building%20Block%20API%20Documentation.html)
 

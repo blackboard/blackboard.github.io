@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: soap
+category: tutorials-soap
+---
 # SOAP Web Services Sample Code: Build Java Client Library
 *Author: Scott Hurrey*  
 *Categories: ['Getting Started', 'SOAP Web Services', 'Tutorials']*  
@@ -5,7 +10,7 @@
 <hr />
 
 The Blackboard Learn SOAP Web Services come out of the box with [sample
-code](About%20Web%20Services%20Sample%20Code.md) that can be downloaded
+code](About%20Web%20Services%20Sample%20Code.html) that can be downloaded
 directly from the user interface. This document will describe the process by
 which a developer can build the java client library contained within that
 code.
@@ -36,7 +41,7 @@ Axis2 1.3 | [axis2-1.3-bin.zip](https://archive.apache.org/dist/ws/axis2/1_3/axi
 Axis2 1.3 Source | [axis2-1.3-src.zip](https://archive.apache.org/dist/ws/axis2/1_3/axis2-1.3-src.zip) | 
 Rampart 1.4 | [rampart-dist-1.4-bin.zip](https://archive.apache.org/dist/ws/rampart/1_4/rampart-dist-1.4-bin.zip) | In order to set the development environment up with these technologies without overriding newer versions that may be being used in other projects, it is recommended that a separate directory be set up in the top-level client directory and environment variables be temporarily pointed to them. In this example, a tools directory has been added to the client directory, an Ant, Axis, and Rampart were unzipped here.
 
-Now open a terminal or cmd window, and navigate to the client directory, by
+Now open a terminal or .html window, and navigate to the client directory, by
 typing: **_cd <pathtodirectory>/client/client_ **and pressing <ENTER>. You
 should now be in the client directory.
 
@@ -67,7 +72,7 @@ Java Web Services Library.
 # Building the Library
 
 The first step is to generate the code. This is done at the command line and
-in the _client/client_ directory. Simply run _**sampleGenClient.[cmd|sh]
+in the _client/client_ directory. Simply run _**sampleGenClient.[.html|sh]
 <your learn server>. There are two caveats
 here. Firstly, if you are running this on Mac or Linux, the
 _sampleGenClient.sh_ file contains Windows ctrl-M line endings. This will

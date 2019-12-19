@@ -1,16 +1,13 @@
+---
+layout: learn
+parent: rest
+category: advanced
+---
 # Use APIs to Work with Ultra Assignments
 *Author: Ryan Haber*  
 *Categories: []*  
 *Tags: ['developer']*  
 <hr />
-**Contents**
-
-  * Overview
-  * Before You Begin
-  * Create an Assignment
-  * Upload a File to Blackboard Learn
-  * Add Content to an Existing Assignment
-  * Assignment-related Query Parameters
 
 # Overview
 

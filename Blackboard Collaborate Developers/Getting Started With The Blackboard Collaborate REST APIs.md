@@ -52,7 +52,7 @@ detailed information about the JWT Standard and to learn about available
 libraries for most of today's popular web application development languages,
 see https://jwt.io. For more information on Blackboard
 Collaborate's implementation see [Authorize and Authenticate in Blackboard
-Collaborate](Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.md).
+Collaborate](Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html).
 
 ## Examples
 

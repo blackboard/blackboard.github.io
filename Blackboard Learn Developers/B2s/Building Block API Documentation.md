@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: about-b2
+---
 # Building Block API Documentation
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started', 'OpenDB']*  

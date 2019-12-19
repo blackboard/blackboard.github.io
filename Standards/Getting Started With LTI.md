@@ -1,3 +1,7 @@
+---
+layout: standards
+parent: lti
+---
 # Getting Started With LTI
 *Author: Scott Hurrey*  
 *Categories: ['LTI']*  
@@ -18,5 +22,20 @@ administrators so that they can configure their Learn servers to work with it.
 To share your tool, you must register your application. When you do so, you
 receive an Application ID. Share this Application ID with the administrator of
 any Learn server that will use your LTI tool. For more information about
-registering your application, see [Register Your Application](Register%20Your%20Application.md).
+registering your application, see [Register Your Application](Register%20Your%20Application.html).
+
+## LTI Placement to Building Block Link Mapping
+
+As new LTI Placement options are added to the Blackboard Learn platform, the
+naming conventions can be a bit confusing for Building Block Developers. The
+purpose of this document is to give a high-level mapping of the terminology
+for Developers.
+
+| Description | LTI Placement | B2 Type |
+| ----------- |:-------------:|:-------:|
+| A tool available to all users in a course | Course Tool->Student | tool |
+| A tool available only to instructors in a course | Course Tool->Non-Student | course_tool |
+| A course content tool | Course Content Tool | content-handler |
+| A tool available outside of a course for all users | System Tool | user_tool |
+| A tool available only to system administrators | Administrator Tool | system_tool |
 

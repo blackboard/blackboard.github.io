@@ -1,0 +1,117 @@
+I"�<h1 id="proxy-tools">Proxy Tools</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘SOAP Web Services’]</em><br />
+<em>Tags: [‘web services’, ‘soap’, ‘blackboard learn’, ‘proxy tools’, ‘developer’]</em></p>
+<hr />
+
+<p>Administrators can link to a proxy tool descriptor which registers the tool,
+places access points according to defined properties, and enables access to
+the web service through the proxy tool.</p>
+
+<p>Before registering a proxy tool, there are three <em>Global Properties</em> to keep
+in mind:</p>
+
+<ul>
+  <li>Use the <em>Proxy Tool Registration Password</em> field to restrict access to the <em>registerTool</em> method. Proxy tools that must supply the password entered in this filed to register themselves. The proxy tool cannot login as a tool until a password is specified on the proxy tool configuration page. Proxy tools cannot receive any entitlements until granted by giving the individual proxy tool its own password.</li>
+  <li>Allowing access to <em>Unknown Proxy Tools</em> means that these proxy tools can connect and use user-based authentication to access web services. A password is required and access is restricted based on the users’ entitlements within the system. Access for unknown proxy tools can be accomplished without explicitly granting them the right to use web services.</li>
+  <li><em>Exposing the Tool Consumer Profile</em> allows proxy tools to auto-discover the capabilities of the system by using the URL <em>/webapps/ws/wsadmin/tcprofile</em>. Disabling this does not disable proxy tools, but it disables their ability to perform pre-registration capability validation.</li>
+</ul>
+
+<h2 id="find-the-proxy-tools-page">Find the Proxy Tools Page</h2>
+
+<ol>
+  <li>On the Administrator Panel, in the <em>Building Blocks</em> section, click <em>Building Blocks</em>.</li>
+  <li>Click <em>Proxy Tools</em>.</li>
+</ol>
+
+<h2 id="manage-global-properties-for-proxy-tools">Manage Global Properties for Proxy Tools</h2>
+
+<p>Use the Proxy Tool Registration Password field to restrict access to the
+registerTool method. Proxy tools that must supply the password entered in this
+filed to register themselves. The proxy tool cannot login as a tool until a
+password is specified on the proxy tool configuration page. Proxy tools cannot
+receive any entitlements until granted by giving the individual proxy tool its
+own password.</p>
+
+<p>Allowing access to Unknown Proxy Tools means that these proxy tools can
+connect and use user-based authentication to access web services. A password
+is required and access is restricted based on the users entitlements within
+the system. Access for unknown proxy tools can be accomplished without
+explicitly granting them the right to use web services.</p>
+
+<p>Exposing the Tool Consumer Profile allows proxy tools to auto-discover the
+capabilities of the system by using the URL /webapps/ws/wsadmin/tcprofile.
+Disabling this does not disable proxy tools, but it disables their ability to
+perform pre-registration capability validation.</p>
+
+<ol>
+  <li>Click <em>Manage Global Properties.</em></li>
+  <li>Provide or edit the <em>Proxy Tool Registration Password</em>.</li>
+  <li>Select the <em>Allow Unknown Proxy Tool</em> check box if appropriate.</li>
+  <li>Select the <em>Expose Tool Consumer Profile</em> if appropriate.</li>
+  <li>Click <em>Submit</em>.</li>
+</ol>
+
+<h2 id="register-a-proxy-tool-without-placements">Register a Proxy Tool without Placements</h2>
+
+<ol>
+  <li>In the <em>Register Proxy Tool</em> list, click <em>Create Proxy Tool without Placements</em>.</li>
+  <li>Provide the <em>Vendor _and _Program</em> information.</li>
+  <li>Determine the <em>Availability _of the proxy tool by clicking _Unavailable</em> or <em>Available</em>. If the proxy tool is not <em>Available</em>, then it cannot log in to any web service using any authentication methods in addition to having any requested placements disabled.</li>
+  <li>Provide a <em>Shared Password</em>. The <em>Shared Password</em> is required only for tool-authenticated web service sessions.</li>
+  <li>Provide individual IP addresses or a range of IP addresses to allow or block in the <em>IP Filters</em> field. Type one address per line. Using IP Filters is optional and all IP addresses are allowed by default (ALLOW<em>). Here are some guidelines for using the IP Filters:
+    * Type BLOCK a.b.c.d to block an IP address or range of addresses.
+    * Type ALLOW a.b.c.d to allow an IP address or range of addresses.
+    * Wildcards (</em>) are allowed in any position of the IP address.
+    * IP address ranges are specified using a slash as follows: a.b.c.d/e.f.g.h</li>
+  <li>Click <em>Submit</em>.</li>
+</ol>
+
+<h2 id="register-a-proxy-tool-with-placements">Register a Proxy Tool with Placements</h2>
+
+<ol>
+  <li>In the <em>Register Proxy Tool</em> list, click <em>Create Proxy Tool with Placements</em>.</li>
+  <li>In the <em>Known Servers</em> list, select a Proxy Server and click <em>Go</em>. Provide the registration URL for the proxy server in the <em>Server Registration URL</em> field. Use the full path for the URL furnished by the proxy tool vendor.</li>
+  <li>Click <em>Submit</em>.</li>
+</ol>
+
+<h2 id="edit-a-proxy-tool">Edit a Proxy Tool</h2>
+
+<ol>
+  <li>Access a proxy tool’s contextual menu and click <em>Edit</em>.</li>
+  <li>Make changes to any of the fields.</li>
+  <li>Click <em>Submit</em>.</li>
+</ol>
+
+<h2 id="delete-a-proxy-tool">Delete a Proxy Tool</h2>
+
+<ol>
+  <li>Access the proxy tool’s contextual menu and click Delete.</li>
+</ol>
+
+<p>-OR-</p>
+
+<ol>
+  <li>Select the check boxes for the appropriate proxy tools, and then click Delete.</li>
+</ol>
+
+<h2 id="download-sample-tools">Download Sample Tools</h2>
+
+<ol>
+  <li>Click <em>Download Sample Tools</em>.</li>
+  <li>Click _OK _to accept the download of a ZIP file containing sample proxy tools.</li>
+</ol>
+
+<h2 id="whats-in-the-sample-tools-package">What’s in the Sample Tools Package</h2>
+
+<p>The ZIP file contains the following sample tools:</p>
+
+<ul>
+  <li>.NET-based Proxy Tool</li>
+  <li>Java-based Proxy Tool</li>
+  <li>Java-based Proxy Server</li>
+</ul>
+
+<p><strong>Note</strong>: Consult the README and the LICENSE_for_samples files before using the sample tools. The most current information is included in these files and may supersede this documentation</p>
+
+:ET

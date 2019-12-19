@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: soap
+category: examples-soap
+---
 # Examples - SOAP Web Services
 *Author: Scott Hurrey*  
 *Categories: ['Examples', 'SOAP Web Services']*  
@@ -15,6 +20,6 @@ the end goal and the language of choice.
 
 Operations | Language | Documentation | Project Repository
 ---|---|---|---
-Get Course Announcements | Python | [View Document](Get%20Course%20Announcements%20with%20SOAP%20and%20Python.md) | [View Repository](https://github.com/blackboard/BBDN-Web-Service-Python-Sample-Code)
-Get CourseMembership and Role | C# | [View Document](Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C#.md) | [View Repository](https://github.com/blackboard/BBDN-CSharp-WS-Sample)
+Get Course Announcements | Python | [View Document](Get%20Course%20Announcements%20with%20SOAP%20and%20Python.html) | [View Repository](https://github.com/blackboard/BBDN-Web-Service-Python-Sample-Code)
+Get CourseMembership and Role | C# | [View Document](Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C#.html) | [View Repository](https://github.com/blackboard/BBDN-CSharp-WS-Sample)
 

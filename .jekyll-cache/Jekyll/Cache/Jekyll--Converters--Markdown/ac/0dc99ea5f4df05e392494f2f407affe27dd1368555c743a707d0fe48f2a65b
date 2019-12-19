@@ -1,0 +1,93 @@
+I"V<h1 id="use-apis-to-work-with-ultra-assignments">Use APIs to Work with Ultra Assignments</h1>
+<p><em>Author: Ryan Haber</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘developer’]</em></p>
+<hr />
+
+<h1 id="overview">Overview</h1>
+
+<p>Blackboard Learn Ultra experience offers a REST API for managing assessments.
+In Ultra, an assessment is effectively the same thing as an assignment except
+for how they are stored internally. In an assessment, there are questions of
+various types. Each ‘question’ is a slot for content that may not actually
+contain what you normally think of as a question. For more information about
+assignments and questions and how Learn users experience them, see <a href="https://community.blackboard.com/external-link.jspa?url=
+https%3A//help.blackboard.com/Learn/Instructor/Assignments/Create_
+and_Edit_Assignments">Ultra:
+Create an Assignment</a> in Blackboard Help.</p>
+
+<p>An assignment is made up of one or more questions. The following question
+types are available for use with Ultra via REST API.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">EitherOr</code> - questions that allow one of two possible responses, such as “true or false”</li>
+  <li><code class="highlighter-rouge">Essay</code> - questions that provide a WYSIWYG editor and allow long text response</li>
+  <li><code class="highlighter-rouge">MultipleAnswer</code> - allow students to choose more than one answer</li>
+  <li><code class="highlighter-rouge">Presentation</code> - represents a ‘question’ that only has text and/or attached files referenced from within question.text, but that has no actual answer, points, or evaluation associated with it</li>
+</ul>
+
+<p>As of version 3300.9.0, you can use the public API to read any type of
+question. You can use the public API to create, update, and delete methods
+only with presentation-type questions.</p>
+
+<h1 id="before-you-begin">Before You Begin</h1>
+
+<ul>
+  <li>To work with assignments, you need the entitlements listed for each endpoint in the API reference documents.</li>
+  <li>If you want to use a file with a new assignment, you must upload the file to Learn before you create the new assignment.</li>
+</ul>
+
+<h1 id="create-an-assignment">Create an Assignment</h1>
+
+<p>Before you create an assignment, remember that you must first upload any files
+that you intend to use to create the object.</p>
+
+<ol>
+  <li>If you have not already uploaded any files that you need to use to create the assignment, use the steps in the following section to do so.</li>
+  <li>Make a POST request to <code class="highlighter-rouge">/learn/api/public/v1/courses/{courseId}/contents/createAssignment</code>. See the reference below for more information about using the endpoint. Note that the response body of the request does not return the full assignment object. It returns an object of IDs, one for each of the various resources created by Learn.</li>
+  <li>Use the response body to further manage the assignment.</li>
+</ol>
+
+<p>Use these objects to further manage the assignment that you created.</p>
+
+<h1 id="upload-a-file-to-blackboard-learn">Upload a File to Blackboard Learn</h1>
+
+<p>Before you can use a file with a REST API call, you must use an API upload it
+to Blackboard Learn.</p>
+
+<ol>
+  <li>Make a POST request to /learn/api/public/v1/uploads.</li>
+  <li>Use the ID number in the response to further access the uploaded file.</li>
+</ol>
+
+<h1 id="add-content-to-an-existing-assignment">Add Content to an Existing Assignment</h1>
+
+<p>As of 3300.9.0 you can add only presentation-type “questions” to assignments
+using the public REST API.</p>
+
+<ol>
+  <li>
+    <p>Make a POST request to /learn/api/public/v1/courses/{courseId}/assessments/{assessmentId}/questions/{questionId}</p>
+  </li>
+  <li>
+    <p>You can validate the response body against your original response body.</p>
+  </li>
+</ol>
+
+<h1 id="assignment-related-query-parameters">Assignment-related Query Parameters</h1>
+
+<p>All endpoints accept a query parameter fields that specifies the fields to be
+included in the response object, if any. The fields to be included are given
+as a comma-separated list. Specified fields are ignored if absent from the
+response. If no fields are specified, all fields are returned in the response.
+For example:</p>
+
+<p>POST to /learn/api/public/v1/courses/{courseId}/assessments/{assessmentId}/que
+stions/{questionId}?fields=id,title,status,message</p>
+
+<p>returns the ID and title of questions if the request succeeds because only
+those fields are included in the success response object. The method returns
+status and message if the request fails because only those fields are included
+in the error response object.</p>
+
+:ET

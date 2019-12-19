@@ -1,0 +1,36 @@
+I"_<h1 id="blackboard-connecttxt-developer-documentation">Blackboard ConnectTxt Developer Documentation</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘ConnectTxt Developer Documentation’]</em><br />
+<em>Tags: [‘developer’, ‘blackboard connecttxt’]</em></p>
+<hr />
+
+<p>Blackboard ConnectTxt: allows you to send and receive text messages to
+multiple people in an instant from your computer or your smartphone. Two-way
+communication that’s quick, to the person, to the point, secure and cost
+effective. Simple . Clever .</p>
+
+<h2 id="xml-connector"><a href="ConnectTxt%20XML%20Connector.html">XML Connector</a></h2>
+
+<p>In this section, the XML 1.1 Post integration methodology is documented.</p>
+
+<h2 id="soap-connector"><a href="ConnectTxt%20SOAP%20Connector%20for%20Messaging%20(v1.5).html">SOAP Connector</a></h2>
+
+<p>The SOAP Connector is simply a SOAP interface to implement the XML Post data
+integration</p>
+
+<h2 id="email2text"><a href="ConnectTxt%20Email2Text.html">email2text</a></h2>
+
+<p>The email2text application allows users to send email that can be sent via SMS
+to mobile handsets.</p>
+
+<h2 id="address-book-middleware"><a href="ConnectTxt%20SOAP%20Connector%20for%20Address%20Book%20(v1.5).html">Address Book Middleware</a></h2>
+
+<p>This middleware allows an Institution the ability to automatically update the
+address book based on that institution’s contact database.</p>
+
+<h2 id="programming-apis"><a href="ConnectTxt%20Programming%20APIs.html">Programming APIs</a></h2>
+
+<p>The Programming APIs section contains sample code in several languages to help
+the developer get started.</p>
+
+:ET

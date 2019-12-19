@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: about
+---
 # Developer Portal Terms and Conditions
 *Author: Scott Hurrey*  
 *Categories: []*  

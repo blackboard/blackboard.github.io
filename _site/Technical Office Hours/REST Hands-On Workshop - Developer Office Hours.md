@@ -8,6 +8,6 @@ Thanks for those that were able to attend Developer Office Hours today, July
 
 https://us.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93
 
-I've also completed [Tutorial: Build a Java Command Line REST Application](/REST/Tutorial:%20Build%20a%20Java%20Command%20Line%20REST%20Application.md), so feel free to follow along there, as
+I've also completed [Tutorial: Build a Java Command Line REST Application](/REST/Tutorial:%20Build%20a%20Java%20Command%20Line%20REST%20Application.html), so feel free to follow along there, as
 well.
 

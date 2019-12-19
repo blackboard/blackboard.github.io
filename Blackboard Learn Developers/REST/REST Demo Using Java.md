@@ -1,17 +1,23 @@
+---
+layout: learn
+parent: rest
+category: examples
+---
 # REST Demo Using Java
 *Author: Scott Hurrey*  
 *Categories: []*  
 *Tags: ['rest', 'java', 'blackboard learn', 'example', 'sample code', 'saas', 'developer']*  
 <hr />
+
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
-discovering, and deleting supported Learn objects.
+discovering, and deleting supported Learn objects. For a more complete tutorial, check out this [page](Tutorial%20-%20Build%20a%20Java%20Command%20Line%20REST%20Application.html) to walkthrough building a Java command-line application.
 
 ## Prerequisites
 
-* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html) in the Developer Portal
 * You must 
-[register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+[register your application](Managing%20REST%20Integrations%20in%20Learn.html) in Blackboard Learn
 * You must also configure the script as outlined in the README for the project
 
 This webapp allows you to:
@@ -36,7 +42,7 @@ This help topic assumes the Developer:
 
 * is familiar with Java
 * has Tomcat running somewhere the webapp can be installed
-* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp) and built and deployed it to Tomcat in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp/blob/master/README.md) file.
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp) and built and deployed it to Tomcat in conjunction with the project [README.html](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp/blob/master/README.html) file.
 * has a REST-enabled Blackboard Learn instance.
 
 ## Code Walkthrough
@@ -44,7 +50,7 @@ This help topic assumes the Developer:
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.md) document.
+  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.html) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
 #### Authorization and Authentication
@@ -484,7 +490,7 @@ in that it is a sub-call to courses, so the endpoint would look like
 
 All of the code snippets included in this document at included in a sample
 REST Demo Java Webapp application available on
-[GitHub](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp). There is a README.md included that talks more specifically about
+[GitHub](https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp). There is a README.html included that talks more specifically about
 building and running the code. Feel free to review the code and run it against
 a test or development Learn instance to see how it works.
 

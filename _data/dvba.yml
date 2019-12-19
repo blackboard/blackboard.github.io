@@ -1,8 +1,6 @@
-- name: Getting Started
-  link: Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html
-- name: API Resources
-  link: Collaborate%20API%20Objects.html
-- name: API Authentication
-  link: Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html
-- name: API Documentation
-  link: https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0
+- name: DVBA Home
+  link: What%20is%20a%20DVBA%3F.html
+- name: Developer AMI
+  link: Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html
+- name: DVM
+  link: Developer%20Virtual%20Machine%20-%20DVM.html

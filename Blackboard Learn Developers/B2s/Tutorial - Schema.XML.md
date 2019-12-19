@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: examples-b2
+---
 # Tutorial - Schema.XML
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Tutorials']*  

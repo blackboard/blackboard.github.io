@@ -1,3 +1,6 @@
+---
+layout: dvba
+---
 # Using the Blackboard Learn AMI for REST and LTI Development
 *Author: Scott Hurrey*  
 *Categories: []*  

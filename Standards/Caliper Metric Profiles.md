@@ -1,3 +1,8 @@
+---
+layout: standards
+parent: caliper
+category: about-caliper
+---
 # Caliper Metric Profiles
 *Author: Scott Hurrey*  
 *Categories: ['Caliper']*  
@@ -11,7 +16,7 @@ the use of common tools across platforms with the added ability to analyze the
 usage of that tool for all students regardless of the environment that student
 originates from.
 
-We also have documentation on the [specific events sent](/Blackboard%20Caliper%20Event%20Guide.md) by Blackboard Learn,
+We also have documentation on the [specific events sent](/Blackboard%20Caliper%20Event%20Guide.html) by Blackboard Learn,
 
 The metric profiles are realized in the form of JSON for Linked Data (JSON-LD)
 payloads containing a set of common objects, each with the ability to add

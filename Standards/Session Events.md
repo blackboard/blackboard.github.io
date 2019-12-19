@@ -1,3 +1,8 @@
+---
+layout: standards
+parent: caliper
+category: events-caliper
+---
 # Session Events
 *Author: Scott Hurrey*  
 *Categories: ['Caliper']*  

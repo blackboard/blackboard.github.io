@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: soap
+category: about-soap
+---
 # Proxy Tools
 *Author: Scott Hurrey*  
 *Categories: ['SOAP Web Services']*  

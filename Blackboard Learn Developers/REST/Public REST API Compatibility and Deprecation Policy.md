@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: about
+---
 # Public REST API Compatibility and Deprecation Policy
 *Author: Ryan Haber*  
 *Categories: []*  

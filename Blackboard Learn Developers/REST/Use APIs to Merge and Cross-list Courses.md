@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: advanced
+---
 # Use APIs to Merge and Cross-list Courses
 *Author: Ryan Haber*  
 *Categories: []*  

@@ -1,3 +1,6 @@
+---
+layout: dvba
+---
 # Developer Virtual Machine - DVM
 *Author: Scott Hurrey*  
 *Categories: []*  
@@ -7,12 +10,12 @@
 The DVM is only available to clients and partners with Behind the
 Blackboard access. You _*can*_ gain access to a developer instance of
 Blackboard for developing LTI and RESTful applications using our [Amazon Web
-Services Developer AMI](Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.md), available in the
+Services Developer AMI](Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html), available in the
 Amazon Marketplace. If you prefer the Virtual Machine, or you wish to develop
 Building Blocks, you must first be a contracted client or partner. For more
 information about becoming a Blackboard Partner, see [Become a Blackboard
 Partner and Gain Access To Behind the Blackboard and Partner SaaS
-Systems](/Blackboard%20Learn%20Developers/BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.md).
+Systems](/BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html).
 
 Blackboard provides a preconfigured VirtualBox developer virtual machine (DVM)
 to help developers quickly test and validate Building Blocks and REST
@@ -43,7 +46,7 @@ may not download or use the Bb Virtual Machine._
 * Developer-class workstation or laptop that supports Linux virtual machines.
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 5.0.14 must be installed and operational.
 * [Vagrant](https://www.vagrantup.com/downloads.html) 1.74 or later must be installed and operational.
-* Behind the Blackboard Access - Read [Become a Blackboard Partner and Gain Access To Behind the Blackboard and Partner SaaS Systems.](/Blackboard%20Learn%20Developers/BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.md)
+* Behind the Blackboard Access - Read [Become a Blackboard Partner and Gain Access To Behind the Blackboard and Partner SaaS Systems.](/BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html)
 
 ## Installation
 
@@ -116,7 +119,7 @@ have the change take affect.
 
 See the Shared Content Folder section of [Preparing Your Building Blocks For
 Learn SaaS and Newer Learn
-Versions](/Blackboard%20Learn%20Developers/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.md) for a detailed
+Versions](/Blackboard%20Learn%20Developers/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html) for a detailed
 explanation of the differences between the SaaS-like configuration and the
 Enterprise 9.1 configuration.
 
@@ -162,9 +165,12 @@ value.
 
 The DVM must register with the cloud in order to use the API Gateway. Learn
 more about this process
-[here](/REST/Register%20Developer%20Instances%20to%20the%20Cloud.md).
+[here](/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html).
 
-###
+## Common Issues
+
+* [Postgres Error](Solution%20to%20a%20PostgreSQL%20Error%20In%20the%20Developer%20Virtual%20Machine.html)
+* [Unconnected Sockets](Solution%20to%20Unconnected%20sockets%20not%20implemented%20in%20a%20Q4%202015%20DVM.html)
 
 To share comments and feedback on the developer virtual machine, please email
 [developers (at) blackboard (dot) com](mailto:developers@blackboard.com).

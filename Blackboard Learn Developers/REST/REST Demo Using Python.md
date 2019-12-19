@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: examples
+---
 # REST Demo Using Python
 *Author: Mark O'Neil*  
 *Categories: []*  
@@ -9,9 +14,9 @@ discovering, and deleting supported Learn objects.
 
 ## Prerequisites
 
-* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html) in the Developer Portal
 * You must 
-[register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+[register your application](Managing%20REST%20Integrations%20in%20Learn.html) in Blackboard Learn
 * You must also configure the script as outlined in the README for the project
 
 This webapp allows you to:
@@ -35,7 +40,7 @@ knowledge necessary to build a REST-based Web Services integration.**
 This help topic assumes the Developer:
 
 * is familiar with Python
-* has obtained a copy of the[ source code](https://github.com/blackboard/BBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.md) file.
+* has obtained a copy of the[ source code](https://github.com/blackboard/BBDN-REST-DEMO_Python) and run as noted in the project [README.html](https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.html) file.
 * has a REST-enabled Blackboard Learn instance.
 
 ### Code Walkthrough
@@ -43,7 +48,7 @@ This help topic assumes the Developer:
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.md) document.
+  1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.html) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
 #### Authorization and Authentication
@@ -418,7 +423,7 @@ objects .
 All of the code snippets included in this document are included in a sample
 REST Demo Python command line application available on
 [GitHub](https://github.com/blackboard/BBDN-REST-DEMO_Python).
-There is a README.md included that talks more specifically running the code.
+There is a README.html included that talks more specifically running the code.
 Feel free to review the code and run it against a test or development Learn
 instance to see how it works.
 

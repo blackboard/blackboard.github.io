@@ -1,7 +1,12 @@
+---
+layout: learn
+parent: b2s
+category: best-practices-b2
+---
 # Code Quality Initiative
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'Tutorials']*  
-*Tags: ['develop', 'best practice', 'b2', 'tutorials', 'migrated from edugarage', 'sonar', 'pmd', 'static code analysis', 'code quality', 'developer']*  
+*Tags: ['develop', 'best practice', 'b2', 'tutorials', 'migrated from edugarage', 'sonar', '.html', 'static code analysis', 'code quality', 'developer']*  
 <hr />
 # Why Code Quality Matters
 
@@ -45,7 +50,7 @@ Blackboard custom PMD rules before importing Java rule set.
 
 How to install Blackboard custom PMD rules:
 
-  1. Copy bb-pmd-rules.jar and bb-rules-sonar.xml files to ${Sonar_Home}/extensions/rules/pmd
+  1. Copy bb-.html-rules.jar and bb-rules-sonar.xml files to ${Sonar_Home}/extensions/rules/.html
   2. Make sure the files have read rights for Sonar
   3. Restart Sonar server
   4. Verify that Bb* rules exist from a Java profile's coding rules list

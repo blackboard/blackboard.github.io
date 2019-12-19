@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: soap
+category: about-soap
+---
 # Introduction to SOAP Web Services
 *Author: Scott Hurrey*  
 *Categories: ['SOAP Web Services']*  
@@ -34,7 +39,7 @@ Data that can be accessed includes:
 ## Learn More
 
 To learn more about Learn Web Services, start
-[here](Blackboard%20Learn%20SOAP%20Web%20Services.md).
+[here](Blackboard%20Learn%20SOAP%20Web%20Services.html).
 
 ## Request a Developers License
 

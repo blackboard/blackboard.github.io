@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: admin
+---
 # Register as a Developer and Manage Your Applications with the Developer Portal
 *Author: Mark O'Neil*  
 *Categories: []*  

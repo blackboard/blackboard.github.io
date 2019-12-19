@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: advanced
+---
 # Data Types for contentHandler
 *Author: Ryan Haber*  
 *Categories: []*  

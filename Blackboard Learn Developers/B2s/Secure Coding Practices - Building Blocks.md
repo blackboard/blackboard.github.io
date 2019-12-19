@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: best-practices-b2
+---
 # Secure Coding Practices - Building Blocks
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Tutorials']*  

@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: getting-started-b2
+---
 # Getting Started With Building Blocks
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started']*  
@@ -53,7 +58,7 @@ development project.
 The following tutorials are available to help you get started with Building
 Block development:
 
-  * [Building Block Development Life Cycle](Building%20Block%20Development%20Life%20Cycle.md)
-  * [Enabling Debugging](Enabling%20Remote%20Debugging.md)
-  * [First Project: Gradle, Git, and basic-b2-template](First%20Project:%20Gradle,%20Git,%20and%20b2-starter-template.md)
+  * [Building Block Development Life Cycle](Building%20Block%20Development%20Life%20Cycle.html)
+  * [Enabling Debugging](Enabling%20Remote%20Debugging.html)
+  * [First Project: Gradle, Git, and basic-b2-template](First%20Project:%20Gradle,%20Git,%20and%20b2-starter-template.html)
 

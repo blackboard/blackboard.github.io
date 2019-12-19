@@ -1,0 +1,852 @@
+I"ߏ<h1 id="tutorial-build-a-java-command-line-rest-application">Tutorial: Build a Java Command Line REST Application</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘java’, ‘tutorial’, ‘developers’, ‘developer’]</em></p>
+<hr />
+
+<p>The purpose of this document is to allow a developer to walk through the REST
+Workshop from DevCon 2016. Please note that this sample code was built and
+tested on Mac. It is Java code, and therefore, should be operating system
+agnostic, but it has not been tested on Windows.</p>
+
+<p>In order to begin this tutorial, there are a few pre-requisites that are
+assumed to be in place:</p>
+
+<ul>
+  <li>User has installed and started the latest <a href="https://community.blackboard.com/docs/DOC-1649-developer-virtual-machine-dvm">Developer Virtual Machine</a>.</li>
+  <li>User has installed and configured <a href="https://git-scm.com/downloads">GIT</a>.</li>
+  <li>User has cloned the <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop">repository</a> to their local working directory.</li>
+  <li>User has Java 8 installed and configured to JAVA_HOME.</li>
+  <li>User has registered for an account on the <a href="https://developer.blackboard.com/">Developer Portal</a>, <a href="https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal">registered an application</a>, obtained the key and secret, and <a href="https://community.blackboard.com/docs/DOC-1580-managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators">configured</a> the Developer Virtual Machine to accept it..</li>
+</ul>
+
+<p>To watch a recording of the corresponding Webinar, click
+<a href="https://us.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93">here</a>.</p>
+
+<h1 id="about-the-project">About the Project</h1>
+
+<p>This project is built on Java 8, in Spring Tool Suite (an Eclipse derivative),
+and uses Gradle and Maven to build and install dependencies. In addition,
+Gradle is using the ‘Application’ plugin, which allows us to build and run the
+command line java application with one simple Gradle command – gradle run.</p>
+
+<p>Architecturally, this sample relies on the RestTemplate object offered by the
+Spring Framework for all REST communication. The method or library you choose
+for your application is very much a personal preference. Internally at
+Blackboard, this is the preferred method, and therefore, the method chosen for
+this workshop.</p>
+
+<p>The project contains a base ‘Hello Developers’ application that contains all
+of the supporting code to get started. The code can all be found in the
+src/main/java directory in two base packages, bbdn.unsecurity and bbdn.rest.
+There are also four top-level folders containing the code we will need to
+implement each step of the tutorial. Let’s break down the base files:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Package</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RestConstants.java</td>
+      <td>bbdn.rest</td>
+      <td>This class contains Constant values for running the code.</td>
+    </tr>
+    <tr>
+      <td>RestDemo.java</td>
+      <td>bbdn.rest</td>
+      <td>This class is the main class for the project. We will discuss other classes as we move them into place, but this is the only file we will modify.</td>
+    </tr>
+    <tr>
+      <td>UnSecurityUtil.java</td>
+      <td>bbdn.unsecurity</td>
+      <td>This class allows us to create a RestTemplate object based on whether we are testing on the DVM or in an environment with a valid SSL certificate.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="restconstants">RestConstants</h2>
+
+<p>The RestConstants.java file takes the Data I/O requirements out of the sample
+code, allowing the code to focus on the REST API interactions. In a real-world
+application, this data would be taken from configuration files or tables and
+UI forms and user input.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">package</span> <span class="n">bbdn</span><span class="p">.</span><span class="n">rest</span><span class="p">;</span>
+   
+   <span class="k">public</span> <span class="n">abstract</span> <span class="n">class</span> <span class="n">RestConstants</span> <span class="p">{</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">HOSTNAME</span> <span class="p">=</span> <span class="s2">"http://localhost:9876"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">KEY</span> <span class="p">=</span> <span class="s2">""</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">SECRET</span> <span class="p">=</span> <span class="s2">""</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">AUTH_PATH</span> <span class="p">=</span> <span class="s2">"/learn/api/public/v1/oauth2/token"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">DATASOURCE_PATH</span> <span class="p">=</span> <span class="s2">"/learn/api/public/v1/dataSources"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">DATASOURCE_ID</span> <span class="p">=</span> <span class="s2">"BBDN-DSK-JAVA"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">DATASOURCE_DESCRIPTION</span> <span class="p">=</span> <span class="s2">"Demo Data Source used for REST Java Demo"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">TERM_PATH</span> <span class="p">=</span> <span class="s2">"/learn/api/public/v1/terms"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">TERM_ID</span> <span class="p">=</span> <span class="s2">"BBDN-TERM-JAVA"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">TERM_NAME</span> <span class="p">=</span> <span class="s2">"REST Demo Term - Java"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">TERM_RAW</span> <span class="p">=</span> <span class="s2">"Term Used For REST Demo - Java"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">TERM_DISPLAY</span> <span class="p">=</span> <span class="s2">"Term Used For REST Demo - Java"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">COURSE_PATH</span> <span class="p">=</span> <span class="s2">"/learn/api/public/v1/courses"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">COURSE_ID</span> <span class="p">=</span> <span class="s2">"BBDN-Java-REST-Demo"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">COURSE_NAME</span> <span class="p">=</span> <span class="s2">"Course Used For REST Demo - Java"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">COURSE_DESCRIPTION</span> <span class="p">=</span> <span class="s2">"Course Used For REST Demo - Java"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_PATH</span> <span class="p">=</span> <span class="s2">"/learn/api/public/v1/users"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_ID</span> <span class="p">=</span> <span class="s2">"bbdnrestdemojavauser"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_NAME</span> <span class="p">=</span> <span class="s2">"restjavauser"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_PASS</span> <span class="p">=</span> <span class="s2">"Bl@ckb0ard!"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_FIRST</span> <span class="p">=</span> <span class="s2">"Java"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_LAST</span> <span class="p">=</span> <span class="s2">"Restdemo"</span><span class="p">;</span>
+     <span class="k">public</span> <span class="n">final</span> <span class="n">static</span> <span class="k">String</span> <span class="n">USER_EMAIL</span> <span class="p">=</span> <span class="s2">"developers@blackboard.com"</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="restdemo">RestDemo</h2>
+
+<p>This is the heart of the application. This contains the main processing loop
+that performs all of the functions that we want to perform. We will review the
+other classes as we progress through the tutorial, but the code we will write
+lives in this file.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">package</span> <span class="n">bbdn</span><span class="p">.</span><span class="n">rest</span><span class="p">;</span>
+    
+    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">slf4j</span><span class="p">.</span><span class="n">Logger</span><span class="p">;</span>
+    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">slf4j</span><span class="p">.</span><span class="n">LoggerFactory</span><span class="p">;</span>
+    
+    <span class="k">public</span> <span class="n">class</span> <span class="n">RestDemo</span> <span class="p">{</span>
+     
+     <span class="n">private</span> <span class="n">static</span> <span class="n">final</span> <span class="n">Logger</span> <span class="nb">log</span> <span class="p">=</span> <span class="n">LoggerFactory</span><span class="p">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">RestDemo</span><span class="p">.</span><span class="n">class</span><span class="p">);</span>
+     <span class="k">public</span> <span class="n">static</span> <span class="k">boolean</span> <span class="n">DEVMODE</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+     
+     <span class="k">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="k">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">boolean</span> <span class="n">OPER_ALL</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_DATASOURCE</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_TERM</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_COURSE</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_USER</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_MEMBERSHIP</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_CONTENT</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">OPER_GRADES</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       
+       <span class="k">String</span> <span class="n">_hostname</span> <span class="p">=</span> <span class="n">RestConstants</span><span class="p">.</span><span class="n">HOSTNAME</span><span class="p">;</span>
+       <span class="n">int</span> <span class="n">operCount</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">nextCommand</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="n">int</span> <span class="n">uriCount</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+       <span class="k">boolean</span> <span class="n">nextUri</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+     
+       <span class="k">if</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+       
+       <span class="n">for</span><span class="p">(</span><span class="n">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">args</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="p">++</span> <span class="p">)</span> <span class="p">{</span>
+         <span class="nb">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"args["</span> <span class="p">+</span> <span class="n">i</span> <span class="p">+</span> <span class="s2">"]: "</span> <span class="p">+</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+     
+         <span class="k">if</span> <span class="p">(</span><span class="n">nextCommand</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">switch</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+             <span class="k">case</span> <span class="s2">"datasource"</span><span class="p">:</span>
+               <span class="n">OPER_DATASOURCE</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"term"</span><span class="p">:</span>
+               <span class="n">OPER_TERM</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"course"</span><span class="p">:</span>
+               <span class="n">OPER_COURSE</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"user"</span><span class="p">:</span>
+               <span class="n">OPER_USER</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"membership"</span><span class="p">:</span>
+               <span class="n">OPER_MEMBERSHIP</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"content"</span><span class="p">:</span>
+               <span class="n">OPER_CONTENT</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"grades"</span><span class="p">:</span>
+               <span class="n">OPER_GRADES</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+               <span class="k">break</span><span class="p">;</span>
+             <span class="k">case</span> <span class="s2">"all"</span><span class="p">:</span>
+             <span class="n">default</span><span class="p">:</span>
+               <span class="n">OPER_ALL</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+         <span class="p">}</span>
+         <span class="n">nextCommand</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="p">}</span>
+       <span class="k">if</span><span class="p">(</span><span class="n">nextUri</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">_hostname</span> <span class="p">=</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+         <span class="n">nextUri</span> <span class="p">=</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="p">}</span>
+     
+       <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">equalsIgnoreCase</span><span class="p">(</span><span class="s2">"-c"</span><span class="p">))</span> <span class="p">{</span>
+         <span class="n">nextCommand</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+         <span class="n">operCount</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>
+       <span class="p">}</span>
+       <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">equalsIgnoreCase</span><span class="p">(</span><span class="s2">"-t"</span><span class="p">))</span> <span class="p">{</span>
+         <span class="n">nextUri</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+         <span class="n">uriCount</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>
+       <span class="p">}</span>
+       <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">equalsIgnoreCase</span><span class="p">(</span><span class="s2">"-d"</span><span class="p">))</span> <span class="p">{</span>
+         <span class="n">DEVMODE</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+       <span class="p">}</span>
+     <span class="p">}</span>
+     <span class="k">if</span><span class="p">(</span><span class="n">operCount</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+       <span class="n">OPER_ALL</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="nb">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">" OPER_ALL: "</span> <span class="p">+</span> <span class="n">OPER_ALL</span> <span class="p">+</span> <span class="s2">" OPER_DATASOURCE: "</span> <span class="p">+</span> <span class="n">OPER_DATASOURCE</span> <span class="p">+</span> <span class="s2">" OPER_TERM: "</span> <span class="p">+</span> <span class="n">OPER_TERM</span> <span class="p">+</span> <span class="s2">" OPER_COURSE: "</span> <span class="p">+</span> <span class="n">OPER_COURSE</span> <span class="p">+</span> <span class="s2">" OPER_USER: "</span> <span class="p">+</span> <span class="n">OPER_USER</span> <span class="p">+</span> <span class="s2">" OPER_MEMBERSHIP: "</span> <span class="p">+</span> <span class="n">OPER_MEMBERSHIP</span> <span class="p">+</span> <span class="s2">" OPER_CONTENT: "</span> <span class="p">+</span> <span class="n">OPER_CONTENT</span> <span class="p">+</span> <span class="s2">" OPER_GRADES: "</span> <span class="p">+</span> <span class="n">OPER_GRADES</span> <span class="p">+</span> <span class="s2">" HOSTNAME: "</span> <span class="p">+</span> <span class="n">_hostname</span> <span class="p">+</span> <span class="s2">" operCount: "</span> <span class="p">+</span> <span class="n">operCount</span> <span class="p">+</span> <span class="s2">"uriCount: "</span> <span class="p">+</span> <span class="n">uriCount</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="k">else</span> <span class="p">{</span>
+     <span class="n">OPER_ALL</span> <span class="p">=</span> <span class="nb">true</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="nb">log</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Hello REST Workshop Participant!!!"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="unsecurityutil">UnSecurityUtil</h2>
+
+<p>The unSecurityUtil class allows us to bypass SSL Certificate checking when the
+-d flag is passed at the command line. This is useful in test environments and
+specifically on the Developer Virtual Machine where the SSL certificate is
+self-signed and therefore untrusted by Java.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">bbdn</span><span class="p">.</span><span class="n">unsecurity</span><span class="p">;</span>
+   
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">security</span><span class="p">.</span><span class="n">KeyManagementException</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">security</span><span class="p">.</span><span class="n">KeyStoreException</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">security</span><span class="p">.</span><span class="n">NoSuchAlgorithmException</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">security</span><span class="p">.</span><span class="n">cert</span><span class="p">.</span><span class="n">X509Certificate</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">javax</span><span class="p">.</span><span class="n">net</span><span class="p">.</span><span class="n">ssl</span><span class="p">.</span><span class="n">SSLContext</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">conn</span><span class="p">.</span><span class="n">ssl</span><span class="p">.</span><span class="n">SSLConnectionSocketFactory</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">conn</span><span class="p">.</span><span class="n">ssl</span><span class="p">.</span><span class="n">TrustStrategy</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">impl</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">CloseableHttpClient</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">impl</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HttpClients</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">HttpStatus</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HttpComponentsClientHttpRequestFactory</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">web</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">DefaultResponseErrorHandler</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">web</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">RestTemplate</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">bbdn</span><span class="p">.</span><span class="n">rest</span><span class="p">.</span><span class="n">RestDemo</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="n">abstract</span> <span class="n">class</span> <span class="n">UnSecurityUtil</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="n">static</span> <span class="n">RestTemplate</span> <span class="n">getRestTemplate</span><span class="p">()</span> <span class="n">throws</span> <span class="n">KeyManagementException</span><span class="p">,</span> <span class="n">NoSuchAlgorithmException</span><span class="p">,</span> <span class="n">KeyStoreException</span> <span class="p">{</span>
+    <span class="p">//</span> <span class="n">Workaround</span> <span class="k">to</span> <span class="n">allow</span> <span class="n">for</span> <span class="n">PATCH</span> <span class="n">requests</span>
+    <span class="n">HttpComponentsClientHttpRequestFactory</span> <span class="n">requestFactory</span> <span class="p">=</span> <span class="n">new</span> <span class="n">HttpComponentsClientHttpRequestFactory</span><span class="p">();</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">RestDemo</span><span class="p">.</span><span class="n">DEVMODE</span><span class="p">)</span> <span class="p">{</span>
+     
+      <span class="n">TrustStrategy</span> <span class="n">acceptingTrustStrategy</span> <span class="p">=</span> <span class="p">(</span><span class="n">X509Certificate</span><span class="p">[]</span> <span class="n">chain</span><span class="p">,</span> <span class="k">String</span> <span class="n">authType</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">true</span><span class="p">;</span>
+     
+      <span class="n">SSLContext</span> <span class="n">sslContext</span> <span class="p">=</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="n">ssl</span><span class="p">.</span><span class="n">SSLContexts</span><span class="p">.</span><span class="n">custom</span><span class="p">()</span>
+        <span class="p">.</span><span class="n">loadTrustMaterial</span><span class="p">(</span><span class="n">null</span><span class="p">,</span> <span class="n">acceptingTrustStrategy</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">build</span><span class="p">();</span>
+      
+      <span class="n">SSLConnectionSocketFactory</span> <span class="n">csf</span> <span class="p">=</span> <span class="n">new</span> <span class="n">SSLConnectionSocketFactory</span><span class="p">(</span><span class="n">sslContext</span><span class="p">);</span>
+     
+      <span class="n">CloseableHttpClient</span> <span class="n">httpClient</span> <span class="p">=</span> <span class="n">HttpClients</span><span class="p">.</span><span class="n">custom</span><span class="p">()</span>
+        <span class="p">.</span><span class="n">setSSLSocketFactory</span><span class="p">(</span><span class="n">csf</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">build</span><span class="p">();</span>
+      
+      <span class="n">requestFactory</span><span class="p">.</span><span class="n">setHttpClient</span><span class="p">(</span><span class="n">httpClient</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="n">RestTemplate</span> <span class="n">restTemplate</span> <span class="p">=</span> <span class="n">new</span> <span class="n">RestTemplate</span><span class="p">(</span><span class="n">requestFactory</span><span class="p">);</span>
+    
+    <span class="p">//</span> <span class="n">Workaround</span> <span class="n">for</span> <span class="n">allowing</span> <span class="n">unsuccessful</span> <span class="n">HTTP</span> <span class="n">Errors</span> <span class="k">to</span> <span class="n">still</span> <span class="n">print</span> <span class="k">to</span> <span class="n">the</span> <span class="n">screen</span>
+    <span class="n">restTemplate</span><span class="p">.</span><span class="n">setErrorHandler</span><span class="p">(</span><span class="n">new</span> <span class="n">DefaultResponseErrorHandler</span><span class="p">(){</span>
+      <span class="n">protected</span> <span class="k">boolean</span> <span class="n">hasError</span><span class="p">(</span><span class="n">HttpStatus</span> <span class="n">statusCode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}});</span>
+    
+    <span class="n">return</span><span class="p">(</span><span class="n">restTemplate</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="usage">Usage</h1>
+
+<p>The first step is to modify the RestConstants.java file to include your shared
+key and secret, and, if not using the Developer Virtual Machine, modify
+hostname to your primary test environment. Then simply open the command line,
+navigate to the directory containing the project, and type <code class="highlighter-rouge">gradle run</code>. If
+you do not have Gradle installed, you can use <code class="highlighter-rouge">./gradlew run</code> instead. This will install gradle in your project directory.</p>
+
+<p>In addition, the experience can by customized at the command line by
+specifying command line arguments to be passed to the java application. The
+syntax for this is <code class="highlighter-rouge">gradle run -Dexec.args=""</code>. The arguments would appear
+just as they would if typing them directly to the java executable, space-
+delimited. For example, to run in Devmode, you would type <code class="highlighter-rouge">gradle run
+-Dexec.args="-d"</code>. The following table lists the available command line
+arguments. They can be combined.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arg</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-t</td>
+      <td>Specify the target URL. This will override the HOSTNAME constant specified in RestConstants.</td>
+      <td><code class="highlighter-rouge">gradle run -Dexec.args="-t https://localhost:9877</code></td>
+    </tr>
+    <tr>
+      <td>-d</td>
+      <td>Turn on DevMode. DevMode tells the sample application to ignore certificate errors. Useful when testing on the DVM or against a test/dev server with a self-signed certificate.</td>
+      <td><code class="highlighter-rouge">gradle run -Dexec.args="-d"</code></td>
+    </tr>
+    <tr>
+      <td>-c</td>
+      <td>Denote a specific object to exercise. Added for example, but not well implemented as each object relies on the previous object to be created and available.</td>
+      <td><code class="highlighter-rouge">gradle run -Dexec.args="-c datasource"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Available commands are:</p>
+
+<ul>
+  <li>datasource</li>
+  <li>term</li>
+  <li>course</li>
+  <li>user</li>
+  <li>membership</li>
+  <li>content *Not Yet Implemented</li>
+  <li>grades *Not Yet Implemented</li>
+  <li>all</li>
+</ul>
+
+<h1 id="step-0-run-hello-developer">Step 0: Run Hello Developer</h1>
+
+<p>The first step is to simply run the application. You should have already
+cloned the project to a local directory. Simply open a command line window,
+navigate to the directory you cloned to and type <code class="highlighter-rouge">gradle run</code>.</p>
+
+<h2 id="what-you-should-see">What You Should See</h2>
+
+<p><img src="/images/96359.png" alt="" /></p>
+
+<h2 id="what-we-did">What We Did</h2>
+
+<p>In this step, we simply ran the application to ensure that we had all of our
+libraries set, that our code ran properly, and that we have gradle installed
+for our project.</p>
+
+<h1 id="step-1-authorization">Step 1: Authorization</h1>
+
+<p>The key to any REST client application, and generally the biggest hurdle to
+adoption, is Authorization. There are a number of flavors out there, and the
+implementation chosen is often both a personal choice by the developer that
+built the REST API and also a function of the specific requirements and
+infrastructure around it. For more information regarding Learn’s
+implementation of OAuth2, read the <a href="Basic%20Authentication.html">Basic Authentication</a> in this section.</p>
+
+<p>In the “1-Implement-OAuth” folder, you will find three files:</p>
+<ul>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/Authorizer.java">Authorizer.java</a>
+    <ul>
+      <li>Authorizer is the service handler class. This does the actual work of requesting the token and retrieving the results.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/Token.java">Token.java</a>
+    <ul>
+      <li>Token is a JSON Model class. This is what we will use to interact with the token we receive from Blackboard Learn. Authorizer will request the token, and on receipt, will automatically serialize the JSON response into the Token object, allowing the application to simply interact with it as a normal Java object.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java">RestDemo.java</a>
+    <ul>
+      <li>The RestDemo class is what our bbdn.rest.RestDemo class will look like when we complete this step in the tutorial.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Let’s get started:</p>
+
+<ol>
+  <li>Move <code class="highlighter-rouge">/1-Implement-OAuth/Authorizer.java</code> to the <code class="highlighter-rouge">bbdn.rest</code> package.</li>
+  <li>Create a new package called <code class="highlighter-rouge">bbdn.rest.objects</code>.</li>
+  <li>Move <code class="highlighter-rouge">/1-Implement-OAuth/Token.java</code> to the <code class="highlighter-rouge">bbdn.rest.objects</code> package.</li>
+  <li>If you want a shortcut, you can copy the <code class="highlighter-rouge">/1-Implement-OAuth/RestDemo.java</code> file to the <code class="highlighter-rouge">bbdn.rest</code> package, otherwise open <code class="highlighter-rouge">bbdn.rest.RestDemo.java</code> and make the following edits:
+    <ol>
+      <li>Add an import to the top of your RestDemo to include <code class="highlighter-rouge">bbdn.rest.objects</code> space:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="nn">bbdn.rest.objects.*</span><span class="o">;</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Now highlight the log statement that prints our hello developer message and replace it with:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Obtain Bearer Token</span>
+ <span class="nc">Authorizer</span> <span class="n">auth</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Authorizer</span><span class="o">();</span> <span class="c1">// Instantiate Authorizer class</span>
+ <span class="nc">Token</span> <span class="n">token</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="na">authorize</span><span class="o">();</span> <span class="c1">// Authorize application and grab the Token object.</span>
+ <span class="n">log</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">"token: "</span> <span class="o">+</span> <span class="n">token</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Save the file.</li>
+  <li>At the command line in the project directory, type <code class="highlighter-rouge">gradle run</code> and watch as the token is printed to the screen.</li>
+</ol>
+
+<p>Review the <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java">RestDemo.java</a> in the <code class="highlighter-rouge">1-Implement-OAuth</code> folder to compare to your RestDemo.java if you have issues.</p>
+
+<h2 id="what-you-should-see-1">What You Should See</h2>
+
+<p><img src="/images/96360.png" alt="" /></p>
+
+<h2 id="what-we-did-1">What We Did</h2>
+
+<p>So in this step of the tutorial, we took our basic “Hello Developer”
+application and built out the authorization service and object we need for the
+rest of our application to work properly.</p>
+
+<p>We first put our REST <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/Authorizer.java">Authorization service</a> in place. So
+with Basic Authentication and OAuth, there is really a few specific things
+that we need to do. First, we must hash our key and secret into a
+base64-encoded string. Once we have the utility in place to generate that
+hash, the first thing to do is build the header. In this application, we are
+using HttpHeaders. We add the Authorization Header first, in the form of
+Authorization: Basic <hash>. We then set the content type to form-urlencoded
+using the HttpHeaders method setContentType. The last thing we need to do is
+define the applications scope in the form of grant_type. In Blackboard's case,
+we only accept client_credentials, so this part is easy. Simply add
+grant_type=client_credentials in the body of our POST message and POST it to
+the oauth/token endpoint.</hash></p>
+
+<p>The next step was to put our
+<a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/Token.java">Token</a> object in place.
+This object is configured to allow the Jackson library to automatically
+serialize and deserialize our JSON payloads. It provides three basic
+properties that correspond directly to the JSON payload we expect to receive
+from Blackboard Learn when we request a token: access_token, token_type, and
+expires_in. Once we have created and populated this object, we can then access
+this data whenever we need to.</p>
+
+<p>Lastly, we updated our <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java">main class</a> in order to call
+the authorize method and retrieve the token.</p>
+
+<h1 id="step-2-datasources">Step 2: Datasources</h1>
+
+<p>The first – and easiest – object to interact with is the Datasource object.
+It is a rudimentary object with only a few properties that need to be
+manipulated. It is also a very important object, as most other objects allow
+you to specify a datasource, which allows you to associate all of the data you
+create together and to your application.</p>
+
+<p>In the “2-Implement-Datasource” folder, you will find three files:</p>
+<ul>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/DatasourceHandler.java">DatasourceHandler.java</a>
+    <ul>
+      <li>DatasourceHandler is the service handler class. This does the actual work of building and processing HTTP requests and handling the incoming responses.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/Datasource.java">Datasource.java</a>
+    <ul>
+      <li>Datasource is a JSON Model class. This is what we will use to create datasources and to retrieve datasources from the REST responses we receive from Blackboard Learn. DatasourceHandler will automatically handle the serialization and deserialization of the datasource object, allowing the application to simply interact with it as a normal Java object.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/RestDemo.java">RestDemo.java</a>.
+    <ul>
+      <li>The RestDemo class is what our bbdn.rest.RestDemo class will look like when we complete this step in the tutorial.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Let’s get started:</p>
+
+<ol>
+  <li>Move /2-Implement-Datasource/Datasource.java to the bbdn.rest.objects package.</li>
+  <li>Create a new package called bbdn.rest.services.</li>
+  <li>Move /2-Implement-Datasource/DatasourceHandler.java to the bbdn.rest.services package.</li>
+  <li>If you want a shortcut, you can copy the /2-Implement-Datasource/RestDemo.java file to the bbdn.rest package, otherwise open bbdn.rest.RestDemo.java and make the following edits:
+    <ol>
+      <li>Add an import to the top of your RestDemo to include the bbdn.rest.services space:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="nn">bbdn.rest.services.*</span><span class="o">;</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Directly above the Authorizer instantiation, add the following code:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Declare Datasource</span>
+ <span class="nc">Datasource</span> <span class="n">ds</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+ <span class="c1">// Declare Result to receive Delete response</span>
+ <span class="kt">boolean</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+ <span class="c1">// Initialize Handlers</span>
+ <span class="nc">DatasourceHandler</span> <span class="n">datasourceHandler</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DatasourceHandler</span><span class="o">(</span><span class="n">_hostname</span><span class="o">);</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Directly below the log statement that writes the token information to the screen, add the following code:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// Datasource object</span>
+ <span class="k">if</span><span class="o">(</span> <span class="no">OPER_ALL</span> <span class="o">||</span> <span class="no">OPER_DATASOURCE</span><span class="o">)</span> <span class="o">{</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">datasourceHandler</span><span class="o">.</span><span class="na">createObject</span><span class="o">(</span><span class="n">token</span><span class="o">.</span><span class="na">getToken</span><span class="o">());</span>
+<span class="n">log</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">"Create DS: "</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">datasourceHandler</span><span class="o">.</span><span class="na">readObject</span><span class="o">(</span><span class="n">token</span><span class="o">.</span><span class="na">getToken</span><span class="o">());</span>
+<span class="n">log</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">"Read DS: "</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">datasourceHandler</span><span class="o">.</span><span class="na">updateObject</span><span class="o">(</span><span class="n">token</span><span class="o">.</span><span class="na">getToken</span><span class="o">());</span>
+<span class="n">log</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">"Update DS: "</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+ <span class="o">}</span>
+ <span class="k">if</span><span class="o">(</span> <span class="no">OPER_ALL</span> <span class="o">||</span> <span class="no">OPER_DATASOURCE</span><span class="o">)</span> <span class="o">{</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">datasourceHandler</span><span class="o">.</span><span class="na">deleteObject</span><span class="o">(</span><span class="n">token</span><span class="o">.</span><span class="na">getToken</span><span class="o">());</span>
+<span class="n">log</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">"Delete DS: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">);</span>
+ <span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Save the file.</li>
+  <li>At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.</li>
+</ol>
+
+<p>Review the <a href="https://github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/2-Implement-Datasource/RestDemo.java">RestDemo.java</a> in the
+2-Implement-Datasource folder to compare to your RestDemo.java if you have
+issues.</p>
+
+<h2 id="what-you-should-see-2">What You Should See</h2>
+
+<p>For Create:</p>
+
+<p><img src="/images/39363.png" alt="" /></p>
+
+<p>For Read:</p>
+
+<p><img src="/images/96364.png" alt="" /></p>
+
+<p>For Update:</p>
+
+<p><img src="/images/96365.png" alt="" /></p>
+
+<p>For Delete:</p>
+
+<p><img src="/images/96366.png" alt="" /></p>
+
+<h2 id="what-we-did-2">What We Did</h2>
+
+<p>So in this step of the tutorial, we added the code necessary to create, read,
+update, and delete a datasource.</p>
+
+<p>The first step was to put our Datasource object in place. This object is
+configured to allow the Jackson library to automatically serialize and
+deserialize our JSON payloads. It provides three basic properties that
+correspond directly to the JSON payload we expect to receive from Blackboard
+Learn when we manipulate a datasource: id, name, and description. Once we have
+created and populated this object, we can then access this data whenever we
+need to.</p>
+
+<p>Next we implemented our DatasourceHandler service class. This class handles
+the REST calls, all object generation and retrieval, and passing information
+back to our main class. When the class is initialized, we set up logging and
+make sure the handler has the correct hostname. Each operation has its own
+method that generates the appropriate body if necessary, then passes the
+necessary data to the sendRequest method to send the appropriate message and
+retrieve the appropriate response.</p>
+
+<p>Lastly, we updated our <a href="https://github.com/blackboard/BBDN-DevCon-REST-
+Workshop/blob/master/1-Implement-OAuth/RestDemo.java">main class</a> in order to call
+the appropriate methods to interact with the Datasource Service class.</p>
+
+<h1 id="step-3-terms">Step 3: Terms</h1>
+
+<p>For the third step in our tutorial we will implement the Term object. As with
+Datasources, Terms are also complimentary objects to other operations. At the
+conclusion on this tutorial, we will be setting this Term when we implement
+both courses and memberships. It is also the first in a more complex set of
+Model objects in that the base Term object requires a secondary Availability
+object to properly create and manipulate a Term.</p>
+
+<p>In the “3-Implement-Term” folder, you will find four files:</p>
+<ul>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/3-Implement-Term/TermHandler.java">TermHandler.java</a>
+    <ul>
+      <li>TermHandler is the service handler class. This does the actual work of building and processing HTTP requests and handling the incoming responses.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/3-Implement-Term/Term.java">Term.java</a>
+    <ul>
+      <li>Term is a JSON Model class. This is what we will use to create terms and to retrieve terms from the REST responses we receive from Blackboard Learn. TermHandler will automatically handle the serialization and deserialization of the term object, allowing the application to simply interact with it as a normal Java object.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/3-Implement-Term/Availability.java">Availability.java</a>
+    <ul>
+      <li>Availability is also a model class. This class contains one field, “available,” which will be set to yes or now. This class is only called from within the Term class, and this is what allows Jackson to handle the serialization and deserialization of complex nested objects.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/3-Implement-Term/RestDemo.java">RestDemo.java</a>
+    <ul>
+      <li>The RestDemo class is what our bbdn.rest.RestDemo class will look like when we complete this step in the tutorial.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Let’s get started:</p>
+
+<ol>
+  <li>Move /3-Implement-Term/TermHandler.java to the bbdn.rest.services package.</li>
+  <li>Move /3-Implement-Term/Term.java to the bbdn.rest.objects package.</li>
+  <li>Move /3-Implement-Term/Availability.java to the bbdn.rest.objects package.</li>
+  <li>If you want a shortcut, you can copy the /3-Implement-Term/RestDemo.java file to the bbdn.rest package, otherwise open bbdn.rest.RestDemo.java and make the following edits:
+    <ol>
+      <li>Directly below <em>Datasource ds = null;</em>, add:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">Term</span> <span class="n">tm</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Directly below <em>DatasourceHandler datasourceHandler = new DatasourceHandler(_hostname);</em>, add:
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nc">TermHandler</span> <span class="n">termHandler</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TermHandler</span><span class="o">(</span><span class="n">_hostname</span><span class="o">);</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Between the closing curly bracket for the first <em>if( OPER_ALL || OPER_DATASOURCE) {</em> and the start of the second, add:
+``` java
+ // Term object
+ if( OPER_ALL || OPER_TERM) {
+tm = termHandler.createObject(token.getToken(), ds.getId());
+log.debug(“Create TM: “ + tm.toString());
+tm = termHandler.readObject(token.getToken());
+log.debug(“Read TM: “ + tm.toString());
+tm = termHandler.updateObject(token.getToken(), ds.getId());
+log.debug(“Update TM: “ + tm.toString());
+ }</li>
+    </ol>
+
+    <p>// Delete objects
+ if( OPER_ALL || OPER_TERM) {
+   result = termHandler.deleteObject(token.getToken());
+   log.debug(“Delete TM: “ + result);
+ }
+```</p>
+  </li>
+  <li>Save the file.</li>
+  <li>At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.</li>
+</ol>
+
+<p>Review the <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java">RestDemo.java</a> in the
+3-Implementing-Term folder to compare to your RestDemo.java if you have
+issues.</p>
+
+<h2 id="what-you-should-see-3">What You Should See</h2>
+
+<p>For Create:</p>
+
+<p><img src="/images/96370.png" alt="" /></p>
+
+<p>For Read:</p>
+
+<p><img src="/images/96371.png" alt="" /></p>
+
+<p>For Update:</p>
+
+<p><img src="/images/96372.png" alt="" /></p>
+
+<p>For Delete:</p>
+
+<p><img src="/images/96373.png" alt="" /></p>
+
+<h2 id="what-we-did-3">What We Did</h2>
+
+<p>So in this step of the tutorial, we added the code necessary to create, read,
+update, and delete a term.</p>
+
+<p>The first step was to put our Term object in place, along with its companion
+Availability object. This object is actually re-used by other classes we will
+implement in the final step. These objects are configured to allow the Jackson
+library to automatically serialize and deserialize our JSON payloads. It
+provides the basic properties that correspond directly to the JSON payload we
+expect to receive from Blackboard Learn when we manipulate a term. Once we
+have created and populated this object, we can then access this data whenever
+we need to.</p>
+
+<p>Next we implemented our TermHandler service class. This class handles the REST
+calls, all object generation and retrieval, and passing information back to
+our main class. When the class is initialized, we set up logging and make sure
+the handler has the correct hostname. Each operation has its own method that
+generates the appropriate body if necessary, then passes the necessary data to
+the sendRequest method to send the appropriate message and retrieve the
+appropriate response.</p>
+
+<p>Lastly, we updated our <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/3-Implement-Term/RestDemo.java">main class</a> in order to call
+the appropriate methods to interact with the Term Service class.</p>
+
+<h1 id="step-4-remaining-objects">Step 4: Remaining Objects</h1>
+
+<p>The remainder of the tutorial is really just about moving the remaining
+objects and handlers in place and repeating the previously established pattern
+in the RestDemo class.</p>
+
+<p>In the “4-Implement-Remaining-Objects” folder, you will find a plethora of
+files. You will also notice a familiar pattern:</p>
+
+<ul>
+  <li>
+    <object>Handler classes are the service handler classes for their respective objects. As before, these do the actual work of manipulating objects and retrieving the results.
+</object>
+  </li>
+  <li>Classes named after objects are JSON Model classes. These are what we will use to interact with the JSON we receive from Blackboard Learn. The handler classes will handle the REST API interaction, and automatically serialize and deserialize the JSON payloads into the corresponding object, allowing the application to simply interact with it as a normal Java object.</li>
+  <li>Several of these model classes are nested objects for other base classes.</li>
+  <li>The RestDemo class is what our bbdn.rest.RestDemo class will look like when we complete this step in the tutorial.</li>
+</ul>
+
+<p>Let’s get started:</p>
+
+<ol>
+  <li>Move /4-Implement-Remaining-Objects/CourseHandler.java to the bbdn.rest.services package.</li>
+  <li>Move /4-Implement-Remaining-Objects/UserHandler.java to the bbdn.rest.services package.</li>
+  <li>Move /4-Implement-Remaining-Objects/MembershipHandler.java to the bbdn.rest.services package.</li>
+  <li>Move /4-Implement-Remaining-Objects/Course.java to the bbdn.rest.objects package.</li>
+  <li>Move /4-Implement-Remaining-Objects/User.java to the bbdn.rest.objects package.</li>
+  <li>Move /4-Implement-Remaining-Objects/Membership.java to the bbdn.rest.objects package.</li>
+  <li>Move /4-Implement-Remaining-Objects/Contact.java to the bbdn.rest.objects package.</li>
+  <li>Move /4-Implement-Remaining-Objects/Name.java to the bbdn.rest.objects package.</li>
+  <li>Move /4-Implement-Remaining-Objects/RestDemo.java to the bbdn.rest package.</li>
+  <li>At the command line in the project directory, type gradle run (or ./gradlew run) and watch as the token is printed to the screen.</li>
+</ol>
+
+<p>Review the <a href="https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/4-Implement-Remaining-Objects/RestDemo.java">RestDemo.java</a> in
+the 4-Implement-Remaining-Objects folder to compare to your RestDemo.java if
+you have issues.</p>
+
+<h2 id="what-you-should-see-4">What You Should See</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shurreymbp:BBDN-DevCon-REST-Workshop shurrey$ cp 4-Implement-Remaining-Objects/RestDemo.java src/main/java/bbdn/rest/
+shurreymbp:BBDN-DevCon-REST-Workshop shurrey$ gradle run
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:run
+[main] INFO bbdn.rest.Authorizer - Value to hash: d03caa33-1095-47b9-bc67-f5cd634430b1:QSFClAMu5KmoG8yFbHTi7pjhsseJl4uz
+[main] INFO bbdn.rest.Authorizer - Hashed Value: ZDAzY2FhMzMtMTA5NS00N2I5LWJjNjctZjVjZDYzNDQzMGIxOlFTRkNsQU11NUttb0c4eUZiSFRpN3BqaHNzZUpsNHV6
+[main] INFO bbdn.rest.Authorizer - Request Headers: {Authorization=[Basic ZDAzY2FhMzMtMTA5NS00N2I5LWJjNjctZjVjZDYzNDQzMGIxOlFTRkNsQU11NUttb0c4eUZiSFRpN3BqaHNzZUpsNHV6], Content-Type=[application/x-www-form-urlencoded]}
+[main] INFO bbdn.rest.Authorizer - Request Body:grant_type=client_credentials
+[main] INFO bbdn.rest.Authorizer - Response: &lt;200 OK,Token{access_token=uC5G2HvEsI1DWP24xD2lnaG35EQsenZs', token_type=bearer', expires_in=1639},{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:05 GMT], Expires=[Mon, 27 Jul 2015 19:50:05 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=5457EE8C14E1C940EE662CE047A3DF31; Path=/learn/api],X-Blackboard-Context-Version=[3000.1.1-rel.5+7a1d308], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed,27 Jul 2016 19:50:06 GMT]}&gt;
+[main] INFO bbdn.rest.Authorizer - Access Token: Token{access_token=uC5G2HvEsI1DWP24xD2lnaG35EQsenZs', token_type=bearer',
+expires_in=1639}
+[main] INFO bbdn.rest.services.DatasourceHandler - CREATE
+[main] INFO bbdn.rest.services.DatasourceHandler - URI is http://localhost:9876/learn/api/public/v1/dataSources
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Headers:{Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Body: Datasource [id=null, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null,extrainfo=null]
+[main] INFO bbdn.rest.services.DatasourceHandler - Response: &lt;201 Created,Datasource [id=_13_1, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:06 GMT], Expires=[Mon, 27 Jul 2015 19:50:06 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=0BEAD73C4DFFC8C01B037883D467B533; Path=/learn/api], Location=[/learn/api/public/v1/dataSources/_13_1],X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed,27 Jul 2016 19:50:06 GMT]}&gt;
+[main] INFO bbdn.rest.services.DatasourceHandler - Datasource: Datasource [id=_13_1, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null,extrainfo=null]
+[main] INFO bbdn.rest.services.DatasourceHandler - READ
+[main] INFO bbdn.rest.services.DatasourceHandler - URI is http://localhost:9876/learn/api/public/v1/dataSources/externalId:BBDN-DSK-JAVA
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Body: Datasource [id=null, externalId=null, description=null, status=null, code=null,message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.DatasourceHandler - Response: &lt;200 OK,Datasource [id=_13_1, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1],P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache],Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:06 GMT], Expires=[Mon, 27 Jul 2015 19:50:06 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=5DDDADB64296A3E350B157B6D44B7B7F;Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab],Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked],Date=[Wed, 27 Jul 2016 19:50:06 GMT]}&gt;
+[main] INFO bbdn.rest.services.DatasourceHandler - Datasource: Datasource [id=_13_1, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null,
+extrainfo=null]
+[main] INFO bbdn.rest.services.DatasourceHandler - UPDATE 
+[main] INFO bbdn.rest.services.DatasourceHandler - URI is http://localhost:9876/learn/api/public/v1/dataSources/externalId:BBDN-DSK-JAVA
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Body: Datasource [id=null, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.DatasourceHandler - Response: &lt;200 OK,Datasource [id=_13_1, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:06 GMT], Expires=[Mon, 27 Jul 2015 19:50:06 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=F8464644EAA806822A7121A3AAEE0531;Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab],Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked],Date=[Wed, 27 Jul 2016 19:50:06 GMT]}&gt;
+[main] INFO bbdn.rest.services.DatasourceHandler - Datasource: Datasource [id=_13_1, externalId=BBDN-DSK-JAVA, description=Demo Data Source used for REST Java Demo, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - CREATE
+[main] INFO bbdn.rest.services.TermHandler - URI is http://localhost:9876/learn/api/public/v1/terms
+[main] INFO bbdn.rest.services.TermHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.TermHandler - Request Body: Term [id=null, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - Response: &lt;201 Created,Term [id=_7_1, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=2498E5AC7B7F40B9B4A53BFCC3762029; Path=/learn/api], Location=[/learn/api/public/v1/terms/_7_1], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed,27 Jul 2016 19:50:06 GMT]}&gt;
+[main] INFO bbdn.rest.services.TermHandler - Term: Term [id=_7_1,externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - READ
+[main] INFO bbdn.rest.services.TermHandler - URI is [http://localhost:9876/learn/api/public/v1/terms/externalId:BBDN-TERM-JAVA
+[main] INFO bbdn.rest.services.TermHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.TermHandler - Request Body: Term [id=null, externalId=null, dataSourceId=null, name=null, description=null, availability=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - Response: &lt;200 OK,Term [id=_7_1, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=4341909E1D54C7A129E5883CE21E82E0; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:06 GMT]}&gt;
+[main] INFO bbdn.rest.services.TermHandler - Term: Term [id=_7_1, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - UPDATE
+[main] INFO bbdn.rest.services.TermHandler - URI is http://localhost:9876/learn/api/public/v1/terms/externalId:BBDN-TERM-JAVA
+[main] INFO bbdn.rest.services.TermHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.TermHandler - Request Body: Term [id=null, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - Response: &lt;200 OK,Term [id=_7_1, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=097D9AF4FF4AAE88C29BD42C9AA0526B; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:07 GMT]}&gt;
+[main] INFO bbdn.rest.services.TermHandler - Term: Term [id=_7_1, externalId=BBDN-TERM-JAVA, dataSourceId=_13_1, name=REST Demo Term - Java, description=Term Used For REST Demo - Java, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.CourseHandler - CREATE
+[main] INFO bbdn.rest.services.CourseHandler - Course [id=null, uuid=null, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=null, organization=false, ultraStatus=null, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.CourseHandler - URI is http://localhost:9876/learn/api/public/v1/courses
+[main] INFO bbdn.rest.services.CourseHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.CourseHandler - Request Body: Course [id=null, uuid=null, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=null, organization=false, ultraStatus=null, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.CourseHandler - Response: &lt;201 Created,Course [id=_7_1, uuid=9ec59f4d3e094cd5b2025858a28a3b39, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=2016-07-27T19:50:07.376Z, organization=false, ultraStatus=Classic, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=54A6544B4CDB9B039EFA56487A85035B; Path=/learn/api], Location=[/learn/api/public/v1/courses/_7_1], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:07 GMT]}&gt;
+[main] INFO bbdn.rest.services.CourseHandler - Course: Course [id=_7_1, uuid=9ec59f4d3e094cd5b2025858a28a3b39, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=2016-07-27T19:50:07.376Z, organization=false, ultraStatus=Classic, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.CourseHandler - READ
+[main] INFO bbdn.rest.services.CourseHandler - URI is http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo
+[main] INFO bbdn.rest.services.CourseHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.CourseHandler - Request Body: Course [id=null, uuid=null, externalId=null, dataSourceId=null, courseId=null, name=null, description=null, created=null, organization=false, ultraStatus=null, allowGuests=false, readOnly=false, termId=null, availability=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.CourseHandler - Response: &lt;200 OK,Course [id=_7_1, uuid=9ec59f4d3e094cd5b2025858a28a3b39, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=2016-07-27T19:50:07.376Z, organization=false, ultraStatus=Classic, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=DF5C615760A8438DFF112613D84926EF; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:07 GMT]}&gt;
+[main] INFO bbdn.rest.services.CourseHandler - Course: Course [id=_7_1, uuid=9ec59f4d3e094cd5b2025858a28a3b39, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=2016-07-27T19:50:07.376Z, organization=false, ultraStatus=Classic, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.CourseHandler - UPDATE 
+[main] INFO bbdn.rest.services.CourseHandler - Course [id=null, uuid=null, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=null, organization=false, ultraStatus=null, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.CourseHandler - URI is http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo
+[main] INFO bbdn.rest.services.CourseHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.CourseHandler - Request Body: Course [id=null, uuid=null, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=null, organization=false, ultraStatus=null, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.CourseHandler - Response: &lt;200 OK,Course [id=_7_1, uuid=9ec59f4d3e094cd5b2025858a28a3b39, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=2016-07-27T19:50:07.376Z, organization=false, ultraStatus=Classic, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=64C50ECFDE762D6C97C5409AB26DF00B; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:07 GMT]}&gt;
+[main] INFO bbdn.rest.services.CourseHandler - Course: Course [id=_7_1, uuid=9ec59f4d3e094cd5b2025858a28a3b39, externalId=BBDN-Java-REST-Demo, dataSourceId=_13_1, courseId=BBDN-Java-REST-Demo, name=Course Used For REST Demo - Java, description=Course Used For REST Demo - Java, created=2016-07-27T19:50:07.376Z, organization=false, ultraStatus=Classic, allowGuests=true, readOnly=false, termId=_7_1, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.UserHandler - CREATE
+[main] INFO bbdn.rest.services.UserHandler - User [id=null, uuid=null, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=Bl@ckb0ard!, studentId=null, educationLevel=null, gender=null, birthDate=null, created=null, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.UserHandler - URI is http://localhost:9876/learn/api/public/v1/users
+[main] INFO bbdn.rest.services.UserHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.UserHandler - Request Body: User [id=null, uuid=null, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=Bl@ckb0ard!, studentId=null, educationLevel=null, gender=null, birthDate=null, created=null, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [[email=developers@blackboard.com](mailto:email=developers@blackboard.com)], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.UserHandler - Response: &lt;201 Created,User [id=_9_1, uuid=c55303eaa7d541aab75ebd218d1a6e20, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=null, studentId=null, educationLevel=Unknown, gender=Unknown, birthDate=null, created=2016-07-27T19:50:07.970Z, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:07 GMT], Expires=[Mon, 27 Jul 2015 19:50:07 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=679348D067502E72AD1ECAD13B33322E; Path=/learn/api], Location=[/learn/api/public/v1/users/_9_1], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:07 GMT]}&gt;
+[main] INFO bbdn.rest.services.UserHandler - User: User [id=_9_1, uuid=c55303eaa7d541aab75ebd218d1a6e20, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=null, studentId=null, educationLevel=Unknown, gender=Unknown, birthDate=null, created=2016-07-27T19:50:07.970Z, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.UserHandler - READ
+[main] INFO bbdn.rest.services.UserHandler - URI is http://localhost:9876/learn/api/public/v1/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.UserHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.UserHandler - Request Body: User [id=null, uuid=null, externalId=null, dataSourceId=null, userName=null, password=null, studentId=null, educationLevel=null, gender=null, birthDate=null, created=null, lastLogin=null, availability=null, name=null, contact=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.UserHandler - Response: &lt;200 OK,User [id=_9_1, uuid=c55303eaa7d541aab75ebd218d1a6e20, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=null, studentId=null, educationLevel=Unknown, gender=Unknown, birthDate=null, created=2016-07-27T19:50:07.970Z, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:08 GMT], Expires=[Mon, 27 Jul 2015 19:50:08 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=6754BF5FA616BB198CC2118EC1E3F5CB; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed,27 Jul 2016 19:50:07 GMT]}&gt;
+[main] INFO bbdn.rest.services.UserHandler - User: User [id=_9_1, uuid=c55303eaa7d541aab75ebd218d1a6e20, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=null, studentId=null, educationLevel=Unknown, gender=Unknown, birthDate=null, created=2016-07-27T19:50:07.970Z, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.UserHandler - UPDATE
+[main] INFO bbdn.rest.services.UserHandler - User [id=null, uuid=null, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=Bl@ckb0ard!, studentId=null, educationLevel=null, gender=null, birthDate=null, created=null, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.UserHandler - URI is http://localhost:9876/learn/api/public/v1/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.UserHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.UserHandler - Request Body: User [id=null, uuid=null, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=Bl@ckb0ard!, studentId=null, educationLevel=null, gender=null, birthDate=null, created=null, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.UserHandler - Response: &lt;200 OK,User [id=_9_1, uuid=c55303eaa7d541aab75ebd218d1a6e20, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=null, studentId=null, educationLevel=Unknown, gender=Unknown, birthDate=null, created=2016-07-27T19:50:07.970Z, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:08 GMT], Expires=[Mon, 27 Jul 2015 19:50:08 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=D8AC51CE6341F1C29832F9B9764C1A74; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:08 GMT]}&gt;
+[main] INFO bbdn.rest.services.UserHandler - User: User [id=_9_1, uuid=c55303eaa7d541aab75ebd218d1a6e20, externalId=bbdnrestdemojavauser, dataSourceId=_13_1, userName=restjavauser, password=null, studentId=null, educationLevel=Unknown, gender=Unknown, birthDate=null, created=2016-07-27T19:50:07.970Z, lastLogin=null, availability=Availability [available=Yes], name=Name [given=Java, family=Restdemo], contact=Contact [email=developers@blackboard.com], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.MembershipHandler - CREATE
+[main] INFO bbdn.rest.services.MembershipHandler - Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=null, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - URI is [http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.MembershipHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.MembershipHandler - Request Body: Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=null, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - Response: &lt;201 Created,Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=2016-07-27T19:50:08.539Z, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:08 GMT], Expires=[Mon, 27 Jul 2015 19:50:08 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=6BCBBFC919575F4FA108817EF78FFC73; Path=/learn/api], Location=[/learn/api/public/v1/courses/_7_1/users/_9_1], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:08 GMT]}&gt;
+[main] INFO bbdn.rest.services.MembershipHandler - Membership: Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=2016-07-27T19:50:08.539Z, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - READ 
+[main] INFO bbdn.rest.services.MembershipHandler - URI is http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.MembershipHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.MembershipHandler - Request Body: Membership [userId=null, courseId=null, dataSourceId=null, created=null, courseRoleId=null, availability=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - Response: &lt;200 OK,Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=2016-07-27T19:50:08.539Z, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9],Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:08 GMT], Expires=[Mon, 27 Jul 2015 19:50:08 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=64E622F16D37FF787E3319321D9B3740; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:08 GMT]}&gt;
+[main] INFO bbdn.rest.services.MembershipHandler - Membership: Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=2016-07-27T19:50:08.539Z, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - UPDATE
+[main] INFO bbdn.rest.services.MembershipHandler - Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=null, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null] 
+[main] INFO bbdn.rest.services.MembershipHandler - URI is http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.MembershipHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.MembershipHandler - Request Body: Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=null,courseRoleId=Instructor, availability=Availability [available=Yes],status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - Response: &lt;200 OK,Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=2016-07-27T19:50:08.539Z, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null],{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:08 GMT], Expires=[Mon, 27 Jul 2015 19:50:08 GMT], X-Frame-Options=[SAMEORIGIN], Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=C26CD9BF1C6D987BEF83B8BFB2508692; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 27 Jul 2016 19:50:08 GMT]}&gt;
+[main] INFO bbdn.rest.services.MembershipHandler - Membership: Membership [userId=_9_1, courseId=_7_1, dataSourceId=_13_1, created=2016-07-27T19:50:08.539Z, courseRoleId=Instructor, availability=Availability [available=Yes], status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - DELETE
+[main] INFO bbdn.rest.services.MembershipHandler - URI is http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.MembershipHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.MembershipHandler - Request Body: Membership [userId=null, courseId=null, dataSourceId=null, created=null, courseRoleId=null, availability=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.MembershipHandler - Response: &lt;204 No Content,{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482; 3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:08 GMT], Expires=[Mon, 27 Jul 2015 19:50:08 GMT], X-Frame-Options=[SAMEORIGIN],Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=614DC8400A97E7A1EE8A5D84FB5C91F9; Path=/learn/api],X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:08 GMT]}&gt;
+[main] INFO bbdn.rest.services.UserHandler - DELETE
+[main] INFO bbdn.rest.services.UserHandler - URI is http://localhost:9876/learn/api/public/v1/users/externalId:bbdnrestdemojavauser
+[main] INFO bbdn.rest.services.UserHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.UserHandler - Request Body: User [id=null, uuid=null, externalId=null, dataSourceId=null, userName=null, password=null, studentId=null, educationLevel=null, gender=null, birthDate=null, created=null, lastLogin=null, availability=null, name=null, contact=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.UserHandler - Response: &lt;204 No Content,{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482;3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:09 GMT], Expires=[Mon, 27 Jul 2015 19:50:09 GMT], X-Frame-Options=[SAMEORIGIN],Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=7962DE99F72343771643822431BB5EA3; Path=/learn/api], X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}&gt;
+[main] INFO bbdn.rest.services.CourseHandler - DELETE
+[main] INFO bbdn.rest.services.CourseHandler - URI is http://localhost:9876/learn/api/public/v1/courses/externalId:BBDN-Java-REST-Demo
+[main] INFO bbdn.rest.services.CourseHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.CourseHandler - Request Body: Course [id=null, uuid=null, externalId=null, dataSourceId=null, courseId=null, name=null, description=null, created=null, organization=false, ultraStatus=null, allowGuests=false, readOnly=false, termId=null, availability=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.CourseHandler - Response: &lt;204 No Content,{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482;3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:09 GMT], Expires=[Mon, 27 Jul 2015 19:50:09 GMT], X-Frame-Options=[SAMEORIGIN],Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=D1F4182A949F2FE8FA7CA98C0BF59CB7; Path=/learn/api],X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}&gt;
+[main] INFO bbdn.rest.services.TermHandler - DELETE
+[main] INFO bbdn.rest.services.TermHandler - URI is http://localhost:9876/learn/api/public/v1/terms/externalId:BBDN-TERM-JAVA
+[main] INFO bbdn.rest.services.TermHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.TermHandler - Request Body: Term [id=null,externalId=null, dataSourceId=null, name=null, description=null,availability=null, status=null, code=null, message=null,developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.TermHandler - Response: &lt;204 No Content,{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482;3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:10 GMT], Expires=[Mon, 27 Jul 2015 19:50:10 GMT], X-Frame-Options=[SAMEORIGIN],Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=FF3871AC05EB0F3B28018DAFA0D7AB1D; Path=/learn/api],X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}&gt;
+[main] INFO bbdn.rest.services.DatasourceHandler - DELETE
+[main] INFO bbdn.rest.services.DatasourceHandler - URI is http://localhost:9876/learn/api/public/v1/dataSources/externalId:BBDN-DSK-JAVA
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Headers: {Authorization=[Bearer uC5G2HvEsI1DWP24xD2lnaG35EQsenZs], Content-Type=[application/json]}
+[main] INFO bbdn.rest.services.DatasourceHandler - Request Body: Datasource [id=null, externalId=null, description=null, status=null, code=null, message=null, developerMessage=null, extrainfo=null]
+[main] INFO bbdn.rest.services.DatasourceHandler - Response: &lt;204 No Content,{Server=[Apache-Coyote/1.1], P3P=[CP="CAO PSA OUR"], X-Blackboard-appserver=[dev.bbdn.local], X-Blackboard-product=[Blackboard Learn &amp;#8482;3000.1.1-rel.7+a3f61d9], Pragma=[no-cache], Cache-Control=[no-cache, max-age=0, no-store, must-revalidate], Last-Modified=[Sat, 27 Jul 1996 19:50:10 GMT], Expires=[Mon, 27 Jul 2015 19:50:10 GMT], X-Frame-Options=[SAMEORIGIN],Content-Security-Policy=[frame-ancestors 'self'], Set-Cookie=[JSESSIONID=E7B5A007C1E329DFF0F8F477E580A4CB; Path=/learn/api],X-Blackboard-Context-Version=[3000.1.1-rel.5+0bc08ab], Content-Type=[application/json;charset=UTF-8], Date=[Wed, 27 Jul 2016 19:50:09 GMT]}&gt;
+
+BUILD SUCCESSFUL
+Total time: 7.356 secs
+</code></pre></div></div>
+
+<h2 id="what-we-did-4">What We Did</h2>
+
+<p>In this tutorial we built a Java command line application that creates, reads,
+updates, and deletes the five core REST objects: datasources, terms, courses,
+users, and memberships. Along the way, we learned how to institute OAuth,
+create HTTP messages and interact with the Blackboard Learn REST APIs, how to
+use Jackson to serialize and deserialize objects, and how to use Gradle to
+build and run command line Java applications.</p>
+
+:ET

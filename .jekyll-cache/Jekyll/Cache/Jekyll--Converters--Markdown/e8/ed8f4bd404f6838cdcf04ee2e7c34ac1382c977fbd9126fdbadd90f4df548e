@@ -1,0 +1,20 @@
+I"c<h1 id="building-block-resources-and-tools">Building Block Resources and Tools</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Building Blocks’]</em><br />
+<em>Tags: [‘building blocks’, ‘github’, ‘blackboard learn’, ‘bb-manifest.xml’, ‘schema.xml’, ‘resources’, ‘links’, ‘maven’, ‘developer’]</em></p>
+<hr />
+
+<p>This document contains a number of links to resources to assist a Building
+Block Developer in the quest to build an integration with the Blackboard
+Building Blocks framework.</p>
+
+<h2 id="building-block-developer-tools">Building Block Developer Tools</h2>
+
+<ul>
+  <li><a href="https://maven.blackboard.com/content/repositories/releases/">Blackboard Maven Repository</a></li>
+  <li><a href="https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-schema-xsd/">schema.xml validator</a></li>
+  <li><a href="https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-manifest-plugin/">bb-manifest.xml validator</a></li>
+  <li><a href="https://github.com/blackboard">Blackboard Github Repository</a></li>
+</ul>
+
+:ET

@@ -1,0 +1,31 @@
+I"�<h1 id="tutorials---soap-web-services">Tutorials - SOAP Web Services</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘SOAP Web Services’, ‘Tutorials’]</em><br />
+<em>Tags: [‘web services’, ‘soap’, ‘blackboard learn’, ‘tutorials’, ‘developer’]</em></p>
+<hr />
+
+<p>This section will provide tutorials to enable you to accomplish specific tasks
+related to Blackboard Learn Web Services.</p>
+
+<h2 id="examples">Examples</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Documentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Build the .NET Web Services Library</td>
+      <td><a href="Tutorial%20-%20Build%20The%20%23%20SOAP%20Sample%20Library.html">View Document</a></td>
+    </tr>
+    <tr>
+      <td>Build the .NET Web Services Sample Client</td>
+      <td><a href="Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html">View Document</a></td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

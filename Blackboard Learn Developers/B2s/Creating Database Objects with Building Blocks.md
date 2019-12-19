@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: opendb-b2
+---
 # Creating Database Objects with Building Blocks
 *Author: Kelley MacEwen*  
 *Categories: ['OpenDB', 'Tutorials']*  
@@ -66,7 +71,7 @@ features of your Building Block, you would not need to define this value.
 Tables and other objects can also be created in the reporting schema by using
 the value "stats". As of R9.1SP1, there are no other supported values.
 
-See [Schema Definitions](Schema%20Definitions.md) for
+See [Schema Definitions](Schema%20Definitions.html) for
 more information on the structure of schema.xml, the containing directory
 structure, and the supporting scripts.
 
