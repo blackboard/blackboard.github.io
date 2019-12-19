@@ -86,7 +86,7 @@
     - name: Getting Started
       link: /Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html
       category: getting-started-b2
-      topics:
+      topics: 
         - name: Intro to B2s
           link: /Blackboard%20Learn%20Developers/B2s/Introduction%20to%20Building%20Blocks.html
           category: getting-started-b2
