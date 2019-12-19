@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: examples-b2
+---
 # Spring in Building Blocks
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'Examples', 'Getting Started']*  

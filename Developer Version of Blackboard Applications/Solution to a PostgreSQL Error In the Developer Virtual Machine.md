@@ -1,3 +1,6 @@
+---
+layout: dvba
+---
 # Solution to a PostgreSQL Error In the Developer Virtual Machine
 *Author: Mark Bykerk Kauffman*  
 *Categories: []*  

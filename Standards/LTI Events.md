@@ -1,3 +1,8 @@
+---
+layout: standards
+parent: caliper
+category: events-caliper
+---
 # LTI Events
 *Author: Scott Hurrey*  
 *Categories: ['Caliper']*  

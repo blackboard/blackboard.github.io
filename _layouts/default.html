@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title>{{ page.title }}</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body>
+    {% include header.html %}
+    {% include navigation.html %}
+    <section>
+      {{ content }}
+    </section>
+  </body>
+</html>

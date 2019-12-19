@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: getting-started
+---
 # Basic Authentication
 *Author: Scott Hurrey*  
 *Categories: []*  
@@ -23,7 +28,7 @@ the following diagram:
 **WARNING: Never share or expose an application's key/secret pair. These are used for requesting OAuth tokens, which enable the holder to issue REST requests. Exposing an application key/secret pair or token is a serious security risk. If you think you have exposed a key/secret pair you may request a new pair for the application using the Developer Portal My Applications management page.**
 
 REST calls are subject to quotas and limits. For more information, see
-[Developer Groups, Site Quotas, and Rate Limits](Developer%20Groups%2C%20Site%20Quotas%2C%20and%20Rate%20Limits.md).
+[Developer Groups, Site Quotas, and Rate Limits](Developer%20Groups%2C%20Site%20Quotas%2C%20and%20Rate%20Limits.html).
 
 ## Before You Start
 
@@ -49,11 +54,11 @@ For example, if your application key were `12345678-1234-5678-1234-1234567890ab
 and your secret were abcdefghijklmnopqrstuvwxyzabcdef`, you would encode the
 string `12345678-1234-5678-1234-1234567890ab:abcdefghijklmnopqrstuvwxyzabcdef`,
 yielding the encoded value `MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmF
-iY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6YWJjZGVm`.
+iY2Rl.htmloaWprbG1ub3BxcnN0dXZ3eHl6YWJjZGVm`.
 
 Prepending Basic to that value gives
 
-`Basic MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmFiY2RlZmdoaWprbG1ub3Bx
+`Basic MTIzNDU2NzgtMTIzNC01Njc4LTEyMzQtMTIzNDU2Nzg5MGFiOmFiY2Rl.htmloaWprbG1ub3Bx
 cnN0dXZ3eHl6YWJjZGVm`
 
 which would be your Authorization header value. Some REST libraries and
@@ -86,9 +91,9 @@ you made.
 ## Example: Using cURL to Get a Token and Make a REST Call
 
 The easist way to test is using cURL. We will assume you have already
-registered through the [Developer Portal](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) and
+registered through the [Developer Portal](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html) and
 retrieved your application ID, key, and secret, as well as [added your
-application ID](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) to
+application ID](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.html) to
 the Learn server you wish to integrate with:
 
 1. From the command line, use cURL to send a token request to Learn, signed with their application key and secret:   

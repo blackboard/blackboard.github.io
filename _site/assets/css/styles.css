@@ -1,0 +1,27 @@
+body { transition: background-color .5s; }
+
+.sidenav { height: 100%; width: 0; position: fixed; z-index: 1; top: inherit; left: 0; background-color: #111; overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
+
+.sidenav a, .dropdown-btn { padding: 8px 8px 8px 32px; text-decoration: none; font-size: 18px; color: #818181; display: block; transition: 0.3s; }
+
+.sidenav a:hover, .dropdown-btn:hover { color: #f1f1f1; }
+
+.sidenav .closebtn { position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; }
+
+#main { transition: margin-left .5s; padding: 16px; }
+
+@media screen and (max-height: 450px) { .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 18px; } }
+
+.inline-box { display: inline-block; width: 45%; height: 30px; margin: 1em; vertical-align: top; }
+
+/* Add an active class to the active dropdown button */
+.active { background-color: darkorchid; color: white; }
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container { display: none; background-color: #000; padding-left: 8px; }
+
+/* Optional: Style the caret down icon */
+.fa-caret-down { float: right; padding-right: 8px; color: white; }
+
+/*# sourceMappingURL=styles.css.map */

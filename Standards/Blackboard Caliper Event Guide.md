@@ -1,3 +1,8 @@
+---
+layout: standards
+parent: caliper
+category: events-caliper
+---
 # Blackboard Caliper Event Guide
 *Author: Scott Hurrey*  
 *Categories: ['Caliper']*  
@@ -32,7 +37,7 @@ implementation, please visit the [Moodle Documentation](https://docs.moodle.org/
 | Log Out | All Users | Immediately |
 | Session Time Out | All Users | Immediately |
 
-For more information, see [Session Events](Session%20Events.md).
+For more information, see [Session Events](Session%20Events.html).
 
 ## ViewEvent
 
@@ -43,7 +48,7 @@ For more information, see [Session Events](Session%20Events.md).
 | Click Assignment Link | All Users | Immediately |
 | Click Discussion Link | All Users | Immediately |
 
-For more information, see [View Events](View%20Events.md).
+For more information, see [View Events](View%20Events.html).
 
 ## LTIEvent
 
@@ -52,7 +57,7 @@ For more information, see [View Events](View%20Events.md).
 | Click LTI Link | All Users | Immediately |
 | Return from LTI Link | All Users | Immediately |
 
-For more information, see [LTI Events](LTI%20Events.md).
+For more information, see [LTI Events](LTI%20Events.html).
 
 ## AssignableEvent
 
@@ -63,7 +68,7 @@ For more information, see [LTI Events](LTI%20Events.md).
 | Submit an Assignment | Student | Immediately |
 | Submit a Group Assignment | Student | Immediately|
 
-For more information, see [Assignable Events](Assessment%20Events.md).
+For more information, see [Assignable Events](Assessment%20Events.html).
 
 ## AssessmentEvent
 
@@ -72,7 +77,7 @@ For more information, see [Assignable Events](Assessment%20Events.md).
 | Start a Test | Student | Immediately |
 | Submit a Test | Student | Immediately |
 
-For more information, see [Assessment Events](Assessment%20Events.md).
+For more information, see [Assessment Events](Assessment%20Events.html).
 
 ## AssessmentItemEvent
 
@@ -81,7 +86,7 @@ For more information, see [Assessment Events](Assessment%20Events.md).
 | Start a Test Question | Student | Immediately |
 | Submit a Test Question | Student | Immediately |
 
-For more information see, [Assessment Events](Assessment%20Events.md).
+For more information see, [Assessment Events](Assessment%20Events.html).
 
 ## ForumEvent
 
@@ -97,7 +102,7 @@ For more information see, [Assessment Events](Assessment%20Events.md).
 | Post a Group Conversation Comment | All Users | Immediately |
 | Delete a Message | Instructor | Immediately |
 
-For more information, see [Forum Events](Forum%20Events.md).
+For more information, see [Forum Events](Forum%20Events.html).
 
 ## OutcomeEvent
 
@@ -113,7 +118,7 @@ For more information, see [Forum Events](Forum%20Events.md).
 | Clear an Overridden Grade | Instructor | Nightly |
 | Delete an Attempt | Instructor | Nightly |
 
-For more information, see [Outcome Events](Outcome%20Events.md).
+For more information, see [Outcome Events](Outcome%20Events.html).
 
 ## CalculatedGradeSnapshotEvent
 
@@ -121,7 +126,7 @@ For more information, see [Outcome Events](Outcome%20Events.md).
 | ------ | ----- | ---- |
 | Trigger Calculated Grade Re-Calculation | Instructor | Nightly |
 
-For more information, see [Calculated Grade Snapshot Events](Calculated%20Grade%20Snapshot%20Events.md).
+For more information, see [Calculated Grade Snapshot Events](Calculated%20Grade%20Snapshot%20Events.html).
 
 ## ContentEvent
 
@@ -147,7 +152,7 @@ For more information, see [Calculated Grade Snapshot Events](Calculated%20Grade%
 | Update Document File: Name, Availability, Show Dates, Hide Dates, Instructions | Instructor | Immediately |
 | Add Questions to Assignment or Test | Instructor | Immediately |
 
-For more information, see [Content Events](Content%20Events.md).
+For more information, see [Content Events](Content%20Events.html).
 
 ## CourseGroupEvent
 
@@ -156,7 +161,7 @@ For more information, see [Content Events](Content%20Events.md).
 | Create or Delete Group | Instructor | Immediately |
 | Update Group: Assignment, Discussion Forum, or Test | Instructor | Immediately |
 
-For more information, see [Course Group Events](Course%20Group%20Events.md).
+For more information, see [Course Group Events](Course%20Group%20Events.html).
 
 ## BlogEvent
 
@@ -164,7 +169,7 @@ For more information, see [Course Group Events](Course%20Group%20Events.md).
 | ------ | ----- | ---- |
 | Post a Blog Entry in an Original Experience Course | Student | Immediately |
 
-For more information, see [Blog Events](Blog%20Events.md).
+For more information, see [Blog Events](Blog%20Events.html).
 
 ## WikiEvent
 
@@ -172,5 +177,5 @@ For more information, see [Blog Events](Blog%20Events.md).
 | ------ | ----- | ---- |
 | Post to a Wiki in an Original Experience Course | Student | Immediately |
 
-For more information, see [Wiki Events](Wiki%20Events.md).
+For more information, see [Wiki Events](Wiki%20Events.html).
 

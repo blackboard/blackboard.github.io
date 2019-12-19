@@ -1,3 +1,6 @@
+---
+layout: dvba
+---
 # Solution to Unconnected sockets not implemented in a Q4 2015 DVM
 *Author: Mark Bykerk Kauffman*  
 *Categories: ['Building Blocks', 'Examples']*  

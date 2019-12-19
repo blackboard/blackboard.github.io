@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: getting-started-b2
+---
 # Introduction to Building Blocks
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Tutorials']*  
@@ -34,7 +39,7 @@ Data that can be accessed includes:
 ## Learn More
 
 To learn more about creating Building Blocks, start
-[here](Getting%20Started%20With%20Building%20Blocks.md). To see examples of Building Blocks that have already been created,
+[here](Getting%20Started%20With%20Building%20Blocks.html). To see examples of Building Blocks that have already been created,
 take a look at released building blocks on the Blackboard Learn [extensions
 site](https://www.blackboardextensions.com/) which highlights
 Building Blocks produced by Blackboard Partners, or take a look at open source

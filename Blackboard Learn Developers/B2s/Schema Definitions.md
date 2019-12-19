@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: opendb-b2
+---
 # Schema Definitions
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'OpenDB']*  

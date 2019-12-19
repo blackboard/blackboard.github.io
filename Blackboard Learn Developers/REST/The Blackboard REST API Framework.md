@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: about
+---
 # The Blackboard REST API Framework
 *Author: Mark O'Neil*  
 *Categories: []*  

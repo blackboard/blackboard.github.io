@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: best-practices-b2
+---
 # Preparing Your Building Blocks For Learn SaaS and Newer Learn Versions
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Tutorials']*  
@@ -163,7 +168,7 @@ File myStaticDirectory = new File (myDir, "webapp/myStaticStuff");
 // read from myStaticDirectory - files as originally present in war file
 ```
 
-See the bb-config.properties section in [Developer Virtual Machine - DVM](/Developer%20Versions%20of%20Blackboard%20Applications/Developer%20Virtual%20Machine%20-%20DVM.md) for how to configure your DVM to behave like Learn SaaS in regards to the
+See the bb-config.properties section in [Developer Virtual Machine - DVM](/Developer%20Versions%20of%20Blackboard%20Applications/Developer%20Virtual%20Machine%20-%20DVM.html) for how to configure your DVM to behave like Learn SaaS in regards to the
 shared content folder.
 
 Eventually, all write access to the shared folder will be phased out, and
@@ -248,7 +253,7 @@ be installed in the cloud, or on 9.1 Q2 2016 or later, need to be built with
 Java 8. For Learn Java 8 releases, Spring 4.2.0+ will be required for B2s that
 use Spring. For more information see [Preparing Your Building Block for
 Blackboard Learn 9.1 Q2
-2016](Preparing%20Your%20Building%20Block%20for%20Blackboard%20Learn%209.1%20Q2%202016.md)
+2016](Preparing%20Your%20Building%20Block%20for%20Blackboard%20Learn%209.1%20Q2%202016.html)
 
 # Tomcat 8
 

@@ -1,0 +1,13 @@
+I"<h1 id="advanced-topics">Advanced Topics</h1>
+
+<p>This section of the Learn Building Block developer documentation focuses on advanced topics and specific use-cases. It is designed to help you answer specific questions you may have. As always, if there is a topic you’d like to see here, let us know at developers@blackboard.com, or feel free to contribute!</p>
+
+<h2 id="topics-in-this-section">Topics in this section</h2>
+
+<ul>
+  <li><a href="Building%20Blocks%20and%20Java%20Permissions.html">Permission Errors</a></li>
+  <li><a href="Dynamic%20Rendering%20with%20Template%20Variables.html">Template Variables</a></li>
+  <li><a href="Event%20Driven%20API.html">Event-Driven APIs</a></li>
+  <li><a href="Starter%20Building%20Block%20Readme.html">Starting Block</a></li>
+</ul>
+:ET

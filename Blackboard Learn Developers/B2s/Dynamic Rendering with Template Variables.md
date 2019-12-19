@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: advanced-b2
+---
 # Dynamic Rendering with Template Variables
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started']*  

@@ -1,0 +1,663 @@
+I"A�<h1 id="rest-demo-using-c">REST Demo Using C#</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘blackboard learn’, ‘example’, ‘sample code’, ‘saas’, ‘c#’, ‘.net’, ‘csharp’, ‘visual studio’, ‘developer’]</em></p>
+<hr />
+
+<p>The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting supported Learn objects.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>You must <a href="Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html">register a developer account and application</a> in the Developer Portal</li>
+  <li>You must 
+<a href="Managing%20REST%20Integrations%20in%20Learn.html">register your application</a> in Blackboard Learn</li>
+  <li>You must also configure the script as outlined in the README for the project</li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p>This C# Console Application allows you to:</p>
+
+<ul>
+  <li>Authenticate</li>
+  <li>Create, Read, and Update a Data Source</li>
+  <li>Create, Read, and Update a Term</li>
+  <li>Create, Read, and Update a Course</li>
+  <li>Create, Read, and Update a User</li>
+  <li>Create, Read, and Update a Membership</li>
+  <li>Delete created objects in reverse order of create - membership, user, course, term, datasource.</li>
+</ul>
+
+<p>All generated output is sent to the console.</p>
+
+<p><strong>This is not meant to be a C# tutorial. It will not teach you to write code in
+C#. It will, however, give a Developer familiar with C# the knowledge
+necessary to build a Web Services integration.</strong></p>
+
+<h3 id="assumptions">Assumptions</h3>
+
+<p>This help topic assumes the Developer:</p>
+
+<ul>
+  <li>is familiar with C#</li>
+  <li>has installed Microsoft Visual Studio</li>
+  <li>has obtained a copy of the <a href="https://github.com/blackboard/BBDN-REST-Demo-CSharp">source code</a> and built it in conjunction with the project <a href="https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.html">README.html</a> file.</li>
+  <li>has a REST-enabled Blackboard Learn instance, like the <a href="/Developer%20Version%20of%20Blackboard%20Applications/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html">Developer AMI</a>.</li>
+</ul>
+
+<h3 id="code-walkthrough">Code Walkthrough</h3>
+
+<p>To build an integration with the Blackboard REST Web Services, regardless of
+the programming language of choice, can really be summed up in two steps:</p>
+
+<ol>
+  <li>Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the <a href="Basic%20Authentication.html">Basic Authentication</a> document.</li>
+  <li>Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.</li>
+</ol>
+
+<h4 id="authorization-and-authentication">Authorization and Authentication</h4>
+
+<p>The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
+request is made to the token endpoint with a Basic Authorization header
+containing the base64-encoded key:secret string as its key. The token service
+returns a JSON object containing the Access Token, the Token Type, and the
+number of seconds until the token expires. The token is set to expire after
+one hour, and subsequent calls to retrieve the token will return the same
+token with an updated expiry time until such time that the token has expired.
+There is no refresh token and currently no revoke token method.</p>
+
+<p>The C# code handles this in bbdn.rest.Authorizer:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    var authData = string.Format ("{0}:{1}", Constants.KEY, Constants.SECRET);
+    var authHeaderValue = Convert.ToBase64String (Encoding.UTF8.GetBytes (authData));
+    client = new HttpClient ();
+    var endpoint = new Uri(Constants.HOSTNAME + Constants.AUTH_PATH);
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue ("Basic", authHeaderValue);
+    var postData = new List&lt;KeyValuePair&lt;string, string&gt;&gt;();
+    postData.Add(new KeyValuePair&lt;string, string&gt;("grant_type", "client_credentials"));
+    HttpContent body = new FormUrlEncodedContent(postData);
+    HttpResponseMessage response;
+    try {
+      response = await client.PostAsync(endpoint, body)
+        if (response.IsSuccessStatusCode)
+        {
+             var content = await response.Content.ReadAsStringAsync();
+              token = JsonConvert.DeserializeObject&lt;Token&gt;(content);
+</code></pre></div></div>
+
+<p>The JSON response is serialized into the Token object, and you may then
+retrieve those values from that object.</p>
+
+<h4 id="calling-services">Calling Services</h4>
+
+<p>The individual service calls are handled by C# Classes in the
+<code class="highlighter-rouge">bbdn.rest.services</code> package, and each individual service class implements the
+<code class="highlighter-rouge">bbdn.rest.services.IRestService</code> interface. The interface is used to normalize
+each service handler to make additional service implementation standardized as
+new endpoints are added.</p>
+
+<p>IRestService dictates that four methods must be implemented:</p>
+
+<ul>
+  <li>Task<TRestModel> CreateObject (TRestModel T);</TRestModel></li>
+  <li>Task<TRestModel> ReadObject ();</TRestModel></li>
+  <li>Task<TRestModel> UpdateObject (TRestModel T);</TRestModel></li>
+  <li>Task<TRestModel> DeleteObject ();</TRestModel></li>
+</ul>
+
+<p>The <code class="highlighter-rouge">Task&lt;TRestModel&gt;</code> allows the code to run asynchronously, but specify when
+an operation should be handled synchronously before proceeding with the
+remaining code. TRestModel is a generic class place holder that allows the
+code to implement the Interface, but pass it an Object type when it is
+instantiated in order to take and return an individual service model dependent
+upon the Rest endpoint being implemented.</p>
+
+<p>The individual service class must be defined in the following way, to ensure
+the Interface is using the appropriate class type for TRestModel:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public class DatasourceService : IRestService&lt;Datasource&gt;, IDisposable
+</code></pre></div></div>
+
+<p>Each of these methods creates the JSON body by instantiating the appropriate
+model from the bbdn.rest.models package when necessary, and then generates the
+appropriate HTTP Request, ships it to Learn, and serializes the JSON response
+back into the appropriate model.</p>
+
+<p>End points are generally defined as <code class="highlighter-rouge">/learn/api/public/v1/&lt;object
+type&gt;/&lt;objectId&gt;</code>. Object ID can be either the pk1, like <code class="highlighter-rouge">_1_1</code>, or as the
+batchuid. This value should be prepended by externalId:, like
+<code class="highlighter-rouge">externalId:test101</code>.</p>
+
+<p>For example, to retrieve a course by the pk1 <code class="highlighter-rouge">_1_1</code>, you would call <strong>GET
+/learn/api/public/v1/courses/_1_1</strong>. To retrieve by the batchuid test101, you
+would call <strong>GET /learn/api/public/v1/courses/externalId:test101.</strong></p>
+
+<p>Create is sent to Learn as a HTTP POST message with a JSON body that defines
+the object. The endpoint should omit the objectId, as this will be generated
+on creation.</p>
+
+<p>Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
+should include the objectId being retrieved.</p>
+
+<p>Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
+the object. The endpoint should include the objectId being updated.</p>
+
+<p>Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
+should include the objectId being deleted.</p>
+
+<hr />
+
+<h3 id="datasources">Datasources</h3>
+
+<p>Datasources are handled in <code class="highlighter-rouge">bbdn.rest.services.DatasourceService</code>. As illustrated
+above, this Class implements the IRestService interface and exposes four
+methods. It also includes methods required to implement the IDisposible
+interface which is required to use the async/await functionality..</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public async Task&lt;Datasource&gt; CreateObject (Datasource dataSource)
+    {
+           Datasource datasource = new Datasource();
+           var uri = new Uri( Constants.HOSTNAME + Constants.DATASOURCE_PATH);
+           try {
+                var json = JsonConvert.SerializeObject (dataSource);
+                var body = new StringContent (json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync (uri, body);    
+                if (response.IsSuccessStatusCode) {
+                     var content = await response.Content.ReadAsStringAsync ();
+                     datasource = JsonConvert.DeserializeObject &lt;Datasource&gt; (content);
+                     Debug.WriteLine (@" Datasource successfully created.");
+                }
+           } catch (Exception ex) {
+                Debug.WriteLine (@" ERROR {0}", ex.Message);     
+           }
+           return datasource;
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public async Task&lt;Datasource&gt; ReadObject ()
+    {
+      Datasource datasource = new Datasource();
+      var uri = new Uri(Constants.HOSTNAME + Constants.DATASOURCE_PATH + "/externalId:" + Constants.DATASOURCE_ID);
+      try {
+           var response = await client.GetAsync (uri);
+           if (response.IsSuccessStatusCode) {
+                var content = await response.Content.ReadAsStringAsync ();
+                datasource = JsonConvert.DeserializeObject&lt;Datasource&gt;(content);
+               }
+      } catch (Exception ex) {
+      Debug.WriteLine (@" ERROR {0}", ex.Message);
+      }
+      return datasource;
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public async Task&lt;Datasource&gt; UpdateObject (Datasource updateDataSource)
+    {
+           Datasource datasource = new Datasource();
+           try {
+                var json = JsonConvert.SerializeObject (updateDataSource);
+                var body = new StringContent (json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response =  await HttpClientExtensions.PatchAsync (client, Constants.HOSTNAME + Constants.DATASOURCE_PATH + "/externalId:" + Constants.DATASOURCE_ID, body);
+                if (response.IsSuccessStatusCode) {
+                     Debug.WriteLine (@" Datasource successfully updated.");
+                     var content = await response.Content.ReadAsStringAsync();
+                     datasource = JsonConvert.DeserializeObject&lt;Datasource&gt;(content);
+                }
+           } catch (Exception ex) {
+                Debug.WriteLine (@" ERROR {0}", ex.Message);
+           }
+           return (datasource);
+    }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public async Task&lt;Datasource&gt; DeleteObject ()
+    {
+           Datasource datasource = new Datasource();
+           var uri = new Uri(Constants.HOSTNAME + Constants.DATASOURCE_PATH + "/externalId:" + Constants.DATASOURCE_ID);
+           try {
+                var response = await client.DeleteAsync (uri);
+                if (response.IsSuccessStatusCode) {
+                     Debug.WriteLine (@" Datasource successfully deleted.");
+                     var content = await response.Content.ReadAsStringAsync();
+                     datasource = JsonConvert.DeserializeObject&lt;Datasource&gt;(content);
+                }
+           } catch (Exception ex) {
+                Debug.WriteLine (@" ERROR {0}", ex.Message);
+           }
+           return (datasource);
+    }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="terms">Terms</h3>
+
+<p>Terms are handled in <code class="highlighter-rouge">bbdn.rest.services.TermService</code>. As illustrated above,
+this Class implements the IRestService interface and exposes four methods. It
+also includes methods required to implement the IDisposible interface which is
+required to use the async/await functionality..</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Term&gt; CreateObject(Term newTerm)
+            {
+                     Term term = new Term();
+                     var uri = new Uri(Constants.HOSTNAME + Constants.TERM_PATH);
+                     try
+                     {
+                         var json = JsonConvert.SerializeObject(newTerm);
+                         var body = new StringContent(json, Encoding.UTF8, "application/json");
+                         HttpResponseMessage response = await client.PostAsync(uri, body);
+                         if (response.IsSuccessStatusCode)
+                         {
+                             var content = await response.Content.ReadAsStringAsync();
+                             term = JsonConvert.DeserializeObject&lt;Term&gt;(content);
+                             Debug.WriteLine(@" Term successfully created.");
+                         }
+                     }
+                     catch (Exception ex)
+                     {
+                         Debug.WriteLine(@" ERROR {0}", ex.Message);
+                     }
+                     return term;
+            }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public async Task&lt;Term&gt; ReadObject()
+    {
+                Term term = new Term();
+                var uri = new Uri(Constants.HOSTNAME + Constants.TERM_PATH + "externalId:" + Constants.TERM_ID);
+                try
+                {
+                    var response = await client.GetAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        term = JsonConvert.DeserializeObject&lt;Term&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return term;
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Term&gt; UpdateObject(Term updateTerm)
+            {
+                Term term = new Term();
+                try
+                {
+                    var json = JsonConvert.SerializeObject(updateTerm);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.TERM_PATH + "externalId:" + Constants.TERM_ID, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" Term successfully updated.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        term = JsonConvert.DeserializeObject&lt;Term&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (term);
+            }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Term&gt; DeleteObject()
+            {
+                Term term = new Term();
+                var uri = new Uri(Constants.HOSTNAME + Constants.TERM_PATH + "externalId:" + Constants.TERM_ID);
+                try
+                {
+                    var response = await client.DeleteAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" Term successfully deleted.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        term = JsonConvert.DeserializeObject&lt;Term&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (term);
+            }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="courses">Courses</h3>
+
+<p>Course are handled in <code class="highlighter-rouge">bbdn.rest.services.CourseService</code>. As illustrated above,
+this Class implements the IRestService interface and exposes four methods. It
+also includes methods required to implement the IDisposible interface which is
+required to use the async/await functionality..</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Course&gt; CreateObject(Course newCourse)
+            {
+                Course course = new Course();
+                var uri = new Uri(Constants.HOSTNAME + Constants.COURSE_PATH);
+                try
+                {
+                    var json = JsonConvert.SerializeObject(newCourse);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await client.PostAsync(uri, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        course = JsonConvert.DeserializeObject&lt;Course&gt;(content);
+                        Debug.WriteLine(@" Course successfully created.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return course;
+            }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Course&gt; ReadObject()
+            {
+                Course course = new Course();
+                var uri = new Uri(Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID);
+                try
+                {
+                    var response = await client.GetAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        course = JsonConvert.DeserializeObject&lt;Course&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return course;
+            }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Course&gt; UpdateObject(Course updateCourse)
+            {
+                Course course = new Course();
+                try
+                {
+                    var json = JsonConvert.SerializeObject(updateCourse);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" Course successfully updated.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        course = JsonConvert.DeserializeObject&lt;Course&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (course);
+            }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Course&gt; DeleteObject()
+            {
+                Course course = new Course();
+                var uri = new Uri(Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID);
+                try
+                {
+                    var response = await client.DeleteAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" Course successfully deleted.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        course = JsonConvert.DeserializeObject&lt;Course&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (course);
+            }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="users">Users</h3>
+
+<p>Users are handled in <code class="highlighter-rouge">bbdn.rest.services.UserService</code>. As illustrated above,
+this Class implements the IRestService interface and exposes four methods. It
+also includes methods required to implement the IDisposible interface which is
+required to use the async/await functionality..</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;User&gt; CreateObject(User newUser)
+            {
+                User user = new User();
+                var uri = new Uri(Constants.HOSTNAME + Constants.USER_PATH);
+                try
+                {
+                    var json = JsonConvert.SerializeObject(newUser);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await client.PostAsync(uri, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        user = JsonConvert.DeserializeObject&lt;User&gt;(content);
+                        Debug.WriteLine(@" User successfully created.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return user;
+            }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;User&gt; ReadObject()
+            {
+                User user = new User();
+                var uri = new Uri(Constants.HOSTNAME + Constants.USER_PATH + "externalId:" + Constants.USER_ID);
+                try
+                {
+                    var response = await client.GetAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        user = JsonConvert.DeserializeObject&lt;User&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return user;
+            }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;User&gt; UpdateObject(User updateUser)
+            {
+                User user = new User();
+                try
+                {
+                    var json = JsonConvert.SerializeObject(updateUser);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.USER_PATH + "externalId:" + Constants.USER_ID, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" User successfully updated.");
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var content = await response.Content.ReadAsStringAsync();
+                            user = JsonConvert.DeserializeObject&lt;User&gt;(content);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return user; 
+            }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;User&gt; DeleteObject()
+            {
+                User user = new User();
+                var uri = new Uri(Constants.HOSTNAME + Constants.USER_PATH + "externalId:" + Constants.USER_ID);
+                try
+                {
+                    var response = await client.DeleteAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" User successfully deleted.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        user = JsonConvert.DeserializeObject&lt;User&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (user);
+            }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="memberships">Memberships</h3>
+
+<p>Memberships are handled in <code class="highlighter-rouge">bbdn.rest.services.MemberService</code>. As illustrated
+above, this Class implements the IRestService interface and exposes four
+methods. It also includes methods required to implement the IDisposible
+interface which is required to use the async/await functionality.. In
+addition, the endpoint for memberships is a bit different, in that it is a
+sub-call to courses, so the endpoint would look like
+<code class="highlighter-rouge">/learn/api/public/v1/courses/&lt;courseId&gt;/users/&lt;userId&gt;</code>.</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Membership&gt; CreateObject(Membership newMembership)
+            {
+                Membership membership = new Membership();
+                var uri = new Uri(Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID + "users/externalId:" + Constants.USER_ID);
+                try
+                {
+                    var json = JsonConvert.SerializeObject(membership);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await client.PostAsync(uri, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        membership = JsonConvert.DeserializeObject&lt;Membership&gt;(content);
+                        Debug.WriteLine(@" Membership successfully created.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return membership;
+            }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Membership&gt; ReadObject()
+            {
+                Membership membership = new Membership();
+                var uri = new Uri(Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID + "users/externalId:" + Constants.USER_ID);
+                try
+                {
+                    var response = await client.GetAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        membership = JsonConvert.DeserializeObject&lt;Membership&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return membership;
+            }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Membership&gt; UpdateObject(Membership updateMembership)
+            {
+                Membership membership = new Membership();
+                try
+                {
+                    var json = JsonConvert.SerializeObject(updateMembership);
+                    var body = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID + "users/externalId:" + Constants.USER_ID, body);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" Membership successfully updated.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        membership = JsonConvert.DeserializeObject&lt;Membership&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (membership);
+            }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            public async Task&lt;Membership&gt; DeleteObject()
+            {
+                Membership membership = new Membership();
+                var uri = new Uri(Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID + "users/externalId:" + Constants.USER_ID);
+                try
+                {
+                    var response = await client.DeleteAsync(uri);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Debug.WriteLine(@" Membership successfully deleted.");
+                        var content = await response.Content.ReadAsStringAsync();
+                        membership = JsonConvert.DeserializeObject&lt;Membership&gt;(content);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(@" ERROR {0}", ex.Message);
+                }
+                return (membership);
+            }
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>All of the code snippets included in this document at included in a sample
+REST Demo C# application available on
+<a href="https://github.com/blackboard/BBDN-REST-Demo-CSharp">GitHub</a>.
+There is a README.html included that talks more specifically about building and
+running the code. Feel free to review the code and run it against a test or
+development Learn instance to see how it works.</p>
+
+:ET

@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: advanced-b2
+---
 # Starter Building Block Readme
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'Getting Started']*  

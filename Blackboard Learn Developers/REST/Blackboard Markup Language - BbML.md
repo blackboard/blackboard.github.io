@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: advanced
+---
 # Blackboard Markup Language - BbML
 *Author: Scott Hurrey*  
 *Categories: []*  

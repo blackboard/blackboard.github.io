@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: getting-started
+---
 # Getting Started With REST
 *Author: Scott Hurrey*  
 *Categories: []*  
@@ -47,7 +52,7 @@ registered Blackboard developer.To register as a Blackboard developer:
   2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
   3. Select **Create Account** and you're on your way.
 
-For more information about the Developer Portal please see [this document](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md).
+For more information about the Developer Portal please see [this document](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html).
 
 **Note:** If you are a Blackboard client, a Blackboard Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Blackboard DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
@@ -80,27 +85,27 @@ want to use depend on what you want to do.
 
 add files, text, and the like to Blackboard Learn
 
-1. [authenticate with Blackboard Learn](Basic%20Authentication.md) via REST API
+1. [authenticate with Blackboard Learn](Basic%20Authentication.html) via REST API
 2. check out our [Learn REST API reference](https://developer.blackboard.com/portal/displayApi/Learn)
 
 bulk add users to Blackboard Learn
 
-1. [authenticate with Blackboard Learn](Basic%20Authentication.md) via REST API
+1. [authenticate with Blackboard Learn](Basic%20Authentication.html) via REST API
 2. check out our [Learn REST API reference](https://developer.blackboard.com/portal/displayApi/Learn)
 
 set up video conference sessions
 
-1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.md) via REST API
+1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
 2. check out our [Collaborate REST API reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0)
 
 invite users to video conference sessions
 
-1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.md) via REST API
+1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
 2. check out our [Collaborate REST API reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0)
 
 get a list of users who attended a video conference session
 
-1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.md) via REST API
+1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
 2. check out our [Collaborate REST API reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0)
 
 ## Get Development Instances of Blackboard Applications
@@ -110,15 +115,15 @@ use to build projects that integrate with Blackboard applications. Among
 others, we offer these popular developer instances. Blackboard does not charge
 a fee for entry-level use.
 
-  * [AWS instance of Blackboard Learn](/Developer%20Version%20of%20Blackboard%20Applications/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.md)  
+  * [AWS instance of Blackboard Learn](/Developer%20Version%20of%20Blackboard%20Applications/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html)  
 While Blackboard does not charge for entry-level use, AWS may charge various
 fees for their services.
 
-  * [Developer access to Blackboard Collaborate](/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.md)
+  * [Developer access to Blackboard Collaborate](/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html)
 
 For more information about developer versions of Blackboard applications, see
 [Developer Versions of Blackboard
-Applications](/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.md).
+Applications](/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html).
 
 ## Developing with Blackboard Collaborate
 
@@ -128,14 +133,14 @@ then email us at at
 [developers@blackboard.com](mailto:developers@blackboard.com). We'll set you
 up with a key and secret for Blackboard Collaborate. Then read about how to
 use your key and secret to [authenticate with
-Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.md). The rest of the present topic
+Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html). The rest of the present topic
 pertains only to developing with Blackboard Learn.
 
 ## Developing with Blackboard Learn
 
-Go to the developer portal and [register as a Developer](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) if you haven't already, and then register your
+Go to the developer portal and [register as a Developer](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html) if you haven't already, and then register your
 application to get a key and secret. Use your key and secret to [authenticate
-with Learn](Basic%20Authentication.md).
+with Learn](Basic%20Authentication.html).
 
 ![developer workflow](/images/129105.png)
 
@@ -158,9 +163,9 @@ which returns an authorization token that grants the application access to the
 Learn REST API for one hour. This token is then passed in subsequent REST
 calls until such time that the token expires. This can be done either with
 [Basic
-Authentication](Basic%20Authentication.md) or, as of Blackboard Learn 3200.7 in SaaS or Q4 2017 for
+Authentication](Basic%20Authentication.html) or, as of Blackboard Learn 3200.7 in SaaS or Q4 2017 for
 self- and managed-hosted clients, using [Three-Legged
-OAuth](Three-Legged%20OAuth.md).
+OAuth](Three-Legged%20OAuth.html).
 
 ## Calling Services
 
@@ -185,7 +190,7 @@ associate with your integration. This gives the administrator full control
 over the entitlements used by your application. For more information on how to
 configure Learn, please see [Managing REST Integrations in Learn: The REST
 Integrations Tool for System
-Administrators](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md).
+Administrators](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.html).
 
 ## Glossary
 

@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: resources-b2
+---
 # Building Block Scan Tool for Blackboard Learn SaaS
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks']*  

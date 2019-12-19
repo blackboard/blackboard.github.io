@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: admin
+---
 # Register Developer Instances to the Cloud
 *Author: Scott Hurrey*  
 *Categories: []*  

@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: soap
+category: about-soap
+---
 # Getting Started With SOAP Web Services
 *Author: Scott Hurrey*  
 *Categories: ['Getting Started', 'SOAP Web Services']*  
@@ -33,6 +38,6 @@ Blackboard System Administrator to change or schedule anything.
 ## Notes
 
   * Blackboard's SOAP Web Services implement WS-Security to authorize incoming messages. The way this works is fairly straight forward. The first step is to call ContextWS.initialize(). In the message payload, you will have a SOAP Header and it must contain a WS-Security tag -- <wsse> in this example -- and in that section, you will need a <username> tag set equal to "session", and a <password> tag set equal to "nosession". This method will return a session id and for the rest of the session, you will send <wsse:username>session</wsse:username> and <wsse:password>_the session id returned from initialize_</wsse:password>.
-  * The basic workflow is: ContextWS.intialize(), ContextWS.login(...) or ContextWS.loginTool(...), Initialize the services you need to access, call the methods you need, ContextWS.logout(). To see examples, check the [Examples](Example%20-%20SOAP%20Web%20Services.md) pages.
+  * The basic workflow is: ContextWS.intialize(), ContextWS.login(...) or ContextWS.loginTool(...), Initialize the services you need to access, call the methods you need, ContextWS.logout(). To see examples, check the [Examples](Example%20-%20SOAP%20Web%20Services.html) pages.
   * All of the Web Services have their own initialize method. The names vary from service-to-service, but with the exception of ContextWS, they all take a boolean argument called ignore. This argument was added simply because the .NET sample code generator doesn't work without those methods having at least one argument. Its called ignore, because it is ignored, so you set it to true or false without affecting anything.
 

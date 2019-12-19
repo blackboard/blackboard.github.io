@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: examples
+---
 # REST Demo Using cURL
 *Author: Mark Bykerk Kauffman*  
 *Categories: []*  
@@ -34,9 +39,9 @@ is the [slide deck](/attachments/2016.06.22.RestTechnicalDeepDiveForPartners.ppt
 
 ## Prerequisites
 
-* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.md) in the Developer Portal
+* You must [register a developer account and application](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html) in the Developer Portal
 * You must 
-[register your application](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.md) in Blackboard Learn
+[register your application](Managing%20REST%20Integrations%20in%20Learn.html) in Blackboard Learn
 * You must also configure the script as outlined in the README for the project
 
 This cURL command-line demonstration shows you how to:
@@ -66,11 +71,11 @@ This help topic assumes the Developer:
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](Basic%20Authentication.md) document.
+  1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](Basic%20Authentication.html) document.
 
 **OR**
 
-  1. Use the authorizationcode endpoint to log into Learn with a given user's credentials, then obtain an **OAuth 2.0 access token**, using the application key/secret, that only allows access to the system based on that particular user's entitlements as described in the [Three-Legged OAuth](Three-Legged%20OAuth.md) document.
+  1. Use the authorizationcode endpoint to log into Learn with a given user's credentials, then obtain an **OAuth 2.0 access token**, using the application key/secret, that only allows access to the system based on that particular user's entitlements as described in the [Three-Legged OAuth](Three-Legged%20OAuth.html) document.
   2. Call the appropriate REST endpoint with the **OAuth 2.0 access token** and necessary data to perform a given action.
 
 Every example is shown in bold face, the JSON result is shown in italics.
@@ -388,7 +393,7 @@ curl -k --request PATCH -H "Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvf
 
 ### ACCESS CONTENT
 
-  * See [Access Content Attachments](REST%20Demo:%20Using%20curl%20to%20access%20content%20attachments.md)
+  * See [Access Content Attachments](REST%20Demo%20Using%20curl%20to%20access%20content%20attachments.html)
 
 ### COURSE COPY
 ```
@@ -580,7 +585,7 @@ We get back an ID that we use to attach the file to the attempt.
 we got when we created the assignment.
 
 The "studentSubmision" is in bbML format. Reference: [Blackboard Markup
-Language - BbML](#Blackboard%20Markup%20Language%20-%20BbML.md)
+Language - BbML](#Blackboard%20Markup%20Language%20-%20BbML.html)
 ```
 curl -k -X POST -H "Authorization: Bearer 4mgoFlQoi4Jq4biKpU4R264wugsKF9R1" -H "Content-Type: application/json" --data '{"studentComments":"this is the student commment","studentSubmission": "<!-- {\"bbMLEditorVersion\":1} --> <a href=\"bbupload://BD-BD9C08679892561211D99DB4C817FE68-67545ce854b54d3fb062e38aefeee47c\" data-bbfile=\"{&quot;render&quot;:&quot;inline&quot;,&quot;linkName&quot;:&quot;2016.03.BlackboardPartnerUpdate.pdf&quot;,&quot;mimeType&quot;:&quot;application/pdf&quot;}\">2016.03.BlackboardPartnerUpdate.pdf<_/a>"}:_' https://bd-partner-a-ultra.blackboard.com/learn/api/public/v2/courses/courseId:mbk-ultra-
 course/gradebook/columns/_3297_1/attempts

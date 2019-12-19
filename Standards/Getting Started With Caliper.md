@@ -1,3 +1,8 @@
+---
+layout: standards
+parent: caliper
+category: about-caliper
+---
 # Getting Started With Caliper
 *Author: Scott Hurrey*  
 *Categories: ['Caliper']*  

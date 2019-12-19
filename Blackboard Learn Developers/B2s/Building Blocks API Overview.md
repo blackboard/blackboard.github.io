@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: about-b2
+---
 # Building Blocks API Overview
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started']*  

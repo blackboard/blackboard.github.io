@@ -1,3 +1,6 @@
+---
+layout: main
+---
 # Contact
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'SOAP Web Services']*  

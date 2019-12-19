@@ -1,0 +1,42 @@
+I"�<h1 id="examples---soap-web-services">Examples - SOAP Web Services</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Examples’, ‘SOAP Web Services’]</em><br />
+<em>Tags: [‘web services’, ‘soap’, ‘blackboard learn’, ‘examples’, ‘developer’]</em></p>
+<hr />
+
+<p>This section will include concrete examples illustrating the use of the
+Blackboard Learn Web Services performing specific tasks in an effort to show
+how the Developer can build an application.</p>
+
+<p>This section will use different languages to make different Web Service calls,
+so Developers will have a variety of samples to choose from, depending upon
+the end goal and the language of choice.</p>
+
+<h2 id="examples">Examples</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operations</th>
+      <th>Language</th>
+      <th>Documentation</th>
+      <th>Project Repository</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Get Course Announcements</td>
+      <td>Python</td>
+      <td><a href="Get%20Course%20Announcements%20with%20SOAP%20and%20Python.html">View Document</a></td>
+      <td><a href="https://github.com/blackboard/BBDN-Web-Service-Python-Sample-Code">View Repository</a></td>
+    </tr>
+    <tr>
+      <td>Get CourseMembership and Role</td>
+      <td>C#</td>
+      <td><a href="Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C#.html">View Document</a></td>
+      <td><a href="https://github.com/blackboard/BBDN-CSharp-WS-Sample">View Repository</a></td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

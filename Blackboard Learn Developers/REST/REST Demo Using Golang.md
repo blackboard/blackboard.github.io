@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: examples
+---
 # REST Demo Using Golang
 *Author: Scott Hurrey*  
 *Categories: []*  

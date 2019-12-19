@@ -1,0 +1,19 @@
+I"¬<h1 id="advanced-topics">Advanced Topics</h1>
+
+<p>This section of the Learn Building Block developer documentation focuses on advanced topics and specific use-cases. It is designed to help you answer specific questions you may have. As always, if there is a topic youâ€™d like to see here, let us know at developers@blackboard.com, or feel free to contribute!</p>
+
+<h2 id="topics-in-this-section">Topics in this section</h2>
+
+<ul>
+  <li><a href="Building%20Blocks%20and%20Java%20Permissions.html">Permission Errors</a></li>
+  <li><a href="Dynamic%20Rendering%20with%20Template%20Variables.html">Template Variables</a></li>
+  <li><a href="Event%20Driven%20API.html">Event-Driven APIs</a></li>
+  <li><a href="https://github.com/blackboard/BBDN-REST-Java-CreateCourseAnnouncement">Create Course Announcement</a></li>
+  <li><a href="Guides%20for%20Learn%20REST%20Methods.html">Guides for Learn REST Methods</a>
+    <ul>
+      <li><a href="User%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html">Use APIs to Merge and Cross-list Courses</a></li>
+      <li><a href="User%20APIs%20to%20Work%20with%20Ultra%20Assignments.html">Use APIs to Work with Ultra Assignments</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

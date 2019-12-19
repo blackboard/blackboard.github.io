@@ -1,0 +1,183 @@
+I"M<h1 id="data-types-for-contenthandler">Data Types for contentHandler</h1>
+<p><em>Author: Ryan Haber</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘developer’]</em></p>
+<hr />
+
+<p>Blackboard Learn’s <code class="highlighter-rouge">/contents</code> endpoints accommodate different types of content
+by using different handlers. Use the contentHandler field of requests and
+responses to indicate which content handler should be used. Available
+contentHandlers their uses are summarized below.</p>
+
+<p>Supported handlers include:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>contentHandler ID</th>
+      <th>Description</th>
+      <th>Supported since</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#resourcex-bb-document">resource/x-bb-document</a></td>
+      <td>(Original) base document type, consists of rich text with an associated title<br />(Ultra) basic content item</td>
+      <td>3000.1.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-externallink">resource/x-bb-externallink</a></td>
+      <td>external link</td>
+      <td>3000.1.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-folder">resource/x-bb-folder</a></td>
+      <td>document that has child documents</td>
+      <td>3000.1.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-courselink">resource/x-bb-courselink</a></td>
+      <td>link to a Blackboard course</td>
+      <td>3100.5.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-forumlink">resource/x-bb-forumlink</a></td>
+      <td>link to a discussion object</td>
+      <td>3100.6.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-blti-link">resource/x-bb-blti-link</a></td>
+      <td>link to an LTI object</td>
+      <td>3200.6.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-file">resource/x-bb-file</a></td>
+      <td>represents a file object within Learn</td>
+      <td>3200.6.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-asmt-test-link">resource/x-bb-asmt-test-link</a></td>
+      <td>(Ultra only) Ultra assignment or test object</td>
+      <td>3300.5.0</td>
+    </tr>
+    <tr>
+      <td><a href="#resourcex-bb-assignment">resource/x-bb-assignment</a></td>
+      <td>(Original only)</td>
+      <td>3400.9.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="resourcex-bb-document">resource/x-bb-document</h2>
+
+<ul>
+  <li><strong>Original experience</strong>: Base content type consisting of rich text with an associated title.</li>
+  <li><strong>Ultra</strong>: represents the body of an Ultra document object. It must be the child of a resource/x-bb-folder content item for which isBbPage=true.</li>
+</ul>
+
+<h2 id="resourcex-bb-externallink">resource/x-bb-externallink</h2>
+
+<p>Link to an external resource. It has the following properties:</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>url (string) of the external resource</li>
+</ul>
+
+<h2 id="resourcex-bb-folder">resource/x-bb-folder</h2>
+
+<p>Content item that contains child content items. It has the following
+properties:</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>isBbPage (boolean) whether the object represents a page in its own right</li>
+</ul>
+
+<h2 id="resourcex-bb-courselink">resource/x-bb-courselink</h2>
+
+<p>Content item with a link to other objects within Blackboard Learn. It has the
+following properties:</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>targetId (string) of the linked Blackboard Learn object</li>
+  <li>targetType (string) is the Blackboard object type of the linked object. Possible values include:
+    <ul>
+      <li>Unset</li>
+      <li>CourseAssessment</li>
+      <li>CourseTOC</li>
+      <li>Forum</li>
+      <li>Tool</li>
+      <li>CollabSession (deprecated since 3000.1.0)</li>
+      <li>Group</li>
+      <li>BlogJournal</li>
+      <li>StaffInfo</li>
+      <li>ModulePage</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="resourcex-bb-forumlink">resource/x-bb-forumlink</h2>
+
+<p>Content item with a link to a discussion object. It has the following
+properties:</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>discussionId (string) for the discussion object in Blackboard Learn</li>
+</ul>
+
+<h2 id="resourcex-bb-blti-link">resource/x-bb-blti-link</h2>
+
+<p>Representation of an LTI link within course content. It has the following
+properties:</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>url (string) of the the LTI link</li>
+  <li>customParameters is a map of custom parameters to POST to the specified launch URL. Learn serializes the entire custom parameters map, so you should specify all custom parameters when the map is changed.</li>
+</ul>
+
+<h2 id="resourcex-bb-file">resource/x-bb-file</h2>
+
+<p>Representation of a file uploaded to course content.</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>file is an object with the following properties:
+    <ul>
+      <li>uploadId (string, read-only) is the system-assigned ID of the uploaded file</li>
+      <li>fileName (string) is the name of the file</li>
+      <li>mimeType (string, read-only) is the MIME type. Blackboard Learn uses IANA standards to assign MIME type based on the filename extension.</li>
+      <li>duplicateFileHandling (string, optional) used to describe behavior when a file is uploaded that duplicates an existing filename. Options include:
+        <ul>
+          <li>Rename (default) causes the new file with the duplicate name to be renamed.</li>
+          <li>Replace causes the new file to replace the earlier file with the same name.</li>
+          <li>ThrowError causes Learn to throw an error.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="resourcex-bb-asmt-test-link">resource/x-bb-asmt-test-link</h2>
+
+<p>(Ultra experience only) Representation of an assignment/test link object</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>assessmentId (string) is the ID of the associated assessment</li>
+  <li>gradeColumnId (string) is the ID of the associated grade column</li>
+</ul>
+
+<h2 id="resourcex-bb-assignment">resource/x-bb-assignment</h2>
+
+<p>(Original experience only)</p>
+
+<ul>
+  <li>id (string, read-only) of the object in Blackboard Learn</li>
+  <li>gradeColumnId (string, read only) ID of the associated grade column</li>
+  <li>groupContent (boolean) specifies whether or not the content is group content.</li>
+</ul>
+:ET

@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: examples-b2
+---
 # Course, User, and Enrollment Data
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'Examples']*  

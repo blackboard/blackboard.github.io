@@ -1,3 +1,6 @@
+---
+layout: main
+---
 # BECOME AN OFFICIAL BLACKBOARD PARTNER!
 *Author: Mark Bykerk Kauffman*  
 *Categories: ['Building Blocks', 'Getting Started']*  

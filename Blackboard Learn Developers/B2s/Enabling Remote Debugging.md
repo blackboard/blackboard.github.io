@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: resources-b2
+---
 # Enabling Remote Debugging
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Getting Started', 'Tutorials']*  

@@ -1,3 +1,7 @@
+---
+layout: collab
+title: Blackboard Collaborate
+---
 # Collaborate API Objects
 *Author: Scott Hurrey*  
 *Categories: ['Getting Started']*  

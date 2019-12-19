@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: advanced-b2
+---
 # Event Driven API
 *Author: Kelley MacEwen*  
 *Categories: []*  

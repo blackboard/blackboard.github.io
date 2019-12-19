@@ -1,3 +1,6 @@
+---
+layout: connecttxt
+---
 # ConnectTxt SOAP Connector for Address Book (v1.5)
 *Author: Kelley MacEwen*  
 *Categories: []*  

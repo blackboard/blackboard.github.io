@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: advanced-b2
+---
 # Building Blocks and Java Permissions
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks', 'Tutorials']*  

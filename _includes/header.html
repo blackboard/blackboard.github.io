@@ -1,0 +1,22 @@
+<div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                {% for item in site.data.top-right %}
+                    <a href="{{ item.link }}" class="header-section-link">{{ item.name }}</a>
+                {% endfor %}
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>

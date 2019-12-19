@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: best-practices-b2
+---
 # Building Block Security
 *Author: Kelley MacEwen*  
 *Categories: ['Building Blocks', 'Tutorials']*  

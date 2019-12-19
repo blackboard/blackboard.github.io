@@ -1,3 +1,7 @@
+---
+layout: collab
+title: Blackboard Collaborate
+---
 # Authorize and Authenticate in Blackboard Collaborate
 *Author: Scott Hurrey*  
 *Categories: ['Getting Started']*  

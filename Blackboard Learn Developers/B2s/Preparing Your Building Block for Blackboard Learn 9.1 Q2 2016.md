@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: best-practices-b2
+---
 # Preparing Your Building Block for Blackboard Learn 9.1 Q2 2016
 *Author: Mark Bykerk Kauffman*  
 *Categories: ['Building Blocks']*  
@@ -9,7 +14,7 @@ upcoming Learn 9.1 Q2 2016 release and how to prepare your Building Block for
 the release. Topics covered include - Java 8, Learn Versioning, B2 Versioning,
 New Installer, and Development Resources. **Another must-read is** [Preparing
 Your Building Blocks For Learn SaaS and Newer Learn
-Versions](Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.md) by Scott Hurrey.
+Versions](Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html) by Scott Hurrey.
 
 The recording for the 3/22/2016 Webinar is
 [here](https://sas.elluminate.com/collab/ui/scheduler/resource/recording/DB2503BFA4E9FF402B31858655506AD8). During the 3/22/2016 presentation one of the

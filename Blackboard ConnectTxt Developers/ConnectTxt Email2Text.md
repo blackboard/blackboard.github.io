@@ -1,3 +1,6 @@
+---
+layout: connecttxt
+---
 # ConnectTxt Email2Text
 *Author: Scott Hurrey*  
 *Categories: ['ConnectTxt Developer Documentation']*  

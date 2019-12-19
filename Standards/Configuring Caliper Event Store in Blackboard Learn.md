@@ -1,3 +1,8 @@
+---
+layout: standards
+parent: caliper
+category: about-caliper
+---
 # Configuring Caliper Event Store in Blackboard Learn
 *Author: Scott Hurrey*  
 *Categories: ['Caliper']*  

@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: rest
+category: admin
+---
 # Developer Groups, Site Quotas, and Rate Limits
 *Author: Ryan Haber*  
 *Categories: []*  
@@ -40,7 +45,7 @@ group can access it.
 Before moving to production, you must designate one group as the production
 group. The best practice is to name your production group after your
 organization. [See the Group Naming Requirements in this document for further
-details](Developer%20Portal%2C%20Development%20and%20Production%20Groups.md#group-naming-requirements).
+details](Developer%20Portal%2C%20Development%20and%20Production%20Groups.html#group-naming-requirements).
 
 Each developer group is subject to maximum site quotas and to daily limits on
 the number of API requests made. These limits start relatively low because
@@ -48,7 +53,7 @@ they are intended for development and testing only. To qualify for production-
 level site quotas and rate limits, you must designate a production group. To
 designate one of your groups as a production follow the steps provided at the
 end of this document. For more information about using, managing, and naming
-groups, see [Developer Portal Development and Production Groups](Developer%20Portal%2C%20Development%20and%20Production%20Groups.md)
+groups, see [Developer Portal Development and Production Groups](Developer%20Portal%2C%20Development%20and%20Production%20Groups.html)
 
 ## Production Groups
 

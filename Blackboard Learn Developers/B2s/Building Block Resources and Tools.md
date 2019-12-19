@@ -1,3 +1,8 @@
+---
+layout: learn
+parent: b2s
+category: resources-b2
+---
 # Building Block Resources and Tools
 *Author: Scott Hurrey*  
 *Categories: ['Building Blocks']*  
