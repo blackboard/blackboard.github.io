@@ -13,7 +13,7 @@
           link: /Blackboard%20Learn%20Developers/REST/Basic%20Authentication.html
           category: getting-started
         - name: Three-Legged OAuth
-          link: /Blackboard%20Learn%20Developers/REST/Three-Legged%OAuth.html
+          link: /Blackboard%20Learn%20Developers/REST/Three-Legged%20OAuth.html
           category: getting-started
     - name: About
       link: /Blackboard%20Learn%20Developers/REST/The%20Blackboard%20REST%20API%20Framework.html
@@ -26,7 +26,7 @@
           link: /Blackboard%20Learn%20Developers/REST/Developer%20Portal%20Terms%20and%20Conditions.html
           category: about
     - name: Advanced
-      link: /Blackboard%20Learn%20Developers/REST/Advanced.html
+      link: /Blackboard%20Learn%20Developers/REST/advanced.html
       category: advanced
       topics:
         - name: BbML
@@ -80,7 +80,7 @@
           link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Ruby.html
           category: examples
 - name: B2s
-  link: B2s/Getting%20Started%20With%20Building%20Blocks.html
+  link: /Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html
   parentId: b2s
   categories:
     - name: Getting Started
@@ -110,7 +110,7 @@
           link: /Blackboard%20Learn%20Developers/B2s/FAQs.html
           category: about-b2
     - name: Advanced
-      link: /Blackboard%20Learn%20Developers/B2s/Advanced.html
+      link: /Blackboard%20Learn%20Developers/B2s/advanced.html
       category: advanced-b2
       topics:
         - name: Permission Errors
@@ -152,7 +152,7 @@
           link: /Blackboard%20Learn%20Developers/B2s/Developing%20Building%20Blocks%20with%20the%20Public%20Maven%20Repository.html
           category: best-practices-b2
     - name: OpenDb
-      link: /Blackboard%20Learn%20Developers/B2s/Introduction%20to%20OpenDb.html
+      link: /Blackboard%20Learn%20Developers/B2s/Introduction%20to%20OpenDB.html
       category: opendb-b2
       topics:
         - name: Create Db Objects
