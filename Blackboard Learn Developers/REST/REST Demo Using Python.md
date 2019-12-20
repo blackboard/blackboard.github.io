@@ -40,7 +40,7 @@ knowledge necessary to build a REST-based Web Services integration.**
 This help topic assumes the Developer:
 
 * is familiar with Python
-* has obtained a copy of the[ source code](https://github.com/blackboard/BBDN-REST-DEMO_Python) and run as noted in the project [README.html](https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.html) file.
+* has obtained a copy of the[ source code](https://github.com/blackboard/BBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.md) file.
 * has a REST-enabled Blackboard Learn instance.
 
 ### Code Walkthrough

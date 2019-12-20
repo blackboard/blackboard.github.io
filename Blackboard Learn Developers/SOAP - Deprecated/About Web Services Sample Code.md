@@ -25,12 +25,12 @@ API documentation.
 
 Name |Description
 --- | ---
-[client](Tutorial:%20Build%20The%20C#%20SOAP%20Sample%20Client.html) | This directory contains the necessary files to build the wsc.client.jar. This library is required to build the projects in the javaclient and proxy directories included in this package. It can also be used in conjunction with the included license in custom applications. 
-[dotnetclient](Tutorial:%20Build%20The%20C#%20SOAP%20Sample%20Library.html) | This directory contains the necessary files to build the .NET client library. This library is required to build the project located in the qa/dotnet directory included in this package. It can also be used in conjunction with the included license in custom applications.
+[client](Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html) | This directory contains the necessary files to build the wsc.client.jar. This library is required to build the projects in the javaclient and proxy directories included in this package. It can also be used in conjunction with the included license in custom applications. 
+[dotnetclient](Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Library.html) | This directory contains the necessary files to build the .NET client library. This library is required to build the project located in the qa/dotnet directory included in this package. It can also be used in conjunction with the included license in custom applications.
 [javaclient](Build%20Java%20Client%20Library.html) | The javaclient directory contains the code necessary to build a java-based Web Services client.
 LICENSE_for_samples.txt | This file explains the re-use and licensing policy associate with the sample code
 proxy | The code in this directory can be used to build a java-based proxy Server
-[qa](Tutorial:%20Build%20The%20C#%20SOAP%20Sample%20Client.html) | The qa directory contains the code necessary to build a fully-functioning .NET based desktop application. From this program, you can test every API available through the core Web Services.
+[qa](Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html) | The qa directory contains the code necessary to build a fully-functioning .NET based desktop application. From this program, you can test every API available through the core Web Services.
 readme.txt | The readme.txt outlines the contents of each directory and the path to the readme.txt file for each.
 sample_webservice | The Blackboard Web Services contain a number of the most popular integration points available in the Building Block framework, but not all. As a result, Blackboard Learn allows for the inclusion of custom web services to be created and added into the existing Web Services framework. A sample “hello world” web service is included in this package.
 b2client | A sample Building Block that utilizes the web services directly in the Java Virtual Machine, bypassing the SOAP Layer.

@@ -19,9 +19,7 @@ simple, standard HTTP 1.1 POST. All responses from the connector are also
 provided to the requesting client as XML.
 
 Download latest XML messaging connector
-[documentation](https://community.blackboard.com/external-link.jspa?url=https%
-3A//www.txttools.co.uk/preloginjsp/docs/XML_Messaging_Connector_for_
-txttools_v6.8.1.pdf) for ConnectTxt (v6.8.1)
+[documentation](https://www.txttools.co.uk/preloginjsp/docs/XML_Messaging_Connector_for_txttools_v6.8.1.pdf) for ConnectTxt (v6.8.1)
 
 # Contents
 
@@ -60,14 +58,12 @@ The required structure of the XML, as well as that of the expected response
 from the connector, is described in the following section.
 
 For more information on XML see the W3C XML site at:
-[http://www.w3.org/XML/](https://community.blackboard.com/external-
-link.jspa?url=/docs/DOC-1150/%22http%3A/www.w3.org/XML)
+[http://www.w3.org/XML/](https://www.w3.org/XML)
 
 For more information on HTTP 1.1 see the relevant RFC:
 
 RFC2616: Hypertext Transfer Protocol -- HTTP/1.1: [http://www.ietf.org/rfc/rfc
-2616.txt](https://community.blackboard.com/external-
-link.jspa?url=http%3A//www.ietf.org/rfc/rfc2616.txt)
+2616.txt](https://www.ietf.org/rfc/rfc2616.txt)
 
 **NB:** If you are intending to use the newer HTTP 1.1 rather than HTTP 1.0, please ensure that your client or code is capable of handling the Transfer-Encoding:Chunked header, as large responses will be chunked by the server.
 
@@ -88,8 +84,7 @@ sensitive** and tags should be used as shown.
 
 It is recommended to use the SSL 128-bit encrypted version of the XML
 connector. The SSL connector version is available at: [https://www.txttools.co
-.uk/connectors/XML/xml.jsp](https://community.blackboard.com/external-
-link.jspa?url=https%3A//www.txttools.co.uk/connectors/XML/xml.jsp)
+.uk/connectors/XML/xml.jsp](https://www.txttools.co.uk/connectors/XML/xml.jsp)
 
 If your client cannot handle SSL, the unencrypted address for the XML
 messaging connector is: [http://www.txttools.co.uk/connectors/XML/xml.jsp](htt
@@ -106,8 +101,7 @@ the value of a POST variable called XMLPost.
 If you wish to test your constructed XML manually before using it as part of
 an automatic system, you can use the XML connector test page to do so. Open
 your chosen browser and go to: [https://www.txttools.co.uk/connectors/XML/xml.
-jsp?test=true](https://community.blackboard.com/external-link.jspa?url=https%3
-A//www.txttools.co.uk/connectors/XML/xml.jsp%3Ftest%3Dtrue)
+jsp?test=true](https://www.txttools.co.uk/connectors/XML/xml.jsp%3Ftest%3Dtrue)
 
 This will display a very basic page containing only a textbox and a submit
 button. If you cut and paste your XML into this box, and click the submit
@@ -242,8 +236,7 @@ NO
 SuppressUnicode
 
 If this tag is included and set to true, it forces the connector to send the
-message in the [GSM 03.38 alphabet](https://community.blackboard.com/external-
-link.jspa?url=https%3A//en.wikipedia.org/wiki/GSM_03.38). Any
+message in the [GSM 03.38 alphabet](https://en.wikipedia.org/wiki/GSM_03.38). Any
 characters outside this alphabet that would normally result in a unicode/UTF-8
 message being sent will be suppressed – i.e. they will not display correctly
 on the receiving phone.

@@ -45,7 +45,7 @@ This help topic assumes the Developer:
 
 * is familiar with C#
 * has installed Microsoft Visual Studio
-* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.html](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.html) file.
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.md) file.
 * has a REST-enabled Blackboard Learn instance, like the [Developer AMI](/Developer%20Version%20of%20Blackboard%20Applications/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html).
 
 ### Code Walkthrough

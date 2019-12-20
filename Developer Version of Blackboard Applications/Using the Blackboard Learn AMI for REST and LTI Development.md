@@ -11,11 +11,11 @@ available via the Amazon AWS Marketplace.
 
 ## Contents 
 
-  * [Overview](#Overview)
-  * [Get the Blackboard REST and LTI Developer AMI](#Get%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI)
-  * [Use the Blackboard REST and LTI Developer AMI](#Use%20the%20Blackboard%20REST%20and%20LTI%20Developer%20AMI)
-  * [Support for Let's Encrypt SSL Certificates](#Support%20for%20Let's%20Encrypt%20SSL%20Certificates)
-    * [Setup](#Setup)
+  * [Overview](#overview)
+  * [Get the Blackboard REST and LTI Developer AMI](#get-the-blackboard-rest-and-lti-developer-ami)
+  * [Use the Blackboard REST and LTI Developer AMI](#use-the-blackboard-rest-and-lti-developer-ami)
+  * [Support for Let's Encrypt SSL Certificates](#support-for-lets-encrypt-ssl-certificates)
+    * [Setup](#setup)
   * [What does the Blackboard REST and LTI Developer AMI cost?](#what-does-the-blackboard-rest-and-lti-developer-ami-cost)
   * [Log into the Blackboard Learn Application on the AMI](#log-into-the-blackboard-learn-application-on-the-ami)
   * [Configure Your AMI-based Blackboard Learn Instance](#configure-your-ami-based-blackboard-learn-instance)

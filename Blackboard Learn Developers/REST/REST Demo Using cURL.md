@@ -64,7 +64,7 @@ make a complete set of CRUD operations to the Learn REST endpoints.
 This help topic assumes the Developer:
 
   * is familiar with cURL.
-  * has a REST-enabled Blackboard Learn instance, like the [Developer Virtual Machine](https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx%3Fd%3D1746). This requires Behind the Blackboard access.
+  * has a REST-enabled [Blackboard Learn instance](/Developer%Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html).
 
 ## Walkthrough
 
@@ -471,7 +471,7 @@ curl -k -X POST -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" -H "
 You can, of course, use the id returned in the above to fetch the content item
 using the appropriate GET. Read the documentation at developer.blackboard.com.
 
-### CREATE ASSIGNMENT, WITH ATTACHMENT
+### CREATE ASSIGNMENT WITH ATTACHMENT
 
 **Currently Only Available For Ultra Courses (Remember to check the Learn version for availably of the APIs @ [https://developer.blackboard.com](https://developer.blackboard.com))**
 
@@ -519,8 +519,9 @@ curl -k -X POST -H "Authorization: Bearer N75W0ceKowxtlMUZtuIqwwvPQtxvx3L5" -H "
 We will use the gradeColumnId when submitting a student attempt to the
 assignment.
 
-### SUBMIT ASSIGNMENT ATTEMPT, WITH ATTACHMENT - Currently Only Available For
-Presentation-0nly Assignments
+### SUBMIT ASSIGNMENT ATTEMPT WITH ATTACHMENT
+
+Currently Only Available For Presentation-Only Assignments
 
 **(Reference for all APIs used and the Learn version they are available in is @ [https://developer.blackboard.com](https://community.blackboard.com/developer.blackboard.com))**
 

@@ -18,8 +18,7 @@ integration from release-to-release.
 
 This help article assumes that you have downloaded the [Web Services Sample
 Code](About%20Web%20Services%20Sample%20Code.html) and that you have built
-the [.NET Web Services
-Library](Tutirial:%20Build%The%20C#%20SOAP%20Sample%20Library.html).
+the [.NET Web Services Library](Tutorial%20-%20Build%The%20C%23%20SOAP%20Sample%20Library.html).
 
 ### How to Build
 

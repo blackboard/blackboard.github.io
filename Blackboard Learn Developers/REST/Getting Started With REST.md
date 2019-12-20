@@ -21,7 +21,7 @@ REST APIs, see any of the numerous tutorials available online. Most commonly
 used resources include:
 
   * Blackboard's [developer portal](https://developer.blackboard.com/)
-  * Blackboard's [Github repos](https://github.com/search%3Fq%3Dbbdn)
+  * Blackboard's [Github repos](https://github.com/search?utf8=%E2%9C%93&q=BBDN-REST)
 
 ## Before You Get Started
 
@@ -95,17 +95,17 @@ bulk add users to Blackboard Learn
 
 set up video conference sessions
 
-1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
+1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
 2. check out our [Collaborate REST API reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0)
 
 invite users to video conference sessions
 
-1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
+1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
 2. check out our [Collaborate REST API reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0)
 
 get a list of users who attended a video conference session
 
-1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
+1. [authenticate with Blackboard Collaborate](/Blackboard%20Collaborate%20Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html) via REST API
 2. check out our [Collaborate REST API reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0)
 
 ## Get Development Instances of Blackboard Applications
@@ -128,12 +128,12 @@ Applications](/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20
 ## Developing with Blackboard Collaborate
 
 Things are a little different for developing with Blackboard Collaborate. For
-more information, see the [Collaborate REST API Reference](https://app.swaggerhub.com/apis/BBDN/collaborate-api/1.0.0) and
+more information, see the [Collaborate REST API Reference](https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0) and
 then email us at at
 [developers@blackboard.com](mailto:developers@blackboard.com). We'll set you
 up with a key and secret for Blackboard Collaborate. Then read about how to
 use your key and secret to [authenticate with
-Collaborate](/Blackboard%20Collaborate%20/Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html). The rest of the present topic
+Collaborate](/Blackboard%20Collaborate%20Developers/Authorize%20and%20Authenticate%20In%20Blackboard%20Collaborate.html). The rest of the present topic
 pertains only to developing with Blackboard Learn.
 
 ## Developing with Blackboard Learn
@@ -190,7 +190,7 @@ associate with your integration. This gives the administrator full control
 over the entitlements used by your application. For more information on how to
 configure Learn, please see [Managing REST Integrations in Learn: The REST
 Integrations Tool for System
-Administrators](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.html).
+Administrators](Managing%20REST%20Integrations%20in%20Learn.html).
 
 ## Glossary
 

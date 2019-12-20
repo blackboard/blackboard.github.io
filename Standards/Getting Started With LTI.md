@@ -22,7 +22,7 @@ administrators so that they can configure their Learn servers to work with it.
 To share your tool, you must register your application. When you do so, you
 receive an Application ID. Share this Application ID with the administrator of
 any Learn server that will use your LTI tool. For more information about
-registering your application, see [Register Your Application](Register%20Your%20Application.html).
+registering your application, see [Register Your Application](https://help.blackboard.com/Learn/Administrator/Hosting/System_Integration/LTI).
 
 ## LTI Placement to Building Block Link Mapping
 

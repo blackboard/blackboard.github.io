@@ -60,5 +60,5 @@ Block development:
 
   * [Building Block Development Life Cycle](Building%20Block%20Development%20Life%20Cycle.html)
   * [Enabling Debugging](Enabling%20Remote%20Debugging.html)
-  * [First Project: Gradle, Git, and basic-b2-template](First%20Project:%20Gradle,%20Git,%20and%20b2-starter-template.html)
+  * [First Project: Gradle, Git, and basic-b2-template](First%20Project%20-%20Gradle,%20Git,%20and%20b2-starter-template.html)
 

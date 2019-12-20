@@ -15,13 +15,9 @@ workflow or require background knowledge for easy use.
 
 # Available Guides
 
-[Assignments](Use%20APIs%20to%20Work%20with%20Ultra%20Assignments.html)
-
-Authenticate with Blackboard
-Learn:
-* [Basic Authentication](Basic%20Authentication.html)
-* [Three-Legged OAuth](Three-Legged%20OAuth.html)
-
-[Merge and Cross-list
-Courses](Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html)
+* [Assignments](Use%20APIs%20to%20Work%20with%20Ultra%20Assignments.html)
+* Authenticate with Blackboard Learn:
+  * [Basic Authentication](Basic%20Authentication.html)
+  * [Three-Legged OAuth](Three-Legged%20OAuth.html)
+* [Merge and Cross-list Courses](Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html)
 

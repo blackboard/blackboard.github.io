@@ -119,7 +119,7 @@ have the change take affect.
 
 See the Shared Content Folder section of [Preparing Your Building Blocks For
 Learn SaaS and Newer Learn
-Versions](/Blackboard%20Learn%20Developers/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html) for a detailed
+Versions](/Blackboard%20Learn%20Developers/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html) for a detailed
 explanation of the differences between the SaaS-like configuration and the
 Enterprise 9.1 configuration.
 
@@ -165,7 +165,7 @@ value.
 
 The DVM must register with the cloud in order to use the API Gateway. Learn
 more about this process
-[here](/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html).
+[here](/Blackboard%20Learn%20Developers/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html).
 
 ## Common Issues
 

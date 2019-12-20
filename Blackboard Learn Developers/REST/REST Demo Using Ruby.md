@@ -41,7 +41,7 @@ This help topic assumes the Developer:
 
 * is familiar with Ruby
 * has installed Ruby and the Ruby rest-client gem.
-* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Ruby) and built it in conjunction with the project [README.html](https://github.com/blackboard/BBDN-REST-Demo-Ruby/blob/master/README.html) file.
+* has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Ruby) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Ruby/blob/master/README.md) file.
 * has a REST-enabled Blackboard Learn instance.
 
 ### Code Walkthrough

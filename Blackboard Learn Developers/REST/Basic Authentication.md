@@ -93,7 +93,7 @@ you made.
 The easist way to test is using cURL. We will assume you have already
 registered through the [Developer Portal](Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html) and
 retrieved your application ID, key, and secret, as well as [added your
-application ID](Managing%20REST%20Integrations%20in%20Learn:%20The%20REST%20Integrations%20Tool%20for%20System%20Administrators.html) to
+application ID](Managing%20REST%20Integrations%20in%20Learn.html) to
 the Learn server you wish to integrate with:
 
 1. From the command line, use cURL to send a token request to Learn, signed with their application key and secret:   
