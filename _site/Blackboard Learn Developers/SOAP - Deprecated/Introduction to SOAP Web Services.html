@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html" />
+<meta property="og:url" content="http://localhost:4000/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Blackboard%20Learn%20SOAP%20Web%20Services.html" class="header-section-link" >About</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP to REST Map</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html" class="header-section-link" >Intro to SOAP</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Proxy%20Tools.html" class="header-section-link" >Proxy Tools</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/About%20Web%20Services%20Sample%20Code.html" class="header-section-link" >About SOAP Sample Code</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html" class="header-section-link" >Getting Started</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Examples%20-%20SOAP%20Web%20Services.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Tutorials%20-%20SOAP%20Web%20Services.html" class="header-section-link" >Tutorials</a></li>
+                                
+                            
+                        </ul>
+                
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="introduction-to-soap-web-services">Introduction to SOAP Web Services</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘SOAP Web Services’]</em><br />
+<em>Tags: [‘web services’, ‘soap’, ‘blackboard learn’, ‘developer’]</em></p>
+<hr />
+
+<p>Blackboard Learn Web Services are a key component of Blackboard Learn’s open
+architecture, allowing you to enhance the online education experience for
+their students and faculty through integration with external services and
+applications. You may assemble a solution of homegrown, commercial and open
+source software and tools using Learn Web Services that best meets your needs
+whether it is an integration to a homegrown application or other enterprise
+application, or seamless integration to a subscription database at your
+library.</p>
+
+<p>Through Blackboard Learn Web Services developers can integrate with enterprise
+web applications such as Student Information Systems or custom middle-tier
+services. The Learn Web Services ensure that you can:</p>
+
+<ul>
+  <li>provision data to Learn from external systems and vice versa.</li>
+  <li>provide customizations to meet system integration and architecture needs</li>
+  <li>leverage this technology to enhance and aid administration of their systems on campus</li>
+  <li>automate procedures or repetitive tasks</li>
+  <li>integrate with external systems or applications across your learning enterprise for example the Registrar’s office, the Library to name just two</li>
+  <li>customize your implementation by integrating open source or locally-developed applications and tools</li>
+</ul>
+
+<p>Data that can be accessed includes:</p>
+
+<ul>
+  <li>User data - name, course of study, contact information</li>
+  <li>Course data and Enrollment records</li>
+  <li>Outcomes - student quiz and test data, scores, grades, participation and activity data</li>
+  <li>Content - the ability to seamlessly integrate rich content from a variety of sources</li>
+  <li>System management - information to help administrators manage and monitor their Blackboard software installations</li>
+</ul>
+
+<h2 id="learn-more">Learn More</h2>
+
+<p>To learn more about Learn Web Services, start
+<a href="Blackboard%20Learn%20SOAP%20Web%20Services.html">here</a>.</p>
+
+<h2 id="request-a-developers-license">Request a Developers License</h2>
+
+<p>All Blackboard Learn clients receive a Blackboard developers license at no
+cost. A developers license is a “small footprint” version of Blackboard with
+the Community and Content Management modules turned on. It can be run on a
+development server or even a virtual machine image for development purposes.
+If you require a developer network account visit <a href="https://blackboard.secure.force.com/">Behind the
+Blackboard</a> (as an
+administrator) or contact your sales representative.</p>
+
+<h2 id="commercial-partnerships">Commercial Partnerships</h2>
+
+<p>If you are interested in becoming a Blackboard partner visit the <a href="https://www.blackboard.com/partnerships/partnerships-program.aspx">Blackboard
+Partnerships</a>™ program site. Partnering with Blackboard provides access to
+design guidance and support among other benefits.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

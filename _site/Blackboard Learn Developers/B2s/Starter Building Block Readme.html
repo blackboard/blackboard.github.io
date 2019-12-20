@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html" />
+<meta property="og:url" content="http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Blackboard%20Building%20Blocks.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html" class="header-section-link" >Permission Errors</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html" class="header-section-link" >Template Variables</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Event%20Driven%20API.html" class="header-section-link" >Event-Driven API</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html" class="header-section-link" >Starting Block</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Building%20Block%20Resources%20and%20Tools.html" class="header-section-link" >Resources</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html" class="header-section-link" >Best Practices</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Introduction%20to%20OpenDB.html" class="header-section-link" >OpenDb</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Examples%20-%20Building%20Blocks.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="starter-building-block-readme">Starter Building Block Readme</h1>
+<p><em>Author: Kelley MacEwen</em><br />
+<em>Categories: [‘Building Blocks’, ‘Getting Started’]</em><br />
+<em>Tags: [‘develop’, ‘resources’, ‘building blocks’, ‘getting started’, ‘starting block’, ‘migrated from edugarage’, ‘starter block’, ‘basic b2 template’, ‘deploy’, ‘deployb2’, ‘developer’]</em></p>
+<hr />
+
+<p>This is the readme for the Starting Building Block. The Starter Building block
+is available in the <a href="https://bbprepo.blackboard.com/content/repositories/public/blackboard/bbdn/starting-block">Blackboard maven
+repository</a>.</p>
+
+<h1 id="caveat">Caveat</h1>
+
+<p><em>DO NOT INSTALL THE STARTER BLOCK ON A PRODUCTION SYSTEM OR ANY SYSTEM
+ACCESSIBLE VIA THE PUBLIC INTERNET.</em> Installing the starting block on a
+production system presents a security risk.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The Starting Block Building Block can be used to dynamically deploy another
+Building Block for the purpose of testing changes. It is for use during the
+development cycle of a Building Block and should not be used on a production
+system. The Starting Block performs no authorization on requests and therefore
+represents a large security hole on anything but a development system.</p>
+
+<p>The Starting Block only works with local files and therefore any file
+indicated for installation must be directly visible to the server on which the
+Starting Block resides.</p>
+
+<h1 id="usage">Usage</h1>
+
+<p>The Starting Block is invoked directly via URL. To access the help screen
+(which lists all available actions/options) install the Starting Block on your
+server and then go to the following URL:</p>
+
+<p><code class="highlighter-rouge">http://&lt;server&gt;/webapps/bb-starting-block-&lt;schema&gt;/execute/help</code></p>
+
+<p>The above URL assumes the Starting Block was installed on the default Virtual
+Installation. Replace <server> with your servers domain and <schema> with your
+schema name. On newer systems, this should be **_BBLEARN_**, on older systems,
+this should be **_bb_bb60._**</schema></server></p>
+
+<h1 id="invocation">Invocation</h1>
+
+<p>Since the Starting Block can be “called” using a URL, it can be invoked
+through a standard web browser (using a bookmark). However, it is easier to
+incorporate the invocation of the Starting Block into the build script of your
+Building Block.</p>
+
+<h2 id="invocation-via-gradle">Invocation Via Gradle</h2>
+
+<p>The <a href="https://github.com/blackboard/basic-b2-template">Basic B2 Template</a>
+project contains all the information you need to use the Starter Block from
+your Gradle build process. A Gradle task was added called ‘<em>deployB2</em>’ that
+takes care of everything for you. To invoke, simply type ‘<em>gradle deployB2</em>’
+or ‘<em>gradlew deployB2</em>’ at the command line in the root directory of your
+project, or configure the task to be called from your IDE’s Gradle plugin.</p>
+
+<h2 id="invocation-via-ant">Invocation Via Ant</h2>
+
+<p>A sample Ant build file has been included in this package in order to
+demonstrate how this can be done (see the “deploy” set of build targets in the
+sample build file). The build file is a complete Building Block build file and
+may be useful as is for your own Building Block.</p>
+
+<h3 id="ant-build-file-caveats">Ant Build File Caveats</h3>
+
+<p>If you plan on using the sample build file for your own project don’t forget
+to change the project name attribute.</p>
+
+<p>In order to invoke the Starting Block from Ant, the “get” Ant task is being
+used. Unfortunately, there is no easy way to take the output of that task (the
+output of the Starting Block written to a file) and render it to the user. As
+such, the user must examine it manually (stored in distrib/deploy.out) or
+update the Ant script with a platform specific call to echo the contents of
+the file. Generally speaking though, the output of the Starting Block is not
+important since there is very little that can go wrong if the “get” request is
+successful (which Ant will tell you). However, be sure to check deploy.out if
+deployment does not seem to be working.</p>
+
+<p>If the WAR file name that should be deployed requires url encoding in order to
+properly work with the “get” task (i.e., the WAR file or the path to the WAR
+file contain special characters) you will need to update the build file to use
+the “makeurl” task. This task is part of the -set-deploy-url target but is
+commented out by default since the task is new to Ant 1.7 and will not work
+unless you have that version of Ant or newer. If its use is necessary for you,
+make sure you have Ant 1.7, uncomment out the task, and then update the
+setting of deploy.url to use warfile.url in place of warfile.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

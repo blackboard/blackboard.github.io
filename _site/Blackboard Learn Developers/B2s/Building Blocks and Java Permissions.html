@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html" />
+<meta property="og:url" content="http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Blackboard%20Building%20Blocks.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html" class="header-section-link" >Permission Errors</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html" class="header-section-link" >Template Variables</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Event%20Driven%20API.html" class="header-section-link" >Event-Driven API</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html" class="header-section-link" >Starting Block</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Building%20Block%20Resources%20and%20Tools.html" class="header-section-link" >Resources</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html" class="header-section-link" >Best Practices</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Introduction%20to%20OpenDB.html" class="header-section-link" >OpenDb</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Examples%20-%20Building%20Blocks.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="building-blocks-and-java-permissions">Building Blocks and Java Permissions</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Building Blocks’, ‘Tutorials’]</em><br />
+<em>Tags: [‘building blocks’, ‘blackboard learn’, ‘permissions’, ‘bb-manifest.xml’, ‘developer’]</em></p>
+<hr />
+
+<p>Building Blocks are basically web applications which run in the Blackboard
+Learn web application container. As such they require specific permissions
+added to their bb-manifest.xml file to properly install, display, retrieve and
+persist data, and correctly operate within the Learn application and
+environment.</p>
+
+<p>In order to interact with the Learn environment a Building Block must supply
+the necessary set of java permissions in the permissions element located near
+the bottom of the bb-manifest file. A basic set of permissions may include:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;permission type="attribute" name="user.personalinfo" actions="get,set"/&gt;   
+    &lt;permission type="blackboard.persist.PersistPermission" name="user" actions="create,modify"/&gt;   
+    &lt;permission type="java.net.SocketPermission" name="*" actions="resolve,connect"/&gt;   
+    &lt;permission type="java.util.PropertyPermission" name="*" actions="read,write"/&gt;
+</code></pre></div></div>
+<p>One permission often seen is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;permission type="java.io.FilePermission" name="&amp;lt;&amp;lt;ALL FILES&amp;gt;&amp;gt;" actions="read,write"/&gt;
+</code></pre></div></div>
+
+<p>While convenient to use this particular ‘wild card’ notation, it provides
+access to all system files. Thus it is more secure to specify files and paths
+directly even if this requires multiple permission entries:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;permission type="java.io.FilePermission" name="BB_HOME/logs/my_b2.log" actions="read,write"/&gt;
+</code></pre></div></div>
+<p>A more comprehensive though not all-inclusive set of permissions is listed at
+the end of this help topic.</p>
+
+<h3 id="how-do-i-know-which-permissions-to-include">How do I know which permissions to include?</h3>
+
+<p>Unfortunately <strong><em>AccessControlException&lt;</em></strong> are not discoverable at compile-
+time as they only manifest when a Building Block is running. So beyond the
+common permissions noted above, exceptions may be determined by coding
+practices or by log entry identification. When an installed Building Block
+encounters a permissions gap at runtime it will throw an
+<strong><em>AccessControlException</em></strong> permission error. You may use this error to
+determine the exact permission you need to add to the bb-manifest to correct
+the <strong><em>AccessControlException</em></strong> condition.</p>
+
+<p>The main indication of an <strong><em>AccessControlException</em></strong> is receiving error 404
+when launching your Building Block. This 404 error indicates that the resource
+is unavailable. This 404 error is a good indication that the Building Block is
+missing a required permission. The next step is to identify the missing
+permission.</p>
+
+<p>Using Linux as an example, inspect the
+/usr/local/blackboard/logs/tomcat/stdout-stderr-xxxxxxxx-log.txt, where
+xxxxxxxx is the date when the error appeared. Search this log for
+<strong><em>AccessControlException</em></strong> and you should find something like this:</p>
+
+<p>Caused by: java.security.<strong><em>AccessControlException</em></strong>: access denied
+(java.net.SocketPermission tup6.temple.edu resolve)</p>
+
+<p>This is the logged exception and follows the pattern of:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.security.**_AccessControlException_**: access denied (&lt;type&gt; &lt;name&gt; [&lt;actions&gt;])
+</code></pre></div></div>
+
+<p>To resolve this error, you simply need to add a new permission element to your
+bb-manifest.xml file using the logged <type> <name> and if specified
+[<actions>].</actions></name></type></p>
+
+<p>The format for the permission element is (notice the same terminology in use):</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;permission type="&lt;type&gt;" name="&lt;name&gt;" actions="&lt;actions&gt;" /&gt;
+</code></pre></div></div>
+
+<p>Simply enter the values from the error message into the permission element,
+add it to your bb-manifest and re-deploy your Building Block. It is important
+to note that <actions> is optional. If your error stack doesn’t have <actions>
+associated with it, simply leave it blank (i.e. actions="").</actions></actions></p>
+
+<p>To illustrate this, we’ll take the above listed error and convert it into a
+permission element.</p>
+
+<p>Thus:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.security.**_AccessControlException_**: access denied
+(java.net.SocketPermission tup6.temple.edu resolve)
+</code></pre></div></div>
+
+<p>Becomes:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;permission type=”java.net.SocketPermission” name=”tup6.temple.edu” actions=”resolve” /&gt;
+</code></pre></div></div>
+
+<p>You will need to re-deploy your Building Block after changing your bb-
+manifest. Uninstalling and re-deploying your Building Block or changing the
+version number will update the Building Block with the permissions specified
+in the bb-manifest. In addition, Blackboard Learn 9.1 October 2014 Release
+requires a system restart in order to implement the new changes in
+permissions.</p>
+
+<h2 id="more-permissions">More Permissions</h2>
+
+<p>Below are some additional permissions for formatting reference.</p>
+
+<p>Do not include more permissions than are necessary for proper operation of
+your Building Block as this will impact start times.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;permission type="blackboard.data.AttributePermission" name="sessionmanager" actions="get" /&gt;  
+    &lt;permission type="attribute" name="user.personalinfo" actions="get,set" /&gt;   
+    &lt;permission type="persist" name="groupmembership" actions="create" /&gt;   
+    &lt;permission type="attribute" name="user.authinfo" actions="get" /&gt;   
+    &lt;permission type="java.util.PropertyPermission" name="*" actions="read,write" /&gt;    
+    &lt;permission type="persist" name="content" actions="persist" /&gt;   
+    &lt;permission type="persist" name="course" actions="create,modify,delete" /&gt;    
+    &lt;permission type="persist" name="user" actions="create,modify,delete" /&gt;   
+    &lt;permission type="persist" name="userrole" actions="create,modify,delete" /&gt;   
+    &lt;permission type="persist" name="coursemembership" actions="persist,create,modify,delete" /&gt;                
+    &lt;permission type="persist" name="enrollment" actions="persist,create,modify,delete" /&gt;   
+    &lt;permission type="attribute" name="enrollment.rowstatus" actions="get,set" /&gt;                
+    &lt;!-- Minimum permissions to support Spring --&gt;   
+    &lt;permission type="java.lang.reflect.ReflectPermission" name="suppressAccessChecks" /&gt;   
+    &lt;permission type="java.lang.RuntimePermission" name="accessDeclaredMembers" /&gt;   
+    &lt;permission type="java.lang.RuntimePermission" name="createClassLoader" /&gt;   
+    &lt;permission type="java.lang.RuntimePermission" name="setContextClassLoader" /&gt;                
+    &lt;!--  For logback logging --&gt;   
+    &lt;permission type="java.io.FilePermission" name="${java.home}/lib/*" actions="read" /&gt;  
+    &lt;permission type="java.io.FilePermission" name="BB_HOME/logs/-" actions="read,write" /&gt;
+</code></pre></div></div>
+
+</div>
+    </section>
+  </body>
+</html>

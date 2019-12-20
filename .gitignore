@@ -1,2 +1,2 @@
 *.bkk
-_site
+.jekyll-cache/*

@@ -1,0 +1,600 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Ruby.html" />
+<meta property="og:url" content="http://localhost:4000/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Ruby.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Ruby.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20CSharp.html" class="header-section-link" >C#</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20cURL.html" class="header-section-link" >cURL</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Golang.html" class="header-section-link" >Golang</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Java.html" class="header-section-link" >Java</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20PHP.html" class="header-section-link" >PHP</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Python.html" class="header-section-link" >Python</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Ruby.html" class="header-section-link" >Ruby</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="rest-demo-using-ruby">REST Demo Using Ruby</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘blackboard learn’, ‘example’, ‘sample code’, ‘saas’, ‘developer’]</em></p>
+<hr />
+
+<p>The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting supported Learn objects.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>You must <a href="Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html">register a developer account and application</a> in the Developer Portal</li>
+  <li>You must 
+<a href="Managing%20REST%20Integrations%20in%20Learn.html">register your application</a> in Blackboard Learn</li>
+  <li>You must also configure the script as outlined in the README for the project</li>
+</ul>
+
+<p>This Ruby command line Application allows you to:</p>
+
+<ul>
+  <li>Authenticate</li>
+  <li>Create, Read, and Update a Data Source</li>
+  <li>Create, Read, and Update a Term</li>
+  <li>Create, Read, and Update a Course</li>
+  <li>Create, Read, and Update a User</li>
+  <li>Create, Read, and Update a Membership</li>
+  <li>Delete created objects in reverse order of create - membership, user, course, term, datasource.</li>
+</ul>
+
+<p>All generated output is sent to the terminal.</p>
+
+<p><strong>This is not meant to be a Ruby tutorial. It will not teach you to write code
+in Ruby. It will, however, give a Developer familiar with Ruby the knowledge
+necessary to build a Web Services integration.</strong></p>
+
+<h3 id="assumptions">Assumptions</h3>
+
+<p>This help topic assumes the Developer:</p>
+
+<ul>
+  <li>is familiar with Ruby</li>
+  <li>has installed Ruby and the Ruby rest-client gem.</li>
+  <li>has obtained a copy of the <a href="https://github.com/blackboard/BBDN-REST-Demo-Ruby">source code</a> and built it in conjunction with the project <a href="https://github.com/blackboard/BBDN-REST-Demo-Ruby/blob/master/README.html">README.html</a> file.</li>
+  <li>has a REST-enabled Blackboard Learn instance.</li>
+</ul>
+
+<h3 id="code-walkthrough">Code Walkthrough</h3>
+
+<p>To build an integration with the Blackboard REST Web Services, regardless of
+the programming language of choice, can really be summed up in two steps:</p>
+
+<ol>
+  <li>Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the <a href="Basic%20Authentication.html">Basic Authentication</a> document.</li>
+  <li>Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.</li>
+</ol>
+
+<h4 id="authorization-and-authentication">Authorization and Authentication</h4>
+
+<p>The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
+request is made to the token endpoint with a Basic Authorization header
+containing the base64-encoded key:secret string as its key. The token service
+returns a JSON object containing the Access Token, the Token Type, and the
+number of seconds until the token expires. The token is set to expire after
+one hour, and subsequent calls to retrieve the token will return the same
+token with an updated expiry time until such time that the token has expired.
+There is no refresh token and currently no revoke token method.</p>
+
+<p>The Ruby code handles this with the following code:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bb_rest = RestClient::Resource.new $AUTH_PATH, $KEY, $SECRET
+    bb_rest.post('grant_type=client_credentials', :accept =&gt; :json){ |response, request, result, &amp;block|
+              case response.code
+                   when 200
+                        p "It worked !"
+                        token = JSON.parse(response)
+                        $access_token = token['access_token']
+                        $auth = "Bearer " + $access_token
+                        p 'Access_Token: ' + $access_token 
+                   else
+                        p response.to_s
+                        response.return!(request, result, &amp;block)
+                   end
+      }
+</code></pre></div></div>
+
+<p>The JSON response is serialized into the Token object, and you may then
+retrieve those values from that object.</p>
+
+<h4 id="calling-services">Calling Services</h4>
+
+<p>The individual service calls are handled in succession in the restdemo.rb
+file. Each operation and object combination creates the JSON body by
+instantiating the appropriate JSON object in the form of a String (required if
+you need to control the content-type, which you do) when necessary, and then
+generating the appropriate HTTP Request, shipping it to Learn, and serializing
+the JSON response back into the appropriate object.</p>
+
+<p>End points are generally defined as <code class="highlighter-rouge">/learn/api/public/v1/&lt;object
+type&gt;/&lt;objectId&gt;</code>. Object ID can be either the pk1, like <code class="highlighter-rouge">_1_1</code>, or as the
+batchuid. This value should be prepended by externalId:, like
+<code class="highlighter-rouge">externalId:test101</code>.</p>
+
+<p>For example, to retrieve a course by the pk1 <code class="highlighter-rouge">_1_1</code>, you would call <strong>GET
+/learn/api/public/v1/courses/_1_1</strong>. To retrieve by the batchuid <code class="highlighter-rouge">test101</code>, you
+would call <strong>GET /learn/api/public/v1/courses/externalId:test101.</strong></p>
+
+<p>Create is sent to Learn as a HTTP POST message with a JSON body that defines
+the object. The endpoint should omit the objectId, as this will be generated
+on creation.</p>
+
+<p>Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
+should include the objectId being retrieved.</p>
+
+<p>Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
+the object. The endpoint should include the objectId being updated.</p>
+
+<p>Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
+should include the objectId being deleted.</p>
+
+<hr />
+
+<h4 id="datasources">Datasources</h4>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\":\"BBDN-DSK-RUBY\", \"description\": \"Demo Data Source used for REST Ruby Demo\" }"
+    RestClient.post($DSK_PATH, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+           case response.code
+                  when 201
+                    p "It worked !"
+                    datasource = JSON.parse(response)
+                    $dsk_id = datasource['id']
+                    p 'Create Datasource: dsk_id=' + $dsk_id
+             else
+                    p response.to_s
+                    response.return!(request, result, &amp;block)
+             end
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.get($DSK_PATH + $dsk_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+               case response.code
+                 when 200
+                   p "Got Datasource !" + response.to_s
+                 else
+                   p response.to_s
+                   response.return!(request, result, &amp;block)
+                 end
+               }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\":\"BBDN-DSK-RUBY\", \"description\": \"Demo Data Source used for REST Ruby Demo - Updated\" }"
+      
+        RestClient.patch($DSK_PATH + $dsk_id, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+        case response.code
+          when 200
+            p 'Updated Datasource: ' + response.to_s
+          else
+            p response.to_s
+            response.return!(request, result, &amp;block)
+          end
+        }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.delete($DSK_PATH + $dsk_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 204
+                  p "Datasource Deleted !"
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="terms">Terms</h4>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\":\"BBDN-TERM-RUBY\", \"dataSourceId\":\"" + $dsk_id + "\", \"name\" : \"REST Demo Term - Ruby\", \"description\": \"Term Used For REST Demo - Ruby\", \"availability\" : { \"available\" : \"Yes\" } }"
+    RestClient.post($TERM_PATH, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+         case response.code
+               when 201
+                      p "It worked !"
+                      term = JSON.parse(response)
+                      $term_id = term['id']
+                      p 'Create Term: term_id=' + $term_id
+               else
+                      p response.to_s
+                      response.return!(request, result, &amp;block)
+               end
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.get($TERM_PATH + $term_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 200
+                  p "Got Term !" + response.to_s
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\":\"BBDN-TERM-RUBY\", \"dataSourceId\":\"" + $dsk_id + "\", \"name\" : \"REST Demo Term - Ruby\", \"description\": \"Updated Term Used For REST Demo - Ruby\", \"availability\" : { \"available\" : \"Yes\" } }"
+        RestClient.patch($TERM_PATH + $term_id, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+        case response.code
+          when 200
+            p 'Updated Term: ' + response.to_s
+          else
+            p response.to_s
+            response.return!(request, result, &amp;block)
+          end
+        }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.delete($TERM_PATH + $term_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 204
+                  p "Term Deleted !"
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="course">Course</h4>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\" : \"BBDN-Java-Ruby-Demo\", \"courseId\" : \"BBDN-Java-Ruby-Demo\", \"name\" : \"Course Used For REST Demo - Ruby\", \"description\" : \"Course Used For REST Demo - Ruby\", \"allowGuests\" : \"true\", \"readOnly\" : \"false\", \"termId\" : \"" + $term_id + "\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+        RestClient.post($COURSE_PATH, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+        case response.code
+          when 201
+            p "It worked !"
+            course = JSON.parse(response)
+            $course_id = course['id']
+            p 'Create Course: course_id=' + $course_id
+          else
+            p response.to_s
+            response.return!(request, result, &amp;block)
+          end
+        }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.get($COURSE_PATH + $course_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 200
+                  p "Got Course !" + response.to_s
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\" : \"BBDN-Java-Ruby-Demo\", \"courseId\" : \"BBDN-Java-Ruby-Demo\", \"name\" : \"Course Used For REST Demo - Ruby\", \"description\" : \"Updated Course Used For REST Demo - Ruby\", \"allowGuests\" : \"true\", \"readOnly\" : \"false\", \"termId\" : \"" + $term_id + "\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+        RestClient.patch($COURSE_PATH + $course_id, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+        case response.code
+          when 200
+          p 'Updated Course: ' + response.to_s
+          else
+            p response.to_s
+            response.return!(request, result, &amp;block)
+          end
+        }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.delete($COURSE_PATH + $course_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 204
+                  p "Course Deleted !"
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="users">Users</h4>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\" : \"bbdnrestdemorubyuser\", \"userName\" : \"restrubyuser\", \"password\" : \"Bl@ckb0ard!\", \"studentId\" : \"restrubyuser\", \"dataSourceId\" : \"" + $dsk_id + "\", \"name\" : { \"given\" : \"Ruby\", \"family\" : \"Rest Demo\" }, \"contact\" : { \"email\" : \"developers@blackboard.com\" }, \"availability\" : { \"available\" : \"Yes\" } }"
+      
+          RestClient.post($USER_PATH, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+          case response.code
+            when 201
+              p "It worked !"
+              user = JSON.parse(response)
+              $user_id = user['id']
+              p 'Create User: user_id=' + $user_id
+            else
+              p response.to_s
+              response.return!(request, result, &amp;block)
+            end
+          }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.get($USER_PATH + $user_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+                case response.code
+                  when 200
+                    p "Got User !" + response.to_s
+                  else
+                    p response.to_s
+                    response.return!(request, result, &amp;block)
+                  end
+                } 
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"externalId\" : \"bbdnrestdemorubyuser\", \"userName\" : \"restrubyuser\", \"password\" : \"Bl@ckb0ard!\", \"studentId\" : \"restrubyuser\", \"dataSourceId\" : \"" + $dsk_id + "\", \"name\" : { \"given\" : \"Ruby\", \"family\" : \"Rest Demo\", \"middle\" : \"updated\" }, \"contact\" : { \"email\" : \"developers@blackboard.com\" }, \"availability\" : { \"available\" : \"Yes\" } }"
+      
+          RestClient.patch($USER_PATH + $user_id, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+          case response.code
+            when 200
+            p 'Updated User: ' + response.to_s
+            else
+              p response.to_s
+              response.return!(request, result, &amp;block)
+            end
+          }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.delete($USER_PATH + $user_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 204
+                  p "User Deleted !"
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="memberships">Memberships</h4>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"userId\" : \"" + $user_id + "\", \"courseId\" : \"" + $course_id + "\", \"courseRoleId\" : \"Student\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+      
+          RestClient.put($COURSE_PATH + $course_id + '/users/' + $user_id, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+          case response.code
+            when 201
+              p "It worked !"
+              membership = JSON.parse(response)
+              $created = membership['created']
+              p 'Create Membership: ' + $created
+            else
+              p response.to_s
+              response.return!(request, result, &amp;block)
+            end
+          }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.get($COURSE_PATH + $course_id + '/users/' + $user_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+              case response.code
+                when 200
+                  p "Got Membership !" + response.to_s
+                else
+                  p response.to_s
+                  response.return!(request, result, &amp;block)
+                end
+              }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    payload = "{ \"userId\" : \"" + $user_id + "\", \"courseId\" : \"" + $course_id + "\", \"courseRoleId\" : \"Instructor\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+      
+          RestClient.patch($COURSE_PATH + $course_id + '/users/' + $user_id, payload, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+          case response.code
+            when 200
+            p 'Updated Membership: ' + response.to_s
+            else
+              p response.to_s
+              response.return!(request, result, &amp;block)
+            end
+          }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    RestClient.delete($COURSE_PATH + $course_id + '/users/' + $user_id, :content_type =&gt; :json, :accept =&gt; :json, :Authorization =&gt; $auth){ |response, request, result, &amp;block|
+            case response.code
+              when 204
+                p "Membership Deleted !"
+              else
+                p response.to_s
+                response.return!(request, result, &amp;block)
+              end
+            }
+</code></pre></div></div>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>All of the code snippets included in this document at included in a sample
+REST Demo Ruby application available on
+<a href="https://github.com/blackboard/BBDN-REST-Demo-Ruby">GitHub</a>.
+There is a README.html included that talks more specifically about building and
+running the code. Feel free to review the code and run it against a test or
+development Learn instance to see how it works.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

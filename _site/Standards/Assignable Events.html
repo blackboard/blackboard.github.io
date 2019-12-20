@@ -1,0 +1,717 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Standards/Assignable%20Events.html" />
+<meta property="og:url" content="http://localhost:4000/Standards/Assignable%20Events.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/Standards/Assignable%20Events.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+        
+            <ul>
+                
+                        <li><a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link" >Standards</a></li>
+                        
+                
+                        <li><a href="/Standards/Getting%20Started%20With%20LTI.html" class="header-section-link" >LTI</a></li>
+                        
+                
+                        <li><a href="/Standards/Getting%20Started%20With%20Caliper.html" class="header-section-link" >Caliper</a></li>
+                        
+                            <ul>
+                                
+                                    <li><a href="/Standards/Getting%20Started%20With%20Caliper.html" class="header-section-link" >About</a></li>
+                                    
+                                
+                                    <li><a href="/Standards/Blackboard%20Caliper%20Event%20Guide.html" class="header-section-link" >Events</a></li>
+                                    
+                                        <ul>
+                                            
+                                                <li><a href="/Standards/Session%20Events.html" class="header-section-link" >SessionEvent</a></li>
+                                            
+                                                <li><a href="/Standards/View%20Events.html" class="header-section-link" >ViewEvent</a></li>
+                                            
+                                                <li><a href="/Standards/LTI%20Events.html" class="header-section-link" >LTIEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Assignable%20Events.html" class="header-section-link" >AssignableEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Assessment%20Events.html" class="header-section-link" >AssessmentEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Assessment%20Events.html" class="header-section-link" >AssessmentItemEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Forum%20Events.html" class="header-section-link" >ForumEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Outcome%20Events.html" class="header-section-link" >OutcomeEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Calculated%20Grade%20Snapshot%20Events.html" class="header-section-link" >CalculatedGradeSnapshotEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Content%20Events.html" class="header-section-link" >ContentEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Course%20Group%20Events.html" class="header-section-link" >CourseGroupEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Blog%20Events.html" class="header-section-link" >BlogEvent</a></li>
+                                            
+                                                <li><a href="/Standards/Wiki%20Events.html" class="header-section-link" >WikiEvent</a></li>
+                                            
+                                        </ul>
+                                    
+                                
+                            </ul>
+                    
+                
+            </ul>
+        
+            
+    </div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="assignable-events">Assignable Events</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Caliper’]</em><br />
+<em>Tags: [‘developer’, ‘standards’, ‘caliper’, ‘ims’, ‘ims global’, ‘assignableevent’, ‘submit an assignment’, ‘submit a group assignment’]</em></p>
+<hr />
+
+<p>Blackboard Learn’s Caliper Analytics stream emits an AssignableEvent in four
+cases:</p>
+
+<ul>
+  <li><strong>A student starts an assignment</strong></li>
+  <li><strong>A student submits an assignment</strong></li>
+  <li><strong>A student starts a group assignment</strong></li>
+  <li><strong>A student submits a group assignment</strong></li>
+</ul>
+
+<p>Here is some of the key data that is associated with these events:</p>
+
+<h2 id="assignableevent---assignment">AssignableEvent - Assignment</h2>
+
+<p><strong>group.courseNumber</strong> - the course batch_uid (i.e. the ID sent in by LIS or Data Integration)</p>
+
+<p><strong>object.@id</strong> - …/gradableItems/id - the primary key for the content ID</p>
+
+<p><strong>action</strong> - …/action#Started <em><strong>or</strong></em> …/action#Completed</p>
+
+<h2 id="assignableevent---group-assignment">AssignableEvent - Group Assignment</h2>
+
+<p><strong>group.courseNumber</strong> - the course batch_uid (i.e. the ID sent in by LIS or Data Integration)</p>
+
+<p><strong>object.@id</strong> - …/gradableItems/id - the primary key for the content ID</p>
+
+<p><strong>extensions.bb:group.users</strong> - an array of users in the group. The batchUId field will contain the batch_uid for the user</p>
+
+<p><strong>action</strong> - …/action#Started <em><strong>or</strong></em> …/action#Completed</p>
+
+<p>For a completed group assignment, the course information is located one level
+lower in group.subOrganizationOf</p>
+
+<h1 id="sample-workflow">Sample Workflow</h1>
+
+<p>Here is a sample of what a workflow might look like:</p>
+
+<p><strong>Assignment</strong></p>
+
+<ol>
+  <li>Start an Assignment</li>
+  <li>Submit an Assignment</li>
+</ol>
+
+<p><strong>Group Assignment</strong></p>
+
+<ol>
+  <li>Start a Group Assignment</li>
+  <li>Submit a Group Assignment</li>
+</ol>
+
+<h2 id="1-start-an-assignment">1. Start an Assignment</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
+     "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
+     "sendTime": "2015-12-10T21:28:21.759Z",  
+     "data": [{  
+          "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+          "@type": "http://purl.imsglobal.org/caliper/v1/AssignableEvent",  
+          "actor": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
+               "name": null,  
+               "description": null,  
+               "extensions":{    
+                    "bb:user.id":"_8510_1",  
+                    "bb:user.externalId":"123-456-789-123"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "action": "http://purl.imsglobal.org/vocab/caliper/v1/action#Started",  
+          "object": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_7121_1",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/AssignableDigitalResource",  
+               "name": "Assignment 3",  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "objectType": [],  
+               "alignedLearningObjective": [],  
+               "keywords": [],  
+               "isPartOf": null,  
+               "datePublished": null,  
+               "version": null,  
+               "dateToActivate": null,  
+               "dateToShow": null,  
+               "dateToStartOn": null,  
+               "dateToSubmit": "2015-12-11T21:11:24.000Z",  
+               "maxAttempts": 0,  
+               "maxSubmits": 0,  
+               "maxScore": 10.0  
+          },  
+          "target": null,  
+          "generated": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_7121_1/attempts/_10_1",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/Attempt",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "assignable": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_7121_1",  
+               "actor": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
+               "count": 1,  
+               "startedAtTime": "2015-12-10T21:16:14.535Z",  
+               "endedAtTime": null,  
+               "duration": null  
+          },  
+          "eventTime": "2015-12-10T21:16:14.535Z",  
+          "edApp": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "group": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "courseNumber": "JOHN_TEST_002",  
+               "academicSession": null,  
+               "subOrganizationOf": null  
+          },  
+          "membership": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81/members/c56ca36b2c004550b7df20606d3ce48b",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
+               "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81",  
+               "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
+               "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
+          },  
+          "federatedSession": null  
+     },
+</code></pre></div></div>
+
+<p><a href="#assignable-events">Return to top</a></p>
+
+<h2 id="2-submit-an-assignment">2. Submit an Assignment</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
+          "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+          "@type": "http://purl.imsglobal.org/caliper/v1/AssignableEvent",  
+          "actor": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
+               "name": null,  
+               "description": null,  
+               "extensions":{    
+                    "bb:user.id":"_8510_1",  
+                    "bb:user.externalId":"123-456-789-123"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "action": "http://purl.imsglobal.org/vocab/caliper/v1/action#Completed",  
+          "object": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_7121_1",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/AssignableDigitalResource",  
+               "name": "Assignment 3",  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "objectType": [],  
+               "alignedLearningObjective": [],  
+               "keywords": [],  
+               "isPartOf": null,  
+               "datePublished": null,  
+               "version": null,  
+               "dateToActivate": null,  
+               "dateToShow": null,  
+               "dateToStartOn": null,  
+               "dateToSubmit": "2015-12-11T21:11:24.000Z",  
+               "maxAttempts": 0,  
+               "maxSubmits": 0,  
+               "maxScore": 10.0  
+          },  
+          "target": null,  
+          "generated": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",                "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_7121_1/attempts/_10_1",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/Attempt",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "assignable": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_7121_1",  
+               "actor": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
+               "count": 1,  
+               "startedAtTime": "2015-12-10T21:16:14.535Z",  
+               "endedAtTime": null,  
+               "duration": null  
+          },  
+          "eventTime": "2015-12-10T21:16:14.535Z",  
+          "edApp": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "group": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "courseNumber": "JOHN_TEST_002",  
+               "academicSession": null,  
+               "subOrganizationOf": null  
+          },  
+          "membership": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81/members/c56ca36b2c004550b7df20606d3ce48b",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                                    },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
+               "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81",  
+               "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
+               "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
+          },  
+          "federatedSession": null  
+     }]  
+}
+</code></pre></div></div>
+
+<p><a href="#assignable-events">Return to top</a></p>
+
+<h2 id="1-start-a-group-assignment">1. Start a Group Assignment</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
+     "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
+     "sendTime": "2016-03-17T18:13:16.268Z",  
+     "data": [{  
+          "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+          "@type": "http://purl.imsglobal.org/caliper/v1/AssignableEvent",  
+          "actor": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                    "bb:user.id": "_20_1",  
+                    "bb:user.externalId": "jstudent2"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "action": "http://purl.imsglobal.org/vocab/caliper/v1/action#Started",  
+          "object": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_1689_1",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/AssignableDigitalResource",  
+               "name": "Group Assignment 1",  
+               "description": null,  
+               "extensions": {  
+                      
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "objectType": [],  
+               "alignedLearningObjective": [],  
+               "keywords": [],  
+               "isPartOf": null,  
+               "datePublished": null,  
+               "version": null,  
+               "dateToActivate": null,  
+               "dateToShow": null,  
+               "dateToStartOn": null,  
+               "dateToSubmit": null,  
+               "maxAttempts": 1,  
+               "maxSubmits": 0,  
+               "maxScore": 10.0  
+          },  
+          "target": null,  
+          "generated": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_1689_1/attempts/_15_1",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/Attempt",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                      
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "assignable": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_1689_1",  
+               "actor": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "count": 1,  
+               "startedAtTime": "2016-03-17T18:09:41.506Z",  
+               "endedAtTime": null,  
+               "duration": null  
+          },  
+          "eventTime": "2016-03-17T18:09:41.506Z",  
+          "edApp": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                      
+               },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "group": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a/groups/_15_1",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Group",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                    "bb:group.users": "[{\"id\":\"_9_1\",\"uuid\":\"c56ca36b2c004550b7df20606d3ce48b\",\"batchUid\":\"jstudent\"},{\"id\":\"_20_1\",\"uuid\":\"e0b3faa6b6d64e9f965cb1930a86d147\",\"batchUid\":\"jstudent2\"}]"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "subOrganizationOf": {  
+                    "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a",  
+                    "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+                    "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",  
+                    "name": null,  
+                    "description": null,  
+                    "extensions": {  
+                         "bb:course.id": "_173_1"  
+                    },  
+                    "dateCreated": null,  
+                    "dateModified": null,  
+                    "courseNumber": "EVENT_TEST_002",  
+                    "academicSession": null,  
+                    "subOrganizationOf": null  
+               }  
+          },  
+          "membership": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a/members/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                    "bb:user.externalId": "jstudent2",  
+                    "bb:user.id": "_20_1",  
+                    "bb:course.id": "_173_1",  
+                    "bb:course.externalId": "EVENT_TEST_002"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a",  
+               "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
+               "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
+          },  
+          "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/7FE848A87F1021034F32BCDDE7F1F797"  
+     },
+</code></pre></div></div>
+
+<p><a href="#assignable-events">Return to top</a></p>
+
+<h2 id="2-submit-a-group-assignment">2. Submit a Group Assignment</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
+          "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+          "@type": "http://purl.imsglobal.org/caliper/v1/AssignableEvent",  
+          "actor": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                    "bb:user.id": "_20_1",  
+                    "bb:user.externalId": "jstudent2"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "action": "http://purl.imsglobal.org/vocab/caliper/v1/action#Completed",  
+          "object": {  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_1689_1",  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/AssignableDigitalResource",  
+               "name": "Group Assignment 1",  
+               "description": null,  
+               "extensions": {  
+                      
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "objectType": [],  
+               "alignedLearningObjective": [],  
+               "keywords": [],  
+               "isPartOf": null,  
+               "datePublished": null,  
+               "version": null,  
+               "dateToActivate": null,  
+               "dateToShow": null,  
+               "dateToStartOn": null,  
+               "dateToSubmit": null,  
+               "maxAttempts": 1,  
+               "maxSubmits": 0,  
+               "maxScore": 10.0  
+          },  
+          "target": null,  
+          "generated": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_1689_1/attempts/_15_1",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/Attempt",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                      
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "assignable": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/gradableItems/_1689_1",  
+               "actor": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "count": 1,  
+               "startedAtTime": "2016-03-17T18:09:41.506Z",  
+               "endedAtTime": null,  
+               "duration": null  
+          },  
+          "eventTime": "2016-03-17T18:09:41.506Z",  
+          "edApp": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                      
+               },  
+               "dateCreated": null,  
+               "dateModified": null  
+          },  
+          "group": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a/groups/_15_1",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Group",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                    "bb:group.users": "[{\"id\":\"_9_1\",\"uuid\":\"c56ca36b2c004550b7df20606d3ce48b\",\"batchUid\":\"jstudent\"},{\"id\":\"_20_1\",\"uuid\":\"e0b3faa6b6d64e9f965cb1930a86d147\",\"batchUid\":\"jstudent2\"}]"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "subOrganizationOf": {  
+                    "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a",  
+                    "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+                    "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",  
+                    "name": null,  
+                    "description": null,  
+                    "extensions": {  
+                         "bb:course.id": "_173_1"  
+                    },  
+                    "dateCreated": null,  
+                    "dateModified": null,  
+                    "courseNumber": "EVENT_TEST_002",  
+                    "academicSession": null,  
+                    "subOrganizationOf": null  
+               }  
+          },  
+          "membership": {  
+               "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
+               "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a/members/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
+               "name": null,  
+               "description": null,  
+               "extensions": {  
+                    "bb:user.externalId": "jstudent2",  
+                    "bb:user.id": "_20_1",  
+                    "bb:course.id": "_173_1",  
+                    "bb:course.externalId": "EVENT_TEST_002"  
+               },  
+               "dateCreated": null,  
+               "dateModified": null,  
+               "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/e0b3faa6b6d64e9f965cb1930a86d147",  
+               "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/58778a44c366467e8c85c537155b2a8a",  
+               "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
+               "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
+          },  
+          "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/7FE848A87F1021034F32BCDDE7F1F797"  
+     }]  
+}
+</code></pre></div></div>
+
+<p><a href="#assignable-events">Return to top</a></p>
+
+
+</div>
+    </section>
+  </body>
+</html>

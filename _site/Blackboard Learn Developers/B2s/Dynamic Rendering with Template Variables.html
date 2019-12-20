@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html" />
+<meta property="og:url" content="http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/Blackboard%20Collaborate%20Developers/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/Blackboard%20ConnectTxt%20Developers/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/Blackboard%20Mobile%20Developers/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/Blackboard%20OpenLMS%20Developers/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/Developer%20Version%20of%20Blackboard%20Applications/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/Standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Blackboard%20Building%20Blocks.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html" class="header-section-link" >Permission Errors</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html" class="header-section-link" >Template Variables</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Event%20Driven%20API.html" class="header-section-link" >Event-Driven API</a></li>
+                                        
+                                            <li><a href="/Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html" class="header-section-link" >Starting Block</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Building%20Block%20Resources%20and%20Tools.html" class="header-section-link" >Resources</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html" class="header-section-link" >Best Practices</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Introduction%20to%20OpenDB.html" class="header-section-link" >OpenDb</a></li>
+                                
+                            
+                                <li><a href="/Blackboard%20Learn%20Developers/B2s/Examples%20-%20Building%20Blocks.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="dynamic-rendering-with-template-variables">Dynamic Rendering with Template Variables</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Building Blocks’, ‘Getting Started’]</em><br />
+<em>Tags: [‘building blocks’, ‘blackboard learn’, ‘template variable’, ‘developer’]</em></p>
+<hr />
+
+<p>Template variables allow for integration with other systems by exposing
+information about the user’s context in a way that makes creating URLs to pass
+information to these systems easy.</p>
+
+<p>Template variables are represented by a series of values given a special
+syntax. This syntax is</p>
+
+<p>@X@object.attribute@X@. When used, these variables are expanded when rendered
+into their corresponding values. Within the UI, they can be used in portal
+modules and within the body of content items in courses.</p>
+
+<p>Note that not all of these variables will resolve on all pages, For example,
+if the page is not inside a course, there will be no course-related variables
+available.</p>
+
+<h2 id="using-context-variables">Using context variables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Context item</th>
+      <th>Context variable</th>
+      <th>Example output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>User external person key</td>
+      <td>@X@user.batch_uid@X@</td>
+      <td>123-45-6789</td>
+    </tr>
+    <tr>
+      <td>User username (user id)</td>
+      <td>@X@user.id@X@</td>
+      <td>jsmith</td>
+    </tr>
+    <tr>
+      <td>User full name</td>
+      <td>@X@user.full_name@X@</td>
+      <td>John Smith</td>
+    </tr>
+    <tr>
+      <td>User primary key identifier</td>
+      <td>@X@user.pk_string@X@</td>
+      <td>_521_1</td>
+    </tr>
+    <tr>
+      <td>User locale</td>
+      <td>@X@user.locale@X@</td>
+      <td>en_GB</td>
+    </tr>
+    <tr>
+      <td>User system role(s)</td>
+      <td>@X@user.role@X@</td>
+      <td>System Roles:<br />* C- Course Administrator<br />* U- Guest<br />* N- None<br />* O- Observer<br />* Y- Community Administrator<br />* R- Support<br />* Z- System Admin<br />* H- System Support<br />* A- User Administrator</td>
+    </tr>
+    <tr>
+      <td>User primary institution role</td>
+      <td>@X@user.institution_role@X@<br />@X@user.primary_institution_role@X@</td>
+      <td>student</td>
+    </tr>
+    <tr>
+      <td>User secondary institution role(s)</td>
+      <td>@X@user.secondary_institution_role@X@</td>
+      <td>student,faculty</td>
+    </tr>
+    <tr>
+      <td>Course membership role</td>
+      <td>@X@membership.role@X@</td>
+      <td>Course/Organization Roles:<br />* B- Course Builder/Organization Builder<br />* G- Grader/Grader<br />* U- Guest/Guest<br />* P- Instructor/Leader<br />* S- Student/Participant<br />* T- Teacher’s Assistant/Assistant</td>
+    </tr>
+    <tr>
+      <td>Course external course key</td>
+      <td>@X@course.batch_uid@X@</td>
+      <td>ABC123ABC</td>
+    </tr>
+    <tr>
+      <td>Course course id</td>
+      <td>@X@course.id@X@</td>
+      <td>BIO101</td>
+    </tr>
+    <tr>
+      <td>Course name</td>
+      <td>@X@course.course_name@X@</td>
+      <td>Introduction to Concepts in Biology</td>
+    </tr>
+    <tr>
+      <td>Course primary key identifier</td>
+      <td>@X@course.pk_string@X@</td>
+      <td>_12344_1</td>
+    </tr>
+    <tr>
+      <td>Course URL</td>
+      <td>@X@course.url@X@</td>
+      <td>/courses/1/BIO101/</td>
+    </tr>
+    <tr>
+      <td>Course membership role</td>
+      <td>@X@course.role@X@</td>
+      <td>student</td>
+    </tr>
+    <tr>
+      <td>Course locale</td>
+      <td>@X@course.locale@X@</td>
+      <td>en_US</td>
+    </tr>
+    <tr>
+      <td>Content primary key identifier</td>
+      <td>@X@content.id@X@<br />@X@content.pk_string@X@</td>
+      <td>_23_1</td>
+    </tr>
+    <tr>
+      <td>Content URL</td>
+      <td>@X@content.url@X@</td>
+      <td>/courses/1/BOB101/content/_221_1</td>
+    </tr>
+    <tr>
+      <td>Request <a href="https://www.opengroup.org/onlinepubs/009629399/apdxa.htm">UUID</a></td>
+      <td>@X@request.id@X@</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Request locale</td>
+      <td>@X@request.locale@X@</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Request return URL</td>
+      <td>@X@request.return@X@</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>System host name</td>
+      <td>@X@system.site_id@X@</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+    </section>
+  </body>
+</html>

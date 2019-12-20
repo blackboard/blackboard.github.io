@@ -18,6 +18,6 @@ This section of the Learn REST developer documentation focuses on sharing exampl
 * [Java Command-Line Tutorial](Tutorial%20-%20Build%20a%20Java%20Command%20Line%20REST%20Application.html)
 * [PHP](Rest%20Demo%20Using%20PHP.html)
 * [Python](Rest%20Demo%20Using%20Python.html)
-* [Java](Rest%20Demo%20Using%20Ruby.html)
+* [Ruby](Rest%20Demo%20Using%20Ruby.html)
 * [Swift](Three-Legged%20OAuth.html)
 * [NodeJS](https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node)
