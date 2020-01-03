@@ -18,4 +18,5 @@ Building Blocks framework.
   * [schema.xml validator](https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-schema-xsd/)
   * [bb-manifest.xml validator](https://maven.blackboard.com/content/repositories/releases/blackboard/platform/bb-manifest-plugin/)
   * [Blackboard Github Repository](https://github.com/blackboard)
-
+  * [Java 11](8%20steps%20to%20prepare%20for%20Java%2011.html)
+  * [Java 11 FAQs](Java%2011%20for%20Learn%20-%20FAQ.html)
