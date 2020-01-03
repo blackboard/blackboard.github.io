@@ -1,3 +1,9 @@
+---
+layout: learn
+parent: b2s
+category: resources-b2
+---
+
 # Java 11 for Learn: FAQ
 
 To address recent changes in Oracle’s Java support model, Blackboard Learn is transitioning to adopt a more recent version of Java, Java 11 Corretto JDK.  To find details regarding the targeted versions and release dates please review the [latest announcement details](8%20steps%20to%20prepare%20for%20Java%2011.html).

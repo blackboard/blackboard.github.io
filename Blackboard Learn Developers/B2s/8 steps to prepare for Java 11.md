@@ -1,3 +1,9 @@
+---
+layout: learn
+parent: b2s
+category: resources-b2
+---
+
 # 8 steps to prepare for Java 11
 
 (Updated 21 Nov with clarifications and status updates)
