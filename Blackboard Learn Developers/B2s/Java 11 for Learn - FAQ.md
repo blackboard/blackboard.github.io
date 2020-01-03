@@ -35,7 +35,7 @@ In scenarios where the libraries are both Java 8 and Java 11 compatible, a B2 co
 
    * Yes, the Blackboard installer is updated with logic to detect the minimum version of the JDK11 runtime supported by the Blackboard Learn build place. 
 
-6. **Will B2 developers or Self Hosted system administrators need to make environment changes? **
+6. **Will B2 developers or Self Hosted system administrators need to make environment changes?**
 
    * Only integrations involving command line invocation will need to make environmental changes. Scenarios invoking Java from a script would need to include the argument "--add-modules=ALL-SYSTEM" to prevent potential module related errors.  
    * Depending on the client installation, there could be risk of StackOverflow due to the size of the callstack resolving class files. Tomcat can be modified via bb-config.properties setting "bbconfig.max.stacksize.tomcat". Default minimum is 1M  
