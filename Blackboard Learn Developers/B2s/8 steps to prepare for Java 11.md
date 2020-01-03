@@ -6,7 +6,7 @@ category: resources-b2
 
 # 8 steps to prepare for Java 11
 
-(Updated 21 Nov with clarifications and status updates)
+(Updated 3 Jan 2020 with clarifications and status updates)
 
  
 
