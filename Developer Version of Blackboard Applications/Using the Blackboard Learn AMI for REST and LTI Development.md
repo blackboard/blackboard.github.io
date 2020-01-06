@@ -88,6 +88,8 @@ Starting with version **3300.6.0** the Learn for REST and LTI Developers AMI
 supports free Let’s Encrypt SSL Certificates. At this time we do not support
 alternative SSL certificate processes.
 
+NOTE: per the Let's Encrypt [FAQ](https://letsencrypt.org/docs/faq/)certificates are valid for only 90 days. In order to update your Let's Encrypt certificate you must perform a server reboot per below instructions.
+
 - you may read about Let’s Encrypt at [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 
 - you may read about certbot at [Certbot](https://certbot.eff.org/)
