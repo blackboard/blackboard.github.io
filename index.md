@@ -8,7 +8,7 @@ Welcome to the home of Blackboard's Developer Documentation. Here you will find 
 * Blackboard Collaborate Ultra
 * Blackboard ConnectTxt
 * Blackboard Mobile
-* Blackboard OpenLMS
-* IMS Global Standards
+* Blackboard openlms
+* IMS Global standards
 * Developer Version of Blackboard Applications
 

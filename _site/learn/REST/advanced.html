@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/advanced.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/advanced.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/advanced.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/Blackboard%20Markup%20Language%20-%20BbML.html" class="header-section-link" >BbML</a></li>
+                                        
+                                            <li><a href="/learn/REST/Data%20Types%20for%20contentHandler.html" class="header-section-link" >ContentHandler Datatypes</a></li>
+                                        
+                                            <li><a href="/learn/REST/Guides%20for%20Learn%20REST%20Methods.html" class="header-section-link" >Guides</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="advanced-topics">Advanced Topics</h1>
+
+<p>This section of the Learn REST developer documentation focuses on advanced topics and specific use-cases. It is designed to help you answer specific questions you may have. As always, if there is a topic you’d like to see here, let us know at developers@blackboard.com, or feel free to contribute!</p>
+
+<h2 id="topics-in-this-section">Topics in this section</h2>
+
+<ul>
+  <li><a href="Blackboard%20Markup%20Language%20-%20BbML.html">Blackboard Markdown Language</a></li>
+  <li><a href="Data%20Types%20for%20contentHandler.html">Data Types for contentHandlers</a></li>
+  <li><a href="https://github.com/blackboard/BBDN-REST-Attendance-Java">REST Attendance</a></li>
+  <li><a href="https://github.com/blackboard/BBDN-REST-Java-CreateCourseAnnouncement">Create Course Announcement</a></li>
+  <li><a href="Guides%20for%20Learn%20REST%20Methods.html">Guides for Learn REST Methods</a>
+    <ul>
+      <li><a href="Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html">Use APIs to Merge and Cross-list Courses</a></li>
+      <li><a href="Use%20APIs%20to%20Work%20with%20Ultra%20Assignments.html">Use APIs to Work with Ultra Assignments</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+    </section>
+  </body>
+</html>

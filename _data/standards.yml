@@ -1,64 +1,64 @@
-- name: Standards
-  link: /Standards/Welcome%20To%20Standards.html
+- name: standards
+  link: /standards/Welcome%20To%20standards.html
   parentId: standards
 - name: LTI
-  link: /Standards/Getting%20Started%20With%20LTI.html
+  link: /standards/Getting%20Started%20With%20LTI.html
   parentId: lti
 - name: Caliper
-  link: /Standards/Getting%20Started%20With%20Caliper.html
+  link: /standards/Getting%20Started%20With%20Caliper.html
   parentId: caliper
   categories:
     - name: About
-      link: /Standards/Getting%20Started%20With%20Caliper.html
+      link: /standards/Getting%20Started%20With%20Caliper.html
       category: about-caliper
       topics:
         - name: Metric Profiles
-          link: /Standards/Caliper%20Metric%20Profiles.html
+          link: /standards/Caliper%20Metric%20Profiles.html
           category: about-caliper
         - name: Configuring Learn
-          link: /Standards/Configuring%20Caliper%20Event%20Store%20in%20Blackboard%20Learn.html
+          link: /standards/Configuring%20Caliper%20Event%20Store%20in%20Blackboard%20Learn.html
           category: about-caliper
     - name: Events
-      link: /Standards/Blackboard%20Caliper%20Event%20Guide.html
+      link: /standards/Blackboard%20Caliper%20Event%20Guide.html
       category: events-caliper
       topics:
         - name: SessionEvent
-          link: /Standards/Session%20Events.html
+          link: /standards/Session%20Events.html
           category: events-caliper
         - name: ViewEvent
-          link: /Standards/View%20Events.html
+          link: /standards/View%20Events.html
           category: events-caliper
         - name: LTIEvent
-          link: /Standards/LTI%20Events.html
+          link: /standards/LTI%20Events.html
           category: events-caliper
         - name: AssignableEvent
-          link: /Standards/Assignable%20Events.html
+          link: /standards/Assignable%20Events.html
           category: events-caliper
         - name: AssessmentEvent
-          link: /Standards/Assessment%20Events.html
+          link: /standards/Assessment%20Events.html
           category: events-caliper
         - name: AssessmentItemEvent
-          link: /Standards/Assessment%20Events.html
+          link: /standards/Assessment%20Events.html
           category: events-caliper
         - name: ForumEvent
-          link: /Standards/Forum%20Events.html
+          link: /standards/Forum%20Events.html
           category: events-caliper
         - name: OutcomeEvent
-          link: /Standards/Outcome%20Events.html
+          link: /standards/Outcome%20Events.html
           category: events-caliper
         - name: CalculatedGradeSnapshotEvent
-          link: /Standards/Calculated%20Grade%20Snapshot%20Events.html
+          link: /standards/Calculated%20Grade%20Snapshot%20Events.html
           category: events-caliper
         - name: ContentEvent
-          link: /Standards/Content%20Events.html
+          link: /standards/Content%20Events.html
           category: events-caliper
         - name: CourseGroupEvent
-          link: /Standards/Course%20Group%20Events.html
+          link: /standards/Course%20Group%20Events.html
           category: events-caliper
         - name: BlogEvent
-          link: /Standards/Blog%20Events.html
+          link: /standards/Blog%20Events.html
           category: events-caliper
         - name: WikiEvent
-          link: /Standards/Wiki%20Events.html
+          link: /standards/Wiki%20Events.html
           category: events-caliper
     

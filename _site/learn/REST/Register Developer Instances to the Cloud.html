@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/Developer%20Groups,%20Site%20Quotas,%20and%20Rate%20Limits.html" class="header-section-link" >Groups, Site Quotas, Rate Limits</a></li>
+                                        
+                                            <li><a href="/learn/REST/Developer%20Portal,%20Development%20and%20Production%20Groups.html" class="header-section-link" >Production Groups</a></li>
+                                        
+                                            <li><a href="/learn/REST/Managing%20REST%20Integrations%20in%20Learn.html" class="header-section-link" >REST in Learn</a></li>
+                                        
+                                            <li><a href="/learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html" class="header-section-link" >DVM Cloud Registration</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="register-developer-instances-to-the-cloud">Register Developer Instances to the Cloud</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘blackboard learn’, ‘developer virtual machine’, ‘saas’, ‘developer portal’, ‘java8’, ‘cloud connector’, ‘developer’]</em></p>
+<hr />
+
+<p>You must register developer instances of Blackboard Learn to the Blackboard
+cloud. This is true of both developer virtual machines (DVM) that you host
+locally and AWS cloud-based instances created from the Blackboard Learn AMI.
+Use the following steps to register your DVM or AMI.</p>
+
+<p>To register your developer instance to the Blackboard cloud:</p>
+
+<p>Do not select <strong>Move to Production</strong> in the DVM or AMI without guidance to do
+so from Blackboard’s developer experience team.</p>
+
+<ol>
+  <li>Log into your developer instance as Administrator. You may be greeted with an first-time user message. You can select <strong>Close</strong> or refresh the page to close it.</li>
+  <li>Select <strong>System Admin</strong>.</li>
+  <li>Select <strong>Cloud Connector</strong> under <em>Cloud Management</em>.</li>
+  <li>Provide a <strong>Display Name</strong>.</li>
+  <li>Select an <strong>Instance Type</strong>. For most development work, select <strong>Development</strong>.</li>
+  <li>Select a <strong>Regional Cloud</strong>. This one-time choice indicates the AWS region with which you want to associate your developer instance. Your choice is permanent and irrevocable.</li>
+  <li>Select <strong>Save and Retry</strong> to save the configuration and connect to the Blackboard cloud. In some cases, the developer instance of Learn throws an error explaining that it could not connect to the Blackboard cloud. This behavior is expected. Ignore it.</li>
+</ol>
+
+<p>###</p>
+
+<p>If you are working with a developer virtual machine (DVM) rather than an AMI,
+you may need an SSL connection to register successfully. In these cases, you
+receive an error message like the following:</p>
+
+<p><img src="/images/92928.png" alt="Screen+Shot+2016-04-24+at+10.50.13.png" /></p>
+
+<p>If you see this error message, try connecting to the Virtual Machine at
+<a href="https://localhost:9877/">https://localhost:9877</a> and following the steps
+above. This should allow you to register to the cloud and then you should be
+able to use it in non-SSL mode.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

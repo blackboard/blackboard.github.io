@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/The%20Blackboard%20REST%20API%20Framework.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/Public%20REST%20API%20Compatibility%20and%20Deprecation%20Policy.html" class="header-section-link" >Deprecation Policy</a></li>
+                                        
+                                            <li><a href="/learn/REST/Developer%20Portal%20Terms%20and%20Conditions.html" class="header-section-link" >Developer Portal Terms</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="the-blackboard-rest-api-framework">The Blackboard REST API Framework</h1>
+<p><em>Author: Mark O’Neil</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘apis’, ‘rest’, ‘api’, ‘technical preview’, ‘developer’]</em></p>
+<hr />
+
+<p>Blackboard’s new REST API Framework is a giant step forward for integrating
+with Blackboard Learn. By moving the integration from in-process code to a
+separate machine the health of your Blackboard Learn instance is dramatically
+improved by lowering complexity and reducing the amount of code running in a
+single location. The new REST API and Developer Portal are a work in progress
+and will continually grow in functionality as Blackboard Learn, the REST APIs,
+and the Developer Portal continue to mature.</p>
+
+<p><strong>The Actors in REST API Use Cases</strong></p>
+
+<p>There are three actors in the REST API use case:</p>
+
+<ol>
+  <li>
+    <p><strong>Developer:</strong>: This is the person who writes an application that uses the new REST APIs. Through the application the developer manages authorization using the registered application’s OAuth Key and Secret, any data sent to or received from Blackboard Learn, and tracks application entitlements required for operation. <em>Developers are limited to non-production testing pursuant to the applicable REST Developer Agreements.</em></p>
+  </li>
+  <li>
+    <p><strong>Blackboard Learn Administrator</strong>: By default, no Applications can access the REST APIs. A Blackboard Learn Administrator must enable each app from the Blackboard Learn Admin Panel before access is granted. This is done by creating an integration using the Blackboard Learn Admin REST API Integrations tool using the developer provided application Id* and a User with the required entitlements as specified by the developer.</p>
+  </li>
+</ol>
+
+<p><strong><em>Important Note</em></strong>: By default NO integrations are enabled and the Blackboard Learn server will not allow integrations without a Blackboard Learn Administrator taking action.</p>
+
+<ol>
+  <li><strong>Blackboard Learn Administrator</strong>: The Developer Portal: This is a new website (<a href="https://developer.blackboard.com/">https://developer.blackboard.com</a>) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Blackboard Learn.</li>
+</ol>
+
+<p><img src="/images/92929.png" alt="RESTDiagram.png" />
+Figure 1: The REST API Framework Actors, interactions, and data paths</p>
+
+<ul>
+  <li><strong>NOTE</strong>: We do NOT support a model where the developer of the REST Application requires the Learn Administrator to get the Application ID, key, and secret for installing the developer’s application on the Learn system. The developer will get one APP ID, key and secret for the one application. The developer is responsible for configuring the key and secret on their server. For security reasons, the key and secret should never be shared with the client or any other another party. The REST Application can determine which institution requests are coming from by examining the FQDN in the requests. There is no need for installing a separate Application ID for a given vendors application on each Learn instance.</li>
+</ul>
+
+<p><strong>How These Three Actors Work Together to Enable Blackboard Learn REST Integrations</strong></p>
+
+<p>A developer (A) - or organization - decides that they want to create a new
+application which uses the Blackboard Learn REST APIs. She reviews the
+documentation and signs up inside the developer portal (C). Once she
+registers, she may create one to many applications. Creating an application
+provides an OAuth Key and Secret which is used to authorize Blackboard Learn
+REST API access and an Application ID that is used to approve Blackboard Learn
+instances.</p>
+
+<p>The developer uses the Blackboard Learn Admin REST API Integrations tool on a
+Developer Virtual Machine (B) or their Test instance of Blackboard Learn (B)
+to enable access within Blackboard Learn by providing the application ID for
+the particular application in development. Once the Application has been
+enabled, the developer may now issue REST requests against the specific Learn
+server. These HTTPS requests are issued directly against the Learn instance
+and are secured by OAuth 2.0.</p>
+
+<p>Once the application development and testing is completed, the developer
+shares the application Id and the required entitlements with the Blackboard
+Learn admin to enable access within Blackboard Learn for the particular
+application. The admin inputs the application Id provided by the developer and
+assigns a Blackboard Learn User that the integration will run as. The role for
+this user must have the entitlements as requested by the developer. This user
+can be an existing user or a newly created user specific to the application.
+The application will run as this user in Learn and will thus have all the
+rights that the user has in the system. If the admin wants to allow the
+application only READ access, this can be done with the security system
+already available in Learn by assigning the user role READ only entitlements.</p>
+
+<p><strong>Data Exchange between the Actors</strong></p>
+
+<p>The request BODY or response is <em>never</em> sent to the developer portal.</p>
+
+<p><strong>Personal data is exchanged between the application and Blackboard Learn
+system only - no personally identifiable data is shared with the portal.
+Therefore, all data may remain within the Learn server and REST application
+regions.</strong></p>
+
+<p>Primary key identifiers (e.g. Learn PK1 for User or Course) are shared with
+the portal for purposes of request logging and error messages. Note that in an
+upcoming release of Learn these PK1s will also be anonymized so no PII
+information is ever communicated outside the bounds of Learn-to-application
+exchanges.</p>
+
+<p><strong>Data Flow</strong></p>
+
+<p><strong><em>Pre-authorization</em></strong></p>
+
+<ol>
+  <li>
+    <p>The developed application first makes an authorization request to their
+Learn server. This request contains the OAuth Key and Secret provisioned on
+application creation in the developer portal.</p>
+  </li>
+  <li>
+    <p>Learn receives the request and asks the Developer Portal for a TOKEN if the
+KEY/SECRET are correct and valid for that Learn instance.</p>
+  </li>
+  <li>
+    <p>The Developer Portal returns a response to Learn containing a TOKEN if
+validation was successful.</p>
+  </li>
+  <li>
+    <p>If validation is successful Learn caches and returns the TOKEN in the
+response to the application or returns a 401 Invalid client credentials.</p>
+  </li>
+</ol>
+
+<p><strong>Note</strong>: Tokens have a lifecycle of one hour and currently are not revocable.</p>
+
+<p><strong><em>Post-authorization</em></strong></p>
+
+<ol>
+  <li>
+    <p>Once authorized, the application may then make data oriented requests to
+Learn by including the issued Token.</p>
+  </li>
+  <li>
+    <p>Developer data oriented requests are processed by Learn which returns
+response data to the requesting application.</p>
+
+    <p>a. Learn checks the local cache to validate the TOKEN – if valid it runs and
+returns the request response.</p>
+
+    <p>b. In a background thread Learn contacts the developer portal indicating a
+specified request was used by a TOKEN on a Learn server.</p>
+
+    <p>c. The developer portal responds to Learn to indicate if the TOKEN is still
+valid (not revoked) and is still running under the rate limits.</p>
+  </li>
+</ol>
+
+<ul>
+  <li>If the TOKEN has been revoked or rate limits have been reached, all future requests for that token will fail.</li>
+</ul>
+
+<p><strong>Note</strong>: Learn sends REST transaction and error log messages to the portal for purposes of API management and usage. The data sent to the portal includes the Learn Instance ID, Developer Application ID, and the REST API used (GET /users/ for instance).</p>
+
+<p><strong>Rate Limiting</strong></p>
+
+<p>In the background, the Learn instance securely communicates with the Developer
+Portal to enable rate limiting on the Developer Application. This is done by
+telling the Portal how many and which type of REST calls are being issued to
+Learn.</p>
+
+<p>For the duration of the technical preview we have set the rate limit on a
+developers suite of applications to individual institution integrations at
+10,000 requests per 24 hour period. As the Technical Preview progresses we
+will be collecting data on usage which will be analyzed to determine Customer
+and third party developer production grade rate limits when the Technical
+Preview is lifted.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

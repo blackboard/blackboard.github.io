@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/dvba/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html" />
+<meta property="og:url" content="http://localhost:4000/dvba/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/dvba/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <a href="What%20is%20a%20DVBA%3F.html" class="header-section-link" >DVBA Home</a><br />
+    
+        <a href="Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html" class="header-section-link" >Developer AMI</a><br />
+    
+        <a href="Developer%20Virtual%20Machine%20-%20DVM.html" class="header-section-link" >DVM</a><br />
+    
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="using-the-blackboard-learn-ami-for-rest-and-lti-development">Using the Blackboard Learn AMI for REST and LTI Development</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘lti’, ‘developers’, ‘dvba’, ‘developer version of blackboard application’, ‘developer ami’, ‘blackboard rest and lti developer ami’, ‘developer’]</em></p>
+<hr />
+
+<p>This document outlines usage of the Blackboard REST and LTI Developer AMI made
+available via the Amazon AWS Marketplace.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#get-the-blackboard-rest-and-lti-developer-ami">Get the Blackboard REST and LTI Developer AMI</a></li>
+  <li><a href="#use-the-blackboard-rest-and-lti-developer-ami">Use the Blackboard REST and LTI Developer AMI</a></li>
+  <li><a href="#support-for-lets-encrypt-ssl-certificates">Support for Let’s Encrypt SSL Certificates</a>
+    <ul>
+      <li><a href="#setup">Setup</a></li>
+    </ul>
+  </li>
+  <li><a href="#what-does-the-blackboard-rest-and-lti-developer-ami-cost">What does the Blackboard REST and LTI Developer AMI cost?</a></li>
+  <li><a href="#log-into-the-blackboard-learn-application-on-the-ami">Log into the Blackboard Learn Application on the AMI</a></li>
+  <li><a href="#configure-your-ami-based-blackboard-learn-instance">Configure Your AMI-based Blackboard Learn Instance</a></li>
+  <li><a href="#triage-your-ami-based-blackboard-learn-instance">Triage Your AMI-based Blackboard Learn Instance</a></li>
+  <li><a href="#migration-cookbook---recreating-data-between-amis">Migration Cookbook: Recreating Data between AMIs</a></li>
+  <li><a href="#notice---avg-on-windows-systems">Notice RE: AVG on Windows Systems</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p>The Blackboard REST and LTI Developer Amazon Machine Image (“AMI”) is an image
+of a Blackboard Learn server available in the Amazon Marketplace. The AMI
+allows a developer to spin up a copy of Blackboard Learn for building
+applications that use the REST APIs and/or Learning Tool Interoperability
+(“LTI”) to integrate with Learn. This image is a standalone copy of the SaaS
+deployment of Blackboard Learn that allows development and testing against the
+Ultra user experience. Once the developer spins up the copy of Learn, it lives
+in his or her AWS account and the developer has full control over the instance
+of Learn. All instances are pre-licensed with a developer license. New
+developer AMIs will be made available in the same cadence as SaaS releases.
+Please note that there is often a delay of 5-14 days before the AMI is
+available due to AMI and AWS processing time.</p>
+
+<p>This program allows a developer to build an integration for Blackboard Learn
+without a formal paid partnership. Anyone who wants to test the Ultra
+experience can create copy. Note that you cannot deploy a custom building
+block to this AMI. It is meant only for REST and LTI development.</p>
+
+<p><strong>NOTE: Building Block installation is NOT supported on the AMIs.</strong></p>
+
+<h2 id="get-the-blackboard-rest-and-lti-developer-ami">Get the Blackboard REST and LTI Developer AMI</h2>
+
+<p>The easiest way to find the Developer AMI is by searching the Amazon
+Marketplace for <a href="https://aws.amazon.com/marketplace/search/results?x=33&amp;y=19&amp;searchTerms=blackboard">Blackboard Learn</a>. The results show all of the currently available AMIs. Given the cadence
+or releases, you should locate the Learn instance you want.</p>
+
+<h2 id="use-the-blackboard-rest-and-lti-developer-ami">Use the Blackboard REST and LTI Developer AMI</h2>
+
+<p>Before you begin, you must have an Amazon AWS account. If you do not have an
+AWS account you will need to create one. The steps to set up an AMI are
+typically as follows.</p>
+
+<ul>
+  <li>Subscribe to the AMI</li>
+  <li>Configure the specific instance</li>
+  <li>Spin it up and code!</li>
+</ul>
+
+<p>When configuring the instance, it is completely up to you how you set up the
+server. We do have a few recommendations, however.</p>
+
+<ol>
+  <li>We recommend using the Large Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.</li>
+</ol>
+
+<ul>
+  <li>If you see 502 Gateway errors, you may need to increase the sizeof your AMI.</li>
+</ul>
+
+<ol>
+  <li>We recommend you adjust the security settings to allow:</li>
+</ol>
+
+<ul>
+  <li>SSH from your IP only</li>
+  <li>Enable HTTPS access</li>
+</ul>
+
+<ol>
+  <li>
+    <p>You must configure VPC for the EC2 to properly function. You do this by going to the VPC Console from the AWS Console:</p>
+  </li>
+  <li>Under Services open VPC under Networking and Content Delivery</li>
+  <li>Open Your VPCs</li>
+  <li>select the VPC connected to your EC2 and</li>
+  <li>
+    <p>select Actions =&gt; Edit DNS Hostnames <strong>—&gt; Change DNS hostnames: to YES</strong></p>
+  </li>
+  <li><strong>On initial startup the Original UX login screen appears. Note the messaging on that page as it informs you when the license expires. You <em>will</em> need to subscribe to a new AMI release prior to license expiration if you wish to migrate data from the old EC2 to the new. <em>Licenses on AMIs are not extendible.</em></strong></li>
+</ol>
+
+<h2 id="support-for-lets-encrypt-ssl-certificates">Support for Let’s Encrypt SSL Certificates</h2>
+
+<p>Starting with version <strong>3300.6.0</strong> the Learn for REST and LTI Developers AMI
+supports free Let’s Encrypt SSL Certificates. At this time we do not support
+alternative SSL certificate processes.</p>
+
+<p><strong>NOTE</strong>: <em>Per the Let’s Encrypt <a href="https://letsencrypt.org/docs/faq/">FAQ</a> certificates are valid for only 90 days. In order to update your Let’s Encrypt certificate you must perform a server reboot per below instructions.</em></p>
+
+<ul>
+  <li>
+    <p>you may read about Let’s Encrypt at <a href="https://letsencrypt.org/">Let’s Encrypt - Free SSL/TLS Certificates</a></p>
+  </li>
+  <li>
+    <p>you may read about certbot at <a href="https://certbot.eff.org/">Certbot</a></p>
+  </li>
+  <li>
+    <p>you may read about how to get a free DNS at <a href="https://freeddns.noip.com/">Free Dynamic DNS - No-IP.com - Managed DNS Services</a></p>
+  </li>
+</ul>
+
+<h3 id="setup">Setup</h3>
+
+<p>After starting your AMI there are a few steps to installing and using Let’s
+Encrypt Certificates. After installing the certificate, management of the
+Let’s Encrypt SSL certificate is automatic.</p>
+
+<ol>
+  <li>
+    <p>Register the AWS provided EC2 public IP to your DNS as an A-record. The best practice as an introduction is to use a free DNS service such as freeddns.no-ip.com to provide the FQDN used for your Learn EC2.</p>
+  </li>
+  <li>
+    <p>Use the EC2 Security controls to open HTTP as an inbound security rule - you should have HTTP, HTTPS, and SSH (from your console IP) enabled at this point.</p>
+  </li>
+  <li>SSH to your EC2 instance and create a file containing your FQDN from freeddns.no-ip.com and your email address and save to /home/ubuntu/my_ssl_config. The format of this file is important and should follow the example below. The file contains only two lines specifying the key and value pairs used to configure the Let’s Encrypt process, e.g.:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ssldomain : devmen.hopto.org
+  sslemail : developers@blackboard.com
+</code></pre></div>    </div>
+  </li>
+  <li>SSH to your EC2 instance and from the command line reboot the instance
+using the command $ sudo reboot now</li>
+</ol>
+
+<p><strong>On reboot the server will generate your Let’s Encrypt SSL certificate, on future reboots or restarts the server will check whether the certificate requires renewal. If renewal is required reboot the server to renew the Let’s Encrypt certificate. If your certificate is past expiration, because you ignored the renewal notices, sudo mv the /etc/letsencrypt directory to your home directory for safe keeping and reboot.</strong></p>
+
+<p><strong>Warning: When you stop and start an existing EC2 instance, AWS resets the
+public domain name and IP - you must update your DNS entry to reflect the new
+IP.</strong></p>
+
+<p>**Warning: Let’s Encrypt has a limit of 20 certificate requests on a domain per
+week. Repeated stop and starts of an AMI using the same domain may exceed the
+Let’s Encrypt request limit, requiring you to provide a new domain name. **</p>
+
+<h2 id="what-does-the-blackboard-rest-and-lti-developer-ami-cost">What does the Blackboard REST and LTI Developer AMI cost?</h2>
+
+<p>The Open Innovation Initiative was created to lower the cost of entry for
+developing software solutions on the Blackboard Learn platform. This is
+accomplished by removing the previous Partner program costs and replacing
+those partner program costs with low hourly AMI usage costs. This enables you
+the developer to control your costs for prototyping your applications and
+entering the education software market.</p>
+
+<p>Use of the Developer AMI will result in two charges being made to your
+account:</p>
+
+<ol>
+  <li>
+    <p><strong>An AWS Infrastructure charge</strong><br />
+This charge is based on the EC2 instance type selected to run the AMI and
+varies based on the instance type size and region. An example is $0.0464/hr
+for a t2.medium instance served from</p>
+  </li>
+  <li>
+    <p><strong>Software charge</strong><br />
+A Software charge of $0.05/hr (US dollars) is added to the AWS infrastructure
+charge.</p>
+  </li>
+</ol>
+
+<p>If you have any questions, feel free to ask in this space or email us at
+<a href="mailto:developers@blackboard.com">developers@blackboard.com</a>.</p>
+
+<h2 id="log-into-the-blackboard-learn-application-on-the-ami">Log into the Blackboard Learn Application on the AMI</h2>
+
+<p>The username is administrator. The password is the instance ID, e.g.,
+i-234234234234. If you look at the log created when you spin it up it is also
+printed there. You can find the log from the EC2 console.</p>
+
+<p>The first time you go to login, you will see text on the page like the
+following. NOTE: There is no way to upgrade an AMI. You will need to get the
+latest AMI, and transfer any necessary data, BEFORE the expiration date shown
+on the page you see.</p>
+
+<p><img src="/images/129881.jpeg" alt="Landing page seen the first time you login to the developer AMI" /></p>
+
+<h2 id="configure-your-ami-based-blackboard-learn-instance">Configure Your AMI-based Blackboard Learn Instance</h2>
+
+<p>When you set up your instance of Blackboard Learn, you can configure different
+options. These options are discussed in <a href="https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability#enable-or-disable-lti-tools-for-courses-and-organizations">Enable Learn Tool Interoperability
+(LTI) Links and Text</a>.</p>
+
+<h2 id="triage-your-ami-based-blackboard-learn-instance">Triage Your AMI-based Blackboard Learn Instance</h2>
+
+<p><strong><em>Note that not stopping your EC2 when you encounter an error will continue to incur EC2 charges and we do not issue refunds.Always stop your EC2 if you encounter an error or do not require a 24x7 development instance.</em></strong></p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments</td>
+          <td>Blackboard Help](https://help.blackboard.com/Learn/Administrator/SaaS)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>504 Gateway Error</p>
+  </li>
+  <li>Visiting https://<EC2_Public_DNS> displays a 504 error in your browser:
+    1. Shutdown the instance to stop accumulating charges and try again
+    2. Or reboot the instance:
+</EC2_Public_DNS>    <ol>
+      <li>Ssh into the instance</li>
+      <li>Issue this command: $ sudo reboot now</li>
+      <li>Issue a reboot from the AWS console</li>
+    </ol>
+  </li>
+</ol>
+
+<p>The above restarts the instance and will typically correct the 504 error.</p>
+
+<h2 id="migration-cookbook---recreating-data-between-amis">Migration Cookbook - Recreating Data between AMIs</h2>
+
+<p>Currently, there is no formal migration/transfer tool to port Blackboard Learn
+data between AMI (EC2) instances. However, there are several existing
+administrative tools that can be leveraged to capture the bulk of T&amp;L
+(teaching/learning data) like courses, users, institutional roles, and
+enrollments, etc. from an existing (source) EC2 and reinstate/recreate the
+data onto a (new) EC2. The resources linked below will guide you through this
+data transfer process:</p>
+
+<ol>
+  <li><a href="/attachments/Bb%20Learn%20EC2%20Data%20Transfer.docx">Bb Learn EC2 Data Transfer.docx</a>: A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.</li>
+  <li><a href="/attachments/EC2%20Migration%20SQL%20Scripts%20and%20Feed%20Files.zip">EC2 Migration SQL Scripts and Feed Files.zip</a>: A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).</li>
+</ol>
+
+<h2 id="notice---avg-on-windows-systems">Notice - AVG on Windows Systems</h2>
+
+<p>While using the AVG antivirus product on a Windows system and attempting to
+create a course using Blackboard Learn, AVG may manifest what we believe is a
+false positive dialog regarding CVE-2014-0286-A. This can occur while using
+any browser, though the error message is specific to now unsupported versions
+of Microsoft Internet Explorer 6 through 11. Our security team has indicated
+that this is an issue with the AVG software. Blackboard will be reaching out
+to AVG to discuss. See the AVG website for questions about configuring the AVG
+software, and for their contact information.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

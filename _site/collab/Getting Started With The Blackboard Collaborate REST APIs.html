@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title>Blackboard Collaborate</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Blackboard Collaborate</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Blackboard Collaborate" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" />
+<meta property="og:url" content="http://localhost:4000/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html","headline":"Blackboard Collaborate","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <a href="Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link" >Getting Started</a><br />
+    
+        <a href="Collaborate%20API%20Objects.html" class="header-section-link" >API Resources</a><br />
+    
+        <a href="Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html" class="header-section-link" >API Authentication</a><br />
+    
+        <a href="https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0" class="header-section-link" >API Documentation</a><br />
+    
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="getting-started-with-the-blackboard-collaborate-rest-apis">Getting Started With The Blackboard Collaborate REST APIs</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Getting Started’]</em><br />
+<em>Tags: [‘developer’, ‘getting started’, ‘collaborate’, ‘blackboard’, ‘developers’]</em></p>
+<hr />
+
+<p>This section is dedicated to getting developers up-to-speed quickly with the
+new REST APIs available for Blackboard Collaborate with the Ultra Experience.
+These APIs give the developer the ability to programmatically integrate common
+Collaborate functionality into a web application using the tried and true
+framework that is REST APIs.</p>
+
+<p>Getting started requires a few key decisions on the developer's part. Firstly,
+the Developer should decide what programming language best meets the use cases
+required for the application to be successful. Every language has strengths
+and weaknesses, and with a little research, one can balance ease of use,
+performance, security, and existing frameworks and packages to build the best
+integration possible. Secondly, the developer should review the API
+documentation to ensure that the APIs exist to accomplish those goals. Lastly,
+the Developer must decide if this work is best completed in-house or via an
+engagement with Blackboard Collaborate's consulting group. Often times,
+consulting is a great option for building an integration based on best
+practices developed over many years of experience integrating with Blackboard
+Collaborate.</p>
+
+<h2 id="requesting-access">Requesting Access</h2>
+
+<p>If you are interested in getting started with the Development of integrations
+with Blackboard Collaborate Ultra, send an email to
+<a href="mailto:developers@blackboard.com">developers@blackboard.com</a>. Please tell us
+who you are, what institution you represent, and how you intend to use the
+APIs.</p>
+
+<h2 id="authorization-and-authentication">Authorization and Authentication</h2>
+
+<p>Generally speaking, REST API integrations are largely the same. That is the
+beauty of REST; the developer has a standard set of HTTP Verbs that generally
+perform the same actions, return the same success and failure codes, and most
+languages provide software packages and add-ons that make REST calls simple.
+Usually, the main hurdle is two-fold: What is the business logic behind the
+APIs, and how does an application authenticate to the services in order to
+send the REST calls necessary to perform the actions required.</p>
+
+<p>Most REST frameworks rely on some facet of the OAuth 2.0 standard and
+Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens
+(JWT) in order to accept the application as a trusted entity. For more
+detailed information about the JWT Standard and to learn about available
+libraries for most of today’s popular web application development languages,
+see https://jwt.io. For more information on Blackboard
+Collaborate’s implementation see <a href="Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html">Authorize and Authenticate in Blackboard
+Collaborate</a>.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>It is true that REST APIs allow the developer to choose any programming
+language that supports HTTP calls. That said, there are some languages that
+are consistently at the top of the list. As part of the effort to assist
+Developers in getting up and running, Blackboard typically offers sample code
+and supporting documentation in a number of those popular languages:</p>
+
+<ul>
+  <li><a href="https://github.com/blackboard/BBDN-Collab-Postman-REST">Postman Collection</a></li>
+  <li>Java</li>
+  <li><a href="https://github.com/blackboard/BBDN-Collab-REST-Demo-Python">Python</a></li>
+  <li>Ruby</li>
+  <li>PHP</li>
+  <li>C#/.NET</li>
+  <li>Node.JS</li>
+</ul>
+
+<p>As these samples are developed, the language above will be linked.</p>
+
+<h2 id="tutorials">Tutorials</h2>
+
+<p>The community site will also provide tutorials for how to perform specific
+actions necessary to get up and running in the Collaborate integration game.
+As those assets are developed, they will be listed here.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

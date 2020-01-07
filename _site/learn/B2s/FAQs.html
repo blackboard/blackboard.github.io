@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/B2s/FAQs.html" />
+<meta property="og:url" content="http://localhost:4000/learn/B2s/FAQs.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/B2s/FAQs.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Blackboard%20Building%20Blocks.html" class="header-section-link" >About</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/B2s/Building%20Block%20API%20Documentation.html" class="header-section-link" >B2 API</a></li>
+                                        
+                                            <li><a href="/learn/B2s/Building%20Block%20Development%20Life%20Cycle.html" class="header-section-link" >Development Life Cycle</a></li>
+                                        
+                                            <li><a href="/learn/B2s/Building%20Blocks%20API%20Overview.html" class="header-section-link" >API Overview</a></li>
+                                        
+                                            <li><a href="/learn/B2s/FAQs.html" class="header-section-link" >FAQs</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/B2s/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Building%20Block%20Resources%20and%20Tools.html" class="header-section-link" >Resources</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html" class="header-section-link" >Best Practices</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Introduction%20to%20OpenDB.html" class="header-section-link" >OpenDb</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Examples%20-%20Building%20Blocks.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="faqs">FAQs</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Building Blocks’, ‘Getting Started’, ‘SOAP Web Services’, ‘Tutorials’]</em><br />
+<em>Tags: [‘blackboard learn’, ‘faqs’, ‘developers’, ‘migrated from edugarage’, ‘developer’]</em></p>
+<hr />
+
+<h2 id="account-questions">Account questions</h2>
+
+<p>Your Behind the Blackboard account will provide you with authenticated access
+to Developer Resources. Any Behind the Blackboard account is able to post to
+our discussion forums. If you would like to identify as a Blackboard
+developer, please e-mail your Blackboard Client Manager and request developer
+access for your Behind the Blackboard account.</p>
+
+<p>Anyone who had an existing account as a Blackboard Developer or Blackboard
+Partner has full access to this site. Accounts from legacy developer network
+sites have been migrated.</p>
+
+<p>New developer account requests should be directed to your Blackboard Client
+Manager. Accounts will be provided to existing Blackboard clients and to
+partners enrolled in our Blackboard Developers Network program according to
+our contractual terms. If you do not know who your Client Manager is, please
+contact your institution’s Blackboard System Administrator or primary business
+relationship owner. He or she will know who to contact.</p>
+
+<p>To reset forgotten passwords, please visit <a href="https://behind.blackboard.com/">Behind the
+Blackboard</a> and click the “Forgot
+your password?” link. A new password will be e-mailed to your account.</p>
+
+<h2 id="license-questions">License Questions</h2>
+
+<p>Academic clients should contact their Client Manager for a developer license
+or questions about developer licensing. Generally, academic clients who
+license our enterprise software are eligible for one license to our developer
+software and 25 developer accounts. These accounts allow you to participate in
+and contribute to the content on the wiki and forum areas of this site as well
+as access certain developer content that requires a login to access.</p>
+
+<p>Commercial entities are invited to join the program and purchase developer
+licenses at <a href="https://www.blackboard.com/Platforms/Learn/Extensions/Partnerships-Program.aspx">this link</a>. If you have lost your license file or require a change in
+your license, please contact your sales representative or the partnership
+program.</p>
+
+<p><strong>IMPORTANT</strong>: <em>The developer license of our software limits the number of users, courses, and enrollments that can exist, but otherwise is a fully functional version of the product.</em></p>
+
+<h2 id="installation-assistance">Installation assistance</h2>
+
+<p>Commercial BbDN members are entitled to 30 days of technical support to assist
+with the installation of the Learning System product. For assistance, please
+call our Client Support Team at (888) 788-5264. Have your six-digit company ID
+ready when you call.</p>
+
+<p>All others should read up on the available <a href="/dvba/What%20is%20a%20DVBA?.html">DVBA</a> or request help on the <a href="https://community.blackboard.com/developers">Developer forums</a></p>
+
+<h2 id="apiknown-issues">API/known issues</h2>
+
+<p>If you believe you’ve found an issue with our APIs, please follow this process
+to receive support:</p>
+
+<ol>
+  <li>Post your issue to our discussion forums on the <a href="https://community.blackboard.com/developers">community site</a>.</li>
+  <li>Search the <a href="https://blackboardtechies.s;ack.com">Blackboard Techies Slack Space</a> archives and optionally e-mail the listserv regarding your issue.</li>
+  <li>Open a new case to Behind the Blackboard (or have your Blackboard administrator do this on your behalf)</li>
+</ol>
+
+<h2 id="product-improvementsrecommendations">Product improvements/recommendations</h2>
+
+<p>If you have an idea to improve or add features to our API set, please follow
+this process:</p>
+
+<ol>
+  <li>Work with your Blackboard System Administrator to create and document an Enhancement Request through Behind the Blackboard.</li>
+  <li>If you do not have a Behind the Blackboard account or the above is not a viable option, post a new feature request to our The specified item was not found..</li>
+</ol>
+
+<h2 id="building-block-issues">Building Block issues</h2>
+
+<p>Please follow these steps to receive help with a 3rd party Building Block
+issue:</p>
+
+<ol>
+  <li>Submit a help ticket with the vendor</li>
+  <li>If the vendor instructs you to submit a help ticket with Blackboard, please work with your Blackboard Administrator to do so on Behind the Blackboard</li>
+  <li>Our Support team will attempt to collaborate with the vendor to resolve the issue</li>
+  <li>Issues that cannot be resolved are escalated as appropriate via our support process</li>
+</ol>
+
+
+</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/connecttxt/ConnectTxt%20Programming%20APIs.html" />
+<meta property="og:url" content="http://localhost:4000/connecttxt/ConnectTxt%20Programming%20APIs.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/connecttxt/ConnectTxt%20Programming%20APIs.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <a href="Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link" >Getting Started</a><br />
+    
+        <a href="ConnectTxt%20XML%20Connector.html" class="header-section-link" >XML Connector</a><br />
+    
+        <a href="ConnectTxt%20SOAP%20Connector%20for%20Messaging%20(v1.5).html" class="header-section-link" >SOAP Connector</a><br />
+    
+        <a href="ConnectTxt%20Email2Text.html" class="header-section-link" >Email2Text</a><br />
+    
+        <a href="ConnectTxt%20SOAP%20Connector%20for%20Address%20Book%20(v1.5).html" class="header-section-link" >Address Book</a><br />
+    
+        <a href="ConnectTxt%20Programming%20APIs.html" class="header-section-link" >APIs</a><br />
+    
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="connecttxt-programming-apis">ConnectTxt Programming APIs</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘ConnectTxt Developer Documentation’]</em><br />
+<em>Tags: [‘apis’, ‘blackboard connecttxt’, ‘programming apis’, ‘developer’]</em></p>
+<hr />
+
+<p>ConnectTxt now provide example code in several different programming
+languages. These programming APIs can be used to easily integrate ConnectTxt
+functionality into your existing application.</p>
+
+<h1 id="java">Java</h1>
+
+<ul>
+  <li><a href="https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Addressbook_API_Java_Client_1.2.zip">Download Addressbook software version (v1.2) - zip 33MB</a></li>
+  <li><a href="https://www.txttools.co.uk/preloginjsp/docs/Txttools_SOAP_Messaging_API_Java_Client_1.2.zip">Download Messaging software version (v1.2) - zip 33MB</a></li>
+</ul>
+
+<h1 id="php">PHP</h1>
+
+<p>The PHP API is currently in development. The API is capable of sending and
+receiving messages, as well as retrieving status updates. This new version,
+v0.2, incorporates PHPUnit test classes, and is capable of retrieving account
+credit information from the ConnectTxt website. Future versions will
+incorporate support for the SOAP API and address book uploads.</p>
+
+<ul>
+  <li><a href="https://www.txttools.co.uk/preloginjsp/docs/txttools_PHP_API_0.2.2.zip">Download latest software and documentation (v0.2.2)</a> - Tutorial available in HTML below.</li>
+</ul>
+
+<h1 id="net">.NET</h1>
+
+<ul>
+  <li><a href="https://www.txttools.co.uk/preloginjsp/docs/DotNet_SOAP_AddressbookClient_1.0.zip">Download Addressbook API version 1.0</a></li>
+  <li><a href="https://www.txttools.co.uk/preloginjsp/docs/DotNet_SOAP_MessageClient_1.1.zip">Download Messaging API version 1.1</a></li>
+</ul>
+
+<p>Any question or suggestions please <a href="mailto:txttoolstechies@blackboard.com">e-mail
+us</a> or call +44 (0)113 234 2111.</p>
+
+<ul>
+  <li>Java</li>
+  <li>PHP</li>
+  <li>.NET</li>
+  <li>Txttools PHP API Tutorial
+    <ul>
+      <li>Installation</li>
+      <li>The TxttoolsConnectionFactory and Connection Objects</li>
+      <li>Sending your First SMS</li>
+      <li>Getting Status Updates for a Message</li>
+      <li>Getting Inbound Messages</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="txttools-php-api-tutorial">Txttools PHP API Tutorial</h1>
+
+<p>This document aims to assist PHP developers with integrating their systems
+with txttools through the PHP API. The API, provided under the LGPLv3 licence,
+is designed to make it easy for PHP developers to use the txttools SMS
+messaging system, without having to implement their own connection packages,
+or be aware of the the underlying processes involved.</p>
+
+<p><strong>Please note: This version of the API is a pre-release version, and as such is under intensive development. It is provided with no warranty whatsoever. Future releases of the API may change some or all of the public interface – please check the changelog before installing a new version. Also, this is still a basic intro to get you started, so please see the included PHPDoc for additional options, parameters, and exception details.</strong></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Installation of the PHP API is extremely simple. Just unzip the provided
+installation set to an appropriate directory within your IDE’s workspace. No
+additional setup is required, except to make sure that the server you will be
+running your PHP scripts on can make outbound connections on port 80 and 443.
+If it cannot, speak to your network admin to resolve this.</p>
+
+<h2 id="the-txttoolsconnectionfactory-and-connection-objects">The TxttoolsConnectionFactory and Connection Objects</h2>
+
+<p>The TxttoolsConnectionFactory and Connection objects are the cornerstones of
+the API, and the two classes you will regularly interact with. Including the
+required files for the API is very simple; you just include the
+TxttoolsConnectionFactory object, like this:</p>
+
+<p>require_once(‘/path/to/php/api/TxttoolsConnectionFactory.php’);</p>
+
+<p>(The API uses cascaded includes, so including this one file automatically
+includes any files it depends on.)</p>
+
+<p>To make a connection to txttools, you provide TxttoolsConnectionFactory with
+the required connection settings, and it returns a Connection object that you
+can use to send and receive messages.</p>
+
+<p>For example, to open an XML-based connection to txttools over SSL, you could
+use the following call:</p>
+
+<p>$txttoolsAPI = TxttoolsConnectionFactory::getConnection(</p>
+
+<p>TxttoolsConnectionFactory::$CONNECTION_TYPE_XML,</p>
+
+<p>‘username’,</p>
+
+<p>‘password’,</p>
+
+<p>Connection::$PROTOCOL_SSL</p>
+
+<p>);</p>
+
+<p>The first parameter being passed specifies the type of connection to use –
+XML, SOAP, REST and so forth. For ease of use, these are defined as global
+static fields in the TxttoolsConnectionFactory class.</p>
+
+<p><strong>Note that in this pre-release version, only XML connections are available.</strong></p>
+
+<p>The second and third parameters are the username and password of the txttools
+account you want to send/receive messages from. The fourth parameter is the
+protocol to use when making the connection – either HTTP or SSL. Again, for
+ease of use, these are defined in the Connection object.</p>
+
+<h2 id="sending-your-first-sms">Sending your First SMS</h2>
+
+<p>Before you can send an SMS message, you need to construct the message, and
+assign it some recipients. Firstly, create your MessageRecipient objects:</p>
+
+<p>$recipients = array();</p>
+
+<p>$recipient = new MessageRecipient(‘Preece’, ‘Greg’,</p>
+
+<p>‘txttools.co.uk’, ‘+441234567890’);</p>
+
+<p>array_push($recipients, $recipient);</p>
+
+<p>Note that all phone numbers <strong>must</strong> be internationally formatted – ie, start
+with a plus sign and the international dialling code for the destination
+country. Once you’ve created your recipients, you can create an
+OutboundMessage for them.</p>
+
+<p>$message = new OutboundMessage(‘Message text’, 1234567890,</p>
+
+<p>$recipients);</p>
+
+<p>The parameters here are the text of the message to be sent, the timestamp at
+which it should be sent (seconds since Jan 1st 1970), and the array of
+recipients created above. Now that we have our OutboundMessage object, let’s
+send it!</p>
+
+<p>$returnedObjects = $txttoolsAPI-&gt;sendMessage($message);</p>
+
+<p>This sends the SMS message through the txttools system, and gets the system’s
+response. When sending a message, this consists of a message receipt and an
+initial status update. These are represented by SentMessage and
+SentMessageStatus objects. So print_r($returnedObjects) outputs:</p>
+
+<p>Array</p>
+
+<p>(</p>
+
+<p>[0] =&gt; SentMessage Object</p>
+
+<p>(</p>
+
+<p>[messageText:private] =&gt; Sent message</p>
+
+<p>[destination:private] =&gt; +441234567890</p>
+
+<p>[messageTicket:private] =&gt; 12345</p>
+
+<p>[uniqueID:private] =&gt;</p>
+
+<p>)</p>
+
+<p>[1] =&gt; SentMessageStatus Object</p>
+
+<p>(</p>
+
+<p>[messageTicket:private] =&gt; 12345</p>
+
+<p>[statusCode:private] =&gt; 0</p>
+
+<p>[statusMessage:private] =&gt; Queued at txttools</p>
+
+<p>)</p>
+
+<p>)</p>
+
+<p>All the methods in the Connection class work in this way, returning an array
+of objects representing the data received from the txttools system. You can
+then do as you wish with the returned data – save it to a database, or discard
+it as necessary. It is a good idea to save message receipts, or at the very
+least message tickets, because these are used to poll for status updates on a
+message.</p>
+
+<h2 id="getting-status-updates-for-a-message">Getting Status Updates for a Message</h2>
+
+<p>After you have sent a message, you can check its current status using the
+Connection-&gt;getStatusUpdatesForMessage() method. By providing this method with
+the ticket number of a previously sent message, you will receive one or more
+SentMessageStatus objects for that message.</p>
+
+<p>$statusObjects = $txttoolsAPI-&gt;getStatusUpdatesForMessage(</p>
+
+<p>$messageTicket</p>
+
+<p>);</p>
+
+<p>print_r($statusObjects);</p>
+
+<p>Output:</p>
+
+<p>Array</p>
+
+<p>(</p>
+
+<p>[0] =&gt; SentMessageStatus Object</p>
+
+<p>(</p>
+
+<p>[messageTicket:private] =&gt; 12345</p>
+
+<p>[statusCode:private] =&gt; 5</p>
+
+<p>[statusMessage:private] =&gt; Delivered to handset</p>
+
+<p>)</p>
+
+<p>)</p>
+
+<h2 id="getting-inbound-messages">Getting Inbound Messages</h2>
+
+<p>Getting SMS messages sent into the txttools account is easiest of all:</p>
+
+<p>$inboundMessages = $txttoolsAPI-&gt;getInboundMessages();</p>
+
+<p>print_r($inboundMessages);</p>
+
+<p>This will return an array of InboundMessage objects:</p>
+
+<p>Array</p>
+
+<p>(</p>
+
+<p>[0] =&gt; InboundMessage Object</p>
+
+<p>(</p>
+
+<p>[messageTicket:private] =&gt; 54321</p>
+
+<p>[messageText:private] =&gt; Hi Greg, how are you?</p>
+
+<p>[sourceNumber:private] =&gt; +449876543210</p>
+
+<p>[timeReceived:private] =&gt; 1234567890</p>
+
+<p>)</p>
+
+<p>)</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/B2s/Building%20Blocks%20API%20Overview.html" />
+<meta property="og:url" content="http://localhost:4000/learn/B2s/Building%20Blocks%20API%20Overview.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/B2s/Building%20Blocks%20API%20Overview.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Blackboard%20Building%20Blocks.html" class="header-section-link" >About</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/B2s/Building%20Block%20API%20Documentation.html" class="header-section-link" >B2 API</a></li>
+                                        
+                                            <li><a href="/learn/B2s/Building%20Block%20Development%20Life%20Cycle.html" class="header-section-link" >Development Life Cycle</a></li>
+                                        
+                                            <li><a href="/learn/B2s/Building%20Blocks%20API%20Overview.html" class="header-section-link" >API Overview</a></li>
+                                        
+                                            <li><a href="/learn/B2s/FAQs.html" class="header-section-link" >FAQs</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/B2s/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Building%20Block%20Resources%20and%20Tools.html" class="header-section-link" >Resources</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html" class="header-section-link" >Best Practices</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Introduction%20to%20OpenDB.html" class="header-section-link" >OpenDb</a></li>
+                                
+                            
+                                <li><a href="/learn/B2s/Examples%20-%20Building%20Blocks.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="building-blocks-api-overview">Building Blocks API Overview</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Building Blocks’, ‘Getting Started’]</em><br />
+<em>Tags: [‘building blocks’, ‘blackboard learn’, ‘developer’]</em></p>
+<hr />
+
+<p>Building Blocks are capable of fulfilling predominantly, but not exclusively
+two scenarios:</p>
+
+<ul>
+  <li>Plugging-in additional or enhanced functionality to the core Blackboard product</li>
+  <li>Bridging the Blackboard product to an external system</li>
+</ul>
+
+<p>A Building Block is simply a java based web application that runs on your
+Blackboard application server. Packaged in the web application is an xml
+configuration file called the bb-manifest that defines the security
+restrictions on that particular Building Block as well as where the Building
+Block hooks into the core product. For Building Blocks that have user
+interfaces, tag libraries can be used to give the interface Blackboard’s
+distinct look and feel.</p>
+
+<p>Building Blocks are used to access, add, remove, and manipulate data within
+the Learning System. Examples of data types include users, courses, grades,
+calendar entries, and content items. These objects map to the entities that a
+user would see represented in the user interface.</p>
+
+<p>Accessing and manipulating data involves using a series of loaders and
+persisters that provide the logic and functionality required to save data into
+and read data from the Blackboard Learning System.</p>
+
+<h2 id="functional-overview">Functional Overview</h2>
+
+<h3 id="announcement">Announcement</h3>
+
+<p>Announcements are representations of an announcement within the Blackboard
+application. These can be either system-wide or course-specific in nature.
+Blackboard provides the ability to create, update, and remove announcements.</p>
+
+<h3 id="authentication">Authentication</h3>
+
+<p>The authentication API allows developers to implement a customized
+authentication scheme other than those that ship with the product. An example
+would be creating a way to authenticate against a custom central
+authentication database or other non-LDAP-based authentication service.</p>
+
+<h3 id="calendar">Calendar</h3>
+
+<p>Calendar entries represent a calendar entry within the Blackboard application.
+These can be system-wide, course-specific, or user-specific in nature.
+Blackboard provides the ability to create, update, and remove calendar
+entries.</p>
+
+<h3 id="content">Content</h3>
+
+<p>Content refers to files that exist in the various content areas within a given
+course site such as presentations or documents. The APIs give you the ability
+to add and remove content, create links to content, create sequentially-
+ordered lessons, and access data related to user interaction with a given
+piece of content.</p>
+
+<h3 id="content-system-for-those-clients-who-license-the-blackboard-content-system">Content System (for those clients who license the Blackboard Content System)</h3>
+
+<p>The Blackboard Content System allows users to upload and share content within
+the context of a content management system. The Content System APIs allow
+content to be created, bookmarked, tagged with metadata, incorporated into a
+portfolio, and acted on as part of a workflow.</p>
+
+<h3 id="context">Context</h3>
+
+<p>The Context allows a developer to access information regarding a given user or
+course based on that user’s current interactions with the Learning System.</p>
+
+<h3 id="courses">Courses</h3>
+
+<p>Courses can be created, updated, deleted, and copied in the same ways that are
+possible with the Snapshot enterprise data integration tool.</p>
+
+<h3 id="course-categories">Course Categories</h3>
+
+<p>Course categories allow courses to be categorized according to a given
+taxonomy. Blackboard provides ways to create, update, and remove course
+categories.</p>
+
+<h3 id="discussion-board">Discussion Board</h3>
+
+<p>Discussion board conferences, forums, threads, and posts can be accessed. You
+can also determine the status of a given posting and generate statistics on
+discussion board usage.</p>
+
+<h3 id="enrollments">Enrollments</h3>
+
+<p>Course enrollments can be created, updated, and removed in the same ways that
+are possible with the Snapshot enterprise data integration tool.</p>
+
+<h3 id="file-system">File System</h3>
+
+<p>Various directories can be accessed directly giving access to logs, course
+content, temp directories, and other areas.</p>
+
+<h3 id="gradebook">Gradebook</h3>
+
+<p>Individual gradebook items and scores can be created, updated, and removed.</p>
+
+<h3 id="logging">Logging</h3>
+
+<p>Allows access to the core Blackboard logging system including the ability to
+define new logs.</p>
+
+<h3 id="navigation--course-table-of-contents">Navigation / Course Table of Contents</h3>
+
+<p>Allows the loading of the course table of contents.</p>
+
+<h3 id="plugins">Plugins</h3>
+
+<p>Utility class for interacting with Building Blocks on a Blackboard server
+giving access to information such as which Building Blocks are installed,
+versions of which Blackboard products are installed, and other Building Block
+configuration information.</p>
+
+<h3 id="portal-data">Portal data</h3>
+
+<p>Allows user-specific module data to be created and updated.</p>
+
+<h3 id="roles">Roles</h3>
+
+<p>Allows individual users to be associated with various institution/portal roles
+in the same ways that are possible with the Snapshot enterprise data
+integration tool.</p>
+
+<h3 id="system-configuration">System configuration</h3>
+
+<p>Allows access to server configuration data such as application server name,
+authentication type enabled, installation directory, database name, and SMTP
+configuration.</p>
+
+<h3 id="users">Users</h3>
+
+<p>Allows creation, update, and removal of users in the same ways that are
+possible with the Snapshot enterprise data integration tool.</p>
+
+<h3 id="utility-classes">Utility classes</h3>
+
+<p>Various classes to support functions such as byte-&gt;kilobyte conversion and
+localized number representation.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

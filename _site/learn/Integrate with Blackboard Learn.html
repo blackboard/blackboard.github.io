@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/Integrate%20with%20Blackboard%20Learn.html" />
+<meta property="og:url" content="http://localhost:4000/learn/Integrate%20with%20Blackboard%20Learn.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/Integrate%20with%20Blackboard%20Learn.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="integrate-with-blackboard-learn">Integrate with Blackboard Learn</h1>
+<p><em>Author: Ryan Haber</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘developer’]</em></p>
+<hr />
+
+<h1 id="overview">Overview</h1>
+
+<p>To integrate with the Blackboard Learn server, you can use the following
+approaches.</p>
+
+<ul>
+  <li><strong>REST API</strong>. Blackboard recommends using Blackboard Learn’s REST API to integrate with Blackboard Learn. REST APIs can be accessed using almost any programming or scripting language. To get started, see <a href="REST/Getting%20Started%20With%20REST.html">Getting Started With REST</a>.</li>
+  <li><strong>Building Blocks</strong> are web applications powered by a Java class library and served along with Blackboard Learn. There are some use cases where Building Blocks are the best solution. To get started, click <a href="B2s/Getting%20Started%20With%20Building%20Blocks.html">here</a>.</li>
+  <li><strong>SOAP API</strong>. SOAP is a <strong>deprecated</strong> integration method, superseded by REST, that Blackboard maintains for the time being to maintain backward compatibility.</li>
+</ul>
+
+<p>To integrate with the Blackboard Learn web client application, you can use
+<strong>Learn Tools Interoperability</strong> (LTI) integrations.</p>
+
+<h1 id="wait-rest-soap-i-dont-get-it">Wait. REST? SOAP? I Don’t Get It.</h1>
+
+<p>That’s OK. Take this metaphor as instructive to help you get how the
+integration methods relate to each other.</p>
+
+<ul>
+  <li>
+    <p>A REST API lets a client pass requests and receive responses from a server. The requests and responses are always for chunks of data called resources. Imagine sending a note with your child to school asking for a progress report. When your child’s teacher receives the request, he responds with a report card indicating your child’s current grades. REST methods typically allow a client to create, read, update, and delete data on the server provided the client has authorization to do so. You might use REST methods to <em>create</em> a new user in Learn, then later to <em>read</em> it. After reading it, you might <em>update</em> it or <em>delete</em> it. If your institution only keeps courses in Learn while they are actively available to students, you might <em>read</em> a collection of all the courses, check which ones are still available, and then send a <em>delete</em> request for each course that should no longer exist in your deployment of Blackboard Learn._<br />
+_</p>
+  </li>
+  <li>A Building Block is more closely coupled to the Learn server than a REST-based application is. If a REST API is like passing notes back and forth with your child’s teacher, a Building Block is like having the teacher live in your home with you. The Building Block is, effectively, integrated into your instance of Blackboard Learn as a single application. The “con” of this scenario is that, well, you have a stranger living in your home. The “pro” is that in some cases the integration can do things that it could not otherwise. Like REST-based applications, a Building Block can only do things based on its level of authorization.</li>
+  <li>LTI tools allow you to adapt the user interface of Blackboard Learn to better suit your needs. Integrating an LTI tool is like remodeling your home to add an additional door. With this adapted interface, end users of your Learn instance can access functionality that might otherwise not be built into the Learn user interface.</li>
+  <li>Blackboard has deprecated our old SOAP API. As of Q4 2020, it will no longer be available with Blackboard Learn. If you currently use an integration that uses SOAP, you will need to <a href="SOAP%20-%20Deprecated/SOAP-to-REST%20Migration:%20Mapping.html">migrate the integration to REST</a> or find a new integration that addresses your needs. For purposes of this metaphor, SOAP works in the same way as our REST API. It was just an older, clunkier technology. Blackboard does not support new development with our SOAP API, which will no longer exist starting with the Learn 9.1 release in Q2 2020.</li>
+</ul>
+
+<h1 id="whats-the-right-path-for-me">What’s the Right Path For Me?</h1>
+
+<ul>
+  <li>REST API integration is, in almost every case, the best path for you. For more information, see <a href="REST/Getting%20Started%20With%20REST.html">Getting Started With REST</a>.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>If you need to integration with the Blackboard Learn user interface, you’ll want to create an LTI tool provider as well. For more information, see [Learning Tools Interoperability</td>
+          <td>IMS Global Learning Consortium](https://www.imsglobal.org/activity/learning-tools-interoperability).</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+
+</div>
+    </section>
+  </body>
+</html>

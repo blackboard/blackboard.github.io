@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/Managing%20REST%20Integrations%20in%20Learn.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/Managing%20REST%20Integrations%20in%20Learn.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/Managing%20REST%20Integrations%20in%20Learn.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/Developer%20Groups,%20Site%20Quotas,%20and%20Rate%20Limits.html" class="header-section-link" >Groups, Site Quotas, Rate Limits</a></li>
+                                        
+                                            <li><a href="/learn/REST/Developer%20Portal,%20Development%20and%20Production%20Groups.html" class="header-section-link" >Production Groups</a></li>
+                                        
+                                            <li><a href="/learn/REST/Managing%20REST%20Integrations%20in%20Learn.html" class="header-section-link" >REST in Learn</a></li>
+                                        
+                                            <li><a href="/learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html" class="header-section-link" >DVM Cloud Registration</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators">Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators</h1>
+<p><em>Author: Mark O’Neil</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘blackboard learn’, ‘developers’, ‘system admin’, ‘rest integration’, ‘application id’, ‘role’, ‘entitlement’, ‘privilege’, ‘system role’, ‘developer’]</em></p>
+<hr />
+
+<p><strong>Contents</strong></p>
+
+<ul>
+  <li><a href="#overview-of-the-rest-api-integrations-tool">Overview of the REST API Integrations Tool</a></li>
+  <li><a href="#create-an-integration">Create an Integration</a></li>
+  <li><a href="#managing-your-rest-integration">Managing your REST Integration</a></li>
+  <li><a href="#edit-a-rest-integration">Edit a REST Integration</a></li>
+  <li><a href="#running-an-integration">Running an Integration</a></li>
+  <li><a href="#converting-entitlements-to-gui-privileges">Converting Entitlements to GUI Privileges</a></li>
+</ul>
+
+<p>Blackboard Learn allows administrators to integrate REST applications into
+your deployment of Learn. You do this by giving your integration’s application
+ID available to Learn system administrators who can then configure access to
+your integration. The configure this access with the REST API Integrations
+tool located on the Learn system admin panel.</p>
+
+<h1 id="overview-of-the-rest-api-integrations-tool">Overview of the REST API Integrations Tool</h1>
+
+<p>For the other tasks related in this document, use the REST API Integrations.</p>
+
+<p>To navigate to the REST API Integrations tool:</p>
+
+<ol>
+  <li>Select <strong>System Admin</strong> in the main screen of Blackboard Learn.</li>
+  <li>Select the <strong>REST API Integrations</strong> link is in the Building Blocks section:</li>
+</ol>
+
+<p><img src="/images/86894.png" alt="REST API Integrations" /></p>
+
+<p>The main page for the REST API Integrations tool:</p>
+
+<ul>
+  <li>Lists existing integrations</li>
+  <li>Allows you to manage existing integrations</li>
+  <li>Allows you to create new integrations</li>
+</ul>
+
+<p>This list will be empty if you have not created any integrations.</p>
+
+<p><img src="/images/87147.png" alt="REST API Integrations" /></p>
+
+<h1 id="create-an-integration">Create an Integration</h1>
+
+<p>An integration, here, refers to an external REST application being registered
+to work in conjunction with Blackboard Learn. Before you create an
+integration, the best practice is to create a Learn user with entitlements
+that match those required by the REST application.</p>
+
+<p>To create an integration and thereby allow an application to work with your
+instance of Blackboard Learn:</p>
+
+<ol>
+  <li>On the REST API Integrations page, select <strong>Create Integration</strong>.</li>
+  <li>In the <strong>Application ID</strong> space, enter the application ID proved by the integration’s developers.</li>
+  <li>
+    <p>Select <strong>Browse</strong> next to Learn User. Search through the list of Blackboard Learn users to find the user that the integration should act as.<br />
+Select a user that you specially create for the application and that has only
+the permissions that the integration needs to function properly.</p>
+  </li>
+  <li>For third-party integration, set <strong>End User Access</strong> to Yes. End users will sign in with their own Blackboard Learn ID to use the integration. Each user’s access is then limited to his or her own permissions. If you set End User Access to No, the integration always has access as if it were the Blackboard Learn user indicated on the form.</li>
+  <li><strong>Submit</strong> to save your settings for the integration.</li>
+  <li>Select the Learn user in whose name the application acts. This user must have the entitlements required by the REST Application. For more information about identifying required entitlements, see <em>Converting Documented Entitlements to GUI Privileges</em>, below.</li>
+</ol>
+
+<p>Learn user entitlements are allow a REST application to act in your Learn
+environment. The best practice is to restrict these except as necessary to
+allow the REST Application to function. The vendor or developer of the REST
+application should provide a list of required entitlements.</p>
+
+<p>NEVER configure a REST application to act as a System Admin user. Doing so
+gives the REST application full access to all data and operations of your
+Learn environment possibly resulting in IRREPARABLE harm. If a vendor requests
+a System Admin user for their application, do not allow it. In such a case,
+please provide the vendor’s contact and application information to
+<a href="mailto:developers@blackboard.com">developers@blackboard.com</a> so that we can
+help the vendor correct the situation.</p>
+
+<p><img src="/images/87148.png" alt="Create REST integration" /></p>
+
+<p><strong>Note:</strong> If you are a Blackboard client, a Blackboard Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Blackboard DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.</p>
+
+<p>Contractors are an exception to this policy as they are producing an
+integration on your, the Blackboard client, behalf. Questions regarding the
+policy and whether you are impacted may be asked here, or posted to
+<a href="mailto:developers@blackboard.com">developers@blackboard.com</a>.</p>
+
+<h1 id="managing-your-rest-integration">Managing your REST Integration</h1>
+
+<p>Once you have created a REST integration, you can manage it:</p>
+
+<ol>
+  <li>Edit the integration settings</li>
+  <li>Set the integration availability</li>
+  <li>Delete the integration</li>
+</ol>
+
+<p><img src="/images/87149.png" alt="managing your rest integration" /></p>
+
+<h1 id="edit-a-rest-integration">Edit a REST Integration</h1>
+
+<p>The editor displays information about the integration and allows you to change
+the Learn user that the integration runs as. This allows you to manage the
+permissions on the integration.</p>
+
+<p>To edit an application’s settings, navigate to the REST API Integrations tool.
+Select <strong>Edit</strong> from the context menu of the integration that you want to
+edit. A screen opens like one below.</p>
+
+<p><img src="/images/87150.png" alt="edit a rest integration" /></p>
+
+<p>You may use the standard Learn user and role tools to create an integration-
+specific user.</p>
+
+<h1 id="running-an-integration">Running an Integration</h1>
+
+<p>An REST integration can be run in two ways. In both cases, the application is
+actually remote to the Learn environment.</p>
+
+<ol>
+  <li>A user selects a link within Learn which calls the remote application</li>
+  <li>A remote system call from the REST application</li>
+</ol>
+
+<h1 id="converting-entitlements-to-gui-privileges">Converting Entitlements to GUI Privileges</h1>
+
+<p>There are a number of ways to accomplish this.</p>
+
+<ul>
+  <li>Check out this blog, <a href="https://community.blackboard.com/blogs/4/18">Bookmarklet To Help
+Map Entitlements to Permissions</a></li>
+  <li>Check out this <a href="https://mle.southampton.ac.uk/bb/SHOW-HIDDEN.zip">JSHack</a> contributed by Matthew Deeprose.</li>
+  <li>The <a href="/attachments/EntitlementstoAdminGUI.xlsx">EntitlementsToAdminGUI worksheet</a> (updated 08/10/2019 9:57 AM)
+helps identify the <strong>entitlements</strong> to a string which may be searched on in
+the role <strong>privilege</strong> selection page when creating the role for your REST
+Application user. Paste the documented <strong>entitlement</strong> from the REST API
+documentation to column A and the <strong>privilege</strong> will appear in column B.
+    <ul>
+      <li>Here’s a <a href="https://www.dropbox.com/s/552vjf3vr5fwjyg/2018-10-25_12-53-22.CreatingYourUniqueSystemRoleForYourRESTAppIntegration.mp4%3Fdl%3D0">video demonstration</a>.</li>
+    </ul>
+  </li>
+  <li>Should the spreadsheet not have what you’re looking for, here’s the way to
+find these manually: <a href="https://www.dropbox.com/s/i6m80k7prqaxfcs/2018-10-30_13-39-25.FindingPrivilegeForGivenEntitlement.mp4%3Fdl%3D0">Dropbox - 2018-10-30_13-39-25.FindingPrivilegeForGivenEntitlement.mp4</a></li>
+</ul>
+
+
+</div>
+    </section>
+  </body>
+</html>

@@ -28,6 +28,6 @@ For more information on Kaltura integrations, visit the Kaltura web site [here](
 From a Developer standpoint, Caliper is available in two ways: sending events
 to the Blackboard Learn Activity Stream, and subscribing to the Blackboard
 Learn Activity Stream as an additional Event Store. This section of the
-Blackboard Standards Developer Community will dive into both of these options,
+Blackboard standards Developer Community will dive into both of these options,
 with sample code and supporting documentation.
 
