@@ -1,5 +1,5 @@
-- name: standards
-  link: /standards/Welcome%20To%20standards.html
+- name: Standards
+  link: /standards/Welcome%20To%20Standards.html
   parentId: standards
 - name: LTI
   link: /standards/Getting%20Started%20With%20LTI.html
