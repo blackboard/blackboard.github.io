@@ -1,229 +1,229 @@
 - name: Learn
-  link: /Blackboard%20Learn%20Developers/Integrate%20with%20Blackboard%20Learn.html
+  link: /learn/Integrate%20with%20Blackboard%20Learn.html
   parentId: learn
 - name: REST
-  link: /Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html
+  link: /learn/REST/Getting%20Started%20With%20REST.html
   parentId: rest
   categories:
     - name: Getting Started
-      link: /Blackboard%20Learn%20Developers/REST/Getting%20Started%20With%20REST.html
+      link: /learn/REST/Getting%20Started%20With%20REST.html
       category: getting-started
       topics:
         - name: Basic Authentication
-          link: /Blackboard%20Learn%20Developers/REST/Basic%20Authentication.html
+          link: /learn/REST/Basic%20Authentication.html
           category: getting-started
         - name: Three-Legged OAuth
-          link: /Blackboard%20Learn%20Developers/REST/Three-Legged%20OAuth.html
+          link: /learn/REST/Three-Legged%20OAuth.html
           category: getting-started
     - name: About
-      link: /Blackboard%20Learn%20Developers/REST/The%20Blackboard%20REST%20API%20Framework.html
+      link: /learn/REST/The%20Blackboard%20REST%20API%20Framework.html
       category: about
       topics:
         - name: Deprecation Policy
-          link: /Blackboard%20Learn%20Developers/REST/Public%20REST%20API%20Compatibility%20and%20Deprecation%20Policy.html
+          link: /learn/REST/Public%20REST%20API%20Compatibility%20and%20Deprecation%20Policy.html
           category: about
         - name: Developer Portal Terms
-          link: /Blackboard%20Learn%20Developers/REST/Developer%20Portal%20Terms%20and%20Conditions.html
+          link: /learn/REST/Developer%20Portal%20Terms%20and%20Conditions.html
           category: about
     - name: Advanced
-      link: /Blackboard%20Learn%20Developers/REST/advanced.html
+      link: /learn/REST/advanced.html
       category: advanced
       topics:
         - name: BbML
-          link: /Blackboard%20Learn%20Developers/REST/Blackboard%20Markup%20Language%20-%20BbML.html
+          link: /learn/REST/Blackboard%20Markup%20Language%20-%20BbML.html
           category: advanced
         - name: ContentHandler Datatypes
-          link: /Blackboard%20Learn%20Developers/REST/Data%20Types%20for%20contentHandler.html
+          link: /learn/REST/Data%20Types%20for%20contentHandler.html
           category: advanced
         - name: Guides
-          link: /Blackboard%20Learn%20Developers/REST/Guides%20for%20Learn%20REST%20Methods.html
+          link: /learn/REST/Guides%20for%20Learn%20REST%20Methods.html
           category: advanced
     - name: Admin
-      link: /Blackboard%20Learn%20Developers/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html
+      link: /learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html
       category: admin
       topics:
         - name: Groups, Site Quotas, Rate Limits
-          link: /Blackboard%20Learn%20Developers/REST/Developer%20Groups,%20Site%20Quotas,%20and%20Rate%20Limits.html
+          link: /learn/REST/Developer%20Groups,%20Site%20Quotas,%20and%20Rate%20Limits.html
           category: admin
         - name: Production Groups
-          link: /Blackboard%20Learn%20Developers/REST/Developer%20Portal,%20Development%20and%20Production%20Groups.html
+          link: /learn/REST/Developer%20Portal,%20Development%20and%20Production%20Groups.html
           category: admin
         - name: REST in Learn
-          link: /Blackboard%20Learn%20Developers/REST/Managing%20REST%20Integrations%20in%20Learn.html
+          link: /learn/REST/Managing%20REST%20Integrations%20in%20Learn.html
           category: admin
         - name: DVM Cloud Registration
-          link: /Blackboard%20Learn%20Developers/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html
+          link: /learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html
           category: admin
     - name: Examples
-      link: /Blackboard%20Learn%20Developers/REST/Examples.html
+      link: /learn/REST/Examples.html
       category: examples
       topics:
         - name: C#
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20CSharp.html
+          link: /learn/REST/REST%20Demo%20Using%20CSharp.html
           category: examples
         - name: cURL
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20cURL.html
+          link: /learn/REST/REST%20Demo%20Using%20cURL.html
           category: examples
         - name: Golang
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Golang.html
+          link: /learn/REST/REST%20Demo%20Using%20Golang.html
           category: examples
         - name: Java
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Java.html
+          link: /learn/REST/REST%20Demo%20Using%20Java.html
           category: examples
         - name: PHP
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20PHP.html
+          link: /learn/REST/REST%20Demo%20Using%20PHP.html
           category: examples
         - name: Python
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Python.html
+          link: /learn/REST/REST%20Demo%20Using%20Python.html
           category: examples
         - name: Ruby
-          link: /Blackboard%20Learn%20Developers/REST/REST%20Demo%20Using%20Ruby.html
+          link: /learn/REST/REST%20Demo%20Using%20Ruby.html
           category: examples
 - name: B2s
-  link: /Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html
+  link: /learn/B2s/Getting%20Started%20With%20Building%20Blocks.html
   parentId: b2s
   categories:
     - name: Getting Started
-      link: /Blackboard%20Learn%20Developers/B2s/Getting%20Started%20With%20Building%20Blocks.html
+      link: /learn/B2s/Getting%20Started%20With%20Building%20Blocks.html
       category: getting-started-b2
       topics: 
         - name: Intro to B2s
-          link: /Blackboard%20Learn%20Developers/B2s/Introduction%20to%20Building%20Blocks.html
+          link: /learn/B2s/Introduction%20to%20Building%20Blocks.html
           category: getting-started-b2
         - name: First Project
-          link: /Blackboard%20Learn%20Developers/B2s/First%20Project%20-%20Gradle,%20Git,%20and%20b2-starter-template.html
+          link: /learn/B2s/First%20Project%20-%20Gradle,%20Git,%20and%20b2-starter-template.html
           category: getting-started-b2
     - name: About
-      link: /Blackboard%20Learn%20Developers/B2s/Blackboard%20Building%20Blocks.html
+      link: /learn/B2s/Blackboard%20Building%20Blocks.html
       category: about-b2
       topics:
         - name: B2 API
-          link: /Blackboard%20Learn%20Developers/B2s/Building%20Block%20API%20Documentation.html
+          link: /learn/B2s/Building%20Block%20API%20Documentation.html
           category: about-b2
         - name:  Development Life Cycle
-          link: /Blackboard%20Learn%20Developers/B2s/Building%20Block%20Development%20Life%20Cycle.html
+          link: /learn/B2s/Building%20Block%20Development%20Life%20Cycle.html
           category: about-b2
         - name:  API Overview
-          link: /Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20API%20Overview.html
+          link: /learn/B2s/Building%20Blocks%20API%20Overview.html
           category: about-b2
         - name:  FAQs
-          link: /Blackboard%20Learn%20Developers/B2s/FAQs.html
+          link: /learn/B2s/FAQs.html
           category: about-b2
     - name: Advanced
-      link: /Blackboard%20Learn%20Developers/B2s/advanced.html
+      link: /learn/B2s/advanced.html
       category: advanced-b2
       topics:
         - name: Permission Errors
-          link: /Blackboard%20Learn%20Developers/B2s/Building%20Blocks%20and%20Java%20Permissions.html
+          link: /learn/B2s/Building%20Blocks%20and%20Java%20Permissions.html
           category: advanced-b2
         - name: Template Variables
-          link: /Blackboard%20Learn%20Developers/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html
+          link: /learn/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html
           category: advanced-b2
         - name: Event-Driven API
-          link: /Blackboard%20Learn%20Developers/B2s/Event%20Driven%20API.html
+          link: /learn/B2s/Event%20Driven%20API.html
           category: advanced-b2
         - name: Starting Block
-          link: /Blackboard%20Learn%20Developers/B2s/Starter%20Building%20Block%20Readme.html
+          link: /learn/B2s/Starter%20Building%20Block%20Readme.html
           category: advanced-b2
     - name: Resources
-      link: /Blackboard%20Learn%20Developers/B2s/Building%20Block%20Resources%20and%20Tools.html
+      link: /learn/B2s/Building%20Block%20Resources%20and%20Tools.html
       category: resources-b2
       topics:
         - name: SaaS B2 Scanner
-          link: /Blackboard%20Learn%20Developers/B2s/Building%20Block%20Scan%20Tool%20for%20Blackboard%20Learn%20SaaS.html
+          link: /learn/B2s/Building%20Block%20Scan%20Tool%20for%20Blackboard%20Learn%20SaaS.html
           category: resources-b2
         - name: Enable Debugging
-          link: /Blackboard%20Learn%20Developers/B2s/Enabling%20Remote%20Debugging.html
+          link: /learn/B2s/Enabling%20Remote%20Debugging.html
           category: resources-b2
         - name: Java 11
-          link: /Blackboard%20Learn%20Developers/B2s/8%20steps%20to%20prepare%20for%20Java%2011.html
+          link: /learn/B2s/8%20steps%20to%20prepare%20for%20Java%2011.html
           category: resources-b2
         - name: Java 11 FAQ
-          link: /Blackboard%20Learn%20Developers/B2s/Java%2011%20for%20Learn%20-%20FAQ.html
+          link: /learn/B2s/Java%2011%20for%20Learn%20-%20FAQ.html
           category: resources-b2
     - name: Best Practices
-      link: /Blackboard%20Learn%20Developers/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html
+      link: /learn/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html
       category: best-practices-b2
       topics:
         - name: Code Quality
-          link: /Blackboard%20Learn%20Developers/B2s/Code%20Quality%20Initiative.html
+          link: /learn/B2s/Code%20Quality%20Initiative.html
           category: best-practices-b2
         - name: Security
-          link: /Blackboard%20Learn%20Developers/B2s/Building%20Block%20Security.html
+          link: /learn/B2s/Building%20Block%20Security.html
           category: best-practices-b2
         - name: Secure Coding Practices
-          link: /Blackboard%20Learn%20Developers/B2s/Secure%20Coding%20Practices%20-%20Building%20Blocks.html
+          link: /learn/B2s/Secure%20Coding%20Practices%20-%20Building%20Blocks.html
           category: best-practices-b2
         - name: Using Maven
-          link: /Blackboard%20Learn%20Developers/B2s/Developing%20Building%20Blocks%20with%20the%20Public%20Maven%20Repository.html
+          link: /learn/B2s/Developing%20Building%20Blocks%20with%20the%20Public%20Maven%20Repository.html
           category: best-practices-b2
     - name: OpenDb
-      link: /Blackboard%20Learn%20Developers/B2s/Introduction%20to%20OpenDB.html
+      link: /learn/B2s/Introduction%20to%20OpenDB.html
       category: opendb-b2
       topics:
         - name: Create Db Objects
-          link: /Blackboard%20Learn%20Developers/B2s/Creating%20Database%20Objects%20with%20Building%20Blocks.html
+          link: /learn/B2s/Creating%20Database%20Objects%20with%20Building%20Blocks.html
           category: opendb-b2
         - name: Schema Definitions
-          link: /Blackboard%20Learn%20Developers/B2s/Schema%20Definitions.html
+          link: /learn/B2s/Schema%20Definitions.html
           category: opendb-b2
     - name: Examples
-      link: /Blackboard%20Learn%20Developers/B2s/Examples%20-%20Building%20Blocks.html
+      link: /learn/B2s/Examples%20-%20Building%20Blocks.html
       category: examples-b2
       topics:
         - name: Course, Users, Enrollments
-          link: /Blackboard%20Learn%20Developers/B2s/Course,%20User,%20and%20Enrollment%20Data.html
+          link: /learn/B2s/Course,%20User,%20and%20Enrollment%20Data.html
           category: examples-b2
         - name: Spring
-          link: /Blackboard%20Learn%20Developers/B2s/Spring%20in%20Building%20Blocks.html
+          link: /learn/B2s/Spring%20in%20Building%20Blocks.html
           category: examples-b2
         - name: Schema
-          link: /Blackboard%20Learn%20Developers/B2s/Tutorial%20-%20Schema%20XML.html
+          link: /learn/B2s/Tutorial%20-%20Schema%20XML.html
           category: examples-b2
 - name: SOAP - Deprecated
-  link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
+  link: /learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
   parentId: soap
   categories:
     - name: About
-      link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Blackboard%20Learn%20SOAP%20Web%20Services.html
+      link: /learn/SOAP%20-%20Deprecated/Blackboard%20Learn%20SOAP%20Web%20Services.html
       category: about-soap
       topics:
         - name: SOAP to REST Map
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
+          link: /learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
           category: about-soap
         - name: Intro to SOAP
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html
+          link: /learn/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html
           category: about-soap
         - name: Proxy Tools
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Proxy%20Tools.html
+          link: /learn/SOAP%20-%20Deprecated/Proxy%20Tools.html
           category: about-soap
         - name: About SOAP Sample Code
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/About%20Web%20Services%20Sample%20Code.html
+          link: /learn/SOAP%20-%20Deprecated/About%20Web%20Services%20Sample%20Code.html
           category: about-soap
         - name: Getting Started
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html
+          link: /learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html
           category: about-soap
     - name: Examples
-      link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Examples%20-%20SOAP%20Web%20Services.html
+      link: /learn/SOAP%20-%20Deprecated/Examples%20-%20SOAP%20Web%20Services.html
       category: examples-soap
       topics:
         - name: C#
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C%23.html
+          link: /learn/SOAP%20-%20Deprecated/Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C%23.html
           category: examples-soap
         - name: Python
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Get%20Course%20Announcements%20with%20SOAP%20and%20Python.html
+          link: /learn/SOAP%20-%20Deprecated/Get%20Course%20Announcements%20with%20SOAP%20and%20Python.html
           category: examples-soap
     - name: Tutorials
-      link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Tutorials%20-%20SOAP%20Web%20Services.html
+      link: /learn/SOAP%20-%20Deprecated/Tutorials%20-%20SOAP%20Web%20Services.html
       category: tutorials-soap
       topics:
         - name: Build C# Library
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Library.html
+          link: /learn/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Library.html
           category: tutorials-soap
         - name: Build C# Client
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html
+          link: /learn/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html
           category: tutorials-soap
         - name: Build Java Library
-          link: /Blackboard%20Learn%20Developers/SOAP%20-%20Deprecated/Build%20Java%20Client%20Library.html
+          link: /learn/SOAP%20-%20Deprecated/Build%20Java%20Client%20Library.html
           category: tutorials-soap
    

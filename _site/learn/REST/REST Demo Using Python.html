@@ -1,0 +1,591 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/REST%20Demo%20Using%20Python.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/REST%20Demo%20Using%20Python.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/REST%20Demo%20Using%20Python.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20CSharp.html" class="header-section-link" >C#</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20cURL.html" class="header-section-link" >cURL</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Golang.html" class="header-section-link" >Golang</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Java.html" class="header-section-link" >Java</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20PHP.html" class="header-section-link" >PHP</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Python.html" class="header-section-link" >Python</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Ruby.html" class="header-section-link" >Ruby</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="rest-demo-using-python">REST Demo Using Python</h1>
+<p><em>Author: Mark O’Neil</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘java’, ‘blackboard learn’, ‘example’, ‘sample code’, ‘saas’, ‘developer’]</em></p>
+<hr />
+
+<p>The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting supported Learn objects.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>You must <a href="Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html">register a developer account and application</a> in the Developer Portal</li>
+  <li>You must 
+<a href="Managing%20REST%20Integrations%20in%20Learn.html">register your application</a> in Blackboard Learn</li>
+  <li>You must also configure the script as outlined in the README for the project</li>
+</ul>
+
+<p>This webapp allows you to:</p>
+
+<ul>
+  <li>Authenticate</li>
+  <li>Create, Read, and Update a Data Source</li>
+  <li>Create, Read, and Update a Term</li>
+  <li>Create, Read, and Update a Course</li>
+  <li>Create, Read, and Update a User</li>
+  <li>Create, Read, and Update a Membership</li>
+  <li>Delete created objects in reverse order of create - membership, user, course, term, datasource.</li>
+</ul>
+
+<p>All generated output is sent to the terminal console.</p>
+
+<p><strong>This is not meant to be a Python tutorial. It will not teach you to write code
+in Python. It will, however, give a Developer familiar with Python the
+knowledge necessary to build a REST-based Web Services integration.</strong></p>
+
+<h3 id="assumptions">Assumptions</h3>
+
+<p>This help topic assumes the Developer:</p>
+
+<ul>
+  <li>is familiar with Python</li>
+  <li>has obtained a copy of the<a href="https://github.com/blackboard/BBDN-REST-DEMO_Python"> source code</a> and run as noted in the project <a href="https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.md">README.md</a> file.</li>
+  <li>has a REST-enabled Blackboard Learn instance.</li>
+</ul>
+
+<h3 id="code-walkthrough">Code Walkthrough</h3>
+
+<p>To build an integration with the Blackboard REST Web Services, regardless of
+the programming language of choice, can really be summed up in two steps:</p>
+
+<ol>
+  <li>Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the <a href="Basic%20Authentication.html">Basic Authentication</a> document.</li>
+  <li>Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.</li>
+</ol>
+
+<h4 id="authorization-and-authentication">Authorization and Authentication</h4>
+
+<p>The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
+request is made to the token endpoint with a Basic Authorization header
+containing the base64-encoded key:secret string as its key. The token service
+returns a JSON object containing the Access Token, the Token Type, and the
+number of seconds until the token expires. The token is set to expire after
+one hour, and subsequent calls to retrieve the token will return the same
+token with an updated expiry time until such time that the token has expired.
+There is no refresh token and currently no revoke token method.</p>
+
+<p>The Python code handles authentication and token management in the auth class
+in auth.py:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        def __init__(self, URL):
+            self.SECRET = "insert_your_application_key_here"
+            self.KEY = "insert_your_application_secret_here"
+            self.CREDENTIALS = 'client_credentials'
+            self.PAYLOAD = {
+                'grant_type':'client_credentials'
+            }
+            self.TOKEN = None
+            self.target_url = URL
+      ...
+       def setToken(self):
+            oauth_path = '/learn/api/public/v1/oauth2/token'
+            OAUTH_URL = 'https://' + self.target_url + oauth_path
+            if self.TOKEN is None:
+                session = requests.session()
+                session.mount('https://', Tls1Adapter()) # remove for production
+            # Authenticate
+                r = session.post(OAUTH_URL, data=self.PAYLOAD, auth=(self.KEY, self.SECRET), verify=False)
+                print("[auth:setToken()] STATUS CODE: " + str(r.status_code) )
+                print("[auth:setToken()] RESPONSE: " + r.text)
+                if r.status_code == 200:
+                    parsed_json = json.loads(r.text)
+                    self.TOKEN = parsed_json['access_token']
+    ...
+</code></pre></div></div>
+
+<p>The JSON response is parsed to retrieve the Token which is stored and
+retrieved for subsequent calls by calling <code class="highlighter-rouge">auth.getToken()</code>. Note that the
+retrieving the stored token invokes a sanity check on token expiration,
+requesting a fresh token if nearly expired - see <code class="highlighter-rouge">auth.getToken()</code> and
+<code class="highlighter-rouge">auth.isExpired()</code>.</p>
+
+<h4 id="calling-services">Calling Services</h4>
+
+<p>The individual service calls are handled by Python in service specific class
+files:</p>
+
+<ul>
+  <li>datasource.py</li>
+  <li>term.py</li>
+  <li>course.py</li>
+  <li>user.py</li>
+  <li>membership.py</li>
+</ul>
+
+<p>A sixth file <code class="highlighter-rouge">constants.py</code> contains a set of constants used by the application.</p>
+
+<p>Each of these classes creates the JSON body when appropriate and then calls
+the appropriate HTTP Request, and return the JSON response as a String to be
+displayed in the terminal console window.</p>
+
+<p>In the demo restdemo.py, each of the above objects are called using POST to
+create, PATCH to update, GET to read, and DELETE to delete the target object.
+Note that memberships use PUT to create a membership.</p>
+
+<p>End points are generally defined as <code class="highlighter-rouge">/learn/api/public/v1/&lt;object
+type&gt;/&lt;objectId&gt;</code>. Object ID can be either the pk1, like <code class="highlighter-rouge">_1_1</code>, or as the
+batch_uid. This value should be prepended by externalId:, like
+<code class="highlighter-rouge">externalId:test101</code>.</p>
+
+<p>For example, to retrieve a course by the pk1 <code class="highlighter-rouge">_1_1</code>, you would call <strong>GET
+/learn/api/public/v1/courses/_1_1</strong>. To retrieve by the batch_uid <code class="highlighter-rouge">test101</code>,
+you would call <strong>GET /learn/api/public/v1/courses/externalId:test101.</strong></p>
+
+<p>Create is sent to Learn as a HTTP POST message with a JSON body that defines
+the object. The endpoint should omit the objectId, as this will be generated
+on creation.</p>
+
+<p>Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
+should include the objectId being retrieved.</p>
+
+<p>Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
+the object. The endpoint should include the objectId being updated.</p>
+
+<p>Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
+should include the objectId being deleted.</p>
+
+<p>The following shows the key components of the Python code for making REST
+requests against each of the supported objects. In each case detailed messages
+are printed to the terminal screen for you to follow the process.</p>
+
+<hr />
+
+<h4 id="datasources">Datasources</h4>
+
+<p>Datasources are handled in <code class="highlighter-rouge">datasource.py</code>.</p>
+
+<p><strong>Variables and Create Payload</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     self.DATASOURCES_PATH = '/learn/api/public/v1/dataSources' #create(POST)/get(GET)
+     self.DATASOURCE_PATH = '/learn/api/public/v1/dataSources/externalId:'
+     authStr = 'Bearer ' + token
+    ...
+     self.PAYLOAD = {
+         "externalId":DSKEXTERNALID,
+         "description":"Data Source used for REST demo"
+     }
+</code></pre></div></div>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.post("https://" + self.target_url + self.DATASOURCES_PATH, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.get("https://" + self.target_url + self.DATASOURCE_PATH+DSKEXTERNALID, headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+    ...
+    print("[DataSource:getDataSource()] RESPONSE: " + r.text)
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.patch("https://" + self.target_url + self.DATASOURCE_PATH+DSKEXTERNALID, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+    ...
+    print("[DataSource:updateDataSource()] RESPONSE: " + r.text)
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.delete("https://" + self.target_url + self.DATASOURCE_PATH+DSKEXTERNALID, headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="terms">Terms</h4>
+
+<p>Terms are handled in <code class="highlighter-rouge">term.py</code>. This Class contains the methods for creating,
+reading, updating and deleting Term objects.</p>
+
+<p><strong>Variables and Create Payload</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.terms_Path = '/learn/api/public/v1/terms' #create(POST)/get(GET)
+    self.term_Path = '/learn/api/public/v1/terms/externalId:'
+    self.termExternalId = TERMEXTERNALID #'BBDN-PYTHON-REST-DEMO-TERM'
+    authStr = 'Bearer ' + token
+    self.PAYLOAD = {
+         "externalId":self.termExternalId,
+         "dataSourceId": dsk, #self.dskExternalId, Supported soon.
+         "name":"REST Demo Term",
+         "description": "Term used for REST demo",
+         "availability": {
+              "duration":"Continuous"
+          }
+    }
+</code></pre></div></div>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.post("https://" + self.target_url + self.terms_Path, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.get("https://" + self.target_url + self.term_Path+self.termExternalId, headers={'Authorization':authStr},  verify=False)
+    ...
+    print("[Term:updateTerm()] RESPONSE: " + r.text)
+    Update
+    self.PAYLOAD = {
+           "externalId":self.termExternalId,
+           "dataSourceId": dsk, #self.dskExternalId, #Supported soon
+           "name":"REST Python Demo Term",
+           "description": "Term used for REST Python demo",
+           "availability": {
+                  "duration":"continuous"
+           }
+    }
+    ...
+    r = session.patch("https://" + self.target_url + self.term_Path+self.termExternalId, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.delete("https://" + self.target_url + self.term_Path+self.termExternalId, headers={'Authorization':authStr}, verify=False)
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="courses">Courses</h4>
+
+<p>Courses are handled in <code class="highlighter-rouge">course.py</code>. This class contains the methods for
+creating, reading, updating and deleting course objects .</p>
+
+<p><strong>Variables and Create Payload</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.courses_Path = '/learn/api/public/v1/courses' #create(POST)/get(GET)
+    self.course_Path = '/learn/api/public/v1/courses/externalId:'
+    self.termId = None
+    self.PAYLOAD = {
+           "externalId":constants.COURSEEXTERNALID,
+           "dataSourceId": dsk, #self.dskExternalId, Supported soon.
+           "courseId":constants.COURSEEXTERNALID,
+           "name":"Course used for REST demo",
+           "description":"Course used for REST demo",
+           "allowGuests":"true",
+           "readOnly": "false",
+           "availability": {
+                  "duration":"continuous"
+           }
+    }
+</code></pre></div></div>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.post("https://" + self.target_url + self.courses_Path, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.get("https://" + self.target_url + self.course_Path+constants.COURSEEXTERNALID, headers={'Authorization':authStr},  verify=False)
+    ...
+    print("[Course:getCourse()] RESPONSE: " + r.text)
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.PAYLOAD = {
+           "externalId":constants.COURSEEXTERNALID,
+           "dataSourceId": dsk, #self.dskExternalId, Supported soon.
+           "courseId":constants.COURSEEXTERNALID,
+           "name":"Course used for REST Python demo",
+           "description":"Course used for REST Python demo",
+           "allowGuests":"true",
+           "readOnly": "false",
+           "availability": {
+                  "available":"Yes",
+                  "duration":"continuous"
+           }
+    }
+    r = session.patch("https://" + self.target_url + self.course_Path+constants.COURSEEXTERNALID, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.delete("https://" + self.target_url + self.course_Path+constants.COURSEEXTERNALID, headers={'Authorization':authStr}, verify=False)
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="users">Users</h4>
+
+<p>Users are handled in <code class="highlighter-rouge">user.py</code>. This class contains the methods for creating,
+reading, updating and deleting user objects .</p>
+
+<p><strong>Variables and Create Payload</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.users_Path = '/learn/api/public/v1/users' #create(POST)/get(GET)
+    self.user_Path = '/learn/api/public/v1/users/externalId:'
+    self.PAYLOAD = {
+           "externalId":USEREXTERNALID,
+           "dataSourceId": dsk, #self.dskExternalId, Supported soon.
+           "userName":"python_demo",
+           "password":"python61",
+           "availability": {
+                  "available": "Yes"
+           },
+           "name": {
+           "given": "Python",
+           "family": "Demo",
+           },
+           "contact": {
+           "email": "no.one@ereh.won",
+            }
+    }
+</code></pre></div></div>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.post("https://" + self.target_url + self.users_Path, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.get("https://" + self.target_url + self.user_Path+USEREXTERNALID, headers={'Authorization':authStr},  verify=False)
+    ...
+    print("[User:getUser()] RESPONSE: " + r.text)
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.PAYLOAD = {
+                "externalId": USEREXTERNALID,
+                "dataSourceId": dsk, #self.dskExternalId, Supported soon.
+                "userName":"python_demo",
+                "password": "python16",
+                "availability": {
+                    "available": "Yes"
+                },
+                "name": {
+                    "given": "Python",
+                    "family": "BbDN",
+                    "middle": "Demo",
+                },
+                "contact": {
+                    "email": "no.one@ereh.won",
+                }
+            }
+    ...
+    r = session.patch("https://" + self.target_url + self.user_Path+USEREXTERNALID, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.delete("https://" + self.target_url + self.user_Path+USEREXTERNALID, headers={'Authorization':authStr}, verify=False)
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="memberships">Memberships</h4>
+
+<p>Memberships (enrollment/staff) are handled in <code class="highlighter-rouge">membership.py</code>. This class
+contains the methods for creating, reading, updating and deleting membership
+objects .</p>
+
+<p><strong>Variables and Create Payload</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.PAYLOAD = {
+           "dataSourceId":dsk, #self.dskExternalId, supported soon.
+           "availability": {
+                  "available":"Yes"
+           },
+           "courseRoleId":"Instructor"
+    }
+</code></pre></div></div>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.put("https://" + self.target_url + membership_Path, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.get("https://" + self.target_url + memberships_Path, headers={'Authorization':authStr}, verify=False)
+    ...
+    print("[Membership:getMemberships()] RESPONSE: " + r.text)
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    self.PAYLOAD = {
+           "dataSourceId":dsk,
+           "availability": {
+                  "available":"No"
+           },
+           "courseRoleId":"Student"
+    }
+    ...
+    r = session.patch("https://" + self.target_url + membership_Path, data=json.dumps(self.PAYLOAD), headers={'Authorization':authStr, 'Content-Type':'application/json'}, verify=False)
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    r = session.delete("https://" + self.target_url + membership_Path, headers={'Authorization':authStr}, verify=False)
+</code></pre></div></div>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>All of the code snippets included in this document are included in a sample
+REST Demo Python command line application available on
+<a href="https://github.com/blackboard/BBDN-REST-DEMO_Python">GitHub</a>.
+There is a README.html included that talks more specifically running the code.
+Feel free to review the code and run it against a test or development Learn
+instance to see how it works.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,655 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/REST%20Demo%20Using%20Java.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/REST%20Demo%20Using%20Java.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/REST%20Demo%20Using%20Java.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20CSharp.html" class="header-section-link" >C#</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20cURL.html" class="header-section-link" >cURL</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Golang.html" class="header-section-link" >Golang</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Java.html" class="header-section-link" >Java</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20PHP.html" class="header-section-link" >PHP</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Python.html" class="header-section-link" >Python</a></li>
+                                        
+                                            <li><a href="/learn/REST/REST%20Demo%20Using%20Ruby.html" class="header-section-link" >Ruby</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="rest-demo-using-java">REST Demo Using Java</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘rest’, ‘java’, ‘blackboard learn’, ‘example’, ‘sample code’, ‘saas’, ‘developer’]</em></p>
+<hr />
+
+<p>The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting supported Learn objects. For a more complete tutorial, check out this <a href="Tutorial%20-%20Build%20a%20Java%20Command%20Line%20REST%20Application.html">page</a> to walkthrough building a Java command-line application.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>You must <a href="Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html">register a developer account and application</a> in the Developer Portal</li>
+  <li>You must 
+<a href="Managing%20REST%20Integrations%20in%20Learn.html">register your application</a> in Blackboard Learn</li>
+  <li>You must also configure the script as outlined in the README for the project</li>
+</ul>
+
+<p>This webapp allows you to:</p>
+
+<ul>
+  <li>Authenticate</li>
+  <li>Create, Read, and Update a Data Source</li>
+  <li>Create, Read, and Update a Term</li>
+  <li>Create, Read, and Update a Course</li>
+  <li>Create, Read, and Update a User</li>
+  <li>Create, Read, and Update a Membership</li>
+  <li>Delete created objects in reverse order of create - membership, user, course, term, datasource.</li>
+</ul>
+
+<p>All generated output is sent to the browser.</p>
+
+<p><strong>This is not meant to be a Java tutorial. It will not teach you to write code
+in Java. It will, however, give a Developer familiar with Java the knowledge
+necessary to build a Web Services integration.</strong></p>
+
+<h2 id="assumptions">Assumptions</h2>
+
+<p>This help topic assumes the Developer:</p>
+
+<ul>
+  <li>is familiar with Java</li>
+  <li>has Tomcat running somewhere the webapp can be installed</li>
+  <li>has obtained a copy of the <a href="https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp">source code</a> and built and deployed it to Tomcat in conjunction with the project <a href="https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp/blob/master/README.md">README.md</a> file.</li>
+  <li>has a REST-enabled Blackboard Learn instance.</li>
+</ul>
+
+<h2 id="code-walkthrough">Code Walkthrough</h2>
+
+<p>To build an integration with the Blackboard REST Web Services, regardless of
+the programming language of choice, can really be summed up in two steps:</p>
+
+<ol>
+  <li>Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the <a href="Basic%20Authentication.html">Basic Authentication</a> document.</li>
+  <li>Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.</li>
+</ol>
+
+<h4 id="authorization-and-authentication">Authorization and Authentication</h4>
+
+<p>The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
+request is made to the token endpoint with a Basic Authorization header
+containing the base64-encoded key:secret string as its key. The token service
+returns a JSON object containing the Access Token, the Token Type, and the
+number of seconds until the token expires. The token is set to expire after
+one hour, and subsequent calls to retrieve the token will return the same
+token with an updated expiry time until such time that the token has expired.
+There is no refresh token and currently no revoke token method.</p>
+
+<p>The java code handles this in <code class="highlighter-rouge">bbdn.rest.Authorizer</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      HttpHeaders headers = new HttpHeaders();
+      headers.add("Authorization", "Basic " + getHash());
+      headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+       
+      HttpEntity&lt;String&gt; request = new HttpEntity&lt;String&gt;("grant_type=client_credentials",headers);
+      
+      ResponseEntity&lt;Token&gt; response = restTemplate.exchange(uri, HttpMethod.POST, request, Token.class);
+            
+      Token token = response.getBody();
+</code></pre></div></div>
+
+<p>The JSON response is serialized into the Token object, and you may then
+retrieve those values from that object.</p>
+
+<h4 id="calling-services">Calling Services</h4>
+
+<p>The individual service calls are handled by Java Classes in service specific
+packages, that all implement the <code class="highlighter-rouge">bbdn.rest.RestHandler</code> interface. The
+interface is used to normalize each service handler to make additional service
+implementation standardized as new endpoints are added.</p>
+
+<p>RestHandler dictates that four methods must be implemented:</p>
+
+<ul>
+  <li>String createObject(String access_token);</li>
+  <li>String readObject(String access_token);</li>
+  <li>String updateObject(String access_token);</li>
+  <li>String deleteObject(String access_token);</li>
+</ul>
+
+<p>Each of these methods creates the JSON body when appropriate and then calls
+<code class="highlighter-rouge">bbdn.rest.RestRequest</code> to generate the appropriate HTTP Request, ship it to
+Learn, and return the JSON response as a String to be displayed in the browser
+window.</p>
+
+<p>This all happens with the following code:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    public static String sendRequest(String sUri, HttpMethod method, String access_token, String body) {
+         try {
+              RestTemplate restTemplate = new RestTemplate();
+              // Workaround for allowing unsuccessful HTTP Errors to still print to the screen
+              restTemplate.setErrorHandler(new DefaultResponseErrorHandler(){
+                  protected boolean hasError(HttpStatus statusCode) {
+                        return false;
+              }});
+              // Workaround to allow for PATCH requests
+              HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
+              restTemplate.setRequestFactory(requestFactory);
+             
+              URI uri = null;
+              try {
+                   uri = new URI(RestConstants.HOSTNAME + sUri);
+              } catch (URISyntaxException e) {
+                   e.printStackTrace();
+              }
+             
+              HttpHeaders headers = new HttpHeaders();
+              headers.add("Authorization", "Bearer " + access_token);
+              headers.setContentType(MediaType.APPLICATION_JSON);
+              HttpEntity&lt;String&gt; request = new HttpEntity&lt;String&gt;(body, headers);
+              
+              ResponseEntity&lt;String&gt; response = restTemplate.exchange(uri, method, request, String.class);
+              return (response.toString());
+         }
+         catch (Exception e) {
+              return(e.getMessage());
+         }
+    }
+</code></pre></div></div>
+
+<p>End points are generally defined as <code class="highlighter-rouge">/learn/api/public/v1/&lt;object
+type&gt;/&lt;objectId&gt;</code>. Object ID can be either the pk1, like <code class="highlighter-rouge">_1_1</code>, or as the
+batchuid. This value should be prepended by externalId:, like
+<code class="highlighter-rouge">externalId:test101</code>.</p>
+
+<p>For example, to retrieve a course by the pk1 <code class="highlighter-rouge">_1_1</code>, you would call <strong>GET
+/learn/api/public/v1/courses/_1_1</strong>. To retrieve by the batchuid <code class="highlighter-rouge">test101</code>, you
+would call <strong>GET /learn/api/public/v1/courses/externalId:test101.</strong></p>
+
+<p>Create is sent to Learn as a HTTP POST message with a JSON body that defines
+the object. The endpoint should omit the objectId, as this will be generated
+on creation.</p>
+
+<p>Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
+should include the objectId being retrieved.</p>
+
+<p>Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
+the object. The endpoint should include the objectId being updated.</p>
+
+<p>Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
+should include the objectId being deleted.</p>
+
+<hr />
+
+<h3 id="datasources">Datasources</h3>
+
+<p>Datasources are handled in <code class="highlighter-rouge">bbdn.rest.datasources.DatasourceHandler</code>. As
+illustrated above, this Class implements the RestHandler interface and exposes
+four methods. It also includes a private method to create the JSON payload.</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String createObject(String access_token) {
+          return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH, HttpMethod.POST, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String readObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH + "/externalId:" + RestConstants.DATASOURCE_ID, HttpMethod.GET, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String updateObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH + "/externalId:" + RestConstants.DATASOURCE_ID, HttpMethod.PATCH, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     @Override
+    public String deleteObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.DATASOURCE_PATH + "/externalId:" + RestConstants.DATASOURCE_ID, HttpMethod.DELETE, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Create Body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    private String getBody() {
+         ObjectMapper objMapper = new ObjectMapper();
+         JsonNode datasource = objMapper.createObjectNode();
+         ((ObjectNode) datasource).put("externalId", RestConstants.DATASOURCE_ID);
+         ((ObjectNode) datasource).put("description", RestConstants.DATASOURCE_DESCRIPTION);
+         String body = "";
+         try {
+              body = objMapper.writeValueAsString(datasource);
+         } catch (JsonProcessingException e) {
+              e.printStackTrace();
+         }
+         return(body);
+    }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="terms">Terms</h3>
+
+<p>Terms are handled in <code class="highlighter-rouge">bbdn.rest.terms.TermHandler</code>. As illustrated above, this
+Class implements the RestHandler interface and exposes four methods. It also
+includes a private method to create the JSON payload. In this initial release,
+we are omitting the datasource. This is because the externalId version of the
+datasource is not accepted in JSON payloads at this time. We could create a
+CONSTANT and set it to what we think it will be, but the ID isn’t set until
+the Datasource is created, so we don’t know for sure what it will be.</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String createObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.TERM_PATH, HttpMethod.POST, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String readObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.TERM_PATH + "/externalId:" + RestConstants.TERM_ID, HttpMethod.GET, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String updateObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.TERM_PATH + "/externalId:" + RestConstants.TERM_ID, HttpMethod.PATCH, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String deleteObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.TERM_PATH + "/externalId:" + RestConstants.TERM_ID, HttpMethod.DELETE, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Create Body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    private String getBody() {
+         ObjectMapper objMapper = new ObjectMapper();
+         ObjectNode term = objMapper.createObjectNode();
+         term.put("externalId", RestConstants.TERM_ID);
+         //term.put("dataSourceId", RestConstants.DATASOURCE_ID);
+         term.put("name", RestConstants.TERM_NAME);
+         term.put("description", RestConstants.TERM_DISPLAY);
+         ObjectNode availability = term.putObject("availability");
+         availability.put("available", "Yes");
+         ObjectNode duration = availability.putObject("duration");
+         duration.put("type",  "Continuous");
+         String body = "";
+         try {
+              body = objMapper.writeValueAsString(term);
+         } catch (JsonProcessingException e) {
+              e.printStackTrace();
+         }
+         return(body);
+    }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="courses">Courses</h3>
+
+<p>Course are handled in <code class="highlighter-rouge">bbdn.rest.course.CourseHandler</code>. As illustrated above,
+this Class implements the RestHandler interface and exposes four methods. It
+also includes a private method to create the JSON payload. In this initial
+release, we are omitting the datasource. This is because the externalId
+version of the datasource is not accepted in JSON payloads at this time. We
+could create a CONSTANT and set it to what we think it will be, but the ID
+isn’t set until the Datasource is created, so we don’t know for sure what it
+will be.</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String createObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH, HttpMethod.POST, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String readObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID, HttpMethod.GET, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String updateObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID, HttpMethod.PATCH, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String deleteObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID, HttpMethod.DELETE, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Create Body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    private String getBody() {
+         ObjectMapper objMapper = new ObjectMapper();
+         ObjectNode course = objMapper.createObjectNode();
+         course.put("externalId", RestConstants.COURSE_ID);
+         //course.put("dataSourceId", RestConstants.DATASOURCE_ID);
+         course.put("courseId", RestConstants.COURSE_ID);
+         course.put("name", RestConstants.COURSE_NAME);
+         course.put("description", RestConstants.COURSE_DESCRIPTION);
+         course.put("allowGuests", "true");
+         course.put("readOnly", "false");
+         course.put("termId", RestConstants.TERM_ID);
+         ObjectNode availability = course.putObject("availability");
+         availability.put("duration", "continuous");
+         String body = "";
+         try {
+              body = objMapper.writeValueAsString(course);
+         } catch (JsonProcessingException e) {
+              e.printStackTrace();
+         }
+         return(body);
+    }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="users">Users</h3>
+
+<p>Users are handled in <code class="highlighter-rouge">bbdn.rest.users.UserHandler</code>. As illustrated above, this
+Class implements the RestHandler interface and exposes four methods. It also
+includes a private method to create the JSON payload. In this initial release,
+we are omitting the datasource. This is because the externalId version of the
+datasource is not accepted in JSON payloads at this time. We could create a
+CONSTANT and set it to what we think it will be, but the ID isn’t set until
+the Datasource is created, so we don’t know for sure what it will be.</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String createObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.USER_PATH, HttpMethod.POST, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String readObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.USER_PATH + "/externalId:" + RestConstants.USER_ID, HttpMethod.GET, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String updateObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.USER_PATH + "/externalId:" + RestConstants.USER_ID, HttpMethod.PATCH, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String deleteObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.USER_PATH + "/externalId:" + RestConstants.USER_ID, HttpMethod.DELETE, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Create Body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    private String getBody() {
+         ObjectMapper objMapper = new ObjectMapper();
+         ObjectNode user = objMapper.createObjectNode();
+         user.put("externalId", RestConstants.USER_ID);
+         //user.put("dataSourceId", RestConstants.DATASOURCE_ID);
+         user.put("userName", RestConstants.USER_NAME);
+         user.put("password", RestConstants.USER_PASS);
+         ObjectNode availability = user.putObject("availability");
+         availability.put("available", "Yes");
+         ObjectNode name = user.putObject("name");
+         name.put("given", RestConstants.USER_FIRST);
+         name.put("family", RestConstants.USER_LAST);
+         ObjectNode contact = user.putObject("contact");
+         contact.put("email", RestConstants.USER_EMAIL);
+         String body = "";
+         try {
+              body = objMapper.writeValueAsString(user);
+         } catch (JsonProcessingException e) {
+              e.printStackTrace();
+         }
+          return(body);
+    }
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="memberships">Memberships</h3>
+
+<p>Memberships are handled in <code class="highlighter-rouge">bbdn.rest.memberships.MemberHandler</code>. As illustrated
+above, this Class implements the RestHandler interface and exposes four
+methods. It also includes a private method to create the JSON payload. In this
+initial release, we are omitting the datasource. This is because the
+externalId version of the datasource is not accepted in JSON payloads at this
+time. We could create a CONSTANT and set it to what we think it will be, but
+the ID isn’t set until the Datasource is created, so we don’t know for sure
+what it will be. In addition, the endpoint for memberships is a bit different,
+in that it is a sub-call to courses, so the endpoint would look like
+<code class="highlighter-rouge">/learn/api/public/v1/courses/&lt;courseId&gt;/users/&lt;userId&gt;</code>.</p>
+
+<p><strong>Create</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String createObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.PUT, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String readObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.GET, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String updateObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.PATCH, access_token, getBody()));
+    }
+</code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @Override
+    public String deleteObject(String access_token) {
+         return(RestRequest.sendRequest(RestConstants.COURSE_PATH + "/externalId:" + RestConstants.COURSE_ID + "/users/externalId:"+ RestConstants.USER_ID, HttpMethod.DELETE, access_token, ""));
+    }
+</code></pre></div></div>
+
+<p><strong>Create Body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    private String getBody() {
+         ObjectMapper objMapper = new ObjectMapper();
+         ObjectNode membership = objMapper.createObjectNode();
+         //membership.put("dataSourceId", RestConstants.DATASOURCE_ID);
+         ObjectNode availability = membership.putObject("availability");
+         availability.put("available", "Yes");
+         membership.put("courseRoleId", "Instructor");
+         String body = "";
+         try {
+              body = objMapper.writeValueAsString(membership);
+         } catch (JsonProcessingException e) {
+              e.printStackTrace();
+         }
+         return(body);
+    }
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>All of the code snippets included in this document at included in a sample
+REST Demo Java Webapp application available on
+<a href="https://github.com/blackboard/BBDN-REST-Demo-Java-Webapp">GitHub</a>. There is a README.html included that talks more specifically about
+building and running the code. Feel free to review the code and run it against
+a test or development Learn instance to see how it works.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>

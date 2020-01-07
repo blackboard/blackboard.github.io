@@ -2,7 +2,7 @@
 layout: standards
 parent: standards
 ---
-# Welcome To Standards
+# Welcome To standards
 *Author: Scott Hurrey*  
 *Categories: ['Caliper', 'LTI']*  
 *Tags: ['developer', 'lti', 'standards', 'caliper', 'ims', 'ims global', 'imsglobal']*  

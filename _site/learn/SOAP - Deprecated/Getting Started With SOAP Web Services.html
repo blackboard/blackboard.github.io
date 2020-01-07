@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html" />
+<meta property="og:url" content="http://localhost:4000/learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/SOAP%20-%20Deprecated/Blackboard%20Learn%20SOAP%20Web%20Services.html" class="header-section-link" >About</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP to REST Map</a></li>
+                                        
+                                            <li><a href="/learn/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html" class="header-section-link" >Intro to SOAP</a></li>
+                                        
+                                            <li><a href="/learn/SOAP%20-%20Deprecated/Proxy%20Tools.html" class="header-section-link" >Proxy Tools</a></li>
+                                        
+                                            <li><a href="/learn/SOAP%20-%20Deprecated/About%20Web%20Services%20Sample%20Code.html" class="header-section-link" >About SOAP Sample Code</a></li>
+                                        
+                                            <li><a href="/learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html" class="header-section-link" >Getting Started</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/SOAP%20-%20Deprecated/Examples%20-%20SOAP%20Web%20Services.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                                <li><a href="/learn/SOAP%20-%20Deprecated/Tutorials%20-%20SOAP%20Web%20Services.html" class="header-section-link" >Tutorials</a></li>
+                                
+                            
+                        </ul>
+                
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="getting-started-with-soap-web-services">Getting Started With SOAP Web Services</h1>
+<p><em>Author: Scott Hurrey</em><br />
+<em>Categories: [‘Getting Started’, ‘SOAP Web Services’]</em><br />
+<em>Tags: [‘web services’, ‘soap’, ‘getting started’, ‘blackboard learn’, ‘developer’]</em></p>
+<hr />
+
+<p>Blackboard Learn offers documentation and sample code for the SOAP-based Web
+Services directly in the user interface. The sample code gives you the ability
+to create re-usable libraries in both C# and Java. Once you build this
+library, you can import it into your IDE of choice and start writing code
+against them without having to solve the intricacies of Learn’s Web Service
+implementation or the WS-Security headers needed to interact with them.</p>
+
+<p>Also included in the source code is a fully functioning QA Desktop
+Application, which can be built in C#. Once built, you can test every Web
+Service Blackboard Learn offers with your mouse. In addition, there is a
+sample “Hello World” custom Web Service. Part of the Web Services framework
+allows you to create a customized web service to interact with data not
+available through the standard web service offering, but taking advantage of
+the security framework provided therein.</p>
+
+<p>To access the sample code and documentation, simply login to your Blackboard
+Learn instance and navigate to the System Admin Page. In the Building Block
+module, you will see a link for Web Services. Clicking this link takes you to
+the management interface for the Web Services. On the right hand side of the
+action bar, you will see buttons to download the Documentation and the Source
+Code.</p>
+
+<p>Of course, the real benefit of Web Services is that you can choose your
+development environment, language of choice, and you have full control over
+the code. You can modify your integration any time, without requiring the
+Blackboard System Administrator to change or schedule anything.</p>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Blackboard’s SOAP Web Services implement WS-Security to authorize incoming messages. The way this works is fairly straight forward. The first step is to call ContextWS.initialize(). In the message payload, you will have a SOAP Header and it must contain a WS-Security tag – <wsse> in this example -- and in that section, you will need a <username> tag set equal to "session", and a <password> tag set equal to "nosession". This method will return a session id and for the rest of the session, you will send <wsse:username>session</wsse:username> and <wsse:password>_the session id returned from initialize_</wsse:password>.</password></username></wsse></li>
+  <li>The basic workflow is: ContextWS.intialize(), ContextWS.login(…) or ContextWS.loginTool(…), Initialize the services you need to access, call the methods you need, ContextWS.logout(). To see examples, check the <a href="Example%20-%20SOAP%20Web%20Services.html">Examples</a> pages.</li>
+  <li>All of the Web Services have their own initialize method. The names vary from service-to-service, but with the exception of ContextWS, they all take a boolean argument called ignore. This argument was added simply because the .NET sample code generator doesn’t work without those methods having at least one argument. Its called ignore, because it is ignored, so you set it to true or false without affecting anything.</li>
+</ul>
+
+
+</div>
+    </section>
+  </body>
+</html>

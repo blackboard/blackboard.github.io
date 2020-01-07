@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/learn/REST/Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html" />
+<meta property="og:url" content="http://localhost:4000/learn/REST/Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/learn/REST/Use%20APIs%20to%20Merge%20and%20Cross-list%20Courses.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20standards.html" class="header-section-link">Standards</a>
+  
+</nav>
+    <section>
+      <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+    
+        <ul>
+            
+                    <li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link" >Learn</a></li>
+                    
+            
+                    <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >REST</a></li>
+                    
+                        <ul>
+                            
+                                <li><a href="/learn/REST/Getting%20Started%20With%20REST.html" class="header-section-link" >Getting Started</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html" class="header-section-link" >About</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/advanced.html" class="header-section-link" >Advanced</a></li>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="/learn/REST/Blackboard%20Markup%20Language%20-%20BbML.html" class="header-section-link" >BbML</a></li>
+                                        
+                                            <li><a href="/learn/REST/Data%20Types%20for%20contentHandler.html" class="header-section-link" >ContentHandler Datatypes</a></li>
+                                        
+                                            <li><a href="/learn/REST/Guides%20for%20Learn%20REST%20Methods.html" class="header-section-link" >Guides</a></li>
+                                        
+                                    </ul>
+                                
+                            
+                                <li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html" class="header-section-link" >Admin</a></li>
+                                
+                            
+                                <li><a href="/learn/REST/Examples.html" class="header-section-link" >Examples</a></li>
+                                
+                            
+                        </ul>
+                
+            
+                    <li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html" class="header-section-link" >B2s</a></li>
+                    
+            
+                    <li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html" class="header-section-link" >SOAP - Deprecated</a></li>
+                    
+            
+        </ul>
+    
+        
+</div>
+      
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1 id="use-apis-to-merge-and-cross-list-courses">Use APIs to Merge and Cross-list Courses</h1>
+<p><em>Author: Ryan Haber</em><br />
+<em>Categories: []</em><br />
+<em>Tags: [‘developer’]</em></p>
+<hr />
+
+<h1 id="overview">Overview</h1>
+
+<p>Your institution often needs to manage many courses or sections together. The
+mechanism that Blackboard Learn provides for doing this is referred to as
+course merging or cross-listing. Merged and cross-listed courses are, under
+the hood, the same thing: two or more courses in a parent-child relationship.
+A course set is a parent course together with all its child courses. In
+physical terms, these students might have different courses listed on their
+schedules. If their courses are merged in Learn, their schedules show the time
+and place as determined by the registrar and they receive instruction from the
+same instructor(s). All students in the child courses have access to the same
+online content.</p>
+
+<p>Blackboard Learn synchronizes enrollments in child courses with their parent
+course. Users enrolled in a child course thus have access to the content of
+the parent course. Likewise, when you use management tools in a parent course,
+you will also affect users enrolled in its children courses. Blackboard Learn
+preserves user roles from the last time a user is enrolled into any of the
+courses in the course set. A student can only exist in one course in a course
+set; Learn ignores duplicate enrollments.</p>
+
+<p>Users with administrative entitlements can merge courses.</p>
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<p>You need an authentication token from a user with administrative entitlements
+to merge courses. For a complete list of specific requirements for any
+particular method, see the <a href="https://community.blackboard.com/external-link.jspa?url=https%3A/
+/developer.blackboard.com/portal/displayApi/Learn">Blackboard Learn API
+reference</a>.</p>
+
+<h2 id="merge-a-course">Merge a course</h2>
+
+<p>To merge one course as a child of another:</p>
+
+<ol>
+  <li>Find the courseId of the course that you want to be the parent.</li>
+  <li>Find the courseId of the course you want to be the child.</li>
+  <li>Make a PUT request to /learn/api/public/v1/courses/{courseId}/children/{childCourseId}.</li>
+</ol>
+
+<h2 id="get-the-children-of-a-course">Get the children of a course</h2>
+
+<p>To identify the children courses of a course:</p>
+
+<ol>
+  <li>Find the courseId of the parent course.</li>
+  <li>Make a GET request to /learn/api/public/v1/courses/{courseId}/children.</li>
+</ol>
+
+<h2 id="get-the-course-set-that-a-course-belongs-to">Get the course set that a course belongs to</h2>
+
+<p>To get a list of all the courses merged with a particular course, regardless
+of which are children and which is the parent, make a GET request to
+/learn/api/public/v1/courses/{courseId}/crossListSet.</p>
+
+
+</div>
+    </section>
+  </body>
+</html>
