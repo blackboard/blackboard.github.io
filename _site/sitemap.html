@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'/>
+    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
+    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
+    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href='https://developer.blackboard.com/assets/portal/favicon.ico'>
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+    </script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/sitemap.html" />
+<meta property="og:url" content="http://localhost:4000/sitemap.html" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/sitemap.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div id='top-content'>
+    <div id="header" class='header-min-width'>
+        <div id="header-logos">
+            <div id="header-logos-left-container" class='inline-box'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box'>
+                
+                    <a href="Contact.html" class="header-section-link">Contact Us</a>
+                
+                    <a href="https://community.blackboard.com/developers" class="header-section-link">Community</a>
+                
+                    <a href="https://developer.blackboard.com" class="header-section-link">Developer Portal</a>
+                
+                    <a href="BECOME%20AN%20OFFICIAL%20BLACKBOARD%20PARTNER!.html" class="header-section-link">Become a Partner</a>
+                
+                    <a href="/Get%20Involved.html" class="header-section-link">Get Involved</a>
+                
+            </div>
+            <br class="clearBoth"/>
+        </div>
+            
+        <br />
+        <div class="wrap">
+            <div id="subhead-section" class="subhead-icon-header-interaction">
+                <h1 style="color: white;">Developer Documentation</h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <nav style='background-color: black;'>
+  
+    <a href="/" class="header-section-link">Home</a>
+  
+    <a href="/learn/Integrate%20with%20Blackboard%20Learn.html" class="header-section-link">Learn</a>
+  
+    <a href="/collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html" class="header-section-link">Collab</a>
+  
+    <a href="/connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html" class="header-section-link">ConnectTxt</a>
+  
+    <a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html" class="header-section-link">Mobile</a>
+  
+    <a href="/openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html" class="header-section-link">OpenLMS</a>
+  
+    <a href="/dvba/What%20is%20a%20DVBA%3F.html" class="header-section-link">DVBA</a>
+  
+    <a href="/standards/Welcome%20To%20Standards.html" class="header-section-link">Standards</a>
+  
+    <a href="/sitemap.html" class="header-section-link">Sitemap</a>
+  
+    <a href="/search.html" class="header-section-link">Search</a>
+  
+</nav>
+    <section>
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <p>Welcome to the home of Blackboard’s Developer Documentation. Here you will find everything you need to get started developing integrations and enhancements with Blackboard products.</p>
+
+<p>Please find below the ful site map:</p>
+
+<h3>Blackboard Learn</h3>
+<ul>
+
+<li><a href="/learn/Integrate%20with%20Blackboard%20Learn.html">Learn</a></li>
+<ul>
+
+</ul>
+
+<li><a href="/learn/REST/Getting%20Started%20With%20REST.html">REST</a></li>
+<ul>
+
+<li><a href="/learn/REST/Getting%20Started%20With%20REST.html">Getting Started</a></li>
+<ul>
+
+<li><a href="/learn/REST/Basic%20Authentication.html">Basic Authentication</a></li>
+
+<li><a href="/learn/REST/Three-Legged%20OAuth.html">Three-Legged OAuth</a></li>
+
+</ul>
+
+<li><a href="/learn/REST/The%20Blackboard%20REST%20API%20Framework.html">About</a></li>
+<ul>
+
+<li><a href="/learn/REST/Public%20REST%20API%20Compatibility%20and%20Deprecation%20Policy.html">Deprecation Policy</a></li>
+
+<li><a href="/learn/REST/Developer%20Portal%20Terms%20and%20Conditions.html">Developer Portal Terms</a></li>
+
+</ul>
+
+<li><a href="/learn/REST/advanced.html">Advanced</a></li>
+<ul>
+
+<li><a href="/learn/REST/Blackboard%20Markup%20Language%20-%20BbML.html">BbML</a></li>
+
+<li><a href="/learn/REST/Data%20Types%20for%20contentHandler.html">ContentHandler Datatypes</a></li>
+
+<li><a href="/learn/REST/Guides%20for%20Learn%20REST%20Methods.html">Guides</a></li>
+
+</ul>
+
+<li><a href="/learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html">Admin</a></li>
+<ul>
+
+<li><a href="/learn/REST/Developer%20Groups,%20Site%20Quotas,%20and%20Rate%20Limits.html">Groups, Site Quotas, Rate Limits</a></li>
+
+<li><a href="/learn/REST/Developer%20Portal,%20Development%20and%20Production%20Groups.html">Production Groups</a></li>
+
+<li><a href="/learn/REST/Managing%20REST%20Integrations%20in%20Learn.html">REST in Learn</a></li>
+
+<li><a href="/learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html">DVM Cloud Registration</a></li>
+
+</ul>
+
+<li><a href="/learn/REST/Examples.html">Examples</a></li>
+<ul>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20CSharp.html">C#</a></li>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20cURL.html">cURL</a></li>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20Golang.html">Golang</a></li>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20Java.html">Java</a></li>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20PHP.html">PHP</a></li>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20Python.html">Python</a></li>
+
+<li><a href="/learn/REST/REST%20Demo%20Using%20Ruby.html">Ruby</a></li>
+
+</ul>
+
+</ul>
+
+<li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html">B2s</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Getting%20Started%20With%20Building%20Blocks.html">Getting Started</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Introduction%20to%20Building%20Blocks.html">Intro to B2s</a></li>
+
+<li><a href="/learn/B2s/First%20Project%20-%20Gradle,%20Git,%20and%20b2-starter-template.html">First Project</a></li>
+
+</ul>
+
+<li><a href="/learn/B2s/Blackboard%20Building%20Blocks.html">About</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Building%20Block%20API%20Documentation.html">B2 API</a></li>
+
+<li><a href="/learn/B2s/Building%20Block%20Development%20Life%20Cycle.html">Development Life Cycle</a></li>
+
+<li><a href="/learn/B2s/Building%20Blocks%20API%20Overview.html">API Overview</a></li>
+
+<li><a href="/learn/B2s/FAQs.html">FAQs</a></li>
+
+</ul>
+
+<li><a href="/learn/B2s/advanced.html">Advanced</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Building%20Blocks%20and%20Java%20Permissions.html">Permission Errors</a></li>
+
+<li><a href="/learn/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html">Template Variables</a></li>
+
+<li><a href="/learn/B2s/Event%20Driven%20API.html">Event-Driven API</a></li>
+
+<li><a href="/learn/B2s/Starter%20Building%20Block%20Readme.html">Starting Block</a></li>
+
+</ul>
+
+<li><a href="/learn/B2s/Building%20Block%20Resources%20and%20Tools.html">Resources</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Building%20Block%20Scan%20Tool%20for%20Blackboard%20Learn%20SaaS.html">SaaS B2 Scanner</a></li>
+
+<li><a href="/learn/B2s/Enabling%20Remote%20Debugging.html">Enable Debugging</a></li>
+
+<li><a href="/learn/B2s/8%20steps%20to%20prepare%20for%20Java%2011.html">Java 11</a></li>
+
+<li><a href="/learn/B2s/Java%2011%20for%20Learn%20-%20FAQ.html">Java 11 FAQ</a></li>
+
+</ul>
+
+<li><a href="/learn/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html">Best Practices</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Code%20Quality%20Initiative.html">Code Quality</a></li>
+
+<li><a href="/learn/B2s/Building%20Block%20Security.html">Security</a></li>
+
+<li><a href="/learn/B2s/Secure%20Coding%20Practices%20-%20Building%20Blocks.html">Secure Coding Practices</a></li>
+
+<li><a href="/learn/B2s/Developing%20Building%20Blocks%20with%20the%20Public%20Maven%20Repository.html">Using Maven</a></li>
+
+</ul>
+
+<li><a href="/learn/B2s/Introduction%20to%20OpenDB.html">OpenDb</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Creating%20Database%20Objects%20with%20Building%20Blocks.html">Create Db Objects</a></li>
+
+<li><a href="/learn/B2s/Schema%20Definitions.html">Schema Definitions</a></li>
+
+</ul>
+
+<li><a href="/learn/B2s/Examples%20-%20Building%20Blocks.html">Examples</a></li>
+<ul>
+
+<li><a href="/learn/B2s/Course,%20User,%20and%20Enrollment%20Data.html">Course, Users, Enrollments</a></li>
+
+<li><a href="/learn/B2s/Spring%20in%20Building%20Blocks.html">Spring</a></li>
+
+<li><a href="/learn/B2s/Tutorial%20-%20Schema%20XML.html">Schema</a></li>
+
+</ul>
+
+</ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html">SOAP - Deprecated</a></li>
+<ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Blackboard%20Learn%20SOAP%20Web%20Services.html">About</a></li>
+<ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html">SOAP to REST Map</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html">Intro to SOAP</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Proxy%20Tools.html">Proxy Tools</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/About%20Web%20Services%20Sample%20Code.html">About SOAP Sample Code</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html">Getting Started</a></li>
+
+</ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Examples%20-%20SOAP%20Web%20Services.html">Examples</a></li>
+<ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C%23.html">C#</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Get%20Course%20Announcements%20with%20SOAP%20and%20Python.html">Python</a></li>
+
+</ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Tutorials%20-%20SOAP%20Web%20Services.html">Tutorials</a></li>
+<ul>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Library.html">Build C# Library</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html">Build C# Client</a></li>
+
+<li><a href="/learn/SOAP%20-%20Deprecated/Build%20Java%20Client%20Library.html">Build Java Library</a></li>
+
+</ul>
+
+</ul>
+
+</ul>
+
+<h3>Blackboard Collaborate</h3>
+
+<p><a href="Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html">Getting Started</a><br /></p>
+
+<p><a href="Collaborate%20API%20Objects.html">API Resources</a><br /></p>
+
+<p><a href="Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html">API Authentication</a><br /></p>
+
+<p><a href="https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0">API Documentation</a><br /></p>
+
+<h3>Blackboard ConnectTxt</h3>
+
+<p><a href="Blackboard%20ConnectTxt%20Developer%20Documentation.html">Getting Started</a><br /></p>
+
+<p><a href="ConnectTxt%20XML%20Connector.html">XML Connector</a><br /></p>
+
+<p><a href="ConnectTxt%20SOAP%20Connector%20for%20Messaging%20(v1.5).html">SOAP Connector</a><br /></p>
+
+<p><a href="ConnectTxt%20Email2Text.html">Email2Text</a><br /></p>
+
+<p><a href="ConnectTxt%20SOAP%20Connector%20for%20Address%20Book%20(v1.5).html">Address Book</a><br /></p>
+
+<p><a href="ConnectTxt%20Programming%20APIs.html">APIs</a><br /></p>
+
+<h3>Blackboard Mobile</h3>
+<p><a href="/mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html">Mobile</a><br /></p>
+
+<h3>Blackboard OpenLMS</h3>
+
+<p><a href="Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html">Getting Started</a><br /></p>
+
+<p><a href="Collaborate%20API%20Objects.html">API Resources</a><br /></p>
+
+<p><a href="Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html">API Authentication</a><br /></p>
+
+<p><a href="https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0">API Documentation</a><br /></p>
+
+<h3>Developer Versions of Blackboard Applications</h3>
+
+<p><a href="What%20is%20a%20DVBA%3F.html">DVBA Home</a><br /></p>
+
+<p><a href="Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html">Developer AMI</a><br /></p>
+
+<p><a href="Developer%20Virtual%20Machine%20-%20DVM.html">DVM</a><br /></p>
+
+<h3>IMS Standards</h3>
+
+<ul>
+
+<li><a href="/standards/Welcome%20To%20Standards.html">Standards</a></li>
+<ul>
+
+</ul>
+
+<li><a href="/standards/Getting%20Started%20With%20LTI.html">LTI</a></li>
+<ul>
+
+</ul>
+
+<li><a href="/standards/Getting%20Started%20With%20Caliper.html">Caliper</a></li>
+<ul>
+
+<li><a href="/standards/Getting%20Started%20With%20Caliper.html">About</a></li>
+<ul>
+
+<li><a href="/standards/Caliper%20Metric%20Profiles.html">Metric Profiles</a></li>
+
+<li><a href="/standards/Configuring%20Caliper%20Event%20Store%20in%20Blackboard%20Learn.html">Configuring Learn</a></li>
+
+</ul>
+
+<li><a href="/standards/Blackboard%20Caliper%20Event%20Guide.html">Events</a></li>
+<ul>
+
+<li><a href="/standards/Session%20Events.html">SessionEvent</a></li>
+
+<li><a href="/standards/View%20Events.html">ViewEvent</a></li>
+
+<li><a href="/standards/LTI%20Events.html">LTIEvent</a></li>
+
+<li><a href="/standards/Assignable%20Events.html">AssignableEvent</a></li>
+
+<li><a href="/standards/Assessment%20Events.html">AssessmentEvent</a></li>
+
+<li><a href="/standards/Assessment%20Events.html">AssessmentItemEvent</a></li>
+
+<li><a href="/standards/Forum%20Events.html">ForumEvent</a></li>
+
+<li><a href="/standards/Outcome%20Events.html">OutcomeEvent</a></li>
+
+<li><a href="/standards/Calculated%20Grade%20Snapshot%20Events.html">CalculatedGradeSnapshotEvent</a></li>
+
+<li><a href="/standards/Content%20Events.html">ContentEvent</a></li>
+
+<li><a href="/standards/Course%20Group%20Events.html">CourseGroupEvent</a></li>
+
+<li><a href="/standards/Blog%20Events.html">BlogEvent</a></li>
+
+<li><a href="/standards/Wiki%20Events.html">WikiEvent</a></li>
+
+</ul>
+
+</ul>
+
+</ul>
+
+
+</div>
+    </section>
+  </body>
+</html>
