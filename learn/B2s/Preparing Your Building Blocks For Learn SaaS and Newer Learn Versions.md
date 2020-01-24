@@ -28,7 +28,7 @@ likely need to be modified to run in the new Blackboard.
   * [Shared Content Folder](#shared-content-folder)
   * [Logging Changes](#logging-changes)
   * [Statelessness](#statelessness)
-  * [Java 8](#java-8)
+  * [Java 11](#java-11)
   * [Tomcat 8](#tomcat-8)
     * [JSP Precompilation](#jsp-precompilation)
     * [bb-context-config.properties](#bb-context-config.properties)
@@ -246,14 +246,11 @@ ContextManagerFactory.getInstance().getContext().getSession().setGlobalKey("myVe
 Non-String values need to be serialized to save on the **BbSession** -
 refactor to avoid if at all possible.
 
-# Java 8
+# Java 11
 
-Blackboard Learn SaaS runs on Java 8. As a result, Building Block that are to
-be installed in the cloud, or on 9.1 Q2 2016 or later, need to be built with
-Java 8. For Learn Java 8 releases, Spring 4.2.0+ will be required for B2s that
-use Spring. For more information see [Preparing Your Building Block for
-Blackboard Learn 9.1 Q2
-2016](Preparing%20Your%20Building%20Block%20for%20Blackboard%20Learn%209.1%20Q2%202016.html)
+Blackboard Learn SaaS runs on Java 11, as of Learn 3800. As a result, Building Block that are to
+be installed in the cloud, or on 9.1 Q2 2020 or later, need to be built with
+Java 11. For more information see [8 steos to prepare for Java 11](8%20steps%20to%20prepare%20for%20Java%2011.html).
 
 # Tomcat 8
 
