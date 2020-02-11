@@ -136,6 +136,9 @@
 <loc>http://localhost:4000/learn/B2s/Developing%20Building%20Blocks%20with%20the%20Public%20Maven%20Repository.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/standards/Developing%20an%20LTI%20Advantage%20Solution.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/learn/B2s/Dynamic%20Rendering%20with%20Template%20Variables.html</loc>
 </url>
 <url>
@@ -206,6 +209,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/learn/B2s/Java%2011%20for%20Learn%20-%20FAQ.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/standards/LTI%20Advantage%20in%20Learn%20-%204-part%20Video%20Tutorial.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/standards/LTI%20Events.html</loc>
