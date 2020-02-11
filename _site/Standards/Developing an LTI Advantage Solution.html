@@ -52,10 +52,10 @@
     <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/standards/Getting%20Started%20With%20LTI.html" />
-<meta property="og:url" content="http://localhost:4000/standards/Getting%20Started%20With%20LTI.html" />
+<link rel="canonical" href="http://localhost:4000/standards/Developing%20an%20LTI%20Advantage%20Solution.html" />
+<meta property="og:url" content="http://localhost:4000/standards/Developing%20an%20LTI%20Advantage%20Solution.html" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"http://localhost:4000/standards/Getting%20Started%20With%20LTI.html","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/standards/Developing%20an%20LTI%20Advantage%20Solution.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -128,6 +128,14 @@
                                 
                                     <li><a href="/standards/Developing%20an%20LTI%20Advantage%20Solution.html" class="header-section-link" >Getting Started</a></li>
                                     
+                                        <ul>
+                                            
+                                                <li><a href="/standards/Developing%20an%20LTI%20Advantage%20Solution.html" class="header-section-link" >Develop for LTI Advantage</a></li>
+                                            
+                                                <li><a href="/standards/LTI%20Advantage%20in%20Learn%20-%204-part%20Video%20Tutorial.html" class="header-section-link" >LTI Advantage Video Series</a></li>
+                                            
+                                        </ul>
+                                    
                                 
                             </ul>
                     
@@ -145,72 +153,17 @@
     <!-- Use any element to open the sidenav -->
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-    <h1 id="getting-started-with-lti">Getting Started With LTI</h1>
-<p><em>Author: Scott Hurrey</em><br />
+    <h1 id="developing-an-lti-13advantage-solution----recordings-and-resources">Developing an LTI 1.3/Advantage Solution -  Recordings and Resources</h1>
+<p><em>Author: Mark Kauffman</em><br />
 <em>Categories: [‘LTI’]</em><br />
 <em>Tags: [‘lti’, ‘ims learning tools interoperability’, ‘ims global’, ‘developer’, ‘developers’, ‘standards’, ‘getting started’]</em></p>
 <hr />
 
-<h2 id="overview">Overview</h2>
+<p>On April 10, 2019, Eric Preston, Blackboard’s resident LTI expert, spoke with us in Technical Office Hours. He gave us an overview of LTI technology. <a href="https://us.bbcollab.com/collab/ui/session/playback/load/53618fbbef8b45628ff9b18f407d7456">Watch recording the recording in Bb Collaborate.</a></p>
 
-<p>Learning Tool Interoperability is a standard from the IMS Global consortium.
-This standard focuses on contextual launches and grade return. For more
-information about the standard, see <a href="https://imsglobal.org/lti">Learning Tools
-Interoperability</a>.</p>
+<p>On May 1, 2019, Eric followed up with another, deeper dive into coding an LTI integration. <a href="https://us.bbcollab.com/recording/e193c6cb59cb4ed1a776c271665d4154">Watch the recording in Bb Collaborate</a>. <a href="https://slack-files.com/TFA153DM0-FJFEJH8NB-fbe304b473">This is the associated slide deck.</a>)</p>
 
-<h2 id="make-your-lti-tool-available-to-learn-servers">Make Your LTI Tool Available to Learn Servers</h2>
-
-<p>Once you have developed an LTI tool, you can share it with Learn
-administrators so that they can configure their Learn servers to work with it.
-To share your tool, you must register your application. When you do so, you
-receive an Application ID. Share this Application ID with the administrator of
-any Learn server that will use your LTI tool. For more information about
-registering your application, see <a href="https://help.blackboard.com/Learn/Administrator/Hosting/System_Integration/LTI">Register Your Application</a>.</p>
-
-<h2 id="lti-placement-to-building-block-link-mapping">LTI Placement to Building Block Link Mapping</h2>
-
-<p>As new LTI Placement options are added to the Blackboard Learn platform, the
-naming conventions can be a bit confusing for Building Block Developers. The
-purpose of this document is to give a high-level mapping of the terminology
-for Developers.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th style="text-align: center">LTI Placement</th>
-      <th style="text-align: center">B2 Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>A tool available to all users in a course</td>
-      <td style="text-align: center">Course Tool-&gt;Student</td>
-      <td style="text-align: center">tool</td>
-    </tr>
-    <tr>
-      <td>A tool available only to instructors in a course</td>
-      <td style="text-align: center">Course Tool-&gt;Non-Student</td>
-      <td style="text-align: center">course_tool</td>
-    </tr>
-    <tr>
-      <td>A course content tool</td>
-      <td style="text-align: center">Course Content Tool</td>
-      <td style="text-align: center">content-handler</td>
-    </tr>
-    <tr>
-      <td>A tool available outside of a course for all users</td>
-      <td style="text-align: center">System Tool</td>
-      <td style="text-align: center">user_tool</td>
-    </tr>
-    <tr>
-      <td>A tool available only to system administrators</td>
-      <td style="text-align: center">Administrator Tool</td>
-      <td style="text-align: center">system_tool</td>
-    </tr>
-  </tbody>
-</table>
-
+<p>Here is the sample code referenced in the presentations: https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node</p>
 
 </div>
     </section>

@@ -31,12 +31,8 @@ likely need to be modified to run in the new Blackboard.
   * [Java 11](#java-11)
   * [Tomcat 8](#tomcat-8)
     * [JSP Precompilation](#jsp-precompilation)
-    * [bb-context-config.properties](#bb-context-config.properties)
-      * [com.blackboard.tomcat.servletcontainer.jarscanner.tldJars](#com.blackboard.tomcat.servletcontainer.jarscanner.tldJars)
-      * [com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars](#com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars)
-      * [com.blackboard.tomcat.servletcontainer.context.containerSciFilter](#com.blackboard.tomcat.servletcontainer.context.containerSciFilter)
-      * [com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup](#com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup)
-    * [web.xml](#web.xml)
+    * [bb-context-config.properties](#bb-context-configproperties)
+    * [web.xml](#webxml)
       * [Faster Startup](#faster-startup)
     * [URL Encoding](#url-encoding)
   * [Permissions](#permissions)
@@ -296,7 +292,6 @@ com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=
 
   * Building Block uses Struts and the bbNG Tags  
 ```
-
 com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=bb-
 taglibs.jar|struts-taglib-.*\\.jar
 ```
@@ -439,12 +434,14 @@ initialization of other unused fragments in the class path.
 
 For example:
 
-  * The Building Block does NOT use web fragments  
+  * The Building Block does NOT use web fragments
+
 ```
 <absolute-ordering/>
 ```
 
-  * The Building block uses web fragments from the spring-web jar  
+  * The Building block uses web fragments from the spring-web jar
+
 ```
 <absolute-ordering>
   <name>spring_web</name>

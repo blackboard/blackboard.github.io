@@ -1,6 +1,7 @@
 ---
 layout: standards
 parent: lti
+category: getting-started-lti
 ---
 # LTI 1.3/Advantage in Learn - 4-Part Webinar
 *Author: Mark Kauffman*  

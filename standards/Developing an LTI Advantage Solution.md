@@ -1,6 +1,7 @@
 ---
 layout: standards
 parent: lti
+category: getting-started-lti
 ---
 # Developing an LTI 1.3/Advantage Solution -  Recordings and Resources
 *Author: Mark Kauffman*  

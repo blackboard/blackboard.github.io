@@ -4,6 +4,17 @@
 - name: LTI
   link: /standards/Getting%20Started%20With%20LTI.html
   parentId: lti
+  categories:
+    - name: Getting Started
+      link: /standards/Developing%20an%20LTI%20Advantage%20Solution.html
+      category: getting-started-lti
+      topics:
+        - name: Develop for LTI Advantage
+          link: /standards/Developing%20an%20LTI%20Advantage%20Solution.html
+          category: getting-started-lti
+        - name: LTI Advantage Video Series
+          link: /standards/LTI%20Advantage%20in%20Learn%20-%204-part%20Video%20Tutorial.html
+          category: getting-started-lti
 - name: Caliper
   link: /standards/Getting%20Started%20With%20Caliper.html
   parentId: caliper

@@ -205,19 +205,12 @@ likely need to be modified to run in the new Blackboard.</p>
   <li><a href="#shared-content-folder">Shared Content Folder</a></li>
   <li><a href="#logging-changes">Logging Changes</a></li>
   <li><a href="#statelessness">Statelessness</a></li>
-  <li><a href="#java-8">Java 8</a></li>
+  <li><a href="#java-11">Java 11</a></li>
   <li><a href="#tomcat-8">Tomcat 8</a>
     <ul>
       <li><a href="#jsp-precompilation">JSP Precompilation</a></li>
-      <li><a href="#bb-context-config.properties">bb-context-config.properties</a>
-        <ul>
-          <li><a href="#com.blackboard.tomcat.servletcontainer.jarscanner.tldJars">com.blackboard.tomcat.servletcontainer.jarscanner.tldJars</a></li>
-          <li><a href="#com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars">com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars</a></li>
-          <li><a href="#com.blackboard.tomcat.servletcontainer.context.containerSciFilter">com.blackboard.tomcat.servletcontainer.context.containerSciFilter</a></li>
-          <li><a href="#com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup">com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup</a></li>
-        </ul>
-      </li>
-      <li><a href="#web.xml">web.xml</a>
+      <li><a href="#bb-context-configproperties">bb-context-config.properties</a></li>
+      <li><a href="#webxml">web.xml</a>
         <ul>
           <li><a href="#faster-startup">Faster Startup</a></li>
         </ul>
@@ -430,14 +423,11 @@ request.getSession().setAttribute( "myObjectKey", myObject );
 <p>Non-String values need to be serialized to save on the <strong>BbSession</strong> -
 refactor to avoid if at all possible.</p>
 
-<h1 id="java-8">Java 8</h1>
+<h1 id="java-11">Java 11</h1>
 
-<p>Blackboard Learn SaaS runs on Java 8. As a result, Building Block that are to
-be installed in the cloud, or on 9.1 Q2 2016 or later, need to be built with
-Java 8. For Learn Java 8 releases, Spring 4.2.0+ will be required for B2s that
-use Spring. For more information see <a href="Preparing%20Your%20Building%20Block%20for%20Blackboard%20Learn%209.1%20Q2%202016.html">Preparing Your Building Block for
-Blackboard Learn 9.1 Q2
-2016</a></p>
+<p>Blackboard Learn SaaS runs on Java 11, as of Learn 3800. As a result, Building Block that are to
+be installed in the cloud, or on 9.1 Q2 2020 or later, need to be built with
+Java 11. For more information see <a href="8%20steps%20to%20prepare%20for%20Java%2011.html">8 steos to prepare for Java 11</a>.</p>
 
 <h1 id="tomcat-8">Tomcat 8</h1>
 
@@ -481,197 +471,229 @@ expression matching all Blackboard jar files containing TLDs.</p>
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=
 </code></pre></div>    </div>
   </li>
-  <li>Building Block uses Struts and the bbNG Tags<br />
-```</li>
+  <li>Building Block uses Struts and the bbNG Tags
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=bb-
+taglibs.jar|struts-taglib-.*\\.jar
+</code></pre></div>    </div>
+  </li>
+  <li>Building Block uses several Blackboard libraries and Struts
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@|s
+truts-taglib-.*\\.jar
+</code></pre></div>    </div>
+  </li>
 </ul>
 
-<p>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=bb-
-taglibs.jar|struts-taglib-.*\.jar</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  * Building Block uses several Blackboard libraries and Struts  
-</code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@|s
-truts-taglib-.*\.jar</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-### com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars
+<h3 id="comblackboardtomcatservletcontainerjarscannerpluggabilityjars">com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars</h3>
 
-Set this to a Java regular expression of jar file names that contain web
+<p>Set this to a Java regular expression of jar file names that contain web
 fragments, ServletContainerInitializers (SCIs), and other classes with
 annotations defined in the Servlet 3.1 specifications if they are used by the
 Building Block.The pattern can contain the template variable
-_@CORE_PLUGGABILITY_PATTERN@_, which will resolve to a regular expression that
-matches all Blackboard jar files containing such components.
+<em>@CORE_PLUGGABILITY_PATTERN@</em>, which will resolve to a regular expression that
+matches all Blackboard jar files containing such components.</p>
 
-Here is an example:
+<p>Here is an example:</p>
 
-  * A Building Block contains classes that implement Spring's WebApplicationInitializer  
-</code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=spring-
-web-.*\.jar</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-### com.blackboard.tomcat.servletcontainer.context.containerSciFilter
+<ul>
+  <li>A Building Block contains classes that implement Spring’s WebApplicationInitializer
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=spring-
+web-.*\\.jar
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-This Java regular expression should list all SCIs in the CLASSPATH that are
-**not** used by the Building Block. The default value is **^.*$**, which
-matches ALL SCIs and assumes that the Building Block does not use any.
+<h3 id="comblackboardtomcatservletcontainercontextcontainerscifilter">com.blackboard.tomcat.servletcontainer.context.containerSciFilter</h3>
 
-Examples:
+<p>This Java regular expression should list all SCIs in the CLASSPATH that are
+<strong>not</strong> used by the Building Block. The default value is <strong>^.*$</strong>, which
+matches ALL SCIs and assumes that the Building Block does not use any.</p>
 
-  * Building Block does not use SCIs and does not have any uncompiled jsps  
-</code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*$</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  * If for some reason, your JSP is not compiled, use  
-</code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?&lt;!\.JasperInitializer)$</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  * If the JSPs are compiled, but your code relies on classes that implement Spring's WebAppplicationInitializer  
-</code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?&lt;!\.SpringServletContainerInitializer)$</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-### com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup
+<p>Examples:</p>
 
-This is not required to be in the bb-context-config.properties file. You would
+<ul>
+  <li>Building Block does not use SCIs and does not have any uncompiled jsps
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*$
+</code></pre></div>    </div>
+  </li>
+  <li>If for some reason, your JSP is not compiled, use
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?&lt;!\\.JasperInitializer)$
+</code></pre></div>    </div>
+  </li>
+  <li>If the JSPs are compiled, but your code relies on classes that implement Spring’s WebAppplicationInitializer
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?&lt;!\\.SpringServletContainerInitializer)$
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="comblackboardtomcatservletcontainercontextprocesstldsonstartup">com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup</h3>
+
+<p>This is not required to be in the bb-context-config.properties file. You would
 include this and set it to true only if the Building Block or one of the jar
 files it contains defines a listener in a TLD that the Building Block
-requires.
+requires.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup=true
 </code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup=true</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-Here is a final example of a typical /WEB-INF/bb-context-config.properties
-file:
-</code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=
+
+<p>Here is a final example of a typical /WEB-INF/bb-context-config.properties
+file:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=
 com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=
-com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*$</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-If you see errors like:
+com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*$
 </code></pre></div></div>
-<p>Unable to compile <myclass> root cause:
+
+<p>If you see errors like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Unable to compile &lt;myclass&gt; root cause:
 INFO | jvm 1 | 2018/02/06 00:51:17 | java.lang.NullPointerException
 INFO | jvm 1 | 2018/02/06 00:51:17 | at org.apache.jasper.JspCompilationContex
 t.getTldResourcePath(JspCompilationContext.java:566)
 INFO | jvm 1 | 2018/02/06 00:51:17 | at
-org.apache.jasper.compiler.Parser.parseTaglibDirective</myclass></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-try adding making your bb-config-context.properties file look like this:
+org.apache.jasper.compiler.Parser.parseTaglibDirective
 </code></pre></div></div>
-<p>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@
-com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=
-com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?&lt;!\.JasperInitializer)$</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## web.xml
 
-Your Building Block should be using Web App version 3.0, and requires
+<p>try adding making your bb-config-context.properties file look like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.blackboard.tomcat.servletcontainer.jarscanner.tldJars=@CORE_TLD_PATTERN@
+com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=
+com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?&lt;!\\.JasperInitializer)$
+</code></pre></div></div>
+
+<h2 id="webxml">web.xml</h2>
+
+<p>Your Building Block should be using Web App version 3.0, and requires
 metadata-complete to be set. By default and in most cases, this should be set
-to **true** for best performance. Set this to **false** ONLY if your Building
+to <strong>true</strong> for best performance. Set this to <strong>false</strong> ONLY if your Building
 Block uses annotation-based web_xml extensions as defined in the Servlet 3.1
 specification or if your jar files should be scanned for web-fragment.xml.
 These are some of the annotations that require the metadata-complete attribute
-to be set to false:
+to be set to false:</p>
 
-  * WebServlet
-  * WebFilter
-  * WebInitParam
-  * WebListener
-  * MultipartConfig
-  * ServletSecurity
-  * HttpConstraint
-  * HttpMethodConstraint
-  * DeclareRoles
-  * EJB
-  * EJBs
-  * Resource
-  * Resources
-  * PersistenceContext
-  * PersistentContexts
-  * PersistenceUnit
-  * PersistenceUnits
-  * PostConstruct
-  * PreDestroy
-  * RunAs
-  * WebServiceRef
-  * WebServiceRefs
+<ul>
+  <li>WebServlet</li>
+  <li>WebFilter</li>
+  <li>WebInitParam</li>
+  <li>WebListener</li>
+  <li>MultipartConfig</li>
+  <li>ServletSecurity</li>
+  <li>HttpConstraint</li>
+  <li>HttpMethodConstraint</li>
+  <li>DeclareRoles</li>
+  <li>EJB</li>
+  <li>EJBs</li>
+  <li>Resource</li>
+  <li>Resources</li>
+  <li>PersistenceContext</li>
+  <li>PersistentContexts</li>
+  <li>PersistenceUnit</li>
+  <li>PersistenceUnits</li>
+  <li>PostConstruct</li>
+  <li>PreDestroy</li>
+  <li>RunAs</li>
+  <li>WebServiceRef</li>
+  <li>WebServiceRefs</li>
+</ul>
 
-Some of these annotations, like PostContruct, PreDestroy, and Resource, only
+<p>Some of these annotations, like PostContruct, PreDestroy, and Resource, only
 require the setting to be false if they are placed in an object whose life-
-cycle is managed by the container, such as a Servlet or a Listener.
+cycle is managed by the container, such as a Servlet or a Listener.</p>
 
-Here is an example of what this will look like in your web.xml file:
+<p>Here is an example of what this will look like in your web.xml file:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;web-app 
+  xmlns="[http://java.sun.com/xml/ns/javaee](https://community.blackboa
+rd.com/external-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-
+app_3_0.xsd"
+
+version="3.0" metadata-complete="true"&gt;
 </code></pre></div></div>
-<web-app xmlns="[http://java.sun.com/xml/ns/javaee](https://community.blackboa
-rd.com/external-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-
-app_3_0.xsd" version="3.0" metadata-complete="true">
-```
 
-In addition to metadata-complete, another new tag should be included at the
+<p>In addition to metadata-complete, another new tag should be included at the
 end of the web.xml file: absolute-ordering. Generally, this should be an empty
 tag for best performance. If web fragments are used, the ones that are
 required should be listed explicitly her to to avoid unnecessary
-initialization of other unused fragments in the class path.
+initialization of other unused fragments in the class path.</p>
 
-For example:
+<p>For example:</p>
 
-  * The Building Block does NOT use web fragments  
-```
-<absolute-ordering />
-```
+<ul>
+  <li>The Building Block does NOT use web fragments</li>
+</ul>
 
-  * The Building block uses web fragments from the spring-web jar  
-```
-<absolute-ordering>
-  <name>spring_web</name>
-</absolute-ordering>
-```
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;absolute-ordering/&gt;
+</code></pre></div></div>
 
-### Faster Startup
+<ul>
+  <li>The Building block uses web fragments from the spring-web jar</li>
+</ul>
 
-When declaring servlets in web.xml, the <load-on-startup> tag allows you to
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;absolute-ordering&gt;
+  &lt;name&gt;spring_web&lt;/name&gt;
+&lt;/absolute-ordering&gt;
+</code></pre></div></div>
+
+<h3 id="faster-startup">Faster Startup</h3>
+
+<p>When declaring servlets in web.xml, the <load-on-startup> tag allows you to
 decide when a servlet is loaded into memory. The default value is to load at
 first access, but that is not always appropriate for every situation. The
 following table illustrates the tags and their meanings. Be sure to select the
-one that is right for your Building Block.
+one that is right for your Building Block.</load-on-startup></p>
 
-Tag Value | Description
----|---
-<load-on-startup>1</load-on-startup> | Load the servlet during system initialization.
-<load-on-startup>-1</load-on-startup> | Load the servlet the first time it is accessed.
-<load-on-startup>-9876</load-on-startup> | Load the servlet immediately following the Learn system initialization
+<table>
+  <thead>
+    <tr>
+      <th>Tag Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><load-on-startup>1</load-on-startup></td>
+      <td>Load the servlet during system initialization.</td>
+    </tr>
+    <tr>
+      <td><load-on-startup>-1</load-on-startup></td>
+      <td>Load the servlet the first time it is accessed.</td>
+    </tr>
+    <tr>
+      <td><load-on-startup>-9876</load-on-startup></td>
+      <td>Load the servlet immediately following the Learn system initialization</td>
+    </tr>
+  </tbody>
+</table>
 
-Be sure to evaluate your individual integration before deferring your startup.
+<p>Be sure to evaluate your individual integration before deferring your startup.
 If this or another Building Block depends on the servlet code being registered
 or if this servlet must be live prior to the system starting for user access,
-deferring startup is not appropriate.
+deferring startup is not appropriate.</p>
 
-Deferring all of your servlets to load immediately following system startup
+<p>Deferring all of your servlets to load immediately following system startup
 will definitely make the system available to users more quickly, though one
 should note that those user requests might be a bit slower as all of the
 servlets are starting. In addition, it is important to note that should a user
 access a servlet that has been deferred and not yet started, it will load at
 that time, so there is no risk of a servlet being unavailable should the
-process still be underway.
+process still be underway.</p>
 
-If you are executing other startup logic inside something such as a
-ServletContextListener's contextInitialized method and that logic is not 100%
+<p>If you are executing other startup logic inside something such as a
+ServletContextListener’s contextInitialized method and that logic is not 100%
 required to be executed before user activity then please defer it by calling
-ContextInitThreadRunner.startThread(Thread) or .startDaemonThread(Thread).
+ContextInitThreadRunner.startThread(Thread) or .startDaemonThread(Thread).</p>
 
-Here is a snippet from the Javadoc explaining this method:
-```
-/**
+<p>Here is a snippet from the Javadoc explaining this method:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
 
 * This method can be used in place of thread.start() when you are starting a thread typically during system startup
 
 * and you do not absolutely NEED that thread to start immediately. Once the system has completed normal startup of
 
-* all webapps (b2s) and is ready to accept requests, any threads registered via this method will be started. <br />
+* all webapps (b2s) and is ready to accept requests, any threads registered via this method will be started. &lt;br&gt;
 
-* <br />
+* &lt;br&gt;
 
 * It is safe to call this at any point in time though - if the server has already started then this will merely start
-* the thread.<br />`
+* the thread.&lt;br&gt;`
 
-* <br />
+* &lt;br&gt;
 
 * The reason we are doing this is to make sure all resources can be
 dedicated to pure startup tasks and not diverted
@@ -680,90 +702,115 @@ dedicated to pure startup tasks and not diverted
 faster.
 
 */
-```
+</code></pre></div></div>
 
-## URL Encoding
+<h2 id="url-encoding">URL Encoding</h2>
 
-Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
+<p>Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
 curly braces ( { } ) or vertical bars, often referred to as pipes ( | ) in
-URLs. For backward compatibility, [Tomcat provides a way to override this
-behavior](https://tomcat.apache.org/tomcat-8.5-doc/config/systemprops.html) by allowing
+URLs. For backward compatibility, <a href="https://tomcat.apache.org/tomcat-8.5-doc/config/systemprops.html">Tomcat provides a way to override this
+behavior</a> by allowing
 a system property tomcat.util.http.parser.HttpParser.requestTargetAllow to be
-defined. Please be advised that this exposes the application to a [known
-security issue](https://nvd.nist.gov/vuln/detail/CVE-2016-6816).
+defined. Please be advised that this exposes the application to a <a href="https://nvd.nist.gov/vuln/detail/CVE-2016-6816">known
+security issue</a>.</p>
 
-Future versions of Tomcat may not support this override. Therefore, all B2s
-must url-encode these characters. For example, an URL like `http://myuniversity.blackboard.com/webapps/myb2/appController?options={x|y}` must be written by the application as `http://myuniversity.blackboard.com/webapps/myb2/appController?options=%7bx%7cy%7d`. Otherwise, Tomcat will reject the request.
+<p>Future versions of Tomcat may not support this override. Therefore, all B2s
+must url-encode these characters. For example, an URL like <code class="highlighter-rouge">http://myuniversity.blackboard.com/webapps/myb2/appController?options={x|y}</code> must be written by the application as <code class="highlighter-rouge">http://myuniversity.blackboard.com/webapps/myb2/appController?options=%7bx%7cy%7d</code>. Otherwise, Tomcat will reject the request.</p>
 
-# Permissions
+<h1 id="permissions">Permissions</h1>
 
-As Blackboard continues to modernize the Blackboard Learn platform and move
+<p>As Blackboard continues to modernize the Blackboard Learn platform and move
 services out of the Learn code line and into microservices, the need to secure
 the application from both accidental and malicious actions, the properties
 granted to Building Block integrations is necessarily tightening. This is
 being addressed in a phased manner, with the intent of providing third-party
 developers ample runway for adjusting to the new restrictions. As new
 restrictions are added, this page will list them, so be sure you are following
-this page to receive updates.
+this page to receive updates.</p>
 
-Permission | Mitigating Factors | Current Action**
----|---|---
-java.security.AllPermission |  | Filtered Out 
-java.lang.RuntimePermission | createSecurityManager, setSecurityManager | Filtered Out
-java.lang.RuntimePermission | action implying createSecurityManager or setSecurityManager | Warning Message
-java.util.PropertyPermission | write | Warning Message
-java.io.FilePermission | ALL FILES | Warning Message
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>Mitigating Factors</th>
+      <th>Current Action**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>java.security.AllPermission</td>
+      <td> </td>
+      <td>Filtered Out</td>
+    </tr>
+    <tr>
+      <td>java.lang.RuntimePermission</td>
+      <td>createSecurityManager, setSecurityManager</td>
+      <td>Filtered Out</td>
+    </tr>
+    <tr>
+      <td>java.lang.RuntimePermission</td>
+      <td>action implying createSecurityManager or setSecurityManager</td>
+      <td>Warning Message</td>
+    </tr>
+    <tr>
+      <td>java.util.PropertyPermission</td>
+      <td>write</td>
+      <td>Warning Message</td>
+    </tr>
+    <tr>
+      <td>java.io.FilePermission</td>
+      <td>ALL FILES</td>
+      <td>Warning Message</td>
+    </tr>
+  </tbody>
+</table>
 
-Many Building Blocks rely on the ALL FILES permission for writing to the file
+<p>Many Building Blocks rely on the ALL FILES permission for writing to the file
 system. This will be filtered out soon. The Building Block should request
 explicit file system permissions and utilize the advice in this guide when
 writing to log files and config directories. To illustrate the change, here is
 an example of a bad permission and a good permission for writing to a log file
-from a Building Block.
+from a Building Block.</p>
 
-# BAD
-```
-&lt;permission type="java.io.FilePermission"name="&lt;&lt;ALLFILES&gt;&gt;" actions="read,write,delete,wxecute"/&gt;
-```
+<h1 id="bad">BAD</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;permission type="java.io.FilePermission"name="&amp;lt;&amp;lt;ALLFILES&amp;gt;&amp;gt;" actions="read,write,delete,wxecute"/&gt;
+</code></pre></div></div>
 
-# GOOD 
-( A couple examples. See [ALL FILES No More](https://community.blackboard.com/blogs/4/26) for a full set.)
-```
-<permission type="java.io.FilePermission" name="BB_HOME/-" actions="read,write,delete" />
-<permission type="java.io.FilePermission" name="BB_HOME/logs/" actions="read,write,delete" />
-```
-# Original UI
+<h1 id="good">GOOD</h1>
+<p>( A couple examples. See <a href="https://community.blackboard.com/blogs/4/26">ALL FILES No More</a> for a full set.)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;permission type="java.io.FilePermission" name="BB_HOME/-" actions="read,write,delete"/&gt;
+&lt;permission type="java.io.FilePermission" name="BB_HOME/logs/" actions="read,write,delete"/&gt;
+</code></pre></div></div>
+<h1 id="original-ui">Original UI</h1>
 
-Original courses run in an iframe on Learn SaaS. This shouldn’t affect your
-Building Block, except in the two following cases:
+<p>Original courses run in an iframe on Learn SaaS. This shouldn’t affect your
+Building Block, except in the two following cases:</p>
 
-  * If you set **top.document.location** or **top.location.href** or any other similar settings that change the top page for the browser, your Building Block will not display properly. You can use **window.location** instead.
-  * HTML form tags with **target="_top"**, or **target="_blank"** will break out of the Ultra Original course peek panel. Change these to **target="_self"**.
-  * To meet accepted best practices in web design, there is a new maximum browser width of **1920px**. Make sure you plan accordingly.
-  * B2s using the bbUI and bbData tag libraries should be refactored were at all possible to use bbNG.
+<ul>
+  <li>If you set <strong>top.document.location</strong> or <strong>top.location.href</strong> or any other similar settings that change the top page for the browser, your Building Block will not display properly. You can use <strong>window.location</strong> instead.</li>
+  <li>HTML form tags with <strong>target=”_top”</strong>, or <strong>target=”_blank”</strong> will break out of the Ultra Original course peek panel. Change these to <strong>target=”_self”</strong>.</li>
+  <li>To meet accepted best practices in web design, there is a new maximum browser width of <strong>1920px</strong>. Make sure you plan accordingly.</li>
+  <li>B2s using the bbUI and bbData tag libraries should be refactored were at all possible to use bbNG.</li>
+</ul>
 
+<h1 id="ultra-ui">Ultra UI</h1>
 
-# Ultra UI
+<p>There are currently no extension points for Building Blocks in the Ultra UI.</p>
 
-There are currently no extension points for Building Blocks in the Ultra UI.
+<h1 id="continuous-delivery">Continuous Delivery</h1>
 
-
-# Continuous Delivery
-
-Blackboard strives to deliver updates every two weeks. As a result, you should
+<p>Blackboard strives to deliver updates every two weeks. As a result, you should
 be using only public APIs whenever possible, as the continuous delivery model,
 coupled with the possibility of undocumented private API changes without
-warning, makes using private APIs extremely risky.
+warning, makes using private APIs extremely risky.</p>
 
+<h1 id="installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</h1>
 
-# Installing Building Blocks in Learn SaaS
-
-There is no way to install a Building Block in Learn SaaS, regardless of the
+<p>There is no way to install a Building Block in Learn SaaS, regardless of the
 User Interface you are using. If you have licensed Learn SaaS Plus or
 Advantage, you do have the ability to install Building Blocks, but you must
-work with support to schedule the installation
+work with support to schedule the installation</p>
 
-</load-on-startup></web-app>
 
 </div>
     </section>
