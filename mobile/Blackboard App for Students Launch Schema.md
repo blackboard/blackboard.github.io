@@ -4,7 +4,7 @@ layout: main
 # Blackboard App for Students Launch Schema
 *Author: Scott Hurrey*  
 *Categories: []*  
-*Tags: ['developer', 'mobile', 'bbstudent', 'blackboard mobile', 'app-to-app', 'custom url']*  
+*Tags: ['developer', 'mobile', 'bbstudent', 'blackboard mobile', 'app-to-app', 'custom url', 'blackboard app', 'mobile app']*  
 <hr />
 
 You can link into the Blackboard app from other applications. With deep linking, a uniform resource identifier (URI) links to a specific location within the mobile app rather than simply launching the app. Use the provided schemas to link to specific features in the Blackboard app. 
@@ -17,7 +17,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://activity 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -25,7 +25,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://courses 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -33,7 +33,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://org 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -41,7 +41,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://grades 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -49,7 +49,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://calendar 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -57,7 +57,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://profile 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -65,7 +65,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://settings 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -73,7 +73,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://settings/linkedAccounts
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -81,7 +81,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 
 **Endpoint**: blackboard://feedback 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -92,7 +92,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [course_id] is the id of the course you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -103,7 +103,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [org_id] is the id of the organization you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -114,7 +114,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [course_id] is the id of the course you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -125,7 +125,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [org_id] is the id of the organization you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -136,7 +136,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [course_id] is the id of the course you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -147,7 +147,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [org_id] is the id of the organization you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -158,7 +158,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [course_id] is the id of the course you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -169,7 +169,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [org_id] is the id of the organization you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -180,7 +180,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [course_id] is the id of the course you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -191,7 +191,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [org_id] is the id of the organization you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -202,7 +202,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [course_id] is the id of the course you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -213,7 +213,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 **Notes**:
 * [org_id] is the id of the organization you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -225,7 +225,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the assignment resides in 
 * [assignment_id] is the id of the assignment you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -237,7 +237,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the organization you would like to open 
 * [assignment_id] is the id of the assignment you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -249,7 +249,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the assignment resides in 
 * [assignment_id] is the id of the assignment you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -261,7 +261,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the organization you would like to open 
 * [assignment_id] is the id of the assignment you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -273,7 +273,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the test resides in 
 * [test_id] is the id of the test you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -285,7 +285,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the test resides in 
 * [test_id] is the id of the test you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -297,7 +297,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the test resides in 
 * [test_id] is the id of the test you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -309,7 +309,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the test resides in 
 * [test_id] is the id of the test you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -321,7 +321,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the item is linked to 
 * [item_id] is the id of the item you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -333,7 +333,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the item is linked to 
 * [item_id] is the id of the item you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -345,7 +345,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the file is linked to 
 * [file_id] is the id of the file you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -357,7 +357,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the file is linked to 
 * [file_id] is the id of the file you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -369,7 +369,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the discussion board is linked to 
 * [discussion_board_id] is the id of the discussion board you would like to open 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -381,7 +381,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the discussion board is linked to 
 * [discussion_board_id] is the id of the discussion board you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -393,7 +393,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the discussion thread is linked to 
 * [discussion_thread_id] is the id of the discussion thread you would like to open
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -405,7 +405,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the discussion thread is linked to 
 * [discussion_thread_id] is the id of the discussion thread you would like to open 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -420,7 +420,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [content_id] is the content id of this discussion thread 
 * _[discussion_group_id] and [content_id] are ultra course required only_ 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -435,7 +435,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [content_id] is the content id of this discussion thread 
 * _[discussion_group_id] and [content_id] are ultra course required only_ 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -448,7 +448,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [content_id] is the content id of this discussion folder 
 * _[content_id] are ultra course required only_ 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -461,7 +461,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [content_id] is the content id of this discussion folder 
 * _[content_id] are ultra course required only_ 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
 
 <hr />
 
@@ -473,7 +473,7 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [course_id] is the id of the course the content folder resides in 
 * [folder_id] is the folder id of the content folder 
 
-**Version**: "Blackboard 3.0"
+**Version**: "Blackboard 3.0+"
 
 <hr />
 
@@ -485,4 +485,4 @@ You can link into the Blackboard app from other applications. With deep linking,
 * [org_id] is the id of the course the content folder resides in
 * [folder_id] is the folder id of the content folder 
 
-**Version**: "Blackboard 3.2"
+**Version**: "Blackboard 3.2+"
