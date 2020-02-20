@@ -21,7 +21,7 @@ Before releasing your integration you want to ensure there are sufficient site a
 
 This is accomplished by creating a new group named after your company or institution - this new group will receive your production level settings.  
 
-Please follow group naming conventions as described in our [Group Naming Requirements](https://docs.blackboard.com/learn/REST/Developer%20Portal%2C%20Development%20and%20Production%20Groups.html#group-naming-requirements) documentation.
+Please follow group naming conventions as described in our [Group Naming Requirements](/learn/REST/Developer%20Portal%2C%20Development%20and%20Production%20Groups.html#group-naming-requirements) documentation.
 
 Once you have created your production group file a support ticket requesting production settings on your group. 
 
