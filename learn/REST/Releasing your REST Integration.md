@@ -1,4 +1,13 @@
+---
+layout: learn
+parent: rest
+category: getting-started
+---
 # Releasing your REST Integration
+*Author: Mark O'Neil*  
+*Categories: []*  
+*Tags: ['developer', 'rest', 'getting started', 'api', 'blackboard', 'developers']*  
+<hr />
 
 You have taken the time to build a great integration now there are a few steps that should be followed to ensure a successful product release. 
 
@@ -42,9 +51,9 @@ There are three steps in releasing your integration:
 
     * Note that if your application is utilizing Three Legged OAuth (which uses the logged users privileges) this step is not required.
 
-> It is _strongly_ recommended that you include the above information in your client facing documentation.
+**It is _strongly_ recommended that you include the above information in your client facing documentation.**
 
-# Some DON'Ts
+## Some DON'Ts
 
 **1.** NEVER USE OR REQUIRE SYSTEM ADMINISTRATOR as your REST integration user
 1. This places your client at risk.
