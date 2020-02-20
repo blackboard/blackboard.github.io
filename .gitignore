@@ -1,4 +1,3 @@
-*bkk
 # Created by https://www.gitignore.io/api/jekyll
 # Edit at https://www.gitignore.io/?templates=jekyll
 
@@ -9,3 +8,6 @@ _site/
 .jekyll-metadata
 
 # End of https://www.gitignore.io/api/jekyll
+
+.DS_Store
+*bkk
