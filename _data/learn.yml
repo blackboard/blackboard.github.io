@@ -15,6 +15,9 @@
         - name: Three-Legged OAuth
           link: /learn/REST/Three-Legged%20OAuth.html
           category: getting-started
+        - name: Releasing your REST Integration
+          link: /learn/REST/Releasing%20your%20REST%20Integration.html
+          category: getting-started
     - name: About
       link: /learn/REST/The%20Blackboard%20REST%20API%20Framework.html
       category: about

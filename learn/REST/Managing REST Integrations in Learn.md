@@ -137,3 +137,23 @@ documentation to column A and the **privilege** will appear in column B.
 * Should the spreadsheet not have what you're looking for, here's the way to
 find these manually: [Dropbox - 2018-10-30_13-39-25.FindingPrivilegeForGivenEntitlement.mp4](https://www.dropbox.com/s/i6m80k7prqaxfcs/2018-10-30_13-39-25.FindingPrivilegeForGivenEntitlement.mp4%3Fdl%3D0)
 
+
+# Delivering your REST Integration
+
+For a more detailed process please see [Releasing your REST Integration](/learn/REST/Releasing%20your%20Rest%20Integration.html)
+
+**Step 1:** NEVER USE OR REQUIRE SYSTEM ADMINISTRATOR as your REST application user.
+
+**Step 2:** You determine from the API Docs which Entitlements are required for the integration.
+
+**Step 3:** You set up a non-System Administrator User associated with the your REST API integration on your test system.
+
+**Step 4:** You utilize your test system and the API Docs to identify the list of Learn Privileges required for the integration.
+
+**Step 5:** You configure your test system integration user appropriately and validate successful integration operation using your identified Learn Privileges
+
+**Step 6:** You provide the client the REST Application Id, a preferred/suggested user and role name (E.G.: <application name> Integration User, <application name> Integration Role), and a list of required Privileges for the Integration User Role.
+
+**Step 7:** Include information from Step 6 in your client facing documentation.
+
+_**Key takeaway:**_ Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation. Blackboard nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.
