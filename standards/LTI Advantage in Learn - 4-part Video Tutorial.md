@@ -1,7 +1,10 @@
 ---
 layout: standards
 parent: lti
+<<<<<<< HEAD
 category: getting-started-lti
+=======
+>>>>>>> LTI Advantage Demo
 ---
 # LTI 1.3/Advantage in Learn - 4-Part Webinar
 *Author: Mark Kauffman*  
