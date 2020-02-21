@@ -23,11 +23,11 @@ This is accomplished by creating a new group named after your company or institu
 
 Please follow group naming conventions as described in our [Group Naming Requirements](/learn/REST/Developer%20Portal%2C%20Development%20and%20Production%20Groups.html#group-naming-requirements) documentation.
 
-Once you have created your production group file a support ticket requesting production settings on your group. 
+Once you have created your production group, file a support ticket requesting production settings on your group. 
 
 If you are participating in our Open Innovation Initiative program please contact developers@blackboard.com
 
-Once we have the information required you will then associate your application with your production group.
+Once we have the information required and have updated your group, you will then associate your application with your production group.
 
 Your application is now using production settings.
 
@@ -39,7 +39,7 @@ There are three steps in releasing your integration:
 
     * E.G.: 8abvr1e4-2x43-4757-8z63-0063259f234
 
-2. Provide an integration preferred User name and Role name (assists in identification during support resolution). 
+2. Provide an integration preferred User Name and Role Name (assists in identification during support resolution). 
 
     * E.G.: **User Name**: SuperSoftware Sudoku User  
     
@@ -47,9 +47,9 @@ There are three steps in releasing your integration:
     
 3. Your documentation: You should provide a list of required Privileges for the Integration User Role.
 
-    * You needed to find the entitlements (from the API documentation), and the Privileges (from Learn) in order to develop and test your application with a non-system admin user, it is good practice to share those privileges with your client.
+    * You needed to find the entitlements (from the API documentation) and the Privileges (from Learn) in order to develop and test your application with a non-system admin user. It is good practice to share those privileges with your client.
 
-    * Note that if your application is utilizing Three Legged OAuth (which uses the logged users privileges) this step is not required.
+    * Note that if your application is utilizing Three Legged OAuth - which uses the logged in user's privileges - this step is not required.
 
 **It is _strongly_ recommended that you include the above information in your client facing documentation.**
 
@@ -67,5 +67,5 @@ There are three steps in releasing your integration:
 
 ## Key Takeaways 
 
-1. Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation Blackboard nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.
+1. Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation. Blackboard nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.
 2. Following secure practices around key:secret management create a safer more secure www.
