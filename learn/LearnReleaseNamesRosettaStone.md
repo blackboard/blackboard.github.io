@@ -16,7 +16,7 @@ You want to know this because this page is infrequently updated. Just log in to 
 
 # Rosetta Stone & Secret Decoder Ring
 
-*   Blackboard Learn 9.1 Q4 2019 
+*   Blackboard Learn 9.1 Q4 2019 **<<EOL December 2021 >>**
     *   [9.1 Q4 2019 Cumulative Update 1](https://blackboard.secure.force.com/btbb_articleview?id=kA01O000000xVuX) (Build:3800.0.1-rel.42+75c791f)
 *   Blackboard Learn 9.1 Q2 2019 **<<EOL June 2021 >>**
     *   [9.1 Q2 2019 Cumulative Update 7](https://blackboard.secure.force.com/btbb_articleview?id=kA01O000000xVte) (Build: 3700.0.7-rel.21+54e64bd)
