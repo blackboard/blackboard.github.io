@@ -15,6 +15,7 @@ approaches.
   * **REST API**. Blackboard recommends using Blackboard Learn's REST API to integrate with Blackboard Learn. REST APIs can be accessed using almost any programming or scripting language. To get started, see [Getting Started With REST](REST/Getting%20Started%20With%20REST.html).
   * **Building Blocks** are web applications powered by a Java class library and served along with Blackboard Learn. There are some use cases where Building Blocks are the best solution. To get started, click [here](B2s/Getting%20Started%20With%20Building%20Blocks.html).
   * **SOAP API**. SOAP is a **deprecated** integration method, superseded by REST, that Blackboard maintains for the time being to maintain backward compatibility.
+  * **Learn Build Number to Name Mapping**. [Key to map Learn build numbers to Release names and indication of when major new features or changes were made](LearnReleaseNamesRosettaStone.html).
 
 To integrate with the Blackboard Learn web client application, you can use
 **Learn Tools Interoperability** (LTI) integrations.
