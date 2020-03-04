@@ -1,6 +1,13 @@
 - name: Learn
   link: /learn/Integrate%20with%20Blackboard%20Learn.html
   parentId: learn
+  categories:
+    - name: General
+      category: general
+      topics:
+        - name: The Rosetta Stone, Build Number to Build Name Mappings
+          link: /learn/LearnReleaseNamesRosettaStone.html
+          category: general
 - name: REST
   link: /learn/REST/Getting%20Started%20With%20REST.html
   parentId: rest
