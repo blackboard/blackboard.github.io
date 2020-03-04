@@ -1,7 +1,7 @@
 ---
 layout: learn
 ---
-# Learn Release Names, Versions & Build Numbers - Rosetta Stone/Secret Decoder Rinng
+# Learn Release Names, Versions & Build Numbers - Rosetta Stone
 *Author: Mark Kauffman*  
 *Categories: []*  
 *Tags: ['developer']*  
