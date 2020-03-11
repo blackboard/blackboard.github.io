@@ -1,12 +1,12 @@
 - name: Getting Started
-  link: Blackboard%20ConnectTxt%20Developer%20Documentation.html
+  link: /connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html
 - name: XML Connector
-  link: ConnectTxt%20XML%20Connector.html
+  link: /connecttxt/ConnectTxt%20XML%20Connector.html
 - name: SOAP Connector
-  link: ConnectTxt%20SOAP%20Connector%20for%20Messaging%20(v1.5).html
+  link: /connecttxt/ConnectTxt%20SOAP%20Connector%20for%20Messaging%20(v1.5).html
 - name: Email2Text
-  link: ConnectTxt%20Email2Text.html
+  link: /connecttxt/ConnectTxt%20Email2Text.html
 - name: Address Book
   link: ConnectTxt%20SOAP%20Connector%20for%20Address%20Book%20(v1.5).html
 - name: APIs
-  link: ConnectTxt%20Programming%20APIs.html
+  link: /connecttxt/ConnectTxt%20Programming%20APIs.html

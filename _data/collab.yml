@@ -1,8 +1,8 @@
 - name: Getting Started
-  link: Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html
+  link: /collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html
 - name: API Resources
-  link: Collaborate%20API%20Objects.html
+  link: /collab/Collaborate%20API%20Objects.html
 - name: API Authentication
-  link: Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html
+  link: /collab/Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html
 - name: API Documentation
   link: https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0
