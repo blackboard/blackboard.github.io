@@ -13,7 +13,7 @@ Blackboard Partnership has added benefits to support partners deepen
 integrations, promote solutions and connect with Blackboard clients.
 
 Blackboard Developers Network (BbDN) is Blackboard’s basic partnership and is
-available for $2,000 annually (pro-rated to an annual April 15th renewal).
+available for $3,000 annually (pro-rated to an annual April 15th renewal).
 The BbDN includes the following benefits:
 
   * A developer's license of Blackboard Learn limited to a maximum of 150 users, 100 courses, and 1,000 enrollment records
@@ -28,4 +28,3 @@ Sign up for the BbDN agreement today on [our registration
 page](https://secureapp.blackboard.com/pgforms/pages/registration/Order-Wizard.aspx),
 or contact us at [BusDev&AlliancesInquiry@blackboard.com](mailto:BusDev&AlliancesInquiry@blackboard.com) to address any questions or discuss additional
 partnership levels.
-

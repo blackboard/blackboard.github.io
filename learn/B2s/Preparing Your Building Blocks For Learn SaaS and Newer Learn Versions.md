@@ -40,6 +40,7 @@ likely need to be modified to run in the new Blackboard.
   * [Ultra UI](#ultra-ui)
   * [Continuous Delivery](#continuous-delivery)
   * [Installing Building Blocks in Learn SaaS](#installing-building-blocks-in-learn-saas)
+  * [Update a Building Block for TinyMCE 5](#update-a-building-block-for-tinymce-5)
 
 # APIs
 
@@ -587,3 +588,34 @@ User Interface you are using. If you have licensed Learn SaaS Plus or
 Advantage, you do have the ability to install Building Blocks, but you must
 work with support to schedule the installation
 
+# Update a Building Block for TinyMCE 5
+
+In Learn 3900.X we intend to implement an updated content editor, TinyMCE 5, in the Original Course View and Original Experience of Learn. (*Forward-looking statement applies.) This editor changes certain patterns of UI with more of them living in an overlay modal rather than pop-up window after pop-up window. This change has led to required changes that are specific to B2s that have a Mashup. Cancel buttons in these mashups that expect to close a window will actually now need to close on overlay modal. The overlay modal will also include a close action button, an “x” in the interface, which will also work to close the window in case the cancel button doesn’t work; but if a cancel button in a mashup B2 is going to continue to work, the code will need to be updated.
+ 
+The code below needs to be added for the cancel button. This code assumes that a B2 is being designed that is compatible with both the new editor and the older one, Learn v 3900.x vs v3800.x and earlier.
+ 
+``` 
+if ( parent && parent.tinymce &&
+     parent.tinymce.activeEditor &&
+     parent.tinymce.activeEditor.windowManager )
+{  
+  parent.tinymce.activeEditor.windowManager.close();
+}
+else
+{
+  // Call the JavaScript you currently use for Cancel here.
+}
+``` 
+ 
+If the B2 will only be compatible with the updated editor and not backwards compatible, the else section isn’t required:
+ 
+``` 
+if ( parent && parent.tinymce &&
+     parent.tinymce.activeEditor &&
+     parent.tinymce.activeEditor.windowManager )
+{  
+  parent.tinymce.activeEditor.windowManager.close();
+}
+```
+ 
+*Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.
