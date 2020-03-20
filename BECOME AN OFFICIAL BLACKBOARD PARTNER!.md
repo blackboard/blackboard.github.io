@@ -6,7 +6,7 @@ layout: main
 *Categories: ['Building Blocks', 'Getting Started']*  
 *Tags: ['partner', 'behind the blackboard', 'partnership', 'access', 'developer']*  
 <hr />
-While our Community partner level is FREE to developers and provides
+While our Open Innovation Initiative (OII) is FREE to developers and provides
 access to the Blackboard Learn AMI for developers to build REST and LTI applications, 
 API limits apply and Behind the Blackboard support access is not provided. Consider
 investing in one of our other partnership levels to receive added benefits that help partners
