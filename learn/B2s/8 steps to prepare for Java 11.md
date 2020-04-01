@@ -6,11 +6,11 @@ category: resources-b2
 
 # 8 steps to prepare for Java 11
 
-(Updated 23 January 2020: clarification of Building Block updates at time of Learn upgrade; timeline and availability updates.)
+(Updated March 2020 to remove SaaS release references since that is in the past. Updated 23 January 2020: clarification of Building Block updates at time of Learn upgrade; timeline and availability updates.)
 
  
 
-Over the past several months we have communicated that we plan to update your Blackboard Learn environment to Java 11. This important update can impact custom and third-party add-on tools leveraging the Building Blocks (B2) integration framework. This update is planned to be deployed into SaaS production environments in February 2020. For Self- and Managed Hosting clients, 9.1 Q4 2019 which includes Java 11 support was released December 2019.
+Throughout 2019 we communicated that we planned to update your Blackboard Learn environment to Java 11. This important update can impact custom and third-party add-on tools leveraging the Building Blocks (B2) integration framework. This update was deployed into SaaS production environments in February 2020. For Self- and Managed Hosting clients, 9.1 Q4 2019 which includes Java 11 support was released December 2019.
 
  
 
@@ -18,20 +18,18 @@ As you know, Java are the libraries on which the Learn application runs and also
 
  
 
-Our testing shows that numerous Building Blocks in use today will no longer be compatible with Java 11 when we update SaaS production environments to release 3800.2 (Continuous Delivery) and 3800.0 (Flexible Deployment Option) in February. Without action, these Building Blocks may stop working in your environment. Self- and Managed Hosting clients will also need to plan for this change as part of an upgrade to 9.1 Q4 2019. 
+Our testing shows that numerous Building Blocks in use today will no longer be compatible with Java 11. Without action, these Building Blocks may stop working in your environment. Self- and Managed Hosting clients will need to plan for this change as part of an upgrade to 9.1 Q4 2019 and newer. 
 
  
 
-**Planned schedule for SaaS updates including Java 11, Learn versions 3800.0 and 3800.2**: 
+**Learn SaaS**: 
 
-* Test/stage – 19 December 2019 (available now) 
-* •	SaaS Production, Continuous Delivery – early February 2020. See [SaaS release schedule for details.](https://help.blackboard.com/Learn/Administrator/SaaS/Release_Notes/Learn_SaaS_Release_Schedule)
-* Production, FDO options – 29 January 2020, 12 February 2020, 26 February 2020 
+Deployed in February 2020.
  
 
-**Planned schedule for Self- and Managed Hosting for Java 11, Learn version 9.1 Q4 2019**: 
+**Learn 9.1 for Self- and Managed Hosting**: 
 
-* General Availability – [9.1 Q4 2019](https://blackboard.secure.force.com/btbb_articleview?id=kA41O0000002nDBSAY) is available now on Behind the Blackboard.
+[9.1 Q4 2019](https://blackboard.secure.force.com/btbb_articleview?id=kA41O0000002nDBSAY) is available now on Behind the Blackboard.
 
  
 
@@ -43,21 +41,7 @@ Our testing shows that numerous Building Blocks in use today will no longer be c
 2. **Take inventory and collect updated Building Block installers**. Review the non-Blackboard B2s in your environment and take note of version numbers. Plan to collect the latest B2s for third-party extensions.
  
  
-   Self- and Managed Hosting admins will follow typical upgrade planning and should plan to apply updated Building Blocks as part of a 9.1 Q4 2019 upgrade process. For SaaS clients, you may be able to update the Building Block now if the provider indicates the Building Block is compatible with both Java 8 and Java 11 versions of Learn. Otherwise, updates can be applied after the Learn upgrade.
-   
-   
-   For the following partner Building Blocks, we have identified that a Java 11-specific version exists that can only be applied after the production upgrade to 3800.2 (Continuous Delivery) and 3800.0 (Flexible Deployment Option).This means it is known that the prior version is incompatible and must be applied with the Learn upgrade. Therefore, for SaaS we are going to proactively apply updated versions of the following partner Building Blocks as part of the production upgrade:
-
-- bsi-biosig-id,		Biometric Signature ID
-- es-examsoft,		ExamSoft Legacy
-- es-examsoftv2,	ExamSoft Enterprise
-- Teg-Tegrity,		McGraw-Hill Campus
-- bbgs-mylab_mastering_b2,   Pearson's MyLab & Mastering
-- ip-turnitintool,	Turnitin Direct Assignment for Blackboard
-- turn-plgnhndl,	Turnitin Basic Assignment
-
-
-   For other Building Blocks, including those from other partners, we are not going to automatically apply updates without requests from clients. This is because for some Building Blocks, they are backwards compatible and can be applied now. For others, there are now multiple versions of compatible Building Blocks available, and we do not know which versions have been tested and validated by individual clients. Therefore, we want clients to determine which Building Blocks are updated and when. Clients can enter support cases now to schedule the installation of Building Blocks you’d like to update after your Learn upgrade to 3800.2 (Continuous Delivery) or 3800.0 (Flexible Deployment Option).
+   Self- and Managed Hosting admins will follow typical upgrade planning and should plan to apply updated Building Blocks as part of a 9.1 Q4 2019 upgrade process. Admins may be able to update the Building Block prior to the upgrade if the provider indicates the Building Block is compatible with both Java 8 and Java 11 versions of Learn. Otherwise, updates can be applied after the Learn upgrade.
 
 
    When collecting updated Building Blocks, make sure you have the latest version of the B2 from the provider (vendor, open source, or internal). Check vendor websites or contact vendors’ support and get the latest versions of B2s from them. Confirm that the updates have been tested to be Java 11 compatible and validate in your test or stage environment. For open source Building Blocks you use, check community sources such as [OSCELOT](https://github.com/oscelot) to see if updates are available. If you have B2s created by Blackboard Consulting and supported under an ICM contract, contact Blackboard Product Support for the latest version that is Java 11 compatible. 
@@ -71,10 +55,10 @@ Our testing shows that numerous Building Blocks in use today will no longer be c
 
 5. **Test in test/stage environments**.  
 
-   * **For SaaS**: Test and stage environments were updated on 19 December 2019. Testing can be conducted there. 
+   * **For SaaS**: It is always best practice to test new Building Blocks in your test/stage environment before applying to production. 
    * **For 9.1 Q4 2019**: Test in your test/stage environments using the [9.1 Q4 2019 installer](https://blackboard.secure.force.com/btbb_articleview?id=kA41O0000002nDBSAY).  
 
-6. **Prepare for the production upgrade**. Have your collected B2 installers ready to install after your production upgrade. For SaaS, we plan to automatically apply updates to certain Building Blocks as outlined in section 2. For others, SaaS clients should request updates to other B2s through a Support case and provide the necessary .war file installers. These can be scheduled in advance.
+6. **Prepare for the production upgrade**. Have your collected B2 installers ready to install after your production upgrade.
 
 To prevent disruption to users, you might also choose to make affected Building Blocks temporarily inactive so users don’t see error messages until the updated Building Blocks are installed.
 
@@ -92,15 +76,13 @@ To prevent disruption to users, you might also choose to make affected Building 
 
 * **Testing environments**. There are numerous ways and locations where you can test the functionality of your Building Blocks. 
 
-  * **(Available Now, SaaS)** Client test/stage environments were updated on 19 December 2019. Clients can test their own B2s there. 
-
   * **(Available Now, Self- and Managed Hosting)**  [Learn 9.1 Q4 2019 was made available in December](https://blackboard.secure.force.com/btbb_articleview?id=kA41O0000002nDBSAY).  
 
 * **Building Block Scan Tool**. We’ve created an automated tool for scanning B2s and help you determine if there are likely incompatible libraries. The results of the scan will highlight potentially incompatible libraries. While this may indicate likelihood of a need to update a Building Block, it doesn’t replace testing—we’ve seen a few cases where a B2 with compatibility alerts appears to function as expected, and other instances where a B2 has a clear scan but isn’t functioning quite as expected. SaaS clients can run the utility themselves. Self- and Managed Hosting clients can access the utility as part of the 9.1 Q4 2019 release. 
 
   * [Documentation to run the Building Block Java 11 compatibility scanner yourself](/learn/B2s/Building%20Block%20Scan%20Tool%20for%20Blackboard%20Learn%20SaaS.html) 
 
-* **Testing status for Partner Building Blocks**. As we work with partners to confirm the functionality of their B2s, we’re [updating the status on Behind the Blackboard](https://blackboard.secure.force.com/btbb_articleview?id=kAA1O000000KyvZ) weekly. 
+* **Testing status for Partner Building Blocks**. As we worked with partners throughout 2019 in preparing for Java 11, we were [updating the status of those Building Blocks on Behind the Blackboard](https://blackboard.secure.force.com/btbb_articleview?id=kAA1O000000KyvZ). This document can be used as a resource, but please note that it was no longer updated afer February 2020. Be certain to check with Building Block suppliers for the most up-to-date information. 
 
 * **Additional background information and FAQ**: General updates and answers to frequently asked questions can be found in this [Behind the Blackboard article](https://blackboard.secure.force.com/btbb_articleview?id=kAA39000000CbCU).  
 
