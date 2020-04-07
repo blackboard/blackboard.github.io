@@ -21,6 +21,9 @@
         - name: LTI Advantage - Names and Roles
           link: /standards/LTI%20Advantage%20-%20Names%20and%20Roles
           category: getting-started-lti
+    - name: Tutorials
+      link: /standards/PyLTI1p3WithBlackboardLearn
+      category: tutorials-lti
 - name: Caliper
   link: /standards/Getting%20Started%20With%20Caliper.html
   parentId: caliper
