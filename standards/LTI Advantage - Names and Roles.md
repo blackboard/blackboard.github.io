@@ -3,7 +3,7 @@ layout: standards
 parent: lti
 category: getting-started-lti
 ---
-# LTI Advantage - Sample JSON
+# LTI Advantage - Names and Roles
 *Author: Mark Kauffman*  
 *Categories: ['LTI']*  
 *Tags: ['lti', 'ims learning tools interoperability', 'ims global', 'developer', 'developers', 'standards', 'getting started']*  
