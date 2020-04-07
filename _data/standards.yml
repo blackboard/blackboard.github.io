@@ -15,6 +15,12 @@
         - name: LTI Advantage Video Series
           link: /standards/LTI%20Advantage%20in%20Learn%20-%204-part%20Video%20Tutorial.html
           category: getting-started-lti
+        - name: LTI Advantage - Sample JSON
+          link: /standards/LTI%20Advantage%20-%20Sample%20JSON
+          category: getting-started-lti
+        - name: LTI Advantage - Names and Roles
+          link: /standards/LTI%20Advantage%20-%20Names%20and%20Roles
+          category: getting-started-lti
 - name: Caliper
   link: /standards/Getting%20Started%20With%20Caliper.html
   parentId: caliper
