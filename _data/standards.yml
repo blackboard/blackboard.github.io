@@ -24,6 +24,9 @@
         - name: LTI In Learn - Turn On All The Switches!
           link: /standards/LTI%20In%20Learn%20-%20Turn%20On%20All%20The%20Switches!
           category: getting-started-lti
+    - name: Tutorials
+      link: /standards/PyLTI1p3WithBlackboardLearn
+      category: tutorials-lti
 - name: Caliper
   link: /standards/Getting%20Started%20With%20Caliper.html
   parentId: caliper

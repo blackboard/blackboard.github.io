@@ -16,7 +16,7 @@ glossary of the API Objects in play.
 
 Sessions are the life-blood of Collaborate's API. A session is equivalent to a
 meeting room. If you login to the scheduler and create a room, you are
-creating a session.
+creating a session. For more information about the settings available for Sessions, see the [Collaborate Session Definitions](CollaborateSessionDefinitions.html) document,
 
 ### Instance
 

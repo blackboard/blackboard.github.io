@@ -2,6 +2,8 @@
   link: /collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html
 - name: API Resources
   link: /collab/Collaborate%20API%20Objects.html
+- name: Session Settings
+  link: /collab/CollaborateSessionDefinitions.html
 - name: API Authentication
   link: /collab/Authorize%20and%20Authenticate%20in%20Blackboard%20Collaborate.html
 - name: API Documentation
