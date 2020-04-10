@@ -1,12 +1,15 @@
-<footer>
+<footer class="primary_header">
     <div id="header" class='header-min-width'>
         <div id="header-logos">
-            <div id="header-logos-left-container" class='inline-box'>
+            <div id="header-logos-left-container" class='inline-box-left'>
                 <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
             </div>
-            <div id="header-logos-right-container" class='inline-box'>
+            <div id="header-logos-left-container" class='inline-box-center'>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+            </div>
+            <div id="header-logos-right-container" class='inline-box-right'>
                 {% for item in site.data.top-right %}
-                    <a href="{{ item.link }}" class="header-section-link">{{ item.name }}</a>
+                    <a href="{{ item.link }}">{{ item.name }}</a>
                 {% endfor %}
             </div>
             <br class="clearBoth"/>

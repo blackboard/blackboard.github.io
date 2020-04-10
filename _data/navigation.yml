@@ -4,12 +4,8 @@
   link: /learn/Integrate%20with%20Blackboard%20Learn.html
 - name: Collab
   link: /collab/Getting%20Started%20With%20The%20Blackboard%20Collaborate%20REST%20APIs.html
-- name: ConnectTxt
-  link: /connecttxt/Blackboard%20ConnectTxt%20Developer%20Documentation.html
 - name: Mobile
   link: /mobile/Blackboard%20App%20for%20Students%20Launch%20Schema.html
-- name: OpenLMS
-  link: /openlms/Blackboard%20Open%20LMS%20Approved%20Plugin%20Program%20(MAP).html
 - name: DVBA
   link: /dvba/What%20is%20a%20DVBA%3F.html
 - name: Standards

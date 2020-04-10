@@ -3,14 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'/>
-    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic'
-        rel='stylesheet' type='text/css'/>
-    <link href="https://developer.blackboard.com/assets/portal/menu-styles.css" rel='stylesheet' type='text/css' />
-    <link href="https://developer.blackboard.com/assets/portal/main-styles.css" rel="stylesheet" type="text/css" />
-    <link href="https://developer.blackboard.com/assets/portal/styles_ultra.css" rel="stylesheet" type="text/css" />
-    <link href="https://developer.blackboard.com/assets/portal/dev-portal.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
 
     <title>{{ page.title }}</title>
@@ -48,6 +43,17 @@
         });
       }
     </script>
+    <script>
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function displayMobileMenu() {
+        var x = document.getElementById("topnav");
+        if (x.className === "btn-group") {
+          x.className += " responsive";
+        } else {
+          x.className = "btn-group";
+        }
+      }
+    </script>
     {% feed_meta %}
     {% seo %}
   </head>
@@ -55,7 +61,9 @@
     {% include header.html %}
     {% include navigation.html %}
     <section>
-      {{ content }}
+      <div class="container">
+        {{ content }}
+      </div>
     </section>
     {% include footer.html %}
   </body>
