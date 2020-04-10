@@ -105,15 +105,6 @@
 	display: table;
   }
   
-  /* Add a background color on hover */
-  .btn-group button:hover{
-	background-color: #ffffff;
-	border: 1px solid #c56ed4; /* Green border */
-	color: #c56ed4; /* White text */
-  }
-  .btn-group button:hover a:hover{
-	color: #c56ed4; /* White text */
-  }
 
   .inline-box-left {
     display: inline-block;
@@ -788,6 +779,15 @@
 	vertical-align: top;
 	text-align: center;
 }
+/* Add a background color on hover */
+.btn-group button:hover{
+	background-color: #ffffff;
+	border: 1px solid #c56ed4; /* Green border */
+	color: #c56ed4; /* White text */
+  }
+  .btn-group button:hover a:hover{
+	color: #c56ed4; /* White text */
+  }
 }
 
 @media (min-width: 1001px) and (max-width: 1300px) {
@@ -844,6 +844,16 @@
 	font-size: 12pt;
 	padding: 3pt;
 }
+
+/* Add a background color on hover */
+.btn-group button:hover{
+	background-color: #ffffff;
+	border: 1px solid #c56ed4; /* Green border */
+	color: #c56ed4; /* White text */
+  }
+  .btn-group button:hover a:hover{
+	color: #c56ed4; /* White text */
+  }
 }
 
 @media (min-width: 1301px) {
@@ -888,4 +898,14 @@
 		color: white;
 		padding: 3pt;
 	}
+
+	/* Add a background color on hover */
+	.btn-group button:hover{
+		background-color: #ffffff;
+		border: 1px solid #c56ed4; /* Green border */
+		color: #c56ed4; /* White text */
+	  }
+	  .btn-group button:hover a:hover{
+		color: #c56ed4; /* White text */
+	  }
 }
