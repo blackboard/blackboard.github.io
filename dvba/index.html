@@ -1,0 +1,17 @@
+---
+layout: dvba
+---
+
+<h1>Developer Versions of Blackboard Applications</h1>
+
+<p>Blackboard makes developer versions of our applications available to
+    integrators for development work. Currently Blackboard makes available the
+    following developer versions of Blackboard applications (DVBAs).</p>
+
+<h2>In this section:</h2>
+
+<ul>
+    {% for item in site.data.dvba %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a><br /></li>
+    {% endfor %}
+</ul>

@@ -3,6 +3,7 @@
 *Categories: []*  
 *Tags: ['reporting', 'birt', 'technical office hours', 'admin office hours', 'custom reports', 'developer']*  
 <hr />
+
 Thanks to all that were able to join today's Technical Office Hours - Admin
 edition, And a special thanks to Andrew
 Hulme for presenting on BIRT.

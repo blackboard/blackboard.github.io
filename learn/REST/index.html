@@ -1,0 +1,30 @@
+---
+layout: learn
+parent: rest
+---
+<h1>Blackboard Learn REST APIs</h1>
+
+<p>
+    Blackboard Learn exposes a robust set of REST APIs. They are designed to help you, the developer, build amazing modern web applications in the language you choose. 
+    Used in conjunction with IMS Global's Learning Tools Interoperability (<a href="/standards" target="_self">LTI</a>) standard, you can implement powerful and intuitive 
+    integrations, enhancements, and customizations. 
+</p>
+
+<h2>In this section:</h2>
+
+{% if site.data.learn[0] %}
+    {% for item in site.data.learn %}
+            {% if item.parentId == page.parent %}
+                <ul>
+                    {% for entry in item.categories %}
+                        <li><a href="{{ entry.link }}" class="header-section-link" >{{ entry.name }}</a></li>
+                        <ul>
+                            {% for subentry in entry.topics %}
+                                <li><a href="{{ subentry.link }}" class="header-section-link" >{{ subentry.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </ul>
+        {% endif %}
+    {% endfor %}
+{% endif %}

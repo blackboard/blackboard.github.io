@@ -3,6 +3,7 @@
 *Categories: []*  
 *Tags: ['developer', 'rest', 'devops']*  
 <hr />
+
 Thank you to Mark O'Neil for
 giving us the introduction to DevOps on the Desktop, a look at using free open
 source tools to automate and deploy REST applications to the cloud. Look for

@@ -3,6 +3,7 @@
 *Categories: []*  
 *Tags: ['rest', 'python', 'developers', 'technical office hours', 'developer edition', 'my messages', 'developer']*  
 <hr />
+
 Thank you to Michael
 Bechtel and Robert
 Seletsky for taking the
