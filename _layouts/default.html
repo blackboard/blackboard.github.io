@@ -7,6 +7,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'/>
     <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+    {% if page.tipue_search_active or layout.tipue_search_active %}
+      <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+      <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
+      <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+      <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+    {% endif %}
 
     <title>{{ page.title }}</title>
     

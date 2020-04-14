@@ -4,6 +4,10 @@ relative_links:
   exclude:
     - README.md
 
+tipue_search:
+  include:
+    pages: true
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
