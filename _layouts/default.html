@@ -66,13 +66,15 @@
     {% seo %}
   </head>
   <body>
-    {% include header.html %}
-    {% include navigation.html %}
-    <section>
-      <div class="container">
-        {{ content }}
-      </div>
-    </section>
-    {% include footer.html %}
+    <div class="wrapper">
+      {% include header.html %}
+      {% include navigation.html %}
+      <section>
+        <div class="container">
+          {{ content }}
+        </div>
+      </section>
+      {% include footer.html %}
+    </div>
   </body>
 </html>

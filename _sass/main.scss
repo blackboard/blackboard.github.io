@@ -216,6 +216,7 @@
 	clear: left;
 	border-bottom: 2px solid #c56ed4;
 	text-align: center;
+	height: fit-content;
 }
 
 .secondary_header_links a {
@@ -378,6 +379,12 @@
 	display: none;
 }
 
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -410,6 +417,7 @@
 	margin-left: 0px;
 	padding-top: 1px;
 	padding-bottom: 40px;
+	height: fit-content;
 }
 .left_article {
 	width: 100%;
@@ -554,6 +562,7 @@
 	margin-left: 0px;
 	padding-top: 1px;
 	padding-bottom: 40px;
+	height: fit-content;
 }
 .left_article {
 	width: 100%;
@@ -697,6 +706,7 @@
 	overflow: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	height: fit-content;
 }
 .secondary_header ul li {
 	margin-top: 10px;
