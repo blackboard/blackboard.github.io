@@ -11,7 +11,7 @@ the DVM exclusively for development. Changing some user's Institution role
 resulted in a screen indicating a database error. Looking through the logs/bb-
 sqlerror-log.txt file we saw entries like the following:
 
-```
+```bash
 2016-02-19 22:39:34 +0000 - { call user_roles_cr(users_pk1 := , institution_roles_pk1 := , row_status := , data_src_pk1 := , ) } failed. - org.postgresql.util.PSQLException: ERROR: cursor "
 
 cursor0001" already in use
@@ -37,22 +37,22 @@ opened a terminal.
 we're just after the cut/paste ability.
 
 4. Switch to root.
-```
+```bash
 $ sudo su -
 ```
 
 5. Shutdown Learn.
-```
-# cd /usr/local/blackboard/tools/admin
-# ./ServiceController.sh services.stop
+```bash
+cd /usr/local/blackboard/tools/admin
+./ServiceController.sh services.stop
 ```
 
 6. Tail the appropriate logs/tomcat/stdout-stderr file until the Learn app
-stops. Use ps -ef | grep java to ensure no Java code is running.
+stops. Use `ps -ef | grep java` to ensure no Java code is running.
 
 7. Switch to the postgres user. Start the psql command line interpreter.
 Connect to the BBLEARN database.
-```
+```bash
 # sudo su - postgres
 $ psql
 
@@ -68,7 +68,7 @@ First copy and paste the block of SQL below into the window you have open,
 right after the # that is displayed, then hit enter. Copy and paste everything
 up to and including the line $$ LANGUAGE plpgsql;
 
-```
+```sql
 CREATE OR REPLACE FUNCTION layout_module_group_trg_ins_tf() RETURNS trigger AS
 $$
 DECLARE
@@ -116,7 +116,7 @@ $$ LANGUAGE plpgsql;
 After you hit the Enter key, you should see CREATE FUNCTION displayed in the
 terminal window. You can check that you've actually changed the function with
 the following:
-```
+```sql
 BBLEARN=# select proname,prosrc from pg_proc where
 proname='layout_module_group_trg_ins_tf';
 ```
@@ -124,7 +124,7 @@ proname='layout_module_group_trg_ins_tf';
 Second copy and paste the block of SQL below into the window you have open,
 right after the #, then hit enter. Copy and paste everything up to and
 including the line $$ LANGUAGE plpgsql;
-```
+```sql
 CREATE OR REPLACE FUNCTION users_portal_trg_upd_tf() RETURNS trigger AS $$
 DECLARE
 lmg_pk1 bigint;
@@ -169,12 +169,12 @@ $$ LANGUAGE plpgsql;
 ```
 
 9. Quit Postgres
-```
+```sql
 BBLEARN=#\q
 ```
 
 10. Exit back to root.
-```
+```bash
 $ exit
 ```
 

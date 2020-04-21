@@ -8,11 +8,11 @@ In Blackbard Collaborate, Sessions are what lies at the center of everything. Th
 
 For illustration, here is a sample session event that would be sent to `POST /sessions`.
 
-```
+```json
 {
   "name": "My Collab Room",
   "description": "The room I use for Collab meetings",
-  "startTime": "2020-03-27T16:00:00.000Z,
+  "startTime": "2020-03-27T16:00:00.000Z",
   "endTime": "2020-03-27T17:00:00.000Z",
   "noEndDate": true,
   "createdTimezone": "America/New_York",

@@ -107,7 +107,7 @@ Let’s Encrypt SSL certificate is automatic.
 2. Use the EC2 Security controls to open HTTP as an inbound security rule - you should have HTTP, HTTPS, and SSH (from your console IP) enabled at this point.
 
 3. SSH to your EC2 instance and create a file containing your FQDN from freeddns.no-ip.com and your email address and save to /home/ubuntu/my_ssl_config. The format of this file is important and should follow the example below. The file contains only two lines specifying the key and value pairs used to configure the Let's Encrypt process, e.g.:
-```
+```bash
   ssldomain : devmen.hopto.org
   sslemail : developers@blackboard.com
 ```

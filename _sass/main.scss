@@ -28,7 +28,25 @@
   footer {
 	flex-shrink: 0;
   }
+
+ table {
+	 border: 1px solid #222222;
+ }
+
+ thead {
+	 background-color: #222222;
+	 color: #ffffff;
+	 text-align: left;
+  }
+
+  td {
+	border: 1px solid #222222;
+  }
   
+  pre {
+	  background-color: #e4e4e4;
+  }
+
   .sidenav {
     height: 100%;
     width: 0;

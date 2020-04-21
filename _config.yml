@@ -4,6 +4,8 @@ relative_links:
   exclude:
     - README.md
 
+highlighter: rouge
+
 tipue_search:
   include:
     pages: true

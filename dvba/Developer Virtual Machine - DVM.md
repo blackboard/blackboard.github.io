@@ -61,7 +61,7 @@ may not download or use the Bb Virtual Machine._
   * [9.1 Q2 2016](https://behind.blackboard.com/downloads/details.aspx?d=1746) (3000)
   
 3. Run the following commands in that directory:  
-```
+```bash
    vagrant up
 
    vagrant ssh
@@ -134,7 +134,7 @@ and has the password of _vagrant_.
 
 After you have ssh'd to the virtual machine you have the need to perform root
 privileged operations:
-```
+```bash
     vagrant ssh  
     su - root #the root password for the virtual machine is _vagrant_
 ```
@@ -143,7 +143,7 @@ privileged operations:
 
 To access the database directly (for running SQL), you must be logged in as
 the _postgres_ user:
-```
+```bash
     vagrant ssh  
     sudo su - postgres -c "psql BBLEARN"
 ```
