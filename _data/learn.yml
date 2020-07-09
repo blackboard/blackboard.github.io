@@ -8,6 +8,9 @@
         - name: The Rosetta Stone, Build Number to Build Name Mappings
           link: /learn/LearnReleaseNamesRosettaStone.html
           category: general
+- name: Ultra Extension Framework (UEF)
+  link: /learn/UEF/IntroducingUEF.html
+  parentId: uef
 - name: REST
   link: /learn/REST/Getting%20Started%20With%20REST.html
   parentId: rest
