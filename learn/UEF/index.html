@@ -1,0 +1,28 @@
+---
+layout: learn
+parent: uef
+---
+<h1>Intoducing Blackboard's Ultra Extension Framework (UEF)</h1>
+
+<p>
+    Blackboard cool stuff. 
+</p>
+
+<h2>In this section:</h2>
+
+{% if site.data.learn[0] %}
+    {% for item in site.data.learn %}
+            {% if item.parentId == page.parent %}
+                <ul>
+                    {% for entry in item.categories %}
+                        <li><a href="{{ entry.link }}" class="header-section-link" >{{ entry.name }}</a></li>
+                        <ul>
+                            {% for subentry in entry.topics %}
+                                <li><a href="{{ subentry.link }}" class="header-section-link" >{{ subentry.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </ul>
+        {% endif %}
+    {% endfor %}
+{% endif %}
