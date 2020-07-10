@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+<h1>Welcome to the home of Blackboard Developer blogs.</h1>
+
+Keep up on all the latest information. Some blogs are posted here. Some are links to the community site.
+
+<h2>Latest Posts</h2>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
