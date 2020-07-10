@@ -40,6 +40,6 @@ Hoping to see all who attended and more back on Monday as we get ready for anoth
 
 Now you know, I can't let the chance to write some code poetry pass by:
 
-DevCon – one week down.
-Full of tips, tricks, chits and chats.
-Earn those badges yet?
+> DevCon – one week down.<br />
+> Full of tips, tricks, chits and chats.<br />
+> Earn those badges yet?
