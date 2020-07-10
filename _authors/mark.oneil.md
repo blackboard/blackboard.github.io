@@ -16,4 +16,4 @@ Things I dig doing:
 - making stuff
 
 I enjoy tech in all aspects - especially servers and coding. Docker and node.js are my current favs. 
-I love hanging out with the community problem solving, researching and developing solutions.
+I love hanging out getting to know folks in the community, problem solving, researching and developing solutions.
