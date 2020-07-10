@@ -5,7 +5,9 @@ position: Director, Product Management, Platform and APIs
 layout: author
 ---
 
-Hi, I'm Mark O'Neil. I have been at Blackboard for 10 years. I work on the Product Management team and am responsible for our Platfrom and API management.
+Hi, I'm Mark O'Neil. 
+
+I have been at Blackboard for 10 years. I work on the Product Management team and am responsible for our Platfrom and API management.
 
 Things I dig doing: 
 - hanging out with family
