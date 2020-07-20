@@ -13,7 +13,7 @@ The "ULTRA READY" badge indicates that the App is supported and compatible with 
 
 ### 2. What's the difference between the 3 integration types (LTI + REST, Building Blocks, & Partner Cloud)?
 
- - LTI + REST: LTI + REST apps are those integrations that rely on and utilize LTI Tool Placements and/or Blackboard Learn REST APIs. LTI + REST apps are compatible across all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences) and have no association with legacy Blackboard Building Blocks.
+ * LTI + REST: LTI + REST apps are those integrations that rely on and utilize LTI Tool Placements and/or Blackboard Learn REST APIs. LTI + REST apps are compatible across all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences) and have no association with legacy Blackboard Building Blocks.
 
  - Building Block: While fully functional only in the Original Experience of Blackboard Learn, for any Building Blocks that are installed on a Blackboard Learn environment with the Ultra Experience enabled, the functionality of the integration will only be available in courses using the Original course view. Building Block functionality is not compatible with the Ultra experience of Learn including anywhere within the Ultra base navigation (outside of the course context) or within Ultra view courses.
 
