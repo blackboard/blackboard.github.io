@@ -7,6 +7,7 @@ layout: learn
 *Tags: ['developer']*  
 <hr />
 
+# Blackboard App Catalog - FAQ
 
 ### 1. What does "ULTRA READY" mean?
 
