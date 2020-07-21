@@ -12,6 +12,17 @@ layout: learn
 
 The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*
 
+<table style="width:100%">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td style="width:70%">January</td>
+    <td style="width:30%">$100</td>
+  </tr>
+</table>
+
 | Tables               | Cool         |
 |:-------------------- | ------------:|
 | The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*  | ![Example App tile displaying the ULTRA READY tag](ultra-ready-tile.png "Example App tile displaying the ULTRA READY tag") |
