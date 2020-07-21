@@ -12,6 +12,17 @@ layout: learn
 
 The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*
 
+<table>
+<tbody>
+<tr>
+<td>The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*</td>
+<td>
+<p><img src="https://docs.blackboard.com/learn/App%20Catalog/ultra-ready-tile.png" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## 2. What's the difference between the 3 integration types (LTI + REST, Building Blocks, & Partner Cloud)?
 
 **LTI + REST:** LTI + REST apps are those integrations that rely on and utilize [LTI Tool Placements](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability) and/or [Blackboard Learn REST APIs](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Compare_Building_Blocks_and_Rest#why-rest-apis_OTP-1). LTI + REST apps are compatible across all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences) and have no association with legacy Blackboard Building Blocks.
