@@ -9,7 +9,7 @@ layout: learn
 
 ## 1. What does "ULTRA READY" mean?
 
-<table border="0" cellspacing="0">
+<table border="0" BORDERCOLOR=WHITE>
   <tr>
     <td valign="top">The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*
   </td>
@@ -27,7 +27,11 @@ layout: learn
 
 **Partner Cloud:** Natively available in all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences), [Partner Cloud](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Content_Market#partner-content-in-the-content-market_OTP-0) Apps and have no association with a legacy Blackboard Building Block. The Blackboard Partner Cloud streamlines our inventory of content integrations into a single registration and activation process, eliminates Building Block version control issues, and accelerates the delivery of new partner features and product updates. Via the course-embedded [Content Market tool](https://help.blackboard.com/Learn/Instructor/Course_Content/Create_Content/Add_Content_From_External_Sources#content-market_OTP-0), instructors and course builders can access ready-made material from textbook publishers to enhance their curriculum and provide students with supplementary materials that aid in learning. At the same time, sensitive student data remains private and secure.
 
-## 3. 
+## 3. How can I tell which integrations work for Original vs. Ultra? ##
+
+It can be a bit tricky, but this Ultra Compatibility Matrix provides a bit of clarity:
+
+![Ultra Compatibility Matrix](ultracompmatrix.jpg "Ultra Compatibility Matrix")
 
 
 \**The 3rd party Ultra Ready integrations available through the Blackboard App Catalog allow you to use the named 3rd party service with the Ultra experience in Blackboard Learn. By enabling any 3rd party integrations you agree that any use of the a 3rd party service is governed solely by the terms of use by the named 3rd party (and you shall comply with all such terms of use). Any contract entered into, services provided, or any transaction completed via the named 3rd party is between you and that party, and not Blackboard. Blackboard makes no representation with respect to the named 3rd parties and shall have no liability or obligation whatsoever in relation to the content provided to or available at, use of, or correspondence with, the named 3rd party or any transactions completed and any contract entered into by you with any named 3rd party. Further, by authorizing a 3rd party integration, you authorize Blackboard to provide limited personal information required for the named 3rd party (“Integration Information”). You agree that Blackboard is not responsible for the data privacy and security practices of named 3rd party and Blackboard is not liable for any unauthorized access to the Integration Information. You accept that you are solely responsible for meeting any applicable requirements and the consequences of authorizing named 3rd party to access the Integration Information.*
