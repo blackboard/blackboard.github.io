@@ -9,7 +9,7 @@ layout: learn
 
 ## 1. What does "ULTRA READY" mean?
 
-<table border="0">
+<table border="0" cellspacing="0">
   <tr>
     <td valign="top">The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*
   </td>
