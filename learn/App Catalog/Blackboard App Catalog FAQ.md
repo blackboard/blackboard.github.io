@@ -31,7 +31,7 @@ layout: learn
 
 It can be a bit tricky, but this Ultra Compatibility Matrix provides a bit of clarity:
 
-![Ultra Compatibility Matrix](ultracompmatrix.jpg "Ultra Compatibility Matrix")
+![Ultra Compatibility Matrix](ultracompmatrix.png "Ultra Compatibility Matrix")
 
 
 \**The 3rd party Ultra Ready integrations available through the Blackboard App Catalog allow you to use the named 3rd party service with the Ultra experience in Blackboard Learn. By enabling any 3rd party integrations you agree that any use of the a 3rd party service is governed solely by the terms of use by the named 3rd party (and you shall comply with all such terms of use). Any contract entered into, services provided, or any transaction completed via the named 3rd party is between you and that party, and not Blackboard. Blackboard makes no representation with respect to the named 3rd parties and shall have no liability or obligation whatsoever in relation to the content provided to or available at, use of, or correspondence with, the named 3rd party or any transactions completed and any contract entered into by you with any named 3rd party. Further, by authorizing a 3rd party integration, you authorize Blackboard to provide limited personal information required for the named 3rd party (“Integration Information”). You agree that Blackboard is not responsible for the data privacy and security practices of named 3rd party and Blackboard is not liable for any unauthorized access to the Integration Information. You accept that you are solely responsible for meeting any applicable requirements and the consequences of authorizing named 3rd party to access the Integration Information.*
