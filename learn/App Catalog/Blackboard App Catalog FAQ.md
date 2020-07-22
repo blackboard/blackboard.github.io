@@ -47,9 +47,13 @@ The majority of LTI+REST integrations and Building Blocks are developed, maintai
 
 ## 7. Will more Apps be added to the App Catalog? ##
 
-Most definitely! The new Blackboard App Catalog confirms our continued investment in the expansion of our partner integration ecosystem, commitment to client transparency, and ongoing support of our transition to Blackboard Learn Ultra. With an updated FAQ page coming soon and new Partners and Apps being added weekly, the Blackboard App Catalog is a valuable resource that will only improve as it grows. 
+Most definitely! The new Blackboard App Catalog confirms our continued investment in the expansion of our partner integration ecosystem, commitment to client transparency, and ongoing support of our transition to Blackboard Learn Ultra. With an updated FAQ page coming soon and new Partners and Apps being added weekly, the Blackboard App Catalog is a valuable resource that will only improve as it grows.
 
-## 8. What if I have additional questions? ##
+## 8. How can I list my App(s) in the App Catalog? ##
+
+Any Blackboard Partner can submit Apps to the Blackboard App Catalog - join the [Blackboard Partnerships Program](https://www.blackboard.com/partnerships/become-a-partner) to get started!
+
+## 9. What if I have additional questions? ##
 
 Reach out to the [Blackboard App Catalog Team](mailto:appcatalog@blackboard.com?subject=App%20Catalog%20Question) (appcatalog@blackboard.com)
 
