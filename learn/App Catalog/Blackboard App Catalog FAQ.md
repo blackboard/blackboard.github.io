@@ -7,7 +7,13 @@ layout: learn
 *Tags: ['developer']*  
 <hr />
 
-## 1. What does "ULTRA READY" mean?
+## 1. How does the Blackboard App Catalog Work?
+
+ - All Partners in the [Blackboard Partnerships Program](https://www.blackboard.com/partnerships/become-a-partner) are listed on the [App Catalog Partners](https://appcatalog.blackboard.com/list-partners/) page and are able to submit detailed information for each of their "Apps" (integrations) to the App Catalog. Submitted Apps are reviewed by the Blackboard App Catalog team and appear in the App Catalog upon approval.
+  - The App Catalog enables anyone to browse, search, or filter the Apps by integration type (LTI + REST, Building Block, Partner Cloud) or Category (Accessibility, Admin/Support Tool, Assessment, Classroom Tool, Consulting/Dev Services, Content, Data Insights, Multimedia, Safety/Security, SIS/System Integrator).
+ - The new Blackboard App Catalog uses [OpenChannel](https://openchannel.io/) - an experienced provider of LMS integration marketplace solutions in the educational space.
+
+## 2. What does "ULTRA READY" mean?
 
 <table border="0">
   <tr>
@@ -19,15 +25,13 @@ layout: learn
   </tr>
 </table>
 
-## 2. What's the difference between the 3 integration types (LTI + REST, Building Blocks, & Partner Cloud)?
+## 3. What's the difference between the 3 integration types (LTI + REST, Building Blocks, & Partner Cloud)?
 
-**LTI + REST:** LTI + REST apps are those integrations that rely on and utilize [LTI Tool Placements](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability) and/or [Blackboard Learn REST APIs](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Compare_Building_Blocks_and_Rest#why-rest-apis_OTP-1). LTI + REST apps are compatible across all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences) and have no association with legacy Blackboard Building Blocks.
+ - _**LTI + REST:**_ LTI + REST apps are those integrations that rely on and utilize [LTI Tool Placements](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Learning_Tools_Interoperability) and/or [Blackboard Learn REST APIs](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Compare_Building_Blocks_and_Rest#why-rest-apis_OTP-1). LTI + REST apps are compatible across all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences) and have no association with legacy Blackboard Building Blocks.
+ - _**Building Block:**_ While only fully functional in the Original Experience of Blackboard Learn, for any [Building Blocks](https://help.blackboard.com/Learn/Administrator/SaaS/Building_Blocks) that are installed on a Blackboard Learn environment with the Ultra Experience enabled, the functionality of the integration will only be available in courses using the Original course view. Building Block functionality is not compatible with the Ultra experience of Learn including anywhere within the Ultra base navigation (outside of the course context) or within Ultra view courses.
+  - _**Partner Cloud:**_ Natively available in all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences), [Partner Cloud](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Content_Market#partner-content-in-the-content-market_OTP-0) Apps and have no association with a legacy Blackboard Building Block. The Blackboard Partner Cloud streamlines our inventory of content integrations into a single registration and activation process, eliminates Building Block version control issues, and accelerates the delivery of new partner features and product updates. Via the course-embedded [Content Market tool](https://help.blackboard.com/Learn/Instructor/Course_Content/Create_Content/Add_Content_From_External_Sources#content-market_OTP-0), instructors and course builders can access ready-made material from textbook publishers to enhance their curriculum and provide students with supplementary materials that aid in learning. At the same time, sensitive student data remains private and secure.
 
-**Building Block:** While only fully functional in the Original Experience of Blackboard Learn, for any [Building Blocks](https://help.blackboard.com/Learn/Administrator/SaaS/Building_Blocks) that are installed on a Blackboard Learn environment with the Ultra Experience enabled, the functionality of the integration will only be available in courses using the Original course view. Building Block functionality is not compatible with the Ultra experience of Learn including anywhere within the Ultra base navigation (outside of the course context) or within Ultra view courses.
-
-**Partner Cloud:** Natively available in all flavors and delivery methods of Blackboard Learn (Original and Ultra experiences), [Partner Cloud](https://help.blackboard.com/Learn/Administrator/SaaS/Integrations/Content_Market#partner-content-in-the-content-market_OTP-0) Apps and have no association with a legacy Blackboard Building Block. The Blackboard Partner Cloud streamlines our inventory of content integrations into a single registration and activation process, eliminates Building Block version control issues, and accelerates the delivery of new partner features and product updates. Via the course-embedded [Content Market tool](https://help.blackboard.com/Learn/Instructor/Course_Content/Create_Content/Add_Content_From_External_Sources#content-market_OTP-0), instructors and course builders can access ready-made material from textbook publishers to enhance their curriculum and provide students with supplementary materials that aid in learning. At the same time, sensitive student data remains private and secure.
-
-## 3. How can I tell which integrations work for Original vs. Ultra? ##
+## 4. How can I tell which integrations work for Original vs. Ultra? ##
 
 It can be a bit tricky, but this Ultra Compatibility Matrix provides a bit of clarity:
 
