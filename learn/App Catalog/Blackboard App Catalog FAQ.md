@@ -51,7 +51,7 @@ Most definitely! The new Blackboard App Catalog confirms our continued investmen
 
 ## 8. What if I have additional questions? ##
 
-Reach out to the [Blackboard App Catalog Team](mailto:appcatalog@blackboard.com?subject=App%20Catalog%20Question)
+Reach out to the [Blackboard App Catalog Team](mailto:appcatalog@blackboard.com?subject=App%20Catalog%20Question) (appcatalog@blackboard.com)
 
 
 
