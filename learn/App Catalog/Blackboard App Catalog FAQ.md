@@ -34,7 +34,7 @@ The "ULTRA READY" badge indicates that the App is supported and compatible with 
 
 It can be a bit tricky, but this Ultra Compatibility Matrix provides a bit of clarity:
 
-![Ultra Compatibility Matrix](ultracompmatrix.png "Ultra Compatibility Matrix")
+![Ultra Compatibility Matrix](compmatrix.png "Ultra Compatibility Matrix")
 
 ## 6. Why can't I find the App(s) I'm looking for? ##
 
