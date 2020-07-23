@@ -20,15 +20,9 @@ Partner integrations continue to play a critical and vital role within the Black
 
 ## 3. What does "ULTRA READY" mean?
 
-<table border="0">
-  <tr>
-    <td valign="top">The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. Any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*
-  </td>
-    <td valign="top">
-      <img src="https://raw.githubusercontent.com/blackboard/blackboard.github.io/master/learn/App%20Catalog/ultrarreadytile.png" alt="Example App tile displaying the ULTRA READY tag" title="Example App tile displaying the ULTRA READY tag"/>
-    </td>
-  </tr>
-</table>
+The "ULTRA READY" badge indicates that the App is supported and compatible with the Ultra Experience of Blackboard Learn. Any integration listed as “Ultra Ready” is labeled as such to indicate it was built leveraging only Blackboard integration frameworks specifically supported in Ultra (i.e. Partner Cloud, LTI 1.1+ and/or Learn REST APIs).  The term "Ultra Ready" is not equivalent to a Blackboard certification status for the Ultra experience. The designation of “Ultra Ready” is made by the developer of the integration and not by Blackboard and, as such, does not designate a Blackboard certification status for the Ultra experience.*
+
+![Ultra Ready Badges](ultraready.png "Ultra Ready Badges")
 
 ## 4. What's the difference between the 3 App types (LTI + REST, Building Blocks, & Partner Cloud)?
 
