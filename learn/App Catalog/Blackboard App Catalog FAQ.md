@@ -56,6 +56,7 @@ Reach out to the [Blackboard App Catalog Team](mailto:appcatalog@blackboard.com?
 \-<br>
 \-<br>
 \-<br>
+\-<br>
 <br>
 
 ---
