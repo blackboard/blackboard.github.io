@@ -51,13 +51,12 @@ Any Blackboard Partner can submit Apps to the Blackboard App Catalog - join the 
 ## 9. What if I have additional questions? ##
 
 Reach out to the [Blackboard App Catalog Team](mailto:appcatalog@blackboard.com?subject=App%20Catalog%20Question) (appcatalog@blackboard.com)
-
 <br><br>
 \-<br>
 \-<br>
 \-<br>
 \-<br>
-\-<br>
+<br>
 
 ---
 
