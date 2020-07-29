@@ -20,3 +20,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-relative-links
   - github-pages
+  - jekyll-analytics
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-173992978-1
