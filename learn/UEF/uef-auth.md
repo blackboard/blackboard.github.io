@@ -13,13 +13,15 @@ This document makes a few assumptions. We assume you have:
 * Registered your application on the developer portal
 * Authorized your application (LTI and REST) on the Learn instance in question
 
-We won't go into this too much in this document as this is covered elsewhere. If you need more information, click the links above to read through those processes. There are a couple of things to keep in mind, however. When registering your application in the developer portal, if you plan to use LTI 1.3, you will register that at the same time. In addition, when you authorize your application in your Learn instance, you will need to set `End User Access` to 'Yes'. And when you register your LTI application, you will need to click the context menu next to the domain and click `Manage Placements`. You will need to create a placement and be sure to select `Ultra Extension` as the placement type.
+We won't go into this too much in this document as this is covered elsewhere. If you need more information, click the links above to read through those processes. There are a couple of things to keep in mind, however. When registering your application in the developer portal, if you plan to use LTI 1.3, you will register that at the same time. In addition, when you authorize your application in your Learn instance, you will need to set `End User Access` to 'Yes' and `Allow application to Act as User` to 'Yes'. And when you register your LTI application, you will need to click the context menu next to the domain and click `Manage Placements`. You will need to create a placement and be sure to select `Ultra Extension` as the placement type.
 
 Before we get started, we also need to keep in mind that your Ultra Extension will run in an iframe. As such, any cookies your application relies on will need to be set with **SameSite=None** and **Secure=True**. If you do not do this, most modern browsers **will block** these cookies, causing your application to fail. You can read more information on SameSite cookies [here](https://web.dev/samesite-cookies-explained/).
 
 ## How Authentication/Authorization Works
 
 Ok, now that we have talked through the prerequisites and iframe/cookie connection, we are ready to get started. At its most basic, authenticating and authorizing your Ultra Extension is fairly straightforward. Everything starts when a user logs in to Blackboard Learn.
+
+![Workflow diagram of the authorization flow for the Ultra Extension Framework](/images/uefauthflow.png "Workflow diagram of the authorization flow for the Ultra Extension Framework")
 
 At login, Ultra looks for Ultra Extension placements. When it finds one, a Learning Tools Interoperability (LTI) launch takes place. UEF can support either LTI 1.1 or 1.3 launches. LTI 1.3 is the preferred method. Once the LTI handshake is complete, your app must then initiate a Learn REST token retrieval. Important to note, this must be a done with the Authorization Code workflow. UEF runs at login on behalf of a specific user, and as such, the REST token must also act on behalf of that user. We will talk more about that in a bit. Once the token is obtained, your application will render javascript, which now lives in a hidden iframe in Ultra. You Javascript can then attach to a message channel and being talking with Ultra!
 
