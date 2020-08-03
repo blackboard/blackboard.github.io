@@ -1,8 +1,9 @@
 ---
 layout: learn
 parent: uef
-category: getting-started
+category: uef-getting-started
 ---
+
 # Introducing Blackboard's Ultra Extension Framework
 *Authors: Mark Kauffman, Sara Lehnert*  
 *Categories: [getting-started]*  

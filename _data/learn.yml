@@ -1,5 +1,5 @@
 - name: Learn
-  link: /learn/Integrate%20with%20Blackboard%20Learn.html
+  link: /learn
   parentId: learn
   categories:
     - name: General
@@ -9,10 +9,21 @@
           link: /learn/LearnReleaseNamesRosettaStone.html
           category: general
 - name: Ultra Extension Framework (UEF)
-  link: /learn/UEF/IntroducingUEF.html
+  link: /learn/UEF
   parentId: uef
+  categories:
+    - name: Getting Started
+      link: /learn/UEF/IntroducingUEF.html
+      category: uef-getting-started
+      topics:
+        - name: Intro to UEF
+          link: /learn/UEF/IntroducingUEF.html
+          category: uef-getting-started
+        - name: UEF Auth
+          link: /learn/UEF/uef-auth.html
+          category: uef-getting-started
 - name: REST
-  link: /learn/REST/Getting%20Started%20With%20REST.html
+  link: /learn/REST
   parentId: rest
   categories:
     - name: Getting Started
@@ -93,7 +104,7 @@
           link: /learn/REST/REST%20Demo%20Using%20Ruby.html
           category: examples
 - name: B2s
-  link: /learn/B2s/Getting%20Started%20With%20Building%20Blocks.html
+  link: /learn/B2s
   parentId: b2s
   categories:
     - name: Getting Started
@@ -239,4 +250,4 @@
         - name: Build Java Library
           link: /learn/SOAP%20-%20Deprecated/Build%20Java%20Client%20Library.html
           category: tutorials-soap
-   
+
