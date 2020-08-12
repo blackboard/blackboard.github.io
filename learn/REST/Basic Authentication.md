@@ -100,7 +100,7 @@ the Learn server you wish to integrate with:
 ```
     key=<your key>  
     secret=<your secret>   
-    curl -i -X POST -u "$key:$secret" [https://](https://community.blackboard.com/)<your server>/learn/api/public/v1/oauth2/token -d "grant_type=client_credentials"
+    curl -i -X POST -u "$key:$secret" https://<your server>/learn/api/public/v1/oauth2/token -d "grant_type=client_credentials"
 ```
 
 The cURL statement calls and HTTP POST request. This POST request contains an

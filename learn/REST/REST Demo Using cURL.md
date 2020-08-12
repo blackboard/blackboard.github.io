@@ -129,7 +129,7 @@ Example:
 
 Place the URI below in your browser address field:
 ```
-https://community.blackboard.com/bd-partner-a-original.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=https://localhost&response_type=code&client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d&scope=read
+https://bd-partner-a-original.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=https://localhost&response_type=code&client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d&scope=read
 ```
 
 At this point you are requested to log in. 
@@ -523,7 +523,7 @@ assignment.
 
 Currently Only Available For Presentation-Only Assignments
 
-**(Reference for all APIs used and the Learn version they are available in is @ [https://developer.blackboard.com](https://community.blackboard.com/developer.blackboard.com))**
+**(Reference for all APIs used and the Learn version they are available in is @ [https://developer.blackboard.com](developer.blackboard.com))**
 
 1. Use 3LO to get an access code for the student account that will submit
 the attempt to the assignment. 3LO MUST be used for this process.
