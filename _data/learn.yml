@@ -39,6 +39,9 @@
         - name: Releasing your REST Integration
           link: /learn/REST/Releasing%20your%20REST%20Integration.html
           category: getting-started
+        - name: REST Tutorials
+          link: /learn/REST/REST%20Tutorials.html
+          category: getting-started
     - name: About
       link: /learn/REST/The%20Blackboard%20REST%20API%20Framework.html
       category: about
