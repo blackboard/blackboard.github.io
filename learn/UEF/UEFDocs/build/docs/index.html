@@ -1,0 +1,615 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ultra Extension Framework Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Ultra Extension Framework Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> Ultra Extension Framework Documentation</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#ultra-extension-framework-documentation" id="ultra-extension-framework-documentation" style="color: inherit; text-decoration: none;">
+					<h1>Ultra Extension Framework Documentation</h1>
+				</a>
+				<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
+					<h2>Table of Contents</h2>
+				</a>
+				<ul>
+					<li><a href="#getting-started">Getting Started</a></li>
+					<li><a href="#example-setup">Example Setup</a></li>
+					<li><a href="#integration-workflow">Integration Workflow</a></li>
+					<li><a href="#oauth-and-lti-workflow">OAuth and LTI Workflow</a></li>
+					<li><a href="#message-channels">Message Channels</a></li>
+					<li><a href="#portal-workflow">Portal Workflow</a></li>
+				</ul>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p>First, an application must be <a href="https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal">registered</a> in <a href="https://developer.blackboard.com/">DevPortal</a>.</p>
+				<p>After completing the registration process, the following steps are needed to set up the extension framework in Ultra:</p>
+				<ol>
+					<li>Navigate to the <strong>Admin Panel</strong> and select <strong>LTI Tool Providers</strong></li>
+					<li>Click on <strong>Register Provider Domain</strong></li>
+					<li>Add your <em>Provider Domain</em> and ensure that the <em>Default Configuration</em> is <em>Set separately for each link</em></li>
+				</ol>
+				<p><img src="../../src/images/register_provider_domain.png" alt="Register Provider Domain"></p>
+				<ol>
+					<li>Once saved, open up options for the provider you just created and select <strong>Manage Placements</strong></li>
+				</ol>
+				<p><img src="../../src/images/manage_placements.png" alt="Manage Placements"></p>
+				<ol>
+					<li>For the placement you&#39;ll need the following information:<ol>
+							<li><em>Handle</em> and <em>Label</em> can be anything</li>
+							<li><em>Availability</em>: <strong>Yes</strong></li>
+							<li><em>Type</em>: <strong>Ultra extension</strong></li>
+							<li><em>Tool Provider URL</em>: is your specific provider&#39;s url</li>
+							<li>The <em>Tool Provider Key</em> and <em>Tool Provider Secret</em> are the same values used when configuring a normal LTI integration</li>
+						</ol>
+					</li>
+				</ol>
+				<p><img src="../../src/images/create_placement.png" alt="Create Placement"></p>
+				<ol>
+					<li>Go back to the <strong>Admin Panel</strong> page and select <strong>Rest API Integrations</strong></li>
+					<li>Click on <strong>Create Integration</strong></li>
+					<li>For the integration you&#39;ll need the following information:<ol>
+							<li><em>Application ID</em>: should be the value you received after registering the application in DevPortal</li>
+							<li><em>Learn User</em>: the user you want to be defaulted to interact with the integration</li>
+							<li><em>End User Access</em>: <strong>Yes</strong></li>
+							<li><em>Authorized To Act As User</em>: <strong>Yes</strong></li>
+						</ol>
+					</li>
+				</ol>
+				<p><img src="../../src/images/create_integration.png" alt="Create integration"></p>
+				<a href="#example-setup" id="example-setup" style="color: inherit; text-decoration: none;">
+					<h2>Example Setup</h2>
+				</a>
+				<p>Downloadable Demo Integration: <a href="../../src/downloads/demo-integration.zip">Demo Integration</a></p>
+				<a href="#integration-workflow" id="integration-workflow" style="color: inherit; text-decoration: none;">
+					<h2>Integration Workflow</h2>
+				</a>
+				<p><img src="../../src/images/integration_workflow.png" alt="Integration Workflow"></p>
+				<a href="#oauth-and-lti-workflow" id="oauth-and-lti-workflow" style="color: inherit; text-decoration: none;">
+					<h2>OAuth and LTI Workflow</h2>
+				</a>
+				<p>In order for integrations to send information to Ultra, a few steps within the OAuth and LTI workflow need to be completed:</p>
+				<ol>
+					<li>Ultra will request for all the registered integrations and will receive a list of the certified integrations</li>
+					<li>Ultra will then render an <code>iframe</code> for each of the integrations in the list</li>
+					<li>After rendering an <code>iframe</code> for the provided integrations, each integration will send a redirect request with their respective OAuth2 auth code</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// (3) Now, we need to authorize with Learn Ultra using the OAuth2 token that the server negotiated for us</span>
+messageChannel.postMessage({
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'authorization:authorize'</span>,
+
+    <span class="hljs-comment">// This token is passed in through integration.ejs</span>
+    <span class="hljs-attr">token</span>: <span class="hljs-built_in">window</span>.__token,
+});</code></pre>
+				<ol start="4">
+					<li>The backend will validate that the integration&#39;s OAuth2 authorization code is authorized</li>
+					<li>Once authorized, the backend will redirect to the integration with the authorization code</li>
+					<li>The integration will then provide the secret, authorization code, and exchange to the backend</li>
+					<li>The backend will validate the secret and authorization code</li>
+					<li>After validating the secret and authorization code, the backend will return the authorization token to the integration</li>
+				</ol>
+				<a href="#message-channels" id="message-channels" style="color: inherit; text-decoration: none;">
+					<h2>Message Channels</h2>
+				</a>
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel">Message channels</a> are used as the primary way for the integration to communicate to Ultra and vice versa. They will be created once the <a href="#OAuth-and-LTI-Workflow">authentication workflow</a> has been completed:</p>
+				<ol>
+					<li>The integration will send a &quot;hello&quot; message to Ultra</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// (1) Send the integration handshake message to Learn Ultra. This notifies Learn Ultra that the integration has loaded and is ready to communicate.</span>
+<span class="hljs-built_in">window</span>.parent.postMessage({<span class="hljs-string">"type"</span>: <span class="hljs-string">"integration:hello"</span>}, <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">window</span>.__lmsHost}</span>/*`</span>);</code></pre>
+				<ol start="2">
+					<li>Ultra will verify that the integration source matches the one in the rendered <code>iframe</code>, as well as check to see if the integration has been whitelisted by the user</li>
+					<li>If the integration is whitelisted, Ultra will create a message channel for the integration to use and send the message channel back to the integration</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// Set up the window.postMessage listener for the integration handshake (for step #2)</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"message"</span>, onPostMessageReceived, <span class="hljs-literal">false</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPostMessageReceived</span>(<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-keyword">if</span> (evt.data.type === <span class="hljs-string">'integration:hello'</span>) {
+        messageChannel = <span class="hljs-keyword">new</span> LoggedMessageChannel(evt.ports[<span class="hljs-number">0</span>]);
+        messageChannel.onmessage = onMessageFromUltra;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessageFromUltra</span>(<span class="hljs-params">message</span>) </span>{
+    <span class="hljs-comment">// (6) On click, route, and hover messages, we will receive an event:event event</span>
+    <span class="hljs-keyword">if</span> (message.data.type === <span class="hljs-string">'event:event'</span>) {
+        <span class="hljs-comment">// From here, you can do something with those events...</span>
+    }
+}</code></pre>
+				<ol start="4">
+					<li>The integration can then use the message channel for communicating with Ultra</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// (3) Now, we need to authorize with Learn Ultra using the OAuth2 token that the server negotiated for us</span>
+messageChannel.postMessage({
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'authorization:authorize'</span>,
+
+    <span class="hljs-comment">// This token is passed in through integration.ejs</span>
+    <span class="hljs-attr">token</span>: <span class="hljs-built_in">window</span>.__token,
+});</code></pre>
+				<a href="#portal-workflow" id="portal-workflow" style="color: inherit; text-decoration: none;">
+					<h2>Portal Workflow</h2>
+				</a>
+				<p>A portal denotes an area that an integration can render content into. Currently, portals are only available in rendered integration panels. Content can be rendered in a portal by following the steps below:</p>
+				<ol>
+					<li>The integration needs to be subscribed to the <code>portal:new</code> event</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// (5) Once we are authorized, we can subscribe to events, such as telemetry events</span>
+messageChannel.postMessage({
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'event:subscribe'</span>,
+    <span class="hljs-attr">subscriptions</span>: [<span class="hljs-string">'portal:new'</span>],
+});</code></pre>
+				<ol start="2">
+					<li>After subscribing, the integration can send a <code>portal:panel</code> event</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// (7) For demo purposes, we will open a panel. We send a message to Ultra requesting a panel be opened (if shouldShowPanel is enabled)</span>
+messageChannel.postMessage({
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'portal:panel'</span>,
+    <span class="hljs-attr">correlationId</span>: <span class="hljs-string">'panel-1'</span>,
+    <span class="hljs-attr">panelType</span>: <span class="hljs-string">'small'</span>,
+    <span class="hljs-attr">panelTitle</span>: <span class="hljs-string">'Demo Integration'</span>,
+    <span class="hljs-attr">attributes</span>: {
+        <span class="hljs-attr">onClose</span>: {
+            <span class="hljs-attr">callbackId</span>: <span class="hljs-string">'panel-1-close'</span>,
+        },
+    },
+});</code></pre>
+				<ol start="3">
+					<li>A <code>portal:panel:response</code> event should come back with a generated portalId that can be used to render content into</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// In the console from the provided demo, you should see a similar response</span>
+{
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'portal:panel:response'</span>,
+    <span class="hljs-attr">correlationId</span>: <span class="hljs-string">'panel-1'</span>,
+    <span class="hljs-attr">portalId</span>: <span class="hljs-string">'aaa-bbb-ccc-ddd-eee-fff'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'success'</span>,
+}</code></pre>
+				<ol start="4">
+					<li>Using the portalId from the previous step, a <code>portal:render</code> event can be sent with the specified content to be rendered</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> integrationHost = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.protocol}</span>//<span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.hostname}</span>:<span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.port}</span>`</span>;
+
+<span class="hljs-comment">// (9) Notify Ultra to render our contents into the panel</span>
+<span class="hljs-keyword">if</span> (message.data.correlationId === <span class="hljs-string">'panel-1'</span>) {
+    panelId = message.data.portalId;
+    messageChannel.postMessage({
+        <span class="hljs-attr">type</span>: <span class="hljs-string">'portal:render'</span>,
+        <span class="hljs-attr">portalId</span>: message.data.portalId,
+        <span class="hljs-attr">contents</span>: {
+            <span class="hljs-attr">tag</span>: <span class="hljs-string">'span'</span>,
+            <span class="hljs-attr">props</span>: {
+                <span class="hljs-attr">style</span>: {
+                    <span class="hljs-attr">display</span>: <span class="hljs-string">'flex'</span>,
+                    <span class="hljs-attr">height</span>: <span class="hljs-string">'100%'</span>,
+                    <span class="hljs-attr">width</span>: <span class="hljs-string">'100%'</span>,
+                    <span class="hljs-attr">flexDirection</span>: <span class="hljs-string">'column'</span>,
+                    <span class="hljs-attr">alignItems</span>: <span class="hljs-string">'stretch'</span>,
+                    <span class="hljs-attr">justifyContent</span>: <span class="hljs-string">'stretch'</span>,
+                },
+            },
+            <span class="hljs-attr">children</span>: [{
+                <span class="hljs-attr">tag</span>: <span class="hljs-string">'iframe'</span>,
+                <span class="hljs-attr">props</span>: {
+                    <span class="hljs-attr">style</span>: {<span class="hljs-attr">flex</span>: <span class="hljs-string">'1 1 auto'</span>},
+                    <span class="hljs-attr">src</span>: <span class="hljs-string">`<span class="hljs-subst">${integrationHost}</span>/iframe-panel`</span>,
+                },
+            }]
+        },
+    });
+}</code></pre>
+				<ol start="5">
+					<li>If any attributes have been added on the panel request, Ultra will send the callback event when the specific event is triggered</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-comment">// In the console from the provided demo, you should see a similar response</span>
+{
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'portal:callback'</span>,
+    <span class="hljs-attr">callbackId</span>: <span class="hljs-string">'panel-1-close'</span>,
+    <span class="hljs-attr">event</span>: <span class="hljs-string">'onClose'</span>,
+}</code></pre>
+				<p><img src="../../src/images/portal_workflow.png" alt="Portal Workflow"></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label ">
+						<span>Pages</span>
+					</li>
+					<li class=" ">
+						<a href="pages/HelpProviderScenarios.html"> <wbr>Help <wbr>Provider <wbr>Scenarios</a>
+					</li>
+					<li class=" ">
+						<a href="pages/MessagingRecommendations.html"> <wbr>Messaging <wbr>Recommendations</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/callbacktype.html" class="tsd-kind-icon">Callback<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/helpproviderresponsetype.html" class="tsd-kind-icon">Help<wbr>Provider<wbr>Response<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/helpprovidertype.html" class="tsd-kind-icon">Help<wbr>Provider<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/modalelement.html" class="tsd-kind-icon">Modal<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/modalerror.html" class="tsd-kind-icon">Modal<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/notificationelement.html" class="tsd-kind-icon">Notification<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/notificationerror.html" class="tsd-kind-icon">Notification<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/notificationstatustype.html" class="tsd-kind-icon">Notification<wbr>Status<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/notificationtheme.html" class="tsd-kind-icon">Notification<wbr>Theme</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalerrorreason.html" class="tsd-kind-icon">Portal<wbr>Error<wbr>Reason</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalevent.html" class="tsd-kind-icon">Portal<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalmessagetype.html" class="tsd-kind-icon">Portal<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalmodalmessagetype.html" class="tsd-kind-icon">Portal<wbr>Modal<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalmodalsize.html" class="tsd-kind-icon">Portal<wbr>Modal<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalnotificationmessagetype.html" class="tsd-kind-icon">Portal<wbr>Notification<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalnotificationregion.html" class="tsd-kind-icon">Portal<wbr>Notification<wbr>Region</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalnotificationresponsetype.html" class="tsd-kind-icon">Portal<wbr>Notification<wbr>Response<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalnotificationselectortype.html" class="tsd-kind-icon">Portal<wbr>Notification<wbr>Selector<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalpanelevent.html" class="tsd-kind-icon">Portal<wbr>Panel<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalpanelmessagetype.html" class="tsd-kind-icon">Portal<wbr>Panel<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalpaneltype.html" class="tsd-kind-icon">Portal<wbr>Panel<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalrenderstatus.html" class="tsd-kind-icon">Portal<wbr>Render<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/portalsize.html" class="tsd-kind-icon">Portal<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/ultraintegrationsubscriptiontype.html" class="tsd-kind-icon">Ultra<wbr>Integration<wbr>Subscription<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/attributesevent.html" class="tsd-kind-icon">Attributes<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ianalyticsevent.html" class="tsd-kind-icon">IAnalytics<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iauthorizerequest.html" class="tsd-kind-icon">IAuthorize<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iauthorizeresponse.html" class="tsd-kind-icon">IAuthorize<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ieventsubscriptionrequest.html" class="tsd-kind-icon">IEvent<wbr>Subscription<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ieventunsubscriptionrequest.html" class="tsd-kind-icon">IEvent<wbr>Unsubscription<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ihelpproviderregistrationrequest.html" class="tsd-kind-icon">IHelp<wbr>Provider<wbr>Registration<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ihelpproviderregistrationresponse.html" class="tsd-kind-icon">IHelp<wbr>Provider<wbr>Registration<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ihelpproviderrequest.html" class="tsd-kind-icon">IHelp<wbr>Provider<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ihelpproviderresponse.html" class="tsd-kind-icon">IHelp<wbr>Provider<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imodalbodyelement.html" class="tsd-kind-icon">IModal<wbr>Body<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imodalelement.html" class="tsd-kind-icon">IModal<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imodalfooterelement.html" class="tsd-kind-icon">IModal<wbr>Footer<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imodalheaderelement.html" class="tsd-kind-icon">IModal<wbr>Header<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inewportalmodalrequest.html" class="tsd-kind-icon">INew<wbr>Portal<wbr>Modal<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inewportalmodalrequestresponse.html" class="tsd-kind-icon">INew<wbr>Portal<wbr>Modal<wbr>Request<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inewportalnotificationrequest.html" class="tsd-kind-icon">INew<wbr>Portal<wbr>Notification<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inewportalnotificationrequestresponse.html" class="tsd-kind-icon">INew<wbr>Portal<wbr>Notification<wbr>Request<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inewportalpanelrequest.html" class="tsd-kind-icon">INew<wbr>Portal<wbr>Panel<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inewportalpanelresponse.html" class="tsd-kind-icon">INew<wbr>Portal<wbr>Panel<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inotificationelement.html" class="tsd-kind-icon">INotification<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ipanelcallback.html" class="tsd-kind-icon">IPanel<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalcallback.html" class="tsd-kind-icon">IPortal<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalcloserequest.html" class="tsd-kind-icon">IPortal<wbr>Close<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalmodalcloserequest.html" class="tsd-kind-icon">IPortal<wbr>Modal<wbr>Close<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalmodalcloserequestresponse.html" class="tsd-kind-icon">IPortal<wbr>Modal<wbr>Close<wbr>Request<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalnotificationcloserequest.html" class="tsd-kind-icon">IPortal<wbr>Notification<wbr>Close<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalnotificationcloseresponse.html" class="tsd-kind-icon">IPortal<wbr>Notification<wbr>Close<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalnotificationselector.html" class="tsd-kind-icon">IPortal<wbr>Notification<wbr>Selector</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalnotificationstatus.html" class="tsd-kind-icon">IPortal<wbr>Notification<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalpanelcloserequest.html" class="tsd-kind-icon">IPortal<wbr>Panel<wbr>Close<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalrenderrequest.html" class="tsd-kind-icon">IPortal<wbr>Render<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalrenderresponse.html" class="tsd-kind-icon">IPortal<wbr>Render<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalupdateevent.html" class="tsd-kind-icon">IPortal<wbr>Update<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iportalvalidationerror.html" class="tsd-kind-icon">IPortal<wbr>Validation<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/irouteevent.html" class="tsd-kind-icon">IRoute<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/istandardelement.html" class="tsd-kind-icon">IStandard<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iunauthorizedresponse.html" class="tsd-kind-icon">IUnauthorized<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#integrationeventtype" class="tsd-kind-icon">Integration<wbr>Event<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#integrationmessagetype" class="tsd-kind-icon">Integration<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#integrationresponsemessagetype" class="tsd-kind-icon">Integration<wbr>Response<wbr>Message<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#portalelement" class="tsd-kind-icon">Portal<wbr>Element</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#portalresponseeventtype" class="tsd-kind-icon">Portal<wbr>Response<wbr>Event<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#all_auth_type" class="tsd-kind-icon">ALL_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#analytics_auth_type" class="tsd-kind-icon">ANALYTICS_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#authorize_type" class="tsd-kind-icon">AUTHORIZE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#event_occurrence_type" class="tsd-kind-icon">EVENT_<wbr>OCCURRENCE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#help_provider_auth_type" class="tsd-kind-icon">HELP_<wbr>PROVIDER_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#help_register_type" class="tsd-kind-icon">HELP_<wbr>REGISTER_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#help_request_type" class="tsd-kind-icon">HELP_<wbr>REQUEST_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#help_response_type" class="tsd-kind-icon">HELP_<wbr>RESPONSE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#portal_auth_type" class="tsd-kind-icon">PORTAL_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#portal_modal_auth_type" class="tsd-kind-icon">PORTAL_<wbr>MODAL_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#portal_notification_auth_type" class="tsd-kind-icon">PORTAL_<wbr>NOTIFICATION_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#portal_render_response_type" class="tsd-kind-icon">PORTAL_<wbr>RENDER_<wbr>RESPONSE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#portal_render_type" class="tsd-kind-icon">PORTAL_<wbr>RENDER_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#route_auth_type" class="tsd-kind-icon">ROUTE_<wbr>AUTH_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#subscribe_type" class="tsd-kind-icon">SUBSCRIBE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#unauthorized_type" class="tsd-kind-icon">UNAUTHORIZED_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#unsubscribe_type" class="tsd-kind-icon">UNSUBSCRIBE_<wbr>TYPE</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

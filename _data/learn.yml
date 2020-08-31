@@ -22,6 +22,9 @@
         - name: UEF Auth
           link: /learn/UEF/uef-auth.html
           category: uef-getting-started
+    - name: UEF Documentation
+      link: /learn/UEF/uef-docs.html
+      category: uef-docs
 - name: REST
   link: /learn/REST
   parentId: rest
