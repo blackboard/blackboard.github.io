@@ -21,4 +21,4 @@ You will find these tutorials very helpful as you start your Ultra Extension Fra
 [GitHub BBDN-UEF-Python](https://github.com/blackboard/BBDN-UEF-Python)
 
 ## Notice
-Before releasing a UEF integration to produciton you will be required to meet a certain level of Blackboard Partnership. Reach out to the 'contact us here' link at the bottom of our [Partnership Program FAQs](https://www.blackboard.com/partnerships/become-a-partner/program-faqs) page.
+Before releasing a UEF integration, that uses the UEF ***Premium APIs***, to produciton you will be required to meet a certain level of Blackboard Partnership. [<span style="font-size:12.0pt;line-height:107%">Fill out this form</span>](https://go.blackboard.com/UEF)<span style="font-size:12.0pt;line-height:107%"> to get started.
