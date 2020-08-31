@@ -9,6 +9,8 @@ category: getting-started-lti
 *Tags: ['lti', 'ims learning tools interoperability', 'ims global', 'developer', 'developers', 'standards', 'getting started']*  
 <hr />
 
+NEW!! During DevCon 2020 Eric Preston presented the following on developing an LTI 1.3/Advantage solution. This is a must-watch if you are starting out on your LTI 1.3/Advantage journey. Or, if you have questions, you will likely find the answers here. [Watch this recording.](https://bbdemo.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f2b32ac9-1789-4639-9139-abfb0029c0e2) Here are the [slides](/attachments/DevCon20LTIWorkshop.EricPreston.pdf)
+
 On April 10, 2019, Eric Preston, Blackboard's resident LTI expert, spoke with us in Technical Office Hours. He gave us an overview of LTI technology. [Watch recording the recording in Bb Collaborate.](https://us.bbcollab.com/collab/ui/session/playback/load/53618fbbef8b45628ff9b18f407d7456)
 
 
