@@ -66,7 +66,7 @@ server. We do have a few recommendations, however.
 
 1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.
   
-  * If you see 502 Gateway errors, you may need to increase the sizeof your AMI.
+  * If you see 502 Gateway errors, you may need to increase the size of your AMI. Additionally, you may periodically see a 502 Gateway error during use - keeping in mind EC2s based on this AMI are NOT intended for use as a Production service, you may simply issue a reboot to restart the server maintaining your AWS provisioned public IP and DNS settings.
   
 2. We recommend you adjust the security settings to allow:
   
@@ -80,7 +80,9 @@ server. We do have a few recommendations, however.
   3. select the VPC connected to your EC2 and
   4. select Actions => Edit DNS Hostnames **---> Change DNS hostnames: to YES**
 
-4. **On initial startup the Original UX login screen appears. Note the messaging on that page as it informs you when the license expires. You _will_ need to subscribe to a new AMI release prior to license expiration if you wish to migrate data from the old EC2 to the new. _Licenses on AMIs are not extendible._**
+4.  Startup time: The startup time for your EC2 will vary and may take as long as 15 minutes before you may access the site via your browser. SSH access may be available in 3 minutes or less.
+
+5. **On initial startup the Original UX login screen appears. Note the messaging on that page as it informs you when the license expires. You _will_ need to subscribe to a new AMI release prior to license expiration if you wish to migrate data from the old EC2 to the new. _Licenses on AMIs are not extendible._**
 
 ## Support for Let's Encrypt SSL Certificates
 
