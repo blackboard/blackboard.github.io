@@ -21,6 +21,7 @@ plugins:
   - jekyll-relative-links
   - github-pages
   - jekyll-analytics
+  - jemoji
 
 jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics
