@@ -30,6 +30,8 @@ GET /api/v2/clients/:clientId/content/:contentHash
 
 ## Expected response
 
+For more information on the contents of this JSON, visit the [feedback definitions page](/ally/feedbackdefs.html).
+
 **feedback=true**
 ```
     {
