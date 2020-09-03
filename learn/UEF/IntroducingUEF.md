@@ -10,7 +10,7 @@ category: uef-getting-started
 *Tags: ['developer', 'uef', 'getting started', 'api', 'blackboard', 'developers']*  
 <hr />
 
-<p><span style="font-size:12.0pt;line-height:107%">We’re excited to introduce a new means of integration with the Blackboard Learn Ultra Experience, the Ultra Extension Framework (UEF).  We are sharing here the new things we've empowered you as a developer to do in Ultra with the UEF and giving you the next steps to get started.</span></p>
+We’re excited to introduce a new means of integration with the Blackboard Learn Ultra Experience, known as the Ultra Extension Framework (UEF). The UEF is a set of ***Premium APIs*** that augment the Ultra experience of Blackboard Learn with a robust set of capabilities including telemetry, help provider registration, and UI element rendering - all designed to enable better integrations and richer user experience.
 
 What can you do with the UEF? The UEF is a set of Premium APIs that offers several new capabilities for integrations with the Blackboard Learn Ultra Experience.
 
@@ -47,7 +47,7 @@ line-height:107%">Video</span>](https://vimeo.com/432279170/4b30aed978)<span sty
 
    * [<span style="font-size:12.0pt;line-height:107%">Screenshots</span>](http://images.email.blackboard.com/Web/BlackboardInc/%7Baffc825e-e416-4c69-aa09-69cf160a5a57%7D_QwicklyUEFscreenshots.pdf)
 
-<span style="font-size:12.0pt;line-height:107%">If you are a developer and interested in pursuing use of the UEF in your integration with the Blackboard Learn Ultra Experience, what are your next steps? Simply fill out and submit this</span> [<span style="font-size:12.0pt;line-height:107%">form</span>](https://go.blackboard.com/UEF)<span style="font-size:12.0pt;line-height:107%">!</span>
+If you are a developer and interested in pursuing use of the UEF ***Premium APIs*** in your integration with the Blackboard Learn Ultra Experience, what are your next steps? Simply fill out and submit this [form](https://go.blackboard.com/UEF)!
 
 <span style="font-size:12.0pt;line-height:107%">Check back here often as this page will be updated frequently with more details.</span>
 
