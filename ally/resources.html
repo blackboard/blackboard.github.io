@@ -1,0 +1,28 @@
+---
+layout: ally
+title: Resources
+parent: ally
+category: resources
+tags: ['developer', 'rest', 'getting started', 'ally', 'api', 'jwt','json web token']
+author: scott
+---
+
+<h2>Blackboard Ally as a Service API Resources</h2>
+
+<p>This section is dedicated to getting developers with the API resources and endpoints available as part of Ally as a Service.</p>
+
+<h2>In this section:</h2>
+
+{% if site.data.ally[0] %}
+    {% for item in site.data.ally %}
+        {% for entry in item.categories %}
+            <ul>
+                {% if  entry['name'] == 'API Resources' %}
+                   {% for subentry in entry.topics %}
+                       <li><a href="{{ subentry.link }}">{{ subentry.name }}</a></li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        {% endfor %}
+    {% endfor %}
+{% endif %}
