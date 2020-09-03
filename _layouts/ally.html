@@ -4,7 +4,21 @@ layout: default
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
     {% for item in site.data.ally %}
-        <a href="{{ item.link }}" class="header-section-link" >{{ item.name }}</a><br />
+        <a href="{{ item.link }}" class="header-section-link" >{{ item.name }}</a>
+        {% if item.parentId == page.parent %}
+                        <ul>
+                            {% for entry in item.categories %}
+                                <li><a href="{{ entry.link }}" class="header-section-link" >{{ entry.name }}</a></li>
+                                {% if entry.category == page.category %}
+                                    <ul>
+                                        {% for subentry in entry.topics %}
+                                            <li><a href="{{ subentry.link }}" class="header-section-link" >{{ subentry.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                {% endif %}
     {% endfor %}
 </div>
       

@@ -1,10 +1,35 @@
-- name: Getting Started
+- name: Ally as a Service
   link: /ally
-- name: API Resources
-  link: /ally
-- name: Session Settings
-  link: /ally
-- name: API Authentication
-  link: /ally
-- name: API Documentation
-  link: https://ally.ac/api/
+  parentId: ally
+  categories: 
+    - name: Getting Started
+      link: /ally/gettingstarted.html
+      category: getting-started
+      topics:
+        - name: Getting Started
+          link: /ally/gettingstarted.html
+          category: getting-started
+        - name: Using the API Docs
+          link: /ally/howtoapidoc.html
+          category: getting-started
+        - name: Authentication
+          link: /ally/auth.html
+          category: getting-started
+    - name: API Resources
+      link: /ally/resources.html
+      category: resources
+      topics:
+        - name: Upload a file
+          link: /ally/uploadfile.html
+          category: resources
+        - name: Check Status
+          link: /ally/checkstatus.html
+          category: resources
+        - name: Get Feedback
+          link: /ally/getfeedback.html
+          category: resources
+        - name: Feedback Definitions
+          link: /ally/feedbackdefs.html
+          category: resources
+    - name: API Documentation
+      link: https://ally.ac/api/

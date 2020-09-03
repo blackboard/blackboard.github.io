@@ -1,11 +1,12 @@
 <div id='top-content' class="primary_header">
     <div id="header" class='header-min-width'>
-        <div id="header-logos">
+        <div id="header-logos" class="header-logos">
             <div id="header-logos-left-container" class='inline-box-left'>
-                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a><span class="header-devdocs">  Dev Docs</span>
             </div>
             <div id="header-logos-left-container" class='inline-box-center'>
                 <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
+                <span class="header-devdocs"><br />Dev Docs</span>
             </div>
             <div id="header-logos-right-container" class='inline-box-right'>
                 {% for item in site.data.top-right %}
@@ -13,13 +14,6 @@
                 {% endfor %}
             </div>
             <br class="clearBoth"/>
-        </div>
-            
-        <br />
-        <div class="wrap">
-            <div id="subhead-section" class="subhead-icon-header-interaction">
-                <h1 style="color: white;text-align: center; font-size: 30pt;">Developer Documentation</h1>
-            </div>
         </div>
     </div>
 </div>

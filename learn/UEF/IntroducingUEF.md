@@ -12,7 +12,7 @@ category: uef-getting-started
 
 <p><span style="font-size:12.0pt;line-height:107%">We’re excited to introduce a new means of integration with the Blackboard Learn Ultra Experience, the Ultra Extension Framework (UEF).  We are sharing here the new things we've empowered you as a developer to do in Ultra with the UEF and giving you the next steps to get started.</span></p>
 
-What can you do with the UEF? The UEF offers several new capabilities to integrations in the Blackboard Learn Ultra Experience.
+What can you do with the UEF? The UEF is a set of Premium APIs that offers several new capabilities for integrations with the Blackboard Learn Ultra Experience.
 
   * **<span style="font-size:12.0pt;line-height:107%">Telemetry:</span>** <span style="font-size:12.0pt;line-height:107%">Receiving of detailed user navigation behavior data, including click, route, and hoover events.</span> [<span style="font-size:12.0pt;line-height:
 107%">See a demo</span>](https://youtu.be/rnMsvVo6xOA)<span style="font-size:12.0pt;line-height:107%">.</span>

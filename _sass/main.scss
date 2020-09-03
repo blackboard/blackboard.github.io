@@ -403,12 +403,23 @@
     grid-template-rows: auto auto 1fr auto;
 }
 
+.header-devdocs {
+	color:white;
+	font-family: "Open Sans";
+	font-size: 24px;
+	font-weight:bolder;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
 
 @media (max-width: 320px) {
+	.header-logos {
+		height: 100px !important;
+	}
+	
 .secondary_header ul li {
 	float: none;
 	margin-top: 28px;
@@ -554,6 +565,10 @@
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
+.header-logos {
+	height: 100px !important;
+}
+
 .secondary_header ul li {
 	float: none;
 	margin-top: 28px;
@@ -720,6 +735,9 @@
 }
 
 @media (min-width: 769px) and (max-width: 1000px) {
+.header-logos {
+	height: 100px !important;
+}
 .secondary_header {
 	overflow: auto;
 	padding-top: 30px;

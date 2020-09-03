@@ -5,14 +5,30 @@ title: Blackboard Ally
 
 <h2>Blackboard Ally</h2>
 
-<p>This section is dedicated to getting developers up-to-speed quickly with the Ally as a Service API.
-    These APIs give the developer the ability to programmatically integrate common
-    Ally functionality into a web application using the tried and true
-    framework that is REST APIs.</p>
+<p>
+    Ally as a Service is a standalone, separately licensed API to apply specific components of Ally's approach to your application.  
+    In its initial form, you are able to upload files, process them through Ally's award-winning accessibility analysis capabilities, 
+    and retrieve a report that tells you what can be improved. This is only the tip of the iceberg, so make sure you continue to 
+    monitor this amazing capability for enhancements moving forward. For more information, including a conversation about pricing, 
+    each out to your Account Executive.
+</p>
 
 <h2>In this section:</h2>
+
+{% if site.data.ally[0] %}
 <ul>
     {% for item in site.data.ally %}
-        <li><a href="{{ item.link }}">{{ item.name }}</a><br /></li>
-    {% endfor %}
-</ul>
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+            <ul>
+                {% for entry in item.categories %}
+                    <li><a href="{{ entry.link }}">{{ entry.name }}</a></li>
+                        <ul>
+                            {% for subentry in entry.topics %}
+                                <li><a href="{{ subentry.link }}">{{ subentry.name }}</a></li>
+                            {% endfor %}
+                    </ul>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+{% endif %}
