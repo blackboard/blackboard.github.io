@@ -31,7 +31,9 @@ encodedheader.encodedpayload.signature
 
 and resembles the following:
 ```http
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImFsbHktY2xpZW50LWlkIiwiaWF0IjoxNjAwMTc0MTM3fQ.jh0tox209FPdI2TPMgIt6v2lQZLu9OGOnRs7KxJ6mLY
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJjbGllbnRJZCI6ImFsbHktY2xpZW50LWlkIiwiaWF0IjoxNjAwMTc0MTM3fQ.
+jh0tox209FPdI2TPMgIt6v2lQZLu9OGOnRs7KxJ6mLY
 ```
 
 ### JWT Header
@@ -75,7 +77,9 @@ The signature is basically the string created above `encodedheader.encodedpayloa
 A properly formed Ally as a Service API call will use this signed JWT as its bearer token. To authorize a request, simply add this token as a Bearer token in your request's authorization header. The authorization header will look like the following:
 
 ```http
-    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImFsbHktY2xpZW50LWlkIiwiaWF0IjoxNjAwMTc0MTM3fQ.jh0tox209FPdI2TPMgIt6v2lQZLu9OGOnRs7KxJ6mLY  
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+    eyJjbGllbnRJZCI6ImFsbHktY2xpZW50LWlkIiwiaWF0IjoxNjAwMTc0MTM3fQ.
+    jh0tox209FPdI2TPMgIt6v2lQZLu9OGOnRs7KxJ6mLY  
 ```
 
 ## Additional Resources
