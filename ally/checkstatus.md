@@ -35,8 +35,8 @@ This endpoint will always return a 200 status code for existing content hashes r
 {
     "hash": "MS4gQWxsI...",
     "status": "success",
-    "statusUrl": "/api/v2/clients/7/content/MS4gQWxsIH.../status",
-    "resourceUrl": "/api/v2/clients/7/content/MS4gQWxsIH..."
+    "statusUrl": "/api/v2/clients/:clientId/content/MS4gQWxsIH.../status",
+    "resourceUrl": "/api/v2/clients/:clientId/content/MS4gQWxsIH..."
 }
 ```
 
