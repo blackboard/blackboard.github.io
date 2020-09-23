@@ -4,7 +4,42 @@ parent: uef
 ---
 <h1>Intoducing Blackboard's Ultra Extension Framework (UEF)</h1>
 
-<h2>In this section:</h2>
+<h2>UEF - Reducing the Barriers to Ultra Adoption</h2>
+<p>Learn Ultra represents a modern, intuitive, accessible, and fully responsive 
+    interface – but delivering this transformed experience hinged on reducing or 
+    eliminating support for integrations using older/or legacy frameworks; most 
+    notably our Java API set (Building Blocks) and JavaScript injection.
+</p>
+<p>
+    While Building Blocks can still be loaded on a Learn Ultra environment, 
+    their feature set is limited to Original Courses only. This means Building 
+    Blocks cannot deliver any integration functionality in the Ultra Base Nav 
+    or in the Ultra Course View. As for JavaScript injection – it's not allowed 
+    in Learn Ultra at all.    
+</p> 
+<p>
+    Blackboard has spent 18 months developing a truly scalable solution aimed at 
+    enabling our partners to create integrations in Learn Ultra that have an 
+    equivalent level of feature parity as compared to their integrations in Learn 
+    Original – the Ultra Extension Framework (UEF). A comprehensive inventory of 
+    partner integrations blocked in Learn Ultra was used to prioritize the 
+    feature components of the UEF. To avoid developing in a vacuum, Blackboard's 
+    dedicated UEF development team worked in tandem with EesySoft's development 
+    team to ensure that the initial release of the UEF could support the needs of 
+    their powerful integration. In fact, EesySoft has already developed 
+    <a href="https://youtu.be/OKJWiddjJws">several components of their Ultra integration</a> 
+    and the results have been quite promising.
+</p>
+<p>
+    Designed to be used in conjunction with <a href="https://www.imsglobal.org/activity/learning-tools-interoperability">LTI® v1.3 and LTI Advantage</a>, and the standard set of 
+    <a href="https://docs.blackboard.com/learn/REST/Getting%20Started%20With%20REST.html">
+        Blackboard Learn REST APIs</a> the UEF enables integrations in Learn Ultra to leverage:
+<li>Telemetry: Receiving of detailed user navigation behavior data</li>
+<li>User Interface Elements: Ability to populate UI elements and content</li>
+<li>Help Provider Registration: Option to override the default behavior of the native help tool in Ultra</li>
+</p>
+
+<h2>Start Building Your Ultra Extensions!</h2>
 
 {% if site.data.learn[0] %}
     {% for item in site.data.learn %}

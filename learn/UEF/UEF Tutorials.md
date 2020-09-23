@@ -3,7 +3,7 @@ layout: learn
 parent: uef
 category: getting-started
 ---
-# REST Tutorials
+# UEF Tutorials
 *Author: Mark Bykerk Kauffman*  
 *Categories: []*  
 *Tags: ['developer', 'uef', 'getting started', 'api', 'blackboard', 'developers']*  
