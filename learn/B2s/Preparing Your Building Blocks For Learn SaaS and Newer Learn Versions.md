@@ -621,30 +621,6 @@ if ( parent && parent.tinymce &&
  
 *Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.
 
-# Changes Required to Address SameSite Issues with B2 Mashups
-
-## Why These Changes Are Necessary
-Historically a Building Block can launch from a Blackboard Learn mashup to a mashup content provider, say mashupsource.com, then the user can select content on mashupsource.com and do a form POST, or a GET back to the B2 endpoint. Because browsers now enforce the SameSite policy by default, the form POST will no longer work. And, in the next major release of Learn, a GET will not work either because the new TinyMCE 5 editor will render the B2 mashup inside an iframe. The browser will not send the Learn Server (LearnServerFQDN) cookies to LearnServerFQDN when accessed in that manner. 
-
-Hence you need a way update Learn Server content without a cross-site request from mashupsource.com to the Learn Server. Following is a description of how you can do so:
-
-## Overview of the Changes
-
-Instead of redirecting the browser to a page on mashupsource.com, that page needs to load an iframe, provided by your B2, with the source being mashupsource.com.  The user will interact with mashupsource.com within that iframe and when done, that page will use JavaScript to postMessage to the parent window with whatever the result of the user’s interaction with mashupsource.com is.  JavaScript in the parent (authored by mashupsource, rendered by your B2 as part of your mashup) will accept that message (and validate it is coming from mashupsource.com) and then from within this window (the one launched from LearnServerFQDN/B2…) it would then POST (or GET) back to learn.  Since this is a POST (or GET) from a page coming from the same origin it will all work. These changes are compatible with all current and future releases of Blackboard Learn. 
-
-In the next major release of Learn the window and frames will be stacked as follows: 
-
-[window/iframe: LearnServerFQDN – the Learn Original Course page with the editor on it 
-
-                [iframe:LearnServerFQDN/B2 providing mashup (receive postMessage then POST or GET to B2) 
-
-                                [iframe src=mashupsource.com (postMessage to parent)] 
-
-                ] 
-
-] 
-
-## Additional Details - WIP
 
 
 
