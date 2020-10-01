@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.1
         env:
-          JEKYLL_PAT: ${{ secrets.Blackboard Developer Community }}
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
