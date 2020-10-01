@@ -646,5 +646,5 @@ In the next major release of Learn the window and frames will be stacked as foll
 
 ]
 ```
-## Additional Details - Coming Soon
+## Code Examples - Coming Soon
 Our intent is to provide more detailed pseudo code here, or possibly complete sample B2 code.
