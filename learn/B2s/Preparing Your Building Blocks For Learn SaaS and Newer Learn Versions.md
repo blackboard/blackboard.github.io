@@ -41,7 +41,7 @@ likely need to be modified to run in the new Blackboard.
   * [Continuous Delivery](#continuous-delivery)
   * [Installing Building Blocks in Learn SaaS](#installing-building-blocks-in-learn-saas)
   * [Update a Building Block for TinyMCE 5](#update-a-building-block-for-tinymce-5)
-  * [Changes Required to Address SameSite Issues with B2 Mashups](#changes-required-to-address-samesite-issues-with-b2-mashups)
+  * [Changes Required to Address SameSite Issues with B2s](#changes-required-to-address-samesite-issues-with-b2s)
 
 # APIs
 
@@ -621,12 +621,14 @@ if ( parent && parent.tinymce &&
  
 *Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.
 
-# Changes Required to Address SameSite Issues with B2 Mashups
+# Changes Required to Address SameSite Issues with B2s
 
 ## Why These Changes Are Necessary
-Historically a Building Block can launch from a Blackboard Learn mashup to a mashup content provider, say mashupsource.com, then the user can select content on mashupsource.com and do a form POST, or a GET back to the B2 endpoint. Because browsers now enforce the SameSite policy by default, the form POST will no longer work. And, in the next major release of Learn, a GET will not work either because the new TinyMCE 5 editor will render the B2 mashup inside an iframe. The browser will not send the Learn Server (LearnServerFQDN) cookies to LearnServerFQDN when accessed in that manner.
+Historically a Building Block can launch from content created by a Blackboard Learn B2 to a remote server where some content is selected to push back to Blackboard Learn. With the advent of browsers now enforcing a SameSite cookie policy the remote server cannot then make a request back to Learn with cookies that contain Learn session information because of the browser SameSite enforcement. For this discussion we’ll describe how that impacts a B2 mashup and describe a solution that uses JavaScript to get around the browser’s enforcement of the SameSite policy. You will need to examine the rest of your B2 functionality to determine if you need to make similar changes in other areas that get content from your server. 
 
-Hence you need a way update Learn Server content without a cross-site request from mashupsource.com to the Learn Server. Following is a description of how you can do so:
+For this example, we discuss a B2 that provides a mashup that does a launch to get content from a mashup content provider, say mashupsource.com. The user used to be able to select content on mashupsource.com and do a form POST, or a GET back to the B2 endpoint. Because browsers now enforce the SameSite policy by default, the form POST will no longer work. And, in the next major release of Learn, a GET will not work either because the new TinyMCE 5 editor will render the B2 mashup inside an iframe. The browser will not send the Learn Server (LearnServerFQDN) cookies to LearnServerFQDN when accessed in that manner. 
+
+Hence you need a way update Learn Server content without a cross-site HTTP request from mashupsource.com to the Learn Server. Following is a description of how you can do so: 
 
 ## Overview of the Changes
 
