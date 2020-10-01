@@ -32,4 +32,5 @@ layout: main
       <h4>Technical Office Hours</h4>
       <p>Technical Office Hours is a weekly hour-long session dedicated to Blackboard’s technical users. We gather with System Administrators, Developers, and anyone else that wants to join to discuss on-going issues, talk about what’s coming up for Blackboard users, and share what’s going on with each other. We provide webinars and training from time-to-time, but generally, this is an hour of open discussion driven by the participants.</p>
     </div>
+    
   </div>
