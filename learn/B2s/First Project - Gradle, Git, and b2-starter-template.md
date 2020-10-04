@@ -205,7 +205,7 @@ Both these files are located in the project WEB-INF directory.
 
 #### bb-manifest.xml
 
-Important: The handle value and vendor id referenced in the bb-manifest should not contain any spaces. Spaces in these values cause major problems. Any B2 containg such will be removed from Blackboard-hosted systems.
+Important: The handle value and vendor id referenced in the bb-manifest should not contain any spaces. Spaces in these values cause major problems. Any B2 containing such will be removed from Blackboard-hosted systems.
 
 The basic-b2-template bb-manifest minimally requires edits to the following
 noted areas for use in your cloned project.
