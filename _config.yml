@@ -1,3 +1,7 @@
+name: Blackboard Developer Blog
+description: The Blackboard Developer Blog is geared towards keeping our Developer Community informed of important changes, notifications, and cool stuff we are working on.
+url: https://docs.blackboard.com
+
 relative_links:
   enabled:     true
   collections: true

@@ -410,6 +410,23 @@
 	font-weight:bolder;
 }
 
+#mainContent {
+	/* Container for the blog post in individal blog view */
+	padding-left: 2%;
+	width: 71%;
+	float: left;
+	padding-right: 2%;
+}
+
+#content #sidebar {
+	/* Sidebar*/
+	width: 19%;
+	padding-left: 2%;
+	padding-right: 2%;
+	float: left;
+	background-color: rgba(246,246,246,1.00);
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
