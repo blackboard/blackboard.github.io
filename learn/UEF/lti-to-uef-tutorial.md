@@ -26,6 +26,8 @@ There are 5 branches:
 
 We will use **Docker** and **ngrok** for this demonstration. This allows us to run an LTI tool from our local desktop without the requirement of deploying to an internet-accessible service. This is also a great way to build and test your own applications.
 
+If you prefer to watch videos, each step below has a video. You can also view the entire [Ultra Extension Framework - YouTube Tutorial Series](https://www.youtube.com/watch?v=Mp9tFpultaQ&list=PLbewGw29xjRa2ZQ7gs3CgisvBVvyuKhsR).
+
 ## Preparing the development environment
 
 This section will help you set up your development environment and ensure that you are ready to participate in this tutorial.

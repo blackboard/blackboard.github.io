@@ -28,6 +28,10 @@
     - name: UEF Tutorials
       link: /learn/UEF/UEF%20Tutorials.html
       category: uef-tutorials
+      topics:
+        - name: LTI to UEF
+          link: /learn/UEF/lti-to-uef-tutorial.html
+          category: uef-tutorials
 - name: REST
   link: /learn/REST
   parentId: rest
