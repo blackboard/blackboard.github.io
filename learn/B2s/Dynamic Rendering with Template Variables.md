@@ -35,6 +35,7 @@ User locale | @X@user.locale@X@ | en_GB
 User system role(s) | @X@user.role@X@ | System Roles:<br />* C- Course Administrator<br />* U- Guest<br />* N- None<br />* O- Observer<br />* Y- Community Administrator<br />* R- Support<br />* Z- System Admin<br />* H- System Support<br />* A- User Administrator
 User primary institution role | @X@user.institution_role@X@<br />@X@user.primary_institution_role@X@ | student
 User secondary institution role(s) | @X@user.secondary_institution_role@X@ | student,faculty
+User Student Id (student id) | @X@user.student_id@X@ | jsmith
 Course membership role | @X@membership.role@X@ | Course/Organization Roles:<br />* B- Course Builder/Organization Builder<br />* G- Grader/Grader<br />* U- Guest/Guest<br />* P- Instructor/Leader<br />* S- Student/Participant<br />* T- Teacher's Assistant/Assistant
 Course external course key | @X@course.batch_uid@X@ | ABC123ABC
 Course course id | @X@course.id@X@ | BIO101
