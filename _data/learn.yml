@@ -19,6 +19,9 @@
         - name: Intro to UEF
           link: /learn/UEF/IntroducingUEF.html
           category: uef-getting-started
+        - name: Configuring an Ultra Extension Framework Integration in Learn
+          link: /learn/UEF/configure-uef.html
+          category: uef-getting-started
         - name: UEF Auth
           link: /learn/UEF/uef-auth.html
           category: uef-getting-started
