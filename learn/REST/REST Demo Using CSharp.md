@@ -48,7 +48,7 @@ This help topic assumes the Developer:
 * has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.md) file.
 * has a REST-enabled Blackboard Learn instance, like the [Developer AMI](/dvba/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html).
 
-### Code Walkthrough
+## Code Walkthrough
 
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
@@ -56,7 +56,7 @@ the programming language of choice, can really be summed up in two steps:
   1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](Basic%20Authentication.html) document.
   2. Call the appropriate REST endpoint with the appropriate data to perform the appropriate action.
 
-#### Authorization and Authentication
+### Authorization and Authentication
 
 The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
 request is made to the token endpoint with a Basic Authorization header
@@ -89,7 +89,7 @@ The C# code handles this in bbdn.rest.Authorizer:
 The JSON response is serialized into the Token object, and you may then
 retrieve those values from that object.
 
-#### Calling Services
+### Calling Services
 
 The individual service calls are handled by C# Classes in the
 `bbdn.rest.services` package, and each individual service class implements the
@@ -131,17 +131,18 @@ For example, to retrieve a course by the pk1 `_1_1`, you would call **GET
 /learn/api/public/v1/courses/_1_1**. To retrieve by the batchuid test101, you
 would call **GET /learn/api/public/v1/courses/externalId:test101.**
 
-Create is sent to Learn as a HTTP POST message with a JSON body that defines
+#### HTTP Verbs
+* Create is sent to Learn as a HTTP POST message with a JSON body that defines
 the object. The endpoint should omit the objectId, as this will be generated
 on creation.
 
-Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
+* Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
 should include the objectId being retrieved.
 
-Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
-the object. The endpoint should include the objectId being updated.
+* Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
+the object. The endpoint should include the objectId being updated. **You will notice the code is a bit different for these messages. C# doesn't support PATCH out of the box, so we have to create a custom HttpRequestMessage to handle this.**
 
-Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
+* Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
 should include the objectId being deleted.
 
 <hr />
@@ -196,23 +197,34 @@ interface which is required to use the async/await functionality..
 
 **Update**
 ```
-    public async Task<Datasource> UpdateObject (Datasource updateDataSource)
-    {
-           Datasource datasource = new Datasource();
-           try {
-                var json = JsonConvert.SerializeObject (updateDataSource);
-                var body = new StringContent (json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response =  await HttpClientExtensions.PatchAsync (client, Constants.HOSTNAME + Constants.DATASOURCE_PATH + "/externalId:" + Constants.DATASOURCE_ID, body);
-                if (response.IsSuccessStatusCode) {
-                     Debug.WriteLine (@" Datasource successfully updated.");
-                     var content = await response.Content.ReadAsStringAsync();
-                     datasource = JsonConvert.DeserializeObject<Datasource>(content);
-                }
-           } catch (Exception ex) {
-                Debug.WriteLine (@" ERROR {0}", ex.Message);
-           }
-           return (datasource);
-    }
+        public async Task<Datasource> UpdateObject (Datasource updateDataSource)
+	    {
+            Datasource datasource = new Datasource();
+
+		    try {
+				var s = new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat };
+
+				var request = new HttpRequestMessage(new HttpMethod("PATCH"), Constants.HOSTNAME + Constants.DATASOURCE_PATH + "/externalId:" + Constants.DATASOURCE_ID);
+				var json = JsonConvert.SerializeObject(updateDataSource);
+
+				request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", access_token);
+				request.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json;odata=verbose");
+
+
+				HttpResponseMessage response = await client.SendAsync(request);
+			
+
+			    if (response.IsSuccessStatusCode) {
+				    Debug.WriteLine (@"				Datasource successfully updated.");
+                    var content = await response.Content.ReadAsStringAsync();
+                    datasource = JsonConvert.DeserializeObject<Datasource>(content);
+                }
+
+		    } catch (Exception ex) {
+			    Debug.WriteLine (@"				ERROR {0}", ex.Message);
+		    }
+            return (datasource);
+	    }
 ```
 
 **Delete**
@@ -295,27 +307,38 @@ required to use the async/await functionality..
 
 **Update**
 ```
-            public async Task<Term> UpdateObject(Term updateTerm)
-            {
-                Term term = new Term();
-                try
-                {
-                    var json = JsonConvert.SerializeObject(updateTerm);
-                    var body = new StringContent(json, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.TERM_PATH + "externalId:" + Constants.TERM_ID, body);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        Debug.WriteLine(@" Term successfully updated.");
-                        var content = await response.Content.ReadAsStringAsync();
-                        term = JsonConvert.DeserializeObject<Term>(content);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(@" ERROR {0}", ex.Message);
-                }
-                return (term);
-            }
+        public async Task<Term> UpdateObject(Term updateTerm)
+        {
+            Term term = new Term();
+
+            try
+            {
+                var s = new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat };
+
+                var request = new HttpRequestMessage(new HttpMethod("PATCH"), Constants.HOSTNAME + Constants.TERM_PATH + "externalId:" + Constants.TERM_ID);
+                var json = JsonConvert.SerializeObject(updateTerm);
+
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", access_token);
+                request.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json;odata=verbose");
+
+
+                HttpResponseMessage response = await client.SendAsync(request);
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Term successfully updated.");
+                    var content = await response.Content.ReadAsStringAsync();
+                    term = JsonConvert.DeserializeObject<Term>(content);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return (term);
+        }
 ```
 
 **Delete**
@@ -402,27 +425,38 @@ required to use the async/await functionality..
 
 **Update**
 ```
-            public async Task<Course> UpdateObject(Course updateCourse)
-            {
-                Course course = new Course();
-                try
-                {
-                    var json = JsonConvert.SerializeObject(updateCourse);
-                    var body = new StringContent(json, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID, body);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        Debug.WriteLine(@" Course successfully updated.");
-                        var content = await response.Content.ReadAsStringAsync();
-                        course = JsonConvert.DeserializeObject<Course>(content);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(@" ERROR {0}", ex.Message);
-                }
-                return (course);
-            }
+        public async Task<Course> UpdateObject(Course updateCourse)
+        {
+            Course course = new Course();
+
+            try
+            {
+                var s = new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat };
+
+                var request = new HttpRequestMessage(new HttpMethod("PATCH"), Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID);
+                var json = JsonConvert.SerializeObject(updateCourse);
+
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", access_token);
+                request.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json;odata=verbose");
+
+
+                HttpResponseMessage response = await client.SendAsync(request);
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Course successfully updated.");
+                    var content = await response.Content.ReadAsStringAsync();
+                    course = JsonConvert.DeserializeObject<Course>(content);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return (course);
+        }
 ```
 
 **Delete**
@@ -509,30 +543,41 @@ required to use the async/await functionality..
 
 **Update**
 ```
-            public async Task<User> UpdateObject(User updateUser)
-            {
-                User user = new User();
-                try
-                {
-                    var json = JsonConvert.SerializeObject(updateUser);
-                    var body = new StringContent(json, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.USER_PATH + "externalId:" + Constants.USER_ID, body);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        Debug.WriteLine(@" User successfully updated.");
-                        if (response.IsSuccessStatusCode)
-                        {
-                            var content = await response.Content.ReadAsStringAsync();
-                            user = JsonConvert.DeserializeObject<User>(content);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(@" ERROR {0}", ex.Message);
-                }
-                return user; 
-            }
+        public async Task<User> UpdateObject(User updateUser)
+        {
+            User user = new User();
+
+            try
+            {
+                var s = new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat };
+
+                var request = new HttpRequestMessage(new HttpMethod("PATCH"), Constants.HOSTNAME + Constants.USER_PATH + "externalId:" + Constants.USER_ID);
+                var json = JsonConvert.SerializeObject(updateUser);
+
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", access_token);
+                request.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json;odata=verbose");
+
+
+                HttpResponseMessage response = await client.SendAsync(request);
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				User successfully updated.");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        user = JsonConvert.DeserializeObject<User>(content);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return user; 
+        }
 ```
 
 **Delete**
@@ -622,27 +667,38 @@ sub-call to courses, so the endpoint would look like
 
 **Update**
 ```
-            public async Task<Membership> UpdateObject(Membership updateMembership)
-            {
-                Membership membership = new Membership();
-                try
-                {
-                    var json = JsonConvert.SerializeObject(updateMembership);
-                    var body = new StringContent(json, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await HttpClientExtensions.PatchAsync(client, Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID + "users/externalId:" + Constants.USER_ID, body);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        Debug.WriteLine(@" Membership successfully updated.");
-                        var content = await response.Content.ReadAsStringAsync();
-                        membership = JsonConvert.DeserializeObject<Membership>(content);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(@" ERROR {0}", ex.Message);
-                }
-                return (membership);
-            }
+        public async Task<Membership> UpdateObject(Membership updateMembership)
+        {
+            Membership membership = new Membership();
+
+            try
+            {
+                var s = new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat };
+
+                var request = new HttpRequestMessage(new HttpMethod("PATCH"), Constants.HOSTNAME + Constants.COURSE_PATH + "/externalId:" + Constants.COURSE_ID + "users/externalId:" + Constants.USER_ID);
+                var json = JsonConvert.SerializeObject(updateMembership);
+
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", access_token);
+                request.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json;odata=verbose");
+
+
+                HttpResponseMessage response = await client.SendAsync(request);
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(@"				Membership successfully updated.");
+                    var content = await response.Content.ReadAsStringAsync();
+                    membership = JsonConvert.DeserializeObject<Membership>(content);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+            return (membership);
+        }
 ```
 
 **Delete**

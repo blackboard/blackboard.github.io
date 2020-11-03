@@ -9,6 +9,15 @@ category: examples
 *Tags: ['rest', 'blackboard learn', 'example', 'sample code', 'saas', 'api', 'curl', 'demo', '3lo', 'three-legged oauth', 'developer']*  
 <hr />
 
+The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting the Data Source and User Learn objects. A video
+presentation using this material plus an explanation of how to register your
+REST application on the Developer Portal, and how to configure your
+application's REST integration on your Learn development system, is available
+[here](http://bit.ly/RestTechDeepDive4Partners). Here
+is the [slide deck](/attachments/2016.06.22.RestTechnicalDeepDiveForPartners.pptx)
+
 * [Introduction](#introduction)
 * [Assumptions](#assumptions)
 * [Walkthrough](#walkthrough)
@@ -26,16 +35,6 @@ category: examples
     * [SUBMIT ASSIGNMENT ATTEMPT, WITH ATTACHMENT](#submit-assignment-attempt-with-attachment) - Currently Only Available For Presentation-0nly Assignments
   * [Common Errors](#common-errors)
   
-## Introduction
-
-The rest demo script demonstrates authenticating a REST application,
-management and use of the authorization token, and creating, updating,
-discovering, and deleting the Data Source and User Learn objects. A video
-presentation using this material plus an explanation of how to register your
-REST application on the Developer Portal, and how to configure your
-application's REST integration on your Learn development system, is available
-[here](http://bit.ly/RestTechDeepDive4Partners). Here
-is the [slide deck](/attachments/2016.06.22.RestTechnicalDeepDiveForPartners.pptx)
 
 ## Prerequisites
 

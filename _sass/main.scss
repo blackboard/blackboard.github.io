@@ -45,6 +45,11 @@
   
   pre {
 	  background-color: #e4e4e4;
+	  white-space : pre-wrap !important;
+  }  
+  code {
+	  background-color: #e4e4e4;
+	  white-space : pre-wrap !important;
   }
 
   .sidenav {
