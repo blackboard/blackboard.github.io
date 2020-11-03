@@ -28,6 +28,7 @@ available.
 Context item | Context variable | Example output
 ---|---|---
 User external person key | @X@user.batch_uid@X@ | 123-45-6789
+User student Id | @X@user.student_id@X@ | 123-45-6789
 User username (user id) | @X@user.id@X@ | jsmith
 User full name | @X@user.full_name@X@ | John Smith
 User primary key identifier | @X@user.pk_string@X@ | _521_1

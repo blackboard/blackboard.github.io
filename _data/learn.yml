@@ -8,6 +8,9 @@
         - name: The Rosetta Stone, Build Number to Build Name Mappings
           link: /learn/LearnReleaseNamesRosettaStone.html
           category: general
+        - name: Developer AMI
+          link: /dvba/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html
+          category: general
 - name: Ultra Extension Framework (UEF)
   link: /learn/UEF
   parentId: uef
@@ -74,6 +77,9 @@
           category: advanced
         - name: Guides
           link: /learn/REST/Guides%20for%20Learn%20REST%20Methods.html
+          category: advanced 
+        - name: SOAP to REST Map
+          link: /learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
           category: advanced
     - name: Admin
       link: /learn/REST/Register%20as%20a%20Developer%20and%20Manage%20Your%20Applications%20with%20the%20Developer%20Portal.html
@@ -87,9 +93,6 @@
           category: admin
         - name: REST in Learn
           link: /learn/REST/Managing%20REST%20Integrations%20in%20Learn.html
-          category: admin
-        - name: DVM Cloud Registration
-          link: /learn/REST/Register%20Developer%20Instances%20to%20the%20Cloud.html
           category: admin
     - name: Examples
       link: /learn/REST/Examples.html
@@ -137,9 +140,6 @@
         - name: B2 API
           link: /learn/B2s/Building%20Block%20API%20Documentation.html
           category: about-b2
-        - name:  Development Life Cycle
-          link: /learn/B2s/Building%20Block%20Development%20Life%20Cycle.html
-          category: about-b2
         - name:  API Overview
           link: /learn/B2s/Building%20Blocks%20API%20Overview.html
           category: about-b2
@@ -159,18 +159,12 @@
         - name: Event-Driven API
           link: /learn/B2s/Event%20Driven%20API.html
           category: advanced-b2
-        - name: Starting Block
-          link: /learn/B2s/Starter%20Building%20Block%20Readme.html
-          category: advanced-b2
     - name: Resources
       link: /learn/B2s/Building%20Block%20Resources%20and%20Tools.html
       category: resources-b2
       topics:
         - name: SaaS B2 Scanner
           link: /learn/B2s/Building%20Block%20Scan%20Tool%20for%20Blackboard%20Learn%20SaaS.html
-          category: resources-b2
-        - name: Enable Debugging
-          link: /learn/B2s/Enabling%20Remote%20Debugging.html
           category: resources-b2
         - name: Java 11
           link: /learn/B2s/8%20steps%20to%20prepare%20for%20Java%2011.html
@@ -182,9 +176,6 @@
       link: /learn/B2s/Preparing%20Your%20Building%20Blocks%20For%20Learn%20SaaS%20and%20Newer%20Learn%20Versions.html
       category: best-practices-b2
       topics:
-        - name: Code Quality
-          link: /learn/B2s/Code%20Quality%20Initiative.html
-          category: best-practices-b2
         - name: Security
           link: /learn/B2s/Building%20Block%20Security.html
           category: best-practices-b2
@@ -194,16 +185,6 @@
         - name: Using Maven
           link: /learn/B2s/Developing%20Building%20Blocks%20with%20the%20Public%20Maven%20Repository.html
           category: best-practices-b2
-    - name: OpenDb
-      link: /learn/B2s/Introduction%20to%20OpenDB.html
-      category: opendb-b2
-      topics:
-        - name: Create Db Objects
-          link: /learn/B2s/Creating%20Database%20Objects%20with%20Building%20Blocks.html
-          category: opendb-b2
-        - name: Schema Definitions
-          link: /learn/B2s/Schema%20Definitions.html
-          category: opendb-b2
     - name: Examples
       link: /learn/B2s/Examples%20-%20Building%20Blocks.html
       category: examples-b2
@@ -214,53 +195,3 @@
         - name: Spring
           link: /learn/B2s/Spring%20in%20Building%20Blocks.html
           category: examples-b2
-        - name: Schema
-          link: /learn/B2s/Tutorial%20-%20Schema%20XML.html
-          category: examples-b2
-- name: SOAP - Deprecated
-  link: /learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
-  parentId: soap
-  categories:
-    - name: About
-      link: /learn/SOAP%20-%20Deprecated/Blackboard%20Learn%20SOAP%20Web%20Services.html
-      category: about-soap
-      topics:
-        - name: SOAP to REST Map
-          link: /learn/SOAP%20-%20Deprecated/SOAP-to-REST%20Migration%20Mapping.html
-          category: about-soap
-        - name: Intro to SOAP
-          link: /learn/SOAP%20-%20Deprecated/Introduction%20to%20SOAP%20Web%20Services.html
-          category: about-soap
-        - name: Proxy Tools
-          link: /learn/SOAP%20-%20Deprecated/Proxy%20Tools.html
-          category: about-soap
-        - name: About SOAP Sample Code
-          link: /learn/SOAP%20-%20Deprecated/About%20Web%20Services%20Sample%20Code.html
-          category: about-soap
-        - name: Getting Started
-          link: /learn/SOAP%20-%20Deprecated/Getting%20Started%20With%20SOAP%20Web%20Services.html
-          category: about-soap
-    - name: Examples
-      link: /learn/SOAP%20-%20Deprecated/Examples%20-%20SOAP%20Web%20Services.html
-      category: examples-soap
-      topics:
-        - name: C#
-          link: /learn/SOAP%20-%20Deprecated/Get%20CourseMembership%20and%20Role%20with%20SOAP%20and%20C%23.html
-          category: examples-soap
-        - name: Python
-          link: /learn/SOAP%20-%20Deprecated/Get%20Course%20Announcements%20with%20SOAP%20and%20Python.html
-          category: examples-soap
-    - name: Tutorials
-      link: /learn/SOAP%20-%20Deprecated/Tutorials%20-%20SOAP%20Web%20Services.html
-      category: tutorials-soap
-      topics:
-        - name: Build C# Library
-          link: /learn/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Library.html
-          category: tutorials-soap
-        - name: Build C# Client
-          link: /learn/SOAP%20-%20Deprecated/Tutorial%20-%20Build%20The%20C%23%20SOAP%20Sample%20Client.html
-          category: tutorials-soap
-        - name: Build Java Library
-          link: /learn/SOAP%20-%20Deprecated/Build%20Java%20Client%20Library.html
-          category: tutorials-soap
-

@@ -1,5 +1,5 @@
 ---
-layout: dvba
+layout: learn
 ---
 # Using the Blackboard Learn AMI for REST and LTI Development
 *Author: Scott Hurrey*  
@@ -7,7 +7,7 @@ layout: dvba
 *Tags: ['rest', 'lti', 'developers', 'dvba', 'developer version of blackboard application', 'developer ami', 'blackboard rest and lti developer ami', 'developer']*  
 <hr />
 This document outlines usage of the Blackboard REST and LTI Developer AMI made
-available via the Amazon AWS Marketplace.
+available via the Amazon AWS Marketplace. Please note, the Developer Virtual Machine (DVM) is no longer supported.
 
 ## Contents 
 

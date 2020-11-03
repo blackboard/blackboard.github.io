@@ -12,7 +12,7 @@ This section of the Learn REST developer documentation focuses on sharing exampl
 
 * [Angular](https://github.com/blackboard/BBDN-REST-Angular-WithProxy)
 * [C#](REST%20Demo%20Using%20CSharp.html)
-* [cURL](REST%20Demo%20Using%20cUrl.html)
+* [cURL](REST%20Demo%20Using%20cURL.html)
 * [Golang](REST%20Demo%20Using%20Golang.html)
 * [Java](REST%20Demo%20Using%20Java.html)
 * [Java Command-Line Tutorial](Tutorial%20-%20Build%20a%20Java%20Command%20Line%20REST%20Application.html)

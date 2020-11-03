@@ -105,7 +105,7 @@ If you created your Developer Portal account before we introduced groups that
 is not a problem, you will now have a group based on your account information
 and you may edit this group name.
 
-![1 - Sterling Moss apps - cropped.png](/images/102916.png)
+<img alt="1 - Sterling Moss apps - cropped.png" src="/images/102916.png" width="50%" />
 
 When Sterling clicks on the My Groups link he is taken to the Groups
 management page (1) where he may view groups in which he is a member (2), view
@@ -115,7 +115,7 @@ administrator (4), and create groups and rename groups he is administering
 
 Groups are created by clicking the Create link next to the Group chooser.
 
-![2 - Sterling Moss groups - cropped.png](/images/102917.png)
+<img alt="2 - Sterling Moss groups - cropped.png" src="/images/102917.png" width="50%" />
 
 When Stirling clicks Create, a dialog is displayed where he may enter the name
 of his group. Clicking the Create button will saves the group.
@@ -129,7 +129,7 @@ Applications later in this document.
 Sterling chooses to add a group. In this case Sterling is creating a group for
 his company's production software.
 
-![3 - Sterling Moss add group - cropped.png](/images/102918.png)
+<img alt="3 - Sterling Moss add group - cropped.png" src="/images/102918.png" width="50%" />
 
 Note that on creating a group you are automatically added to the group with
 administrator privileges. This allows you to add developers or otherwise
@@ -141,7 +141,7 @@ to this new group to assist with administrating the group.
 
 Let's take a look at managing a group's applications...
 
-![4 - Sterling Moss groups after add group - cropped.png](/images/102919.png)
+<img alt="4 - Sterling Moss groups after add group - cropped.png" src="/images/102919.png" width="50%" />
 
 ## Managing Group Applications
 
@@ -150,7 +150,7 @@ applications with different developer groups.
 
 Let's log in as Steve Ranger, owner of RangerSoft.
 
-![5 - Steve Ranger login - cropped.png](/images/102920.png)
+<img alt="5 - Steve Ranger login - cropped.png" src="/images/102920.png" width="50%" />
 
 When clicking the My Apps link Steve can now see his applications and the
 groups with which they are associated.
@@ -158,13 +158,13 @@ groups with which they are associated.
 Steve has his personal group "STEVE RANGER" (1), a development group -
 "RangerSoft - dev" (2), and his production group "RangerSoft" (3).
 
-![6 - Steve Ranger apps - cropped.png](/images/102921.png)
+<img alt="6 - Steve Ranger apps - cropped.png" src="/images/102921.png" width="50%" />
 
 Steve's groups have specific applications associated with them. Steve has his
 experimental application - Steve's Experiment - under his personal group. This
 application may be deleted by using the Trash can icon.
 
-![7 - Steve Ranger change app group - cropped.png](/images/102922.png)
+<img alt="7 - Steve Ranger change app group - cropped.png" src="/images/102922.png" width="50%" />
 
 Steve also has an application in development - Multinote Plus. This is under
 his RangerSoft - dev group. This application also may be deleted by using the
@@ -196,7 +196,7 @@ Groups management page.
 
 He then clicks the Add Developers icon as indicated by the arrow.
 
-![8 - Steve Ranger groups - cropped.png](/images/102924.png)
+<img alt="8 - Steve Ranger groups - cropped.png" src="/images/102924.png" width="50%" />
 
 Clicking the Add Developer Icon opens a dialog for entering the email address
 of the developer he wants to add to his group.
@@ -208,7 +208,7 @@ registered.
 Steve enters the email address for one of his developers and clicks the Add
 Developer button.
 
-![9 - Steve Ranger add dev to group - cropped.png](/images/102925.png)
+<img alt="9 - Steve Ranger add dev to group - cropped.png" src="/images/102925.png" width="50%" />
 
 Adding a developer to your group allows that developer to see all your
 applications. The administrator setting on the developer for a specific group
@@ -219,14 +219,14 @@ The default when adding a developer is that they have no admin privileges.
 Steve wants Junior to admin the applications associated with the RangerSoft -
 dev group, so Steve changes to that group and changes Junior's privileges.
 
-![10 - Steve Ranger change group - cropped.png](/images/102926.png)
+<img alt="10 - Steve Ranger change group - cropped.png" src="/images/102926.png" width="50%" />
 
 ## The Developer View
 
 When Junior Developer logs into the Developer Portal he now sees the two
 RangerSoft groups that Steve created.
 
-![11 - Picture1.png](/images/102927.png)
+<img alt="11 - Picture1.png" src="/images/102927.png" width="50%" />
 
 Junior may admin the application association for the Multinote Plus
 application which is associated with the RangerSoft - dev group because Steve

@@ -1,7 +1,7 @@
 ---
 layout: learn
-parent: soap
-category: about-soap
+parent: rest
+category: advanced
 ---
 # SOAP-to-REST Migration: Mapping
 *Author: Scott Hurrey*  

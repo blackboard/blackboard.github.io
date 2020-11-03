@@ -28,7 +28,8 @@ There are three actors in the REST API use case:
 
 3. **Blackboard Learn Administrator**: The Developer Portal: This is a new website ([https://developer.blackboard.com](https://developer.blackboard.com/)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Blackboard Learn.
 
-![RESTDiagram.png](/images/92929.png)
+<img alt="RESTDiagram.png" src="/images/92929.png" width="50%" />
+<br />
 Figure 1: The REST API Framework Actors, interactions, and data paths
 
 * **NOTE**: We do NOT support a model where the developer of the REST Application requires the Learn Administrator to get the Application ID, key, and secret for installing the developer’s application on the Learn system. The developer will get one APP ID, key and secret for the one application. The developer is responsible for configuring the key and secret on their server. For security reasons, the key and secret should never be shared with the client or any other another party. The REST Application can determine which institution requests are coming from by examining the FQDN in the requests. There is no need for installing a separate Application ID for a given vendors application on each Learn instance.
