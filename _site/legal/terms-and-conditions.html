@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>Terms and Conditions</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.js"></script>
+    <script>
+        var pageCategory = "#";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >Api Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >Api Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">Api Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Events for learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="blackboard-rest-and-lti-developer-agreement"><strong>BLACKBOARD® REST AND LTI DEVELOPER AGREEMENT</strong></h1>
+
+<p>This Blackboard REST and LTI Developer Agreement (“<strong>Agreement</strong>”) enables the development, 
+testing, demonstration and limited deployment of software applications designed to 
+interoperate with designated Blackboard applications.</p>
+
+<p>By clicking “I agree” or otherwise indicating your agreement as part of an online process, the 
+terms contained in this Agreement form the entire agreement between the Developer and 
+Blackboard (as defined below) with respect to: (a) the development of Developer Applications 
+through the use of Blackboard’s REST APIs and/or through the use of LTI Specifications; and (b) 
+the use of a DVBA to test the interoperability of the Developer Applications therewith. You 
+represent that you have the authority to bind the Developer to the terms of this Agreement 
+and that you and Developer will comply with the terms and conditions hereof.  All rights and 
+privileges granted under this Agreement are contingent upon Developer’s agreement to the 
+terms and conditions hereof.</p>
+
+<h4 id="1-definitions"><strong>1.	DEFINITIONS.</strong></h4>
+
+<p><strong>1.1.	“APIs”</strong> means Blackboard’s REST-based application program interfaces which are made 
+available by Blackboard to facilitate the development of Developer Applications, as such APIs 
+may (without obligation) be updated by Blackboard from time to time.</p>
+
+<p><strong>1.2.	“Blackboard”</strong> means: (a) for a Developer (as defined below) with an address in the 
+United States or Canada, Blackboard Inc., a Delaware corporation, having its principal place of 
+business at 1111 19th Street NW, 9th floor, Washington, D.C. 20036; or (b) for a Developer (as∏
+defined below) with an address outside the United States or Canada, Blackboard International 
+B.V., a Netherlands company, having its principal place of business at Paleisstraat 1-5, 1012 RB 
+Amsterdam, The Netherlands, except if it is an address in (i) South Korea, where the entity is 
+Blackboard Korea Co., LTD with an address at 1301 ho, 11, Saechang-ro, Mapo-gu, Seoul, Korea 
+(Gongduck B/D, Dowah-dong),  (ii) Brazil, where the entity is_ Blackboard Do Brasil Servicos De 
+Tecnologia Em Educacao Ltda, a private company with its head offices located in the city of São 
+Paulo – SP, at Rua Joaquim Floriano, nº 243, Itaim Bibi, CNPJ Nr.13.504.812/0001-16, or (iii) The 
+People’s Republic of China, where the entity is Blackboard Information Technology (Beijing) Co., 
+Ltd. having its principal place of business at_Room 1003, Floor 10, Taixing Building, No 11, 
+Garden East Road, Haidian District, Beijing.</p>
+
+<p><strong>1.3. “Blackboard Application”</strong> means a software solution of Blackboard that can be made 
+interoperable with Developer Applications through the use of the APIs and Documentation.  A 
+Blackboard Application also includes: (a) any associated product documentation or materials 
+that Blackboard may, in its sole discretion, provide; and (b) any Upgrades.</p>
+
+<p><strong>1.4.	“Developer”</strong> means the individual or company or other legal entity on whose behalf you 
+enter into this Agreement and which intends to develop Developer Applications in accordance 
+herewith.</p>
+
+<p><strong>1.5. “Developer Application”</strong> means a software application created by Developer that is 
+intended to use the APIs and/or the LTI Specification. In no event shall a Developer Application 
+include any intellectual property from a DVBA.</p>
+
+<p><strong>1.6. “Developer Version of a Blackboard Application”</strong> or “DVBA” means a version of a 
+Blackboard Application which contains quotas, rate limits, bandwidth limits and/or other usage 
+or technical limits which are designed to limit Developer’s use of the Blackboard Application for 
+non-production testing purposes only.</p>
+
+<p><strong>1.7. “Documentation”</strong> means Blackboard’s REST Developer user guides, sample code and 
+related materials which are made available to Developers, as such Documentation may 
+(without obligation) be updated from time to time by Blackboard.</p>
+
+<p><strong>1.8. “LTI” or “LTI Specification”</strong> means the “Learning Tools Interoperability” specification 
+developed by the IMS Global Learning Consortium which seeks to establish a standard way to 
+enable integration between a learning application and a learning management system or other 
+educational environment.</p>
+
+<p><strong>1.9. “Portal”</strong> means the area of the Blackboard corporate website from which Developers 
+can obtain rights of use to the APIs, Documentation and DVBA for the purposes described 
+hereunder.</p>
+
+<p><strong>1.10. “REST”</strong> is an architectural style for designing networked applications.</p>
+
+<p><strong>1.11.	“Term”</strong> shall have the meaning prescribed in Section 7 below.</p>
+
+<p><strong>1.12.	“Upgrade”</strong> means the object code versions of a DVBA that has been enhanced or 
+otherwise modified by or on behalf of Blackboard, acting in its sole discretion, to include 
+additional functionality or code changes.  Blackboard shall determine, in its sole discretion and 
+without obligation, whether to develop or make available any Upgrades for use by Developer.</p>
+
+<h4 id="2--registration"><strong>2.	 REGISTRATION</strong></h4>
+
+<p><strong>2.1.</strong>	In order to be provided access to the APIs, Documentation, and a DVBA, Developer is 
+required to register with Blackboard by providing certain information as directed in the 
+“Registration” section of the Portal. Registration information shall include, without limitation, 
+Developer’s contact information, a password and related login information for accessing 
+Developer’s account, information identifying and describing the Developer Application, and 
+such other information as may be requested by Blackboard.  Developer agrees to provide all 
+requested registration information and covenants that such information shall be accurate and 
+kept up to date.</p>
+
+<p><strong>2.2.</strong>	Upon acceptance of Developer’s registration, Blackboard will provide Developer with 
+certain keys and/or passwords which may be used by Developer in order to access and use the 
+APIs, Documentation, and DVBAs, which access and use shall be in accordance with the terms 
+and conditions of this Agreement.</p>
+
+<p><strong>2.3.</strong>	  Developer’s registration with Blackboard, and the associated provision of access by 
+Blackboard to the APIS, Documentation and DVBAs, shall in no event be deemed to be, or 
+promoted by Developer as, an endorsement or certification by Blackboard of the Developer or 
+of the compatibility or operation of any Developer Application.</p>
+
+<h4 id="3-use-of-the-apis-documentation-and-dvbas"><strong>3.	USE OF THE APIS, DOCUMENTATION AND DVBAS</strong></h4>
+
+<p><strong>3.1.</strong>	Subject to the terms and conditions of this Agreement and for the Term hereof, 
+Blackboard grants to Developer a non-exclusive, non-transferable, limited license to access and 
+use the APIs and Documentation for the sole purpose of developing Developer Applications 
+which are designed to interoperate with Blackboard Applications.</p>
+
+<p><strong>3.2.</strong>	Subject to the terms and conditions of this Agreement, if and to the extent Blackboard 
+makes available to Developer a DVBA which is downloadable to a device in Developer’s 
+computing environment, Blackboard grants to Developer a non-exclusive, non-transferable, 
+limited license to download and install a single, object-code copy of the DVBA, but solely for the 
+following purposes: (a) for use only as a component of the Developer’s non-production 
+development environment;  (b)  to test the interoperability of the Developer Application with a 
+DVBA in such non-production development environment by making requests from the 
+Developer Application, in accordance with the APIs and Documentation, which are designed to 
+enable the exchange of data between the applications; (c) to test the interoperability of an 
+Developer Application with a DVBA in such non-production development environment through 
+the utilization of the LTI Specification; and (d) to conduct demonstrations of the Developer 
+Application to prospective customers in a non-production, Developer-controlled environment 
+for evaluation purposes only.</p>
+
+<p><strong>3.3.</strong>	Subject to the terms and conditions of this Agreement, if and to the extent that 
+Blackboard makes available to Developer a Blackboard-hosted Software-as-a-Service (“SaaS”) 
+version of a DVBA, Blackboard grants to Developer a non-exclusive, non-transferable, limited 
+license to access the DVBA on a remote access basis over the Internet solely for the following 
+purposes:  (a) to  test the interoperability of the Developer Application with the DVBA in its 
+non-production development environment by making requests from the Developer Application, 
+in accordance with the APIs and Documentation, which are designed to enable the exchange of 
+data between the applications; (b) to test the interoperability of an Developer Application with 
+a DVBA in its non-production development environment through the utilization of the LTI 
+Specification; and (c) to conduct demonstrations of the Developer Application to prospective 
+customers in a non-production, Developer-controlled environment for evaluation purposes 
+only.</p>
+
+<p><strong>3.4.</strong>	The DVBA will include usage and other limitations in order to ensure that Developer 
+makes use of such Blackboard Application only for development, testing and demonstration 
+purposes described above.  In this regard, unless stated otherwise on the Portal, Developer 
+shall be limited to use of the DVBA for no more than 150 users, 100 courses and 1,000 
+enrollment records.  In addition, Developer shall be provided with “testing level” usage limits 
+(such as quotas, bandwidth limits and/or rate limits) in connection with its use of the DVBAs. <br />
+Such limitations will be as designated or applied by Blackboard in its sole discretion.  Additional 
+usage, technical, licensing or other limitations may be applied by Blackboard in its sole 
+discretion.  Developer is solely responsible for testing the Developer Application, for 
+determining whether it is interoperable with a DVBA and thus a Blackboard Application, and for 
+abiding by all applicable limitations and restrictions. To the extent Developer utilizes the LTI 
+Specification, it is solely responsible for obtaining all necessary rights to use such LTI 
+Specification for the purposes contemplated hereunder.</p>
+
+<p><strong>3.5.</strong>	Developer may promote and market a Developer Application to potential customers by 
+using the Blackboard logo and applicable Blackboard trademarks, but only to state that the 
+Developer Applications are “designed for Blackboard” or to make such other similar statements 
+which are approved in advance in writing by Blackboard and which indicate that the Developer 
+Applications are designed to be compatible with the applicable Blackboard Applications.<br />
+Notwithstanding the above, Developer shall make no representation indicating that Blackboard 
+endorses, supports or makes any commitment regarding the interoperability of the Developer 
+Application with any Blackboard Application.   Developer may not use the name “Blackboard” 
+or any other trademark of Blackboard in the name of any of its Developer Applications. 
+Developer shall comply with Blackboard’s trademark policies.  Blackboard may require 
+Developer to discontinue use of Blackboard trademarks upon written notice.  Developer 
+understands and agrees that it is solely responsible and liable for its promotion and marketing 
+activities and that it may not operate, distribute, or deploy a Developer Application, including 
+to interact with a Blackboard Application other than a DVBA, to a customer unless and until it 
+enters into the separate agreement described in Section 6 below.</p>
+
+<p><strong>3.6.</strong>	Developer shall only use the APIs and Documentation in accordance with the associated 
+Blackboard guidance and instructions described therein or on the Portal.  Developer shall only 
+access the DVBAs for the limited purposes described herein and in accordance with any 
+documentation or materials made available by Blackboard with respect to the use or operation 
+thereof.</p>
+
+<p><strong>3.7.</strong>	Except as expressly permitted in the Agreement, Developer may not: (a) disclose, 
+distribute (including by uploading to web sites, electronic bulletin boards or on or through any 
+other method or media), display, sublicense, sell, or transfer any rights in the APIs, the 
+Documentation or any DVBA (collectively, the “Blackboard Property”), in whole or in part, to 
+any third party; (b) use the Blackboard Property, in whole or in part, for service bureau or 
+outsourcing use or otherwise for the use or benefit of any third party; (c) exceed applicable 
+usage, technical, licensing or other limitations which are set forth in this Agreement, in any 
+materials or documentation provided by Blackboard or as may be separately imposed by 
+Blackboard; (d) copy, modify, alter, or create derivative works of, or otherwise use for any 
+purpose other than the purpose expressly authorized hereunder, the Blackboard Property;  (e) 
+use the Blackboard Property to create any product or service similar to any Blackboard Property 
+or Blackboard Application, or otherwise exploit or commercialize the Blackboard Property;  (f) 
+gain or seek to gain access to any DVBA or Blackboard Application other than through the APIs 
+as contemplated herein; (g) reverse engineer, disassemble, decrypt or decompile the APIs or 
+any DVBA or Blackboard Application, or otherwise make any attempt to access or discover the 
+source code thereof, or interfere with or disrupt the APIs, DVBAs, or Blackboard Applications or 
+any servers or networks through which they are provided; (h) permit any third party to access 
+or use the Blackboard Property, or to resell, distribute or otherwise use or exercise any rights 
+with respect thereto; (i) disable any “auto reporting option” or similar reporting capability in 
+any DVBA; or (j) provide any services or support to any third party regarding, or in connection 
+with, any Blackboard Property.</p>
+
+<p><strong>3.8.</strong>	A DVBA may utilize or include third party software or content (“Third Party Software”).<br />
+To the extent necessary to use the applicable DVBA, Blackboard grants Developer a license to 
+use such Third Party Software solely on the same terms and conditions (including all limitations 
+and restrictions) as Developer is authorized to use the DVBA hereunder.  However, Blackboard 
+reserves the right to change, suspend or discontinue Developer’s rights of use in Third Party 
+Software to the extent required by an applicable third party licensor or supplier or the terms of 
+Blackboard’s agreement therewith.</p>
+
+<p><strong>3.9.</strong>	Blackboard may determine, in its sole discretion and without obligation, whether to 
+make available any DVBA, and associated APIs and Documentation, for the purposes 
+contemplated hereunder.</p>
+
+<p><strong>3.10.</strong>	All rights not expressly granted to Developer are reserved by Blackboard.</p>
+
+<h4 id="4-blackboard-obligations"><strong>4.	BLACKBOARD OBLIGATIONS</strong></h4>
+
+<p><strong>4.1.</strong>	Subject to the terms and conditions of this Agreement, Blackboard will provide 
+Developer with: (a) access to the APIs and Documentation; and (b) access to the DVBA(s), in 
+each case for Developer’s use in connection with the development of Developer Applications as 
+contemplated hereunder.</p>
+
+<p><strong>4.2.</strong>	From time to time, in its sole discretion and without obligation to do so, Blackboard may 
+elect to provide certain limited technical support to Developers.  Any such support shall be as 
+described in the relevant “Developer Support” or similar areas of the Portal, and may be in the 
+form of self-service support.  Any such support may be modified, reduced, cancelled or updated 
+at any time upon written notice provided by Blackboard in the Portal or otherwise.  Any and all 
+support will be subject to the terms and conditions set forth in the Portal, and may require 
+payment of fees as described therein.  Blackboard may also make support available separately 
+through other programs or offerings from time, and such support would be subject to the 
+separate terms and conditions associated therewith.</p>
+
+<h4 id="5-developers-obligations"><strong>5.	DEVELOPER’S OBLIGATIONS</strong></h4>
+
+<p><strong>5.1.</strong>	Developer shall develop each Developer Application in compliance with the then-
+current version of the APIs and Documentation and, accordingly, shall ensure that each 
+Developer Application enables and maintains interoperability with the applicable DVBA and 
+Blackboard Application.</p>
+
+<p><strong>5.2.</strong>	Developer shall be solely responsible for each Developer Application, including all 
+support, development, hosting, and maintenance thereof and its interoperability with any 
+Blackboard Application.  Accordingly, Developer shall be solely responsible and liable (including 
+to its customers and other parties) for all matters regarding the Developer Applications, 
+including their development, operation, performance, availability, interoperability, support, and 
+hosting.</p>
+
+<p><strong>5.3.</strong>	Developer shall use security best practices in connection with the development of the 
+Developer Application and will comply at all times with all applicable privacy and data security 
+laws and regulations and all security requirements of Blackboard made available on the Portal 
+or otherwise.  Developer will implement security measures adequate to preserve the 
+confidentiality and security of all data which is processed, stored, transmitted or handled by 
+Developer or any Developer Application.</p>
+
+<p><strong>5.4.</strong>	Developer grants Blackboard the right to copy, display and otherwise use the 
+registration information and materials provided by Developer for the purposes contemplated in 
+the Agreement.  In addition, Blackboard shall have the right (but not the obligation) to use the 
+registration information provided by Developer in order to contact Developer to inquire as to 
+Developer’s interest in discussing a partner relationship with Blackboard (including, by way of 
+example and at Blackboard’s sole discretion, a relationship under which Developer may be 
+granted deployment rights as described in Section 6 below).  Neither party would have any 
+obligations in connection with any such partner relationship unless and until the parties enter 
+into a separate agreement (or an amendment hereto) which documents the terms and 
+conditions of the relationship.  In addition, Developer grants Blackboard the right to use 
+Developer’s name, the name of the Developer Application, and Developer’s logo and applicable 
+trademarks in promotional materials and otherwise in order to promote, market and/or 
+otherwise identify Developer as a registered developer of REST and/or LTI applications which 
+are designed to interoperate with Blackboard Applications.</p>
+
+<p><strong>5.5.</strong>	Developer agrees to provide Blackboard the name of each Developer Application which 
+is developed utilizing the APIs, a DVBA or the Documentation (each of which shall be registered 
+pursuant to Section 2 above) for listing on Blackboard’s corporate website and other marketing 
+vehicles.</p>
+
+<p><strong>5.6.</strong>	Developer shall not share or expose the Developer Application Key/Secret pair. 
+Application Key/Secret pairs shall only be held in the Developer Application code. Similarly, the 
+Developer Application must never expose the Developer Application OAuth Token. Exposing 
+the Developer Application Key/Secret pair, or the OAuth Token will create a serious security 
+risk. If Developer believes he/she has exposed an Application Key/Secret pair the Developer 
+may request a new pair for the Developer Application using the Developer Portal My 
+Applications management page.  Blackboard shall in no way be responsible for lost or exposed 
+data resulting from unapproved or inappropriate use of REST Application Key/Secret pairs or 
+OAuth Tokens.</p>
+
+<h4 id="6-distribution-and-deployment-of-developer-applications"><strong>6.	DISTRIBUTION AND DEPLOYMENT OF DEVELOPER APPLICATIONS</strong></h4>
+
+<p>In accordance with the terms and conditions above, this Agreement enables Developer to gain 
+access to the APIs, Documentation and DVBA(s) to develop Developer Applications, conduct 
+non-production testing of the interoperability of such Developer Applications with the 
+associated Blackboard Application(s), and conduct limited, non-production demonstrations of 
+such Developer Applications to prospective customers.  In addition, subject to the terms and 
+conditions of this Agreement, Blackboard grants Developer a non-exclusive, non-transferable, 
+limited license to  deploy (i.e., grant rights to use) Developer Applications for use by Developer 
+customers in a production environment, subject to the following limitations: (a) the aggregate 
+rate limit for all Developer customers for each Developer Application shall not exceed 150,000 
+requests (or queries) per 24 hours; and (b) the aggregate site quota (i.e., the number of sites 
+that a Developer Application may be registered with) for all Developer customers shall not 
+exceed seven (7)  sites per Developer Application.  Notwithstanding the above, Developer is not 
+authorized under this Agreement to, and warrants that it shall not use the DVBA in any manner 
+other than for: (a) its internal, non-production development and testing of Developer 
+Applications; and; (b) the non-production demonstration of Developer Applications to 
+prospective customers for the limited time period authorized under Section 3 above.  For 
+clarity, in no event may Developer use the DVBA for any production (i.e., “live”) use for itself or 
+any customer or other party.    Developer is granted access to the DVBA for the sole purposes of 
+REST and LTI testing and development, along with conducting limited demonstrations to 
+prospects, all in a non-production environment and in accordance with the terms and 
+conditions hereof.  In order to operate, deploy, or distribute any Developer Application beyond 
+the above constraints, the Developer will be required to enter into a separate agreement with 
+Blackboard which would, among other terms and conditions, require: (i) registration of each 
+Developer Application; (ii) the purchase of appropriate usage limits (such as quotas, bandwidth 
+limits and/or rate limits); and/or (iii) the purchase of an appropriate level of membership in the 
+“Blackboard Developer Network” or similar program.  Information regarding the process for 
+entering into such agreement shall be made available by Blackboard upon written request from 
+Developer, on the Portal or otherwise. Developer acknowledges that its expenditure of time 
+and money in developing Developer Applications is at its own risk and Blackboard makes no 
+guarantees with regard to the availability of Blackboard Applications.</p>
+
+<h4 id="7-term-and-termination"><strong>7.	TERM AND TERMINATION</strong></h4>
+
+<p><strong>7.1.</strong>	Term of Master Agreement. This Agreement shall commence on the date it is entered 
+into by Developer and shall remain in effect unless terminated pursuant to the terms below.</p>
+
+<p><strong>7.2.</strong>	Termination for Cause.  Either party may terminate this Agreement upon written notice 
+in the event that the other party breaches a provision hereof and fails to cure such breach 
+within thirty (30) days of receipt of written notice thereof, provided that Blackboard may 
+terminate immediately if Blackboard believes in its sole discretion that such breach is a threat 
+to the operation or security of Blackboard Applications.  Blackboard may terminate this 
+Agreement immediately if Developer markets or sells any product which is substantially similar, 
+in whole or material part, to any Blackboard Application.</p>
+
+<p><strong>7.3.</strong>	Termination for Convenience.  Either party may terminate this Agreement for any or no 
+reason (i.e., for convenience) by providing written notice to the other party at least thirty (30) 
+days prior to the effective date of such termination.</p>
+
+<p><strong>7.4.</strong>	Effect of Termination.   Upon termination or expiration of this Agreement, any rights 
+granted pursuant to this Agreement shall cease and each party shall return (or, if so elected by 
+the owning party, destroy) the other party’s Confidential Information in its possession 
+(including all copies thereof, whether electronic, hard-copy or otherwise). In addition, 
+Developer shall immediately return all copies of the Blackboard APIs, Documentation and 
+DVBAs.</p>
+
+<p><strong>7.5.</strong>	Suspension.  Developer agrees that, if Blackboard determines, in its sole discretion, that 
+Developer has: (a) breached any term, condition or restriction of this Agreement; (b) developed 
+any Developer Application or other software which poses any security or performance risk to 
+any system, network, hardware, software, or technology of Blackboard or its suppliers or 
+customers; (c) taken any action, or engaged in any conduct, which presents a risk of liability to 
+or violation of law by Blackboard, then, in any such event, Blackboard can suspend Developer’s 
+access and use of the API or Documentation, any other materials or technology made available 
+by Blackboard, and any other rights or privileges provided under this Agreement.  Additionally, 
+in any such event, Blackboard may require Developer to disable the interoperability of the 
+applicable Developer Applications with the applicable Blackboard Applications in accordance 
+with instructions provided by Blackboard.</p>
+
+<p><strong>7.6.</strong>	Survival.  Notwithstanding the above: (a) Sections 1 (Definitions), 7 (Termination), 8 
+(Confidential Information), 9 (Intellectual Property Ownership), 11 (Indemnification), 12 
+(Limitation of Liability), and 13 (General Provisions) shall survive the expiration or termination 
+of this Agreement.</p>
+
+<h4 id="8-confidential-information"><strong>8.	CONFIDENTIAL INFORMATION</strong></h4>
+
+<p><strong>8.1.</strong>	Definition. “Confidential Information” shall mean any and all non-public information of a 
+party to this Agreement which is either marked as confidential or is of a type or nature that 
+should be recognized as confidential by a commercially reasonable party acting in good faith.<br />
+Confidential Information of Blackboard includes non-public information regarding its software 
+solutions and related documentation, APIS and related documentation, product plans, technical 
+data, specifications, know-how, methodologies and business methods.</p>
+
+<p><strong>8.2.</strong>	Use of Confidential Information.  Except as otherwise provided below, the party 
+receiving Confidential Information (the “Recipient”): (i) shall hold all Confidential Information of 
+the disclosing party (the “Discloser”) in confidence and will use such information only for the 
+purposes set forth in this Agreement; and (ii) shall not disclose Confidential Information of the 
+Discloser to any third party (other than employees, officers or directors of the party) except as 
+expressly authorized herein or with the express written permission of the Disclosing Party. 
+Notwithstanding the above, a party may disclose the other party’s Confidential Information to a 
+third party who has a need to know, who has been pre-approved by the Disclosing Party, and 
+who, prior to obtaining access to the Confidential Information, has executed a non-disclosure 
+and limited use agreement approved by the Discloser.  The Recipient shall protect the 
+Confidential Information of Discloser at least in the manner and degree the Recipient uses to 
+protect its own Confidential Information, but in no event less than a commercially reasonable 
+standard of care.</p>
+
+<p><strong>8.3.</strong>	Scope.  The foregoing obligations shall not apply to: (i) information that is or becomes 
+publicly available through no fault of Recipient; (ii) information that is known by Recipient prior 
+to the time of disclosure hereunder; (iii) information that is lawfully obtained from a third party 
+who has the right to make such disclosure without any duty of confidentiality; or (iv) any 
+disclosure required by applicable law, provided that Recipient shall use reasonable efforts to 
+give advance notice to, and cooperate with, the Discloser in connection with any efforts to 
+prevent such disclosure.</p>
+
+<p><strong>8.4.</strong>	Account Information.  Developer shall maintain, and shall ensure that its authorized 
+users maintain, the confidentiality of all account information (such as login information and 
+passwords) that Blackboard provides to Developer, or Developer provides to Blackboard, to 
+enable access to and use of a DVBA or any associated documentation and materials.  Developer 
+shall be responsible for preventing any unauthorized disclosure or use of such account 
+information, any ramifications thereof, and for promptly notifying Blackboard of any breach of 
+this obligation.  Blackboard may deny access to any user if it reasonably believes that 
+Developer’s account information has been lost, stolen, or compromised.</p>
+
+<h4 id="9-intellectual-property-ownership"><strong>9.	INTELLECTUAL PROPERTY OWNERSHIP.</strong></h4>
+
+<p>Blackboard owns all Blackboard Applications, APIs and Documentation, any other materials or 
+technology made available to Developer, and all derivative works of any of the above.<br />
+Developer owns the Developer Applications.  Developer acknowledges and agrees that: (i) 
+other developers and third parties may utilize the APIs and Documentation to develop and 
+make available applications which are similar to or compete with the Developer Applications; 
+and (ii) Blackboard may develop and make available applications that are similar to or 
+otherwise compete with, the Developer Applications.</p>
+
+<h4 id="10-warranties-disclaimer-of-warranties"><strong>10.	WARRANTIES; DISCLAIMER OF WARRANTIES</strong></h4>
+
+<p><strong>10.1.</strong>	Warranties of Developer.  Developer represents and warrants to Blackboard that:</p>
+
+<p><strong>10.1.1.</strong>	Each Developer Application: (i) shall be developed in a good and workmanlike manner 
+and in compliance with the requirements and purposes of this Agreement; (ii) shall not infringe 
+any third party’s intellectual property rights; (iii) shall be free from any viruses or malicious 
+code, or any code or mechanism which would permit unauthorized access to any Blackboard 
+Application (i.e. any access other than that which, in compliance with the APIs and 
+Documentation, allows the exchange of data between the Blackboard Application and the 
+Developer Application); and (iv) shall contain no open source, freeware, copyleft or similar 
+components which would require general or public disclosure of any component of any 
+Blackboard Application or other Blackboard technology or otherwise impair Blackboard’s rights 
+in any Blackboard Application or technology.</p>
+
+<p><strong>10.1.2.</strong>	it shall comply with applicable laws and regulations;</p>
+
+<p><strong>10.1.3.</strong>	it will make no representations, commitments warranties or guarantees regarding 
+Blackboard, any Blackboard Application or any other intellectual property of Blackboard other 
+than as permitted in the Agreement.</p>
+
+<p><strong>10.1.4.</strong>	It shall not provide any data to Blackboard or to any Blackboard Application other than 
+sample data which does not identify, reflect or represents any information regarding any actual 
+individual or entity;</p>
+
+<p><strong>10.2.</strong>	EXCEPT AS EXPRESSLY PROVIDED HEREIN, THE PARTIES DISCLAIM ALL WARRANTIES, 
+WHETHER EXPRESSED OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY AND 
+FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL BLACKBOARD BE LIABLE FOR THE 
+FAILURE, DELAY, ERROR OR IMPAIRMENT OF INTEGRATION OR INTEROPERABILITY BETWEEN 
+ANY DVBA or BLACKBOARD APPLICATION AND ANY DEVELOPER APPLICATION.</p>
+
+<h4 id="11-indemnification"><strong>11.	INDEMNIFICATION.</strong></h4>
+
+<p>Developer shall, indemnify, defend and hold Blackboard (and all of its officers, employees, 
+agents and Clients; collectively, the “Indemnified Parties”) harmless and from any and all 
+damages, losses, judgments, liabilities, costs and expenses (including reasonable attorneys fees; 
+collectively, “Damages”) arising out of or relating to:</p>
+
+<p><strong>11.1.1.</strong>	any third party claim or legal action that any Developer Application or any other 
+materials or other intellectual property made available to Blackboard hereunder infringes any 
+copyrights, confidentiality rights, trade secrets, trademarks, patents and other intellectual 
+property rights;</p>
+
+<p><strong>11.1.2.</strong>	any third party claim or legal action relating to or arising in connection with any 
+Developer Application (including its interoperability with any Blackboard Application), any other 
+intellectual property of Developer or any act or omission of Developer;</p>
+
+<p><strong>11.1.3.</strong>	any third party claim or legal action relating to or arising from any a breach by 
+Developer of any representation, warranty or covenant set forth in this Agreement.</p>
+
+<h4 id="12-limitation-of-liability"><strong>12.	LIMITATION OF LIABILITY.</strong></h4>
+
+<p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL BLACKBOARD OR ITS LICENSORS BE LIABLE, EVEN IF WE WERE ADVISED IN ADVANCE OF THE POSSIBILITY, FOR: (A) ANY LOSS OF BUSINESS, CONTRACTS, PROFITS, ANTICIPATED SAVINGS, GOODWILL OR REVENUE; (B) ANY LOSS OR CORRUPTION OF DATA, OR (C) ANY INCIDENTAL, INDIRECT OR CONSEQUENTIAL LOSSES OR DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, SPECIAL, PUNITIVE, OR EXEMPLARY DAMAGES).  IN NO EVENT SHALL BLACKBOARD AND OUR LICENSORS’ CUMULATIVE LIABILITY FOR ALL CLAIMS ARISING FROM OR RELATING TO THE AGREEMENT, REGARDLESS OF THE NATURE OF THE CLAIM, EXCEED THE GREATER OF: (A) THE AMOUNT OF ANY FEES PAID BY DEVELOPER HEREUNDER DURING THE TWELVE (12)-MONTH PERIOD IMMEDIATELY PRIOR TO THE FIRST CLAIM ASSERTED HEREUNDER; OR (B) ONE HUNDRED DOLLARS ($100).  THIS LIMITATION OF LIABILITY IS INTENDED TO APPLY WITHOUT REGARD TO WHETHER OTHER PROVISIONS OF THE AGREEMENT HAVE BEEN BREACHED OR HAVE PROVEN INEFFECTIVE OR HAVE FAILED OF THEIR ESSENTIAL PURPOSE.</strong></p>
+
+<h4 id="13-general-provisions"><strong>13.	GENERAL PROVISIONS</strong></h4>
+
+<p><strong>13.1.	Entire Agreement.</strong>  The terms and conditions contained in this Agreement comprise the 
+entire agreement and understanding between Blackboard and Developer and neither is bound 
+by any representation or inducements not specifically set forth herein.  This Agreement 
+supersedes any prior representations, discussion, communications or presentations.</p>
+
+<p><strong>13.2.	Severability, Modification and Waiver.</strong>  If any portion of this Agreement is held to be 
+void, invalid or otherwise unenforceable, in whole or part, the remaining portions of this 
+Agreement shall remain in effect. This Agreement may not be modified or amended except in 
+writing signed by an authorized representative of each party.  A party’s failure to exercise any 
+rights herein shall not constitute or be deemed a waiver or forfeiture of such rights. If a party 
+wishes to waive its rights hereunder, it must provide written notification of its waiver of such 
+rights to the other party.</p>
+
+<p><strong>13.3.	Non-exclusivity.</strong>  This Agreement is non-exclusive.</p>
+
+<p><strong>13.4.	Independent Contractors and Non-Interference.</strong>  The parties are each an independent 
+contractor.  This Agreement does not create an actual or apparent agency, joint venture, 
+fiduciary or employee and employer relationship between the parties.  Neither party is granted 
+any right or authority to assume or create any obligation or responsibility, express or implied, 
+on behalf of the other party or to bind the other party in any matter, including, without 
+limitation, the right or authority to obligate the other party to accept or deliver any order, or to 
+sell or refuse to sell to any customer.</p>
+
+<p><strong>13.5.	Dispute Resolution.</strong>  In the event of any controversy or claim arising out of or relating to 
+this Agreement, or a breach thereof, the parties will consult and negotiate with each other and 
+attempt to reach a satisfactory solution. If they do not reach settlement within a period of 
+thirty (30) days, then, upon notice by any party to the other), any such controversy or claim will 
+be referred to arbitration for full and final settlement by a panel of three arbitrators (or fewer if 
+agreed by the Parties) appointed in accordance with the Rules of Arbitration of the 
+International Chamber of Commerce (“ICC Rules”).  All arbitration proceedings will be 
+conducted in the English language and will be conducted pursuant to ICC Rules.  Any award 
+issued pursuant to ICC Rules may be enforced by any court of competent jurisdiction.  The 
+allocation of the cost of the arbitrators and administration of conducting the arbitration will be 
+borne equally by the Parties. The governing law is the State of New York and the place of 
+arbitration is Washington, D.C. The U.N. Convention on Contracts for the International Sale of 
+Goods shall not apply to the Agreement.</p>
+
+<p><strong>13.6.	Assignment.</strong>  No right or obligation of Developer under the Agreement may be assigned, 
+delegated or otherwise transferred, whether by agreement, operation of law or otherwise, 
+without Blackboard’s express prior written consent, and any attempt to assign, delegate or 
+otherwise transfer any of Developer’s rights or obligations hereunder, without such consent, 
+shall be void.  Subject to the preceding sentence, the Agreement shall bind each party and its 
+permitted successors and assigns.</p>
+
+<p><strong>13.7.	Notices.</strong>  Any notice or communication permitted or required hereunder shall be in 
+writing and shall be delivered in person or by courier, or mailed by certified or registered mail, 
+postage prepaid, return receipt requested, and, in the case of notices to us, sent to Blackboard 
+Inc., Attn: General Counsel, 1111 19th Street NW, 9th Floor, Washington DC, 20036 or to such 
+other address as shall be given in accordance with this Section 13.5, and, in the case of 
+Developer, to the address supplied to Blackboard when registering, and shall in each case be 
+effective upon receipt.</p>
+
+<p><strong>13.8.	Force Majeure.</strong>  Neither party shall be liable for failure to fulfill its obligations under this 
+Agreement if that failure is caused, directly or indirectly, by reasons beyond its reasonable 
+control, including flood, fire, civil disorder, government actions, war, terrorism, embargoes, 
+labor disputes/strikes or other natural calamity or act of God.</p>
+
+<p><strong>13.9.	No Third-Party Beneficiaries.</strong>  Nothing in this Agreement is intended to, or shall, create 
+any third-party beneficiaries, whether intended or incidental, and neither Party shall make any 
+representations to the contrary.</p>
+
+<p><strong>13.10.	Publicity.</strong>  Except as otherwise provided in this Agreement, each party shall obtain the 
+prior written consent of the other prior to: (a) releasing any press release or public 
+announcement regarding the other party or the relationship established hereby or (b) using the 
+other party’s name, or the name of any product or solution of the other party in any marketing 
+or other materials or campaigns.</p>
+
+<p><strong>13.11.	Audit Rights.</strong>  Upon reasonable notice, Blackboard shall have the right to audit, at its 
+expense, Developer’s books and records, business and development practices, operations, 
+systems and Developer Applications not more than once per calendar year to ensure past and 
+ongoing compliance with this Agreement.  Developer shall cooperate and support any such 
+audit as reasonably requested by Blackboard.</p>
+
+<p><strong>Exhibit A</strong></p>
+
+<p><strong>Member Benefits</strong></p>
+
+<p><strong>Support Benefits</strong></p>
+
+<ul>
+  <li>Access to the Community.Blackboard.com Developer Network Site</li>
+</ul>
+
+<p><strong>Product Development Benefits</strong></p>
+
+<ul>
+  <li>Access to a DVBA enabling REST and LTI testing, development and demonstrations in accordance with the terms and conditions of this Agreement.</li>
+</ul>
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul class="section-nav">
+</ul>
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard dev docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick APIs access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

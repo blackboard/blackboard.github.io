@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>Event Driven API</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.js"></script>
+    <script>
+        var pageCategory = "#learn-b2-advced-event-driven-api";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >Api Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >Api Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">Api Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Events for learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="event-driven-api">Event Driven API</h1>
+
+<p>The Blackboard Learn Event Driven API is used to programmatically push the
+following data into the Blackboard Learn database from an external system:</p>
+
+<ul>
+  <li>User</li>
+  <li>Course</li>
+  <li>Organization</li>
+  <li>Enrollment</li>
+  <li>Staff Student</li>
+  <li>Organization membership</li>
+  <li>Course and Organization category</li>
+  <li>Course and Organization category membership</li>
+</ul>
+
+<p>The collaboration between the entity and the persistence classes is the
+process by which data is obtained from the institution systems. An instance is
+created for that data, and input into the Blackboard Learn database as a data
+record.</p>
+
+<p>The intended audience includes developers creating data integration solutions
+for the Blackboard Learn. The Data Integration API Specifications describe the
+packages, classes, and objects of the Event Driven API in systemlib/cms-
+admin.jar.</p>
+
+<h2 id="event-driven-api-architecture">Event Driven API architecture</h2>
+
+<p>The API is a collection of java classes and objects that move data from the
+institution systems into Blackboard Learn. Concrete data from the institution
+systems are encapsulated as java objects. The methods contained in the java
+classes determine how the data is input into Blackboard Learn. The data input
+is controlled by persisters that process the appropriate method, convert the
+object into data that can be input into Blackboard Learn database, and then
+input that data according to the method called.</p>
+
+<h3 id="entities-and-persisters">Entities and persisters</h3>
+
+<p>There are two main types of objects in the API: entities (objects) and
+persisters (actions). Entities include the objects that represent data in the
+system, such as users. Persisters are behind-the-scenes methods that handle
+the storage of the entities into a persistent store or transient data format.</p>
+
+<h3 id="operations">Operations</h3>
+
+<p>All data classes have methods to handle persistence actions. The following
+persistence operations are supported:</p>
+
+<ul>
+  <li><em>Insert</em>: Inserts a record into the Blackboard Learn database.</li>
+  <li><em>Update</em>: Updates an existing record in the Blackboard Learn database.</li>
+  <li><em>Save</em>: Updates an existing record if it already exists. Otherwise, if it does not exist, inserts the record in the Blackboard Learn database.</li>
+  <li><em>Remove</em>: Purges the record from the Blackboard Learn database.</li>
+  <li><em>Change Key</em>: (Person and Group, Course, and Organization) Changes the primary key. This will automatically update any related Memberships of the changed keys.</li>
+</ul>
+
+<h3 id="create-an-object">Create an object</h3>
+
+<p>To create an object in the system, instantiate a corresponding entity, set
+attributes on the object, and then call a persister method (insert, update,
+save, delete).</p>
+
+<h3 id="persisters">Persisters</h3>
+
+<p>The following Persisters are found in the Event Driven API:</p>
+
+<ul>
+  <li>CourseSitePersister</li>
+  <li>OrganizationPersister</li>
+  <li>EnrollmentPersister</li>
+  <li>OrganizationMembershipPersister</li>
+  <li>StaffStudentPersister</li>
+  <li>PersonPersister</li>
+  <li>CourseCategoryPersister</li>
+  <li>OrganizationCategoryPersister</li>
+  <li>CourseCategoryMembershipPersister</li>
+  <li>OrganizationCategoryMembershipPersister</li>
+  <li>PortalRolePersister</li>
+</ul>
+
+<p>Persist methods include changeKey, insert, remove, save, update, clone. Change
+key is not relevant for membership type items. Clone is only relevant for
+Coursesite/Organization. More information about Persist methods can be found
+in the API specifications.</p>
+
+<h3 id="loaders">Loaders</h3>
+
+<p>The following Loaders are found in the Event Driven API:</p>
+
+<ul>
+  <li>SourseSiteLoader</li>
+  <li>OrganizationLoader</li>
+  <li>EnrollmentLoader</li>
+  <li>OrganizationMembershipLoader</li>
+  <li>StaffStudentLoader</li>
+  <li>PersonLoader</li>
+  <li>CourseCategoryLoader</li>
+  <li>OrganizationCategoryLoader</li>
+  <li>CourseCategoryMembershipLoader</li>
+  <li>OrganizationCategoryMembershipLoader</li>
+  <li>PortalRoleLoader</li>
+</ul>
+
+<p>Load methods include load by batch_uid and load by template. More information
+about Load methods can be found in the API specifications.</p>
+
+<h3 id="data-source-loader-and-persister">Data source loader and persister</h3>
+
+<p>The following Data Source Loader and Persister are found in the Event Driven
+API:</p>
+
+<p><strong>DataSourceLoader</strong></p>
+
+<ul>
+  <li>loadAll()</li>
+  <li>loadAdminObjectCount()</li>
+  <li>loadAllAdminObjectCounts()</li>
+  <li>loadByBatchUid()</li>
+  <li>DataSourcePersister</li>
+  <li>create()</li>
+  <li>disableAdminObjectsByDataType()</li>
+  <li>disableAllAdminObjects()</li>
+  <li>modify()</li>
+  <li>purgeAdminObjectsByDataType()</li>
+  <li>purgeAllAdmiObjects()</li>
+  <li>purgeSnapshotSessions()</li>
+  <li>removeByBatchUid()</li>
+</ul>
+
+<h2 id="persistence-package">Persistence package</h2>
+
+<p>For the most complete and up-to-date information about packages and classes,
+refer to the Javadocs included with the API.</p>
+
+<h3 id="persistence-package-1">Persistence package</h3>
+
+<p>The persistence package provides a framework to handle the insert, update,
+save, and delete for the entity objects. The framework includes:</p>
+
+<ul>
+  <li>BbServiceManage: This class handles the coordination of Blackboard Learn enabled services.</li>
+  <li>PersistenceService: This class is a singleton, an object only intended to exist once, that manages the different persistence context for the entity objects.</li>
+  <li>DbPersistenceManager: This class maintains the reference points for each individual loader/persister. An instance of any persister/loader is requested through it.</li>
+  <li>PersisterInterfaces: This includes the PersonPersister, CoursesitePersister, and so forth.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">blackboard</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">BbServiceManager</span><span class="o">.</span><span class="na">init</span><span class="o">(</span> <span class="n">serviceConfig</span><span class="o">,</span><span class="n">bbprops</span> <span class="o">);</span>
+
+<span class="n">blackboard</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">persistence</span><span class="o">.</span><span class="na">PersistenceService</span> <span class="n">pService</span> <span class="o">=</span>
+<span class="nc">BbServiceManager</span><span class="o">.</span><span class="na">getPersistenceService</span><span class="o">().</span>
+
+<span class="n">blackboard</span><span class="o">.</span><span class="na">persist</span><span class="o">.</span><span class="na">BbPersistenceManager</span> <span class="n">bManager</span> <span class="o">=</span>
+<span class="n">pService</span><span class="o">.</span><span class="na">getDbPersistenceManager</span><span class="o">()</span>
+
+<span class="nc">CoursesiteLoader</span> <span class="n">cLoader</span><span class="o">=</span>
+<span class="o">(</span><span class="nc">CoursesiteLoader</span><span class="o">)</span><span class="n">bManager</span><span class="o">.</span><span class="na">getLoader</span><span class="o">(</span><span class="nc">CoursesiteLoader</span><span class="o">.</span><span class="na">TYPE</span><span class="o">);</span>
+
+<span class="nc">PersistenceManager</span><span class="o">.</span><span class="na">getLoader</span><span class="o">=</span><span class="nc">PersonPersister</span><span class="o">.</span><span class="na">Default</span><span class="o">.</span><span class="na">getInstance</span><span class="o">()</span>
+</code></pre></div></div>
+
+<p>The user must initialize the BbServiceManager before attempting any
+persistence of the admin data objects. After BbServiceManager is initialized
+the appropriate loader/persister must be used according to the data type the
+programmer intends to manage.</p>
+
+<h2 id="determining-relationships">Determining relationships</h2>
+
+<p>When using the API, there are specific steps than need to be followed to
+determine the relationships between the entity and the persistence classes.</p>
+
+<p>The following is an example of how to get a Course site:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">blackboard</span><span class="o">.</span><span class="na">admin</span><span class="o">.</span><span class="na">data</span><span class="o">.</span><span class="na">course</span><span class="o">.</span><span class="na">CourseSite</span> <span class="n">site</span><span class="o">=</span><span class="k">new</span>
+
+<span class="n">blackboard</span><span class="o">.</span><span class="na">admin</span><span class="o">.</span><span class="na">data</span><span class="o">.</span><span class="na">course</span><span class="o">.</span><span class="na">CourseSite</span><span class="o">();</span>
+</code></pre></div></div>
+
+<ol>
+  <li>The program must first initialize the BbServiceManager object. The method call is blackboard.platform.BbServiceManager.init( serviceConfig ); where serviceConfig is a java.io.File object. This object represents a link to the configuration file on the operating system. The file is a detailed list of all services that are active on the instance of the servicemanager as well as any of their configuration files.</li>
+  <li>
+    <p>The BbServiceManager object is only initialized once for each execution of the application.</p>
+  </li>
+  <li>
+    <p>A virtual host is also needed for proper setup. A virtual host can be obtained by first getting the Virtual Installation Manager using BBServiceManager.lookupService(VirtualInstallationManager.class). The Virtual Installation Manager has a getVirtualHost(String id) method which returns the virtual host.</p>
+  </li>
+  <li>
+    <p>Next, the ContextManager must be retrieved using BBServiceManager.lookupService(ContextManager.class). Finally, the context can be set by calling the ContextManager’s setContext() method and passing in the virtual host as an argument.</p>
+  </li>
+  <li>The following code sample assumes a “SERVICE_CONFIG_DIR” and “VIRTUAL_HOST_KEY” properties will be set, probably through –D parameters if it is used in a command line application. The SERVICE_CONFIG_DIR should be set to the full path of the Blackboard config directory, while the VIRTUAL_HOST_KEY needs to be the virtual installation you want to test, by default it is bb_bb60.</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Initialize the BbServiceManager and set the context</span>
+
+<span class="c1">//Follow the steps below to determine the relationships between the entity and persistence classes.</span>
+
+<span class="k">try</span>
+
+<span class="o">{</span>
+
+<span class="n">blackboard</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">BbServiceManager</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">getProperties</span><span class="o">().</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"
+SERVICE_CONFIG_DIR"</span><span class="o">)</span> <span class="o">+</span> <span class="s">"service-config-snapshot-jdbc.properties"</span><span class="o">);</span>
+
+<span class="c1">// The virtual host is needed to establish the proper database context.</span>
+
+<span class="nc">VirtualInstallationManager</span> <span class="n">vm</span> <span class="o">=</span> <span class="o">(</span><span class="nc">VirtualInstallationManager</span><span class="o">)</span>
+
+<span class="nc">BbServiceManager</span><span class="o">.</span><span class="na">lookupService</span><span class="o">(</span><span class="nc">VirtualInstallationManager</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+<span class="nc">String</span> <span class="n">vhostUID</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"VIRTUAL_HOST_KEY"</span><span class="o">,</span> <span class="s">"bb_bb60"</span><span class="o">);</span>
+
+<span class="nc">VirtualHost</span> <span class="n">vhost</span> <span class="o">=</span> <span class="n">vm</span><span class="o">.</span><span class="na">getVirtualHost</span><span class="o">(</span><span class="n">vhostUID</span><span class="o">);</span>
+
+<span class="n">vhost</span> <span class="o">=</span> <span class="n">vm</span><span class="o">.</span><span class="na">getVirtualHost</span><span class="o">(</span><span class="n">vhostUID</span><span class="o">);</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">vhost</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+
+<span class="o">{</span>
+
+<span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"Virtual Host '"</span> <span class="o">+</span> <span class="n">vhostUID</span> <span class="o">+</span> <span class="s">"' not found."</span><span class="o">);</span>
+
+<span class="o">}</span>
+
+<span class="c1">// Now that the vhost is set we can set the context based on that vhost</span>
+
+<span class="nc">ContextManager</span> <span class="n">cm</span> <span class="o">=</span> <span class="o">(</span><span class="nc">ContextManager</span><span class="o">)</span>
+<span class="nc">BbServiceManager</span><span class="o">.</span><span class="na">lookupService</span><span class="o">(</span><span class="nc">ContextManager</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+<span class="nc">Context</span> <span class="n">context</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="na">setContext</span><span class="o">(</span><span class="n">vhost</span><span class="o">);</span>
+
+<span class="o">}</span>
+
+<span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span>
+
+<span class="o">{</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Exception trying to init the BbPersistenceManager\n "</span> <span class="o">+</span>
+<span class="n">e</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span> <span class="o">+</span> <span class="s">"..exiting.\n"</span><span class="o">);</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>The controller creates an entity object and sets its attributes.</li>
+  <li>The controller requests a persist action off the Loader / Persister</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">CourseSiteLoader</span> <span class="n">cLoader</span><span class="o">=</span>
+
+<span class="o">(</span><span class="nc">CourseSiteLoader</span><span class="o">)</span><span class="nc">BbServiceManager</span><span class="o">.</span><span class="na">getPersistenceService</span><span class="o">().</span><span class="na">getDbPersistenceMan</span>
+<span class="n">ager</span><span class="o">().</span><span class="na">getLoader</span><span class="o">(</span><span class="nc">CourseSiteLoader</span><span class="o">.</span><span class="na">TYPE</span><span class="o">);</span>
+
+<span class="nc">CourseSitePersister</span> <span class="n">cPersister</span><span class="o">=</span>
+
+<span class="o">(</span><span class="nc">CourseSitePersister</span><span class="o">)</span><span class="nc">BbServiceManager</span><span class="o">.</span><span class="na">getPersistenceService</span><span class="o">().</span><span class="na">getDbPersistence</span>
+<span class="nc">Manager</span><span class="o">().</span><span class="na">getPersister</span><span class="o">(</span><span class="nc">CoursesSitePersister</span><span class="o">.</span><span class="na">TYPE</span><span class="o">);</span>
+
+<span class="nc">PersistenceManager</span><span class="o">.</span><span class="na">getLoader</span><span class="o">=</span><span class="nc">PersonPersister</span><span class="o">.</span><span class="na">Default</span><span class="o">.</span><span class="na">getInstance</span><span class="o">()</span>
+</code></pre></div></div>
+
+<ol>
+  <li>The controller catches any persistence exceptions that occur.</li>
+</ol>
+
+<p>Repeat steps 2, 3, and 4 as needed for different entities and different
+persist actions.</p>
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#event-driven-api-architecture">Event Driven API architecture</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#entities-and-persisters">Entities and persisters</a></li>
+<li class="toc-entry toc-h3"><a href="#operations">Operations</a></li>
+<li class="toc-entry toc-h3"><a href="#create-an-object">Create an object</a></li>
+<li class="toc-entry toc-h3"><a href="#persisters">Persisters</a></li>
+<li class="toc-entry toc-h3"><a href="#loaders">Loaders</a></li>
+<li class="toc-entry toc-h3"><a href="#data-source-loader-and-persister">Data source loader and persister</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#persistence-package">Persistence package</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#persistence-package-1">Persistence package</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#determining-relationships">Determining relationships</a></li>
+</ul>
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard dev docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="#">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick APIs access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
