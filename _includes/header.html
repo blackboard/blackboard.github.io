@@ -16,13 +16,13 @@
 
     {% if page.tipue_search_active or layout.tipue_search_active %}
         <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
         <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
         <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
         <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
     {% else %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     {% endif %}
 
     <meta name="description" content="">
