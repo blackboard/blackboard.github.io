@@ -27,7 +27,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # github_username:  jekyll
 
 # Build settings
-theme: bbdocsmaterialize
+remote_theme: blackboard/bbdocsMaterialize
+
 plugins:
   - jekyll-feed
   - jekyll-toc
