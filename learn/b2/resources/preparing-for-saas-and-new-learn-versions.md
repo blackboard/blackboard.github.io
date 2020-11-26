@@ -23,26 +23,7 @@ likely need to be modified to run in the new Blackboard.
 
 ***Note:** Building Blocks cannot surface content in an Ultra course, **ever**. B2s meant designed to work with Original Experience courses can continue to work in SaaS, provided they meet the requirements documented here. Ultra Courses surface content from the Content Market - which are built on Partner Cloud, or the LTI standard & Blackboard Learn REST APIs.
 
-  * [APIs](#apis)
-  * [Database](#database)
-  * [Shared Content Folder](#shared-content-folder)
-  * [Logging Changes](#logging-changes)
-  * [Statelessness](#statelessness)
-  * [Java 11](#java-11)
-  * [Tomcat 8](#tomcat-8)
-    * [JSP Precompilation](#jsp-precompilation)
-    * [bb-context-config.properties](#bb-context-configproperties)
-    * [web.xml](#webxml)
-      * [Faster Startup](#faster-startup)
-    * [URL Encoding](#url-encoding)
-  * [Permissions](#permissions)
-  * [Original UI](#original-ui)
-  * [Ultra UI](#ultra-ui)
-  * [Continuous Delivery](#continuous-delivery)
-  * [Installing Building Blocks in Learn SaaS](#installing-building-blocks-in-learn-saas)
-  * [Update a Building Block for TinyMCE 5](#update-a-building-block-for-tinymce-5)
-
-### APIs
+## APIs
 
 Only use the [published
 APIs](api-documentation). If it's not published, it's private. Our product development
@@ -53,7 +34,7 @@ private APIs. For example we've discovered that B2s that depend on
 **DocumentManagerEx** is private. Don't use it. Eliminate the use of all
 private APIs.
 
-### Database
+## Database
 
 In SaaS, the database schema name will no longer be **BBLEARN** or
 **bb_bb60**. Your B2 code must determine the actual schema name if it has any
@@ -109,7 +90,7 @@ application, navigation_item, and entitlements. The use of data-templates both
 adds risk to live-upgrades and loses customizations (application status,
 entitlement-to-role mappings, etc.).
 
-### Shared Content Folder
+## Shared Content Folder
 
 In the Enterprise Blackboard Learn you are accustomed to developing for, the
 Building Block home lives in the shared content directory. For instance, if I
@@ -178,7 +159,7 @@ PlugInUtil.getLogDirectory(). Prior to this change, a new way will be
 documented to achieve the same goal without writing directly to the backend of
 the server.
 
-### Logging Changes
+## Logging Changes
 
 In SaaS, logging is handled a bit differently, as clients will not have back-
 end access to the system. You can still log to the log directory, but those
@@ -224,7 +205,7 @@ format is:
 
 **[Sample logging code that works in a SaaS environment.](https://github.com/mark-b-kauffman/bbdn-bblogbackb2){: target:_blank}**
 
-### Statelessness
+## Statelessness
 
 The Learn SaaS cloud architecture is built to the best practices of cloud
 computing. As such, in SaaS, Learn is stateless. As a result, you can no
@@ -251,20 +232,20 @@ ContextManagerFactory.getInstance().getContext().getSession().setGlobalKey("myVe
 Non-String values need to be serialized to save on the **BbSession** -
 refactor to avoid if at all possible.
 
-#### Java 11
+## Java 11
 
 Blackboard Learn SaaS runs on Java 11, as of Learn 3800. As a result, Building Block that are to
 be installed in the cloud, or on 9.1 Q2 2020 or later, need to be built with
 Java 11. For more information see [8 steps to prepare for Java 11](prepare-for-java11).
 
-#### Tomcat 8
+## Tomcat 8
 
 Tomcat 8 introduces a few new complexities to the Building Block development
 process. This move was an opportunity to re-imagine how the Learn application
 startup performance could be improved. This work has been extremely
 successful, but requires some refactoring of your code.
 
-#### JSP Precompilation
+### JSP Precompilation
 
 It is expected that going forward, all Building Blocks will precompile JSPs.
 This simple step will assure that your JSP files render properly in Blackboard
@@ -273,7 +254,7 @@ currently optional, this could become mandatory in the future.
 
 This blog post describes one way to [precompile you Java Server Pages](https://community/blackboard.com/blogs/4/25){: target:_blank} when using Gradle.
 
-#### bb-context-config.properties
+### bb-context-config.properties
 
 Tomcat 8.5 is substantially more configurable in the way that you can
 implement [jar scanning](https://tomcat.apache.org/tomcat-8.5-doc/config/jar-scanner.html){: target:_blank}. This file lives in the WEB-INF directory of your Building Block
@@ -399,7 +380,7 @@ com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars=
 com.blackboard.tomcat.servletcontainer.context.containerSciFilter=^.*(?<!\\.JasperInitializer)$
 ~~~
 
-### web.xml
+## web.xml
 
 Your Building Block should be using Web App version 3.0, and requires
 metadata-complete to be set. By default and in most cases, this should be set
@@ -471,7 +452,7 @@ For example:
 </absolute-ordering>
 ~~~
 
-### Faster Startup
+## Faster Startup
 
 When declaring servlets in web.xml, the <load-on-startup> tag allows you to
 decide when a servlet is loaded into memory. The default value is to load at
@@ -530,7 +511,7 @@ faster.
 */
 ~~~
 
-### URL Encoding
+## URL Encoding
 
 Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
 curly braces ( { } ) or vertical bars, often referred to as pipes ( | ) in
@@ -543,7 +524,7 @@ security issue](https://nvd.nist.gov/vuln/detail/CVE-2016-6816).
 Future versions of Tomcat may not support this override. Therefore, all B2s
 must url-encode these characters. For example, an URL like `http://myuniversity.blackboard.com/webapps/myb2/appController?options={x|y}` must be written by the application as `http://myuniversity.blackboard.com/webapps/myb2/appController?options=%7bx%7cy%7d`. Otherwise, Tomcat will reject the request.
 
-#### Permissions
+## Permissions
 
 As Blackboard continues to modernize the Blackboard Learn platform and move
 services out of the Learn code line and into microservices, the need to secure
@@ -583,7 +564,7 @@ from a Building Block.
 <permission type="java.io.FilePermission" name="BB_HOME/logs/" actions="read,write,delete"/>
 ~~~
 
-#### Original UI
+## Original UI
 
 Original courses run in an iframe on Learn SaaS. This shouldn’t affect your
 Building Block, except in the two following cases:
@@ -594,12 +575,12 @@ Building Block, except in the two following cases:
   * B2s using the bbUI and bbData tag libraries should be refactored were at all possible to use bbNG.
 
 
-#### Ultra UI
+## Ultra UI
 
 There are currently no extension points for Building Blocks in the Ultra UI.
 
 
-#### Continuous Delivery
+## Continuous Delivery
 
 Blackboard strives to deliver updates every two weeks. As a result, you should
 be using only public APIs whenever possible, as the continuous delivery model,
@@ -607,14 +588,14 @@ coupled with the possibility of undocumented private API changes without
 warning, makes using private APIs extremely risky.
 
 
-#### Installing Building Blocks in Learn SaaS
+## Installing Building Blocks in Learn SaaS
 
 There is no way to install a Building Block in Learn SaaS, regardless of the
 User Interface you are using. If you have licensed Learn SaaS Plus or
 Advantage, you do have the ability to install Building Blocks, but you must
 work with support to schedule the installation
 
-#### Update a Building Block for TinyMCE 5
+## Update a Building Block for TinyMCE 5
 
 In Learn 3900.X we intend to implement an updated content editor, TinyMCE 5, in the Original Course View and Original Experience of Learn. (*Forward-looking statement applies.) This editor changes certain patterns of UI with more of them living in an overlay modal rather than pop-up window after pop-up window. This change has led to required changes that are specific to B2s that have a Mashup. Cancel buttons in these mashups that expect to close a window will actually now need to close on overlay modal. The overlay modal will also include a close action button, an “x” in the interface, which will also work to close the window in case the cancel button doesn’t work; but if a cancel button in a mashup B2 is going to continue to work, the code will need to be updated.
  

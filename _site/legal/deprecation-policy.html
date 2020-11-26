@@ -15,7 +15,7 @@
     <!-- Search --> 
 
     
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     
 
     <meta name="description" content="">
@@ -32,7 +32,7 @@
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
-    <script type="text/javascript"  src="/assets/js/toc.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
         var pageCategory = "#";
         $(document).ready(function () {
@@ -715,36 +715,37 @@ email <a href="mailto:developers@blackboard.com">developers@blackboard.com</a>.<
                     <ul class="section table-of-contents">
                         <div id="table-of-contents">
                             <div id="table-of-contents">
-                                <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#compatibility">Compatibility</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#backward-compatibility">Backward compatibility</a></li>
-<li class="toc-entry toc-h3"><a href="#stable-uris">Stable URIs</a></li>
-<li class="toc-entry toc-h3"><a href="#http-response-codes">HTTP Response Codes</a></li>
-<li class="toc-entry toc-h3"><a href="#parameters-and-data">Parameters and Data</a></li>
-<li class="toc-entry toc-h3"><a href="#canonical-uris">Canonical URIs</a></li>
-<li class="toc-entry toc-h3"><a href="#stable-representations">Stable representations</a></li>
-<li class="toc-entry toc-h3"><a href="#structured-representations-applicationjson">Structured representations (application/json)</a></li>
-<li class="toc-entry toc-h3"><a href="#values-not-included-in-compatibility-policy">Values Not Included in Compatibility Policy</a></li>
+                                <ul>
+  <li><a href="#compatibility">Compatibility</a>
+    <ul>
+      <li><a href="#backward-compatibility">Backward compatibility</a></li>
+      <li><a href="#stable-uris">Stable URIs</a></li>
+      <li><a href="#http-response-codes">HTTP Response Codes</a></li>
+      <li><a href="#parameters-and-data">Parameters and Data</a></li>
+      <li><a href="#canonical-uris">Canonical URIs</a></li>
+      <li><a href="#stable-representations">Stable representations</a></li>
+      <li><a href="#structured-representations-applicationjson">Structured representations (application/json)</a></li>
+      <li><a href="#values-not-included-in-compatibility-policy">Values Not Included in Compatibility Policy</a></li>
+    </ul>
+  </li>
+  <li><a href="#api-versioning">API versioning</a>
+    <ul>
+      <li><a href="#version-increments">Version Increments</a></li>
+      <li><a href="#forward-compatibility">Forward compatibility</a></li>
+    </ul>
+  </li>
+  <li><a href="#deprecation">Deprecation</a>
+    <ul>
+      <li><a href="#deprecation-policy">Deprecation Policy</a></li>
+      <li><a href="#announcements">Announcements</a></li>
+      <li><a href="#time-frames">Time frames</a></li>
+      <li><a href="#detectability">Detectability</a></li>
+      <li><a href="#implementing-api-deprecations">Implementing API Deprecations</a></li>
+      <li><a href="#best-practices">Best Practices</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#api-versioning">API versioning</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#version-increments">Version Increments</a></li>
-<li class="toc-entry toc-h3"><a href="#forward-compatibility">Forward compatibility</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#deprecation">Deprecation</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#deprecation-policy">Deprecation Policy</a></li>
-<li class="toc-entry toc-h3"><a href="#announcements">Announcements</a></li>
-<li class="toc-entry toc-h3"><a href="#time-frames">Time frames</a></li>
-<li class="toc-entry toc-h3"><a href="#detectability">Detectability</a></li>
-<li class="toc-entry toc-h3"><a href="#implementing-api-deprecations">Implementing API Deprecations</a></li>
-<li class="toc-entry toc-h3"><a href="#best-practices">Best Practices</a></li>
-</ul>
-</li>
-</ul>
+
                               </div>
                           </div>
                     </ul>

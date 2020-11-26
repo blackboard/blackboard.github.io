@@ -15,7 +15,7 @@
     <!-- Search --> 
 
     
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     
 
     <meta name="description" content="">
@@ -32,7 +32,7 @@
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
-    <script type="text/javascript"  src="/assets/js/toc.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
         var pageCategory = "#learn-b2-resources-moving-to-saas";
         $(document).ready(function () {
@@ -556,34 +556,7 @@ likely need to be modified to run in the new Blackboard.</p>
 
 <p><strong>*Note:</strong> Building Blocks cannot surface content in an Ultra course, <strong>ever</strong>. B2s meant designed to work with Original Experience courses can continue to work in SaaS, provided they meet the requirements documented here. Ultra Courses surface content from the Content Market - which are built on Partner Cloud, or the LTI standard &amp; Blackboard Learn REST APIs.</p>
 
-<ul>
-  <li><a href="#apis">APIs</a></li>
-  <li><a href="#database">Database</a></li>
-  <li><a href="#shared-content-folder">Shared Content Folder</a></li>
-  <li><a href="#logging-changes">Logging Changes</a></li>
-  <li><a href="#statelessness">Statelessness</a></li>
-  <li><a href="#java-11">Java 11</a></li>
-  <li><a href="#tomcat-8">Tomcat 8</a>
-    <ul>
-      <li><a href="#jsp-precompilation">JSP Precompilation</a></li>
-      <li><a href="#bb-context-configproperties">bb-context-config.properties</a></li>
-      <li><a href="#webxml">web.xml</a>
-        <ul>
-          <li><a href="#faster-startup">Faster Startup</a></li>
-        </ul>
-      </li>
-      <li><a href="#url-encoding">URL Encoding</a></li>
-    </ul>
-  </li>
-  <li><a href="#permissions">Permissions</a></li>
-  <li><a href="#original-ui">Original UI</a></li>
-  <li><a href="#ultra-ui">Ultra UI</a></li>
-  <li><a href="#continuous-delivery">Continuous Delivery</a></li>
-  <li><a href="#installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</a></li>
-  <li><a href="#update-a-building-block-for-tinymce-5">Update a Building Block for TinyMCE 5</a></li>
-</ul>
-
-<h3 id="apis">APIs</h3>
+<h2 id="apis">APIs</h2>
 
 <p>Only use the <a href="api-documentation">published
 APIs</a>. If it’s not published, it’s private. Our product development
@@ -594,7 +567,7 @@ private APIs. For example we’ve discovered that B2s that depend on
 <strong>DocumentManagerEx</strong> is private. Don’t use it. Eliminate the use of all
 private APIs.</p>
 
-<h3 id="database">Database</h3>
+<h2 id="database">Database</h2>
 
 <p>In SaaS, the database schema name will no longer be <strong>BBLEARN</strong> or
 <strong>bb_bb60</strong>. Your B2 code must determine the actual schema name if it has any
@@ -649,7 +622,7 @@ application, navigation_item, and entitlements. The use of data-templates both
 adds risk to live-upgrades and loses customizations (application status,
 entitlement-to-role mappings, etc.).</p>
 
-<h3 id="shared-content-folder">Shared Content Folder</h3>
+<h2 id="shared-content-folder">Shared Content Folder</h2>
 
 <p>In the Enterprise Blackboard Learn you are accustomed to developing for, the
 Building Block home lives in the shared content directory. For instance, if I
@@ -715,7 +688,7 @@ PlugInUtil.getLogDirectory(). Prior to this change, a new way will be
 documented to achieve the same goal without writing directly to the backend of
 the server.</p>
 
-<h3 id="logging-changes">Logging Changes</h3>
+<h2 id="logging-changes">Logging Changes</h2>
 
 <p>In SaaS, logging is handled a bit differently, as clients will not have back-
 end access to the system. You can still log to the log directory, but those
@@ -763,7 +736,7 @@ format is:</p>
 
 <p><strong><a href="https://github.com/mark-b-kauffman/bbdn-bblogbackb2">Sample logging code that works in a SaaS environment.</a></strong></p>
 
-<h3 id="statelessness">Statelessness</h3>
+<h2 id="statelessness">Statelessness</h2>
 
 <p>The Learn SaaS cloud architecture is built to the best practices of cloud
 computing. As such, in SaaS, Learn is stateless. As a result, you can no
@@ -788,20 +761,20 @@ object in the session:</p>
 <p>Non-String values need to be serialized to save on the <strong>BbSession</strong> -
 refactor to avoid if at all possible.</p>
 
-<h4 id="java-11">Java 11</h4>
+<h2 id="java-11">Java 11</h2>
 
 <p>Blackboard Learn SaaS runs on Java 11, as of Learn 3800. As a result, Building Block that are to
 be installed in the cloud, or on 9.1 Q2 2020 or later, need to be built with
 Java 11. For more information see <a href="prepare-for-java11">8 steps to prepare for Java 11</a>.</p>
 
-<h4 id="tomcat-8">Tomcat 8</h4>
+<h2 id="tomcat-8">Tomcat 8</h2>
 
 <p>Tomcat 8 introduces a few new complexities to the Building Block development
 process. This move was an opportunity to re-imagine how the Learn application
 startup performance could be improved. This work has been extremely
 successful, but requires some refactoring of your code.</p>
 
-<h4 id="jsp-precompilation">JSP Precompilation</h4>
+<h3 id="jsp-precompilation">JSP Precompilation</h3>
 
 <p>It is expected that going forward, all Building Blocks will precompile JSPs.
 This simple step will assure that your JSP files render properly in Blackboard
@@ -810,7 +783,7 @@ currently optional, this could become mandatory in the future.</p>
 
 <p>This blog post describes one way to <a href="https://community/blackboard.com/blogs/4/25">precompile you Java Server Pages</a> when using Gradle.</p>
 
-<h4 id="bb-context-configproperties">bb-context-config.properties</h4>
+<h3 id="bb-context-configproperties">bb-context-config.properties</h3>
 
 <p>Tomcat 8.5 is substantially more configurable in the way that you can
 implement <a href="https://tomcat.apache.org/tomcat-8.5-doc/config/jar-scanner.html">jar scanning</a>. This file lives in the WEB-INF directory of your Building Block
@@ -940,7 +913,7 @@ file:</p>
 <span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">containerSciFilter</span><span class="o">=^.*(?&lt;!</span><span class="err">\\</span><span class="o">.</span><span class="na">JasperInitializer</span><span class="o">)</span><span class="err">$</span>
 </code></pre></div></div>
 
-<h3 id="webxml">web.xml</h3>
+<h2 id="webxml">web.xml</h2>
 
 <p>Your Building Block should be using Web App version 3.0, and requires
 metadata-complete to be set. By default and in most cases, this should be set
@@ -1015,7 +988,7 @@ initialization of other unused fragments in the class path.</p>
 <span class="nt">&lt;/absolute-ordering&gt;</span>
 </code></pre></div></div>
 
-<h3 id="faster-startup">Faster Startup</h3>
+<h2 id="faster-startup">Faster Startup</h2>
 
 <p>When declaring servlets in web.xml, the <load-on-startup> tag allows you to
 decide when a servlet is loaded into memory. The default value is to load at
@@ -1090,7 +1063,7 @@ faster.
 */</span>
 </code></pre></div></div>
 
-<h3 id="url-encoding">URL Encoding</h3>
+<h2 id="url-encoding">URL Encoding</h2>
 
 <p>Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
 curly braces ( { } ) or vertical bars, often referred to as pipes ( | ) in
@@ -1103,7 +1076,7 @@ security issue</a>.</p>
 <p>Future versions of Tomcat may not support this override. Therefore, all B2s
 must url-encode these characters. For example, an URL like <code class="language-plaintext highlighter-rouge">http://myuniversity.blackboard.com/webapps/myb2/appController?options={x|y}</code> must be written by the application as <code class="language-plaintext highlighter-rouge">http://myuniversity.blackboard.com/webapps/myb2/appController?options=%7bx%7cy%7d</code>. Otherwise, Tomcat will reject the request.</p>
 
-<h4 id="permissions">Permissions</h4>
+<h2 id="permissions">Permissions</h2>
 
 <p>As Blackboard continues to modernize the Blackboard Learn platform and move
 services out of the Learn code line and into microservices, the need to secure
@@ -1170,7 +1143,7 @@ from a Building Block.</p>
 <span class="o">&lt;</span><span class="n">permission</span> <span class="n">type</span><span class="o">=</span><span class="s">"java.io.FilePermission"</span> <span class="n">name</span><span class="o">=</span><span class="s">"BB_HOME/logs/"</span> <span class="n">actions</span><span class="o">=</span><span class="s">"read,write,delete"</span><span class="o">/&gt;</span>
 </code></pre></div></div>
 
-<h4 id="original-ui">Original UI</h4>
+<h2 id="original-ui">Original UI</h2>
 
 <p>Original courses run in an iframe on Learn SaaS. This shouldn’t affect your
 Building Block, except in the two following cases:</p>
@@ -1182,25 +1155,25 @@ Building Block, except in the two following cases:</p>
   <li>B2s using the bbUI and bbData tag libraries should be refactored were at all possible to use bbNG.</li>
 </ul>
 
-<h4 id="ultra-ui">Ultra UI</h4>
+<h2 id="ultra-ui">Ultra UI</h2>
 
 <p>There are currently no extension points for Building Blocks in the Ultra UI.</p>
 
-<h4 id="continuous-delivery">Continuous Delivery</h4>
+<h2 id="continuous-delivery">Continuous Delivery</h2>
 
 <p>Blackboard strives to deliver updates every two weeks. As a result, you should
 be using only public APIs whenever possible, as the continuous delivery model,
 coupled with the possibility of undocumented private API changes without
 warning, makes using private APIs extremely risky.</p>
 
-<h4 id="installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</h4>
+<h2 id="installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</h2>
 
 <p>There is no way to install a Building Block in Learn SaaS, regardless of the
 User Interface you are using. If you have licensed Learn SaaS Plus or
 Advantage, you do have the ability to install Building Blocks, but you must
 work with support to schedule the installation</p>
 
-<h4 id="update-a-building-block-for-tinymce-5">Update a Building Block for TinyMCE 5</h4>
+<h2 id="update-a-building-block-for-tinymce-5">Update a Building Block for TinyMCE 5</h2>
 
 <p>In Learn 3900.X we intend to implement an updated content editor, TinyMCE 5, in the Original Course View and Original Experience of Learn. (*Forward-looking statement applies.) This editor changes certain patterns of UI with more of them living in an overlay modal rather than pop-up window after pop-up window. This change has led to required changes that are specific to B2s that have a Mashup. Cancel buttons in these mashups that expect to close a window will actually now need to close on overlay modal. The overlay modal will also include a close action button, an “x” in the interface, which will also work to close the window in case the cancel button doesn’t work; but if a cancel button in a mashup B2 is going to continue to work, the code will need to be updated.</p>
 
@@ -1236,16 +1209,30 @@ work with support to schedule the installation</p>
                     <ul class="section table-of-contents">
                         <div id="table-of-contents">
                             <div id="table-of-contents">
-                                <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#apis">APIs</a></li>
-<li class="toc-entry toc-h3"><a href="#database">Database</a></li>
-<li class="toc-entry toc-h3"><a href="#shared-content-folder">Shared Content Folder</a></li>
-<li class="toc-entry toc-h3"><a href="#logging-changes">Logging Changes</a></li>
-<li class="toc-entry toc-h3"><a href="#statelessness">Statelessness</a></li>
-<li class="toc-entry toc-h3"><a href="#webxml">web.xml</a></li>
-<li class="toc-entry toc-h3"><a href="#faster-startup">Faster Startup</a></li>
-<li class="toc-entry toc-h3"><a href="#url-encoding">URL Encoding</a></li>
+                                <ul>
+  <li><a href="#apis">APIs</a></li>
+  <li><a href="#database">Database</a></li>
+  <li><a href="#shared-content-folder">Shared Content Folder</a></li>
+  <li><a href="#logging-changes">Logging Changes</a></li>
+  <li><a href="#statelessness">Statelessness</a></li>
+  <li><a href="#java-11">Java 11</a></li>
+  <li><a href="#tomcat-8">Tomcat 8</a>
+    <ul>
+      <li><a href="#jsp-precompilation">JSP Precompilation</a></li>
+      <li><a href="#bb-context-configproperties">bb-context-config.properties</a></li>
+    </ul>
+  </li>
+  <li><a href="#webxml">web.xml</a></li>
+  <li><a href="#faster-startup">Faster Startup</a></li>
+  <li><a href="#url-encoding">URL Encoding</a></li>
+  <li><a href="#permissions">Permissions</a></li>
+  <li><a href="#original-ui">Original UI</a></li>
+  <li><a href="#ultra-ui">Ultra UI</a></li>
+  <li><a href="#continuous-delivery">Continuous Delivery</a></li>
+  <li><a href="#installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</a></li>
+  <li><a href="#update-a-building-block-for-tinymce-5">Update a Building Block for TinyMCE 5</a></li>
 </ul>
+
                               </div>
                           </div>
                     </ul>

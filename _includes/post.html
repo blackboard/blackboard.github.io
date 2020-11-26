@@ -56,7 +56,7 @@
                     <ul class="section table-of-contents">
                         <div id="table-of-contents">
                             <div id="table-of-contents">
-                                {{ content | toc_only }}
+                                {% include toc.html html=content h_min=2 h_max=3 %}
                               </div>
                           </div>
                     </ul>
