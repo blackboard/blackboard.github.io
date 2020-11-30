@@ -26,11 +26,11 @@
               subsubmenu_content_url: /learn/b2/getting-started/dev-life-cycle
               id: learn-b2-gs-dev-live-cycle
               target: _self
-            - subsubmenu_content_name: Api Overview
+            - subsubmenu_content_name: API Overview
               subsubmenu_content_url: /learn/b2/getting-started/api-overview
               id: learn-b2-gs-api-over
               target: _self
-            - subsubmenu_content_name: Api Documentation
+            - subsubmenu_content_name: API Documentation
               subsubmenu_content_url: /learn/b2/getting-started/api-documentation
               id: learn-b2-gs-api-doc
               target: _self
@@ -405,7 +405,7 @@
   type: content
   main_item_icon: mic
   sub_item :
-    - submenu_item: Api Objects
+    - submenu_item: API Objects
       submenu_url: /collaborate/api-objects
       id: collab-api-objects
       target: _self
