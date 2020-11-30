@@ -12,9 +12,11 @@ You will find these tutorials very helpful as you start your Ultra Extension Fra
 
 <iframe class="embed-video" src="https://bbdemo.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fc63a1ab-ea88-4c79-8ca7-abf70124b035" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Ultra Extension Framework - YouTube Tutorial Series
+### Ultra Extension Framework
 
-This is the playlist ready for you to watch, if you want to fo directly to youtube, please [click here](https://www.youtube.com/watch?v=Mp9tFpultaQ&list=PLbewGw29xjRa2ZQ7gs3CgisvBVvyuKhsR&ab_channel=ScottHurrey){:target="_blank"}
+This [tutorial](/learn/uef/lti-to-uef-tutorial) starts with a Python-based LTI 1.3 Hello World application and shows you how to convert that project into a UEF integration.
+
+The tutorial is also available in a Youtube playlist, if you prefer to learn in this way. If you prefer to go directly to Youtube, [click here](https://www.youtube.com/watch?v=Mp9tFpultaQ&list=PLbewGw29xjRa2ZQ7gs3CgisvBVvyuKhsR&ab_channel=ScottHurrey){:target="_blank"}
 
 <iframe class="embed-video" src="https://www.youtube.com/embed/videoseries?list=PLbewGw29xjRa2ZQ7gs3CgisvBVvyuKhsR" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

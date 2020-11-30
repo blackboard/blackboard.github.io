@@ -98,9 +98,9 @@
                                             
                                             <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >Api Overview</a></li>
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >Api Documentation</a></li>
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
                                             
                                             <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
                                             
@@ -334,6 +334,8 @@
                                             
                                             <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
                                             
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            
                                         </ul>
                                     </li>
                                 
@@ -347,7 +349,7 @@
                     <ul>
                     
                             
-                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">Api Objects</a></li>
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
                             
                             <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
                             
@@ -430,7 +432,7 @@
                                             
                                             <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
                                             
-                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Events for learn</a></li>
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
                                             
                                         </ul>
                                     </li>
@@ -540,7 +542,37 @@
     
             <main id="maincontent">
                 <h1 id="uef-documentation">UEF Documentation</h1>
-<p>This is an iframe!</p>
+
+<style>
+    .table {width: 100%; height: 100vh; margin: 0; padding: 0}
+    .row-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;}
+    .row { flex-grow: 1; border: none; margin: 0; padding: 0; }
+</style>
+
+<iframe id="uef-docs" src="/learn/uef/UEFDocs/build/docs/index.html" class="row" onload="setIframeHeight(this.id)"></iframe>
+
+<script>
+    function getDocHeight(doc) {
+        doc = doc || document;
+        // stackoverflow.com/questions/1145850/
+        var body = doc.body, html = doc.documentElement;
+        var height = Math.max( body.scrollHeight, body.offsetHeight, 
+            html.clientHeight, html.scrollHeight, html.offsetHeight );
+        return height;
+    }
+
+    function setIframeHeight(id) {
+        var ifrm = document.getElementById(id);
+        var doc = ifrm.contentDocument? ifrm.contentDocument: 
+            ifrm.contentWindow.document;
+        ifrm.style.visibility = 'hidden';
+        ifrm.style.height = "10px"; // reset to minimal height ...
+        // IE opt. for bing/msn needs a bit added or scrollbar appears
+        ifrm.style.height = getDocHeight( doc ) + 4 + "px";
+        ifrm.style.visibility = 'visible';
+    }
+</script>
+
 
             </main>
             <div id="third-column-menu">

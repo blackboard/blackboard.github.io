@@ -1,0 +1,473 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Messaging Recommendations | Ultra Extension Framework Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Ultra Extension Framework Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="index.html">Pages</a>
+				</li>
+				<li>
+					<a href="MessagingRecommendations.html"> Messaging Recommendations</a>
+				</li>
+			</ul>
+			<h1> Messaging Recommendations</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#messaging-recommendations" id="messaging-recommendations" style="color: inherit; text-decoration: none;">
+					<h1>Messaging Recommendations</h1>
+				</a>
+				<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
+					<h2>Table of Contents</h2>
+				</a>
+				<ul>
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#iframe-to-iframe-communication">Iframe to Iframe communication</a><ul>
+							<li><a href="#localstorage">LocalStorage</a></li>
+							<li><a href="#http">HTTP</a></li>
+							<li><a href="#recommendation">Recommendation</a></li>
+						</ul>
+					</li>
+					<li><a href="#static-content-to-iframe-communication">Static Content to Iframe communication</a></li>
+				</ul>
+				<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+					<h2>Overview</h2>
+				</a>
+				<p>In some cases, an Integration may want to render content into Ultra
+					and have that content send messages back to the originating integration.
+				There are two primary use cases for this</p>
+				<ol>
+					<li>iframe to iframe</li>
+					<li>static content to Iframe.</li>
+				</ol>
+				<p>In the case of iframe to iframe the goal is to send content from a portal
+					that is an iframe back to the originating iframe (integration loaded in ultra).
+					In the case of static content the goal is to send events from statically rendered content back
+				to the originating iframe.</p>
+				<a href="#iframe-to-iframe-communication" id="iframe-to-iframe-communication" style="color: inherit; text-decoration: none;">
+					<h2>Iframe to Iframe communication</h2>
+				</a>
+				<p>In the case of Iframe to Iframe communication we have a bit more control of sending messages between contexts.
+				Currently there are two known ways to do this. This can be accomplished by using either LocalStorage or HTTP.</p>
+				<a href="#localstorage" id="localstorage" style="color: inherit; text-decoration: none;">
+					<h3>LocalStorage</h3>
+				</a>
+				<p>The first is to use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a>
+				as a message bus between the two iframes.</p>
+				<p><code>LIMITATION WARNING: In order for this to work both iframes have to have the same origin. If this is not the case then this will not work.</code></p>
+				<p>The implementation for this is rather easy and can be broken down into the following</p>
+				<pre><code class="language-javascript"><span class="hljs-comment">// localStorageMessager.js (used in all following scripts.)</span>
+<span class="hljs-keyword">const</span> subscribers = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+
+<span class="hljs-keyword">const</span> updateSubscribers = <span class="hljs-function">(<span class="hljs-params">subs, data</span>) =&gt;</span> {
+    subs.forEach(<span class="hljs-function"><span class="hljs-params">sub</span> =&gt;</span> {
+        sub(data);
+    });
+}
+
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'storage'</span>, (event) =&gt; {
+    <span class="hljs-keyword">const</span> subs = subscribers.get(event.key); <span class="hljs-comment">// Get subscribers.</span>
+
+    <span class="hljs-keyword">if</span> (!subs) {
+        <span class="hljs-keyword">return</span>;
+    }
+
+    updateSubscribers(subs, <span class="hljs-built_in">JSON</span>.parse(event.newValue)); <span class="hljs-comment">// Notify subscribers.</span>
+});
+
+<span class="hljs-keyword">const</span> subscribe = <span class="hljs-function">(<span class="hljs-params">topic, callback</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> current = subscribers.get(topic);
+
+    <span class="hljs-keyword">if</span> (current) {
+        current.push(callback);
+    } <span class="hljs-keyword">else</span> {
+        subscribers.set(topic, [callback]);
+    }
+};
+
+<span class="hljs-keyword">const</span> publish = <span class="hljs-function">(<span class="hljs-params">topic, value</span>) =&gt;</span> {
+    localStorage.setItem(topic, <span class="hljs-built_in">JSON</span>.stringify(value));
+};</code></pre>
+				<pre><code class="language-javascript"><span class="hljs-comment">// iframe rendered content</span>
+subscribe(<span class="hljs-string">'topic.response'</span>, event =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Got message from owning integration '</span>, event);
+});
+publish(<span class="hljs-string">'topic.send'</span>, {<span class="hljs-attr">data</span>: <span class="hljs-string">'hello'</span>});</code></pre>
+				<pre><code class="language-javascript"><span class="hljs-comment">// owning integration</span>
+subscribe(<span class="hljs-string">'topic.send'</span>, event =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Got message from rendered content '</span>, event);
+    publish(<span class="hljs-string">'topic.response'</span>, {<span class="hljs-attr">data</span>: <span class="hljs-string">'Greetings'</span>});
+});</code></pre>
+				<a href="#http" id="http" style="color: inherit; text-decoration: none;">
+					<h3>HTTP</h3>
+				</a>
+				<p>Another more complicated approach would be to use fetch
+					or XMLHttpRequest to send a message from the iframe to a web service.
+					This web service would in turn forward the message on to the originating iframe.
+					While this approach is a bit more difficult,
+				if done correctly this can allow cross origin communication.</p>
+				<pre><code class="language-javascript"><span class="hljs-comment">// httpManager.js (used in all scripts but server script.)</span>
+<span class="hljs-keyword">const</span> subscribers = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+
+<span class="hljs-keyword">const</span> updateSubscribers = <span class="hljs-function">(<span class="hljs-params">subs, data</span>) =&gt;</span> {
+    subs.forEach(<span class="hljs-function"><span class="hljs-params">sub</span> =&gt;</span> {
+        sub(data);
+    });
+}
+
+<span class="hljs-keyword">const</span> evtSource = <span class="hljs-keyword">new</span> EventSource(<span class="hljs-string">`/api/messaging`</span>); <span class="hljs-comment">// Create an EventSource to get data back gradually over time.</span>
+evtSource.addEventListener(<span class="hljs-string">'message'</span>, (event) =&gt; {
+    <span class="hljs-keyword">const</span> res = <span class="hljs-built_in">JSON</span>.parse(event.data);
+
+    res.forEach(<span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
+        <span class="hljs-keyword">const</span> subs = subscribers.get(message.topic);
+
+        <span class="hljs-keyword">if</span> (subs) {
+            updateSubscribers(subs, message.value);
+        }
+    });
+});
+
+evtSource.addEventListener(<span class="hljs-string">'open'</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Message channel is open'</span>);
+});
+
+<span class="hljs-keyword">const</span> subscribe = <span class="hljs-function">(<span class="hljs-params">topic, callback</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> current = subscribers.get(topic);
+
+    <span class="hljs-keyword">if</span> (current) {
+        current.push(callback);
+    } <span class="hljs-keyword">else</span> {
+        subscribers.set(topic, [callback]);
+    }
+};
+
+<span class="hljs-keyword">const</span> publish = <span class="hljs-function">(<span class="hljs-params">topic, value</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> message = <span class="hljs-keyword">new</span> Request(<span class="hljs-string">'http://mysite.com/api/messaging/data'</span>, {
+        <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+        <span class="hljs-attr">body</span>: <span class="hljs-built_in">JSON</span>.stringify({ topic, value}),
+        <span class="hljs-attr">headers</span>: <span class="hljs-keyword">new</span> Headers([
+            [<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">'application/json;charset=UTF-8'</span>]
+        ])
+    });
+
+    fetch(message); <span class="hljs-comment">// Send the message to the web server.</span>
+};</code></pre>
+				<pre><code class="language-javascript"><span class="hljs-comment">// web server handler (in express)</span>
+<span class="hljs-keyword">const</span> messages = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+<span class="hljs-keyword">const</span> listeners = [];
+
+<span class="hljs-keyword">const</span> registerMessagingHandlers = <span class="hljs-function">(<span class="hljs-params">app</span>) =&gt;</span> { <span class="hljs-comment">// Call this with your express app</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatMessage</span>(<span class="hljs-params">message</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`data: <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(message)}</span>\n\n`</span>; <span class="hljs-comment">// Correct the format for event stream.</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateListeners</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> retVal = [];
+
+        messages.forEach(<span class="hljs-function">(<span class="hljs-params">v, k</span>) =&gt;</span> {
+            retVal.push({
+                <span class="hljs-attr">topic</span>: k,
+                <span class="hljs-attr">value</span>: v,
+            });
+        });
+
+        listeners.forEach(<span class="hljs-function">(<span class="hljs-params">v</span>) =&gt;</span> {
+            v.write(formatMessage(retVal));
+        });
+    }
+
+    app.post(<span class="hljs-string">'/api/messaging/data'</span>, (req, res) =&gt; {
+        <span class="hljs-keyword">const</span> current = messages.get(req.body.topic);
+        <span class="hljs-keyword">if</span> (current === req.body.value) {
+            <span class="hljs-keyword">return</span>;
+        }
+
+        messages.set(req.body.topic, req.body.value);
+
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            updateListeners(); <span class="hljs-comment">// Send new data to clients</span>
+        });
+
+        res.status(<span class="hljs-number">201</span>).send();
+    });
+
+    app.get(<span class="hljs-string">'/api/messaging'</span>, (req, res) =&gt; { <span class="hljs-comment">// Handle incoming event source request.</span>
+        listeners.push(res);
+        <span class="hljs-keyword">const</span> retVal = [];
+
+        messages.forEach(<span class="hljs-function">(<span class="hljs-params">v, k</span>) =&gt;</span> {
+            retVal.push({
+                <span class="hljs-attr">topic</span>: k,
+                <span class="hljs-attr">value</span>: v,
+            });
+        });
+
+        res.writeHead(<span class="hljs-number">200</span>, {
+            <span class="hljs-string">'Cache-Control'</span>: <span class="hljs-string">'no-cache'</span>,
+            <span class="hljs-string">'Connection'</span>: <span class="hljs-string">'keep-alive'</span>,
+            <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'text/event-stream'</span>,
+        });
+
+        res.write(formatMessage(retVal)); <span class="hljs-comment">// Send current state.</span>
+    });
+};
+</code></pre>
+				<pre><code class="language-javascript"><span class="hljs-comment">// iframe rendered content</span>
+subscribe(<span class="hljs-string">'topic.response'</span>, event =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Got message from owning integration '</span>, event);
+});
+publish(<span class="hljs-string">'topic.send'</span>, {<span class="hljs-attr">data</span>: <span class="hljs-string">'hello'</span>});</code></pre>
+				<pre><code class="language-javascript"><span class="hljs-comment">// owning integration</span>
+subscribe(<span class="hljs-string">'topic.send'</span>, event =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Got message from rendered content '</span>, event);
+    publish(<span class="hljs-string">'topic.response'</span>, {<span class="hljs-attr">data</span>: <span class="hljs-string">'Greetings'</span>});
+});</code></pre>
+				<a href="#recommendation" id="recommendation" style="color: inherit; text-decoration: none;">
+					<h3>Recommendation</h3>
+				</a>
+				<p>For most cases the LocalStorage approach would be our recommendation.
+				The LocalStorage approach is the easiest to implement and has been proven more times.</p>
+				<a href="#static-content-to-iframe-communication" id="static-content-to-iframe-communication" style="color: inherit; text-decoration: none;">
+					<h2>Static content to iframe communication</h2>
+				</a>
+				<p>In some cases an integration might want to render interactive content without the use of iframes.
+					In this case the integration can use callbacks.
+					Callbacks will notify the integrations iframe when a change has occured.
+				In the below example we use callbacks to create a simple counter.</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> btnStyle = {
+    <span class="hljs-string">'margin'</span>: <span class="hljs-string">'4px'</span>
+};
+
+<span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">let</span> renderId;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderContent</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> contents = {
+      <span class="hljs-attr">tag</span>: <span class="hljs-string">'span'</span>,
+      <span class="hljs-attr">children</span>: [
+        {
+          <span class="hljs-attr">tag</span>: <span class="hljs-string">'button'</span>,
+          <span class="hljs-attr">props</span>: {
+            <span class="hljs-attr">onClick</span>: {
+              <span class="hljs-attr">callbackId</span>: <span class="hljs-string">'1'</span>, <span class="hljs-comment">// Id to be sent when button is pressed.</span>
+              <span class="hljs-attr">mode</span>: <span class="hljs-string">'sync'</span>
+            },
+            <span class="hljs-attr">style</span>: btnStyle
+          },
+          <span class="hljs-attr">children</span>: <span class="hljs-string">'Decrement'</span>
+        },
+        {
+          <span class="hljs-attr">tag</span>: <span class="hljs-string">'span'</span>,
+          <span class="hljs-attr">props</span>: {},
+          <span class="hljs-attr">children</span>: <span class="hljs-string">`Current Value <span class="hljs-subst">${count}</span>`</span>
+        },
+        {
+          <span class="hljs-attr">tag</span>: <span class="hljs-string">'button'</span>,
+          <span class="hljs-attr">props</span>: {
+            <span class="hljs-attr">onClick</span>: {
+              <span class="hljs-attr">callbackId</span>: <span class="hljs-string">'2'</span>, <span class="hljs-comment">// Id to be sent when button is pressed.</span>
+              <span class="hljs-attr">mode</span>: <span class="hljs-string">'sync'</span>
+            },
+            <span class="hljs-attr">style</span>: btnStyle
+          },
+          <span class="hljs-attr">children</span>: <span class="hljs-string">'Increment'</span>
+        }
+      ]
+    };
+
+    sendMessage({
+      <span class="hljs-attr">type</span>: <span class="hljs-string">"portal:render"</span>,
+      <span class="hljs-attr">portalId</span>: renderId,
+      <span class="hljs-attr">contents</span>: contents
+    });
+}
+
+<span class="hljs-keyword">const</span> onUltraMessageReceived = <span class="hljs-function">(<span class="hljs-params">msg</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (msg.data.type === <span class="hljs-string">'authorization:authorize'</span>) {
+    ultraMessageChannel.postMessage({
+      <span class="hljs-string">"type"</span>: <span class="hljs-string">"event:subscribe"</span>,
+      <span class="hljs-string">"subscriptions"</span>: [<span class="hljs-string">'click'</span>, <span class="hljs-string">'hover'</span>, <span class="hljs-string">'route'</span>, <span class="hljs-string">'portal:new'</span>, <span class="hljs-string">'portal:removed'</span>]
+    });
+
+    ultraMessageChannel.postMessage({
+      <span class="hljs-string">"type"</span>: <span class="hljs-string">"portal:panel"</span>,
+      <span class="hljs-string">"correlationId"</span>: <span class="hljs-string">"some:id"</span>,
+      <span class="hljs-string">"panelType"</span>: <span class="hljs-string">"small"</span>,
+      <span class="hljs-string">"panelTitle"</span>: <span class="hljs-string">"Static Messaging"</span>
+    }); <span class="hljs-comment">// Create panel when authorization is done.</span>
+  }
+
+  <span class="hljs-keyword">if</span> (msg.data.type === <span class="hljs-string">"event:event"</span>) {
+      <span class="hljs-keyword">switch</span> (msg.data.eventType) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"portal:new"</span>:
+          renderId = msg.data.portalId;
+          renderContent(); <span class="hljs-comment">// Portal has been created render initial content.</span>
+          <span class="hljs-keyword">break</span>;
+      }
+  }
+
+  <span class="hljs-keyword">if</span> (msg.data.type === <span class="hljs-string">"portal:callback"</span>) { <span class="hljs-comment">// Got a callback update our state</span>
+      <span class="hljs-keyword">if</span> (msg.data.callbackId === <span class="hljs-string">"1"</span> &amp;&amp; count &gt; <span class="hljs-number">0</span>) {
+          count--; <span class="hljs-comment">// Decrement button was pressed.</span>
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (msg.data.callbackId === <span class="hljs-string">"2"</span>) {
+          count++; <span class="hljs-comment">// Increment button was pressed.</span>
+      }
+
+      renderContent();
+  }
+};
+
+init(onUltraMessageReceived);
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label ">
+						<span>Pages</span>
+					</li>
+					<li class=" ">
+						<a href="HelpProviderScenarios.html"> <wbr>Help <wbr>Provider <wbr>Scenarios</a>
+					</li>
+					<li class="current ">
+						<a href="MessagingRecommendations.html"> <wbr>Messaging <wbr>Recommendations</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

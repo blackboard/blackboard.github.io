@@ -398,6 +398,10 @@
               subsubmenu_content_url: /learn/uef/tutorials
               id: learn-uef-gs-tutorials
               target: _self
+            - subsubmenu_content_name: Configuring Learn
+              subsubmenu_content_url: /learn/uef/configure-uef
+              id: learn-uef-gs-configure
+              target: _self
 
 
 - main_item: Collaborate
@@ -531,7 +535,7 @@
               subsubmenu_content_url: /standards/caliper/getting-started/getting-started-with-caliper
               id: standards-caliper-gs-getting-started
               target: _self
-            - subsubmenu_content_name: Caliper Events for learn
+            - subsubmenu_content_name: Caliper Event Store in Learn
               subsubmenu_content_url: /standards/caliper/getting-started/caliper-event-store-for-learn
               id: standards-caliper-gs-caliper-events
               target: _self
