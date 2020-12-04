@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SOAP to REST"
-status: deprecated
+tipue-search-status: true
 id: learn-soap-gs-soap-to-rest
 categories: Learn soap
 author: Scott Hurrey

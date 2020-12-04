@@ -205,13 +205,21 @@
               subsubmenu_content_url: /learn/rest/getting-started/framework
               id: learn-rest-gs-framework
               target: _self
-            - subsubmenu_content_name: Rest and Learn
-              subsubmenu_content_url: /learn/rest/getting-started/rest-and-learn
-              id: learn-rest-gs-rest-and-learn
-              target: _self
             - subsubmenu_content_name: Tutorials
               subsubmenu_content_url: /learn/rest/getting-started/tutorials
               id: learn-rest-gs-tutorials
+              target: _self
+            - subsubmenu_content_name: Development Test Site
+              subsubmenu_content_url: /dvba/developer-ami
+              id: DBVA-dev-ami
+              target: _self
+            - subsubmenu_content_name: Group, Quotas, Rates
+              subsubmenu_content_url: /learn/rest/admin/groups-quotas-rates
+              id: learn-rest-admin-group-quotas-rates
+              target: _self
+            - subsubmenu_content_name: Production Groups
+              subsubmenu_content_url: /learn/rest/admin/production-groups
+              id: learn-rest-admin-prod-groups
               target: _self
 
         - subsubmenu_item: Admin
@@ -223,13 +231,9 @@
               subsubmenu_content_url: /learn/rest/admin/cloud-registry
               id: learn-rest-admin-cloud-registry
               target: _self
-            - subsubmenu_content_name: Group, Quotas, Rates
-              subsubmenu_content_url: /learn/rest/admin/groups-quotas-rates
-              id: learn-rest-admin-group-quotas-rates
-              target: _self
-            - subsubmenu_content_name: Production Groups
-              subsubmenu_content_url: /learn/rest/admin/production-groups
-              id: learn-rest-admin-prod-groups
+            - subsubmenu_content_name: Rest and Learn
+              subsubmenu_content_url: /learn/rest/getting-started/rest-and-learn
+              id: learn-rest-gs-rest-and-learn
               target: _self
 
         - subsubmenu_item: Examples
@@ -286,7 +290,10 @@
           id: rest-advanced
           type: menu
           subsubmenu_content:
-
+            - subsubmenu_content_name: SOAP to REST Mapping
+              subsubmenu_content_url: /learn/soap/getting-started/soap-to-rest-mapping
+              id: learn-soap-gs-soap-to-rest
+              target: _self
             - subsubmenu_content_name: BBML
               subsubmenu_content_url: /learn/rest/advanced/bbml
               id: learn-rest-advanced-bbml
