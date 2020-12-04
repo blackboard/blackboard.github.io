@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Developer AMI"
-status: deprecated
+tipue_search_active: true
 id: DBVA-dev-ami
 categories: DVBA
 ---

@@ -553,22 +553,24 @@
 <h4 id="authorization-and-authentication">Authorization and Authentication</h4>
 <p>Generally speaking, REST API integrations are largely the same. That is the beauty of REST; the developer has a standard set of HTTP Verbs that generally perform the same actions, return the same success and failure codes, and most languages provide software packages and add-ons that make REST calls simple. Usually, the main hurdle is two-fold: What is the business logic behind the APIs, and how does an application authenticate to the services in order to send the REST calls necessary to perform the actions required.</p>
 
-<p>Most REST frameworks rely on some facet of the OAuth 2.0 standard and Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens (JWT) in order to accept the application as a trusted entity. For more detailed information about the JWT Standard and to learn about available libraries for most of today’s popular web application development languages, see https://jwt.io. For more information on Blackboard Collaborate’s implementation see Authorize and Authenticate in Blackboard Collaborate.</p>
+<p>Most REST frameworks rely on some facet of the OAuth 2.0 standard and Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens (JWT) in order to accept the application as a trusted entity. For more detailed information about the JWT Standard and to learn about available libraries for most of today’s popular web application development languages, see https://jwt.io. For more information on Blackboard Collaborate’s implementation see <a href="https://docs.blackboard.com/collaborate/security-and-tokens">Authorize and Authenticate in Blackboard Collaborate</a>.</p>
 
 <h4 id="examples">Examples</h4>
 <p>It is true that REST APIs allow the developer to choose any programming language that supports HTTP calls. That said, there are some languages that are consistently at the top of the list. As part of the effort to assist Developers in getting up and running, Blackboard typically offers sample code and supporting documentation in a number of those popular languages:</p>
 
 <ul>
-  <li>Postman Collection</li>
+  <li><a href="https://github.com/blackboard/BBDN-Collab-Postman-REST">Postman Collection</a></li>
   <li>Java</li>
-  <li>Python</li>
+  <li><a href="https://github.com/blackboard/BBDN-Collab-REST-Demo-Python">Python</a></li>
   <li>Ruby</li>
   <li>PHP</li>
-  <li>C#/.NET</li>
+  <li><a href="https://github.com/blackboard/BBDN-Collab-REST-Demo-CSharp">C#/.NET</a></li>
   <li>Node.JS</li>
 </ul>
 
 <p>As these samples are developed, the language above will be linked.</p>
+
+<p>For a demonstration of how to download recordings, check out the <a href="https://github.com/oscelot/collab-panopto">open source script</a> we used at DevCon 2020.</p>
 
 <h4 id="tutorials">Tutorials</h4>
 <p>The community site will also provide tutorials for how to perform specific actions necessary to get up and running in the Collaborate integration game. As those assets are developed, they will be listed here.</p>
@@ -592,7 +594,7 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Blackboard dev docs</h5>
+          <h5 class="white-text">Blackboard Dev Docs</h5>
           <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
             community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
             <h5 class="white-text">Community</h5>
@@ -603,7 +605,7 @@
             </ul>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Quick APIs access</h5>
+          <h5 class="white-text">Quick API Access</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
             <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
@@ -611,7 +613,7 @@
           </ul>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">REST Terms and conditions</h5>
+          <h5 class="white-text">REST Terms and Conditions</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
