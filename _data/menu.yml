@@ -235,17 +235,7 @@
               subsubmenu_content_url: /learn/rest/getting-started/rest-and-learn
               id: learn-rest-gs-rest-and-learn
               target: _self
-
-        - subsubmenu_item: API Reference
-          id: rest-api-ref
-          type: menu
-          subsubmenu_content:
-
-            - subsubmenu_content_name: POST /courses
-              subsubmenu_content_url: /learn/rest/api-reference/post-courses
-              id: learn-api-ref-post-course
-              target: _self
-
+        
         - subsubmenu_item: Examples
           id: rest-examples
           type: menu
@@ -423,66 +413,30 @@
 
 - main_item: Collaborate
   id: collab-group
-  type: menu
+  type: content
   main_item_icon: mic
   sub_item :
-    - submenu_item: API Reference
-      id: collab-api-ref
-      type: menu
-      subsubmenu:
-
-        - subsubmenu_item: Sessions
-          id: collab-api-ref-sessions
-          type: menu
-          subsubmenu_content:
-
-            - subsubmenu_content_name: POST sessions
-              subsubmenu_content_url: /collaborate/api-reference/sessions/post-session
-              id: collab-api-ref-post-session
-              target: _self
-    - submenu_item: Supporting Documentation
-      id: collab-api-docs
-      type: menu
-      subsubmenu: 
-    
-      - subsubmenu_item: Getting Started
-        id: collab-api-gs
-        type: menu
-        subsubmenu_content:
+      - submenu_item: Getting Started
+        submenu_url: /collaborate/getting-started
+        id: collab-getting-started
+        target: _self
+      - submenu_item: Security and Tokens
+        submenu_url: /collaborate/security-and-tokens
+        id: collab-security-and-tokens
+        target: _self
+      - submenu_item: API Objects
+        submenu_url: /collaborate/api-objects
+        id: collab-api-objects
+        target: _self
+      - submenu_item: API
+        submenu_url: /collaborate/api
+        id: collab-api
+        target: _self
+      - submenu_item: Session Definitions
+        submenu_url: /collaborate/session-definitions
+        id: collab-session-definitions
+        target: _self
         
-          - subsubmenu_content_name: Getting Started
-            subsubmenu_content_url: /collaborate/getting-started
-            id: collab-getting-started
-            target: _self
-          - subsubmenu_content_name: Security and Tokens
-            subsubmenu_content_url: /collaborate/security-and-tokens
-            id: collab-security-and-tokens
-            target: _self
-        
-      - subsubmenu_item: About
-        id: collab-api-about
-        type: menu
-        subsubmenu_content:
-          
-          - subsubmenu_content_name: API Objects
-            subsubmenu_content_url: /collaborate/api-objects
-            id: collab-api-objects
-            target: _self
-          - subsubmenu_content_name: API
-            subsubmenu_content_url: /collaborate/api
-            id: collab-api
-            target: _self
-      
-      - subsubmenu_item: Definitions
-        id: collab-api-about
-        type: menu
-        subsubmenu_content:
-
-          - subsubmenu_content_name: Session Definitions
-            subsubmenu_content_url: /collaborate/session-definitions
-            id: collab-session-definitions
-            target: _self
-          
 
 - main_item: DBVA
   id: dbva-group
