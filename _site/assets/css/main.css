@@ -204,6 +204,33 @@ header i{
   border-left-width: 6px;
 }
 
+#mainContent {
+	/* Container for the blog post in individal blog view */
+	padding-left: 2%;
+	width: 71%;
+	float: left;
+	padding-right: 2%;
+}
+
+#content #sidebar {
+	/* Sidebar*/
+	width: 19%;
+	padding-left: 2%;
+	padding-right: 2%;
+	float: left;
+	background-color: rgba(246,246,246,1.00);
+}
+
+#sidebar ul a {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+#sidebar ul a:hover {
+  color: #000000 !important;
+  text-decoration: underline !important;
+}
+
 svg{
   display: none;
 }
