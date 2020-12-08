@@ -2,8 +2,12 @@
 layout: post
 title: DevCon 2020 By The Numbers
 date: August 03, 2020
-author: Scott
+id: 20200803-devcon2020bythenumbers
+author: Scott Hurrey
+toc: false
 ---
+
+# DevCon 2020 by the numbers!
 
 DevCon 2020 is in the books, and what an amazing conference it was. This blog will start a weekly series in which everything Thursday, we will talk about DevCon from a content perspective. To begin this series, I want to set some context about the scope of this conference, so you, the reader, will have a baseline to base your opinions from. 
 
@@ -26,15 +30,15 @@ We also issued 6.6 badges per active attendee programmatically through Badgr. Th
 
 Speaking of insights, let's take a look at a few that show how users interacted with the content provided:
 
-![Attendance by Session and Region](/images/attendanceBySessionAndRegion.png "Attendance by Session and Region")
+![Attendance by Session and Region](/assets/img/blogs-devcon-numbers-1.png "Attendance by Session and Region")
 
-![Registration by Country](/images/AttendanceByCountry.png "Registration by Country")
+![Registration by Country](/assets/img/blogs-devcon-numbers-2.png "Registration by Country")
 
-![Collaborate Minutes By Day](/images/CollabByDay.png "Collaborate Minutes By Day")
+![Collaborate Minutes By Day](/assets/img/blogs-devcon-numbers-3.png "Collaborate Minutes By Day")
 
-![Recording Views and Downloads](/images/RecordingViewsAndDownloads.png "Recording Views and Downloads")
+![Recording Views and Downloads](/assets/img/blogs-devcon-numbers-4.png "Recording Views and Downloads")
 
-![Final Leaderboard](/images/FinalLeaderboard.png "Final Leaderboard")
+![Final Leaderboard](/assets/img/blogs-devcon-numbers-5.png "Final Leaderboard")
 
 Numbers and charts are cool, but what really matters from a DevCon perspective, is the experience of the attendees. Here are a few quotes that I think sum up the DevCon 2020 experience more that any statistic or chart can:
 

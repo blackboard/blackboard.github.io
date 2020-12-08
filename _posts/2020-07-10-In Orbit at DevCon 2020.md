@@ -2,8 +2,11 @@
 layout: post
 title: In Orbit at DevCon 2020
 date: July 10, 2020
-author: Scott
+author: Scott Hurrey
+id: 20200710-inorbitatdevcon2020
 ---
+# In Orbit at DevCon 2020
+
 DevCon 2020 kicked off in full force this week with clients, partners and Blackboarders around the world coming together in Blackboard Learn Ultra to network, share knowledge, and dig deeper into Blackboard tech.
 
 We’ve had a record number of people at DevCon with 2,273 attendees logging in from 973 institutions and 43 countries throughout the week. We also had some amazing content, delivered all over the world. 
