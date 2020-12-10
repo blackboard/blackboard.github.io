@@ -1,19 +1,85 @@
-<div id='top-content' class="primary_header">
-    <div id="header" class='header-min-width'>
-        <div id="header-logos" class="header-logos">
-            <div id="header-logos-left-container" class='inline-box-left'>
-                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a><span class="header-devdocs">  Dev Docs</span>
-            </div>
-            <div id="header-logos-left-container" class='inline-box-center'>
-                <a id="bb-home-logo-link" href="http://www.blackboard.com" target="_blank"><img class="bb-home-logo-image" src="https://developer.blackboard.com/assets/images/bb_logo_subpages.png" alt="Blackboard"/></a>
-                <span class="header-devdocs"><br />Dev Docs</span>
-            </div>
-            <div id="header-logos-right-container" class='inline-box-right'>
-                {% for item in site.data.top-right %}
-                    <a href="{{ item.link }}" >{{ item.name }}</a>
-                {% endfor %}
-            </div>
-            <br class="clearBoth"/>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>{{ page.title }}</title>
+
+    <!-- Search --> 
+
+    {% if page.tipue_search_active or layout.tipue_search_active %}
+        <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/normalize.css" | relative_url }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+        <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
+        <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+        <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+    {% else %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    {% endif %}
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
+    <script>
+        var pageCategory = "#{{ page.id }}";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "{{ page.toc }}";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>

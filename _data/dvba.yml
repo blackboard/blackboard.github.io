@@ -1,9 +1,0 @@
-- name: DVBA Home
-  link: /dvba/What%20is%20a%20DVBA%3F.html
-  parentId: dvba
-- name: Developer AMI
-  link: /dvba/Using%20the%20Blackboard%20Learn%20AMI%20for%20REST%20and%20LTI%20Development.html
-  parentId: dvba
-- name: DVM
-  link: /dvba/Developer%20Virtual%20Machine%20-%20DVM.html
-  parentId: dvba

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>BbML</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
+    <script>
+        var pageCategory = "#learn-rest-advanced-bbml";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                            <li class="content" id="DBVA-dev-ami"><a href="/dvba/developer-ami" target="_self" >Development Test Site</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="blackboard-markup-language-bbml">Blackboard Markup Language BbML</h1>
+
+<h3 id="overview">Overview</h3>
+
+<p>BbML is a subset of HTML. The parameters of some methods accept BbML-formatted
+text. For more information about particular Learn REST endpoints, see the
+<a href="https://developer.blackboard.com/portal/displayApi" target="_blank">REST API documentation</a></p>
+
+<h3 id="bbml-specification---version-1">BbML specification - version 1</h3>
+
+<p>A BbML field accepts text containing either:</p>
+
+<ul>
+  <li>Ultra experience courses: BbML</li>
+  <li>Original experience: safe HTML</li>
+  <li>Either experience outside of the context of courses: safe HTML</li>
+</ul>
+
+<p>Valid BbML uses only following HTML elements and only the attributes accepted
+for each element. You can use attributes marked <em>Internal use only</em> as part of
+a REST API GET method when you are patching/updating an existing resource. Do
+not use them to create a resource from scratch.</p>
+
+<ul>
+  <li>a</li>
+  <li>br</li>
+  <li>del</li>
+  <li>div</li>
+  <li>em</li>
+  <li>h4</li>
+  <li>h5</li>
+  <li>h6</li>
+  <li>img</li>
+  <li>li</li>
+  <li>ol</li>
+  <li>p</li>
+  <li>span</li>
+  <li>strong</li>
+  <li>sub</li>
+  <li>sup</li>
+  <li>ul</li>
+</ul>
+
+<p>For more information about each accepted element, see below.</p>
+
+<h5 id="a">a</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data-bbid</td>
+      <td><strong>Deprecated</strong> Internal use only.</td>
+    </tr>
+    <tr>
+      <td>data-bbfile</td>
+      <td>Rendering control for use with Ultra UI. <code class="language-plaintext highlighter-rouge">data-bbfile="{&amp;quot;render&amp;quot;:&amp;quot;inline&amp;quot;,&amp;quot;linkName&amp;quot;:&amp;quot;1.jpg&amp;quot;,&amp;quot;mimeType&amp;quot;:&amp;quot;image/jpeg&amp;quot;}"</code></td>
+    </tr>
+    <tr>
+      <td>data-bbtype</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>data-mce-href</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>href</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>rel[nofollow]</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="br">br</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data-mce-bogus</td>
+      <td>Internal use only.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="del">del</h5>
+
+<h5 id="div">div</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data-bbid</td>
+      <td>Internal use only.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="em">em</h5>
+
+<h5 id="h4">h4</h5>
+
+<h5 id="h5">h5</h5>
+
+<h5 id="h6">h6</h5>
+
+<h5 id="img">img</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>align</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>alt</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>data-mathml</td>
+      <td>MathML from which the image was created if applicable.</td>
+    </tr>
+    <tr>
+      <td>data-mce-src</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>src</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="li">li</h5>
+
+<h5 id="ol">ol</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data-mce-style</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>style[list-style-type: *]</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="p">p</h5>
+
+<h5 id="span">span</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data-mce-bogus</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>data-mce-style</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>style[font-style: <em>,font-weight: *,text-decoration:</em>]</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="strong">strong</h5>
+
+<h5 id="sub">sub</h5>
+
+<h5 id="sup">sup</h5>
+
+<h5 id="ul">ul</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data-mce-style</td>
+      <td>Internal use only.</td>
+    </tr>
+    <tr>
+      <td>style[list-style-type: *]</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="examples">Examples</h3>
+
+<p>If one were to use the following as the input to a BbML field of a resource
+within an Ultra course context, such as an Ultra Document:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- {"bbMLEditorVersion":1} --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">data-bbid=</span><span class="s">"bbml-editor-id_9c6a9556-80a5-496c-b10d-af2a9ab22d45"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;h2&gt;</span>Header Large<span class="nt">&lt;/h2&gt;</span>
+
+  <span class="nt">&lt;h5&gt;</span>Header Medium<span class="nt">&lt;/h5&gt;</span>
+
+  <span class="nt">&lt;h6&gt;</span>Header Small<span class="nt">&lt;/h6&gt;</span>
+
+  <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Bold <span class="nt">&lt;/strong&gt;&lt;em&gt;</span>Italic <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"text-decoration:
+  underline;"</span><span class="nt">&gt;</span>Italic Underline<span class="nt">&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;</span>
+
+  <span class="nt">&lt;ul&gt;</span>
+
+  <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">style=</span><span class="s">"text-decoration: underline;"</span><span class="nt">&gt;&lt;em&gt;&lt;/em&gt;&lt;/span&gt;</span>Bullet 1<span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li&gt;</span>Bullet 2<span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span> <span class="nt">&lt;img&gt;</span> <span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;&lt;span&gt;</span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  laboris."<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;&lt;span&gt;</span><span class="ni">&amp;lt;</span>braces test="values" other="encoded values"<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Header Small<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;ol&gt;</span>
+
+  <span class="nt">&lt;li&gt;</span>Number 1<span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;li&gt;</span>Number 2<span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;/ol&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Just words followed by a formula <span class="nt">&lt;img</span> <span class="na">align=</span><span class="s">"middle"</span> <span class="na">alt=</span><span class="s">"3 divided by 4 2
+  root of 7"</span> <span class="na">class=</span><span class="s">"Wirisformula"</span>
+
+  <span class="na">data-mathml=</span><span class="s">"Â«math
+
+  xmlns=Â¨[http://www.w3.org/1998/Math/MathMLÂ¨Â»Â«mnÂ»3Â«/mnÂ»Â«moÂ»/Â«/moÂ»Â«m
+  nÂ»4Â«/mnÂ»Â«mrootÂ»Â«mnÂ»7Â«/mnÂ»Â«mnÂ»2Â«/mnÂ»Â«
+
+  /mrootÂ»Â«/mathÂ»](https://community.blackboard.com/external-link.jspa?url=htt
+  p%3A//www.w3.org/1998/Math/MathML%25C2%25A8%25C2%25BB%25C2%25ABmn%25
+  C2%25BB3%25C2%25AB/mn%25C2%25BB%25C2%25ABmo%25C2%25BB/%25C2%25AB/mo%25C2
+  %25BB%25C2%25ABmn%25C2%25BB4%25C2%25AB/mn%25C2%25BB%25C2%25ABmroot%25C2%25BB
+  %25C2%25ABmn%25C2%25BB7%25C2%25AB/mn%25C2%25BB%25C2%25ABmn%25C2%25BB2%25C2%2
+  5AB/mn%25C2%25BB%25C2%25AB/mroot%25C2%25BB%25C2%25AB/math%25C2%25BB)"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"[http://www.blackboard.com](https://community.blackboard.com/external-
+  link.jspa?url=http%3A//www.blackboard.com/)"</span><span class="nt">&gt;</span>Blackboard<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="render">Render</h3>
+
+<p>It would render as follows in Ultra UI:</p>
+
+<p><img src="/assets/img/bbmlrender.png" alt="BbMLrender.png" /></p>
+
+<h3 id="uploaded-files">Uploaded files</h3>
+
+<p>When creating content using the Learn Public REST API, it is expected that any
+related file content be uploaded prior to creation. Uploading files can be
+done using the upload file endpoint documented at
+https://developer.blackboard.com/portal/displayApi</p>
+
+<p>Once a file has been uploaded, the upload file endpoint will have provided an
+Id which will be used to reference the associated file.</p>
+
+<p>Using the upload file id withing the Learn Public REST API, any BbML anchor
+tag href attribute can be used to associate the uploaded file using the
+following notation:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"bbupload://&lt;uploadFileId&gt;"</span><span class="nt">&gt;</span>filename.ext<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>For proper formatting and rendering within the ULTRA environment, it is
+recommened to also include a data-bbfile attribute. An example value of this
+can be seen above in the BbML specification section. However, to describe it a
+bit more, the data-bbfile attribute’s value is an HTML encoded json string:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTML encoded: `{"render":"inline","linkName":"1.jpg","mimeType":"image/jpeg"}`<span class="nt">&lt;br/&gt;</span>
+HTML decoded: `{"render":"inline","linkName":"filename.ext","mimeType":"image/jpeg"}`
+</code></pre></div></div>
+
+<ul>
+  <li>render: At this time, it is recommended to only use ‘inline.’</li>
+  <li>linkName: The filename of the uploaded file.</li>
+  <li>mimeType: The MIME type of the uploaded file.`</li>
+</ul>
+
+<p>The end result of all this would be as follows:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"bbupload://&lt;uploadFileId&gt;"</span> <span class="na">data-bbfile=</span><span class="s">"{&amp;quot;render&amp;quot;:&amp;quot;inline&amp;quot;,&amp;quot;linkName&amp;quot;:&amp;quot;filename.ext&amp;quot;,&amp;quot;mimeType&amp;quot;:&amp;quot;image/jpeg&amp;quot;}"</span><span class="nt">&gt;</span>  
+         filename.ext  
+    <span class="nt">&lt;/a&gt;</span>  
+</code></pre></div></div>
+
+<h3 id="file-type-documentation">File Type Documentation</h3>
+
+<p>The editor recognizes the following values for data-bbfile, with the arguments
+it accepts for data-bbtype. For each plugin, the bbml element is given
+(usually <code class="language-plaintext highlighter-rouge">a</code>); the value of <code class="language-plaintext highlighter-rouge">data-bbtype</code> which selects that plugin; and the
+fields of <code class="language-plaintext highlighter-rouge">data-bbfile</code> which are expected. (<code class="language-plaintext highlighter-rouge">data-bbfile</code> is a JSON-encoded
+object.)</p>
+
+<p>For example, for the Attachment plugin, the generated bbml is as follows
+(minus unneccessary whitespace I’ve added for easy viewing):</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://ultra-integ.int.bbpd.io/bbcswebdav/pid-486306-dt-content-rid-13383141_1/xid-13383141_1"</span> 
+  <span class="na">data-bbtype=</span><span class="s">"attachment"</span> 
+  <span class="na">data-bbfile=</span><span class="s">"{&amp;quot;extension&amp;quot;:&amp;quot;pdf&amp;quot;,&amp;quot;linkName&amp;quot;:&amp;quot;1-23MB&amp;quot;,&amp;quot;render&amp;quot;:&amp;quot;inline&amp;quot;,&amp;quot;alternativeText&amp;quot;:&amp;quot;1-23MB.pdf&amp;quot;,&amp;quot;mimeType&amp;quot;:&amp;quot;application/pdf&amp;quot;,&amp;quot;isDecorative&amp;quot;:false"</span><span class="nt">&gt;</span> 
+    1-23MB 
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>Tags without a <code class="language-plaintext highlighter-rouge">data-bbfile</code> attribute, or with an unrecognized value for
+<code class="language-plaintext highlighter-rouge">data-bbfile</code>, are displayed normally.</p>
+
+<hr />
+
+<p><strong>Plugin Name</strong>: Attachment <br />
+<strong>element</strong>: <code class="language-plaintext highlighter-rouge">&lt;a href="${link}"&gt;</code> <br />
+<strong>data-bbtype</strong>: <code class="language-plaintext highlighter-rouge">attachment</code> <br />
+<strong>data-bbfile</strong>:</p>
+
+<ul>
+  <li><strong>linkName</strong> - the name of the file</li>
+  <li><strong>render</strong> -
+    <ul>
+      <li>“inline” to render images/video/audio/etc inline</li>
+      <li>“attachment” to show as a block</li>
+    </ul>
+  </li>
+  <li><strong>alternativeText</strong> - alt text for accessibility</li>
+  <li><strong>mimeType</strong> - the mime type of the file</li>
+  <li><strong>isDecorative</strong> - a flag indicating whether the image is decorative. Currently always false for images generated in Ultra.</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+
+<ol>
+  <li>The <code class="language-plaintext highlighter-rouge">href</code> attribute is the download url for the document.</li>
+  <li>Attachments can be add from the local file system or the cloud (via Kloudless). After the item has been added, there is no way of distinguishing this.</li>
+  <li>Attachments, whether displayed inline or not, are full-width.</li>
+</ol>
+
+<hr />
+
+<p><strong>Plugin Name</strong>: Block Images<br />
+<strong>element</strong>: <code class="language-plaintext highlighter-rouge">&lt;a href="${src}"&gt;</code><br />
+<strong>data-bbtype</strong>: <code class="language-plaintext highlighter-rouge">image</code><br />
+<strong>data-bbfile</strong>: <code class="language-plaintext highlighter-rouge">alt</code> - the image alt text</p>
+
+<p>Notes:</p>
+
+<ol>
+  <li>Displays an image as a full-width block (instead of inline.)</li>
+  <li>All images generated by Ultra are full-width blocks, but images converted from Learn are regular <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> elements.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">href</code> attribute in the bbml tag becomes the <code class="language-plaintext highlighter-rouge">src</code> attribute of the <code class="language-plaintext highlighter-rouge">img</code> tag.</li>
+  <li>Mathml images (as generated by Wiris) are regular <code class="language-plaintext highlighter-rouge">img</code> elements that have the <code class="language-plaintext highlighter-rouge">data-mathml</code> attribute. It is beyond the scope of this document to describe the wiris service; however, no additional processing beyond that of a regular <code class="language-plaintext highlighter-rouge">img</code> tag is required to render mathml images.</li>
+</ol>
+
+<hr />
+
+<p><strong>Plugin Name</strong>: Custom Class<br />
+<strong>element</strong>: <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code><br />
+<strong>data-bbtype</strong>: <code class="language-plaintext highlighter-rouge">customClass</code><br />
+<strong>data-bbfile</strong>: <code class="language-plaintext highlighter-rouge">className</code></p>
+
+<p><strong>Notes:</strong></p>
+
+<ol>
+  <li>Transforms into <code class="language-plaintext highlighter-rouge">&lt;span class="${className}"&gt;</code>.</li>
+  <li>This type will never be encountered in saved bbml; it is generated at runtime to modify the editor display.</li>
+</ol>
+
+<hr />
+
+<p><strong>Plugin Name</strong>: Embedded Video<br />
+<strong>element</strong>: <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code><br />
+<strong>data-bbtype</strong>: <code class="language-plaintext highlighter-rouge">video</code><br />
+<strong>data-bbfile</strong>: <code class="language-plaintext highlighter-rouge">src</code> - The link for the embedded video</p>
+
+<p><strong>Notes:</strong></p>
+
+<ol>
+  <li>Links to an embedded video from Youtube or Video which is shown in an iframe.</li>
+  <li>Only links from Youtube or Vimeo are allowed.</li>
+</ol>
+
+<hr />
+
+<p><strong>Plugin Name</strong>: LTI Content Market<br />
+<strong>element</strong>: <code class="language-plaintext highlighter-rouge">a</code><br />
+<strong>data-bbtype</strong>: <code class="language-plaintext highlighter-rouge">lti</code><br />
+<strong>data-bbfile</strong>:<code class="language-plaintext highlighter-rouge">Placement</code></p>
+
+<ul>
+  <li><strong>linkType</strong> - ‘resource/x-bb-bltiplacement’</li>
+  <li><strong>linkRefId</strong> - The PK of the placement record</li>
+  <li><strong>Partner Cloud</strong>
+    <ul>
+      <li>“linkType” - ‘resource/x-bbgs-partner-cloud’</li>
+      <li>“linkRefId” - The partner tool ID. Usually some concatenation of partner ID + the tool ID</li>
+    </ul>
+  </li>
+  <li><strong>LTI Link</strong>
+    <ul>
+      <li>“linkType” - ‘resource/x-bb-blti-link’</li>
+      <li>“linkRefId” - The PK of the parent IMS Deep Linking placement. Used to look up key/secret at launch</li>
+      <li>“url” - LTI Tool Url</li>
+      <li>“launchInNewWindow” - Whether to launch in an iframe or new window</li>
+      <li>“customParameters” - Custom parameters to pass with the launch as JSON</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+
+<ol>
+  <li>It is beyond the scope of this document to describe LTI links.</li>
+</ol>
+
+<hr />
+
+<p><strong>Plugin Name</strong>: Video Everywhere (aka Collab Integration; aka Collab Video; aka Video Integration)<br />
+<strong>element</strong>: <code class="language-plaintext highlighter-rouge">&lt;img title="description" alt="alt text"&gt;</code><br />
+<strong>data-bbtype</strong>: <code class="language-plaintext highlighter-rouge">collab_video</code><br />
+<strong>data-bbfile</strong>: <code class="language-plaintext highlighter-rouge">video_uuid</code> - The uuid of the collab video.</p>
+
+<p><strong>Notes:</strong></p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">src</code> is a relative image link returned by the collab service.</li>
+  <li><code class="language-plaintext highlighter-rouge">title</code> is the description of the video.</li>
+  <li><code class="language-plaintext highlighter-rouge">alt</code> is the alt text of the image.</li>
+  <li>It is beyond the scope of this document to describe the collab service api.</li>
+</ol>
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#bbml-specification---version-1">BbML specification - version 1</a></li>
+  <li><a href="#examples">Examples</a></li>
+  <li><a href="#render">Render</a></li>
+  <li><a href="#uploaded-files">Uploaded files</a></li>
+  <li><a href="#file-type-documentation">File Type Documentation</a></li>
+</ul>
+
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard Dev Docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick API Access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and Conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

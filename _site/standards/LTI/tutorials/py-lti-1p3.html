@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>pyLTI1p3</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
+    <script>
+        var pageCategory = "#standards-lti-tutorials-pylti1p3";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                            <li class="content" id="DBVA-dev-ami"><a href="/dvba/developer-ami" target="_self" >Development Test Site</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="using-the-pylti1p3-library-with-blackboard-learn">Using the pyLTI1p3 Library with Blackboard Learn</h1>
+<p>LTI 1.3 is a much better, much more secure option for integrating one application with another in a standard way. Python is an industry-standard language and is in use by many Blackboard institutions for building integrations. The purpose of this document is to demonstrate how to use the <a href="https://pypi.org/project/PyLTI1p3">pyLTI1p3</a> library, built by <a href="https://github.com/dmitry-viskov">Dmitry Viskov</a> to easily integrate a Python application with Blackboard Learn’s Ultra Experience. For the purposes of this demonstration, we will use Dmitry’s <a href="https://github.com/dmitry-viskov/pylti1.3-flask-example">pylti1.3 flask example</a>.</p>
+
+<h3 id="about-the-project">About The Project</h3>
+<p>The Flask sample is a simple way to test all of the LTI Advantage capabilities of any platform that supports it. Essentially, the application is a brick breaker type game. It uses a basic launch to load the game. It uses the Names and Roles Provisioning Service to load a leaderboard, it uses the Assignments and Grades Service to save your score, and you can use Deeplinking to create links to the game with varying degrees of difficulty. Best of all, with a few minor configuration changes, this project works with Blackboard Learn out of the box!</p>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>As with any project, the first step is to clone the project to your local desktop. To do this, simply open a terminal, navigate to the directory you wish to clone the application to, and type <code class="language-plaintext highlighter-rouge">git clone https://github.com/dmitry-viskov/pylti1.3-flask-example.git</code>. If you are interested in making changes, you should fork the repo to your own account, and clone from there.</p>
+
+<h3 id="setting-up-learn">Setting Up Learn</h3>
+
+<p>Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the <a href="https://developer.blackboard.com">developer portal</a>. For more information on this process, check out this <a href="/learn/REST/registry">document</a>. Once you have an account set up, you can simply register a new application. You will be prompted to enter several pieces of information. For this project, here is what we need to enter:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Application Name</td>
+      <td>You can enter anything you like, but this name will display in Learn</td>
+      <td><code class="language-plaintext highlighter-rouge">Py LTI 1.3 Game</code></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>This is a free-form field. You can enter anything you like.</td>
+      <td><code class="language-plaintext highlighter-rouge">A brick-breaker-style game written by Dmitry Viskov to demonstrate LTI Advantage in Python</code></td>
+    </tr>
+    <tr>
+      <td>Domain(s)</td>
+      <td>This should be the domain you plan to host the tool from. We use heroku, in our example. This requires some additional code changes, documented <a href="#using-heroku">here</a></td>
+      <td><code class="language-plaintext highlighter-rouge">pylti1p3-game.herokuapp.com</code></td>
+    </tr>
+    <tr>
+      <td>Login Initiation URL</td>
+      <td>This is the URL that Learn will use to launch into your application to begin the OIDCLogin process</td>
+      <td><code class="language-plaintext highlighter-rouge">https:pylti1p3-game.herokuapp.com/login/</code></td>
+    </tr>
+    <tr>
+      <td>Tool Redirect URL(s)</td>
+      <td>The URL to redirect to upon successful completion of the OIDCLogin</td>
+      <td><code class="language-plaintext highlighter-rouge">https:pylti1p3-game.herokuapp.com/launch/</code></td>
+    </tr>
+    <tr>
+      <td>Tool JWKS URL</td>
+      <td>The publicly accessible URL to the tools public key. We do not use this in this project, so we will leave it blank and let the portal generate our private key</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Signing Algorithm</td>
+      <td>The cryptographic algorith used to sign the JWT. Leave this as RS256</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Group</td>
+      <td>The developer group to associate with the integration. Here is more information on <a href="/learn/rest/groups-quotas-rates">groups</a></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Once you fill out this form, click the <code class="language-plaintext highlighter-rouge">Register application and generate API key</code> button and you will be prompted with several pieces of information. You will only see this once, so make sure you save the data somewhere.</p>
+
+<p>Now that we have our application registered, we have to tell our Learn instance that we have an application we want to integrate. To do this, you will need adminstrator privileges. Navigate to your Learn server in your browser and login as an appropriate user. Click the <code class="language-plaintext highlighter-rouge">Admin</code> link in the Ultra Base Navigation to access the System Administrator panel. In the <code class="language-plaintext highlighter-rouge">Integrations</code> module, click the link for <code class="language-plaintext highlighter-rouge">LTI Tool Providers</code>. Then in the menu bar, click <code class="language-plaintext highlighter-rouge">Register LTI 1.3 Tool</code>. You are prompted for a client_id. In the data you received from the developer portal, there was an application ID. In LTI, this is your client ID, and we will need it here. Paste in your Client ID and click submit. Learn will reach out to the Developer Portal, verify your client ID and then display a form with all of the settings available. Many of these settings are read-only. We need to save the <em>Deployment ID</em>, make sure the tool is marked as ‘Approved’, and be sure to enable memberships and posting of grades. Then click submit.</p>
+
+<p>Our game is now installed in Blackboard Learn!</p>
+
+<p>We have one more step to go. Once you submit the form, you will be taken to a page that displays your installed LTI Tools. Next to the name of your game, click the triangle icon to launch the context menu and select <code class="language-plaintext highlighter-rouge">Manage Placements</code>. You will see a screen similar to your list of LTI Tools. In the menu, click the button to <code class="language-plaintext highlighter-rouge">Create Placement</code>. In the <code class="language-plaintext highlighter-rouge">label</code> field, give the placement a name that you want to display to the instructor. in the <code class="language-plaintext highlighter-rouge">handle</code> field, give it a unique name, such as <code class="language-plaintext highlighter-rouge">pylti1p3-deeplinking</code>. Ensure <code class="language-plaintext highlighter-rouge">Availability</code> is set to ‘Yes’. Under <code class="language-plaintext highlighter-rouge">Type</code>, select <em>Course content tool</em> and be sure to check <em>Supports deep linking</em>. Under <code class="language-plaintext highlighter-rouge">Tool Provider URL</code>, enter the launch URL to your tool. In our case it is <code class="language-plaintext highlighter-rouge">https://pylti1p3-game.herokuapp.com/launch/</code>. Now click Submit, and we are ready to use the tool in Blackboard Learn.</p>
+
+<h3 id="setting-up-the-tool">Setting Up The Tool</h3>
+
+<p>There are three files we need to modify in our tool in order to run it. In the repository you cloned to your desktop, you will see a configs directory. In <code class="language-plaintext highlighter-rouge">game.json</code>, you will already see a section for Blackboard. It will look like this:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"https://blackboard.com"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your client id"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"auth_login_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://developer.blackboard.com/api/v1/gateway/oidcauth"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"auth_token_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://developer.blackboard.com/api/v1/gateway/oauth2/jwttoken"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key_set_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://developer.blackboard.com/api/v1/management/applications/&lt;your client id&gt;/jwks.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key_set"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"private_key_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"private.key"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deployment_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"your deployment id"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The Blackboard URL is the <em>Issuer</em> sent in the LTI launch JWT. This is always the value in Blackboard Learn. The value for <code class="language-plaintext highlighter-rouge">client_id</code> should be set to your client ID (application ID from the Developer Portal). The <code class="language-plaintext highlighter-rouge">auth_login_url</code> and <code class="language-plaintext highlighter-rouge">auth_token_url</code> settings are always the same, and do not need to be changed. The <code class="language-plaintext highlighter-rouge">key_set_url</code> is always the same, as well, though it contains your client ID, so you will need to replace <code class="language-plaintext highlighter-rouge">&lt;your client id&gt;</code> with, you guessed it, your client ID. The <em>deployment ID</em> that you received when you registered your tool in learn goes in the <code class="language-plaintext highlighter-rouge">deployment_ids</code> setting. Save this file.</p>
+
+<p>The next file we need to modify is the <code class="language-plaintext highlighter-rouge">private.key</code> file, also in the configs directory. Delete the current contents, and paste the private key you received when you registered your application in the developer portal. Don’t worry, we don’t store this. It is generated, displayed to you at registration, and then it is gone. Save this file.</p>
+
+<p>Now we just have to make a small edit to the game/app.js file. Towards the top, you will see a section that looks like this:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">config</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"DEBUG"</span><span class="p">:</span><span class="w"> </span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ENV"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"CACHE_TYPE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"CACHE_DEFAULT_TIMEOUT"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SECRET_KEY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace-me"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SESSION_TYPE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"filesystem"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SESSION_FILE_DIR"</span><span class="p">:</span><span class="w"> </span><span class="err">mkdtemp()</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SESSION_COOKIE_NAME"</span><span class="p">:</span><span class="w"> </span><span class="s2">"flask-session-id"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SESSION_COOKIE_HTTPONLY"</span><span class="p">:</span><span class="w"> </span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"SESSION_COOKIE_SECURE"</span><span class="p">:</span><span class="w"> </span><span class="err">False</span><span class="p">,</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="err">should</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">True</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">case</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">HTTPS</span><span class="w"> </span><span class="err">usage</span><span class="w"> </span><span class="err">(production)</span><span class="w">
+    </span><span class="nl">"SESSION_COOKIE_SAMESITE"</span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="err">should</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">'None'</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">case</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">HTTPS</span><span class="w"> </span><span class="err">usage</span><span class="w"> </span><span class="err">(production)</span><span class="w">
+    </span><span class="nl">"APPEND_TIMEZONE"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">False</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="err">Must</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">Blackboard</span><span class="w"> </span><span class="err">Learn</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Blackboard Learn requires the timezone to be set in timestamps through both LTI and REST APIs. As a result, we must set <code class="language-plaintext highlighter-rouge">APPEND_TIMEZONE</code> equal to <em>True</em>. Now save the file.</p>
+
+<p>We are now ready to run our code! The final step is to deploy the Game application to the server it will run on and run <code class="language-plaintext highlighter-rouge">python game/app.js</code>.</p>
+
+<h3 id="using-heroku">Using Heroku</h3>
+
+<p>If you are planning to run this on Heroku, there are a few additional changes that need to be made before you deploy your code. First, Heroku needs to know what to do when your code is committed. Enter <code class="language-plaintext highlighter-rouge">Procfile</code>. Simply createa file named <code class="language-plaintext highlighter-rouge">Procfile</code> at the root level of the game, and in it place:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">web</span><span class="p">:</span> <span class="n">python</span> <span class="n">game</span><span class="o">/</span><span class="n">app</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div></div>
+
+<p>Now save this file.</p>
+
+<p>Next, open up game/app.js. At the very bottom of the page, you will see an entry that looks like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9017</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Heroku controls the ports that your application runs on, and setting it incorrectly renders your application useless. Furthermore, it can change from deploy-to-deploy. As such, we need to pull the port number from environment variables. To do so, replace the code above with the code below:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'PORT'</span><span class="p">,</span> <span class="mi">33507</span><span class="p">))</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Lastly, app.js is in the game directory rather than the root directory, so we need to make a few small adjustments. Towards the top (around line 27), you will see the Flask app being initialized:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="s">'pylti1p3-game-example'</span><span class="p">,</span> <span class="n">template_folder</span><span class="o">=</span><span class="s">'templates'</span><span class="p">,</span> <span class="n">static_folder</span><span class="o">=</span><span class="s">'static'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>We need to account for the directory we are running in, and add the path to this declaration:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="s">'pylti1p3-game-example'</span><span class="p">,</span> <span class="n">template_folder</span><span class="o">=</span><span class="s">'game/templates'</span><span class="p">,</span> <span class="n">static_folder</span><span class="o">=</span><span class="s">'game/static'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>And finally, we need to make sure our application can find the LTI configuration file. Around line 65, you will see a method called <code class="language-plaintext highlighter-rouge">get_lti_config_path</code> and it will look like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_lti_config_path</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">root_path</span><span class="p">,</span> <span class="s">'..'</span><span class="p">,</span> <span class="s">'configs'</span><span class="p">,</span> <span class="s">'game.json'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Make it look like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_lti_config_path</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">root_path</span><span class="p">,</span> <span class="s">'configs'</span><span class="p">,</span> <span class="s">'game.json'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>And that’s it. You can now check in your code to your Heroku dyno - <code class="language-plaintext highlighter-rouge">git push -u heroku master</code> - and Heroku will build and run your application. Once its complete, you can run <code class="language-plaintext highlighter-rouge">heroku logs --tail</code> to see the communication between Learn and our game.</p>
+
+<h2 id="running-the-game-from-learn">Running The Game From Learn</h2>
+
+<p>Now that all of the setup is done, we are ready to play our game. As a user in a course with Instructor privileges, login to Blackboard and navigate to your Ultra course. In the left-hand navigation, you will see a link to <code class="language-plaintext highlighter-rouge">View course &amp; institution tools</code>. Click this link. In teh corresponding peek panel, click the link to <code class="language-plaintext highlighter-rouge">Browse all course tools</code>. Under the <em>Institution Tools</em> header, you will find the placement we created. It will be listed under the <code class="language-plaintext highlighter-rouge">label</code> you defined when creating the placement. Click this link, and you will be launched via LTI to a simple form that allows you to select the difficulty of the game you wish to play. Click the button for your selected difficulty, and the tool will automatically create a link to the game with the selected difficulty in your course outline.</p>
+
+<blockquote>
+  <p><strong>NOTE</strong>: If you selected ‘Launch in a new window’ when you created the placement, you will have to refresh the course outline before you will see the content item.</p>
+</blockquote>
+
+<p>You should now have a content item called <code class="language-plaintext highlighter-rouge">Breakout &lt;your selected difficulty&gt; mode!</code>.</p>
+
+<h4 id="click-it-to-play">Click it to play!</h4>
+
+<p>In the background, the tool uses the Names and Roles Provisioning service to create a leaderboard with the course members. Further, it uses the Assignments and Grades Service to store your latest score. Pretty fancy, right?</p>
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul>
+  <li><a href="#about-the-project">About The Project</a></li>
+  <li><a href="#setting-up-learn">Setting Up Learn</a></li>
+  <li><a href="#setting-up-the-tool">Setting Up The Tool</a></li>
+  <li><a href="#using-heroku">Using Heroku</a></li>
+</ul>
+
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard Dev Docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick API Access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and Conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

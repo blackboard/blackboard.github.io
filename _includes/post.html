@@ -1,0 +1,65 @@
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            {% for main in site.data.menu %}
+                <li class="first-level" id="{{ main.id }}" ><a href="#"><i class="material-icons">{{ main.main_item_icon }}</i>{{ main.main_item }}</a>
+                    <ul>
+                    {% if main.type == "menu" %}
+                        {% for maincontent in main.sub_item  %}
+                            <li class="second-level" id="{{ maincontent.id }}" ><a href="{{ maincontent.submenu_url }}">{{ maincontent.submenu_item }}</a>
+                                <ul>
+                                {% for items in maincontent.subsubmenu %}
+                                    <li class="third-level" id="{{ items.id }}"><a href="{{ items.subsubmenu_url }}">{{ items.subsubmenu_item }}</a>
+                                        <ul>
+                                            {% for fourthlevelitem in items.subsubmenu_content %}
+                                            <li class="content" id="{{ fourthlevelitem.id }}"><a href="{{ fourthlevelitem.subsubmenu_content_url }}" target="{{ fourthlevelitem.target }}" >{{ fourthlevelitem.subsubmenu_content_name: }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                            {% for maincontent in main.sub_item  %}
+                            <li class="content" id="{{ maincontent.id }}" ><a href="{{ maincontent.submenu_url }}">{{ maincontent.submenu_item }}</a></li>
+                            {% endfor %}
+                    {% endif%}
+                    </ul>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    {% if page.status == "deprecated" %}
+        <div class="deprecatedPage">
+            <div class="valign-wrapper">
+                <i class="medium material-icons">warning</i>
+                <p>This page is deprecated</p> 
+            </div>
+        </div>
+    {% elsif page.status == "draft"  %}
+        <div class="draftPage">
+            <div class="valign-wrapper">
+                <i class="medium material-icons">announcement</i>
+                <p>This page is a Draft, its content may change </p> 
+            </div>
+        </div>
+    {% endif %}
+            <main id="maincontent">
+                {{ content }}
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                {% include toc.html html=content h_min=2 h_max=3 %}
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>

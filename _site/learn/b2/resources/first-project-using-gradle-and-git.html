@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>First Project: Gradle, Git and b2-starter-template</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
+    <script>
+        var pageCategory = "#learn-b2-resources-first-project-gradle";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                            <li class="content" id="DBVA-dev-ami"><a href="/dvba/developer-ami" target="_self" >Development Test Site</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="first-project-gradle-git-and-b2-starter-template">First Project: Gradle, Git and b2-starter-template</h1>
+
+<p>After setting up the development workstation as described in the Development
+Workstation topic you may now build your first project based on the Blackboard
+basic-b2-template and gradle build environment.</p>
+
+<h2 id="start-a-gradle-based-project">Start a Gradle Based Project</h2>
+
+<p>In this step you will download the Blackboard provided project template, copy
+it to a new project directory named after your project, configure the template
+to reflect your project requirements by editing the build and bb-manifest.xml
+files.</p>
+
+<h3 id="git-the-basic-b2-template">‘GIT’ the basic-b2-template</h3>
+
+<p>Blackboard provides a gradle-based template for Building Block development
+which is accessible from the Blackboard GitHub project repository:</p>
+
+<p><a href="https://github.com/blackboard/basic-b2-template">https://github.com/blackboard/basic-b2-template</a></p>
+
+<p>There are several ways which you may access the basic-b2-template. Notably:</p>
+
+<ul>
+  <li>Download a zip file – this works fine if you do not have GIT installed and is available via a link on the project page.</li>
+  <li>Clone the project to your desktop via the GitHub website via a link on the project page.</li>
+  <li>Use the GIT command-line tools to clone and rename the project.</li>
+  <li>In the case of the first two you have to manually copy/rename the directory to reflect your project name. The third approach, the GIT command-line is what is used in this tutorial - note this requires that you have installed GIT on your development workstation.</li>
+</ul>
+
+<h4 id="using-git-command-line-tools">Using GIT command-line tools</h4>
+
+<p>The command for cloning a remote GIT repository is</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nv">$ </span>git clone  <span class="nt">-o</span>  
+</code></pre></div></div>
+
+<p>So using ‘my-gradleB2’ as an example the template would be cloned byclone the
+template thus:</p>
+
+<p>Using a terminal change to your GIT managed project directory and</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nv">$ </span>git clone https://github.com/blackboard/basic-b2-template.git <span class="nt">-o</span> my-gradleB2 my-gradleB2
+</code></pre></div></div>
+<p>(re)Initialize your local repository</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nv">$ </span>git init
+</code></pre></div></div>
+
+<p>Add the cloned files to your local git repo</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nv">$ </span>git add <span class="nt">-A</span>
+</code></pre></div></div>
+
+<h4 id="an-important-note-about-git">An important note about GIT</h4>
+
+<p>It is all local until it is pushed to the remote repository – add, commit,
+remove, branch etc all happen on your local repository.</p>
+
+<p>Only if and only when you push your local repository to the remote do you
+impact the remote repository.</p>
+
+<h3 id="import-the-project-into-your-ide">Import the Project Into Your IDE</h3>
+
+<p>You have cloned the remote repository and set up a local ‘working directory’
+now you need to import the project into your IDE so that you can begin coding.
+The basic-b2-template is a gradle project thus so is the clone.</p>
+
+<h4 id="netbeans">NetBeans</h4>
+
+<p>NetBeans recognizes and imports gradle projects such as the cloned
+basic-b2-template:</p>
+
+<ol>
+  <li>Open NetBeans</li>
+  <li>Select File: Open Project</li>
+  <li>Navigate to your GIT dev directory and select the project.</li>
+</ol>
+
+<p>NetBeans recognizes and Imports the project with all it’s ‘gradleness intact.’</p>
+
+<h4 id="eclipse">Eclipse</h4>
+
+<p>Eclipse with the Gradle plugin (or STS) supports importing Gradle projects via
+Import&gt;Gradle&gt;Gradle Project menu.</p>
+
+<p>An Eclipse w/o the Gradle plugin requires the creation of the supporting
+Eclipse project files to import the project. This is done by running the
+Gradle Eclipse plugin:</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">$</span> <span class="n">gradle</span> <span class="n">eclipse</span>  
+    <span class="err">  </span> <span class="o">:</span><span class="n">eclipseClasspath</span>  
+    <span class="err">  </span> <span class="o">:</span><span class="n">eclipseJdt</span>  
+    <span class="err">  </span> <span class="o">:</span><span class="n">eclipseProject</span>  
+    <span class="err">  </span> <span class="o">:</span><span class="n">eclipse</span>  
+    <span class="err">  </span> <span class="n">BUILD</span> <span class="n">SUCCESSFUL</span>
+</code></pre></div></div>
+
+<p>When the Eclipse plugin successfully completes, import the project as you
+would normally using Import&gt;General&gt;Existing Projects into Workspace.</p>
+
+<p>The schema folder in both NetBeans and Eclipse is generated outside the Web
+Pages folder – this is a manifestation of the template clone not an Eclipse or
+NetBeans issue – just drag it into the Web Pages folder.</p>
+
+<h3 id="edit-the-buildgradle-and-bb-manifestxml-files">Edit the build.gradle and bb-manifest.xml files</h3>
+
+<h4 id="buildgradle">build.gradle</h4>
+
+<p>The build.gradle file provides the necessary libraries for the build,
+dependency management for the project classpath and war file, and the target
+settings for maven and deployment of the Building Block. These must be edited
+to reflect your project requirements.</p>
+
+<p>You will make edits to three areas of the file:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ext or project.ext</td>
+      <td>this specifies replacement variables for the build</td>
+    </tr>
+    <tr>
+      <td>repository</td>
+      <td>this specifies the location of the maven repository</td>
+    </tr>
+    <tr>
+      <td>dependencies</td>
+      <td>management of project dependencies</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="ext-or-projectext">ext (or project.ext)</h4>
+
+<p>Set this section to reflect your remote development settings:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="err"> </span><span class="w"> </span><span class="err">project.ext</span><span class="w"> </span><span class="p">{</span><span class="w">  
+    </span><span class="err">    </span><span class="w"> </span><span class="err">learnVersion</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">"9.1.110082.0"</span><span class="w">  
+    </span><span class="err">    </span><span class="w"> </span><span class="err">deployServer</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">"10.0.1.150"</span><span class="w">  
+    </span><span class="err">    </span><span class="w"> </span><span class="err">deployInstance</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s2">"BBLEARN"</span><span class="w">  
+    </span><span class="err">  </span><span class="w"> </span><span class="p">}</span><span class="w">  
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>learnVersion</td>
+      <td>used in pulling the appropriate library jars for target version</td>
+    </tr>
+    <tr>
+      <td>deployServer</td>
+      <td>the IP or server name for the target development server (add “:&lt;port&amp;rt;” if not served from port 80)</td>
+    </tr>
+    <tr>
+      <td>deployInstance</td>
+      <td>the DB instance for the target development server</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="repository">Repository</h4>
+
+<p>Set this section to reflect the Learn maven repository:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">repositories</span> <span class="o">{</span>  
+    <span class="err">  </span> <span class="n">mavenCentral</span><span class="o">()</span>  
+    <span class="err">  </span> <span class="n">maven</span> <span class="o">{</span>  
+    <span class="err">   </span> <span class="n">url</span> <span class="s">"https://maven.blackboard.com/content...ries/releases/"</span>  
+    <span class="err">  </span> <span class="o">}</span>  
+     <span class="o">}</span>  
+</code></pre></div></div>
+
+<p>You may add additional maven repositories:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">maven</span> <span class="o">{...}</span>  
+    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="nl">https:</span><span class="c1">//repo.myinst.edu/mavenrepo }  </span>
+</code></pre></div></div>
+
+<h4 id="dependencies">Dependencies</h4>
+
+<p>Set this section to reflect project dependencies:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>providedCompile</td>
+      <td>required but NOT built into WAR</td>
+    </tr>
+    <tr>
+      <td>compile</td>
+      <td>required AND built into WAR</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://www.gradle.org/docs/current/userguide/dependency_management.html">Gradle Dependency Management Documentation</a></p>
+
+<p>Blackboard jars should always be providedCompile to exclude them from the war
+file:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">providedCompile</span><span class="o">(</span> <span class="s">"blackboard.platform:bb-platform:$ext.learnVersion”)  { transitive = false }  
+    providedCompile( "</span><span class="n">blackboard</span><span class="o">.</span><span class="na">platform</span><span class="o">:</span><span class="n">bb</span><span class="o">-</span><span class="n">cms</span><span class="o">-</span><span class="nl">admin:</span><span class="n">$ext</span><span class="o">.</span><span class="na">learnVersion</span><span class="s">" ) { transitive = false }   
+    providedCompile( "</span><span class="n">blackboard</span><span class="o">.</span><span class="na">platform</span><span class="o">:</span><span class="n">bb</span><span class="o">-</span><span class="nl">taglibs:</span><span class="n">$ext</span><span class="o">.</span><span class="na">learnVersion</span><span class="err">"</span> <span class="o">)</span> <span class="o">{</span> <span class="n">transitive</span> <span class="o">=</span> <span class="kc">false</span> <span class="o">}</span>  
+</code></pre></div></div>
+
+<p><strong>NOTE: <em>‘transitive’ determines whether to pull all related library dependencies onto the build path.</em></strong></p>
+
+<p>Supporting Libraries which need to be built into the war are added as</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">‘</span><span class="n">compile</span><span class="err">’</span><span class="o">:</span>
+
+    <span class="n">compile</span> <span class="s">"org.springframework:spring-aop:$ext.springVersion"</span><span class="o">,</span>   
+    <span class="err">       </span> <span class="s">"com.googlecode.json-simple:json-simple:1.1"</span><span class="o">,</span>   
+    <span class="err">       </span> <span class="s">"org.codehaus.jackson:jackson-mapper-asl:1.8.5"</span><span class="o">,</span>   
+    <span class="err">       </span> <span class="s">"commons-logging:commons-logging:1.1.1"</span><span class="o">,</span>   
+    <span class="err">       </span> <span class="s">"junit:junit:4.5"</span><span class="o">,</span>   
+    <span class="err">       </span> <span class="s">"org.json:json:20090211"</span><span class="err">   </span>   
+<span class="o">~~~</span>   <span class="err"> </span>   
+
+<span class="nc">Setting</span> <span class="n">transitive</span> <span class="n">to</span> <span class="err">'</span><span class="kc">true</span><span class="err">'</span> <span class="n">specifies</span> <span class="n">a</span> <span class="n">dependency</span> <span class="n">that</span> <span class="n">is</span> <span class="n">reconciled</span> <span class="n">by</span>
+<span class="nc">Gradle</span> <span class="n">and</span> <span class="n">places</span> <span class="n">all</span> <span class="n">libraries</span> <span class="n">required</span> <span class="n">to</span> <span class="n">satisfy</span> <span class="n">the</span> <span class="n">dependencies</span> <span class="n">on</span> <span class="n">the</span>
+<span class="n">build</span> <span class="n">path</span><span class="o">.</span>
+
+<span class="o">~~~</span> <span class="n">java</span>
+    <span class="nf">compile</span><span class="o">(</span> <span class="s">"org.hibernate:hibernate-core:$ext.hibernateVersion"</span> <span class="o">)</span> <span class="o">{</span> <span class="n">transitive</span> <span class="o">=</span> <span class="kc">true</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="bb-manifestxml-and-bb-manifest-en_usproperties">bb-manifest.xml and bb-manifest-en_US.properties</h3>
+
+<p>Set up the bb-manifest to meet the requirements for your project.</p>
+
+<p>The basic-b2-template provides the framework of a bb-manifest.xml file which
+uses internationalization bundles. There are two files that require editing:</p>
+
+<ul>
+  <li>bb-manifest.xml</li>
+  <li>bundles/bb-manifest-en_US.properties</li>
+</ul>
+
+<p>Both these files are located in the project WEB-INF directory.</p>
+
+<h4 id="bb-manifestxml">bb-manifest.xml</h4>
+
+<p>The basic-b2-template bb-manifest minimally requires edits to the following
+noted areas for use in your cloned project.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nt">&lt;name</span> <span class="na">value=</span><span class="s">"b2.name"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this is changed in bb-manifest-en_US.properties       
+        <span class="nt">&lt;handle</span> <span class="na">value=</span><span class="s">"template"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this should be changed to reflect the project name - such as my-gradleB2       
+        <span class="nt">&lt;description</span> <span class="na">value=</span><span class="s">"b2.description"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this is changed in bb-manifest-en_US.properties       
+        <span class="nt">&lt;default-locale</span> <span class="na">value=</span><span class="s">"en_US"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this may be left unchanged       
+        <span class="nt">&lt;version</span> <span class="na">value=</span><span class="s">"1.0"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this may be changed to reflect the extension version       
+        <span class="nt">&lt;requires&gt;</span>  
+            <span class="nt">&lt;bbversion</span> <span class="na">value=</span><span class="s">"9.1.110082.0"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this should be changed to reflect the minimal target Learn version<span class="nt">&lt;/requires&gt;</span>        
+        <span class="nt">&lt;vendor&gt;</span>  
+            <span class="nt">&lt;id</span> <span class="na">value=</span><span class="s">"mnmt"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this should be changed to a four character id that reflects the extension origin 
+            <span class="nt">&lt;name</span> <span class="na">value=</span><span class="s">"Monument University"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this should be changed to the vendor name          
+            <span class="nt">&lt;url</span> <span class="na">value=</span><span class="s">"http://www.monument.edu/"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this should be changed to vendor URL         
+            <span class="nt">&lt;description</span> <span class="na">value=</span><span class="s">"Monument University"</span> <span class="nt">/&gt;</span> <span class="err">&lt;</span>--- this should be a brief description of the vendor       
+        <span class="nt">&lt;/vendor&gt;</span>  
+</code></pre></div></div>
+
+<h4 id="bb-manifest-en_usproperties">bb-manifest-en_US.properties</h4>
+
+<p>Bundle *.properties files provide the means to internationalize the bb-
+manifest sections that are visible in the UI and any text that is displayed as
+part of the extension’s user interface.</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="py">b2.name</span><span class="p">=</span><span class="s">B2 Template  &lt;--- this should be changed to reflect the name of your extension, such as my-gradleB2   </span>
+    <span class="py">b2.description</span><span class="p">=</span><span class="s">Simple B2 template for starting new B2 projects.  &lt;--- this should contain a brief description of the extension's function.  </span>
+</code></pre></div></div>
+
+<h4 id="build-and-deploy">Build and Deploy</h4>
+
+<p>Building and deploying is conveniently done via a terminal by running the
+gradle deployB2 task from within the top level directory of your project.</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">$</span> <span class="n">gradle</span> <span class="n">deployB2</span>  
+     <span class="o">:</span><span class="n">compileJava</span> <span class="n">UP</span><span class="o">-</span><span class="n">TO</span><span class="o">-</span><span class="n">DATE</span>   
+     <span class="o">:</span><span class="n">processResources</span> <span class="n">UP</span><span class="o">-</span><span class="n">TO</span><span class="o">-</span><span class="n">DATE</span>  
+     <span class="o">:</span><span class="n">classes</span> <span class="n">UP</span><span class="o">-</span><span class="n">TO</span><span class="o">-</span><span class="n">DATE</span>  
+     <span class="o">:</span><span class="n">war</span> <span class="n">UP</span><span class="o">-</span><span class="n">TO</span><span class="o">-</span><span class="n">DATE</span>  
+     <span class="o">:</span><span class="n">deployB2</span>  
+     <span class="n">BUILD</span> <span class="n">SUCCESSFUL</span>  
+     <span class="n">Total</span> <span class="nl">time:</span> <span class="mf">12.423</span> <span class="n">secs</span>  
+</code></pre></div></div>
+
+<p>Note that launching custom tasks may be configurable within your IDE. Adding a
+custom task enables a build and deploy cycle to be run entirely from within
+the IDE.</p>
+
+<h3 id="benefits">Benefits</h3>
+
+<h4 id="consistency-and-control">Consistency and Control</h4>
+
+<p>Use of Gradle, a VM, and a SCM such as GIT provide a consistent environment
+for development – across all projects, while providing a means of managing
+your code-base.</p>
+
+<h4 id="speed">Speed</h4>
+
+<p>While average build-times may not significantly decrease, the significant time
+savings resulting from improved general project management and from the
+deployment feature of the Learn/Gradle dev environment adds up quickly when
+compared to a manual deploy cycle.</p>
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul>
+  <li><a href="#start-a-gradle-based-project">Start a Gradle Based Project</a>
+    <ul>
+      <li><a href="#git-the-basic-b2-template">‘GIT’ the basic-b2-template</a></li>
+      <li><a href="#import-the-project-into-your-ide">Import the Project Into Your IDE</a></li>
+      <li><a href="#edit-the-buildgradle-and-bb-manifestxml-files">Edit the build.gradle and bb-manifest.xml files</a></li>
+      <li><a href="#bb-manifestxml-and-bb-manifest-en_usproperties">bb-manifest.xml and bb-manifest-en_US.properties</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+    </ul>
+  </li>
+</ul>
+
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard Dev Docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick API Access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and Conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

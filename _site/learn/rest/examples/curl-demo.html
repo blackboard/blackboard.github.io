@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>cURL Demo</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
+    <script>
+        var pageCategory = "#learn-rest-examples-curl-demo";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                            <li class="content" id="DBVA-dev-ami"><a href="/dvba/developer-ami" target="_self" >Development Test Site</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="curl-demo">cURL Demo</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The rest demo script demonstrates authenticating a REST application,
+management and use of the authorization token, and creating, updating,
+discovering, and deleting the Data Source and User Learn objects. A video
+presentation using this material plus an explanation of how to register your
+REST application on the Developer Portal, and how to configure your
+application’s REST integration on your Learn development system, is available
+<a href="http://bit.ly/RestTechDeepDive4Partners">here</a>. Here
+is the <a href="/assets/files/2016.06.22.RestTechnicalDeepDiveForPartners.pptx">slide deck</a></p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>You must <a href="registry">register a developer account and application</a> in the Developer Portal</li>
+  <li>You must 
+<a href="/learn/rest/rest-and-learn">register your application</a> in Blackboard Learn</li>
+  <li>You must also configure the script as outlined in the README for the project</li>
+</ul>
+
+<p>This cURL command-line demonstration shows you how to:</p>
+
+<ul>
+  <li>Authenticate</li>
+  <li>Create a Data Source</li>
+  <li>Create, Read, and Update a User</li>
+  <li>Delete created objects in reverse order of create - user, datasource.</li>
+  <li>Create a grade column and add a grade.</li>
+  <li>Upload a file to a content area.</li>
+</ul>
+
+<p>All generated output is sent to the terminal.</p>
+
+<p>This is not meant to be a cURL tutorial. It will not teach you to use cURL. It
+will, however, give a Developer familiar with cURL the knowledge necessary to
+make a complete set of CRUD operations to the Learn REST endpoints.</p>
+
+<h3 id="assumptions">Assumptions</h3>
+
+<p>This help topic assumes the Developer:</p>
+
+<ul>
+  <li>is familiar with cURL.</li>
+  <li>has a REST-enabled <a href="/dvba/what-is-dvba">Blackboard Learn instance</a>.</li>
+</ul>
+
+<h3 id="walkthrough">Walkthrough</h3>
+
+<p>To build an integration with the Blackboard REST Web Services, regardless of
+the programming language of choice, can really be summed up in two steps:</p>
+
+<ol>
+  <li>Use the Application Key and Secret to obtain an <strong>OAuth 2.0 access token</strong>, as described in the <a href="basic-authentication">Basic Authentication</a> document.</li>
+</ol>
+
+<p><strong>OR</strong></p>
+
+<ol>
+  <li>Use the authorizationcode endpoint to log into Learn with a given user’s credentials, then obtain an <strong>OAuth 2.0 access token</strong>, using the application key/secret, that only allows access to the system based on that particular user’s entitlements as described in the <a href="3lo">Three-Legged OAuth</a> document.</li>
+  <li>Call the appropriate REST endpoint with the <strong>OAuth 2.0 access token</strong> and necessary data to perform a given action.</li>
+</ol>
+
+<p>Every example is shown in bold face, the JSON result is shown in italics.</p>
+
+<h2 id="authorization-and-authentication">Authorization and Authentication</h2>
+
+<h3 id="oauth2-basic-two-legged">OAuth2 Basic (Two Legged)</h3>
+
+<p>The REST Services rely on OAuth 2.0 Bearer Tokens for authentication. A
+request is made to the token endpoint with a Basic Authorization header
+containing the base64-encoded key:secret string as its key. The token service
+returns a JSON object containing the Access Token, the Token Type, and the
+number of seconds until the token expires. The token is set to expire after
+one hour, and subsequent calls to retrieve the token will return the same
+token with an updated expiry time until such time that the token has expired.
+There is no refresh token and currently no revoke token method.</p>
+
+<p>You can do this with cURL with the following command line. We use the -k
+parameter to ignore issues caused by the self-signed certificate.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--user</span> &lt;key&gt;:&lt;secret&gt; <span class="nt">--data</span> <span class="s2">"grant_type=client_credentials"</span> 
+https://&lt;LearnHost&gt;/learn/api/public/v1/oauth2/token
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--user</span> d128e50d-c91e-47d3-a97e-9d0c8a87fb5d:kLpiuq34320jqreaiJIRoareASELERREv56 
+<span class="nt">--data</span> <span class="s2">"grant_type=client_credentials"</span>  https://localhost%3A9877/learn/api/public/v1/oauth2/token
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"access_token"</span><span class="p">:</span><span class="s2">"ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span><span class="p">,</span><span class="nl">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="nl">"expires_in"</span><span class="p">:</span><span class="mi">3444</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The JSON response is serialized into the Token object as shown above, and you
+may then retrieve those values from that object by using copy and paste. You
+will use the value given for the access_token when calling the services as
+shown in the <a href="#calling-services"><strong>Calling Services</strong></a> section.</p>
+
+<h3 id="oauth2-three-legged---3lo">OAuth2 (Three Legged) - 3LO</h3>
+
+<p>To work with 3LO you will need both a browser, to log into Learn and retrieve
+a code, and a terminal window for your cURL commands. Note: In step 1 the
+client_id is NOT the Application ID. It IS the Application Key.</p>
+
+<p><strong>Step 1. GET a code using your browser - CAUTION: You MUST set the scope parameter.</strong></p>
+
+<p>Put the GET request in your browser’s address field. Craft a URL in the
+following format:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://<span class="nt">&lt;LearnHost&gt;</span>//learn/api/public/v1/oauth2/authorizationcode?redirect_uri=<span class="nt">&lt;REST</span> <span class="na">APP</span> <span class="na">URI</span><span class="nt">&gt;</span>
+<span class="err">&amp;</span>response_type=code<span class="err">&amp;</span>client_id=<span class="nt">&lt;your</span> <span class="na">**app</span> <span class="na">key**</span><span class="nt">&gt;</span><span class="err">&amp;</span>scope=read
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<p>Place the URI below in your browser address field:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://bd-partner-a-original.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?
+redirect_uri=https://localhost<span class="err">&amp;</span>response_type=code<span class="err">&amp;</span>client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d<span class="err">&amp;</span>scope=read
+
+</code></pre></div></div>
+
+<p>At this point you are requested to log in.</p>
+
+<p><strong>As of 2018.04.19 there is a bug
+with the cookie-acceptance pop up that will require you to accept the pop-up
+and do the above a second time. Once your browser has the cookie-acceptance
+cookie set for a given Learn system the work flow will carry on as follows.</strong></p>
+
+<p>For this example, after you log in your browser will be directed to:
+<code class="language-plaintext highlighter-rouge">https://localhost/?code=XYTdmQcSGrggzujJm2Ccf8C7dKyqKc7Q</code> (The code will be
+different every time.) If you provided some other host name in the
+redirect_uri, then that host name would be shown instead of localhost. Now you
+have the code that you will use to retrieve the access token for all
+additional REST calls.</p>
+
+<p>NOTE regarding scope: The developer portal shows an example scope parameter as
+“read write offline”. Using curl this would be <code class="language-plaintext highlighter-rouge">&amp;scope=read_write-offline</code></p>
+
+<p>We have to URL encode the space character.</p>
+
+<p><strong>Step 2. POST to get the OAuth2 Access Token</strong></p>
+
+<p>You will use your application’s key and secret, and the access code from step</p>
+<ol>
+  <li>Notice that the grant_type is authorization_code in this case. Also note
+that the redirect_uri value MUST match the value provided in Step 1. For our
+Example we will use <code class="language-plaintext highlighter-rouge">https://localhost</code>.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--user</span> &lt;key&gt;:&lt;secret&gt; <span class="nt">--data</span> <span class="s2">"grant_type=authorization_code"</span> 
+https://&lt;LearnHost&gt;/learn/api/public/v1/oauth2/token
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--user</span> d128e50d-c91e-47d3-a97e-9d0c8a77fb5d:kLpiuq34320jqreaiJIRoareASELERREv56 
+<span class="nt">--data</span> <span class="s2">"grant_type=authorization_code"</span> 
+https://bd-partner-a-original-new.blackboard.com/learn/api/public/v1/oauth2/
+token?code<span class="o">=</span>ItmqfxQiA9dzIDNwNoNYseM5GNRHHl
+fa<span class="se">\&amp;</span><span class="nv">redirect_uri</span><span class="o">=</span>https://localhost
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"access_token"</span><span class="p">:</span><span class="s2">"Cdf83I0dwRoweXuY1dZDbbW0f0WmDmuF"</span><span class="p">,</span><span class="nl">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="s2">"expi
+res_in"</span><span class="err">:</span><span class="mi">3599</span><span class="p">,</span><span class="nl">"scope"</span><span class="p">:</span><span class="s2">"read"</span><span class="p">,</span><span class="nl">"user_id"</span><span class="p">:</span><span class="s2">"7ac650e5bd0d467882943ed06fbfe72c"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The JSON response is serialized into the Token object as shown above, and you
+may then retrieve those values from that object by using copy and paste. You
+will use the value given for the access_token when calling the services as
+shown in the <a href="#calling-services"><strong>Calling Services</strong></a> section.</p>
+
+<h3 id="calling-services">Calling Services</h3>
+
+<p>The individual service calls are handled in succession here. We’ll use copy
+and paste to create the JSON object in the form of a string, use cURL for
+generating the appropriate HTTP Request, and shipping it to Learn. We’ll see
+the JSON response come back to stdout on the console.</p>
+
+<p>End points are generally defined as <code class="language-plaintext highlighter-rouge">/learn/api/public/v1/&lt;object
+type&gt;/&lt;objectId&gt;</code>. Object ID can be either the pk1, like <code class="language-plaintext highlighter-rouge">_1_1</code>, or as the
+batchuid. This value should be prepended by externalId:, like
+<code class="language-plaintext highlighter-rouge">externalId:test101</code>.</p>
+
+<p>For example, to retrieve a course by the pk1 <code class="language-plaintext highlighter-rouge">_1_1</code>, you would call <strong>GET
+/learn/api/public/v1/courses/_1_1</strong>. To retrieve by the batchuid <code class="language-plaintext highlighter-rouge">test101</code>, you
+would call <strong>GET /learn/api/public/v1/courses/externalId:test101.</strong></p>
+
+<p>Create is sent to Learn as a HTTP POST message with a JSON body that defines
+the object. The endpoint should omit the objectId, as this will be generated
+on creation.</p>
+
+<p>Read is sent to Learn as a HTTP GET message with an empty body. The endpoint
+should include the objectId being retrieved.</p>
+
+<p>Update is sent to Learn as a HTTP PATCH message with a JSON body that defines
+the object. The endpoint should include the objectId being updated.</p>
+
+<p>Delete is sent to Learn as a HTTP DELETE message with empty body. The endpoint
+should include the objectId being deleted.</p>
+
+<p>Every example is shown in bold face, the JSON result is shown in italics.</p>
+
+<h3 id="datasources">DATASOURCES</h3>
+
+<p><strong>Create</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> 
+<span class="nt">--data</span> <span class="s1">'{"externalId":"&lt;String&gt;","description":"&lt;String&gt;"}'</span>
+https://&lt;LearnHost&gt;/learn/api/public/v1/dataSources
+</code></pre></div></div>
+
+<p>Bearer will be the access_token value we got from the oauth2/token call above.</p>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"externalId":"CURLDSK","description":"cURL Demo DSK"}'</span> 
+https://localhost:9877/learn/api/public/v1/dataSources
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_5_1"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"CURLDSK"</span><span class="p">,</span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"cURL Demo DSK"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Read</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> 
+https://&lt;LearnHost&gt;/learn/api/public/v1/dataSources/externalId:&lt;externalId from create&gt;
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"CURLDSK"</span><span class="p">,</span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"cURL Demo DSK"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Update</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"externalId":"&lt;String&gt;","description":"&lt;String&gt;"}'</span> 
+https://&lt;LearnHost&gt;/learn/api/public/v1/dataSources/[&lt;primary <span class="nb">id</span><span class="o">&gt;</span>|externalId:&lt;String&gt;]
+</code></pre></div></div>
+
+<p>Examples:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"externalId":"CURLDSK","description":"cURL DEMONSTRATION DSK"}'</span>
+ https://localhost:9877/learn/api/public/v1/dataSources/_7_1
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"CURLDSK"</span><span class="p">,</span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"cURL DEMONSTRATION DSK"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"externalId":"CURLDSK","description":"cURL REST DEMO DSK"}'</span>
+ https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"CURLDSK"</span><span class="p">,</span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"cURL REST DEMO DSK"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Delete (If you are going to run the following examples, do so now before deleting your demo DSK.)</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> DELETE <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> 
+https://&lt;LearnHost&gt;/learn/api/public/v1/dataSources/[&lt;primary <span class="nb">id</span><span class="o">&gt;</span>|externalId:&lt;String&gt;]
+</code></pre></div></div>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> DELETE <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
+</code></pre></div></div>
+
+<p>With delete, you don’t see anything back on the command line to indicate your
+delete was successful. You can run it again and you’ll see that the DSK is
+truly gone.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> DELETE <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"status"</span><span class="p">:</span><span class="mi">404</span><span class="p">,</span><span class="nl">"message"</span><span class="p">:</span><span class="s2">"Could not find object with ID:  
+externalId:CURLDSK"</span><span class="p">,</span><span class="nl">"extraInfo"</span><span class="p">:</span><span class="s2">"416d7b944a58482aaed2df50f301861b"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="users">USERS</h3>
+
+<p><strong>Create</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Authorization Token&gt;"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'&lt;JSON to create a User&gt;'</span> 
+https://localhost:9877/learn/api/public/v1/users
+</code></pre></div></div>
+
+<p>Remember, you can always find the JSON specification for these calls at
+<a href="https://developer.blackboard.com/portal/displayApi">Explore APIs</a></p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"externalId":"restdemouser","dataSourceId":"_7_1"
+,"userName":"restdemouser","password":"xyzzy","availability":{"available":"Yes"},
+"name":{"given":"demo","family":"user","title":"Mr"},"contact":
+{"email":"no.one@ereh.won"}}'</span> https://localhost:9877/learn/api/public/v1/users
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"de2198a86c6645cbafaab13e79529e05"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"dataSourceId"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"userName"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="nl">"educationLevel"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"gender"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2016-05-11T21:39:11.518Z"</span><span class="p">,</span><span class="nl">"systemRoleIds"</span><span class="p">:[</span><span class="s2">"User"</span><span class="p">],</span><span class="w">
+</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">},</span><span class="nl">"name"</span><span class="p">:{</span><span class="nl">"given"</span><span class="p">:</span><span class="s2">"demo"</span><span class="p">,</span><span class="nl">"family"</span><span class="p">:</span><span class="s2">"user"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Mr"</span><span class="p">},</span><span class="w">
+</span><span class="nl">"job"</span><span class="p">:{},</span><span class="nl">"contact"</span><span class="p">:{</span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"no.one@ereh.won"</span><span class="p">},</span><span class="nl">"address"</span><span class="p">:{},</span><span class="nl">"locale"</span><span class="p">:{}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>By sheer coincidence this user’s ID, ‘_7_1’, came out to be the same as the DSK
+ID, ‘_7_1’.</p>
+
+<p>Note the availability of query parameters in the documentation at https://developer.blackboard.com.</p>
+
+<p>Examples:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer bsdcojzT9i4qTaNE0T8ugEBcXE2U8jtu"</span> 
+https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/users?dataSourceId<span class="o">=</span>_2_1
+<span class="se">\&amp;</span><span class="nv">fields</span><span class="o">=</span>externalId,userName,studentId
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"results"</span><span class="p">:[{</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"[abcd001@examity.com](mailto:abcd001@examity.com)"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"userName"</span><span class="p">:</span><span class="s2">"[abcd001@examity.com](mailto:abcd001@examity.com)"</span><span class="p">,</span><span class="nl">"studentId"</span><span class="p">:</span><span class="s2">"ABCD001"</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"[abcd002@examity.com](mailto:abcd002@examity.com)"</span><span class="p">,</span><span class="nl">"userName"</span><span class="p">:</span><span class="s2">"[abcd002@examity.com]
+(mailto:abcd002@examity.com)"</span><span class="p">,</span><span class="nl">"studentId"</span><span class="p">:</span><span class="s2">"[ABCD002@examity.com](mailto:ABCD002@examity.com)"</span><span class="p">},</span><span class="err">...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>On a Windows system, use ^ to escape the &amp;.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer bsdcojzT9i4qTaNE0T8ugEBcXE2U8jtu"</span>
+https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/users?
+<span class="nv">dataSourceId</span><span class="o">=</span>_220_1^&amp;fields<span class="o">=</span>externalId,userName,studentId
+</code></pre></div></div>
+
+<p><strong>Read</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Authorization Token&gt;"</span> 
+https://localhost:9877/learn/api/public/v1/users/[&lt;primary <span class="nb">id</span><span class="o">&gt;</span>|externalId:&lt;String&gt;]
+</code></pre></div></div>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"de2198a86c6645cbafaab13e79529e05"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"dataSourceId"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"userName"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="nl">"educationLevel"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"gender"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2016-05-11T21:39:11.518Z"</span><span class="p">,</span><span class="nl">"systemRoleIds"</span><span class="p">:[</span><span class="s2">"User"</span><span class="p">],</span><span class="w">
+</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">},</span><span class="nl">"name"</span><span class="p">:{</span><span class="nl">"given"</span><span class="p">:</span><span class="s2">"demo"</span><span class="p">,</span><span class="nl">"family"</span><span class="p">:</span><span class="s2">"user"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Mr"</span><span class="p">},</span><span class="w">
+</span><span class="nl">"job"</span><span class="p">:{},</span><span class="nl">"contact"</span><span class="p">:{</span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"no.one@ereh.won"</span><span class="p">},</span><span class="nl">"address"</span><span class="p">:{},</span><span class="nl">"locale"</span><span class="p">:{}}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/users/_7_1
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"de2198a86c6645cbafaab13e79529e05"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"dataSourceId"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"userName"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="nl">"educationLevel"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"gender"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2016-05-11T21:39:11.518Z"</span><span class="p">,</span><span class="nl">"systemRoleIds"</span><span class="p">:[</span><span class="s2">"User"</span><span class="p">],</span><span class="w">
+</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">},</span><span class="nl">"name"</span><span class="p">:{</span><span class="nl">"given"</span><span class="p">:</span><span class="s2">"demo"</span><span class="p">,</span><span class="nl">"family"</span><span class="p">:</span><span class="s2">"user"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Mr"</span><span class="p">},</span><span class="w">
+</span><span class="nl">"job"</span><span class="p">:{},</span><span class="nl">"contact"</span><span class="p">:{</span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"no.one@ereh.won"</span><span class="p">},</span><span class="nl">"address"</span><span class="p">:{},</span><span class="nl">"locale"</span><span class="p">:{}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Update</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> 
+<span class="nt">--data</span> <span class="s1">'&lt;JSON Data for a User&gt;'</span> https://&lt;LearnHost&gt;/learn/api/public/v1/users/
+<span class="o">[</span>&lt;primary <span class="nb">id</span><span class="o">&gt;</span>|externalId:&lt;String&gt;]
+</code></pre></div></div>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> <span class="nt">-H</span> 
+<span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"externalId":"restdemouser","dataSourceId":"_7_1",
+"userName":"restdemouser","availability":{"available":"Yes"},"name":{"given":"Jane",
+"family":"Demo","title":"Ms"},"contact":{"email":"no.one@ereh.won"}}'</span>
+ https://localhost:9877/learn/api/public/v1/users/_7_1
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"de2198a86c6645cbafaab13e79529e05"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"dataSourceId"</span><span class="p">:</span><span class="s2">"_7_1"</span><span class="p">,</span><span class="nl">"userName"</span><span class="p">:</span><span class="s2">"restdemouser"</span><span class="p">,</span><span class="nl">"educationLevel"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"gender"</span><span class="p">:</span><span class="s2">"Unknown"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2016-05-11T21:39:11.518Z"</span><span class="p">,</span><span class="nl">"systemRoleIds"</span><span class="p">:[</span><span class="s2">"User"</span><span class="p">],</span><span class="w">
+</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">},</span><span class="nl">"name"</span><span class="p">:{</span><span class="nl">"given"</span><span class="p">:</span><span class="s2">"Jane"</span><span class="p">,</span><span class="nl">"family"</span><span class="p">:</span><span class="s2">"Demo"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Ms"</span><span class="p">},</span><span class="w">
+</span><span class="nl">"job"</span><span class="p">:{},</span><span class="nl">"contact"</span><span class="p">:{</span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"no.one@ereh.won"</span><span class="p">},</span><span class="nl">"address"</span><span class="p">:{},</span><span class="nl">"locale"</span><span class="p">:{}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Delete</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> DELETE <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> 
+https://&lt;LearnHost&gt;/learn/api/public/v1/users/[&lt;primary <span class="nb">id</span><span class="o">&gt;</span>|externalId:&lt;String&gt;]
+</code></pre></div></div>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> DELETE <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser
+</code></pre></div></div>
+
+<p>As with the DSK delete there is no output to the console when the delete is
+successful. But, you can see that the user is gone by running the delete
+again:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> DELETE <span class="nt">-H</span> <span class="s2">"Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz"</span> 
+https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">_</span><span class="p">{</span><span class="nl">"status"</span><span class="p">:</span><span class="mi">404</span><span class="p">,</span><span class="nl">"message"</span><span class="p">:</span><span class="s2">"Could not find object with ID:
+externalId:restdemouser"</span><span class="p">,</span><span class="nl">"extraInfo"</span><span class="p">:</span><span class="s2">"e709f6982af744dfae18d42f68e73fb1"</span><span class="p">}</span><span class="err">_</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="course-grades">COURSE GRADES</h3>
+
+<p>(Only in SaaS)</p>
+
+<p><strong>Create Grade Column</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Authorization Token&gt;"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'&lt;JSON to create a Grade Column&gt;'</span> <span class="o">[</span>https://saashost.blackboard.com/learn/api/public/v1/courses/<span class="o">{</span>courseId<span class="o">}</span>/gradebook/columns
+</code></pre></div></div>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvfys"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"id": "7","externalId": "co7extId","name": "co7name","description": "co7desc","externalGrade": true,"created":"2016-06-30T05:34:56.497Z","score": {"possible": 77,"decimalPlaces":0},"availability": {"available": "Yes"},"grading": {"type":"Manual","due": "2016-07-01T05:34:56.498Z", "attemptsAllowed":0,"scoringModel": "Last","anonymousGrading": { "type": "None","releaseAfter":"2016-07-11T05:34:56.498Z"}}}'</span> https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/_50_1/gradebook/columns
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"**_129_1**"</span><span class="p">,</span><span class="nl">"externalId"</span><span class="p">:</span><span class="s2">"co7extId"</span><span class="p">,</span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"co7name"</span><span class="p">,</span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"co7
+desc"</span><span class="p">,</span><span class="nl">"externalGrade"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2016-07-01T05:45:37.730Z"</span><span class="p">,</span><span class="nl">"score"</span><span class="p">:{</span><span class="s2">"poss
+ible"</span><span class="err">:</span><span class="mf">77.0</span><span class="p">,</span><span class="nl">"decimalPlaces"</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">},</span><span class="nl">"grading"</span><span class="p">:{</span><span class="s2">"t
+ype"</span><span class="err">:</span><span class="s2">"Manual"</span><span class="p">,</span><span class="nl">"due"</span><span class="p">:</span><span class="s2">"2016-07-01T05:34:56.498Z"</span><span class="p">}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Add/Update Column Grade</strong></p>
+
+<p>(PATCH will create a grade where there isn’t one.)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt;"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'&lt;JSON Data for a Column Grade&gt;'</span> https://&lt;Learn Host&gt;/learn/api/public/v1/courses/<span class="o">{</span>courseId<span class="o">}</span>/gradebook/columns/<span class="o">{</span>columnId<span class="o">}</span>/users/<span class="o">{</span>userId<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--request</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvfys"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"text": "A","score": 77,"notes": "Great","feedback": "GoodWork!", "exempt":true}'</span> https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/_50_1/gradebook/columns/_129_1/users/_66_1
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"userId"</span><span class="p">:</span><span class="s2">"_66_1"</span><span class="p">,</span><span class="nl">"columnId"</span><span class="p">:</span><span class="s2">"_129_1"</span><span class="p">,</span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"Graded"</span><span class="p">,</span><span class="nl">"score"</span><span class="p">:</span><span class="mf">77.0</span><span class="p">,</span><span class="nl">"notes"</span><span class="p">:</span><span class="s2">"Great"</span><span class="p">,</span><span class="nl">"feedback"</span><span class="p">:</span><span class="s2">"GoodWork!"</span><span class="p">,</span><span class="nl">"exempt"</span><span class="p">:</span><span class="kc">true</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="access-content">ACCESS CONTENT</h3>
+
+<ul>
+  <li>See <a href="curl-attachments-demo">Access Content Attachments</a></li>
+</ul>
+
+<h3 id="course-copy">COURSE COPY</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Authorization Token&gt;"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'&lt;JSON for the course to copy into&gt;'</span> https://saashost.blackboard.com/learn/api/public/v1/courses/<span class="o">{</span>courseId<span class="o">}</span>/copy
+</code></pre></div></div>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer RcHoSkh8EH9UKo6iCHWXDpCKrmCyOIwr"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"courseId":"mbk-test-copied201910111502"}'</span> https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/courseId:mbk-test/copy
+</code></pre></div></div>
+
+<p>A new course with courseId: mbk-test-copied201910111502 is created. The
+contents of mbk-test are copied into it.</p>
+
+<p>NOTE: You can NOT copy contents into an already existing course. For example
+we used the GUI to create a course with a courseId: mbk-test-
+copied201910111508. Then we attempted to run the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer RcHoSkh8EH9UKo6iCHWXDpCKrmCyOIwr"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"courseId":"mbk-test-copied201910111508"}'</span> https://partner-smoke-test-a.blackboard.com/learn/api/p
+ublic/v1/courses/_863_1/copy
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"status"</span><span class="p">:</span><span class="mi">409</span><span class="p">,</span><span class="nl">"message"</span><span class="p">:</span><span class="s2">"A course with the provided courseId already exists"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can only use the copy endpoint to take an existing course and create and
+copy into a new, never before created, course.</p>
+
+<h3 id="add-content">ADD CONTENT</h3>
+
+<p>(Remember to Check Availability of the APIs in the Learn Version)</p>
+
+<p>Preconditions - You know the courseId, you’ve gotten an access token, and you
+have a local file to upload.</p>
+
+<ol>
+  <li>Get a course’s contents.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P"</span> https://bd-partner-a-original.blackboard.com/learn/api/public/v1/courses/courseId:mbk-rest-contents/contents
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"results"</span><span class="p">:[{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_12906_1"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Information"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2017-12-06T18:50:24.625Z"</span><span class="p">,</span><span class="nl">"position"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nl">"hasChildren"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">,</span><span class="nl">"allowGuests"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"adaptiveRelease"</span><span class="p">:{}},</span><span class="nl">"contentHandler"</span><span class="p">:{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"resource/x-bb-folder"</span><span class="p">}},{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"**_12907_1**"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Content"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2017-12-06T18:50:24.628Z"</span><span class="p">,</span><span class="nl">"position"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="nl">"hasChildren"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">,</span><span class="nl">"allowGuests"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"adaptiveRelease"</span><span class="p">:{}},</span><span class="nl">"contentHandler"</span><span class="p">:{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"resource/x-bb-folder"</span><span class="p">}}]}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In the THIRD step we’ll place our file in the Content folder we see in the
+above response. Every new Learn Original course has a Content folder by
+default.</p>
+
+<ol>
+  <li>Upload a file.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P"</span> https://bd-partner-a-original.blackboard.com/learn/api/public/v1/uploads <span class="nt">-F</span> <span class="s2">"file=@/Users/mbk/Documents/2016.09.BlackboardPartnerUpdate.pdf"</span>
+</code></pre></div>    </div>
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"4B6281344DFDD9B1F36A5719BDB10708-38295ef0c6a74954a1055e1045bcfeeb"</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Create the content item using bbXML and the id from the prior step.
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sept 2016 Partner Update"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contentHandler"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+ </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">“resource/x-bb-file</span><span class="s2">",
+ "</span><span class="err">file</span><span class="s2">": {
+   "</span><span class="err">uploadId</span><span class="s2">":"</span><span class="mi">4</span><span class="err">B</span><span class="mi">6281344</span><span class="err">DFDD</span><span class="mi">9</span><span class="err">B</span><span class="mi">1</span><span class="err">F</span><span class="mi">36</span><span class="err">A</span><span class="mi">5719</span><span class="err">BDB</span><span class="mi">10708-38295</span><span class="err">ef</span><span class="mi">0</span><span class="err">c</span><span class="mi">6</span><span class="err">a</span><span class="mi">74954</span><span class="err">a</span><span class="mi">1055e1045</span><span class="err">bcfeeb</span><span class="s2">",
+   "</span><span class="err">fileName</span><span class="s2">": "</span><span class="mf">2016.09</span><span class="err">.BlackboardPartnerUpdate.pdf</span><span class="s2">",
+   "</span><span class="err">duplicateFileHandling</span><span class="s2">": "</span><span class="err">Rename</span><span class="s2">"
+ }
+  }
+}
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Then call the appropriate endpoint:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"title": "Sept 2016 Partner Update","contentHandler": {"id": "resource/x-bb-file","file": {"uploadId": "4B6281344DFDD9B1F36A5719BDB10708-38295ef0c6a74954a1055e1045bcfeeb","fileName":"2016.09.BlackboardPartnerUpdate.pdf", "duplicateFileHandling": "Rename"}}}'</span> https://bd-partner-a-original.blackboard.com/learn/api/public/v1/courses/courseId:mbk-rest-contents/contents/_12907_1/children
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_12908_1"</span><span class="p">,</span><span class="nl">"parentId"</span><span class="p">:</span><span class="s2">"_12907_1"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Sept 2016 Partner Update"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2017-12-06T19:22:59.536Z"</span><span class="p">,</span><span class="nl">"position"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">,</span><span class="nl">"allowGuests"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"adaptiveRelease"</span><span class="p">:{}},</span><span class="nl">"contentHandler"</span><span class="p">:{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"resource/x-bb-file"</span><span class="p">,</span><span class="nl">"file"</span><span class="p">:{</span><span class="nl">"fileName"</span><span class="p">:</span><span class="s2">"2016.09.BlackboardPartnerUpdate.pdf"</span><span class="p">}}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can, of course, use the id returned in the above to fetch the content item
+using the appropriate GET. Read the documentation at developer.blackboard.com.</p>
+
+<h3 id="create-assignment-with-attachment">CREATE ASSIGNMENT WITH ATTACHMENT</h3>
+
+<p><strong>Currently Only Available For Ultra Courses (Remember to check the Learn version for availably of the APIs @ <a href="https://developer.blackboard.com">https://developer.blackboard.com</a>)</strong></p>
+
+<ol>
+  <li>Get a course’s content root. root will only work with the _abc_xyz ID
+format. It will not work for courseId:<course_id> format.
+</course_id>    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;Access Token&gt; "</span> https://&lt;LearnHost&gt;/learn/api/public/v1/courses/&lt;ID&gt;/contents/root
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> GET <span class="nt">-H</span> <span class="s2">"Authorization: Bearer N75W0ceKowxtlMUZtuIqwwvPQtxvx3L5"</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/courses/_691_1/contents/root
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_5108_1"</span><span class="p">,</span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"ROOT"</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2018-04-08T15:57:34.188Z"</span><span class="p">,</span><span class="nl">"position"</span><span class="w"> </span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nl">"hasChildren"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"availability"</span><span class="p">:{</span><span class="nl">"available"</span><span class="p">:</span><span class="s2">"Yes"</span><span class="p">,</span><span class="nl">"allowGuests"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nl">"adaptiveRelease"</span><span class="p">:{}},</span><span class="nl">"contentHandler"</span><span class="p">:{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"resource/x-bb-folder"</span><span class="p">}}</span><span class="w">
+</span></code></pre></div></div>
+
+<ol>
+  <li>Upload the file to be attached to the assignment.</li>
+</ol>
+
+<p>Note: The file is uploaded to temporary storage so we must attach it to an
+assignment shortly after the upload</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer N75W0ceKowxtlMUZtuIqwwvPQtxvx3L5"</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/uploads <span class="nt">-F</span> <span class="s2">"file=@/Users/mbk/Documents/2016.06.BlackboardPartnerUpdate.pdf"</span>
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"D1-D1165F42C7E11286BDAFDCCD2E2BE935-56c7b14aa4cb499b9a9a2a8cc3156290"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We use this id to indicate the file that is to be attached to the assignment.</p>
+
+<ol>
+  <li>Create the assignment with the file attached:</li>
+</ol>
+
+<p>(The file must be attached soon after being uploaded as it is uploaded to a
+temporary location and goes away sometime after being uploaded. Also, there is
+a bug in the following where if attempts allowed is too large it will fail.
+I’ve not experimented to find the limit.)</p>
+
+<p>Reference: <a href="https://developer.blackboard.com/portal/displayApi">POST /learn/api/public/v1/courses/{courseId}/contents/createAssignment</a></p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer N75W0ceKowxtlMUZtuIqwwvPQtxvx3L5"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"parentId": "_5108_1", "title":"Assignment Created by REST createAssignment", "instructions": "Simple Instructions", "description": "Assignment with Attachment", "position": 0, "fileUploadIds":["D1-D1165F42C7E11286BDAFDCCD2E2BE935-56c7b14aa4cb499b9a9a2a8cc3156290"],"availability": {"available": "Yes", "allowGuests": true, "adaptiveRelease": { "start": "2018-04-05T18:35:20.050Z", "end": "2018-09-02T18:35:20.050Z" } }, "grading": { "due": "2018-09-02T18:35:20.050Z", "attemptsAllowed": 10 }, "score": { "possible": 100 } }'</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/courses/courseId:mbk-ultra-course/contents/createAssignment
+</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"contentId"</span><span class="p">:</span><span class="s2">"_6282_1"</span><span class="p">,</span><span class="nl">"gradeColumnId"</span><span class="p">:</span><span class="s2">"_3297_1"</span><span class="p">,</span><span class="nl">"assessmentId"</span><span class="p">:</span><span class="s2">"_11701_1"</span><span class="p">,</span><span class="nl">"questionIds"</span><span class="p">:[</span><span class="s2">"_11703_1"</span><span class="p">,</span><span class="s2">"_11704_1"</span><span class="p">]}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We will use the gradeColumnId when submitting a student attempt to the
+assignment.</p>
+
+<h3 id="submit-assignment-attempt-with-attachment">SUBMIT ASSIGNMENT ATTEMPT WITH ATTACHMENT</h3>
+
+<p>Currently Only Available For Presentation-Only Assignments</p>
+
+<p><strong>(Reference for all APIs used and the Learn version they are available in is @ <a href="developer.blackboard.com">https://developer.blackboard.com</a>)</strong></p>
+
+<ol>
+  <li>Use 3LO to get an access code for the student account that will submit
+the attempt to the assignment. 3LO MUST be used for this process.</li>
+</ol>
+
+<p>NOTES:</p>
+<ul>
+  <li>Use Status read write, write is required to POST the assignment.</li>
+  <li>
+    <p>LOG OUT of any browser session with the Learn system you’ve been working with
+before doing the next step where you will log in with the student account.</p>
+
+    <p>a. Put the following URL in a browser’s address field. Use the FQDN of the
+Learn system you are working with. The client_id is the REST Application Key.
+(Not the ID.)</p>
+  </li>
+</ul>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=https://localhost&amp;response_type=code&amp;client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d&amp;scope=read write&amp;state=xyzzy
+</span></code></pre></div></div>
+
+<p>Your browser should take you to the Learn login page. If you see the dialog to
+accept cookies, accept the dialog. Then repeat a. There is a bug that won’t
+take you past b. if you’ve not previously accepted the cookie disclosure
+dialog.</p>
+
+<p>b. Log in with the student account that will be submitting the assignment
+attempt. Accept any dialog that pops up.</p>
+
+<p>Your browser’s address field will be redirected to a URL like the following.
+You SHOULD see something about being unreachable in the browser. That’s OK.</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">https://localhost/?code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT&amp;state=xyzzy
+</span></code></pre></div></div>
+
+<p><strong>Our code is: g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT This is the code we use in the next step to get an access token.</strong></p>
+
+<ol>
+  <li>Use the 2nd-leg of 3LO to get an access token - POST using the code,
+our application key, and secret to the oauth2/token endpoint.</li>
+</ol>
+
+<p>Note: the redirect_uri must match the redirect_uri we used when we got the
+code.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">--user</span> d128e50d-c91e-47d3-a97e-9d0c8a77fb5d:sorryyoucanthavemysecret <span class="nt">--data</span> <span class="s2">"grant_type=authorization_code"</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/oauth2/token?code<span class="o">=</span>g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT&amp;redirect_uri<span class="o">=</span>https://localhost
+</code></pre></div></div>
+
+<p>We get an access token back to use for submitting the students assignment
+attempt.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"access_token"</span><span class="p">:</span><span class="s2">"4mgoFlQoi4Jq4biKpU4R264wugsKF9R1"</span><span class="p">,</span><span class="nl">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="nl">"expires_in"</span><span class="p">:</span><span class="mi">3599</span><span class="p">,</span><span class="nl">"scope"</span><span class="p">:</span><span class="s2">"read write"</span><span class="p">,</span><span class="nl">"user_id"</span><span class="p">:</span><span class="s2">"507ba08376e1498cba8c6cd35b003aa2"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ol>
+  <li>Upload the file to be attached to the attempt into temporary storage.
+It’s temporary and needs to be used quickly</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer 4mgoFlQoi4Jq4biKpU4R264wugsKF9R1"</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/uploads <span class="nt">-F</span> <span class="s2">"[file=@/Users/mbk/Documents/2016.03.BlackboardPartnerUpdate.pdf]"</span>
+</code></pre></div></div>
+
+<p>We get back an ID that we use to attach the file to the attempt.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"BD-BD9C08679892561211D99DB4C817FE68-67545ce854b54d3fb062e38aefeee47c"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ol>
+  <li>Submit the attempt. We’re using the gradeColumnId”:”_3297_1” that
+we got when we created the assignment.</li>
+</ol>
+
+<p>The “studentSubmision” is in bbML format. Reference: <a href="bbml">Blackboard Markup
+Language - BbML</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer 4mgoFlQoi4Jq4biKpU4R264wugsKF9R1"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"studentComments":"this is the student commment","studentSubmission": "&lt;!-- {\"bbMLEditorVersion\":1} --&gt; &lt;a href=\"bbupload://BD-BD9C08679892561211D99DB4C817FE68-67545ce854b54d3fb062e38aefeee47c\" data-bbfile=\"{&amp;quot;render&amp;quot;:&amp;quot;inline&amp;quot;,&amp;quot;linkName&amp;quot;:&amp;quot;2016.03.BlackboardPartnerUpdate.pdf&amp;quot;,&amp;quot;mimeType&amp;quot;:&amp;quot;application/pdf&amp;quot;}\"&gt;2016.03.BlackboardPartnerUpdate.pdf&lt;_/a&gt;"}:_'</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v2/courses/courseId:mbk-ultra-
+course/gradebook/columns/_3297_1/attempts
+</code></pre></div></div>
+
+<p>We get back an attempt ID for an InProgress student submission. We use the
+attempt ID in the next step to set the attempt to needs grading so that the
+instructor sees the attempt. Attempts that are InProgress are not available to
+the instructor in the GUI.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"_528_1"</span><span class="p">,</span><span class="nl">"userId"</span><span class="p">:</span><span class="s2">"_649_1"</span><span class="p">,</span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"InProgress"</span><span class="p">,</span><span class="nl">"studentSubmission"</span><span class="p">:</span><span class="s2">"&lt;!-- {</span><span class="se">\"</span><span class="s2">bbMLEditorVersion</span><span class="se">\"</span><span class="s2">:1} --&gt;</span><span class="se">\n</span><span class="s2">&lt;a href=</span><span class="se">\"</span><span class="s2">https://bd-partner-a-ultra.blackboard.com/bbcswebdav/xid-23611_1</span><span class="se">\"</span><span class="s2"> data-bbfile=</span><span class="se">\"</span><span class="s2">{&amp;quot;render&amp;quot;:&amp;quot;inline&amp;quot;,&amp;quot;linkName&amp;quot;:&amp;quot;2016.03.BlackboardPartnerUpdate.pdf&amp;quot;,&amp;quot;mimeType&amp;quot;:&amp;quot;application/pdf&amp;quot;}</span><span class="se">\"</span><span class="s2">&gt;2016.03.BlackboardPartnerUpdate.pdf&lt;/a&gt;"</span><span class="p">,</span><span class="nl">"exempt"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2018-05-18T02:48:18.329Z"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ol>
+  <li>Set the attempt to “NeedsGrading”</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-k</span> <span class="nt">-X</span> PATCH <span class="nt">-H</span> <span class="s2">"Authorization: Bearer 4mgoFlQoi4Jq4biKpU4R264wugsKF9R1"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"status":"NeedsGrading"}:'</span> https://bd-partner-a-ultra.blackboard.com/learn/api/public/v2/courses/courseId:mbk-ultra-
+course/gradebook/columns/_3297_1/attempts_528_1
+</code></pre></div></div>
+
+<div class="language-json code-text-to-normal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"528_1"</span><span class="p">,</span><span class="nl">"userId"</span><span class="p">:</span><span class="s2">"_649_1"</span><span class="p">,</span><span class="nl">"status"</span><span class="p">:</span><span class="s2">"NeedsGrading"</span><span class="p">,</span><span class="nl">"studentSubmission"</span><span class="p">:</span><span class="s2">"&lt;!-- {</span><span class="se">\"</span><span class="s2">bbMLEditorVersion</span><span class="se">\"</span><span class="s2">:1} --&gt;</span><span class="se">\n</span><span class="s2">&lt;a href=</span><span class="se">\"</span><span class="s2">[https://bd-partner-a-ultra.blackboard.com/bbcswebdav/xid-23611_1"</span><span class="w"> </span><span class="err">data-bbfile=\</span><span class="s2">"{&amp;quot;render&amp;quot;:&amp;quot;inline&amp;quot;,&amp;quot;linkName&amp;quot;:&amp;quot;2016.03.BlackboardPartnerUpdate.pdf&amp;quot;,&amp;quot;mimeType&amp;quot;:&amp;quot;application/pdf&amp;quot;}</span><span class="se">\"</span><span class="s2">&gt;2016.03.BlackboardPartnerUpdate.pdf&lt;/a&gt;"</span><span class="p">,</span><span class="nl">"exempt"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nl">"created"</span><span class="p">:</span><span class="s2">"2018-05-18T02:48:18.329Z"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now, logged in as the instructor, we can see that there has been 1 submission.
+And we see the student’s submission with the attachment.</p>
+
+<h3 id="common-errors">Common Errors</h3>
+
+<ul>
+  <li>COMMON ERROR: You used 3LO to get an Access Token. You forgot to set the
+scope correctly and are getting permission denied errors. 404 etc.</li>
+  <li>SOLUTION: Go back through the 3LO process and specify the scope necessary
+to make your REST calls.</li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>We hope that the above demonstration gives you a helpful peek under the hood
+as to what is going on when you make REST calls to a Learn system. You can
+take these cURL commands and use them to make all of the REST calls documented
+here: <a href="https://developer.blackboard.com/portal/displayApi">Explore APIs</a></p>
+
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul>
+  <li><a href="#introduction">Introduction</a>
+    <ul>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#assumptions">Assumptions</a></li>
+      <li><a href="#walkthrough">Walkthrough</a></li>
+    </ul>
+  </li>
+  <li><a href="#authorization-and-authentication">Authorization and Authentication</a>
+    <ul>
+      <li><a href="#oauth2-basic-two-legged">OAuth2 Basic (Two Legged)</a></li>
+      <li><a href="#oauth2-three-legged---3lo">OAuth2 (Three Legged) - 3LO</a></li>
+      <li><a href="#calling-services">Calling Services</a></li>
+      <li><a href="#datasources">DATASOURCES</a></li>
+      <li><a href="#users">USERS</a></li>
+      <li><a href="#course-grades">COURSE GRADES</a></li>
+      <li><a href="#access-content">ACCESS CONTENT</a></li>
+      <li><a href="#course-copy">COURSE COPY</a></li>
+      <li><a href="#add-content">ADD CONTENT</a></li>
+      <li><a href="#create-assignment-with-attachment">CREATE ASSIGNMENT WITH ATTACHMENT</a></li>
+      <li><a href="#submit-assignment-attempt-with-attachment">SUBMIT ASSIGNMENT ATTEMPT WITH ATTACHMENT</a></li>
+      <li><a href="#common-errors">Common Errors</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+  </li>
+</ul>
+
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard Dev Docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick API Access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and Conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

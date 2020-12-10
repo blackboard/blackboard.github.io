@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-173992978-1');
+     </script>
+    <title>Preparing Your Building Blocks For Learn SaaS and Newer Learn Versions</title>
+
+    <!-- Search --> 
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/assets/img/favicon-96x96.png">
+    <!-- CSS and fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
+    <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
+    <script>
+        var pageCategory = "#learn-b2-resources-moving-to-saas";
+        $(document).ready(function () {
+            new AccordionMenu('.col-menu');
+            var mainContent = $("#maincontent");
+            var mainHeight = mainContent.height();
+            mainHeight += 250;
+            $( ".menu" ).css( "min-height", mainHeight + "px" );
+            $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
+
+            
+            $( "h2,h3" ).addClass( "section scrollspy" );
+            $('.scrollspy').scrollSpy();
+            
+            var pageTocStatus = "true";
+
+            if (pageTocStatus == "false") {
+            $( "#maincontent" ).css( "width", "80%" );
+            }
+
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            $('.collapsible').collapsible('open', pageCategory);
+
+            if( $( "li" ).find( pageCategory ) ){
+                $(pageCategory).addClass("open");
+                $("li" + pageCategory ).css("display","block");
+                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageCategory).parentsUntil(".col-menu").addClass("open");
+                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            }
+        });
+     </script>
+</head>
+<body>
+
+    <header>
+        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span>
+        <a href="/search"><i class="material-icons">search</i></a>
+    </header>
+<!---  New menu  -->
+<div class="menu">
+    <div class="accordion-menu col-menu">
+        <ul>
+            <li class="first-level" id="home" ><a href="/"><i class="material-icons">home</i>Home</a>
+            
+                <li class="first-level" id="learn-group" ><a href="#"><i class="material-icons">school</i>Learn</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="learn-b2" ><a href="">B2</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
+                                            
+                                            <li class="content" id="learn-b2-advced-java-permissions"><a href="/learn/b2/advanced/java-permissions" target="_self" >Java Permissions</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-resources"><a href="">Resources</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-resources-first-project-gradle"><a href="/learn/b2/resources/first-project-using-gradle-and-git" target="_self" >First project using gradle and Git</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-java-11"><a href="/learn/b2/resources/java11-faq" target="_self" >Java 11 FAQs</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prepare-java-11"><a href="/learn/b2/resources/prepare-for-java11" target="_self" >Prepare for Java 11</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-prep-learn-q2"><a href="/learn/b2/resources/preparing-for-learn-q2-2016" target="_self" >Preparing for Q2-2016</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-moving-to-saas"><a href="/learn/b2/resources/preparing-for-saas-and-new-learn-versions" target="_self" >Moving to SaaS and new Learn versions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-enable-rem-debug"><a href="/learn/b2/resources/enabling-remote-debugging" target="_self" >Enabling remote debugging</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-useful-links"><a href="/learn/b2/resources/useful-links" target="_self" >Useful Links</a></li>
+                                            
+                                            <li class="content" id="learn-b2-resources-scan-tool"><a href="/learn/b2/resources/scan-tool-learn-saas" target="_self" >Scan tool for Learn SaaS</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-best-practices"><a href="">Best Practices</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-bp-code-quality"><a href="/learn/b2/best-practices/code-quality" target="_self" >Code Quality</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-dev-using-maven"><a href="/learn/b2/best-practices/develop-using-maven-repository" target="_self" >Developing using maven</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-secure-coding-practices"><a href="/learn/b2/best-practices/secure-coding-practices" target="_self" >Secure Coding Practices</a></li>
+                                            
+                                            <li class="content" id="learn-b2-bp-security"><a href="/learn/b2/best-practices/security" target="_self" >Security</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-opendb"><a href="">OpenDB</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-opendb-creatingdb-object"><a href="/learn/b2/opendb/creating-database-objects" target="_self" >Creating database objects</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-intro-to-opendb"><a href="/learn/b2/opendb/intro-to-opendb" target="_self" >Intro to OpenDB</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-def"><a href="/learn/b2/opendb/schema-definitions" target="_self" >Schema Definitions</a></li>
+                                            
+                                            <li class="content" id="learn-b2-opendb-schema-xml"><a href="/learn/b2/opendb/schema-xml" target="_self" >Schema XML</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="b2-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-b2-examples-course-user-enrollment"><a href="/learn/b2/examples/course-user-and-enrollment-data" target="_self" >Course user and Enrollment data</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-schema-xml"><a href="https://github.com/blackboard/BBDN-schema-sample" target="_blank" >Schema.XML (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-b2-examples-spring-in-b2s"><a href="/learn/b2/examples/spring-in-b2s" target="_self" >Spring in B2s</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-rest" ><a href="">REST</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-registry"><a href="/learn/rest/getting-started/registry" target="_self" >Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-releasing-integration"><a href="/learn/rest/getting-started/releasing-your-integration" target="_self" >Releasing your Integration</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            
+                                            <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-framework"><a href="/learn/rest/getting-started/framework" target="_self" >Framework</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-tutorials"><a href="/learn/rest/getting-started/tutorials" target="_self" >Tutorials</a></li>
+                                            
+                                            <li class="content" id="DBVA-dev-ami"><a href="/dvba/developer-ami" target="_self" >Development Test Site</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-group-quotas-rates"><a href="/learn/rest/admin/groups-quotas-rates" target="_self" >Group, Quotas, Rates</a></li>
+                                            
+                                            <li class="content" id="learn-rest-admin-prod-groups"><a href="/learn/rest/admin/production-groups" target="_self" >Production Groups</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-admin"><a href="">Admin</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-admin-cloud-registry"><a href="/learn/rest/admin/cloud-registry" target="_self" >Cloud Registry</a></li>
+                                            
+                                            <li class="content" id="learn-rest-gs-rest-and-learn"><a href="/learn/rest/getting-started/rest-and-learn" target="_self" >Rest and Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-rest-examples-csharpdemo"><a href="/learn/rest/examples/csharp-demo" target="_self" >C# Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-attach-demo"><a href="/learn/rest/examples/curl-attachments-demo" target="_self" >cURL attachments demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-curl-demo"><a href="/learn/rest/examples/curl-demo" target="_self" >cURL demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-golang-demo"><a href="/learn/rest/examples/golang-demo" target="_self" >GoLang demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-command-line"><a href="/learn/rest/examples/java-command-line" target="_self" >Java Command Line</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-java-demo"><a href="/learn/rest/examples/java-demo" target="_self" >Java Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-php-demo"><a href="/learn/rest/examples/php-demo" target="_self" >PHP Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-python-demo"><a href="/learn/rest/examples/python-demo" target="_self" >Python Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-ruby-demo"><a href="/learn/rest/examples/ruby-demo" target="_self" >Ruby Demo</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-angular-demo"><a href="https://github.com/blackboard/BBDN-REST-Angular-WithProxy" target="_blank" >Angular Demo (GitHub)</a></li>
+                                            
+                                            <li class="content" id="learn-rest-examples-nodejs-demo"><a href="https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node" target="_blank" >NodeJS Demo (GitHub)</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="rest-advanced"><a href="">Advanced</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-bbml"><a href="/learn/rest/advanced/bbml" target="_self" >BBML</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-content-hndlr"><a href="/learn/rest/advanced/contenthandler-datatypes" target="_self" >Content Handler Datatypes</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-merge-crosslist-courses"><a href="/learn/rest/advanced/merge-and-crosslist-courses" target="_self" >Merge and Crosslist Courses</a></li>
+                                            
+                                            <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-soap" ><a href="">SOAP</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="soap-examples"><a href="">Examples</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="learn-uef" ><a href="">UEF</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
+                                            
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="DBVA-dev-ami" ><a href="/dvba/developer-ami">Developer AMI</a></li>
+                            
+                            <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
+                            
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            
+                            <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="ally-group" ><a href="#"><i class="material-icons">picture_as_pdf</i>Ally</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            
+                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="community-group" ><a href="#"><i class="material-icons">assignment_ind</i>Community</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="community-getting-involved" ><a href="/community/getting-involved">Getting involved</a></li>
+                            
+                            <li class="content" id="community-contact-us" ><a href="/community/contact">Contact us</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="mobile-group" ><a href="#"><i class="material-icons">phone_iphone</i>Mobile</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="mobile-bbapp-students-launch" ><a href="/mobile/bbapp-students-launch-schema">Bbapp Students launch Schema</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="standards-group" ><a href="#"><i class="material-icons">lightbulb_outline</i>Standards</a>
+                    <ul>
+                    
+                        
+                            <li class="second-level" id="standards-caliper" ><a href="">Caliper</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-caliper-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-gs-getting-started"><a href="/standards/caliper/getting-started/getting-started-with-caliper" target="_self" >Getting Started with Caliper</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-assignables"><a href="/standards/caliper/events/assignable-events" target="_self" >Assignable Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-blogs"><a href="/standards/caliper/events/blog-events" target="_self" >Blog Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-views"><a href="/standards/caliper/events/view-events" target="_self" >View Events</a></li>
+                                            
+                                            <li class="content" id="standards-caliper-events-wikis"><a href="/standards/caliper/events/wiki-events" target="_self" >Wiki Events</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                            <li class="second-level" id="standards-lti" ><a href="">LTI</a>
+                                <ul>
+                                
+                                    <li class="third-level" id="standards-lti-getting-started"><a href="">Getting Started</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                            
+                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-tutorials"><a href="">Tutorials</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-develop-lti-adtge"><a href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self" >Develop LTI Advantage Solution</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
+                                            
+                                            <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                </ul>
+                            </li>
+                        
+                    
+                    </ul>
+            
+                <li class="first-level" id="partners-group" ><a href="#"><i class="material-icons">thumb_up</i>Partners</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                    
+                    </ul>
+            
+                <li class="first-level" id="blogs-group" ><a href="#"><i class="material-icons">chrome_reader_mode</i>Blogs</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            
+                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            
+                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                    
+                    </ul>
+            
+        </ul>
+    </div>
+</div>
+<div id="body_before_container"> 
+    
+            <main id="maincontent">
+                <h1 id="preparing-your-building-blocks-for-learn-saas-and-newer-learn-versions">Preparing Your Building Blocks For Learn SaaS and Newer Learn Versions</h1>
+
+<p>Blackboard Building Blocks have long been a staple in the Blackboard Learn
+platform. These Java Web Apps allow you to customize the workflow and
+experience that you and your faculty use to interact with the system.</p>
+
+<p>We realize that this is an important part of the Learn ecosystem, and so
+Blackboard Learn SaaS with the Original Experience will continue to support
+your Building Blocks going forward*****. That said, the architecture of the
+SaaS-delivered platform is dramatically different than that of the self- and
+managed-hosted servers you are used to. As a result, your Building Block will
+likely need to be modified to run in the new Blackboard.</p>
+
+<p><strong>The following sections list requirements that must be met for a B2 to function in a SaaS environment</strong>. For example, your B2 must be compiled with Java 8, the database may be Postgres so the best practice is to use Schema.xml, the shared content must be accessed as described below, etc. Many of these are also requirements for a B2 to function on Learn Q2 2016 (3000.x.x) and Q4 2016 (3100.x.x). The best practice is to code to meet all of these requirements, then your B2 will function on SaaS, Managed Hosted, and Self Hosted systems.</p>
+
+<p><strong>*Note:</strong> Building Blocks cannot surface content in an Ultra course, <strong>ever</strong>. B2s meant designed to work with Original Experience courses can continue to work in SaaS, provided they meet the requirements documented here. Ultra Courses surface content from the Content Market - which are built on Partner Cloud, or the LTI standard &amp; Blackboard Learn REST APIs.</p>
+
+<h2 id="apis">APIs</h2>
+
+<p>Only use the <a href="api-documentation">published
+APIs</a>. If it’s not published, it’s private. Our product development
+team is cleaning up and refactoring a lot of code. If you’re using private
+APIs, there is a good chance they will stop working. So, remove all use of
+private APIs. For example we’ve discovered that B2s that depend on
+<strong>DocumentManagerEx</strong> now fail in newer versions of Learn.
+<strong>DocumentManagerEx</strong> is private. Don’t use it. Eliminate the use of all
+private APIs.</p>
+
+<h2 id="database">Database</h2>
+
+<p>In SaaS, the database schema name will no longer be <strong>BBLEARN</strong> or
+<strong>bb_bb60</strong>. Your B2 code must determine the actual schema name if it has any
+dependency on the value. See <a href="https://community.blackboard.com/blogs/4/23">Bye Bye BBLEARN &amp; bb_bb60</a></p>
+
+<p>Also, in SaaS, the database is Postgres. If you’ve been testing your code on
+the Developer Virtual Machine, this isn’t that big of a deal. Schema.xml will
+continue to be supported as it is today. If you are providing SQL statements
+in the form of stored procedures, post_schema_updates, etc, you will just need
+to be sure to supply those files in postgres form, as well. These files will
+take the suffix, <strong>db-pgsql</strong>. If a self or managed-hosted client is migrating
+your B2 to SaaS via a “full database migration” be certain to read <a href="https://community.blackboard.com/blogs/4/24">SaaS
+Migrations - Sequences and Tables</a>.</p>
+
+<p>In addition, its important to note that Exceptions encountered during postgres
+transactions stop all processing. You must code to handle this occurrence. One
+approach is to create a save point before you start the transaction and roll
+back to that save point upon exception. Here’s a small sample demonstrating
+this.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Much of the error handling stripped for space</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="no">T</span> <span class="nf">withSavePoint</span><span class="o">(</span><span class="nc">Callable</span> <span class="n">c</span><span class="o">,</span> <span class="nc">Connection</span> <span class="n">con</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">SQLException</span>
+<span class="o">{</span>
+  <span class="nc">Savepoint</span> <span class="n">savepoint</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span> <span class="kc">null</span> <span class="o">!=</span> <span class="n">con</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">con</span><span class="o">.</span><span class="na">getAutoCommit</span><span class="o">()</span> <span class="o">)</span> <span class="o">{</span>
+      <span class="n">savepoint</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">setSavepoint</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="na">call</span><span class="o">();</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span> <span class="nc">SQLException</span> <span class="n">e</span> <span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span> <span class="n">con</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">savepoint</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">)</span> <span class="o">{</span>
+      <span class="n">con</span><span class="o">.</span><span class="na">rollback</span><span class="o">(</span> <span class="n">savepoint</span> <span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">throw</span> <span class="n">e</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Postgres handles timestamps differently. There are two types of timestamps:
+<strong>localtimestamp</strong> and <strong>clock_timestamp::timestamp</strong>. The <strong>localtimestamp</strong>
+returns the time at the start of the transaction. The
+<strong>clock_timestamp()::timestamp</strong> returns the actual current time. As a result,
+it is best practice to use <strong>clock_timestamp()::timestamp</strong> in your Building
+Block, as this matches the behavior of timestamps in other databases.</p>
+
+<p>Avoid the use of <strong>data-templates</strong> for management of objects that can be
+managed through the bb-manifest.xml file. This includes rows in tables like
+application, navigation_item, and entitlements. The use of data-templates both
+adds risk to live-upgrades and loses customizations (application status,
+entitlement-to-role mappings, etc.).</p>
+
+<h2 id="shared-content-folder">Shared Content Folder</h2>
+
+<p>In the Enterprise Blackboard Learn you are accustomed to developing for, the
+Building Block home lives in the shared content directory. For instance, if I
+wrote a building block and set my vendor ID to ‘bbdn’ and my plugin handle to
+‘my-b2’, my building block and all of its related files would live in
+<strong>blackboard/content/vi/BBLEARN/plugins/bbdn-my-b2</strong>, and this directory would
+exist once, in only one place, so changes were persisted to all application
+servers.</p>
+
+<p>In Learn SaaS, there are two building block homes. There is still the shared
+file system that is shared among the entire group of application servers, but
+there is also a local cache on each individual server. As a result, the
+Building Block would still reside in the shared directory, similar to
+<strong>blackboard/content/vi/BBLEARN/plugins/bbdn-my-b2</strong>, however the web app
+would live in the local cache on each server, in a directory similar to
+<strong>blackboard/cache/vi/BBLEARN/plugins/bbdn-my-b2</strong>.</p>
+
+<p>As a result of this change, several of the Plugin API methods have been
+modified to handle the dual-folder deployment.
+<strong>PlugInManager.getPlugInDir()</strong> and <strong>PlugInManager.getPluginsDirectory()</strong>
+can now only be used to access the read-only files from the exploded war in
+the cache folder. If you need to access the shared config folder for your
+Building Block, you can use <strong>PlugInUtil.getConfigDirectory()</strong>. Calling
+methods like <strong>ServletContent.getRealPath()</strong> will point to the cache folder,
+so be sure that any method you are calling that returns a path or a file is
+returning what you expect it to.</p>
+
+<p>As an example, with prior versions of Learn you could use the following code
+to write to a file in your plugin’s folder and create a configuration file:</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PlugInManager</span> <span class="py">manager</span> <span class="p">=</span> <span class="s">PlugInManagerFactory.getInstance();</span>
+<span class="err">File</span> <span class="py">myDir</span> <span class="p">=</span> <span class="s">manager.getPlugInDir( manager.getPlugIn( "myVendorId","myB2Handle" ) );</span>
+<span class="err">File</span> <span class="py">myConfigDir</span> <span class="p">=</span> <span class="s">new File( myDir, "config" );</span>
+<span class="err">File</span> <span class="py">myConfigFile</span> <span class="p">=</span> <span class="s">new File( myConfigDir, "config.txt" );</span>
+
+<span class="err">//</span> <span class="err">read/write</span> <span class="err">myConfigFile</span>
+</code></pre></div></div>
+
+<p>You will now need to re-write the above code code to look like the following:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">File</span> <span class="n">myConfigDir</span> <span class="o">=</span> <span class="nc">PlugInUtil</span><span class="o">.</span><span class="na">getConfigDirectory</span><span class="o">(</span> <span class="s">"myVendorId"</span><span class="o">,</span> <span class="s">"myB2Handle"</span><span class="o">);</span>
+<span class="nc">File</span> <span class="n">myConfigFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">myConfigDir</span><span class="o">,</span> <span class="err">“</span><span class="n">config</span><span class="o">.</span><span class="na">txt</span><span class="err">”</span><span class="o">);</span>
+
+<span class="c1">// read/write myConfigFile</span>
+</code></pre></div></div>
+
+<p>If you just need to read from a file that is included with in your Building
+Block, you can use the following code snippet to access the cached copy.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PlugInManager</span> <span class="n">manager</span> <span class="o">=</span> <span class="nc">PlugInManagerFactory</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="nc">File</span> <span class="n">myDir</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="na">getPlugInDir</span><span class="o">(</span> <span class="n">manager</span><span class="o">.</span><span class="na">getPlugIn</span><span class="o">(</span> <span class="s">"myVendorId"</span><span class="o">,</span><span class="s">"myB2Handle"</span> <span class="o">)</span> <span class="o">);</span>
+<span class="nc">File</span> <span class="n">myStaticDirectory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span> <span class="o">(</span><span class="n">myDir</span><span class="o">,</span> <span class="s">"webapp/myStaticStuff"</span><span class="o">);</span>
+
+<span class="c1">// read from myStaticDirectory - files as originally present in war file</span>
+</code></pre></div></div>
+
+<p>See the bb-config.properties section in <a href="dvba/developer-ami">Developer Virtual Machine - DVM</a> for how to configure your DVM to behave like Learn SaaS in regards to the
+shared content folder.</p>
+
+<p>Eventually, all write access to the shared folder will be phased out, and
+write access for logging will be limited to the log directory returned by
+PlugInUtil.getLogDirectory(). Prior to this change, a new way will be
+documented to achieve the same goal without writing directly to the backend of
+the server.</p>
+
+<h2 id="logging-changes">Logging Changes</h2>
+
+<p>In SaaS, logging is handled a bit differently, as clients will not have back-
+end access to the system. You can still log to the log directory, but those
+logs are redirected to Kibana so your Building Block won’t be able to read
+that log file. There will be access to the logs through the System Admin
+panel.</p>
+
+<p>In order to see your B2s logs in Kibana-Elasticsearch, the only SaaS interface
+for log files, your B2 must do the following:</p>
+
+<ol>
+  <li>Write the log files to the directory returned by <strong>blackboard.platform.plugin.PlugInUtil.getLogDirectory.</strong><a href="https://library.blackboard.com/ref/16ce28ed-bbca-4c63-8a85-8427e135a710/blackboard/platform/plugin/PlugInUtil.html"><strong>PlugInUtil</strong> (Building Blocks API 3000.1.0)</a>
+    <ol>
+      <li>Typically looks like **<blackboard home="">/logs/plugins/<vendorId>-<handle>/...**</handle></vendorId></blackboard></li>
+      <li>Read the API documentation on how to get write permission.</li>
+    </ol>
+  </li>
+  <li>Use this format, with four columns that are pipe separated:</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">2016</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">15</span> <span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span> <span class="o">|</span> <span class="no">DEBUG</span> <span class="o">|</span> <span class="mi">41</span><span class="o">:</span><span class="n">c</span><span class="o">.</span><span class="na">b</span><span class="o">.</span><span class="na">c</span><span class="o">.</span><span class="na">i</span><span class="o">.</span><span class="na">task</span><span class="o">.</span><span class="na">UsageReportingTask</span> <span class="o">|</span> <span class="nc">Generating</span> <span class="nc">Usage</span> <span class="nc">Report</span><span class="o">...</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">15</span> <span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span> <span class="o">|</span> <span class="no">ERROR</span> <span class="o">|</span> <span class="mi">68</span><span class="o">:</span><span class="n">o</span><span class="o">.</span><span class="na">s</span><span class="o">.</span><span class="na">s</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">MethodInvokingRunnable</span> <span class="o">|</span> <span class="nc">Invocation</span> <span class="n">of</span> <span class="n">method</span> <span class="err">'</span><span class="n">doUsageReport</span><span class="err">'</span> <span class="n">on</span> <span class="n">target</span> <span class="kd">class</span> <span class="err">...</span><span class="nc">failed</span>
+<span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">NullPointerException</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="n">at</span> <span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">consulting</span><span class="o">.</span><span class="na">internships</span><span class="o">.</span><span class="na">task</span><span class="o">.</span><span class="na">UsageReportingTask</span><span class="o">.</span><span class="na">getFirstTimeActivationDateModified</span><span class="o">(</span><span class="nc">UsageReportingTask</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">68</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>The b2 logging configuration in the logback.xml file that produces this log
+format is:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;appender</span> <span class="err">...</span> <span class="nt">&gt;</span>
+
+...
+
+<span class="nt">&lt;encoder&gt;</span>
+
+<span class="nt">&lt;pattern&gt;</span>%date{yyyy-MM-dd HH:mm:ss} | %-5level | %-45(%L:%logger{40}) |
+%m%n%ex{10}<span class="nt">&lt;/pattern&gt;</span>
+
+<span class="nt">&lt;/encoder&gt;</span>
+
+...
+
+<span class="nt">&lt;/appender&gt;</span>
+</code></pre></div></div>
+
+<p><strong><a href="https://github.com/mark-b-kauffman/bbdn-bblogbackb2">Sample logging code that works in a SaaS environment.</a></strong></p>
+
+<h2 id="statelessness">Statelessness</h2>
+
+<p>The Learn SaaS cloud architecture is built to the best practices of cloud
+computing. As such, in SaaS, Learn is stateless. As a result, you can no
+longer rely on <strong>HttpSession</strong> persisting across requests. As a result,
+Building Blocks that synchronize data on sessions will need to be refactored.
+You can still use <strong>BbSession.setGlobalKey()</strong> to store data, but you will
+need to be cognizant of the size of the data, as this is stored in the
+database.</p>
+
+<p>As an example, if you currently employ code like the following to store an
+object in the session:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">().</span><span class="na">setAttribute</span><span class="o">(</span> <span class="s">"myKey"</span><span class="o">,</span> <span class="s">"myValue"</span> <span class="o">);</span>
+<span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">().</span><span class="na">setAttribute</span><span class="o">(</span> <span class="s">"myObjectKey"</span><span class="o">,</span> <span class="n">myObject</span> <span class="o">);</span>
+</code></pre></div></div>
+
+<p>You will need to refactor to look like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ContextManagerFactory</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getContext</span><span class="o">().</span><span class="na">getSession</span><span class="o">().</span><span class="na">setGlobalKey</span><span class="o">(</span><span class="s">"myVendorId.myB2Handle.myKey"</span><span class="o">,</span> <span class="s">"myValue"</span> <span class="o">);</span>
+</code></pre></div></div>
+
+<p>Non-String values need to be serialized to save on the <strong>BbSession</strong> -
+refactor to avoid if at all possible.</p>
+
+<h2 id="java-11">Java 11</h2>
+
+<p>Blackboard Learn SaaS runs on Java 11, as of Learn 3800. As a result, Building Block that are to
+be installed in the cloud, or on 9.1 Q2 2020 or later, need to be built with
+Java 11. For more information see <a href="prepare-for-java11">8 steps to prepare for Java 11</a>.</p>
+
+<h2 id="tomcat-8">Tomcat 8</h2>
+
+<p>Tomcat 8 introduces a few new complexities to the Building Block development
+process. This move was an opportunity to re-imagine how the Learn application
+startup performance could be improved. This work has been extremely
+successful, but requires some refactoring of your code.</p>
+
+<h3 id="jsp-precompilation">JSP Precompilation</h3>
+
+<p>It is expected that going forward, all Building Blocks will precompile JSPs.
+This simple step will assure that your JSP files render properly in Blackboard
+Learn. All bundled Building Blocks are required to take this step, while
+currently optional, this could become mandatory in the future.</p>
+
+<p>This blog post describes one way to <a href="https://community/blackboard.com/blogs/4/25">precompile you Java Server Pages</a> when using Gradle.</p>
+
+<h3 id="bb-context-configproperties">bb-context-config.properties</h3>
+
+<p>Tomcat 8.5 is substantially more configurable in the way that you can
+implement <a href="https://tomcat.apache.org/tomcat-8.5-doc/config/jar-scanner.html">jar scanning</a>. This file lives in the WEB-INF directory of your Building Block
+and provides the following options:</p>
+
+<h4 id="comblackboardtomcatservletcontainerjarscannertldjars">com.blackboard.tomcat.servletcontainer.jarscanner.tldJars</h4>
+
+<p>Because you should be precompiling your JSP files, this will normally be left
+blank. If on-demand JSP compilation is used, this may be set to a Java regular
+expression of jar file names. You should only include the jar files containing
+the TLD files needed by the non-compiled JSP files. The patter can include the
+template variable <em>@CORE_TLD_PATTERN@</em>, which will resolve to a regular
+expression matching all Blackboard jar files containing TLDs.</p>
+
+<p>Here are a few examples:</p>
+
+<ul>
+  <li><strong>RECOMMENDED</strong>: Building Block uses several Blackboard Tag Libraries</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">tldJars</span><span class="o">=</span><span class="nd">@CORE_TLD_PATTERN</span><span class="err">@</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Default</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">tldJars</span><span class="o">=</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Building Block uses Struts and the bbNG Tags</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">tldJars</span><span class="o">=</span><span class="n">bb</span><span class="o">-</span>
+<span class="n">taglibs</span><span class="o">.</span><span class="na">jar</span><span class="o">|</span><span class="n">struts</span><span class="o">-</span><span class="n">taglib</span><span class="o">-.*</span><span class="err">\\</span><span class="o">.</span><span class="na">jar</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Building Block uses several Blackboard libraries and Struts</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">tldJars</span><span class="o">=</span><span class="nd">@CORE_TLD_PATTERN</span><span class="err">@</span><span class="o">|</span><span class="n">s</span>
+<span class="n">truts</span><span class="o">-</span><span class="n">taglib</span><span class="o">-.*</span><span class="err">\\</span><span class="o">.</span><span class="na">jar</span>
+</code></pre></div></div>
+
+<h4 id="comblackboardtomcatservletcontainerjarscannerpluggabilityjars">com.blackboard.tomcat.servletcontainer.jarscanner.pluggabilityJars</h4>
+
+<p>Set this to a Java regular expression of jar file names that contain web
+fragments, ServletContainerInitializers (SCIs), and other classes with
+annotations defined in the Servlet 3.1 specifications if they are used by the
+Building Block.The pattern can contain the template variable
+<em>@CORE_PLUGGABILITY_PATTERN@</em>, which will resolve to a regular expression that
+matches all Blackboard jar files containing such components.</p>
+
+<p>Here is an example:</p>
+
+<ul>
+  <li>A Building Block contains classes that implement Spring’s WebApplicationInitializer</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">pluggabilityJars</span><span class="o">=</span><span class="n">spring</span><span class="o">-</span>
+<span class="n">web</span><span class="o">-.*</span><span class="err">\\</span><span class="o">.</span><span class="na">jar</span>
+</code></pre></div></div>
+
+<h4 id="comblackboardtomcatservletcontainercontextcontainerscifilter">com.blackboard.tomcat.servletcontainer.context.containerSciFilter</h4>
+
+<p>This Java regular expression should list all SCIs in the CLASSPATH that are
+<strong>not</strong> used by the Building Block. The default value is <strong>^.*$</strong>, which
+matches ALL SCIs and assumes that the Building Block does not use any.</p>
+
+<p>Examples:</p>
+
+<ul>
+  <li>Building Block does not use SCIs and does not have any uncompiled jsps</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">containerSciFilter</span><span class="o">=^.*</span><span class="err">$</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If for some reason, your JSP is not compiled, use</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">containerSciFilter</span><span class="o">=^.*(?&lt;!</span><span class="err">\\</span><span class="o">.</span><span class="na">JasperInitializer</span><span class="o">)</span><span class="err">$</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If the JSPs are compiled, but your code relies on classes that implement Spring’s WebAppplicationInitializer</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">containerSciFilter</span><span class="o">=^.*(?&lt;!</span><span class="err">\\</span><span class="o">.</span><span class="na">SpringServletContainerInitializer</span><span class="o">)</span><span class="err">$</span>
+</code></pre></div></div>
+
+<h4 id="comblackboardtomcatservletcontainercontextprocesstldsonstartup">com.blackboard.tomcat.servletcontainer.context.processTldsOnStartup</h4>
+
+<p>This is not required to be in the bb-context-config.properties file. You would
+include this and set it to true only if the Building Block or one of the jar
+files it contains defines a listener in a TLD that the Building Block
+requires.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">processTldsOnStartup</span><span class="o">=</span><span class="kc">true</span>
+</code></pre></div></div>
+
+<p>Here is a final example of a typical /WEB-INF/bb-context-config.properties
+file:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">tldJars</span><span class="o">=</span>
+<span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">pluggabilityJars</span><span class="o">=</span>
+<span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">containerSciFilter</span><span class="o">=^.*</span><span class="err">$</span>
+</code></pre></div></div>
+
+<p>If you see errors like:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Unable</span> <span class="n">to</span> <span class="n">compile</span> <span class="o">&lt;</span><span class="n">myclass</span><span class="o">&gt;</span> <span class="n">root</span> <span class="nl">cause:</span>
+<span class="no">INFO</span> <span class="o">|</span> <span class="n">jvm</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">2018</span><span class="o">/</span><span class="mo">02</span><span class="o">/</span><span class="mo">06</span> <span class="mo">00</span><span class="o">:</span><span class="mi">51</span><span class="o">:</span><span class="mi">17</span> <span class="o">|</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">NullPointerException</span>
+<span class="no">INFO</span> <span class="o">|</span> <span class="n">jvm</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">2018</span><span class="o">/</span><span class="mo">02</span><span class="o">/</span><span class="mo">06</span> <span class="mo">00</span><span class="o">:</span><span class="mi">51</span><span class="o">:</span><span class="mi">17</span> <span class="o">|</span> <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">JspCompilationContex</span>
+<span class="n">t</span><span class="o">.</span><span class="na">getTldResourcePath</span><span class="o">(</span><span class="nc">JspCompilationContext</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">566</span><span class="o">)</span>
+<span class="no">INFO</span> <span class="o">|</span> <span class="n">jvm</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">2018</span><span class="o">/</span><span class="mo">02</span><span class="o">/</span><span class="mo">06</span> <span class="mo">00</span><span class="o">:</span><span class="mi">51</span><span class="o">:</span><span class="mi">17</span> <span class="o">|</span> <span class="n">at</span>
+<span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">compiler</span><span class="o">.</span><span class="na">Parser</span><span class="o">.</span><span class="na">parseTaglibDirective</span>
+</code></pre></div></div>
+
+<p>try adding making your bb-config-context.properties file look like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">tldJars</span><span class="o">=</span><span class="nd">@CORE_TLD_PATTERN</span><span class="err">@</span>
+<span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">jarscanner</span><span class="o">.</span><span class="na">pluggabilityJars</span><span class="o">=</span>
+<span class="n">com</span><span class="o">.</span><span class="na">blackboard</span><span class="o">.</span><span class="na">tomcat</span><span class="o">.</span><span class="na">servletcontainer</span><span class="o">.</span><span class="na">context</span><span class="o">.</span><span class="na">containerSciFilter</span><span class="o">=^.*(?&lt;!</span><span class="err">\\</span><span class="o">.</span><span class="na">JasperInitializer</span><span class="o">)</span><span class="err">$</span>
+</code></pre></div></div>
+
+<h2 id="webxml">web.xml</h2>
+
+<p>Your Building Block should be using Web App version 3.0, and requires
+metadata-complete to be set. By default and in most cases, this should be set
+to <strong>true</strong> for best performance. Set this to <strong>false</strong> ONLY if your Building
+Block uses annotation-based web_xml extensions as defined in the Servlet 3.1
+specification or if your jar files should be scanned for web-fragment.xml.
+These are some of the annotations that require the metadata-complete attribute
+to be set to false:</p>
+
+<ul>
+  <li>WebServlet</li>
+  <li>WebFilter</li>
+  <li>WebInitParam</li>
+  <li>WebListener</li>
+  <li>MultipartConfig</li>
+  <li>ServletSecurity</li>
+  <li>HttpConstraint</li>
+  <li>HttpMethodConstraint</li>
+  <li>DeclareRoles</li>
+  <li>EJB</li>
+  <li>EJBs</li>
+  <li>Resource</li>
+  <li>Resources</li>
+  <li>PersistenceContext</li>
+  <li>PersistentContexts</li>
+  <li>PersistenceUnit</li>
+  <li>PersistenceUnits</li>
+  <li>PostConstruct</li>
+  <li>PreDestroy</li>
+  <li>RunAs</li>
+  <li>WebServiceRef</li>
+  <li>WebServiceRefs</li>
+</ul>
+
+<p>Some of these annotations, like PostContruct, PreDestroy, and Resource, only
+require the setting to be false if they are placed in an object whose life-
+cycle is managed by the container, such as a Servlet or a Listener.</p>
+
+<p>Here is an example of what this will look like in your web.xml file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;web-app</span> 
+  <span class="na">xmlns=</span><span class="s">"[http://java.sun.com/xml/ns/javaee](https://community.blackboa
+rd.com/external-link.jspa?url=http%3A//java.sun.com/xml/ns/javaee)"</span>
+  <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-
+app_3_0.xsd"</span>
+
+<span class="na">version=</span><span class="s">"3.0"</span> <span class="na">metadata-complete=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>In addition to metadata-complete, another new tag should be included at the
+end of the web.xml file: absolute-ordering. Generally, this should be an empty
+tag for best performance. If web fragments are used, the ones that are
+required should be listed explicitly her to to avoid unnecessary
+initialization of other unused fragments in the class path.</p>
+
+<p>For example:</p>
+
+<ul>
+  <li>The Building Block does NOT use web fragments</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;absolute-ordering/&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>The Building block uses web fragments from the spring-web jar</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;absolute-ordering&gt;</span>
+  <span class="nt">&lt;name&gt;</span>spring_web<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;/absolute-ordering&gt;</span>
+</code></pre></div></div>
+
+<h2 id="faster-startup">Faster Startup</h2>
+
+<p>When declaring servlets in web.xml, the <load-on-startup> tag allows you to
+decide when a servlet is loaded into memory. The default value is to load at
+first access, but that is not always appropriate for every situation. The
+following table illustrates the tags and their meanings. Be sure to select the
+one that is right for your Building Block.</load-on-startup></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tag Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><load-on-startup>1</load-on-startup></td>
+      <td>Load the servlet during system initialization.</td>
+    </tr>
+    <tr>
+      <td><load-on-startup>-1</load-on-startup></td>
+      <td>Load the servlet the first time it is accessed.</td>
+    </tr>
+    <tr>
+      <td><load-on-startup>-9876</load-on-startup></td>
+      <td>Load the servlet immediately following the Learn system initialization</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Be sure to evaluate your individual integration before deferring your startup.
+If this or another Building Block depends on the servlet code being registered
+or if this servlet must be live prior to the system starting for user access,
+deferring startup is not appropriate.</p>
+
+<p>Deferring all of your servlets to load immediately following system startup
+will definitely make the system available to users more quickly, though one
+should note that those user requests might be a bit slower as all of the
+servlets are starting. In addition, it is important to note that should a user
+access a servlet that has been deferred and not yet started, it will load at
+that time, so there is no risk of a servlet being unavailable should the
+process still be underway.</p>
+
+<p>If you are executing other startup logic inside something such as a
+ServletContextListener’s contextInitialized method and that logic is not 100%
+required to be executed before user activity then please defer it by calling
+ContextInitThreadRunner.startThread(Thread) or .startDaemonThread(Thread).</p>
+
+<p>Here is a snippet from the Javadoc explaining this method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+
+* This method can be used in place of thread.start() when you are starting a thread typically during system startup
+
+* and you do not absolutely NEED that thread to start immediately. Once the system has completed normal startup of
+
+* all webapps (b2s) and is ready to accept requests, any threads registered via this method will be started. &lt;br&gt;
+
+* &lt;br&gt;
+
+* It is safe to call this at any point in time though - if the server has already started then this will merely start
+* the thread.&lt;br&gt;`
+
+* &lt;br&gt;
+
+* The reason we are doing this is to make sure all resources can be
+dedicated to pure startup tasks and not diverted
+
+* to 'background' activity, thus getting the system to a ready state a bit
+faster.
+
+*/</span>
+</code></pre></div></div>
+
+<h2 id="url-encoding">URL Encoding</h2>
+
+<p>Tomcat 8.5.12 and later releases of Tomcat 8.5.x by default does not allow
+curly braces ( { } ) or vertical bars, often referred to as pipes ( | ) in
+URLs. For backward compatibility, <a href="https://tomcat.apache.org/tomcat-8.5-doc/config/systemprops.html">Tomcat provides a way to override this
+behavior</a> by allowing
+a system property tomcat.util.http.parser.HttpParser.requestTargetAllow to be
+defined. Please be advised that this exposes the application to a <a href="https://nvd.nist.gov/vuln/detail/CVE-2016-6816">known
+security issue</a>.</p>
+
+<p>Future versions of Tomcat may not support this override. Therefore, all B2s
+must url-encode these characters. For example, an URL like <code class="language-plaintext highlighter-rouge">http://myuniversity.blackboard.com/webapps/myb2/appController?options={x|y}</code> must be written by the application as <code class="language-plaintext highlighter-rouge">http://myuniversity.blackboard.com/webapps/myb2/appController?options=%7bx%7cy%7d</code>. Otherwise, Tomcat will reject the request.</p>
+
+<h2 id="permissions">Permissions</h2>
+
+<p>As Blackboard continues to modernize the Blackboard Learn platform and move
+services out of the Learn code line and into microservices, the need to secure
+the application from both accidental and malicious actions, the properties
+granted to Building Block integrations is necessarily tightening. This is
+being addressed in a phased manner, with the intent of providing third-party
+developers ample runway for adjusting to the new restrictions. As new
+restrictions are added, this page will list them, so be sure you are following
+this page to receive updates.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>Mitigating Factors</th>
+      <th>Current Action**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>java.security.AllPermission</td>
+      <td> </td>
+      <td>Filtered Out</td>
+    </tr>
+    <tr>
+      <td>java.lang.RuntimePermission</td>
+      <td>createSecurityManager, setSecurityManager</td>
+      <td>Filtered Out</td>
+    </tr>
+    <tr>
+      <td>java.lang.RuntimePermission</td>
+      <td>action implying createSecurityManager or setSecurityManager</td>
+      <td>Warning Message</td>
+    </tr>
+    <tr>
+      <td>java.util.PropertyPermission</td>
+      <td>write</td>
+      <td>Warning Message</td>
+    </tr>
+    <tr>
+      <td>java.io.FilePermission</td>
+      <td>ALL FILES</td>
+      <td>Warning Message</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Many Building Blocks rely on the ALL FILES permission for writing to the file
+system. This will be filtered out soon. The Building Block should request
+explicit file system permissions and utilize the advice in this guide when
+writing to log files and config directories. To illustrate the change, here is
+an example of a bad permission and a good permission for writing to a log file
+from a Building Block.</p>
+
+<h4 id="bad">BAD</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">permission</span> <span class="n">type</span><span class="o">=</span><span class="s">"java.io.FilePermission"</span><span class="n">name</span><span class="o">=</span><span class="s">"&amp;lt;&amp;lt;ALLFILES&amp;gt;&amp;gt;"</span> <span class="n">actions</span><span class="o">=</span><span class="s">"read,write,delete,wxecute"</span><span class="o">/&gt;</span>
+</code></pre></div></div>
+
+<h4 id="good">GOOD</h4>
+<p>( A couple examples. See <a href="https://community.blackboard.com/blogs/4/26" target="_blank">ALL FILES No More</a> for a full set.)</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">permission</span> <span class="n">type</span><span class="o">=</span><span class="s">"java.io.FilePermission"</span> <span class="n">name</span><span class="o">=</span><span class="s">"BB_HOME/-"</span> <span class="n">actions</span><span class="o">=</span><span class="s">"read,write,delete"</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">permission</span> <span class="n">type</span><span class="o">=</span><span class="s">"java.io.FilePermission"</span> <span class="n">name</span><span class="o">=</span><span class="s">"BB_HOME/logs/"</span> <span class="n">actions</span><span class="o">=</span><span class="s">"read,write,delete"</span><span class="o">/&gt;</span>
+</code></pre></div></div>
+
+<h2 id="original-ui">Original UI</h2>
+
+<p>Original courses run in an iframe on Learn SaaS. This shouldn’t affect your
+Building Block, except in the two following cases:</p>
+
+<ul>
+  <li>If you set <strong>top.document.location</strong> or <strong>top.location.href</strong> or any other similar settings that change the top page for the browser, your Building Block will not display properly. You can use <strong>window.location</strong> instead.</li>
+  <li>HTML form tags with <strong>target=”_top”</strong>, or <strong>target=”_blank”</strong> will break out of the Ultra Original course peek panel. Change these to <strong>target=”_self”</strong>.</li>
+  <li>To meet accepted best practices in web design, there is a new maximum browser width of <strong>1920px</strong>. Make sure you plan accordingly.</li>
+  <li>B2s using the bbUI and bbData tag libraries should be refactored were at all possible to use bbNG.</li>
+</ul>
+
+<h2 id="ultra-ui">Ultra UI</h2>
+
+<p>There are currently no extension points for Building Blocks in the Ultra UI.</p>
+
+<h2 id="continuous-delivery">Continuous Delivery</h2>
+
+<p>Blackboard strives to deliver updates every two weeks. As a result, you should
+be using only public APIs whenever possible, as the continuous delivery model,
+coupled with the possibility of undocumented private API changes without
+warning, makes using private APIs extremely risky.</p>
+
+<h2 id="installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</h2>
+
+<p>There is no way to install a Building Block in Learn SaaS, regardless of the
+User Interface you are using. If you have licensed Learn SaaS Plus or
+Advantage, you do have the ability to install Building Blocks, but you must
+work with support to schedule the installation</p>
+
+<h2 id="update-a-building-block-for-tinymce-5">Update a Building Block for TinyMCE 5</h2>
+
+<p>In Learn 3900.X we intend to implement an updated content editor, TinyMCE 5, in the Original Course View and Original Experience of Learn. (*Forward-looking statement applies.) This editor changes certain patterns of UI with more of them living in an overlay modal rather than pop-up window after pop-up window. This change has led to required changes that are specific to B2s that have a Mashup. Cancel buttons in these mashups that expect to close a window will actually now need to close on overlay modal. The overlay modal will also include a close action button, an “x” in the interface, which will also work to close the window in case the cancel button doesn’t work; but if a cancel button in a mashup B2 is going to continue to work, the code will need to be updated.</p>
+
+<p>The code below needs to be added for the cancel button. This code assumes that a B2 is being designed that is compatible with both the new editor and the older one, Learn v 3900.x vs v3800.x and earlier.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span> <span class="n">parent</span> <span class="o">&amp;&amp;</span> <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span> <span class="o">&amp;&amp;</span>
+     <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span><span class="o">.</span><span class="na">activeEditor</span> <span class="o">&amp;&amp;</span>
+     <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span><span class="o">.</span><span class="na">activeEditor</span><span class="o">.</span><span class="na">windowManager</span> <span class="o">)</span>
+<span class="o">{</span>  
+  <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span><span class="o">.</span><span class="na">activeEditor</span><span class="o">.</span><span class="na">windowManager</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="k">else</span>
+<span class="o">{</span>
+  <span class="c1">// Call the JavaScript you currently use for Cancel here.</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>If the B2 will only be compatible with the updated editor and not backwards compatible, the else section isn’t required:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span> <span class="n">parent</span> <span class="o">&amp;&amp;</span> <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span> <span class="o">&amp;&amp;</span>
+     <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span><span class="o">.</span><span class="na">activeEditor</span> <span class="o">&amp;&amp;</span>
+     <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span><span class="o">.</span><span class="na">activeEditor</span><span class="o">.</span><span class="na">windowManager</span> <span class="o">)</span>
+<span class="o">{</span>  
+  <span class="n">parent</span><span class="o">.</span><span class="na">tinymce</span><span class="o">.</span><span class="na">activeEditor</span><span class="o">.</span><span class="na">windowManager</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>*Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.</p>
+
+            </main>
+            <div id="third-column-menu">
+                <div class="col hide-on-small-only m3 l2">
+                    <ul class="section table-of-contents">
+                        <div id="table-of-contents">
+                            <div id="table-of-contents">
+                                <ul>
+  <li><a href="#apis">APIs</a></li>
+  <li><a href="#database">Database</a></li>
+  <li><a href="#shared-content-folder">Shared Content Folder</a></li>
+  <li><a href="#logging-changes">Logging Changes</a></li>
+  <li><a href="#statelessness">Statelessness</a></li>
+  <li><a href="#java-11">Java 11</a></li>
+  <li><a href="#tomcat-8">Tomcat 8</a>
+    <ul>
+      <li><a href="#jsp-precompilation">JSP Precompilation</a></li>
+      <li><a href="#bb-context-configproperties">bb-context-config.properties</a></li>
+    </ul>
+  </li>
+  <li><a href="#webxml">web.xml</a></li>
+  <li><a href="#faster-startup">Faster Startup</a></li>
+  <li><a href="#url-encoding">URL Encoding</a></li>
+  <li><a href="#permissions">Permissions</a></li>
+  <li><a href="#original-ui">Original UI</a></li>
+  <li><a href="#ultra-ui">Ultra UI</a></li>
+  <li><a href="#continuous-delivery">Continuous Delivery</a></li>
+  <li><a href="#installing-building-blocks-in-learn-saas">Installing Building Blocks in Learn SaaS</a></li>
+  <li><a href="#update-a-building-block-for-tinymce-5">Update a Building Block for TinyMCE 5</a></li>
+</ul>
+
+                              </div>
+                          </div>
+                    </ul>
+                  </div>
+            </div>  
+</div>
+<div class="clearfix"></div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Blackboard Dev Docs</h5>
+          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
+            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
+            <h5 class="white-text">Community</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
+              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick API Access</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">REST Terms and Conditions</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
+            <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Blackboard, Inc
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

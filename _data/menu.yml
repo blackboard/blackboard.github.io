@@ -1,0 +1,694 @@
+- main_item: Learn
+  main_item_icon: school
+  id: learn-group
+  type: menu
+  sub_item :
+
+    - submenu_item: B2
+      id: learn-b2
+      type: menu
+      subsubmenu:
+
+        - subsubmenu_item: Getting Started
+          id: b2-getting-started
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Introduction
+              subsubmenu_content_url: /learn/b2/getting-started/intro
+              id: learn-b2-gs-intro
+              target: _self
+            - subsubmenu_content_name: First Steps
+              subsubmenu_content_url: /learn/b2/getting-started/first-steps
+              id: learn-b2-gs-first-steps
+              target: _self
+            - subsubmenu_content_name: Developent life cycle
+              subsubmenu_content_url: /learn/b2/getting-started/dev-life-cycle
+              id: learn-b2-gs-dev-live-cycle
+              target: _self
+            - subsubmenu_content_name: API Overview
+              subsubmenu_content_url: /learn/b2/getting-started/api-overview
+              id: learn-b2-gs-api-over
+              target: _self
+            - subsubmenu_content_name: API Documentation
+              subsubmenu_content_url: /learn/b2/getting-started/api-documentation
+              id: learn-b2-gs-api-doc
+              target: _self
+            - subsubmenu_content_name: Starter B2
+              subsubmenu_content_url: /learn/b2/getting-started/starter-b2
+              id: learn-b2-gs-starter-b2
+              target: _self
+            - subsubmenu_content_name: FAQs
+              subsubmenu_content_url: /learn/b2/getting-started/faq
+              id: learn-b2-gs-faqs
+              target: _self
+            - subsubmenu_content_name: Versioning Rosetta Stone
+              subsubmenu_content_url: /learn/b2/getting-started/rosetta-stone
+              id: learn-b2-gs-rosetta-stone
+              target: _self
+
+        - subsubmenu_item: Advanced
+          id: b2-advanced
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Dynamic Rendering
+              subsubmenu_content_url: /learn/b2/advanced/dynamic-rendering-with-template-variables
+              id: learn-b2-advced-dynamic-render
+              target: _self
+            - subsubmenu_content_name: Event driven API
+              subsubmenu_content_url: /learn/b2/advanced/event-driven-api
+              id: learn-b2-advced-event-driven-api
+              target: _self
+            - subsubmenu_content_name: Java Permissions
+              subsubmenu_content_url: /learn/b2/advanced/java-permissions
+              id: learn-b2-advced-java-permissions
+              target: _self
+
+        - subsubmenu_item: Resources
+          id: b2-resources
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: First project using gradle and Git
+              subsubmenu_content_url: /learn/b2/resources/first-project-using-gradle-and-git
+              id: learn-b2-resources-first-project-gradle
+              target: _self
+            - subsubmenu_content_name: Java 11 FAQs
+              subsubmenu_content_url: /learn/b2/resources/java11-faq
+              id: learn-b2-resources-java-11
+              target: _self
+            - subsubmenu_content_name: Prepare for Java 11
+              subsubmenu_content_url: /learn/b2/resources/prepare-for-java11
+              id: learn-b2-resources-prepare-java-11
+              target: _self
+            - subsubmenu_content_name: Preparing for Q2-2016
+              subsubmenu_content_url: /learn/b2/resources/preparing-for-learn-q2-2016
+              id: learn-b2-resources-prep-learn-q2
+              target: _self
+            - subsubmenu_content_name: Moving to SaaS and new Learn versions
+              subsubmenu_content_url: /learn/b2/resources/preparing-for-saas-and-new-learn-versions
+              id: learn-b2-resources-moving-to-saas
+              target: _self
+            - subsubmenu_content_name: Enabling remote debugging
+              subsubmenu_content_url: /learn/b2/resources/enabling-remote-debugging
+              id: learn-b2-resources-enable-rem-debug
+              target: _self
+            - subsubmenu_content_name: Useful Links
+              subsubmenu_content_url: /learn/b2/resources/useful-links
+              id: learn-b2-resources-useful-links
+              target: _self
+            - subsubmenu_content_name: Scan tool for Learn SaaS
+              subsubmenu_content_url: /learn/b2/resources/scan-tool-learn-saas
+              id: learn-b2-resources-scan-tool
+              target: _self
+
+
+        - subsubmenu_item: Best Practices
+          id: b2-best-practices
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: Code Quality
+              subsubmenu_content_url: /learn/b2/best-practices/code-quality
+              id: learn-b2-bp-code-quality
+              target: _self
+            - subsubmenu_content_name: Developing using maven
+              subsubmenu_content_url: /learn/b2/best-practices/develop-using-maven-repository
+              id: learn-b2-bp-dev-using-maven
+              target: _self
+            - subsubmenu_content_name: Secure Coding Practices
+              subsubmenu_content_url: /learn/b2/best-practices/secure-coding-practices
+              id: learn-b2-bp-secure-coding-practices
+              target: _self
+            - subsubmenu_content_name: Security
+              subsubmenu_content_url: /learn/b2/best-practices/security
+              id: learn-b2-bp-security
+              target: _self
+
+        - subsubmenu_item: OpenDB
+          id: b2-opendb
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: Creating database objects
+              subsubmenu_content_url: /learn/b2/opendb/creating-database-objects
+              id: learn-b2-opendb-creatingdb-object
+              target: _self
+            - subsubmenu_content_name: Intro to OpenDB
+              subsubmenu_content_url: /learn/b2/opendb/intro-to-opendb
+              id: learn-b2-opendb-intro-to-opendb
+              target: _self
+            - subsubmenu_content_name: Schema Definitions
+              subsubmenu_content_url: /learn/b2/opendb/schema-definitions
+              id: learn-b2-opendb-schema-def
+              target: _self
+            - subsubmenu_content_name: Schema XML
+              subsubmenu_content_url: /learn/b2/opendb/schema-xml
+              id: learn-b2-opendb-schema-xml
+              target: _self
+
+        - subsubmenu_item: Examples
+          id: b2-examples
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: Course user and Enrollment data
+              subsubmenu_content_url: /learn/b2/examples/course-user-and-enrollment-data
+              id: learn-b2-examples-course-user-enrollment
+              target: _self
+            - subsubmenu_content_name: Schema.XML (GitHub)
+              subsubmenu_content_url: https://github.com/blackboard/BBDN-schema-sample
+              id: learn-b2-examples-schema-xml
+              target: _blank
+            - subsubmenu_content_name: Spring in B2s
+              subsubmenu_content_url: /learn/b2/examples/spring-in-b2s
+              id: learn-b2-examples-spring-in-b2s
+              target: _self
+
+    - submenu_item: REST
+      id: learn-rest
+      type: menu
+      subsubmenu:
+
+        - subsubmenu_item: Getting Started
+          id: rest-getting-started
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: First steps
+              subsubmenu_content_url: /learn/rest/getting-started/first-steps
+              id: learn-rest-gs-first-steps
+              target: _self
+            - subsubmenu_content_name: Basic Authentication
+              subsubmenu_content_url: /learn/rest/getting-started/basic-authentication
+              id: learn-rest-gs-basic-auth
+              target: _self
+            - subsubmenu_content_name: Registry
+              subsubmenu_content_url: /learn/rest/getting-started/registry
+              id: learn-rest-gs-registry
+              target: _self
+            - subsubmenu_content_name: Releasing your Integration
+              subsubmenu_content_url: /learn/rest/getting-started/releasing-your-integration
+              id: learn-rest-gs-releasing-integration
+              target: _self
+            - subsubmenu_content_name: Three-Legged OAuth
+              subsubmenu_content_url: /learn/rest/getting-started/3lo
+              id: learn-rest-gs-3lo
+              target: _self
+            - subsubmenu_content_name: API
+              subsubmenu_content_url: /learn/rest/getting-started/api
+              id: learn-rest-gs-api
+              target: _self
+            - subsubmenu_content_name: Developer Portal
+              subsubmenu_content_url: /learn/rest/getting-started/developer-portal
+              id: learn-rest-dev-portal
+              target: _self
+            - subsubmenu_content_name: Framework
+              subsubmenu_content_url: /learn/rest/getting-started/framework
+              id: learn-rest-gs-framework
+              target: _self
+            - subsubmenu_content_name: Tutorials
+              subsubmenu_content_url: /learn/rest/getting-started/tutorials
+              id: learn-rest-gs-tutorials
+              target: _self
+            - subsubmenu_content_name: Development Test Site
+              subsubmenu_content_url: /dvba/developer-ami
+              id: DBVA-dev-ami
+              target: _self
+            - subsubmenu_content_name: Group, Quotas, Rates
+              subsubmenu_content_url: /learn/rest/admin/groups-quotas-rates
+              id: learn-rest-admin-group-quotas-rates
+              target: _self
+            - subsubmenu_content_name: Production Groups
+              subsubmenu_content_url: /learn/rest/admin/production-groups
+              id: learn-rest-admin-prod-groups
+              target: _self
+
+        - subsubmenu_item: Admin
+          id: rest-admin
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Cloud Registry
+              subsubmenu_content_url: /learn/rest/admin/cloud-registry
+              id: learn-rest-admin-cloud-registry
+              target: _self
+            - subsubmenu_content_name: Rest and Learn
+              subsubmenu_content_url: /learn/rest/getting-started/rest-and-learn
+              id: learn-rest-gs-rest-and-learn
+              target: _self
+        
+        - subsubmenu_item: Examples
+          id: rest-examples
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: C# Demo
+              subsubmenu_content_url: /learn/rest/examples/csharp-demo
+              id: learn-rest-examples-csharpdemo
+              target: _self
+            - subsubmenu_content_name: cURL attachments demo
+              subsubmenu_content_url: /learn/rest/examples/curl-attachments-demo
+              id: learn-rest-examples-curl-attach-demo
+              target: _self
+            - subsubmenu_content_name: cURL demo
+              subsubmenu_content_url: /learn/rest/examples/curl-demo
+              id: learn-rest-examples-curl-demo
+              target: _self
+            - subsubmenu_content_name: GoLang demo
+              subsubmenu_content_url: /learn/rest/examples/golang-demo
+              id: learn-rest-examples-golang-demo
+              target: _self
+            - subsubmenu_content_name: Java Command Line
+              subsubmenu_content_url: /learn/rest/examples/java-command-line
+              id: learn-rest-examples-java-command-line
+              target: _self
+            - subsubmenu_content_name: Java Demo
+              subsubmenu_content_url: /learn/rest/examples/java-demo
+              id: learn-rest-examples-java-demo
+              target: _self
+            - subsubmenu_content_name: PHP Demo
+              subsubmenu_content_url: /learn/rest/examples/php-demo
+              id: learn-rest-examples-php-demo
+              target: _self
+            - subsubmenu_content_name: Python Demo
+              subsubmenu_content_url: /learn/rest/examples/python-demo
+              id: learn-rest-examples-python-demo
+              target: _self
+            - subsubmenu_content_name: Ruby Demo
+              subsubmenu_content_url: /learn/rest/examples/ruby-demo
+              id: learn-rest-examples-ruby-demo
+              target: _self
+            - subsubmenu_content_name: Angular Demo (GitHub)
+              subsubmenu_content_url: https://github.com/blackboard/BBDN-REST-Angular-WithProxy
+              id: learn-rest-examples-angular-demo
+              target: _blank
+            - subsubmenu_content_name: NodeJS Demo (GitHub)
+              subsubmenu_content_url: https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node
+              id: learn-rest-examples-nodejs-demo
+              target: _blank
+
+        - subsubmenu_item: Advanced
+          id: rest-advanced
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: SOAP to REST Mapping
+              subsubmenu_content_url: /learn/soap/getting-started/soap-to-rest-mapping
+              id: learn-soap-gs-soap-to-rest
+              target: _self
+            - subsubmenu_content_name: BBML
+              subsubmenu_content_url: /learn/rest/advanced/bbml
+              id: learn-rest-advanced-bbml
+              target: _self
+            - subsubmenu_content_name: Content Handler Datatypes
+              subsubmenu_content_url: /learn/rest/advanced/contenthandler-datatypes
+              id: learn-rest-advanced-content-hndlr
+              target: _self
+            - subsubmenu_content_name: Merge and Crosslist Courses
+              subsubmenu_content_url: /learn/rest/advanced/merge-and-crosslist-courses
+              id: learn-rest-advanced-merge-crosslist-courses
+              target: _self
+            - subsubmenu_content_name: Ultra Assignments
+              subsubmenu_content_url: /learn/rest/advanced/ultra-assignments
+              id: learn-rest-advanced-ultra-assignments
+              target: _self
+
+
+    - submenu_item: SOAP
+      id: learn-soap
+      type: menu
+      subsubmenu:
+
+        - subsubmenu_item: Getting Started
+          id: soap-getting-started
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: First Steps
+              subsubmenu_content_url: /learn/soap/getting-started/first-steps
+              id: learn-soap-gs-first-steps
+              target: _self
+            - subsubmenu_content_name: Introduction
+              subsubmenu_content_url: /learn/soap/getting-started/introduction
+              id: learn-soap-gs-intro
+              target: _self
+            - subsubmenu_content_name: Proxy Tools
+              subsubmenu_content_url: /learn/soap/getting-started/proxy-tools
+              id: learn-soap-gs-proxy-tools
+              target: _self
+            - subsubmenu_content_name: SOAP to REST Mapping
+              subsubmenu_content_url: /learn/soap/getting-started/soap-to-rest-mapping
+              id: learn-soap-gs-soap-to-rest
+              target: _self
+            - subsubmenu_content_name: Web Services
+              subsubmenu_content_url: /learn/soap/getting-started/web-services
+              id: learn-soap-gs-web-services
+              target: _self
+            - subsubmenu_content_name: About Web Services Sample Code
+              subsubmenu_content_url: /learn/soap/getting-started/about-web-services-sample-code
+              id: learn-soap-gs-about-web-services-sc
+              target: _self
+
+        - subsubmenu_item: Tutorials
+          id: soap-tutorials
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Build a Sample client using C#
+              subsubmenu_content_url: /learn/soap/tutorials/build-sample-client-csharp
+              id: learn-soap-tutorials-build-a-sample-client-c
+              target: _self
+            - subsubmenu_content_name: Build a Sample library using C#
+              subsubmenu_content_url: /learn/soap/tutorials/build-sample-library-csharp
+              id: learn-soap-tutorials-build-a-sample-library-c
+              target: _self
+            - subsubmenu_content_name: Build a Java Client library
+              subsubmenu_content_url: /learn/soap/tutorials/java-client-library
+              id: learn-soap-tutorials-build-a-java-client
+              target: _self
+
+        - subsubmenu_item: Examples
+          id: soap-examples
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Course announcements using Python
+              subsubmenu_content_url: /learn/soap/examples/course-announcements-using-python
+              id: learn-soap-examples-course-announcements-py
+              target: _self
+            - subsubmenu_content_name: Course Membership and role using C#
+              subsubmenu_content_url: /learn/soap/examples/course-membership-and-role-csharp
+              id: learn-soap-examples-course-membership-and-role-c
+              target: _self
+
+    - submenu_item: UEF
+      id: learn-uef
+      type: menu
+      subsubmenu:
+
+        - subsubmenu_item: Getting Started
+          id: learn-uef-getting-started
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: First Steps
+              subsubmenu_content_url: /learn/uef/getting-started
+              id: learn-uef-gs-first-steps
+              target: _self
+            - subsubmenu_content_name: Security and Tokens
+              subsubmenu_content_url: /learn/uef/security-and-tokens
+              id: learn-uef-gs-security-and-tokens
+              target: _self
+            - subsubmenu_content_name: UEF Documentation
+              subsubmenu_content_url: /learn/uef/documentation
+              id: learn-uef-gs-documentation
+              target: _self
+            - subsubmenu_content_name: UEF Tutorials
+              subsubmenu_content_url: /learn/uef/tutorials
+              id: learn-uef-gs-tutorials
+              target: _self
+            - subsubmenu_content_name: Configuring Learn
+              subsubmenu_content_url: /learn/uef/configure-uef
+              id: learn-uef-gs-configure
+              target: _self
+
+
+- main_item: Collaborate
+  id: collab-group
+  type: content
+  main_item_icon: mic
+  sub_item :
+      - submenu_item: Getting Started
+        submenu_url: /collaborate/getting-started
+        id: collab-getting-started
+        target: _self
+      - submenu_item: Security and Tokens
+        submenu_url: /collaborate/security-and-tokens
+        id: collab-security-and-tokens
+        target: _self
+      - submenu_item: API Objects
+        submenu_url: /collaborate/api-objects
+        id: collab-api-objects
+        target: _self
+      - submenu_item: API
+        submenu_url: /collaborate/api
+        id: collab-api
+        target: _self
+      - submenu_item: Session Definitions
+        submenu_url: /collaborate/session-definitions
+        id: collab-session-definitions
+        target: _self
+        
+
+- main_item: DBVA
+  id: dbva-group
+  type: content
+  main_item_icon: web_asset
+  sub_item :
+    - submenu_item: Developer AMI
+      submenu_url: /dvba/developer-ami
+      id: DBVA-dev-ami
+      target: _self
+    - submenu_item: DVM
+      submenu_url: /dvba/dvm
+      id: DBVA-dvm
+      target: _self
+    - submenu_item: FAQs
+      submenu_url: /dvba/faq
+      id: DBVA-faqs
+      target: _self
+    - submenu_item: What is DVBA
+      submenu_url: /dvba/what-is-dvba
+      id: DBVA-what-is-dvba
+      target: _self
+
+- main_item: Ally
+  id: ally-group
+  type: content
+  main_item_icon: picture_as_pdf
+  sub_item :
+    - submenu_item: About the API Documentation
+      submenu_url: /ally/about-api-documentation
+      id: ally-about-api-doc
+      target: _self
+    - submenu_item: API
+      submenu_url: /ally/api
+      id: ally-api
+      target: _self
+    - submenu_item: Authorization
+      submenu_url: /ally/auth
+      id: ally-authorization
+      target: _self
+    - submenu_item: Check Status
+      submenu_url: /ally/check-status
+      id: ally-check-status
+      target: _self
+    - submenu_item: Feedback Definitions
+      submenu_url: /ally/feedback-definitions
+      id: ally-api-feedback-def
+      target: _self
+    - submenu_item: Getting Feedback
+      submenu_url: /ally/get-feedback
+      id: ally-getting-feedback
+      target: _self
+    - submenu_item: Getting Started
+      submenu_url: /ally/getting-started
+      id: ally-getting-started
+      target: _self
+    - submenu_item: Uploading Files
+      submenu_url: /ally/uploading-files
+      id: ally-uploading-files
+      target: _self
+
+- main_item: Community
+  id: community-group
+  type: content
+  main_item_icon: assignment_ind
+  sub_item :
+    - submenu_item: Getting involved
+      submenu_url: /community/getting-involved
+      id: community-getting-involved
+      target: _self
+    - submenu_item: Contact us
+      submenu_url: /community/contact
+      id: community-contact-us
+      target: _self
+
+- main_item: Mobile
+  id: mobile-group
+  type: content
+  main_item_icon: phone_iphone
+  sub_item :
+    - submenu_item: Bbapp Students launch Schema
+      submenu_url: /mobile/bbapp-students-launch-schema
+      id: mobile-bbapp-students-launch
+      target: _self
+
+
+- main_item: Standards
+  id: standards-group
+  type: menu
+  main_item_icon: lightbulb_outline
+  sub_item :
+
+    - submenu_item: Caliper
+      id: standards-caliper
+      type: menu
+      subsubmenu:
+
+        - subsubmenu_item: Getting Started
+          id: standards-caliper-getting-started
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Getting Started with Caliper
+              subsubmenu_content_url: /standards/caliper/getting-started/getting-started-with-caliper
+              id: standards-caliper-gs-getting-started
+              target: _self
+            - subsubmenu_content_name: Caliper Event Store in Learn
+              subsubmenu_content_url: /standards/caliper/getting-started/caliper-event-store-for-learn
+              id: standards-caliper-gs-caliper-events
+              target: _self
+
+        - subsubmenu_item: Events
+          id: standards-caliper-events
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Assessment Events
+              subsubmenu_content_url: /standards/caliper/events/assessment-events
+              id: standards-caliper-events-assesments
+              target: _self
+            - subsubmenu_content_name: Assignable Events
+              subsubmenu_content_url: /standards/caliper/events/assignable-events
+              id: standards-caliper-events-assignables
+              target: _self
+            - subsubmenu_content_name: Blog Events
+              subsubmenu_content_url: /standards/caliper/events/blog-events
+              id: standards-caliper-events-blogs
+              target: _self
+            - subsubmenu_content_name: Calculated grade snapshot events
+              subsubmenu_content_url: /standards/caliper/events/calculated-grade-snapshot-events
+              id: standards-caliper-events-calculated-grade-snapshots
+              target: _self
+            - subsubmenu_content_name: Event Guide
+              subsubmenu_content_url: /standards/caliper/events/event-guide
+              id: standards-caliper-events-guide
+              target: _self
+            - subsubmenu_content_name: Course Group Events
+              subsubmenu_content_url: /standards/caliper/events/course-group-events
+              id: standards-caliper-events-course-group
+              target: _self
+            - subsubmenu_content_name: Content Events
+              subsubmenu_content_url: /standards/caliper/events/content-events
+              id: standards-caliper-events-content
+              target: _self
+            - subsubmenu_content_name: Forum Events
+              subsubmenu_content_url: /standards/caliper/events/forum-events
+              id: standards-caliper-events-forum
+              target: _self
+            - subsubmenu_content_name: Metric Profiles
+              subsubmenu_content_url: /standards/caliper/events/metric-profiles
+              id: standards-caliper-events-metric-profiles
+              target: _self
+            - subsubmenu_content_name: Outcome Events
+              subsubmenu_content_url: /standards/caliper/events/outcome-events
+              id: standards-caliper-events-outcome-events
+              target: _self
+            - subsubmenu_content_name: Session Events
+              subsubmenu_content_url: /standards/caliper/events/session-events
+              id: standards-caliper-events-sessions
+              target: _self
+            - subsubmenu_content_name: View Events
+              subsubmenu_content_url: /standards/caliper/events/view-events
+              id: standards-caliper-events-views
+              target: _self
+            - subsubmenu_content_name: Wiki Events
+              subsubmenu_content_url: /standards/caliper/events/wiki-events
+              id: standards-caliper-events-wikis
+              target: _self
+
+
+    - submenu_item: LTI
+      id: standards-lti
+      type: menu
+      subsubmenu:
+
+        - subsubmenu_item: Getting Started
+          id: standards-lti-getting-started
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Four part Video Tutorial
+              subsubmenu_content_url: /standards/lti/getting-started/four-part-video-tutorial
+              id: standards-lti-gs-four-part-video
+              target: _self
+            - subsubmenu_content_name: Getting Started with LTI
+              subsubmenu_content_url: /standards/lti/getting-started/getting-started-with-lti
+              id: standards-lti-gs-with-lti
+              target: _self
+            - subsubmenu_content_name: LTI Events
+              subsubmenu_content_url: /standards/lti/getting-started/lti-events
+              id: standards-lti-gs-lti-events
+              target: _self
+            - subsubmenu_content_name: Sample Json
+              subsubmenu_content_url: /standards/lti/getting-started/sample-json
+              id: standards-lti-gs-sample-json
+              target: _self
+            - subsubmenu_content_name: Turn on all the switches
+              subsubmenu_content_url: /standards/lti/getting-started/turn-on-all-switches
+              id: standards-lti-gs-turn-on-all
+              target: _self
+
+        - subsubmenu_item: Tutorials
+          id: standards-lti-tutorials
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Develop LTI Advantage Solution
+              subsubmenu_content_url: /standards/lti/tutorials/develop-lti-advantage-solution
+              id: standards-lti-tutorials-develop-lti-adtge
+              target: _self
+            - subsubmenu_content_name: Names and Roles
+              subsubmenu_content_url: /standards/lti/tutorials/names-and-roles
+              id: standards-lti-tutorials-names-and-roles
+              target: _self
+            - subsubmenu_content_name: PyLti1p3 Library
+              subsubmenu_content_url: /standards/lti/tutorials/py-lti-1p3
+              id: standards-lti-tutorials-pylti1p3
+              target: _self
+
+
+- main_item: Partners
+  id: partners-group
+  type: content
+  main_item_icon: thumb_up
+  sub_item :
+    - submenu_item: Become a Partner
+      id: partners-become-a-partner
+      submenu_url: /partners/become-a-partner
+      target: _self
+
+- main_item: Blogs
+  id: blogs-group
+  type: content
+  main_item_icon: chrome_reader_mode
+  sub_item :
+    - submenu_item: Devcon 2020 by the numbers
+      id: 20200803-devcon2020bythenumbers
+      submenu_url: /blogs/devcon2020-by-the-numbers
+      target: _self
+    - submenu_item: Ally as a service and UEF documentation available
+      id: 20200903-allyasaserviceanduefdocs
+      submenu_url: /blogs/ally-as-a-service-and-uef-docs
+      target: _self
+    - submenu_item: Changes that impact Learn B2 integrations
+      id: 20201004-changesthatimpactlearnb2
+      submenu_url: /blogs/changes-that-impact-learn-b2-integrations
+      target: _self
+    - submenu_item: In orbit at DevCon 2020
+      id: 20200710-inorbitatdevcon2020
+      submenu_url: /blogs/in-orbit-at-devcon-2020
+      target: _self
+    - submenu_item: Cookies and Browsers
+      id: 20201015-cookiesandbrowsers
+      submenu_url: /blogs/cookies-and-browsers
+      target: _self
