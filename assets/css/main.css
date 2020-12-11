@@ -105,6 +105,9 @@ header i{
   padding-bottom: 75px;
 }
 
+#menu-trigger {
+  display: none;
+}
 .col-menu{
   width: 290px;
 }
@@ -679,16 +682,61 @@ footer h5{
 
 /* MOBILE */
 
-@media only screen and (width : 1499px) {
+@media only screen and (max-width : 1499px) {
 
-  #main{
+  #maincontent {
     width: 60%;
   }
 
 }
 
-@media only screen and (min-width: 993px){
-.container {
+@media only screen and (max-width : 1250px) {
 
+  #maincontent {
+    width: 55%;
   }
+
+}
+
+@media only screen and (max-width : 1100px) {
+
+  #maincontent {
+    width: 70%;
+  }
+
+  #third-column-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 985px) {
+
+  #maincontent {
+    width: 62%;
+  }
+
+  #third-column-menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 800px) {
+
+  .menu {
+    display: none;
+  }
+
+  #maincontent {
+    width: 94%;
+  }
+
+  #third-column-menu {
+    display: none;
+  }
+
+  #menu-trigger {
+    display: inline;
+  }
+
+
 }
