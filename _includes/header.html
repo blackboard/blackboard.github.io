@@ -43,6 +43,12 @@
     <script>
         var pageCategory = "#{{ page.id }}";
         $(document).ready(function () {
+            
+            $( "#menu-trigger" ).click(function() {
+                $( ".menu" ).toggle(); 
+                $( ".menu" ).css( "position", "absolute" ); 
+            });
+             
             new AccordionMenu('.col-menu');
             var mainContent = $("#maincontent");
             var mainHeight = mainContent.height();
@@ -82,4 +88,5 @@
         <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
         <span id="dev-docs-span-text">Dev Docs</span>
         <a href="/search"><i class="material-icons">search</i></a>
+        <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
     </header>
