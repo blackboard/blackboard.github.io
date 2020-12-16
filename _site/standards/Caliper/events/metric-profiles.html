@@ -36,6 +36,12 @@
     <script>
         var pageCategory = "#standards-caliper-events-metric-profiles";
         $(document).ready(function () {
+            
+            $( "#menu-trigger" ).click(function() {
+                $( ".menu" ).toggle(); 
+                $( ".menu" ).css( "position", "absolute" ); 
+            });
+             
             new AccordionMenu('.col-menu');
             var mainContent = $("#maincontent");
             var mainHeight = mainContent.height();
@@ -75,7 +81,9 @@
         <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
         <span id="dev-docs-span-text">Dev Docs</span>
         <a href="/search"><i class="material-icons">search</i></a>
+        <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
     </header>
+
 <!---  New menu  -->
 <div class="menu">
     <div class="accordion-menu col-menu">
@@ -535,6 +543,8 @@
                             <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
                             
                             <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            
+                            <li class="content" id="20201216-soapeolexplained" ><a href="/blogs/soap-eol-explained">SOAP EOL Explained</a></li>
                             
                     
                     </ul>
