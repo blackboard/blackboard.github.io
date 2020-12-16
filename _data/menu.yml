@@ -692,3 +692,6 @@
       id: 20201015-cookiesandbrowsers
       submenu_url: /blogs/cookies-and-browsers
       target: _self
+    - submenu_item: SOAP EOL Explained
+      id: 20201216-soapeolexplained
+      submenu_url: /blogs/soap-eol-explained
