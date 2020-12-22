@@ -4,6 +4,7 @@ title: "Preparing Your B2 for Blackboard Learn 9.1 Q2 2016"
 categories: Learn b2
 id: learn-b2-resources-prep-learn-q2
 author: Mark Bykerk Kauffman
+status: deprecated
 ---
 
 # Preparing Your B2 for Blackboard Learn 9.1 Q2 2016

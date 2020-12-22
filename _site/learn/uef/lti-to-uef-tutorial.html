@@ -54,11 +54,11 @@
             $('.scrollspy').scrollSpy();
             
             var pageTocStatus = "true";
-
-            if (pageTocStatus == "false") {
+               /*
+            if (pageTocStatus === "false") {
             $( "#maincontent" ).css( "width", "80%" );
             }
-
+               */
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
             $('.collapsible').collapsible('open', pageCategory);
@@ -595,8 +595,8 @@
   <li>Sign up for a free account if you don’t already have one and login</li>
   <li>Download the installer for your system <a href="https://ngrok.com/download">https://ngrok.com/download</a></li>
   <li>Visit <a href="https://dashboard.ngrok.com/get-started/setup">https://dashboard.ngrok.com/get-started/setup</a> and copy your authtoken</li>
-  <li>Expand ngrok into your applications folder</li>
-  <li>In a terminal cd to your ngrok directory and enter <code class="language-plaintext highlighter-rouge">$ ./ngrok authtoken &lt;your authtoken&gt;</code></li>
+  <li>If on Mac, expand ngrok into your applications folder and add the application folder to your path. If on Windows, expand, create a folder to put ngrok.exe in, and <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/">add that folder to your windows Path system variable</a>.</li>
+  <li>In a terminal cd to your ngrok directory and enter <code class="language-plaintext highlighter-rouge">$ ngrok authtoken &lt;your authtoken&gt;</code></li>
   <li>Start a tunnel on port (5000): <code class="language-plaintext highlighter-rouge">$ ./ngrok http 5000 --hostname uef.ngrok.io</code></li>
 </ol>
 
@@ -699,6 +699,8 @@
 <ol>
   <li>Install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></li>
 </ol>
+
+<p><strong>Note</strong>: If you are installing Docker Desktop on Windows 10, you will need to be sure Virtualization is configured correctly. <a href="https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization">This article</a> will help you get things configured correctly. Of note are that virtualization must be enabled in your bios, and with Windows Linux System 2, you must <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package">install the linux kernel manually</a>.</p>
 
 <h3 id="step-6-test-the-application">Step 6: Test the application</h3>
 

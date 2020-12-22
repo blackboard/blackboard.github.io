@@ -4,6 +4,7 @@ title: "Enabling Remote Debugging"
 categories: Learn b2
 id: learn-b2-resources-enable-rem-debug
 author: Scott Hurrey
+status: deprecated
 ---
 
 # Enabling Remote Debugging

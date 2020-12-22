@@ -34,7 +34,7 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageCategory = "#20201216-soapeolexplained";
+        var pageCategory = "#/blog/2020/12/16/SOAP-EOL-Explained";
         $(document).ready(function () {
             
             $( "#menu-trigger" ).click(function() {
@@ -54,11 +54,11 @@
             $('.scrollspy').scrollSpy();
             
             var pageTocStatus = "false";
-
-            if (pageTocStatus == "false") {
+               /*
+            if (pageTocStatus === "false") {
             $( "#maincontent" ).css( "width", "80%" );
             }
-
+               */
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
             $('.collapsible').collapsible('open', pageCategory);
@@ -563,7 +563,7 @@
 
 <p>The most common concern is “Will my SOAP code continue to work in an earlier version of Blackboard Learn?” or some variation. Here’s a recent example: “Will this be for all versions, or will SOAP API still be available on version 3800?”</p>
 
-<p>The answer is that client’s self and manged-hosted systems that are on older versions of Learn will not be impacted. If your client is running 3800.0.3 and upgrades to the most recent Cumulative Update, the SOAP Webservices should continue to work for them.</p>
+<p>The answer is that client’s self and manged-hosted systems that are on older versions of Learn will not be impacted. If your client is runnign 3800.0.3 and upgrades to the most recent Cumulative Update, the SOAP Webservices should continue to work for them.</p>
 
 <p>For self and managed-hosted clients that are on 3900.0.0 and are now upgrading using the same build numbers as in SaaS, SOAP will not be supported in any release post Dec 31, 2020.</p>
 

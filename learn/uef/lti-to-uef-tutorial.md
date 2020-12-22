@@ -45,8 +45,8 @@ We will need a way to host our UEF integration on our desktop so we don't have t
 2. Sign up for a free account if you don't already have one and login
 3. Download the installer for your system [https://ngrok.com/download](https://ngrok.com/download)
 4. Visit [https://dashboard.ngrok.com/get-started/setup](https://dashboard.ngrok.com/get-started/setup) and copy your authtoken
-5. Expand ngrok into your applications folder
-6. In a terminal cd to your ngrok directory and enter `$ ./ngrok authtoken <your authtoken>`
+5. If on Mac, expand ngrok into your applications folder and add the application folder to your path. If on Windows, expand, create a folder to put ngrok.exe in, and [add that folder to your windows Path system variable](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+6. In a terminal cd to your ngrok directory and enter `$ ngrok authtoken <your authtoken>`
 7. Start a tunnel on port (5000): `$ ./ngrok http 5000 --hostname uef.ngrok.io` 
 
 > **NOTE**: Do not close your terminal - it must stay open while you are using the TLS connection.
@@ -136,6 +136,8 @@ For ease of use, we will be using Docker. This will create the environment for u
 <iframe width="361" height="268" src="https://www.youtube.com/embed/siGD6-FX2uw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+**Note**: If you are installing Docker Desktop on Windows 10, you will need to be sure Virtualization is configured correctly. [This article](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization) will help you get things configured correctly. Of note are that virtualization must be enabled in your bios, and with Windows Linux System 2, you must [install the linux kernel manually](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package).
 
 ### Step 6: Test the application
 

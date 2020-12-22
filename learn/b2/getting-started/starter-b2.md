@@ -4,6 +4,7 @@ title: "Starter Building Block Readme"
 categories: Learn b2
 id: learn-b2-gs-starter-b2
 author: Kelley MacEwen
+status: deprecated
 ---
 
 # Starter Building Block Readme

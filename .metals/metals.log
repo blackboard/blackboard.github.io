@@ -2,3 +2,17 @@
 2020.12.08 09:27:19 INFO  time: initialize in 3.73s
 2020.12.08 09:27:20 WARN  Build server is not auto-connectable.
 2020.12.08 09:27:20 WARN  no build tool detected in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.14 09:31:07 INFO  Started: Metals version 0.9.7 in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io' for client vscode.
+2020.12.14 09:31:09 INFO  time: initialize in 2.22s
+2020.12.14 09:31:13 WARN  Build server is not auto-connectable.
+2020.12.14 09:31:13 WARN  no build tool detected in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.14 13:28:15 INFO  shutting down Metals
+2020.12.14 13:34:28 INFO  Started: Metals version 0.9.7 in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io' for client vscode.
+2020.12.14 13:34:30 INFO  time: initialize in 2.09s
+2020.12.14 13:34:31 WARN  Build server is not auto-connectable.
+2020.12.14 13:34:31 WARN  no build tool detected in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.22 10:53:59 INFO  shutting down Metals
+2020.12.22 11:10:59 INFO  Started: Metals version 0.9.8 in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io' for client vscode.
+2020.12.22 11:11:19 INFO  time: initialize in 20s
+2020.12.22 11:11:24 WARN  Build server is not auto-connectable.
+2020.12.22 11:11:24 WARN  no build tool detected in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 

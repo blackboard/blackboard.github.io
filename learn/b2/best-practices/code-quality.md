@@ -4,6 +4,7 @@ title: "Code Quality Initiative"
 categories: Learn b2
 id: learn-b2-bp-code-quality
 author: Scott Hurrey
+status: deprecated
 ---
 
 # Code Quality Initiative

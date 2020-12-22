@@ -4,6 +4,7 @@ title: "Development Life Cycle"
 categories: Learn b2
 id: learn-b2-gs-dev-live-cycle
 author: Scott Hurrey
+status: deprecated
 ---
 
 # Development Life Cycle

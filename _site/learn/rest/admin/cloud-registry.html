@@ -54,11 +54,11 @@
             $('.scrollspy').scrollSpy();
             
             var pageTocStatus = "true";
-
-            if (pageTocStatus == "false") {
+               /*
+            if (pageTocStatus === "false") {
             $( "#maincontent" ).css( "width", "80%" );
             }
-
+               */
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
             $('.collapsible').collapsible('open', pageCategory);
@@ -553,6 +553,13 @@
     </div>
 </div>
 <div id="body_before_container"> 
+    
+        <div class="deprecatedPage">
+            <div class="valign-wrapper">
+                <i class="medium material-icons">warning</i>
+                <p>This page is deprecated</p> 
+            </div>
+        </div>
     
             <main id="maincontent">
                 <h1 id="register-developer-instances-to-the-cloud">Register Developer Instances to the Cloud</h1>

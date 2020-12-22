@@ -4,6 +4,7 @@ title: "Rest registry"
 id: learn-rest-admin-cloud-registry
 categories: Learn Rest
 author: Scott Hurrey
+status: deprecated
 ---
 
 # Register Developer Instances to the Cloud
