@@ -38,6 +38,6 @@ We gave several partners early access to the UEF. The following videos are examp
 
     * [Screenshots](http://images.email.blackboard.com/Web/BlackboardInc/%7Baffc825e-e416-4c69-aa09-69cf160a5a57%7D_QwicklyUEFscreenshots.pdf)
 
-If you are a developer and interested in pursuing use of the UEF Premium APIs in your integration with the Blackboard Learn Ultra Experience, what are your next steps? Simply fill out and [submit this form!](https://go.blackboard.com/UEF)
+If you are a developer and interested in pursuing use of the UEF Premium APIs in your integration with the Blackboard Learn Ultra Experience, what are your next steps? Send an email to BbPartnerTeam <bbpartnerteam@blackboard.com> with the subject "Interested in Partnership That Includes Premium API Access." Ask for time to discuss such with a member of our parthership team.
 
 Check back here often as this page will be updated frequently with more details.
