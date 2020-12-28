@@ -14,18 +14,18 @@ agnostic, but it has not been tested on Windows.
 In order to begin this tutorial, there are a few pre-requisites that are
 assumed to be in place:
 
-  * User has installed and started the latest [Developer Virtual Machine](https://community.blackboard.com/docs/DOC-1649-developer-virtual-machine-dvm).
+  * User has installed and started the latest [Developer AMI](/dvba/developer-ami).
   * User has installed and configured [GIT](https://git-scm.com/downloads).
   * User has cloned the [repository](https://github.com/blackboard/BBDN-DevCon-REST-Workshop) to their local working directory.
-  * User has Java 8 installed and configured to JAVA_HOME.
-  * User has registered for an account on the [Developer Portal](https://developer.blackboard.com/), [registered an application](https://community.blackboard.com/docs/DOC-1579-register-as-a-developer-and-manage-your-applications-with-the-developer-portal), obtained the key and secret, and [configured](https://community.blackboard.com/docs/DOC-1580-managing-rest-integrations-in-learn-the-rest-integrations-tool-for-system-administrators) the Developer Virtual Machine to accept it..
+  * User has Java 11 installed and configured to JAVA_HOME.
+  * User has registered for an account on the [Developer Portal](https://developer.blackboard.com/), [registered an application](/learn/rest/getting-started/registry), obtained the key and secret, and [configured](/learn/rest/getting-started/rest-and-learn) the Developer Virtual Machine to accept it..
 
 To watch a recording of the corresponding Webinar, click
 [here](https://us.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93).
 
 ## About the Project
 
-This project is built on Java 8, in Spring Tool Suite (an Eclipse derivative),
+This project is built on Java 11, in Spring Tool Suite (an Eclipse derivative),
 and uses Gradle and Maven to build and install dependencies. In addition,
 Gradle is using the 'Application' plugin, which allows us to build and run the
 command line java application with one simple Gradle command -- gradle run.
@@ -43,7 +43,7 @@ There are also four top-level folders containing the code we will need to
 implement each step of the tutorial. Let's break down the base files:
 
 File | Package | Description
----- | ------- | -----------
+--- | --- | ---
 RestConstants.java | bbdn.rest | This class contains Constant values for running the code.
 RestDemo.java | bbdn.rest | This class is the main class for the project. We will discuss other classes as we move them into place, but this is the only file we will modify.
 UnSecurityUtil.java | bbdn.unsecurity | This class allows us to create a RestTemplate object based on whether we are testing on the DVM or in an environment with a valid SSL certificate.

@@ -16,3 +16,8 @@
 2020.12.22 11:11:19 INFO  time: initialize in 20s
 2020.12.22 11:11:24 WARN  Build server is not auto-connectable.
 2020.12.22 11:11:24 WARN  no build tool detected in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.28 14:40:15 INFO  shutting down Metals
+2020.12.28 14:43:37 INFO  Started: Metals version 0.9.8 in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io' for client vscode.
+2020.12.28 14:43:54 INFO  time: initialize in 16s
+2020.12.28 14:43:58 WARN  Build server is not auto-connectable.
+2020.12.28 14:43:58 WARN  no build tool detected in workspace '/Users/shurrey/Documents/workspace/DevDocs/blackboard.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 

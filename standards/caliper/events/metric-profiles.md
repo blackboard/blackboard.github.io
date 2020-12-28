@@ -33,14 +33,12 @@ a shared semantic model so there is consistency from event to event.
 
 ![Caliper Outcome Profile](/assets/img/caliper-metric-profiles-1.png)
 
-Blackboard Learn was certified against the Caliper 1.0 specification in
-October of 2015 for 5 metric profiles:
+Blackboard Learn supports the following defined metric profiles:
 
   * Session
   * Assessment
-  * AssessmentItem
   * Assignable
-  * Outcome
+  * Grade
 
 The specification defines a number of tool-specific profiles as well. An
 example of this is the MediaEvent, which Blackboard worked closely with
@@ -58,84 +56,85 @@ data is expected.
 | Object | Description |
 | ------ | ----------- |
 | @context | Defines the short-hand names used throughout the Caliper event. |
-| @type | Defines the type of event being sent. |
+| type | Defines the type of event being sent. |
 | actor | The entity performing the event. |
 | action | What the actor actually did. |
 | object | What the action was performed on. |
+| target | An entity that represents a particular segment or location within the object. |
 | generated | The result of the action. |
 | eventTime | The ISO-compliant date and time that the event happened. |
 | edApp | The application reporting the event. |
 | group | The environment that the event took place in, e.g. a course. Can be nested. |
 | membership | Information about the relationship between the actor and the group. |
-| federatedSession | A unique identifier used to determine what system/tool is reporting data. |
+| federatedSession | A unique identifier used to determine what system/tool is reporting data. If the event occurs within the context of an LTI Tool Launch, the actor's tool consumer LtiSession may be referenced. |
+|session | The user's current session |
 
 ### Sample Caliper Event
 
 ~~~ json
     {
-        "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-        "@type": "http://purl.imsglobal.org/caliper/v1/AssignableEvent",
-        "actor":{
-            "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/users/fd6adc5678514c25bd2569c266c9bf65",
-           "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-           "@type":"http://purl.imsglobal.org/caliper/v1/lis/Person",
-           "extensions":{
-              "bb:user.id":"_50_1",
-              "bb:user.externalId":"demo-39"
-           },
-        },
-        "action": "http://purl.imsglobal.org/vocab/caliper/v1/action#Completed",
-        "object":{
-            "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/gradableItems/_7219_1",
-           "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-           "@type”: "http://purl.imsglobal.org/caliper/v1/AssignableDigitalResource",
-           "name": ”Chapter 1 Test",
-           "dateToSubmit":"2016-07-28T13:04:50.963Z",
-           "maxAttempts":0,
-           "maxSubmits":0,
-           "maxScore":25
-        },
-        "generated”:{
-           "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-           "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/gradableItems/_7219_1/attempts/_13000_1",
-           "@type":"http://purl.imsglobal.org/caliper/v1/Attempt",
-          "assignable": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/gradableItems/_7219_1",
-           "actor":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/users/fd6adc5678514c25bd2569c266c9bf65",
-           "count":1,
-           "startedAtTime":"2016-06-02T15:25:47.815Z"
-        },
-        "eventTime":"2016-06-02T15:25:47.815Z",
-        "edApp":{
-            "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-           "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/applications/learn",
-           "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication”
-        },
-        "group":{
-           "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/courses/f85ce1b9dfc740968fd91a38d4b20817",
-          "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-          "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",
-          "extensions":{
-              "bb:course.id":"_2972_1"
-           },
-          "courseNumber":"GAT-1"
-        },
-        "membership":{
-           "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",
-           "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/courses/f85ce1b9dfc740968fd91a38d4b20817/members/fd6adc5678514c25bd2569c266c9bf65",
-           "@type":"http://purl.imsglobal.org/caliper/v1/lis/Membership",
-           "extensions":{
-              "bb:user.externalId":"demo-39",
-              "bb:user.id":"_50_1",
-              "bb:course.id":"_2972_1",
-              "bb:course.externalId":"GAT-1"
-           },
-           "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/users/fd6adc5678514c25bd2569c266c9bf65",
-           "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/courses/f85ce1b9dfc740968fd91a38d4b20817",
-           "roles": [http://purl.imsglobal.org/vocab/lis/v2/membership#Learner],
-           "status":"http://purl.imsglobal.org/vocab/lis/v2/status#Active"
-        },
-        "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/881b88b1-bd43-41b1-a38e-6c643f1fe54b/sessions/21622015C7998FEA7A7824F053D514C8"
-     } 
+      "sensor":"a118bba8-5378-4533-899b-8862ac59db03",
+      "sendTime":"2020-12-24T17:38:16.580Z","dataVersion":"http://purl.imsglobal.org/ctx/caliper/v1p1",
+      "data":[
+        {
+          "@context":"http://purl.imsglobal.org/ctx/caliper/v1p1",
+          "type":"SessionEvent",
+          "id":"53d8542f-c4ff-4100-b2a4-1f8e035f0439",
+          "actor": {
+            "id":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2",
+            "type":"Person",
+            "extensions":{
+              "bb:user.id":"_1_1",
+              "bb:user.externalId":"administrator"
+            }
+          },
+          "action":"LoggedIn",
+          "object":{
+            "id":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/applications/learn",
+            "type":"SoftwareApplication",
+            "extensions":{
+              "bb:request.headers.agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+              "bb:request.headers.ipAddress":"186.28.208.123"
+            }
+          },
+          "target":{
+            "id":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03",
+            "type":"DigitalResource",
+            "creators":[],
+            "learningObjectives":[],
+            "keywords":[]
+          },
+          "eventTime":"2020-12-24T17:38:09.076Z",
+          "edApp":{
+            "id":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/applications/learn",
+            "type":"SoftwareApplication",
+            "extensions":{
+              "bb:request.headers.agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+              "bb:request.headers.ipAddress":"186.28.208.123"
+            }
+          },
+          "federatedSession":{
+            "startedAtTime":"2020-12-24T17:38:09.076Z",
+            "id":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/sessions/0356052DAA966AA071787F54DBFEB1B1",
+            "type":"LtiSession",
+            "name":"0356052DAA966AA071787F54DBFEB1B1",
+            "dateCreated":"2020-12-24T17:38:09.076Z",
+            "extensions":{
+              "bb:request.headers.agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+            },
+            "user":{
+              "id":"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2",
+              "type":"Person",
+              "extensions":{
+                "bb:user.id":"_1_1",
+                "bb:user.externalId":"administrator"
+              }
+            }
+          },
+          "extensions":{}
+        }
+      ]
+    } 
 ~~~
 
 ### Caliper Event Envelopes
