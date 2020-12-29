@@ -61,7 +61,7 @@ one hour, and subsequent calls to retrieve the token will return the same
 token with an updated expiry time until such time that the token has expired.
 There is no refresh token and currently no revoke token method.
 
-The PHP code handles this in `classes/Rest.class`.php:
+The PHP code handles this in `classes/Rest.class.php`:
 
 ~~~ php
     public function authorize() {
@@ -649,8 +649,6 @@ Memberships are handled in `classes/Rest.class.php`.
       
       $membership->dataSourceId = $dsk_id;
       $membership->availability = new Availability();
-      $membership->userId = $user_id;
-      $membership->courseId = $course_id;
       
       $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, HTTP_Request2::METHOD_PUT);
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
@@ -714,6 +712,7 @@ Memberships are handled in `classes/Rest.class.php`.
       $membership->userId = $user_id;
       $membership->courseId = $course_id;
       $membership->created = $membership_created;
+      $membership->availability = new Availability();
       
       $request = new HTTP_Request2($constants->HOSTNAME . $constants->COURSE_PATH . '/' . $course_id . '/users/' . $user_id, 'PATCH');
       $request->setHeader('Authorization', 'Bearer ' . $access_token);
