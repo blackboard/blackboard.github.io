@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Calculated grade snapshot events" 
+title: "Calculated Grade Snapshot Events" 
 categories: Standards
 id: standards-caliper-events-calculated-grade-snapshots
 author: Scott Hurrey
 ---
 
-# Calculated grade snapshot events
+# Calculated Grade Snapshot Events
 
 Blackboard Learn's Caliper Analytics stream emits a CalculatedGradeSnapshotEvent nightly for any grade that is recalculated.
 
@@ -26,104 +26,100 @@ Here is some of the key data that is associated with these events:
 
 **user.extensions** - contains a tag called **bb:user.externalId** with the batch_uid for the user
 
-**action** - …/action#GradeCalculated
+**action** - Graded
 
 ### Sample Payload
 
 Here is a sample of what a payload might look like:
 
 ~~~ json
-    {  
-         "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
-         "sendTime": "2015-12-10T21:31:13.439Z",  
-         "data": [{  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/CalculatedGradeSnapshotEvent",  
-                   "actor": {  
-                        "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                        "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/applications/learn",  
-                        "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                        "name": null,  
-                        "description": null,  
-                        "extensions": {  
-                               
-                        },  
-                        "dateCreated": null,  
-                        "dateModified": null  
-                   },  
-                   "action": "http://caliper.blackboard.com/vocab/caliper/v1/action#GradeCalculated",  
-                   "object": {  
-                        "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                        "@type": "http://caliper.blackboard.com/caliper/v1/CalculatedGrade",  
-                        "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/gradableItems/_1360_1/calculatedGrade/156525",  
-                        "itemId": "_1360_1",  
-                        "scorePossible": 0.0,  
-                        "score": null,  
-                        "isCourseGrade": true,  
-                        "synVersion": 156525,  
-                        "user": {  
-                             "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/users/1ea8c4bd28424309a0ef5c04298af019",  
-                             "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                             "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
-                             "name": null,  
-                             "description": null,  
-                             "extensions": {  
-                                  "bb:user.id": "_8510_1",  
-                                  "bb:user.externalId": "tbrady"  
-                             },  
-                             "dateCreated": null,  
-                             "dateModified": null  
-                        },  
-                        "course": {  
-                             "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/courses/47739d59c68444a98856210a8f36f6f1",  
-                             "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                             "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",  
-                             "name": null,  
-                             "description": null,  
-                             "extensions": {  
-                                  "bb:course.id": "_491_1"  
-                             },  
-                             "dateCreated": null,  
-                             "dateModified": null,  
-                             "courseNumber": "CS-101",  
-                             "academicSession": null,  
-                             "subOrganizationOf": null  
-                        }  
-                   },  
-                   "target": null,  
-                   "generated": null,  
-                   "eventTime": "2016-01-12T09:00:00.358Z",  
-                   "edApp": {  
-                        "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                        "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/applications/learn",  
-                        "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                        "name": null,  
-                        "description": null,  
-                        "extensions": {  
-                               
-                        },  
-                        "dateCreated": null,  
-                        "dateModified": null  
-                   },  
-                   "group": null,  
-                   "membership": {  
-                        "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                        "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/courses/47739d59c68444a98856210a8f36f6f1/members/1ea8c4bd28424309a0ef5c04298af019",  
-                        "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
-                        "name": null,  
-                        "description": null,  
-                        "extensions": {  
-                               
-                        },  
-                        "dateCreated": null,  
-                        "dateModified": null,  
-                        "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/users/1ea8c4bd28424309a0ef5c04298af019",  
-                        "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/b56c1e20-78eb-4a50-941e-9658d93464ae/courses/47739d59c68444a98856210a8f36f6f1",  
-                        "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
-                        "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
-                   },  
-                   "federatedSession": null  
-              }  
-         ]  
-    }
+{
+    "sensor": "54b54b42-dd02-42f8-88ed-07bd719bfb7c",
+    "sendTime": "2021-01-05T08:20:38.600Z",
+    "dataVersion": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "data": [
+        {
+            "@context": [
+                "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                "http://purl.imsglobal.org/ctx/caliper/v1p1"
+            ],
+            "type": "http://caliper.blackboard.com/caliper/v1/CalculatedGradeSnapshotEvent",
+            "id": "54b54b42-dd02-42f8-88ed-07bd719bfb7c",
+            "actor": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "action": "Graded",
+            "object": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/CalculatedGrade",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/gradableItems/_12345_1/calculatedGrade/329189703",
+                "name": "",
+                "description": "",
+                "itemId": "_12345_1",
+                "scorePossible": 100,
+                "isCourseGrade": false,
+                "syncVersion": 329189703,
+                "user": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/b1ea2fccd95144a29e5e906034e4ddee",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                    }
+                },
+                "course": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/ab336626104044daab61e9a9d72ac8e2",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_12345_1"
+                    },
+                    "members": [],
+                    "courseNumber": "BIO-101"
+                },
+                "extensions": {}
+            },
+            "eventTime": "2021-01-05T08:20:33.572Z",
+            "edApp": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "membership": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/ab336626104044daab61e9a9d72ac8e2/members/b1ea2fccd95144a29e5e906034e4ddee",
+                "type": "Membership",
+                "extensions": {
+                    "bb:course.id": "_12345_1",
+                    "bb:course.externalId": "BIO-101",
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                },
+                "member": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/b1ea2fccd95144a29e5e906034e4ddee",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                    }
+                },
+                "organization": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/ab336626104044daab61e9a9d72ac8e2",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_12345_1"
+                    },
+                    "members": [],
+                    "courseNumber": "BIO-101"
+                },
+                "roles": [
+                    "Learner"
+                ],
+                "status": "Active"
+            },
+            "extensions": {}
+        }
+    ]
+}
 ~~~

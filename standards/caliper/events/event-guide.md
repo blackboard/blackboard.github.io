@@ -8,22 +8,6 @@ author: Scott Hurrey
 
 # Blackboard Caliper Event Guide
 
-**Contents**
-
-  * [SessionEvent](#sessionevent)
-  * [ViewEvent](#viewevent)
-  * [LTIEvent](#ltievent)
-  * [AssignableEvent](#assignableevent)
-  * [AssessmentEvent](#assessmentevent)
-  * [AssessmentItemEvent](#assessmentitemevent)
-  * [ForumEvent](#forumevent)
-  * [OutcomeEvent](#outcomeevent)
-  * [CalculatedGradeSnapshotEvent](#calculatedgradesnapshotevent)
-  * [ContentEvent](#contentevent)
-  * [CourseGroupEvent](#coursegroupevent)
-  * [BlogEvent](#blogevent)
-  * [WikiEvent](#wikievent)
-
 This document contains a map of the Caliper events emitted by Blackboard
 Learn. If you are interested in learning more about Moodle's Caliper
 implementation, please visit the [Moodle Documentation](https://docs.moodle.org/dev/Caliper).
@@ -67,7 +51,7 @@ For more information, see [LTI Events](lti-events).
 | Submit an Assignment | Student | Immediately |
 | Submit a Group Assignment | Student | Immediately|
 
-For more information, see [Assignable Events](assessment-events).
+For more information, see [Assignable Events](assignable-events).
 
 ### AssessmentEvent
 
@@ -103,7 +87,7 @@ For more information see, [Assessment Events](assessment-events).
 
 For more information, see [Forum Events](forum-events).
 
-### OutcomeEvent
+### GradeEvent
 
 | Action | Actor | When |
 | ------ | ----- | ---- |
@@ -117,7 +101,7 @@ For more information, see [Forum Events](forum-events).
 | Clear an Overridden Grade | Instructor | Nightly |
 | Delete an Attempt | Instructor | Nightly |
 
-For more information, see [Outcome Events](outcome-events).
+For more information, see [Grade Events](grade-events).
 
 ### CalculatedGradeSnapshotEvent
 

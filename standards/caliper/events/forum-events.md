@@ -25,7 +25,7 @@ Here is some of the key data that is associated with these events:
 
 **extensions** - contains a tag called bb:user.externalId with the batch_uid for the user
 
-**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
+**action** - Created _**or**_ Modified _**or**_ Deleted
 
 ### ForumEvent - Gradable Thread
 
@@ -35,7 +35,7 @@ Here is some of the key data that is associated with these events:
 
 **object.forumPointsPossible** - number of possible points
 
-**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
+**action** - Created _**or**_ Modified _**or**_ Deleted
 
 ### ForumEvent - Assignment Conversation Comment
 
@@ -45,7 +45,7 @@ Here is some of the key data that is associated with these events:
 
 **object.forumPointsPossible** - number of possible points
 
-**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
+**action** - Created _**or**_ Modified _**or**_ Deleted
 
 ### ForumEvent - Non-Gradable Group Thread
 
@@ -55,7 +55,7 @@ Here is some of the key data that is associated with these events:
 
 **group.subOrganizationOf** - course information
 
-**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
+**action** - Created _**or**_ Modified _**or**_ Deleted
 
 ### ForumEvent - Group Conversation Comment
 
@@ -67,182 +67,226 @@ Here is some of the key data that is associated with these events:
 
 **group.subOrganizationOf** - course information
 
-**action** - …/action#Create _**or**_ …/action#Update _**or**_ …/action#Draft
+**action** - Created _**or**_ Modified _**or**_ Deleted
 
-### Sample Payloads
-
-Here are two sample payloads to illustrate the difference between a gradable
-and non-gradable ForumEvent:
-
-  1. [Non-Gradable Thread](#1-non-gradable-thread)
-  2. [Gradable Thread](#2-gradable-thread)
-
-### 1. Non-Gradable Thread
+### Sample Payload
 
 ~~~ json
-    {  
-         "sensor": "d29571de-6527-410a-a26f-ff7416e16512",  
-         "sendTime": "2016-03-14T22:26:21.638Z",  
-         "data": [{  
-              "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-              "@type": "http://caliper.blackboard.com/caliper/v1/ForumEvent",  
-              "actor": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/users/09d03cfd94b14c6ebe4ed20ba3d35b41",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.id": "_121053_1",  
-                        "bb:user.externalId": "c25e40b5-fd77-40bd-8058-d851bbf34bc0"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "action": "http://caliper.blackboard.com/vocab/caliper/v1/action#Create",  
-              "object": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/Forum",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/discussion/_46_1",  
-                   "name": "Test Forum-Group discussion",  
-                   "forumPointsPossible": null,  
-                   "threadPointsPossible": null,  
-                   "dueDate": null  
-              },  
-              "target": null,  
-              "generated": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/ForumPost",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/discussion/_46_1/post/_68_1",  
-                   "parentId": null,  
-                   "threadId": "_68_1",  
-                   "fileAttached": false,  
-                   "length": 165,  
-                   "anonymous": false,  
-                   "linkRefId": null,  
-                   "firstPost": false  
-              },  
-              "eventTime": "2016-03-14T22:26:08.051Z",  
-              "edApp": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/applications/learn",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "group": null,  
-              "membership": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/courses/35ac88b1eecc4a458f6819e6b379799e/members/09d03cfd94b14c6ebe4ed20ba3d35b41",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.externalId": "c25e40b5-fd77-40bd-8058-d851bbf34bc0",  
-                        "bb:user.id": "_121053_1",  
-                        "bb:course.id": "_519_1",  
-                        "bb:course.externalId": "SDW:13379064"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/users/09d03cfd94b14c6ebe4ed20ba3d35b41",  
-                   "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/courses/35ac88b1eecc4a458f6819e6b379799e",  
-                   "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
-                   "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
-              },  
-              "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/sessions/F134BF7AC8648E9DEE822876CCE17AAE"  
-         }]  
-    }
+{
+    "sensor": "54b54b42-dd02-42f8-88ed-07bd719bfb7c",
+    "sendTime": "2021-01-05T14:48:59.462Z",
+    "dataVersion": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "data": [
+        {
+            "@context": [
+                "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                "http://purl.imsglobal.org/ctx/caliper/v1p1"
+            ],
+            "type": "http://caliper.blackboard.com/caliper/v1/ForumEvent",
+            "id": "54b54b42-dd02-42f8-88ed-07bd719bfb7c",
+            "actor": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/9eda44a94869439d8dd77496de1db568",
+                "type": "Person",
+                "extensions": {
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                }
+            },
+            "action": "Created",
+            "object": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/Forum",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/discussion/_12345_1",
+                "name": "Placeholder 2",
+                "description": "",
+                "threadPointsPossible": 20,
+                "dueDate": "2021-01-12T06:59:00.000Z",
+                "isDiscussion": true,
+                "contentId": "_12345_1",
+                "extensions": {}
+            },
+            "generated": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/ForumPost",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/discussion/_12345_1/post/_12345_1",
+                "name": "",
+                "description": "",
+                "parentId": "_12345_1",
+                "threadId": "_12345_1",
+                "fileAttached": false,
+                "length": 1468,
+                "anonymous": false,
+                "firstPost": false,
+                "extensions": {}
+            },
+            "eventTime": "2021-01-05T14:48:52.852Z",
+            "edApp": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "membership": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/1b5fe13ea75b4e9f97f23da85600b6f7/members/9eda44a94869439d8dd77496de1db568",
+                "type": "Membership",
+                "extensions": {
+                    "bb:course.id": "_12345_1",
+                    "bb:course.externalId": "BIO-101",
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                },
+                "member": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/9eda44a94869439d8dd77496de1db568",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                    }
+                },
+                "organization": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/1b5fe13ea75b4e9f97f23da85600b6f7",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_12345_1"
+                    },
+                    "members": [],
+                    "courseNumber": "BIO-101"
+                },
+                "roles": [
+                    "Learner"
+                ],
+                "status": "Active"
+            },
+            "federatedSession": {
+                "startedAtTime": "2021-01-05T14:48:52.852Z",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/85A3CA3571288387778479A527A9D478",
+                "type": "LtiSession",
+                "name": "85A3CA3571288387778479A527A9D478",
+                "dateCreated": "2021-01-05T14:48:52.852Z",
+                "user": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/9eda44a94869439d8dd77496de1db568",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                    }
+                }
+            },
+            "extensions": {},
+            "session": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/85A3CA3571288387778479A527A9D478",
+                "type": "Session"
+            }
+        },
+        {
+            "@context": [
+                "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                "http://purl.imsglobal.org/ctx/caliper/v1p1"
+            ],
+            "type": "http://caliper.blackboard.com/caliper/v1/ForumEvent",
+            "id": "5c7a2f72-6806-49c3-8bb2-0677df17f7a8",
+            "actor": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/9eda44a94869439d8dd77496de1db568",
+                "type": "Person",
+                "extensions": {
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                }
+            },
+            "action": "Modified",
+            "object": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/Forum",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/discussion/_12345_1",
+                "name": "Placeholder 2",
+                "description": "",
+                "threadPointsPossible": 20,
+                "dueDate": "2021-01-12T06:59:00.000Z",
+                "isDiscussion": true,
+                "contentId": "_12345_1",
+                "extensions": {}
+            },
+            "generated": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/ForumPost",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/discussion/_12345_1/post/_12345_1",
+                "name": "",
+                "description": "",
+                "parentId": "_12345_1",
+                "threadId": "_12345_1",
+                "fileAttached": false,
+                "length": 1474,
+                "anonymous": false,
+                "firstPost": false,
+                "extensions": {}
+            },
+            "eventTime": "2021-01-05T14:48:52.852Z",
+            "edApp": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "membership": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/1b5fe13ea75b4e9f97f23da85600b6f7/members/9eda44a94869439d8dd77496de1db568",
+                "type": "Membership",
+                "extensions": {
+                    "bb:course.id": "_12345_1",
+                    "bb:course.externalId": "BIO-101",
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                },
+                "member": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/9eda44a94869439d8dd77496de1db568",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                    }
+                },
+                "organization": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/1b5fe13ea75b4e9f97f23da85600b6f7",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_12345_1"
+                    },
+                    "members": [],
+                    "courseNumber": "BIO-101"
+                },
+                "roles": [
+                    "Learner"
+                ],
+                "status": "Active"
+            },
+            "federatedSession": {
+                "startedAtTime": "2021-01-05T14:48:52.852Z",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/85A3CA3571288387778479A527A9D478",
+                "type": "LtiSession",
+                "name": "85A3CA3571288387778479A527A9D478",
+                "dateCreated": "2021-01-05T14:48:52.852Z",
+                "user": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/9eda44a94869439d8dd77496de1db568",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c"
+                    }
+                }
+            },
+            "extensions": {},
+            "session": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/85A3CA3571288387778479A527A9D478",
+                "type": "Session"
+            }
+        }
+    ]
+}
 ~~~
-
-[Return to top](#forum-events)
-
-### 2. Gradable Thread
-
-~~~ json
-    {  
-         "sensor": "d29571de-6527-410a-a26f-ff7416e16512",  
-         "sendTime": "2016-03-14T22:26:21.638Z",  
-         "data": [{  
-              "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-              "@type": "http://caliper.blackboard.com/caliper/v1/ForumEvent",  
-              "actor": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/users/09d03cfd94b14c6ebe4ed20ba3d35b41",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.id": "_121053_1",  
-                        "bb:user.externalId": "c25e40b5-fd77-40bd-8058-d851bbf34bc0"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "action": "http://caliper.blackboard.com/vocab/caliper/v1/action#Create",  
-              "object": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/Forum",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/discussion/_46_1",  
-                   "name": "Test Forum-Group discussion",  
-                   "forumPointsPossible": null,  
-                   "threadPointsPossible": null,  
-                   "dueDate": null  
-              },  
-              "target": null,  
-              "generated": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/ForumPost",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/discussion/_46_1/post/_68_1",  
-                   "parentId": null,  
-                   "threadId": "_68_1",  
-                   "fileAttached": false,  
-                   "length": 165,  
-                   "anonymous": false,  
-                   "linkRefId": null,  
-                   "firstPost": false  
-              },  
-              "eventTime": "2016-03-14T22:26:08.051Z",  
-              "edApp": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/applications/learn",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "group": null,  
-              "membership": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/courses/35ac88b1eecc4a458f6819e6b379799e/members/09d03cfd94b14c6ebe4ed20ba3d35b41",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.externalId": "c25e40b5-fd77-40bd-8058-d851bbf34bc0",  
-                        "bb:user.id": "_121053_1",  
-                        "bb:course.id": "_519_1",  
-                        "bb:course.externalId": "SDW:13379064"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/users/09d03cfd94b14c6ebe4ed20ba3d35b41",  
-                   "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/courses/35ac88b1eecc4a458f6819e6b379799e",  
-                   "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
-                   "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
-              },  
-              "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/d29571de-6527-410a-a26f-ff7416e16512/sessions/F134BF7AC8648E9DEE822876CCE17AAE"  
-         }]  
-    }
-~~~
-
-[Return to top](#forum-events)

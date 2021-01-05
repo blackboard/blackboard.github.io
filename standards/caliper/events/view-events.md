@@ -20,116 +20,101 @@ Here is some of the key data that is associated with all ViewEvents:
 
 **object.@id** - …/content/id - the primary key for the content ID
 
-**action** - …/action#Viewed
+**action** - Viewed
 
 ### Example Payload
 
 ~~~ json
-    {  
-         "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
-         "sendTime": "2015-12-11T02:59:34.659Z",  
-         "data": [{  
-              "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-              "@type": "http://purl.imsglobal.org/caliper/v1/ViewEvent",  
-              "actor": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions":{    
-                        "bb:user.id":"_8510_1",  
-                        "bb:user.externalId":"123-456-789-123"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "action": "http://purl.imsglobal.org/vocab/caliper/v1/action#Viewed",  
-              "object": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/content/_7124_1",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/Frame",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "objectType": [],  
-                   "alignedLearningObjective": [],  
-                   "keywords": [],  
-                   "isPartOf": null,  
-                   "datePublished": null,  
-                   "version": null,  
-                   "index": 0  
-              },  
-              "target": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/content/_7124_1",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/Frame",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "objectType": [],  
-                   "alignedLearningObjective": [],  
-                   "keywords": [],  
-                   "isPartOf": null,  
-                   "datePublished": null,  
-                   "version": null,  
-                   "index": 0  
-              },  
-              "generated": null,  
-              "eventTime": "2015-12-11T02:47:23.903Z",  
-              "edApp": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "group": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/CourseOffering",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "courseNumber": "JOHN_TEST_002",  
-                   "academicSession": null,  
-                   "subOrganizationOf": null  
-              },  
-              "membership": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81/members/c56ca36b2c004550b7df20606d3ce48b",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/c56ca36b2c004550b7df20606d3ce48b",  
-                   "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/5bd2e1842197458196bed7ae58835c81",  
-                   "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
-                   "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
-              },  
-              "federatedSession": null  
-         }]  
+{
+  "@context": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+  "type": "ViewEvent",
+  "id": "788e0326-c12c-4c23-be39-27b446992b79",
+  "actor": {
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2",
+    "type": "Person",
+    "extensions": {
+      "bb:user.id": "_1_1",
+      "bb:user.externalId": "administrator"
     }
-
+  },
+  "action": "Viewed",
+  "object": {
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/unknown/unknown",
+    "type": "Chapter",
+    "creators": [],
+    "learningObjectives": [],
+    "keywords": [],
+    "index": 0
+  },
+  "target": {
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/unknown/unknown",
+    "type": "Chapter",
+    "creators": [],
+    "learningObjectives": [],
+    "keywords": [],
+    "index": 0
+  },
+  "eventTime": "2020-12-24T21:04:41.359Z",
+  "edApp": {
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/applications/learn",
+    "type": "SoftwareApplication",
+    "extensions": {}
+  },
+  "group": {
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/courses/875ab28d354e444a81784e58e44a60b2",
+    "type": "CourseOffering",
+    "extensions": {
+      "bb:course.id": "_1358_1"
+    },
+    "members": [],
+    "courseNumber": "04650987_bbtest_ignore"
+  },
+  "membership": {
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/courses/875ab28d354e444a81784e58e44a60b2/members/ffc08009f0884c059192bac549e117b2",
+    "type": "Membership",
+    "extensions": {
+      "bb:course.id": "_1358_1",
+      "bb:course.externalId": "04650987_bbtest_ignore",
+      "bb:user.id": "_1_1",
+      "bb:user.externalId": "administrator"
+    },
+    "member": {
+      "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2",
+      "type": "Person",
+      "extensions": {
+        "bb:user.id": "_1_1",
+        "bb:user.externalId": "administrator"
+      }
+    },
+    "organization": {
+      "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/courses/875ab28d354e444a81784e58e44a60b2",
+      "type": "CourseOffering",
+      "extensions": {
+        "bb:course.id": "_1358_1"
+      },
+      "members": [],
+      "courseNumber": "04650987_bbtest_ignore"
+    },
+    "roles": [
+      "Instructor"
+    ],
+    "status": "Active"
+  },
+  "federatedSession": {
+    "startedAtTime": "2020-12-24T21:04:41.359Z",
+    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/sessions/0D8663C4ABF729F1B7B9CA8B93A5AE0D",
+    "type": "LtiSession",
+    "name": "0D8663C4ABF729F1B7B9CA8B93A5AE0D",
+    "dateCreated": "2020-12-24T21:04:41.359Z",
+    "user": {
+      "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2",
+      "type": "Person",
+      "extensions": {
+        "bb:user.id": "_1_1",
+        "bb:user.externalId": "administrator"
+      }
+    }
+  },
+  "extensions": {}
+}
 ~~~

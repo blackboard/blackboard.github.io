@@ -16,15 +16,15 @@ plethora of use cases. Here is when a message will be sent:
 
 | Object | Message Sent |
 | ------ |:------------:|
-| Folder | :heavy_check_mark: |
-| Link | :heavy_check_mark: |
-| LTI | :heavy_check_mark: |
-| Assignment | :heavy_check_mark: |
-| Forum |:heavy_check_mark:  |
-| Content File Upload | :heavy_check_mark: |
-| Test | :heavy_multiplication_x: |
-| Document | :heavy_check_mark: |
-| File Upload | :heavy_check_mark: |
+| Folder | <i class="material-icons">done</i> |
+| Link | <i class="material-icons">done</i> |
+| LTI | <i class="material-icons">done</i> |
+| Assignment | <i class="material-icons">done</i> |
+| Forum |<i class="material-icons">done</i>  |
+| Content File Upload | <i class="material-icons">done</i> |
+| Test | <i class="material-icons">done</i> |
+| Document | <i class="material-icons">done</i> |
+| File Upload | <i class="material-icons">done</i> |
 
 ### Content Item Updated (by member value)
 
@@ -64,7 +64,7 @@ The columns contain attributes of the Content Item.
 | Document | <i   class="material-icons">done</i>  |
 | File Upload | <i   class="material-icons">done</i>  |
 
-OutcomeEvents are sent in bulk nightly. Here is some of the key data that is
+GradeEvents are sent in bulk nightly. Here is some of the key data that is
 associated with these events:
 
 ### ContentEvent
@@ -79,144 +79,220 @@ associated with these events:
 
 **membership.roles** - #Instructor
 
-**action** - …/action#Created _**or**_ …/action#Updated _**or**_ …/action#Deleted
+**action** - Created _**or**_ Modified _**or**_ Deleted
 
 ### Sample Payload
 
 Here is a sample of what a payload might look like:
 
 ~~~ json
-    {  
-         "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
-         "sendTime": "2016-03-16T17:23:46.224Z",  
-         "data": [{  
-              "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-              "@type": "http://caliper.blackboard.com/caliper/v1/ContentEvent",  
-              "actor": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/f902ceefcf8f41ae87570daa25158989",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.id": "_88_1",  
-                        "bb:user.externalId": "perfadmin"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "action": "http://caliper.blackboard.com/vocab/caliper/v1/action#Create",  
-              "object": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/Content",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/content/_11206_1",  
-                   "handler": "resource/x-bb-folder",  
-                   "isLesson": false,  
-                   "isFolder": true,  
-                   "isGroupContent": false,  
-                   "dataVersion": 3,  
-                   "renderType": "REG",  
-                   "packageSignature": null,  
-                   "contentContext": null  
-              },  
-              "target": null,  
-              "generated": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/UpdatedContentProperties",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/content/_11206_1/updatedProperties",  
-                   "position": {  
-                        "oldValue": null,  
-                        "newValue": -1  
-                   },  
-                   "title": null,  
-                   "mainData": {  
-                        "oldValue": null,  
-                        "newValue": ""  
-                   },  
-                   "startDate": null,  
-                   "endDate": null,  
-                   "launchInNewWindow": {  
-                        "oldValue": null,  
-                        "newValue": false  
-                   },  
-                   "isTracked": {  
-                        "oldValue": null,  
-                        "newValue": false  
-                   },  
-                   "isReviewable": {  
-                        "oldValue": null,  
-                        "newValue": false  
-                   },  
-                   "linkRef": null,  
-                   "url": null,  
-                   "allowGuests": {  
-                        "oldValue": null,  
-                        "newValue": true  
-                   },  
-                   "allowObservers": {  
-                        "oldValue": null,  
-                        "newValue": true  
-                   },  
-                   "parentId": null,  
-                   "extendedData": {  
-                        "oldValue": null,  
-                        "newValue": {  
-                               
-                        }  
-                   },  
-                   "adaptiveReleaseStatus": null,  
-                   "isPartiallyVisible": {  
-                        "oldValue": null,  
-                        "newValue": false  
-                   },  
-                   "isMetadataSet": {  
-                        "oldValue": null,  
-                        "newValue": true  
-                   },  
-                   "attachedFilesCount": {  
-                        "oldValue": null,  
-                        "newValue": 0  
-                   },  
-                   "removedFilesCount": {  
-                        "oldValue": null,  
-                        "newValue": 0  
-                   }  
-              },  
-              "eventTime": "2016-03-16T17:18:00.767Z",  
-              "edApp": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "group": null,  
-              "membership": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/1c430b729888417399937d0bf02fa98b/members/f902ceefcf8f41ae87570daa25158989",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.externalId": "perfadmin",  
-                        "bb:user.id": "_88_1",  
-                        "bb:course.id": "_170_1",  
-                        "bb:course.externalId": "xsmall_000000001"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/f902ceefcf8f41ae87570daa25158989",  
-                   "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/1c430b729888417399937d0bf02fa98b",  
-                   "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"],  
-                   "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
-              },  
-              "federatedSession": null  
-                   "federatedSession": null  
-         }]  
-    }
+{
+    "sensor": "54b54b42-dd02-42f8-88ed-07bd719bfb7c",
+    "sendTime": "2021-01-05T14:50:35.681Z",
+    "dataVersion": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "data": [
+        {
+            "@context": [
+                "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                "http://purl.imsglobal.org/ctx/caliper/v1p1"
+            ],
+            "type": "http://caliper.blackboard.com/caliper/v1/ContentEvent",
+            "id": "54b54b42-dd02-42f8-88ed-07bd719bfb7c",
+            "actor": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/566f88cb92b64e1086590458deeeb0da",
+                "type": "Person",
+                "extensions": {
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                }
+            },
+            "action": "Modified",
+            "object": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/Content",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/content/_12345_1",
+                "name": "",
+                "description": "",
+                "handler": "resource/x-bb-forumlink",
+                "isLesson": false,
+                "isFolder": false,
+                "isGroupContent": false,
+                "dataVersion": 3,
+                "renderType": "LINK",
+                "scorePossible": 20,
+                "dueDate": "2021-01-19T06:59:00.000Z",
+                "aggregationModel": "Last",
+                "extensions": {}
+            },
+            "eventTime": "2021-01-05T14:50:29.906Z",
+            "edApp": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "membership": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/3ced8bf8f6174c339908f7dab224f0fa/members/566f88cb92b64e1086590458deeeb0da",
+                "type": "Membership",
+                "extensions": {
+                    "bb:course.id": "_12345_1",
+                    "bb:course.externalId": "BIO-101",
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                },
+                "member": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/566f88cb92b64e1086590458deeeb0da",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                    }
+                },
+                "organization": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/3ced8bf8f6174c339908f7dab224f0fa",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_12345_1"
+                    },
+                    "members": [],
+                    "courseNumber": "BIO-101"
+                },
+                "roles": [
+                    "Instructor"
+                ],
+                "status": "Active"
+            },
+            "federatedSession": {
+                "startedAtTime": "2021-01-05T14:50:29.906Z",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/98CDC6B4501AF7FDAF55D8CC2B3DD7CA",
+                "type": "LtiSession",
+                "name": "98CDC6B4501AF7FDAF55D8CC2B3DD7CA",
+                "dateCreated": "2021-01-05T14:50:29.906Z",
+                "user": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/566f88cb92b64e1086590458deeeb0da",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                    }
+                }
+            },
+            "extensions": {},
+            "session": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/98CDC6B4501AF7FDAF55D8CC2B3DD7CA",
+                "type": "Session"
+            }
+        },
+        {
+            "@context": [
+                "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                "http://purl.imsglobal.org/ctx/caliper/v1p1"
+            ],
+            "type": "http://caliper.blackboard.com/caliper/v1/ContentEvent",
+            "id": "90cc7d43-60df-49a4-8782-f4719988d5fb",
+            "actor": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/566f88cb92b64e1086590458deeeb0da",
+                "type": "Person",
+                "extensions": {
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                }
+            },
+            "action": "Modified",
+            "object": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/Content",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/content/_12345_1",
+                "name": "",
+                "description": "",
+                "handler": "resource/x-bb-forumlink",
+                "isLesson": false,
+                "isFolder": false,
+                "isGroupContent": false,
+                "dataVersion": 3,
+                "renderType": "LINK",
+                "scorePossible": 20,
+                "dueDate": "2021-01-19T06:59:00.000Z",
+                "aggregationModel": "Last",
+                "extensions": {}
+            },
+            "eventTime": "2021-01-05T14:50:30.114Z",
+            "edApp": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "membership": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/3ced8bf8f6174c339908f7dab224f0fa/members/566f88cb92b64e1086590458deeeb0da",
+                "type": "Membership",
+                "extensions": {
+                    "bb:course.id": "_12345_1",
+                    "bb:course.externalId": "BIO-101",
+                    "bb:user.id": "_12345_1",
+                    "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                },
+                "member": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/566f88cb92b64e1086590458deeeb0da",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                    }
+                },
+                "organization": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/courses/3ced8bf8f6174c339908f7dab224f0fa",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_12345_1"
+                    },
+                    "members": [],
+                    "courseNumber": "BIO-101"
+                },
+                "roles": [
+                    "Instructor"
+                ],
+                "status": "Active"
+            },
+            "federatedSession": {
+                "startedAtTime": "2021-01-05T14:50:30.114Z",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/98CDC6B4501AF7FDAF55D8CC2B3DD7CA",
+                "type": "LtiSession",
+                "name": "98CDC6B4501AF7FDAF55D8CC2B3DD7CA",
+                "dateCreated": "2021-01-05T14:50:30.114Z",
+                "user": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/users/566f88cb92b64e1086590458deeeb0da",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_12345_1",
+                        "bb:user.externalId": "54b54b42-dd02-42f8-88ed-07bd719bfb7c
+
+"
+                    }
+                }
+            },
+            "extensions": {},
+            "session": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/54b54b42-dd02-42f8-88ed-07bd719bfb7c/sessions/98CDC6B4501AF7FDAF55D8CC2B3DD7CA",
+                "type": "Session"
+            }
+        }
+    ]
+}
 ~~~

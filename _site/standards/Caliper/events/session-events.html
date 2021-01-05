@@ -446,11 +446,15 @@
                                             
                                             <li class="content" id="standards-caliper-gs-caliper-events"><a href="/standards/caliper/getting-started/caliper-event-store-for-learn" target="_self" >Caliper Event Store in Learn</a></li>
                                             
+                                            <li class="content" id="standards-caliper-gs-metric-profiles"><a href="/standards/caliper/getting-started/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            
                                         </ul>
                                     </li>
                                 
                                     <li class="third-level" id="standards-caliper-events"><a href="">Events</a>
                                         <ul>
+                                            
+                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
                                             
                                             <li class="content" id="standards-caliper-events-assesments"><a href="/standards/caliper/events/assessment-events" target="_self" >Assessment Events</a></li>
                                             
@@ -460,17 +464,15 @@
                                             
                                             <li class="content" id="standards-caliper-events-calculated-grade-snapshots"><a href="/standards/caliper/events/calculated-grade-snapshot-events" target="_self" >Calculated grade snapshot events</a></li>
                                             
-                                            <li class="content" id="standards-caliper-events-guide"><a href="/standards/caliper/events/event-guide" target="_self" >Event Guide</a></li>
-                                            
                                             <li class="content" id="standards-caliper-events-course-group"><a href="/standards/caliper/events/course-group-events" target="_self" >Course Group Events</a></li>
                                             
                                             <li class="content" id="standards-caliper-events-content"><a href="/standards/caliper/events/content-events" target="_self" >Content Events</a></li>
                                             
                                             <li class="content" id="standards-caliper-events-forum"><a href="/standards/caliper/events/forum-events" target="_self" >Forum Events</a></li>
                                             
-                                            <li class="content" id="standards-caliper-events-metric-profiles"><a href="/standards/caliper/events/metric-profiles" target="_self" >Metric Profiles</a></li>
+                                            <li class="content" id="standards-caliper-events-grade-events"><a href="/standards/caliper/events/grade-events" target="_self" >Grade Events</a></li>
                                             
-                                            <li class="content" id="standards-caliper-events-outcome-events"><a href="/standards/caliper/events/outcome-events" target="_self" >Outcome Events</a></li>
+                                            <li class="content" id="standards-caliper-events-lti-events"><a href="/standards/caliper/getting-started/lti-events" target="_self" >LTI Events</a></li>
                                             
                                             <li class="content" id="standards-caliper-events-sessions"><a href="/standards/caliper/events/session-events" target="_self" >Session Events</a></li>
                                             
@@ -493,8 +495,6 @@
                                             <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/getting-started/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
                                             
                                             <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
-                                            
-                                            <li class="content" id="standards-lti-gs-lti-events"><a href="/standards/lti/getting-started/lti-events" target="_self" >LTI Events</a></li>
                                             
                                             <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
                                             
@@ -534,17 +534,17 @@
                     <ul>
                     
                             
-                            <li class="content" id="20200803-devcon2020bythenumbers" ><a href="/blogs/devcon2020-by-the-numbers">Devcon 2020 by the numbers</a></li>
+                            <li class="content" id="blog-home" ><a href="/blogs/blog-home">Blog Home</a></li>
                             
-                            <li class="content" id="20200903-allyasaserviceanduefdocs" ><a href="/blogs/ally-as-a-service-and-uef-docs">Ally as a service and UEF documentation available</a></li>
+                            <li class="content" id="20210105-caliperdocupdates" ><a href="/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1">Caliper Documentation Updates</a></li>
                             
-                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/blogs/changes-that-impact-learn-b2-integrations">Changes that impact Learn B2 integrations</a></li>
+                            <li class="content" id="20201216-soapeolexplained" ><a href="/blog/2020/12/16/SOAP-EOL-Explained">SOAP EOL Explained</a></li>
                             
-                            <li class="content" id="20200710-inorbitatdevcon2020" ><a href="/blogs/in-orbit-at-devcon-2020">In orbit at DevCon 2020</a></li>
+                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blog/2020/10/15/Cookies-and-Browsers">Cookies and Browsers</a></li>
                             
-                            <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blogs/cookies-and-browsers">Cookies and Browsers</a></li>
+                            <li class="content" id="20201007-studentidtemplate" ><a href="/announcement/2020/10/07/New-Student-Id-Template-Variable.html">Student ID Template Variable</a></li>
                             
-                            <li class="content" id="20201216-soapeolexplained" ><a href="/blogs/soap-eol-explained">SOAP EOL Explained</a></li>
+                            <li class="content" id="20201004-changesthatimpactlearnb2" ><a href="/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations">Changes that impact Learn B2 integrations</a></li>
                             
                     
                     </ul>
@@ -574,7 +574,7 @@ three use cases:</p>
 
 <p><strong>extensions</strong> - contains a tag called bb:user.externalId with the batch_uid for the user</p>
 
-<p><strong>action</strong> - …/action#LoggedIn <em><strong>or</strong></em> …/action#LoggedOut</p>
+<p><strong>action</strong> - LoggedIn <em><strong>or</strong></em> …/action#LoggedOut</p>
 
 <h3 id="sessionevent--timeout">SessionEvent -Timeout</h3>
 
@@ -584,276 +584,68 @@ three use cases:</p>
 
 <p><strong>object.actor.@id</strong> - contains a unique ID of the user (the ID is known to Bb)</p>
 
-<p><strong>action</strong> - …/action#TimedOut</p>
+<p><strong>action</strong> - TimedOut</p>
 
-<h3 id="sample-workflow">Sample Workflow</h3>
+<h3 id="sample-payload">Sample Payload</h3>
 
-<p>Here is a sample of what a workflow might look like:</p>
-
-<ol>
-  <li><a href="#1-user-logs-in">User Logs In</a></li>
-  <li><a href="#2-user-logs-out">User Logs Out</a></li>
-  <li><a href="#3-session-times-out">Session Times Out</a></li>
-</ol>
-
-<h3 id="1-user-logs-in">1. User Logs In</h3>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"sensor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"df1b6234-73e8-45a4-b953-4066760dfbda"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"sendTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:31:13.439Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SessionEvent"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/701cbe9a4acd4c31a91af84f25b2f19f"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/lis/Person"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:{</span><span class="err"> </span><span class="w">   
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"bb:user.id"</span><span class="p">:</span><span class="s2">"_8510_1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"bb:user.externalId"</span><span class="p">:</span><span class="s2">"123-456-789-123"</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/vocab/caliper/v1/action#LoggedIn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SoftwareApplication"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/DigitalResource"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"objectType"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"alignedLearningObjective"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"isPartOf"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"datePublished"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"generated"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/CE26A89D1ED944324EBD52E0E6192490"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/Session"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CE26A89D1ED944324EBD52E0E6192490"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:18:57.358Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/701cbe9a4acd4c31a91af84f25b2f19f"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/lis/Person"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:{</span><span class="err"> </span><span class="w">   
-    </span><span class="err">                        </span><span class="w"> </span><span class="nl">"bb:user.id"</span><span class="p">:</span><span class="s2">"_8510_1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                        </span><span class="w"> </span><span class="nl">"bb:user.externalId"</span><span class="p">:</span><span class="s2">"123-456-789-123"</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"startedAtTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:18:57.358Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"endedAtTime"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"duration"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"eventTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:18:57.358Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"edApp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SoftwareApplication"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"membership"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"federatedSession"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/CE26A89D1ED944324EBD52E0E6192490"</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="p">}]</span><span class="w">  
-    </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p><a href="#session-events">Return to top</a></p>
-
-<h3 id="2-user-logs-out">2. User Logs Out</h3>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"sensor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"df1b6234-73e8-45a4-b953-4066760dfbda"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"sendTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:32:44.239Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SessionEvent"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/701cbe9a4acd4c31a91af84f25b2f19f"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/lis/Person"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:{</span><span class="err"> </span><span class="w">   
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"bb:user.id"</span><span class="p">:</span><span class="s2">"_8510_1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"bb:user.externalId"</span><span class="p">:</span><span class="s2">"123-456-789-123"</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/vocab/caliper/v1/action#LoggedOut"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SoftwareApplication"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/CE26A89D1ED944324EBD52E0E6192490"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/Session"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CE26A89D1ED944324EBD52E0E6192490"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:20:29.826Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/701cbe9a4acd4c31a91af84f25b2f19f"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/lis/Person"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:{</span><span class="err"> </span><span class="w">   
-    </span><span class="err">                        </span><span class="w"> </span><span class="nl">"bb:user.id"</span><span class="p">:</span><span class="s2">"_8510_1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                        </span><span class="w"> </span><span class="nl">"bb:user.externalId"</span><span class="p">:</span><span class="s2">"123-456-789-123"</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="p">},</span><span class="err">                   </span><span class="w">   
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"startedAtTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:20:29.826Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"endedAtTime"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"duration"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"eventTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T21:20:29.826Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"edApp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SoftwareApplication"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"membership"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"federatedSession"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/CE26A89D1ED944324EBD52E0E6192490"</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="p">}]</span><span class="w">  
-    </span><span class="p">}</span><span class="w">  
-</span></code></pre></div></div>
-
-<p><a href="#session-events">Return to top</a></p>
-
-<h3 id="3-session-times-out">3. Session Times Out</h3>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"sensor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"df1b6234-73e8-45a4-b953-4066760dfbda"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"sendTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T19:35:44.159Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SessionEvent"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SoftwareApplication"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/vocab/caliper/v1/action#TimedOut"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"object"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/62AF2230B2921CCE4E7AA17139839CB1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/Session"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"62AF2230B2921CCE4E7AA17139839CB1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T19:23:34.424Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/326fea77d4c441fc876022e6c951b774"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/lis/Person"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:{</span><span class="err"> </span><span class="w">   
-    </span><span class="err">                        </span><span class="w"> </span><span class="nl">"bb:user.id"</span><span class="p">:</span><span class="s2">"_8510_1"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                        </span><span class="w"> </span><span class="nl">"bb:user.externalId"</span><span class="p">:</span><span class="s2">"123-456-789-123"</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">                   </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"startedAtTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T19:23:34.424Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"endedAtTime"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"duration"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"eventTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-10T19:23:34.424Z"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"edApp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/caliper/v1/Context"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/caliper/v1/SoftwareApplication"</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">  
-    </span><span class="err">                   </span><span class="w">   
-    </span><span class="err">              </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">              </span><span class="w"> </span><span class="nl">"dateModified"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="p">},</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"group"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"membership"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">  
-    </span><span class="err">         </span><span class="w"> </span><span class="nl">"federatedSession"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/62AF2230B2921CCE4E7AA17139839CB1"</span><span class="w">  
-    </span><span class="err">    </span><span class="w"> </span><span class="p">}]</span><span class="w">  
-    </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p><a href="#session-events">Return to top</a></p>
+<p>~~~ json
+{
+  “@context”: “http://purl.imsglobal.org/ctx/caliper/v1p1”,
+  “type”: “SessionEvent”,
+  “id”: “f8c984e2-de73-4c0b-8183-779ab4149422”,
+  “actor”: {
+    “id”: “https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2”,
+    “type”: “Person”,
+    “extensions”: {
+      “bb:user.id”: “_1_1”,
+      “bb:user.externalId”: “administrator”
+    }
+  },
+  “action”: “LoggedIn”,
+  “object”: {
+    “id”: “https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/applications/learn”,
+    “type”: “SoftwareApplication”,
+    “extensions”: {
+      “bb:request.headers.agent”: “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36”,
+      “bb:request.headers.ipAddress”: “98.10.178.27”
+    }
+  },
+  “target”: {
+    “id”: “https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03”,
+    “type”: “DigitalResource”,
+    “creators”: [],
+    “learningObjectives”: [],
+    “keywords”: []
+  },
+  “eventTime”: “2020-12-24T21:38:05.645Z”,
+  “edApp”: {
+    “id”: “https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/applications/learn”,
+    “type”: “SoftwareApplication”,
+    “extensions”: {
+      “bb:request.headers.agent”: “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36”,
+      “bb:request.headers.ipAddress”: “98.10.178.27”
+    }
+  },
+  “federatedSession”: {
+    “startedAtTime”: “2020-12-24T21:38:05.645Z”,
+    “id”: “https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/sessions/B287CEC440C99337012096F677684697”,
+    “type”: “LtiSession”,
+    “name”: “B287CEC440C99337012096F677684697”,
+    “dateCreated”: “2020-12-24T21:38:05.645Z”,
+    “extensions”: {
+      “bb:request.headers.agent”: “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36”
+    },
+    “user”: {
+      “id”: “https://caliper-mapping.cloudbb.blackboard.com/v1/sites/a118bba8-5378-4533-899b-8862ac59db03/users/ffc08009f0884c059192bac549e117b2”,
+      “type”: “Person”,
+      “extensions”: {
+        “bb:user.id”: “_1_1”,
+        “bb:user.externalId”: “administrator”
+      }
+    }
+  },
+  “extensions”: {}
+}</p>
 
             </main>
             <div id="third-column-menu">
@@ -864,10 +656,7 @@ three use cases:</p>
                                 <ul>
   <li><a href="#sessionevent---loginlogout">SessionEvent - Login/Logout</a></li>
   <li><a href="#sessionevent--timeout">SessionEvent -Timeout</a></li>
-  <li><a href="#sample-workflow">Sample Workflow</a></li>
-  <li><a href="#1-user-logs-in">1. User Logs In</a></li>
-  <li><a href="#2-user-logs-out">2. User Logs Out</a></li>
-  <li><a href="#3-session-times-out">3. Session Times Out</a></li>
+  <li><a href="#sample-payload">Sample Payload</a></li>
 </ul>
 
                               </div>

@@ -16,7 +16,7 @@ the key data that is associated with these events:
 
 **object.id** - the primary key for the Blog
 
-**action** - …/action#Create
+**action** - Created, Modified, Commented
 
 **extensions** - contains a tag called **bb:user.externalId** with the batch_uid for the user
 
@@ -25,79 +25,112 @@ the key data that is associated with these events:
 Here is a sample of what an event payload might look like:
 
 ~~~ json
-    {  
-         "sensor": "df1b6234-73e8-45a4-b953-4066760dfbda",  
-         "sendTime": "2018-04-04T13:52:50.316Z",  
-         "data": [{  
-              "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-              "@type": "http://caliper.blackboard.com/caliper/v1/BlogEvent",  
-              "actor": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/92aa2365758c498db8d66b08f244d7e6",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Person",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.id": "_367_1",  
-                        "bb:user.externalId": "jstudent9"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "action": "http://caliper.blackboard.com/vocab/caliper/v1/action#Create",  
-              "object": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/Blog",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/blog/_91_1",  
-                   "name": "A Blog",  
-                   "blogType": "INDIVIDUAL",  
-                   "journal": false,  
-                   "pointsPossible": null,  
-                   "dueDate": null  
-              },  
-              "target": null,  
-              "generated": {  
-                   "@context": "http://caliper.blackboard.com/ctx/caliper/v1/Context",  
-                   "@type": "http://caliper.blackboard.com/caliper/v1/BlogPost",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/blog/_91_1/post/_75_1",  
-                   "anonymous": false,  
-                   "attachedFilesCount": 0,  
-                   "length": 17  
-              },  
-              "eventTime": "2018-04-04T13:52:43.607Z",  
-              "edApp": {  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/applications/learn",  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/SoftwareApplication",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                          
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null  
-              },  
-              "group": null,  
-              "membership": {  
-                   "@context": "http://purl.imsglobal.org/ctx/caliper/v1/Context",  
-                   "@id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/98743b77aaa94862b6fd8e2132b7b19d/members/92aa2365758c498db8d66b08f244d7e6",  
-                   "@type": "http://purl.imsglobal.org/caliper/v1/lis/Membership",  
-                   "name": null,  
-                   "description": null,  
-                   "extensions": {  
-                        "bb:user.externalId": "jstudent9",  
-                        "bb:user.id": "_367_1",  
-                        "bb:course.id": "_142_1",  
-                        "bb:course.externalId": "LTI_TEST_CLASSIC_001"  
-                   },  
-                   "dateCreated": null,  
-                   "dateModified": null,  
-                   "member": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/users/92aa2365758c498db8d66b08f244d7e6",  
-                   "organization": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/courses/98743b77aaa94862b6fd8e2132b7b19d",  
-                   "roles": ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],  
-                   "status": "http://purl.imsglobal.org/vocab/lis/v2/status#Active"  
-              },  
-              "federatedSession": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/df1b6234-73e8-45a4-b953-4066760dfbda/sessions/4549E0F1C88B7ABB2393B09DE166C1A7"  
-         }]  
-    }
+{
+    "sensor": "530efc49-6b9f-40a6-918b-966ee83a744c",
+    "sendTime": "2021-01-05T16:55:05.235Z",
+    "dataVersion": "http://purl.imsglobal.org/ctx/caliper/v1p1",
+    "data": [
+        {
+            "@context": [
+                "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                "http://purl.imsglobal.org/ctx/caliper/v1p1"
+            ],
+            "type": "http://caliper.blackboard.com/caliper/v1/BlogEvent",
+            "id": "a6fa63b8-9db7-44f8-aff8-63b94b952ead",
+            "actor": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/users/9c60a9cdb3144d1aa77ff56c34ef248b",
+                "type": "Person",
+                "extensions": {
+                    "bb:user.id": "_227_1",
+                    "bb:user.externalId": "scott.hurrey@myschool.edu"
+                }
+            },
+            "action": "Created",
+            "object": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/Blog",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/blog/_39_1",
+                "name": "Test Blog",
+                "description": "",
+                "blogType": "INDIVIDUAL",
+                "journal": false,
+                "pointsPossible": 100,
+                "extensions": {}
+            },
+            "generated": {
+                "@context": [
+                    "http://caliper.blackboard.com/ctx/caliper/v1/Context",
+                    "http://purl.imsglobal.org/ctx/caliper/v1p1"
+                ],
+                "type": "http://caliper.blackboard.com/caliper/v1/BlogPost",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/blog/_39_1/post/_40_1",
+                "name": "",
+                "description": "",
+                "anonymous": false,
+                "attachedFilesCount": 0,
+                "length": 51,
+                "extensions": {}
+            },
+            "eventTime": "2021-01-05T16:55:03.225Z",
+            "edApp": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/applications/learn",
+                "type": "SoftwareApplication"
+            },
+            "membership": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/courses/e9c09e39c7844ae3b2ed677ac4fd90d7/members/9c60a9cdb3144d1aa77ff56c34ef248b",
+                "type": "Membership",
+                "extensions": {
+                    "bb:course.id": "_124_1",
+                    "bb:course.externalId": "og-101",
+                    "bb:user.id": "_227_1",
+                    "bb:user.externalId": "scott.hurrey@myschool.edu"
+                },
+                "member": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/users/9c60a9cdb3144d1aa77ff56c34ef248b",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_227_1",
+                        "bb:user.externalId": "scott.hurrey@myschool.edu"
+                    }
+                },
+                "organization": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/courses/e9c09e39c7844ae3b2ed677ac4fd90d7",
+                    "type": "CourseOffering",
+                    "extensions": {
+                        "bb:course.id": "_124_1"
+                    },
+                    "members": [],
+                    "courseNumber": "og-101"
+                },
+                "roles": [
+                    "Learner"
+                ],
+                "status": "Active"
+            },
+            "federatedSession": {
+                "startedAtTime": "2021-01-05T16:55:03.225Z",
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/sessions/5118E091FCBDF29709BBD9D6F6758679",
+                "type": "LtiSession",
+                "name": "5118E091FCBDF29709BBD9D6F6758679",
+                "dateCreated": "2021-01-05T16:55:03.225Z",
+                "user": {
+                    "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/users/9c60a9cdb3144d1aa77ff56c34ef248b",
+                    "type": "Person",
+                    "extensions": {
+                        "bb:user.id": "_227_1",
+                        "bb:user.externalId": "scott.hurrey@myschool.edu"
+                    }
+                }
+            },
+            "extensions": {},
+            "session": {
+                "id": "https://caliper-mapping.cloudbb.blackboard.com/v1/sites/530efc49-6b9f-40a6-918b-966ee83a744c/sessions/5118E091FCBDF29709BBD9D6F6758679",
+                "type": "Session"
+            }
+        }
+    ]
+}
 ~~~

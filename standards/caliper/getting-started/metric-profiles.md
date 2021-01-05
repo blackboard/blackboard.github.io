@@ -2,7 +2,7 @@
 layout: post
 title: "Caliper Metric Profiles" 
 categories: Standards
-id: standards-caliper-events-metric-profiles
+id: standards-caliper-gs-metric-profiles
 author: Scott Hurrey
 ---
 

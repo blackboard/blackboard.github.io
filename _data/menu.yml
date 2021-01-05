@@ -547,12 +547,20 @@
               subsubmenu_content_url: /standards/caliper/getting-started/caliper-event-store-for-learn
               id: standards-caliper-gs-caliper-events
               target: _self
+            - subsubmenu_content_name: Metric Profiles
+              subsubmenu_content_url: /standards/caliper/getting-started/metric-profiles
+              id: standards-caliper-gs-metric-profiles
+              target: _self
 
         - subsubmenu_item: Events
           id: standards-caliper-events
           type: menu
           subsubmenu_content:
 
+            - subsubmenu_content_name: Event Guide
+              subsubmenu_content_url: /standards/caliper/events/event-guide
+              id: standards-caliper-events-guide
+              target: _self
             - subsubmenu_content_name: Assessment Events
               subsubmenu_content_url: /standards/caliper/events/assessment-events
               id: standards-caliper-events-assesments
@@ -569,10 +577,6 @@
               subsubmenu_content_url: /standards/caliper/events/calculated-grade-snapshot-events
               id: standards-caliper-events-calculated-grade-snapshots
               target: _self
-            - subsubmenu_content_name: Event Guide
-              subsubmenu_content_url: /standards/caliper/events/event-guide
-              id: standards-caliper-events-guide
-              target: _self
             - subsubmenu_content_name: Course Group Events
               subsubmenu_content_url: /standards/caliper/events/course-group-events
               id: standards-caliper-events-course-group
@@ -585,13 +589,13 @@
               subsubmenu_content_url: /standards/caliper/events/forum-events
               id: standards-caliper-events-forum
               target: _self
-            - subsubmenu_content_name: Metric Profiles
-              subsubmenu_content_url: /standards/caliper/events/metric-profiles
-              id: standards-caliper-events-metric-profiles
+            - subsubmenu_content_name: Grade Events
+              subsubmenu_content_url: /standards/caliper/events/grade-events
+              id: standards-caliper-events-grade-events
               target: _self
-            - subsubmenu_content_name: Outcome Events
-              subsubmenu_content_url: /standards/caliper/events/outcome-events
-              id: standards-caliper-events-outcome-events
+            - subsubmenu_content_name: LTI Events
+              subsubmenu_content_url: /standards/caliper/getting-started/lti-events
+              id: standards-caliper-events-lti-events
               target: _self
             - subsubmenu_content_name: Session Events
               subsubmenu_content_url: /standards/caliper/events/session-events
@@ -624,10 +628,6 @@
             - subsubmenu_content_name: Getting Started with LTI
               subsubmenu_content_url: /standards/lti/getting-started/getting-started-with-lti
               id: standards-lti-gs-with-lti
-              target: _self
-            - subsubmenu_content_name: LTI Events
-              subsubmenu_content_url: /standards/lti/getting-started/lti-events
-              id: standards-lti-gs-lti-events
               target: _self
             - subsubmenu_content_name: Sample Json
               subsubmenu_content_url: /standards/lti/getting-started/sample-json
@@ -672,26 +672,28 @@
   type: content
   main_item_icon: chrome_reader_mode
   sub_item :
-    - submenu_item: Devcon 2020 by the numbers
-      id: 20200803-devcon2020bythenumbers
-      submenu_url: /blogs/devcon2020-by-the-numbers
+    - submenu_item: Blog Home
+      id: blog-home
+      submenu_url: /blogs/blog-home
       target: _self
-    - submenu_item: Ally as a service and UEF documentation available
-      id: 20200903-allyasaserviceanduefdocs
-      submenu_url: /blogs/ally-as-a-service-and-uef-docs
-      target: _self
-    - submenu_item: Changes that impact Learn B2 integrations
-      id: 20201004-changesthatimpactlearnb2
-      submenu_url: /blogs/changes-that-impact-learn-b2-integrations
-      target: _self
-    - submenu_item: In orbit at DevCon 2020
-      id: 20200710-inorbitatdevcon2020
-      submenu_url: /blogs/in-orbit-at-devcon-2020
-      target: _self
-    - submenu_item: Cookies and Browsers
-      id: 20201015-cookiesandbrowsers
-      submenu_url: /blogs/cookies-and-browsers
+    - submenu_item: Caliper Documentation Updates
+      id: 20210105-caliperdocupdates
+      submenu_url: /announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1
       target: _self
     - submenu_item: SOAP EOL Explained
       id: 20201216-soapeolexplained
-      submenu_url: /blogs/soap-eol-explained
+      submenu_url: /blog/2020/12/16/SOAP-EOL-Explained
+      target: _self
+    - submenu_item: Cookies and Browsers
+      id: 20201015-cookiesandbrowsers
+      submenu_url: /blog/2020/10/15/Cookies-and-Browsers
+      target: _self
+    - submenu_item: Student ID Template Variable
+      id: 20201007-studentidtemplate
+      submenu_url: /announcement/2020/10/07/New-Student-Id-Template-Variable.html
+      target: _self
+    - submenu_item: Changes that impact Learn B2 integrations
+      id: 20201004-changesthatimpactlearnb2
+      submenu_url: /announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations
+      target: _self
+    
