@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: How to Create a User With Limited Entitlements For REST API Calls
 date: 2021-01-06 12:59
 category: announcement
