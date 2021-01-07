@@ -2,7 +2,7 @@
 layout: post
 title: How to Create a User With Limited Entitlements For REST API Calls
 date: 2021-01-06 12:59
-category: Announcement
+category: announcement
 id: 20210106-howtocreatelimiteduser
 author: Mark Kauffman
 tags: ['rest', 'learn', 'api']
@@ -19,12 +19,9 @@ The answer is yes! [Here's a video explaining exactly how to proceed](https://on
 
 Reference Documentation:
 
-https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn
-
-https://docs.blackboard.com/learn/rest/getting-started/basic-authentication
-
-https://docs.blackboard.com/learn/rest/getting-started/3lo
-
-https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md 
-
-https://docs.blackboard.com/learn/rest/getting-started/tutorials 
+* [https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn](https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn])
+* [https://docs.blackboard.com/learn/rest/getting-started/basic-authentication](https://docs.blackboard.com/learn/rest/getting-started/basic-authentication)
+* [https://docs.blackboard.com/learn/rest/getting-started/3lo](https://docs.blackboard.com/learn/rest/getting-started/3lo)
+* [https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md](https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md)
+* [https://docs.blackboard.com/learn/rest/getting-started/tutorials](https://docs.blackboard.com/learn/rest/getting-started/tutorials)
+* [Bookmarklet to help map entitlements to permissions](https://community.blackboard.com/blogs/4/18)

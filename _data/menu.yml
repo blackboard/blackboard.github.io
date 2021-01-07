@@ -676,6 +676,10 @@
       id: blog-home
       submenu_url: /blogs/blog-home
       target: _self
+    - submenu_item: Create a User With Limited Entitlements for REST
+      id: 20210106-howtocreatelimiteduser
+      submenu_url: /announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls
+      target: _self
     - submenu_item: Caliper Documentation Updates
       id: 20210105-caliperdocupdates
       submenu_url: /announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1
@@ -691,9 +695,5 @@
     - submenu_item: Student ID Template Variable
       id: 20201007-studentidtemplate
       submenu_url: /announcement/2020/10/07/New-Student-Id-Template-Variable.html
-      target: _self
-    - submenu_item: Changes that impact Learn B2 integrations
-      id: 20201004-changesthatimpactlearnb2
-      submenu_url: /announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations
       target: _self
     
