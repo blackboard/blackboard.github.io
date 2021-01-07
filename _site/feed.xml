@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-06T17:33:32-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackboard Dev docs</title><subtitle>This site has been created in order to allow our Client&apos;s developers to review our documentation and APIs to develop awesome new applications!</subtitle><entry><title type="html">Caliper Documentation Updated for 1.1</title><link href="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html" rel="alternate" type="text/html" title="Caliper Documentation Updated for 1.1" /><published>2021-01-05T12:59:00-05:00</published><updated>2021-01-05T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html">&lt;h1 id=&quot;caliper-documentation-updated-for-11&quot;&gt;Caliper Documentation Updated for 1.1&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T09:24:26-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackboard Dev docs</title><subtitle>This site has been created in order to allow our Client&apos;s developers to review our documentation and APIs to develop awesome new applications!</subtitle><entry><title type="html">How to Create a User With Limited Entitlements For REST API Calls</title><link href="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html" rel="alternate" type="text/html" title="How to Create a User With Limited Entitlements For REST API Calls" /><published>2021-01-06T12:59:00-05:00</published><updated>2021-01-06T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/06/How%20to%20Create%20a%20User%20With%20Limited%20Entitlements%20For%20REST%20API%20Calls</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html">&lt;h1 id=&quot;how-to-create-a-user-with-limited-entitlements-for-rest-api-calls&quot;&gt;How to Create a User With Limited Entitlements For REST API Calls&lt;/h1&gt;
+
+&lt;p&gt;First, as our documentation states, a Blackboard Learn admin should never be told to associate a user with Learn admin privileges with any REST API integration, see this document. Hence we often get questions from folks on how to create a user to associate with a REST API integration that has limited capability on a Learn system. One way is to research and design your REST application to use OAuth 2 3-legged Authentication. See the documents referenced below. 3LO guarentees that the user using your REST Application can only do what they can do via the Learn UX when they are logged into Learn.&lt;/p&gt;
+
+&lt;p&gt;However, if your application is using our OAuth 2 2-legged Authentication read on. Or I should say, watch on. I created the following to answer the question “Is it possible to create a user that has only the necessary permissions and avoid using “blackboard admin” user?”&lt;/p&gt;
+
+&lt;p&gt;The answer is yes! &lt;a href=&quot;https://onblackboard-my.sharepoint.com/personal/mark_kauffman_blackboard_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmark%5Fkauffman%5Fblackboard%5Fcom%2FDocuments%2FSnagit%2F2021%2D01%2D06%5F13%2D12%2D55%2ESystemRoleCourseOrgEnrollmentsOnly%2Emp4&amp;amp;parent=%2Fpersonal%2Fmark%5Fkauffman%5Fblackboard%5Fcom%2FDocuments%2FSnagit&amp;amp;originalPath=aHR0cHM6Ly9vbmJsYWNrYm9hcmQtbXkuc2hhcmVwb2ludC5jb20vOnY6L2cvcGVyc29uYWwvbWFya19rYXVmZm1hbl9ibGFja2JvYXJkX2NvbS9FY3p0UFJhUlhyOUVnVzlrRFRjbk4zRUJGSWJPdWlfbzVGdVRSY0o0d2F0UV9BP3J0aW1lPVl1MU1McWl5MkVn&quot;&gt;Here’s a video explaining exactly how to proceed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Reference Documentation:&lt;/p&gt;
+
+&lt;p&gt;https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn&lt;/p&gt;
+
+&lt;p&gt;https://docs.blackboard.com/learn/rest/getting-started/basic-authentication&lt;/p&gt;
+
+&lt;p&gt;https://docs.blackboard.com/learn/rest/getting-started/3lo&lt;/p&gt;
+
+&lt;p&gt;https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md&lt;/p&gt;
+
+&lt;p&gt;https://docs.blackboard.com/learn/rest/getting-started/tutorials&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="Announcement" /><category term="rest" /><category term="learn" /><category term="api" /><summary type="html">How to Create a User With Limited Entitlements For REST API Calls</summary></entry><entry><title type="html">Caliper Documentation Updated for 1.1</title><link href="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html" rel="alternate" type="text/html" title="Caliper Documentation Updated for 1.1" /><published>2021-01-05T12:59:00-05:00</published><updated>2021-01-05T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html">&lt;h1 id=&quot;caliper-documentation-updated-for-11&quot;&gt;Caliper Documentation Updated for 1.1&lt;/h1&gt;
 
 &lt;p&gt;We have spent some time over the holiday break updating and organizing our documentation better. One of the longest outstanding changes was to update the Caliper event samples from 1.0 to 1.1.&lt;/p&gt;
 
@@ -131,52 +149,4 @@
 &lt;p&gt;To summarize, DevCon 2020 was a unique experience, and one that gave me a little bit of normalcy. Of course I would rather see everyone in person, but since I can’t, I was extremely happy we could have a virtual get-together.&lt;/p&gt;
 
 &lt;p&gt;Happy Coding!
--scott&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="devcon" /><category term="devcon" /><category term="community" /><category term="recap" /><summary type="html">DevCon 2020 by the numbers!</summary></entry><entry><title type="html">In Orbit at DevCon 2020</title><link href="http://localhost:4000/devcon/2020/07/10/In-Orbit-at-DevCon-2020.html" rel="alternate" type="text/html" title="In Orbit at DevCon 2020" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/devcon/2020/07/10/In%20Orbit%20at%20DevCon%202020</id><content type="html" xml:base="http://localhost:4000/devcon/2020/07/10/In-Orbit-at-DevCon-2020.html">&lt;h1 id=&quot;in-orbit-at-devcon-2020&quot;&gt;In Orbit at DevCon 2020&lt;/h1&gt;
-
-&lt;p&gt;DevCon 2020 kicked off in full force this week with clients, partners and Blackboarders around the world coming together in Blackboard Learn Ultra to network, share knowledge, and dig deeper into Blackboard tech.&lt;/p&gt;
-
-&lt;p&gt;We’ve had a record number of people at DevCon with 2,273 attendees logging in from 973 institutions and 43 countries throughout the week. We also had some amazing content, delivered all over the world.&lt;/p&gt;
-
-&lt;p&gt;Our most-attended session was ‘Collaborate Best Practices’ presented by Amy Eyre from the University of York and Helga Gunnarsdottir from the University of the West of England (UWE), co-chairs of the EMEA Mobile and Collaborate User Group, affectionately known as &lt;a href=&quot;https://community.blackboard.com/groups/home/57&quot;&gt;MoCo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Other highlights include the ‘May the Data be with you’ series. I definitly miss seeing everyone in person, so the lively interaction in these sessions led by a talented group of System Administrators was definitely the next best thing. Big thanks to Casey Eubank from WSU Tech, Chris Bray from Arkansas, Heather Crites from Columbia State Community College, Dan Gioia from St. Louis Community College, Bradley Lawton from Louisville, and Mark Reynolds from University of Illinois at Urbana-Champaign.&lt;/p&gt;
-
-&lt;p&gt;There were also a number of other sessions that were well-attended and extremely interesting, including:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;‘LTI Advantage for System Administrators’&lt;/strong&gt;, a thorough overview from Blackboard’s own Eric Preston of the history of LTI, the new LTI Advantage spec, and everything a system administrator needs to know about LTI.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;‘A Galaxy of Learn Data - Blast off with BbData &amp;amp; Python!’&lt;/strong&gt; was a look at the amazing work that Mike Bechtel from Indian River State College has done using Python to interact with Blackboard Data.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;‘Turning any resource into an LTI tool to optimize Base Navigation’&lt;/strong&gt; from University of Chicago’s Szymon Machajewski was an entertaining look at a simple tool that turns any URL into an LTI tool that can be embedded into any LTI-compliant platform.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I wish I could list highlights of all of the sessions, but in the spirit of brevity, let me just say thank you. Thank you to all of our presenters for taking the time out of your busy schedule – sometimes crazy early, crazy late, or both – to share your knowledge with the rest of our community. There is no better way to support and learn from each other than open communication. I look forward to building on this virtual DevCon to continue that global communication.&lt;/p&gt;
-
-&lt;p&gt;Next week, we’ll continue running sessions three times each day to accommodate all time zones and schedules. Here are some sessions you won’t want to miss:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The Python and the Postman - REST APIs for Beginners&lt;/li&gt;
-  &lt;li&gt;Migrate Your B2 to LTI Advantage and REST&lt;/li&gt;
-  &lt;li&gt;Models for Blackboard Learn REST and LTI Integrations&lt;/li&gt;
-  &lt;li&gt;The DevCon Gamification Query: what we built, how we designed it, and how might you adapt it for your institution&lt;/li&gt;
-  &lt;li&gt;GUI Admin Tips and Tricks Unconference Sessions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And don’t forget about Hackboard: Data. This weeklong event will allow attendees to build meaningful insights against the wealth of information Blackboard Data puts at your fingertips. We’ll kick off Monday and finish on Friday, with two Q&amp;amp;A sessions in between. So add the Hackboard: Data session to your schedule and join us for the kickoff on Monday!&lt;/p&gt;
-
-&lt;p&gt;As I write this, it looks like Mark Reynolds is atop the leaderboard, with Bradley Lawton and Eric Silva fast on his heels. And I would be remiss if I didn’t mention our badging with Badgr. So far (not including Friday), we have awarded 480 badges, including:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Arokia Raj, INTI Internation University and Colleges in Malaysia, who earned the ‘Daily Champions Champion’ badge by earning all of the Daily Champion badges.&lt;/li&gt;
-  &lt;li&gt;Mark Carroll, Mark Reynolds, and Kevin Lowey who earned the ‘Let’s take it data day’ badge, by attending 4 of the 8 data-based (see what I did there?) sessions.&lt;/li&gt;
-  &lt;li&gt;Mark Carroll, Alicia Dunlap, Irene Rojas, and Elizabeth Barcena, who have attended more than half of the LTI sessions, earning them the ‘LTI Advantageous’ badge.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hoping to see all who attended and more back on Monday as we get ready for another week of great content from our clients (and us, too).&lt;/p&gt;
-
-&lt;p&gt;Now you know, I can’t let the chance to write some code poetry pass by:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DevCon – one week down.&lt;br /&gt;
-Full of tips, tricks, chits and chats.&lt;br /&gt;
-Earn those badges yet?&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Scott Hurrey</name></author><category term="devcon" /><category term="devcon" /><category term="community" /><category term="recap" /><summary type="html">In Orbit at DevCon 2020</summary></entry></feed>
+-scott&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="devcon" /><category term="devcon" /><category term="community" /><category term="recap" /><summary type="html">DevCon 2020 by the numbers!</summary></entry></feed>
