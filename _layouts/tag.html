@@ -1,0 +1,14 @@
+---
+layout: blog
+---
+
+<div id="content">
+    <h2>Tag: {{ page.tag }} <a style="float:right;" href="/blogs/blog-home"><i class="material-icons">navigate_before</i> All tags</a></h2>
+
+    <div class="row">
+        {% for post in site.tags[page.tag] %}
+            {% include card.html %}
+        {% endfor %}
+    </div>
+    
+</div>

@@ -1,0 +1,30 @@
+<div class="col xs12 s12 m6 l4 xl3">
+    <div class="card large">
+        <div class="optional-header">
+            <a href="/category/{{ post.category | slugify }}/">
+                <div class="thumbnail"><img src="/assets/img/{{ post.category }}.svg" alt="the category is {{ post.category }}" /></div>
+            </a>
+            <div class="primary-title">
+                <div class="title">{{ post.author }}</div>
+                <div class="subhead"><em>{{ post.date | date_to_long_string }}</em></div>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="primary-text">
+                {{ post.title }}
+            </div>
+            <div class="supporting-text">
+                {{ post.summary }} <a href="{{ post.url }}">...read more</a>
+            </div>
+        </div>
+        <div class="card-action">
+            {% for tag in post.tags %} 
+                <span class="chip blue-grey-text">
+                    <a href="/tag/{{ tag | slugify }}/" class="card-tag">
+                        {{ tag | replace:'-', ' ' }}
+                    </a>
+                </span>
+                {% endfor %}
+        </div>
+    </div>
+</div>

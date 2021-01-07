@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: blog
 title: Caliper Documentation Updated for 1.1
 date: 2021-01-05 12:59
-category: Announcement
+category: announcement
 id: 20210105-caliperdocupdates
 author: Scott Hurrey
 tags: ['standards', 'caliper', 'update']
-summary: We have finally updated our Caliper documentation to match the version of Caliper we emit.
+summary: We have spent some time over the holiday break updating and organizing our documentation better. One of the longest outstanding changes was to update the Caliper event samples from 1.0 to 1.1.
 ---
 
 # Caliper Documentation Updated for 1.1

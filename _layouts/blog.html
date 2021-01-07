@@ -1,0 +1,23 @@
+{% include header.html %}
+{% include menu.html %}
+
+<main id="maincontent">
+    <div id="body_before_container"> 
+        {% include status.html %}
+        {{ content }}
+    </div>
+</main>
+<div id="third-column-menu">
+    <div class="col hide-on-small-only m3 l2">
+        <ul class="section table-of-contents">
+            <div id="table-of-contents">
+                <div id="table-of-contents">
+                    {% include categories.html %}
+                    <hr />
+                    {% include tagcloud.html %}
+                  </div>
+              </div>
+        </ul>
+      </div>
+</div>
+{% include footer.html %}

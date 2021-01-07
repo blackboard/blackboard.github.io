@@ -1,12 +1,13 @@
 ---
-layout: post
+layout: blog
 title: Cookies and Browsers
 date: 2020-10-15 12:00
 category: blog
 id: 20201015-cookiesandbrowsers
 author: Eric Preston
-tags: ['rest', 'ally', 'learn', 'ultra', extensions', 'plugins', 'api']
+tags: ['lti', 'learn', 'api']
 toc: false
+summary: Most people like cookies. Internet browsers used to like cookies, but a lot has changed in the last few years.
 ---
 
 # Cookies and Browsers

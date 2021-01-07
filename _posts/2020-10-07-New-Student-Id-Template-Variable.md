@@ -1,9 +1,11 @@
 ---
-layout: post
+layout: blog
 title: New! Student Id Template Variable
 date: 2020-10-07 08:40
 category: announcement
 author: Mark Kauffman
+tags: ['learn','template-variables']
+summary: New in SaaS and the forthcoming 3900 release an @X@user.student_id@X@ template variable!
 ---
 # New! Student Id Template Variable
 

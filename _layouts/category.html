@@ -1,0 +1,14 @@
+---
+layout: blog
+---
+
+<div id="content">
+    <h2>Category: {{ page.category }} <a style="float:right;" href="/blogs/blog-home"><i class="material-icons">navigate_before</i> All categories</a></a></h2>
+
+    <div class="row">
+        {% for post in site.categories[page.category] %}
+            {% include card.html %}
+        {% endfor %}
+    </div>
+    
+</div>

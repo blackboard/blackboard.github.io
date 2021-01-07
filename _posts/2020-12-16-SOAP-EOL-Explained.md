@@ -1,12 +1,13 @@
 ---
-layout: post
+layout: blog
 title: SOAP EOL Explained
 date: 2020-12-16 12:00
 category: blog
 id: 20201216-soapeolexplained
 author: Mark Kauffman
-tags: ['SOAP','learn', 'EOL','api']
+tags: ['soap','learn', 'eol','api']
 toc: false
+summary: Back in the day, January 4, 2019 to be exact, Blackboard announced deprecation of our SOAP Web Services
 ---
 
 # SOAP EOL Explained

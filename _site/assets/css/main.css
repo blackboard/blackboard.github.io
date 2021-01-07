@@ -680,6 +680,218 @@ footer h5{
   border-top: none;
 }
 
+.site-tag a {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.purple-text {
+  color: #a235b5 !important;
+  font-size: smaller !important;
+}
+
+a.purple-text:hover {
+  text-decoration: underline !important;
+}
+
+/* Testing built in card with https://www.zeolearn.com/magazine/how-to-easily-create-modern-material-design-cards-with-html-and-css */
+.card {
+  background-color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  color: rgba(0,0,0,.87);
+  margin: 8px;
+  width: 290px;
+  overflow: hidden;
+  position: relative;
+  }
+.card::after {
+  clear: both;
+}
+.card::after, .card::before {
+    content: "";
+    display: block;
+}
+
+.optional-header {
+  min-height: 50px;
+  padding: 5px;
+  position: relative;
+  background-color: #000000;
+}
+
+.optional-header .action-icons {
+  float: right;
+  position: relative;
+  right: -8px;
+  top: 2px;
+}
+
+.optional-header .primary-title {
+  bottom: auto;
+  display: inline-block;
+  margin: 0 5px;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.optional-header + .primary-text {
+  margin-top: calc(24px/2/2);
+}
+
+.optional-header + .supporting-text {
+  padding-top: 0;
+}
+
+.primary-title .optional-header {
+  padding-left: 5px;
+  padding-right: 0;
+}
+
+.subhead, .secondary-text {
+  color: rgba(0,0,0,.54);
+  font-size: 14px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.title + .subhead {
+  /* margin-top: 7px; */
+  color: #ffffff;
+}
+
+.title {
+  line-height: 1.2;
+}
+
+.thumbnail {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 40px;
+  position: relative;
+  width: 40px;
+  background-color: #fff;
+}
+.thumbnail img {
+  
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.thumbnail--24x24 img {
+  height: 24px;
+  width: 24px;
+}
+.thumbnail--28x28 {
+  margin-right: 4px;
+}
+.thumbnail--28x28 img {
+  height: 28px;
+  width: 28px;
+}
+.thumbnail--32x32 {
+  margin-right: 8px;
+}
+.thumbnail--32x32 img {
+  height: 32px;
+  width: 32px;
+}
+.thumbnail--36x36 {
+  margin-right: 12px;
+}
+.thumbnail--36x36 img {
+  height: 36px;
+  width: 36px;
+}
+.thumbnail--40x40 {
+  margin-right: 16px;
+}
+.thumbnail--40x40 img {
+  height: 40px;
+  width: 40px;
+}
+
+.primary-title + .supporting-text, .optional-header + .supporting-text {
+  padding-top: 0;
+}
+
+.primary-text {
+  font-size: 24px;
+  padding: 0 16px;
+}
+
+.supporting-text {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 16px;
+}
+
+.action-buttons, .action-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.action-icon {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0 2px;
+  outline: none;
+  padding: 6px;
+}
+
+.action-icons {
+  color: rgba(0,0,0,0.54);
+}
+
+.actions {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: #000000 !important;
+  margin-right: 0 !important;
+}
+
+.row .col {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
 /* MOBILE */
 
 @media only screen and (max-width : 1499px) {

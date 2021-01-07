@@ -1,0 +1,12 @@
+<section id="sidebar"> 
+    
+    <h2 style="margin-top: -10px; margin-bottom: -10px;">Dev Blogs</h2>
+
+    <ul>
+        {% for post in site.posts limit:10 %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

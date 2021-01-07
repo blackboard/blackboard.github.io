@@ -1,0 +1,15 @@
+    {% if page.status == "deprecated" %}
+        <div class="deprecatedPage">
+            <div class="valign-wrapper">
+                <i class="medium material-icons">warning</i>
+                <p>This page is deprecated</p> 
+            </div>
+        </div>
+    {% elsif page.status == "draft"  %}
+        <div class="draftPage">
+            <div class="valign-wrapper">
+                <i class="medium material-icons">announcement</i>
+                <p>This page is a Draft, its content may change </p> 
+            </div>
+        </div>
+    {% endif %}
