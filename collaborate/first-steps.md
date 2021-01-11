@@ -8,7 +8,7 @@ toc: true
 Author: Davey Herrera
 ---
 
-## First Steps
+# First Steps
 
 Before we start with the whole document and you start developing your own application, We have noticed that sometimes the terminology can end up in a confusion, that is why we want to make sure that all the terminology is clean and ready for everyone to start developing using our API.
 
