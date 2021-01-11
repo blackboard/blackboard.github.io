@@ -6,7 +6,6 @@ categories: Collaborate
 tipue_search_active: true
 toc: true
 Author: Davey Herrera
-permalink: /collaborate/first-steps
 ---
 
 ## First Steps
