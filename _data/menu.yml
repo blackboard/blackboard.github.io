@@ -416,6 +416,10 @@
   type: content
   main_item_icon: mic
   sub_item :
+      - submenu_item: First Steps
+        submenu_url: /collaborate/first-steps
+        id: collab-api-first-steps
+        target: _self
       - submenu_item: Getting Started
         submenu_url: /collaborate/getting-started
         id: collab-getting-started
