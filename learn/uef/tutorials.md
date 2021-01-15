@@ -25,4 +25,4 @@ The tutorial is also available in a Youtube playlist, if you prefer to learn in 
 You may find the related code used on the videos here: [GitHub BBDN-UEF-Python](https://github.com/blackboard/BBDN-UEF-Python){:target="_blank"}
 
 ### Notice
-Before releasing a UEF integration, that uses the UEF Premium APIs, to produciton you will be required to meet a certain level of Blackboard Partnership. Fill out this form to get started.
+Before releasing a UEF integration, that uses the UEF Premium APIs, to production you will be required to meet a certain level of Blackboard Partnership. See [Become a Blackboard Partner](/partners/become-a-partner.html).
