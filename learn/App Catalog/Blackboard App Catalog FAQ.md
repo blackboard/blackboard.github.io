@@ -1,12 +1,12 @@
 ---
-layout: learn
+layout: post
+title: "Blackboard App Catalog - FAQ"
+id: learn-app-catalog-faq
+categories: App Catalog
+author: Darek Sady
 ---
 
 # Blackboard App Catalog - FAQ
-*Author: Darek Sady*  
-*Categories: []*  
-*Tags: ['developer']*  
-<hr />
 
 ## 1. What is the Blackboard App Catalog? ##
 
