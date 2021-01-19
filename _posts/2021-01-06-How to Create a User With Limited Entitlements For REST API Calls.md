@@ -15,7 +15,7 @@ First, as our documentation states, a Blackboard Learn admin should never be tol
 
 However, if your application is using our OAuth 2 2-legged Authentication read on. Or I should say, watch on. I created the following to answer the question "Is it possible to create a user that has only the necessary permissions and avoid using "blackboard admin" user?"
 
-The answer is yes! [Here's a video explaining exactly how to proceed](https://onblackboard-my.sharepoint.com/personal/mark_kauffman_blackboard_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmark%5Fkauffman%5Fblackboard%5Fcom%2FDocuments%2FSnagit%2F2021%2D01%2D06%5F13%2D12%2D55%2ESystemRoleCourseOrgEnrollmentsOnly%2Emp4&parent=%2Fpersonal%2Fmark%5Fkauffman%5Fblackboard%5Fcom%2FDocuments%2FSnagit&originalPath=aHR0cHM6Ly9vbmJsYWNrYm9hcmQtbXkuc2hhcmVwb2ludC5jb20vOnY6L2cvcGVyc29uYWwvbWFya19rYXVmZm1hbl9ibGFja2JvYXJkX2NvbS9FY3p0UFJhUlhyOUVnVzlrRFRjbk4zRUJGSWJPdWlfbzVGdVRSY0o0d2F0UV9BP3J0aW1lPVl1MU1McWl5MkVn).
+The answer is yes! [Here's a video explaining exactly how to proceed](https://onblackboard-my.sharepoint.com/:v:/g/personal/mark_kauffman_blackboard_com/EcztPRaRXr9EgW9kDTcnN3EBFIbOui_o5FuTRcJ4watQ_A?e=ntshuA).
 
 Reference Documentation:
 
