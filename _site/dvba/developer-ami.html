@@ -78,7 +78,22 @@
                 $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
             }
         });
-     </script>
+    </script>
+
+    <!--
+        Ally Website Integration Script.
+        "data-ally-af-style" can be one of the following values to customize the look and feel:
+            - flag_small
+            - flag_large
+            - bar_bottom
+    -->
+    <script
+    data-ally-loader
+    data-ally-platform-name="web"
+    data-ally-client-id="4826"
+    data-ally-af-style="flag_small"
+    src="https://prod.ally.ac/integration/api/ally.ui.js">
+    </script>
 </head>
 <body>
 
@@ -366,6 +381,8 @@
                 <li class="first-level" id="collab-group" ><a href="#"><i class="material-icons">mic</i>Collaborate</a>
                     <ul>
                     
+                            
+                            <li class="content" id="collab-api-first-steps" ><a href="/collaborate/first-steps">First Steps</a></li>
                             
                             <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
                             

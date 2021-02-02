@@ -73,7 +73,22 @@
                 $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
             }
         });
-     </script>
+    </script>
+
+    <!--
+        Ally Website Integration Script.
+        "data-ally-af-style" can be one of the following values to customize the look and feel:
+            - flag_small
+            - flag_large
+            - bar_bottom
+    -->
+    <script
+    data-ally-loader
+    data-ally-platform-name="web"
+    data-ally-client-id="4826"
+    data-ally-af-style="flag_small"
+    src="https://prod.ally.ac/integration/api/ally.ui.js">
+    </script>
 </head>
 <body>
 
@@ -362,6 +377,8 @@
                     <ul>
                     
                             
+                            <li class="content" id="collab-api-first-steps" ><a href="/collaborate/first-steps">First Steps</a></li>
+                            
                             <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
                             
                             <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
@@ -576,7 +593,7 @@
 <p>You may find the related code used on the videos here: <a href="https://github.com/blackboard/BBDN-UEF-Python" target="_blank">GitHub BBDN-UEF-Python</a></p>
 
 <h3 id="notice">Notice</h3>
-<p>Before releasing a UEF integration, that uses the UEF Premium APIs, to produciton you will be required to meet a certain level of Blackboard Partnership. Fill out this form to get started.</p>
+<p>Before releasing a UEF integration, that uses the UEF Premium APIs, to production you will be required to meet a certain level of Blackboard Partnership. See <a href="/partners/become-a-partner.html">Become a Blackboard Partner</a>.</p>
 
     </main>
     <div id="third-column-menu">
