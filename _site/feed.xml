@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-02T09:13:52-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackboard Dev docs</title><subtitle>This site has been created in order to allow our Client&apos;s developers to review our documentation and APIs to develop awesome new applications!</subtitle><entry><title type="html">How to Create a User With Limited Entitlements For REST API Calls</title><link href="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html" rel="alternate" type="text/html" title="How to Create a User With Limited Entitlements For REST API Calls" /><published>2021-01-06T12:59:00-05:00</published><updated>2021-01-06T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/06/How%20to%20Create%20a%20User%20With%20Limited%20Entitlements%20For%20REST%20API%20Calls</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html">&lt;h1 id=&quot;how-to-create-a-user-with-limited-entitlements-for-rest-api-calls&quot;&gt;How to Create a User With Limited Entitlements For REST API Calls&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-02T11:52:28-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackboard Dev docs</title><subtitle>This site has been created in order to allow our Client&apos;s developers to review our documentation and APIs to develop awesome new applications!</subtitle><entry><title type="html">How to Create a User With Limited Entitlements For REST API Calls</title><link href="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html" rel="alternate" type="text/html" title="How to Create a User With Limited Entitlements For REST API Calls" /><published>2021-01-06T12:59:00-05:00</published><updated>2021-01-06T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/06/How%20to%20Create%20a%20User%20With%20Limited%20Entitlements%20For%20REST%20API%20Calls</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html">&lt;h1 id=&quot;how-to-create-a-user-with-limited-entitlements-for-rest-api-calls&quot;&gt;How to Create a User With Limited Entitlements For REST API Calls&lt;/h1&gt;
 
 &lt;p&gt;First, as our documentation states, a Blackboard Learn admin should never be told to associate a user with Learn admin privileges with any REST API integration, see this document. Hence we often get questions from folks on how to create a user to associate with a REST API integration that has limited capability on a Learn system. One way is to research and design your REST application to use OAuth 2 3-legged Authentication. See the documents referenced below. 3LO guarentees that the user using your REST Application can only do what they can do via the Learn UX when they are logged into Learn.&lt;/p&gt;
 
@@ -15,7 +15,9 @@
   &lt;li&gt;&lt;a href=&quot;https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md&quot;&gt;https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.blackboard.com/learn/rest/getting-started/tutorials&quot;&gt;https://docs.blackboard.com/learn/rest/getting-started/tutorials&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://community.blackboard.com/blogs/4/18&quot;&gt;Bookmarklet to help map entitlements to permissions&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="rest" /><category term="learn" /><category term="api" /><summary type="html">How to Create a User With Limited Entitlements For REST API Calls</summary></entry><entry><title type="html">Caliper Documentation Updated for 1.1</title><link href="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html" rel="alternate" type="text/html" title="Caliper Documentation Updated for 1.1" /><published>2021-01-05T12:59:00-05:00</published><updated>2021-01-05T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html">&lt;h1 id=&quot;caliper-documentation-updated-for-11&quot;&gt;Caliper Documentation Updated for 1.1&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="rest" /><category term="learn" /><category term="api" /><summary type="html">How to Create a User With Limited Entitlements For REST API Calls</summary></entry><entry><title type="html">Blackboard Developer Documentation is Now Ally Enabled</title><link href="http://localhost:4000/announcement/2021/01/06/Blackboard-Developer-Documentation-Now-Ally-Enabled.html" rel="alternate" type="text/html" title="Blackboard Developer Documentation is Now Ally Enabled" /><published>2021-01-06T12:59:00-05:00</published><updated>2021-01-06T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/06/Blackboard-Developer-Documentation-Now-Ally-Enabled</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/06/Blackboard-Developer-Documentation-Now-Ally-Enabled.html">&lt;h1 id=&quot;blackboard-developer-documentation-is-now-ally-enabled&quot;&gt;Blackboard Developer Documentation is Now Ally Enabled&lt;/h1&gt;
+
+&lt;p&gt;Starting today, you will see the Ally alternative format download tool here at Blackboard DevDocs. On Saturday, February 6, Ally for Web will ingest our content and begin making alternative formats available, as well as helping us create more accessible documentation!&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="documentation" /><category term="ally" /><category term="accessibility" /><summary type="html">Blackboard Developer Documentation is Now Ally Enabled</summary></entry><entry><title type="html">Caliper Documentation Updated for 1.1</title><link href="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html" rel="alternate" type="text/html" title="Caliper Documentation Updated for 1.1" /><published>2021-01-05T12:59:00-05:00</published><updated>2021-01-05T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html">&lt;h1 id=&quot;caliper-documentation-updated-for-11&quot;&gt;Caliper Documentation Updated for 1.1&lt;/h1&gt;
 
 &lt;p&gt;We have spent some time over the holiday break updating and organizing our documentation better. One of the longest outstanding changes was to update the Caliper event samples from 1.0 to 1.1.&lt;/p&gt;
 
@@ -87,65 +89,4 @@
 &lt;p&gt;Be sure to revisit the &lt;a href=&quot;/standards/lti/tutorials/develop-lti-advantage-solution&quot;&gt;Developing an LTI Advantage Solution&lt;/a&gt;  page for the latest and greatest tutorial from DevCon 2020!&lt;/p&gt;
 
 &lt;p&gt;Cheers!
--markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="lti" /><category term="standards" /><category term="learn" /><summary type="html">DevCon 2020 - New LTI Advantage Tutorial Be sure to revisit the Developing an LTI Advantage Solution page for the latest and greatest tutorial from DevCon 2020!</summary></entry><entry><title type="html">DevCon 2020 By The Numbers</title><link href="http://localhost:4000/devcon/2020/08/03/DevCon-2020-by-the-numbers.html" rel="alternate" type="text/html" title="DevCon 2020 By The Numbers" /><published>2020-08-03T00:00:00-04:00</published><updated>2020-08-03T00:00:00-04:00</updated><id>http://localhost:4000/devcon/2020/08/03/DevCon-2020-by-the-numbers</id><content type="html" xml:base="http://localhost:4000/devcon/2020/08/03/DevCon-2020-by-the-numbers.html">&lt;h1 id=&quot;devcon-2020-by-the-numbers&quot;&gt;DevCon 2020 by the numbers!&lt;/h1&gt;
-
-&lt;p&gt;DevCon 2020 is in the books, and what an amazing conference it was. This blog will start a weekly series in which everything Thursday, we will talk about DevCon from a content perspective. To begin this series, I want to set some context about the scope of this conference, so you, the reader, will have a baseline to base your opinions from.&lt;/p&gt;
-
-&lt;p&gt;So let’s start with some basic figures:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Client Registrations: 3,113​&lt;/li&gt;
-  &lt;li&gt;Institutions: 1,276​&lt;/li&gt;
-  &lt;li&gt;Countries: 54​&lt;/li&gt;
-  &lt;li&gt;Badges: 2,348​&lt;/li&gt;
-  &lt;li&gt;358 Unique attendees to live sessions​&lt;/li&gt;
-  &lt;li&gt;2,352 Attendees to live sessions total​&lt;/li&gt;
-  &lt;li&gt;121,842 Collab session minutes&lt;/li&gt;
-  &lt;li&gt;Blackboarders: 300​&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If we really look at this, we can come up with some interesting insights.&lt;/p&gt;
-
-&lt;p&gt;If we base our calculations on unique attendees to live sessions, we can see that the average attendee spent almost 6 hours actively engaged in sessions. We had 71 hours worth of sessions spread out over three separate time zones – Monday - Friday 8am-10am EDT, Monday - Friday 1pm-3pm EDT and on five days, 3pm to 4pm, and Monday-Thursday 8pm-10pm EDT – so the average attendee joining 6 sessions is pretty amazing.&lt;/p&gt;
-
-&lt;p&gt;We also issued 6.6 badges per active attendee programmatically through Badgr. These badges included attending at least 75% of a collab session associated with a session, pathways, which awarded badges based on predetermined groups of session badges, interaction with Ally, and earning points and promotions in the leaderboard.&lt;/p&gt;
-
-&lt;p&gt;Speaking of insights, let’s take a look at a few that show how users interacted with the content provided:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-1.png&quot; alt=&quot;Attendance by Session and Region&quot; title=&quot;Attendance by Session and Region&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-2.png&quot; alt=&quot;Registration by Country&quot; title=&quot;Registration by Country&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-3.png&quot; alt=&quot;Collaborate Minutes By Day&quot; title=&quot;Collaborate Minutes By Day&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-4.png&quot; alt=&quot;Recording Views and Downloads&quot; title=&quot;Recording Views and Downloads&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-5.png&quot; alt=&quot;Final Leaderboard&quot; title=&quot;Final Leaderboard&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Numbers and charts are cool, but what really matters from a DevCon perspective, is the experience of the attendees. Here are a few quotes that I think sum up the DevCon 2020 experience more that any statistic or chart can:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“SUPER big high-five / cheers / shout-out and ALL the other superlatives out to @Scott Hurrey and all that helped make this 2020 DevCon !!!!  have greatly enjoyed it in this time of Social Distancing”​&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Kevin Squire, PA Virtual Charter School&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Thanks @shurrey Scott for an awesome experience.. and thank you to all the presenters as well as participants. Look forward to continue networking and finding better solutions for students and faculty.”​&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Arokia Raj, INTI International Universities and Colleges, Malaysia&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“A big thank you to @shurrey and colleagues from @Blackboard for making the 2020 #DevCon a really special online experience. Spreading the event out over a fortnight gave participants a chance to practice and play, not just listen. Fun in dark times.”​&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Malcolm Murray, Durham&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To summarize, DevCon 2020 was a unique experience, and one that gave me a little bit of normalcy. Of course I would rather see everyone in person, but since I can’t, I was extremely happy we could have a virtual get-together.&lt;/p&gt;
-
-&lt;p&gt;Happy Coding!
--scott&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="devcon" /><category term="devcon" /><category term="community" /><category term="recap" /><summary type="html">DevCon 2020 by the numbers!</summary></entry></feed>
+-markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="lti" /><category term="standards" /><category term="learn" /><summary type="html">DevCon 2020 - New LTI Advantage Tutorial Be sure to revisit the Developing an LTI Advantage Solution page for the latest and greatest tutorial from DevCon 2020!</summary></entry></feed>
