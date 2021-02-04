@@ -18,11 +18,11 @@ The Ultra Extension Framework (UEF) encompasses a broad array of features and fu
 
 To register an LTI 1.3 tool:
 
-[Administrator Panel ⇨ LTI Tool Providers ⇨ Register Provider Domain/Register LTI 1.3 Tool]
+[Administrator Panel ⇨ LTI Tool Providers ⇨ Register LTI 1.3 Tool]
 
 To register an LTI 1.1 tool:
 
-[Administrator Panel ⇨ LTI Tool Providers ⇨ Register Provider Domain/Register LTI 1.3 Tool]
+[Administrator Panel ⇨ LTI Tool Providers ⇨ Register Provider Domain]
 
 <img alt="Register LTI Tool" src="/assets/img/2LTIToolProviders.png" width="50%" />
 
