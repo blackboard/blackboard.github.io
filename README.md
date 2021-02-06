@@ -38,6 +38,7 @@ This is easy. Just find the document in the folder structure and edit it as you 
 * **Top-Level**: This is all the files that are served on the landing page and common UI
 * **collab**: All Blackboard Collaborate Documentation
 * **connecttxt**: All Blackboard ConnectTxt Documentation
+* **bbd**: All Blackboard Data Developer Documentation
 * **dvba**: All documentation related to Developer Versions of Blackboard Applications 
 * **learn**: All documentation related to Learn APIs overall
 * **learn/B2s**: All Building Block documentation
