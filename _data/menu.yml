@@ -440,7 +440,17 @@
         submenu_url: /collaborate/session-definitions
         id: collab-session-definitions
         target: _self
-        
+
+- main_item: BBD
+  id: bbd-group
+  type: content
+  main_item_icon: storage
+  sub_item:
+  - submenu_item: Overview
+    submenu_url: /bbd/overview
+    id: bbd-overview
+    target: _self
+  
 
 - main_item: DBVA
   id: dbva-group

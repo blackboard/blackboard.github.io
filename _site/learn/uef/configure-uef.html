@@ -392,6 +392,15 @@
                     
                     </ul>
             
+                <li class="first-level" id="bbd-group" ><a href="#"><i class="material-icons">storage</i>BBD</a>
+                    <ul>
+                    
+                            
+                            <li class="content" id="bbd-overview" ><a href="/bbd/overview">Overview</a></li>
+                            
+                    
+                    </ul>
+            
                 <li class="first-level" id="dbva-group" ><a href="#"><i class="material-icons">web_asset</i>DBVA</a>
                     <ul>
                     
@@ -575,28 +584,36 @@
     <main id="maincontent">
         <h1 id="configuring-ultra-extension-framework-in-learn">Configuring Ultra Extension Framework in Learn</h1>
 
-<p>The Ultra Extension Framework (UEF) encompasses a broad array of features and functionality, and as such, each UEF-enabled integration will have its own specific configuration settings. However, the setup process followed by a Blackboard Learn System Administrator leverages existing standard configuration workflows already in place. Generally speaking, adding a UEF-enabled integration to a Blackboard Learn environment requires a System Admin to make configuration changes to one or more of the following areas:</p>
+<p>The Ultra Extension Framework (UEF) encompasses a broad array of features and functionality, and as such, each UEF-enabled integration will have its own specific configuration settings. However, the setup process followed by a Blackboard Learn System Administrator leverages existing standard configuration workflows already in place. Adding a UEF-enabled integration to a Blackboard Learn environment requires a System Admin to make configuration changes to one or more of the following areas:</p>
 
-<p>REST API Integrations: Most UEF-enabled integrations will need to be added as a REST API integration [Administrator Panel ⇨ REST API Integrations ⇨ Create Integration].</p>
+<p><strong>REST API Integrations</strong>: UEF-enabled integrations will need to be added as a REST API integration [Administrator Panel ⇨ REST API Integrations ⇨ Create Integration].</p>
 
-<p><img alt="Diagram" src="/assets/img/1RestAPIintegrations.png" width="50%" /></p>
+<p><img alt="Create a REST API Integration in Blackboard Learn" src="/assets/img/1RestAPIintegrations.png" width="50%" /></p>
 
-<p>LTI Tool Providers: Most UEF-enabled integrations will need to be registered as an LTI Tool Provider [Administrator Panel ⇨ LTI Tool Providers ⇨ Register Provider Domain/Register LTI 1.3 Tool]. In addition to the existing “Course tool”, “Course content tool”, “System tool”, and “Administrator Tool” type options, some UEF integrations may also utilize the new “Ultra extension” LTI Placement Type option.</p>
+<p><strong>LTI Tool Providers</strong>: UEF-enabled integrations will need to be registered as an LTI Tool Provider. We recommend using LTI 1.3, though LTI 1.1 will work.</p>
 
-<p><img alt="Diagram" src="/assets/img/2LTIToolProviders.png" width="50%" /></p>
+<p>To register an LTI 1.3 tool:</p>
 
-<p>New LTI Placement Type: “Ultra extension”
+<p>[Administrator Panel ⇨ LTI Tool Providers ⇨ Register LTI 1.3 Tool]</p>
+
+<p>To register an LTI 1.1 tool:</p>
+
+<p>[Administrator Panel ⇨ LTI Tool Providers ⇨ Register Provider Domain]</p>
+
+<p><img alt="Register LTI Tool" src="/assets/img/2LTIToolProviders.png" width="50%" /></p>
+
+<p><strong>New LTI Placement Type</strong>: “Ultra extension”
 As part of the Ultra integration framework development, it’s necessary to define a way for Learn admins to register an Ultra integration and how the registered integrations are going to be loaded inside Ultra:
 •	We’ll keep the current registration workflow for LTI 3rd party tools, but a new placement type will be added so that is possible to know when an LTI tool is expected to work as an Ultra UI integration.
-•	The new LTI placement type will be known as “Ultra UI integration” and such type will only be visible for Learn Ultra instances.</p>
+•	The new LTI placement type will be known as “Ultra extension” and such type will only be visible for Learn Ultra instances.</p>
 
-<p><img alt="Diagram" src="/assets/img/3ManagePlacements.png" width="50%" /></p>
+<p><img alt="Manage LTI Placements" src="/assets/img/3ManagePlacements.png" width="50%" /></p>
 
-<p><img alt="Diagram" src="/assets/img/4CreatePlacement.png" width="50%" /></p>
+<p><img alt="Create LTI Placement" src="/assets/img/4CreatePlacement.png" width="50%" /></p>
 
 <p>Cross-Origin Resource Sharing: For UEF-enabled integrations that make direct calls to their Blackboard Learn instance’s REST API will need be be configured via the Cross-Origin Resource Sharing (CORS) tool [Administrator Panel ⇨ Cross-Origin Resource Sharing ⇨ Create Configuration].</p>
 
-<p><img alt="Diagram" src="/assets/img/5CORSSharing.png" width="50%" /></p>
+<p><img alt="Cross Origin Resource Sharing Configuration" src="/assets/img/5CORSSharing.png" width="50%" /></p>
 
 
     </main>
