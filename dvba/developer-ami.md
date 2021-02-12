@@ -133,8 +133,8 @@ The above restarts the instance and will typically correct the 504 error.
 
 Currently, there is no formal migration/transfer tool to port Blackboard Learn data between AMI (EC2) instances. However, there are several existing administrative tools that can be leveraged to capture the bulk of T&L (teaching/learning data) like courses, users, institutional roles, and enrollments, etc. from an existing (source) EC2 and reinstate/recreate the data onto a (new) EC2. The resources linked below will guide you through this data transfer process:
 
-1. Bb Learn EC2 Data Transfer.docx: A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
-2. EC2 Migration SQL Scripts and Feed Files.zip: A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
+1. [Bb Learn EC2 Data Transfer.docx](/assets/files/Bb%20Learn%20EC2%20Data%20Transfer.docx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
+2. [EC2 Migration SQL Scripts and Feed Files.zip](/assets/files/EC2%20Migration%20SQL%20Scripts%20and%20Feed%20Files.zip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
 
 #### Notice - AVG on Windows Systems
 While using the AVG antivirus product on a Windows system and attempting to create a course using Blackboard Learn, AVG may manifest what we believe is a false positive dialog regarding CVE-2014-0286-A. This can occur while using any browser, though the error message is specific to now unsupported versions of Microsoft Internet Explorer 6 through 11. Our security team has indicated that this is an issue with the AVG software. Blackboard will be reaching out to AVG to discuss. See the AVG website for questions about configuring the AVG software, and for their contact information.

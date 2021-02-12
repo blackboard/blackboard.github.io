@@ -31,6 +31,15 @@ As part of the Ultra integration framework development, it's necessary to define
 •	We'll keep the current registration workflow for LTI 3rd party tools, but a new placement type will be added so that is possible to know when an LTI tool is expected to work as an Ultra UI integration.
 •	The new LTI placement type will be known as "Ultra extension" and such type will only be visible for Learn Ultra instances.
 
+**NOTE**: When registering an LTI 1.1 Placement, you must include the following information: 
+* Tool Provider URL
+* Tool Provider Key 
+* Tool Provider Secret
+ 
+The Tool Provider Key and Tool Provider Secret would be the ones given by the devportal when the application is created and the Tool Provider URL must follow this format: 
+
+`https://example.provider.com/lti-launch?id=<PlacementId>&appkey=<Tool Provider Key>`
+
 <img alt="Manage LTI Placements" src="/assets/img/3ManagePlacements.png" width="50%" />
 
 <img alt="Create LTI Placement" src="/assets/img/4CreatePlacement.png" width="50%" />
