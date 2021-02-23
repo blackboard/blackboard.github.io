@@ -235,7 +235,7 @@
               subsubmenu_content_url: /learn/rest/getting-started/rest-and-learn
               id: learn-rest-gs-rest-and-learn
               target: _self
-        
+
         - subsubmenu_item: Examples
           id: rest-examples
           type: menu
@@ -440,7 +440,7 @@
         submenu_url: /collaborate/session-definitions
         id: collab-session-definitions
         target: _self
-        
+
 
 - main_item: DBVA
   id: dbva-group
@@ -473,6 +473,10 @@
       submenu_url: /ally/about-api-documentation
       id: ally-about-api-doc
       target: _self
+    - submenu_item: Getting Started
+      submenu_url: /ally/getting-started
+      id: ally-getting-started
+      target: _self
     - submenu_item: API
       submenu_url: /ally/api
       id: ally-api
@@ -481,25 +485,29 @@
       submenu_url: /ally/auth
       id: ally-authorization
       target: _self
+    - submenu_item: Uploading Files
+      submenu_url: /ally/uploading-files
+      id: ally-uploading-files
+      target: _self
     - submenu_item: Check Status
       submenu_url: /ally/check-status
       id: ally-check-status
-      target: _self
-    - submenu_item: Feedback Definitions
-      submenu_url: /ally/feedback-definitions
-      id: ally-api-feedback-def
       target: _self
     - submenu_item: Getting Feedback
       submenu_url: /ally/get-feedback
       id: ally-getting-feedback
       target: _self
-    - submenu_item: Getting Started
-      submenu_url: /ally/getting-started
-      id: ally-getting-started
+    - submenu_item: Getting Batched Feedback
+      submenu_url: /ally/get-batched-feedback
+      id: ally-getting-batched-feedback
       target: _self
-    - submenu_item: Uploading Files
-      submenu_url: /ally/uploading-files
-      id: ally-uploading-files
+    - submenu_item: Feedback Definitions
+      submenu_url: /ally/feedback-definitions
+      id: ally-api-feedback-def
+      target: _self
+    - submenu_item: UI Integration
+      submenu_url: /ally/ui-integration
+      id: ally-ui-integration
       target: _self
 
 - main_item: Community
@@ -700,4 +708,4 @@
       id: 20201007-studentidtemplate
       submenu_url: /announcement/2020/10/07/New-Student-Id-Template-Variable.html
       target: _self
-    
+
