@@ -625,10 +625,6 @@
           type: menu
           subsubmenu_content:
 
-            - subsubmenu_content_name: Four part Video Tutorial
-              subsubmenu_content_url: /standards/lti/getting-started/four-part-video-tutorial
-              id: standards-lti-gs-four-part-video
-              target: _self
             - subsubmenu_content_name: Getting Started with LTI
               subsubmenu_content_url: /standards/lti/getting-started/getting-started-with-lti
               id: standards-lti-gs-with-lti
@@ -640,6 +636,16 @@
             - subsubmenu_content_name: Turn on all the switches
               subsubmenu_content_url: /standards/lti/getting-started/turn-on-all-switches
               id: standards-lti-gs-turn-on-all
+              target: _self
+
+        - subsubmenu_item: Testing Tool
+          id: standards-lti-test-tool
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Four part Video Tutorial
+              subsubmenu_content_url: /standards/lti/test-tool/four-part-video-tutorial
+              id: standards-lti-gs-four-part-video
               target: _self
 
         - subsubmenu_item: Tutorials
