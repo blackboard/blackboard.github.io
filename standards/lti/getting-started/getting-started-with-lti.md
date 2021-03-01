@@ -98,17 +98,28 @@ In Blackboard Learn the way an LTI tool is surfaced in the user interface (UI) i
 #### Placement properties
 In the table above some placements allow you to control whether students have access or not. Some placements allow you to configure if it can be graded or not. All placements have the following properties in common:
 
-* Name - up to 255 characters
-* Description - up to 
+* Name - up to 50 characters
+* Description - up to 1000 characters; only shows up in the admin area currently
+* Type - see above
+* Target link URI - because target_link_uri is part of the OIDC spec we support it here, however it's really just property of the placement. It can be anything you want. We don't launch to it, e.g., no FORM POST to this URL. It can be used for routing within your application.
+* Icon - we currently suggest a 50x50 pixel icon (PNG, GIF, JPEG). I don't think we support SVG currently. We will resize as needed.
+* Custom parameters - a list of name=value pairs, each on their own line. These override any set on the Tool level. See the section above on using substitution parameters.
 
 ### Make Your LTI Tool Available to Learn Servers
 
-Once you have developed an LTI tool, you can share it with Learn
+Once you have developed and registered an LTI tool, you can share it with Learn
 administrators so that they can configure their Learn servers to work with it.
-To share your tool, you must register your application. When you do so, you
-receive an Application ID. Share this Application ID with the administrator of
-any Learn server that will use your LTI tool. For more information about
+
+To deploy your application to a Learn instance share the Application ID with the administrator of
+that Learn server. At the point they enter the Application (Client) ID they will see the properties of the application you configured through
+the developer portal. They will also receive a new piece of information which is the **Deployment ID**. This deployment ID is sent with every LTI launch, and uniquely identifies the Learn instance that launch is coming from.
+
+It is likely that you'll need to use that deployment ID to map which Learn instance a launch is coming from. This is a bit of a chicken and egg problem, in that you have registered your application with the developer portal, but you don't know what Learn instances are using it yet. You can automatically handle that at launch time, e.g., if you haven't seen that deployment ID previously then prompt the user to set it up, or you can do the set up out of band.
+
+For more information about
 registering your application, see [Register Your Application](https://help.blackboard.com/Learn/Administrator/Hosting/System_Integration/LTI).
+
+At this point your application is connected to a Learn instance. All that remains is for an instructor or other user to create links in a course or use some of the automatically deployed links, such as a course tool placement.
 
 ### LTI Placement to Building Block Link Mapping
 
@@ -127,4 +138,8 @@ for Developers.
 
 ### Caveat
 
-Deleting a registered LTI domain and/or the associated managed placements from the Administrator Panel -> LTI Tool Providers page will invalidate all of the associated LTI launch links in courses. The data will be gone from the database. There is no way to fix this. NEVER delete a registered domain or managed placements without considering these consequences. If you create an LTI 1.3 Tool that uses the same domain as a currently registered LTI 1.1 tool on a Learn system, there is code in Learn that will prompt you to migrate from LTI 1.1 to LTI 1.3. Generally that's a great option. Finally, only very brave people make changes on a production system without testing first on a test or staging system. We recommend you be more cautious than brave.``
+Deleting a registered LTI domain and/or the associated managed placements from the Administrator Panel -> LTI Tool Providers page will invalidate all of the associated LTI launch links in courses. The data will be gone from the database. There is no way to fix this. NEVER delete a registered domain or managed placements without considering these consequences. 
+
+If you create an LTI 1.3 Tool that uses the same domain as a currently registered LTI 1.1 tool on a Learn system, there is code in Learn that will prompt you to migrate from LTI 1.1 to LTI 1.3. Generally that's a great option. 
+
+Finally, only very brave people make changes on a production system without testing first on a test or staging system. We recommend you be more cautious than brave.

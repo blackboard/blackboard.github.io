@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "LTI Advantage - Sample JSON" 
-id: standards-lti-gs-sample-json
+title: "LTI Advantage - Sample Deep Linking JSON" 
+id: standards-lti-deep-link-json
 categories: Standards
 author: Scott Hurrey
 ---
@@ -13,7 +13,7 @@ This document documents sample JSON between the Blackboard Learn LMS and an
 LTI Advantage Tool Provider. We'll be using https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node for our examples. One use case we're often asked
 about is doing video embeds in Blackboard Learn content. That will be our first, and for now, only example.
 
-#### HOWTO Embed LtiLinkItems into the editor via Deep Linking (Currently Ultra Only)
+#### HOWTO Embed LtiLinkItems into the editor via Deep Linking
 **When adding content back from the internal tool for LTI 1.1/Deep Linking 1.0, you can specify custom JSON, use:**
 
 ~~~ json
@@ -36,7 +36,7 @@ about is doing video embeds in Blackboard Learn content. That will be our first,
 }
 ~~~
 
-**For LTI 1.3+/Deep Linking 2.0+ use (note we ignore the width and height but you can add it):**
+**For LTI 1.3+/Deep Linking 2.0+ use:**
 
 ~~~ json
 {

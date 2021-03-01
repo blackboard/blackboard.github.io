@@ -512,9 +512,27 @@
                                             
                                             <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
                                             
-                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-core-launch"><a href="">LTI 1.3 Core Launch</a>
+                                        <ul>
                                             
-                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            <li class="content" id="standards-lti-core-oidc-login"><a href="/standards/lti/core/oidc-login" target="_self" >Handling OIDC Login</a></li>
+                                            
+                                            <li class="content" id="standards-lti-core-id-token"><a href="/standards/lti/core/id-token" target="_self" >Processing the id_token JWT</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-deep-linking"><a href="">LTI Deep Linking 2.0</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-deep-link-request"><a href="/standards/lti/deeplink/deep-link-request" target="_self" >Handling Request</a></li>
+                                            
+                                            <li class="content" id="standards-lti-deep-link-response"><a href="/standards/lti/deep-linking/deep-link-response" target="_self" >Sending Response</a></li>
+                                            
+                                            <li class="content" id="standards-lti-deep-link-json"><a href="/standards/lti/deep-linking/deep-linking-json" target="_self" >Sample Json</a></li>
                                             
                                         </ul>
                                     </li>
@@ -522,7 +540,7 @@
                                     <li class="third-level" id="standards-lti-test-tool"><a href="">Testing Tool</a>
                                         <ul>
                                             
-                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/test-tool/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            <li class="content" id="standards-lti-testtool-four-part-video"><a href="/standards/lti/test-tool/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
                                             
                                         </ul>
                                     </li>
@@ -535,6 +553,14 @@
                                             <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
                                             
                                             <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-trouble"><a href="">Troubleshooting</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-trouble-turn-on-all"><a href="/standards/lti/troubleshooting/turn-on-all-switches" target="_self" >Troubleshooting</a></li>
                                             
                                         </ul>
                                     </li>
@@ -709,18 +735,29 @@ Interoperability</a>.</p>
 <p>In the table above some placements allow you to control whether students have access or not. Some placements allow you to configure if it can be graded or not. All placements have the following properties in common:</p>
 
 <ul>
-  <li>Name - up to 255 characters</li>
-  <li>Description - up to</li>
+  <li>Name - up to 50 characters</li>
+  <li>Description - up to 1000 characters; only shows up in the admin area currently</li>
+  <li>Type - see above</li>
+  <li>Target link URI - because target_link_uri is part of the OIDC spec we support it here, however it’s really just property of the placement. It can be anything you want. We don’t launch to it, e.g., no FORM POST to this URL. It can be used for routing within your application.</li>
+  <li>Icon - we currently suggest a 50x50 pixel icon (PNG, GIF, JPEG). I don’t think we support SVG currently. We will resize as needed.</li>
+  <li>Custom parameters - a list of name=value pairs, each on their own line. These override any set on the Tool level. See the section above on using substitution parameters.</li>
 </ul>
 
 <h3 id="make-your-lti-tool-available-to-learn-servers">Make Your LTI Tool Available to Learn Servers</h3>
 
-<p>Once you have developed an LTI tool, you can share it with Learn
-administrators so that they can configure their Learn servers to work with it.
-To share your tool, you must register your application. When you do so, you
-receive an Application ID. Share this Application ID with the administrator of
-any Learn server that will use your LTI tool. For more information about
+<p>Once you have developed and registered an LTI tool, you can share it with Learn
+administrators so that they can configure their Learn servers to work with it.</p>
+
+<p>To deploy your application to a Learn instance share the Application ID with the administrator of
+that Learn server. At the point they enter the Application (Client) ID they will see the properties of the application you configured through
+the developer portal. They will also receive a new piece of information which is the <strong>Deployment ID</strong>. This deployment ID is sent with every LTI launch, and uniquely identifies the Learn instance that launch is coming from.</p>
+
+<p>It is likely that you’ll need to use that deployment ID to map which Learn instance a launch is coming from. This is a bit of a chicken and egg problem, in that you have registered your application with the developer portal, but you don’t know what Learn instances are using it yet. You can automatically handle that at launch time, e.g., if you haven’t seen that deployment ID previously then prompt the user to set it up, or you can do the set up out of band.</p>
+
+<p>For more information about
 registering your application, see <a href="https://help.blackboard.com/Learn/Administrator/Hosting/System_Integration/LTI">Register Your Application</a>.</p>
+
+<p>At this point your application is connected to a Learn instance. All that remains is for an instructor or other user to create links in a course or use some of the automatically deployed links, such as a course tool placement.</p>
 
 <h3 id="lti-placement-to-building-block-link-mapping">LTI Placement to Building Block Link Mapping</h3>
 
@@ -768,7 +805,11 @@ for Developers.</p>
 
 <h3 id="caveat">Caveat</h3>
 
-<p>Deleting a registered LTI domain and/or the associated managed placements from the Administrator Panel -&gt; LTI Tool Providers page will invalidate all of the associated LTI launch links in courses. The data will be gone from the database. There is no way to fix this. NEVER delete a registered domain or managed placements without considering these consequences. If you create an LTI 1.3 Tool that uses the same domain as a currently registered LTI 1.1 tool on a Learn system, there is code in Learn that will prompt you to migrate from LTI 1.1 to LTI 1.3. Generally that’s a great option. Finally, only very brave people make changes on a production system without testing first on a test or staging system. We recommend you be more cautious than brave.``</p>
+<p>Deleting a registered LTI domain and/or the associated managed placements from the Administrator Panel -&gt; LTI Tool Providers page will invalidate all of the associated LTI launch links in courses. The data will be gone from the database. There is no way to fix this. NEVER delete a registered domain or managed placements without considering these consequences.</p>
+
+<p>If you create an LTI 1.3 Tool that uses the same domain as a currently registered LTI 1.1 tool on a Learn system, there is code in Learn that will prompt you to migrate from LTI 1.1 to LTI 1.3. Generally that’s a great option.</p>
+
+<p>Finally, only very brave people make changes on a production system without testing first on a test or staging system. We recommend you be more cautious than brave.</p>
 
     </main>
     <div id="third-column-menu">

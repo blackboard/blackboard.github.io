@@ -10,7 +10,7 @@
  
        gtag('config', 'UA-173992978-1');
      </script>
-    <title>LTI Advantage - Sample JSON</title>
+    <title>Turn On All The Switches</title>
 
     <!-- Search --> 
 
@@ -34,7 +34,7 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageCategory = "#standards-lti-gs-sample-json";
+        var pageCategory = "#standards-lti-trouble-turn-on-all";
         $(document).ready(function () {
             
             $( "#menu-trigger" ).click(function() {
@@ -512,9 +512,27 @@
                                             
                                             <li class="content" id="standards-lti-gs-with-lti"><a href="/standards/lti/getting-started/getting-started-with-lti" target="_self" >Getting Started with LTI</a></li>
                                             
-                                            <li class="content" id="standards-lti-gs-sample-json"><a href="/standards/lti/getting-started/sample-json" target="_self" >Sample Json</a></li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-core-launch"><a href="">LTI 1.3 Core Launch</a>
+                                        <ul>
                                             
-                                            <li class="content" id="standards-lti-gs-turn-on-all"><a href="/standards/lti/getting-started/turn-on-all-switches" target="_self" >Turn on all the switches</a></li>
+                                            <li class="content" id="standards-lti-core-oidc-login"><a href="/standards/lti/core/oidc-login" target="_self" >Handling OIDC Login</a></li>
+                                            
+                                            <li class="content" id="standards-lti-core-id-token"><a href="/standards/lti/core/id-token" target="_self" >Processing the id_token JWT</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-deep-linking"><a href="">LTI Deep Linking 2.0</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-deep-link-request"><a href="/standards/lti/deeplink/deep-link-request" target="_self" >Handling Request</a></li>
+                                            
+                                            <li class="content" id="standards-lti-deep-link-response"><a href="/standards/lti/deep-linking/deep-link-response" target="_self" >Sending Response</a></li>
+                                            
+                                            <li class="content" id="standards-lti-deep-link-json"><a href="/standards/lti/deep-linking/deep-linking-json" target="_self" >Sample Json</a></li>
                                             
                                         </ul>
                                     </li>
@@ -522,7 +540,7 @@
                                     <li class="third-level" id="standards-lti-test-tool"><a href="">Testing Tool</a>
                                         <ul>
                                             
-                                            <li class="content" id="standards-lti-gs-four-part-video"><a href="/standards/lti/test-tool/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
+                                            <li class="content" id="standards-lti-testtool-four-part-video"><a href="/standards/lti/test-tool/four-part-video-tutorial" target="_self" >Four part Video Tutorial</a></li>
                                             
                                         </ul>
                                     </li>
@@ -535,6 +553,14 @@
                                             <li class="content" id="standards-lti-tutorials-names-and-roles"><a href="/standards/lti/tutorials/names-and-roles" target="_self" >Names and Roles</a></li>
                                             
                                             <li class="content" id="standards-lti-tutorials-pylti1p3"><a href="/standards/lti/tutorials/py-lti-1p3" target="_self" >PyLti1p3 Library</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="third-level" id="standards-lti-trouble"><a href="">Troubleshooting</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-trouble-turn-on-all"><a href="/standards/lti/troubleshooting/turn-on-all-switches" target="_self" >Troubleshooting</a></li>
                                             
                                         </ul>
                                     </li>
@@ -579,48 +605,22 @@
 <div id="body_before_container"> 
     
     <main id="maincontent">
-        <h1 id="lti-advantage---sample-json">LTI Advantage - Sample JSON</h1>
+        <h1 id="lti-in-learn---turn-on-all-the-switches">LTI In Learn - Turn On All The Switches</h1>
 <h3 id="overview">Overview</h3>
+<p>We often hear about this message “The Tool Provider has been disabled by the System Administrator”  The usual cause is that one of the 3 LTI switches is disabled. There are 3 places you need to enable LTI: (1) at the tool level, (2) at the course/organization level, and (3) at the LTI Global Properties level. Screenshots follow. <strong>LAST, BUT NOT LEAST - Make certain you are enrolled in the course, as an instructor or student, before using the LTI placements you create in a course! Your launch will fail if you don’t have a role in the course.</strong></p>
 
-<p>This document documents sample JSON between the Blackboard Learn LMS and an
-LTI Advantage Tool Provider. We’ll be using https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node for our examples. One use case we’re often asked
-about is doing video embeds in Blackboard Learn content. That will be our first, and for now, only example.</p>
+<h3 id="all-the-switches">All the Switches</h3>
+<p>(1) Administrator Panel -&gt; Tools &amp; Utilities section -&gt; Tools</p>
 
-<h4 id="howto-embed-ltilinkitems-into-the-editor-via-deep-linking-currently-ultra-only">HOWTO Embed LtiLinkItems into the editor via Deep Linking (Currently Ultra Only)</h4>
-<p><strong>When adding content back from the internal tool for LTI 1.1/Deep Linking 1.0, you can specify custom JSON, use:</strong></p>
+<p><img src="/assets/img/turn-on-all-switches-1.png" alt="1-LTIConfigAdminTools.png" /></p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.imsglobal.org/ctx/lti/v1/ContentItem"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LtiLinkItem"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">":item1"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LTI embedded-app test"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"mediaType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lti-tool.dev.bbpd.io/lti"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"placementAdvice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"displayWidth"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">147</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"displayHeight"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">184</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"presentationDocumentTarget"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"iframe"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<p>(2) In a Course/Organization, Start at the Left Nav Menu</p>
 
-<p><strong>For LTI 1.3+/Deep Linking 2.0+ use (note we ignore the width and height but you can add it):</strong></p>
+<p><img src="/assets/img/turn-on-all-switches-2.png" alt="2-LTIConfigCourseOrg.png" /></p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ltiResourceLink"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An Embedded Resource"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A description"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lti-tool-jwt.dev.bbpd.io/lti13"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"iframe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<p>(3) Administrator Panel -&gt; Integrations section -&gt; LTI Tool Providers -&gt; Manage Global Properties</p>
+
+<p><img src="/assets/img/turn-on-all-switches-3.png" alt="3-LTIConfigManageGlobal.png" /></p>
 
     </main>
     <div id="third-column-menu">
@@ -630,6 +630,7 @@ about is doing video embeds in Blackboard Learn content. That will be our first,
                     <div id="table-of-contents">
                         <ul>
   <li><a href="#overview">Overview</a></li>
+  <li><a href="#all-the-switches">All the Switches</a></li>
 </ul>
 
                         </div>
