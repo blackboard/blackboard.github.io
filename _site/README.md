@@ -15,11 +15,8 @@ Jekyll, in conjunction with [Bundler](https://rubygems.org/gems/bundler) to run 
 
 In order to work on documentation locally, you just need to do a few things. First, you should fork the repository to your own repository. This can be done most easily through the Github interface. Once you have your own repository, you just need to prepare your local environment.
 
-1. Clone the repository to your desktop. This is as simple as navigating to a command prompt and typing `git clone <your repo>.git`. If you already have this repo cloned, be sure to use git pull instead to ensure you are starting with the most current files.
-2. Install Jekyll and Bundler, following the steps listed [here](https://jekyllrb.com/docs/).
-3. Now you can run this is continuous mode, by simply typing `bundle exec jekyll serve` at the command prompt. This will continue to run and automatically rebuild the site as you make and save changes. The site will be available at http://localhost:4000.
-
 **Note**: If you are on MacOS, you have a default Ruby installed. Jekyll and Bundler require Ruby, but a new version of Ruby that MacOS provides. If you are on a Mac, you can issue the following commands in a terminal session to work around this:
+This is slightly out of date. When I last did `brew install ruby` it installed version 3.x.
 
  ``` 
     brew install tree
@@ -31,6 +28,11 @@ In order to work on documentation locally, you just need to do a few things. Fir
     gem install jekyll bundler
 ```
 
+1. Clone the repository to your desktop. This is as simple as navigating to a command prompt and typing `git clone <your repo>.git`. If you already have this repo cloned, be sure to use git pull instead to ensure you are starting with the most current files.
+2. Install Jekyll and Bundler, following the steps listed [here](https://jekyllrb.com/docs/).
+3. Now you can run this in continuous mode, by simply typing `bundle install` (only the first time), then
+   `bundle exec jekyll serve` at the command prompt. This will continue to run and automatically rebuild the site as you make and save changes. The site will be available at http://localhost:4000.
+   
 ## Making Changes to Existing Documents
 
 This is easy. Just find the document in the folder structure and edit it as you would any other Markdown file. The documents are organized in the following structure:

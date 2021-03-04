@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Turn On All The Switches" 
-id: standards-lti-gs-turn-on-all
+id: standards-lti-trouble-turn-on-all
 categories: Standards
 author: Scott Hurrey
 ---
