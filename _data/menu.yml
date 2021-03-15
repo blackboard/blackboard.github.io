@@ -598,7 +598,7 @@
               id: standards-caliper-events-grade-events
               target: _self
             - subsubmenu_content_name: LTI Events
-              subsubmenu_content_url: /standards/caliper/getting-started/lti-events
+              subsubmenu_content_url: /standards/caliper/getting-started/events/lti-events
               id: standards-caliper-events-lti-events
               target: _self
             - subsubmenu_content_name: Session Events
