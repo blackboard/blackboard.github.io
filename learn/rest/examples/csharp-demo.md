@@ -13,9 +13,9 @@ discovering, and deleting supported Learn objects
 
 ### Prerequisites
 
-* You must [register a developer account and application](learn/rest/getting-started/registry) in the Developer Portal
+* You must [register a developer account and application](/learn/rest/getting-started/registry) in the Developer Portal
 * You must 
-[register your application](learn/rest/getting-started/rest-and-learn) in Blackboard Learn
+[register your application](/learn/rest/getting-started/rest-and-learn) in Blackboard Learn
 * You must also configure the script as outlined in the README for the project
 
 
