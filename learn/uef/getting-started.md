@@ -28,7 +28,7 @@ We gave several partners early access to the UEF. The following videos are examp
 
 * [eXplorance](https://appcatalog.blackboard.com/details/blue/)
 
-    * [Video:](https://onblackboard-my.sharepoint.com/:v:/g/personal/mark_kauffman_blackboard_com/Ed6yTbNle0lLjpeMDsPnCCwBJrs0hXcCg5hv7-tKfnikgg?e=p1C3Rv) eXplorance uses telemetry, notifications, and a modal peek-panel to prompt for Blue Course Evaluations.
+    * [Video:](https://youtu.be/WuH-QpkFyqA) eXplorance uses telemetry, notifications, and a modal peek-panel to prompt for Blue Course Evaluations.
 
     * [Screenshots](http://images.email.blackboard.com/Web/BlackboardInc/%7B8ca742bc-d001-440c-9e47-6f3263fa677e%7D_ExploranceUEFscreenshots.pdf)
 
