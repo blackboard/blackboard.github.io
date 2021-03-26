@@ -226,4 +226,4 @@ For those unfamiliar with Github, here are a few helpful guides for forking repo
 
 ## Summary
 
-I hope this document de-mystifies the process a bit. Feel free to report issues to the Github repository [issues page](https://github.com/blackboard/blackboard.github.io/issues), start a [discussion on the community site](https://community.blackboard.com/discuss/viewcategory/78), or email us directly at developers@blackboard.com.
+I hope this document de-mystifies the process a bit. Feel free to report issues to the Github repository [issues page](https://github.com/blackboard/blackboard.github.io/issues), start a [discussion on the community site](https://community.blackboard.com/discuss/viewcategory/78), or email us directly at developers@blackboard.com. Happy coding!

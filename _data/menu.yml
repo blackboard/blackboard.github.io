@@ -665,6 +665,16 @@
               id: standards-lti-deep-link-json
               target: _self
 
+        - subsubmenu_item: Migrating
+          id: standards-lti-migrating
+          type: menu
+          subsubmenu_content:
+
+            - subsubmenu_content_name: Migrating  from LTI 1.1 to 1.3
+              subsubmenu_content_url: /standards/lti/migrating/migrating-11
+              id: standards-lti-migrating-11
+              target: _self
+
         - subsubmenu_item: Testing Tool
           id: standards-lti-test-tool
           type: menu
