@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Retrieve the feedback for a file" 
+title: "Retrieve the feedback for a file"
 id: ally-getting-feedback
 categories: Ally
 author: Scott Hurrey
@@ -23,7 +23,12 @@ GET /api/v2/clients/:clientId/content/:contentHash
 * None
 
 #### Query Parameters
-* **feedback** - Query parameter - Whether feedback information should be returned. Should be true, false or omitted.
+* **feedback**
+  - Query parameter - Whether feedback information should be returned. Should be true, false or omitted.
+  - Requires the `content:getDetails:withFeedback` action to be granted in the JWT token before data is release
+* **formats**
+  - Query parameter - Whether alternative format information should be returned. Should be true, false or omitted.
+  - Requires the `content:getDetails:withFormats` action to be granted in the JWT token before data is release
 
 ## Expected response
 
@@ -185,7 +190,7 @@ For more information on the contents of this JSON, visit the [feedback definitio
         "libraryReference": null
     }
 }
-~~~ 
+~~~
 
 ### Testing with cURL
 
