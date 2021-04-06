@@ -658,15 +658,15 @@
           type: menu
           subsubmenu_content:
 
-            - subsubmenu_content_name: Handling Request
-              subsubmenu_content_url: /standards/lti/deeplink/deep-link-request
-              id: standards-lti-deep-link-request
-              target: _self
+            # - subsubmenu_content_name: Handling Request
+            #  subsubmenu_content_url: /standards/lti/deeplink/deep-link-request
+            #  id: standards-lti-deep-link-request
+            #  target: _self
 
-            - subsubmenu_content_name: Sending Response
-              subsubmenu_content_url: /standards/lti/deep-linking/deep-link-response
-              id: standards-lti-deep-link-response
-              target: _self
+            # - subsubmenu_content_name: Sending Response
+            #  subsubmenu_content_url: /standards/lti/deep-linking/deep-link-response
+            #  id: standards-lti-deep-link-response
+            #  target: _self
 
             - subsubmenu_content_name: Sample Json
               subsubmenu_content_url: /standards/lti/deep-linking/deep-linking-json
