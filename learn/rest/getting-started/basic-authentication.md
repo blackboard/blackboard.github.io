@@ -12,7 +12,7 @@ doc_order_id: 0
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC Standard](https://tools.ietf.org/html/rfc6749). Each developer has a unique key and secret associated with each application they create. The developer makes an HTTP Post directly to the REST-enabled Learn server requesting an OAuth access token. The Learn instance forwards the request to the Blackboard's API gateway, adding its own siteId to the request so that the gateway can determine whether the application is registered with the server. The API gateway returns an authorization token that grants the application access to the Learn REST API for one hour. The developer uses this token in subsequent REST calls until the token expires. This workflow is illustrated in the following diagram:
 
-![OAuth Workflow Diagram](https://bbuniversity.blackboard.com/bbcswebdav/pid-65012-dt-content-rid-132617_1/xid-132617_1)
+![OAuth Workflow Diagram](/assets/img/basic-auth-learn.png)
 
 **WARNING: Never share or expose an application's key/secret pair. These are used for requesting OAuth tokens, which enable the holder to issue REST requests. Exposing an application key/secret pair or token is a serious security risk. If you think you have exposed a key/secret pair you may request a new pair for the application using the Developer Portal My Applications management page.**
 
