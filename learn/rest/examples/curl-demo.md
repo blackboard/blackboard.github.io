@@ -52,11 +52,11 @@ This help topic assumes the Developer:
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-  1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](basic-authentication) document.
+  1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](/learn/rest/getting-started/basic-authentication) document.
 
 **OR**
 
-  1. Use the authorizationcode endpoint to log into Learn with a given user's credentials, then obtain an **OAuth 2.0 access token**, using the application key/secret, that only allows access to the system based on that particular user's entitlements as described in the [Three-Legged OAuth](3lo) document.
+  1. Use the authorizationcode endpoint to log into Learn with a given user's credentials, then obtain an **OAuth 2.0 access token**, using the application key/secret, that only allows access to the system based on that particular user's entitlements as described in the [Three-Legged OAuth](/learn/rest/getting-started/3lo) document.
   2. Call the appropriate REST endpoint with the **OAuth 2.0 access token** and necessary data to perform a given action.
 
 Every example is shown in bold face, the JSON result is shown in italics.

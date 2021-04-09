@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Handling id_token JWT" 
-id: standards-lti-core-oidc-login
+id: standards-lti-core-id-token
 categories: Standards
 author: Eric Preston
 ---
