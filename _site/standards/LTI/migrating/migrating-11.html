@@ -10,7 +10,7 @@
  
        gtag('config', 'UA-173992978-1');
      </script>
-    <title></title>
+    <title>Migrating from LTI 1.0/1.1 to 1.3</title>
 
     <!-- Search --> 
 
@@ -34,7 +34,7 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageCategory = "#";
+        var pageCategory = "#standards-lti-migrating-11";
         $(document).ready(function () {
             
             $( "#menu-trigger" ).click(function() {
@@ -100,6 +100,7 @@
         <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
     </header>
 
+<!---  New menu  -->
 <div class="menu">
     <div class="accordion-menu col-menu">
         <ul>
@@ -609,184 +610,46 @@
         </ul>
     </div>
 </div>
-
-<main id="maincontent">
-    <div id="body_before_container"> 
-            
-        <div id="content">
-    <h2>Tag: plugins <a style="float:right;" href="/blogs/blog-home"><i class="material-icons">navigate_before</i> All tags</a></h2>
-
-    <div class="row">
-        
-    </div>
+<div id="body_before_container"> 
     
-</div>
-    </div>
-</main>
-<div id="third-column-menu">
-    <div class="col hide-on-small-only m3 l2">
-        <ul class="section table-of-contents">
-            <div id="table-of-contents">
+    <main id="maincontent">
+        <h1 id="migrating-from-lti-1011-to-13">Migrating from LTI 1.0/1.1 to 1.3</h1>
+<h3 id="overview">Overview</h3>
+
+<p>For the first time in LTI’s history we need to handle migrating from one version to another. Before 1.3 the changes were all
+additive, but with 1.3 the payload format and security model have changed significantly, so we need a way to
+migrate existing LTI 1.1 (and 1.0) links to support the 1.3 format.</p>
+
+<p>Note that Learn has never allowed two tools or applications to be configured in the same Learn instance with the
+same fully qualified domain name (fqdn). This means that you cannot have both a 1.1 version and a 1.3 version of 
+a tool configured at the same time if they use the same fqdn.</p>
+
+<p>If a tool provider wants to upgrade their tool to LTI 1.3/Advantage but not break all of an institution’s existing links
+then they will need to host their LTI 1.3/Advantage tool at the same fqdn.</p>
+
+<p>In Blackboard Learn we automatically upgrade the links for a tool when a Learn administrator deploys the 1.3 version of the tool.</p>
+
+<p>At deployment time, if Learn sees there is an existing 1.1 tool registered with the same domain(s) as the 1.3
+tool the admin is prompted to migrate the links. If they choose “yes” then we migrate ALL LTI 1.1 links to the 
+new LTI 1.3 application, effectively removing the LTI 1.1 domain configuration. The links remain and should work
+fine if the tool developer has done their job correctly. The target_link_uri for the 1.3 tool is the same
+as the launch URL defined in the LTI 1.1 placement or link.</p>
+
+    </main>
+    <div id="third-column-menu">
+        <div class="col hide-on-small-only m3 l2">
+            <ul class="section table-of-contents">
                 <div id="table-of-contents">
-                    <h4>Categories</h4>
+                    <div id="table-of-contents">
+                        <ul>
+  <li><a href="#overview">Overview</a></li>
+</ul>
 
-
- <span class="site-tag">
-    <a href="/category/announcement/"
-        style="font-size: 108%">
-            announcement (7)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/category/blog/"
-        style="font-size: 88%">
-            blog (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/category/devcon/"
-        style="font-size: 88%">
-            devcon (2)
-    </a><br />
-</span>
-
-<br />
-                    <hr />
-                    <h4>Tag Cloud</h2>
-
-
- <span class="site-tag">
-    <a href="/tag/ally/"
-        style="font-size: 84%">
-            ally (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/api/"
-        style="font-size: 92%">
-            api (3)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/building-blocks/"
-        style="font-size: 84%">
-            building blocks (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/caliper/"
-        style="font-size: 84%">
-            caliper (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/community/"
-        style="font-size: 88%">
-            community (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/devcon/"
-        style="font-size: 88%">
-            devcon (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/eol/"
-        style="font-size: 84%">
-            eol (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/learn/"
-        style="font-size: 104%">
-            learn (6)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/lti/"
-        style="font-size: 88%">
-            lti (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/recap/"
-        style="font-size: 88%">
-            recap (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/rest/"
-        style="font-size: 92%">
-            rest (3)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/soap/"
-        style="font-size: 84%">
-            soap (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/standards/"
-        style="font-size: 88%">
-            standards (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/template-variables/"
-        style="font-size: 84%">
-            template variables (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/tutorials/"
-        style="font-size: 84%">
-            tutorials (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/uef/"
-        style="font-size: 88%">
-            uef (2)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/ultra/"
-        style="font-size: 84%">
-            ultra (1)
-    </a><br />
-</span>
-
- <span class="site-tag">
-    <a href="/tag/update/"
-        style="font-size: 88%">
-            update (2)
-    </a><br />
-</span>
-
-                  </div>
-              </div>
-        </ul>
-      </div>
+                        </div>
+                    </div>
+            </ul>
+            </div>
+    </div>  
 </div>
 <div class="clearfix"></div>
 <footer class="page-footer">
