@@ -19,7 +19,7 @@ The answer is yes! [Here's a video explaining exactly how to proceed](https://yo
 
 Reference Documentation:
 
-* [https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn](https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn])
+* [https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn](https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn)
 * [https://docs.blackboard.com/learn/rest/getting-started/basic-authentication](https://docs.blackboard.com/learn/rest/getting-started/basic-authentication)
 * [https://docs.blackboard.com/learn/rest/getting-started/3lo](https://docs.blackboard.com/learn/rest/getting-started/3lo)
 * [https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md](https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md)
