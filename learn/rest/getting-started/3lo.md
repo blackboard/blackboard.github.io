@@ -140,6 +140,6 @@ client that sent the authorization code request.
 
 ### Examples
 
-* [Three-legged OAuth in Curl](curl-demo)
+* [Three-legged OAuth in Curl](/learn/rest/examples/curl-demo)
 * [BBDN-3LO-REST-Swift](https://github.com/blackboard/BBDN-3LO-REST-Swift)
 
