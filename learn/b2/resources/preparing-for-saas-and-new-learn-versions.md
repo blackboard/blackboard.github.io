@@ -626,3 +626,29 @@ if ( parent && parent.tinymce &&
 ~~~
  
 *Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.
+
+## B2 Changes Required for SameSite Issues with B2 Mashups
+#### Why These Changes Are Necessary
+
+As of mid/late April 2021 Google Chrome 90 does not consider a GET request "safe" and blocks different site cookies even for a GET request. If an external server used GET with parameters to send data to a Learn server, that will no longer work because the session cookies are blocked. Hence, if your B2 provides a mashup that can be used in an Original course, you must implement a solution similar to the following. You can no longer use a GET as a workaround for SameSite issues. Or, you can migrate users to an LTI solution. The next paragraph gives more background.
+ 
+Historically a Building Block can launch from content created by a Blackboard Learn B2 to a remote server where some content is selected to push back to Blackboard Learn. With the advent of browsers now enforcing a SameSite cookie policy the remote server cannot then make a request back to Learn with the cookies necessary for that Learn session due to stringent browser SameSite enforcement. For this discussion we’ll describe how that impacts a B2 mashup and describe a solution that uses JavaScript to get around the browser’s enforcement of the SameSite policy. You will need to examine the rest of your B2 functionality to determine if you need to make similar changes in other areas that get content from your server.
+
+#### Overview of the Changes
+As an example, we will discuss a B2 that provides a mashup that does a launch to get content from a mashup content provider, say mashupsource.com. The user used to be able to select content on mashupsource.com which then did a form POST, or a GET back to the B2 endpoint. Because browsers now enforce the SameSite policy by default,the form POST will no longer work. Some browsers recently have also become more stringent with 3rd-party cookies and GET requests. The browser will not send the Learn Server (LearnServerFQDN) cookies to LearnServerFQDN when the cookies are on a request from any source other than the domain of the LearnServer, instead it blocks them.
+
+Hence you need a way update Learn Server content without a cross-site HTTP request from mashupsource.com to the Learn Server. The following describes how you can do this.
+ 
+Instead of redirecting the browser to a page on mashupsource.com, that page needs to load an iframe, provided by your B2, with the source being mashupsource.com. The user will interact with mashupsource.com within that iframe and when done, that page will use JavaScript to postMessage to the parent window with whatever the result of the user’s interaction with mashupsource.com is. JavaScript in the parent (authored by mashupsource developers, rendered by your B2 as part of your mashup) will accept that message (after validating it is coming from mashupsource.com) and then from within this window (the one launched from LearnServerFQDN/B2…) it will then POST (or GET) back to the Learn B2 endpoint. Since this is a POST (or GET) from a page coming from the same origin it will work. These changes are compatible with the current and future releases of Blackboard Learn.
+ 
+Here's a diagram showing the message chain from a mashupsource.com to the B2 on the Learn server: 
+~~~ java
+[window/iframe: LearnServerFQDN – the Learn Original Course page with the editor on it
+        [iframe:LearnServerFQDN/B2 providing mashup (receive postMessage then POST or GET to appropriate B2 endpoint)
+                [iframe src=mashupsource.com (postMessage to parent)]
+        ]
+]
+~~~
+Note the brackets are indicating how the iframes are nested. 
+
+Summary - If your B2 provides a mashup for use in an Original Course's TinyMCE editor you will need to re-architect as described above, or mirgrate users to an LTI-based solution.
