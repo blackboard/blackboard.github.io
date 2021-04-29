@@ -7,6 +7,7 @@ author: Scott Hurrey
 ---
 
 # Introduction to Building Blocks
+(NOTE: For new development, build REST and LTI integrations.)
 
 Blackboard Building Blocks, a key component of Blackboard Learn's open
 architecture, allow you to enhance the online education experience for your
