@@ -7,6 +7,7 @@ author: Scott Hurrey
 ---
 
 # First Steps Using Building Blocks
+NOTE: For new development, build REST and LTI integrations. Use the Developer AMI listed under DVBA for your Blackboard Learn server.
 
 Developing extensions for Learn requires a development environment. Your
 development environment refers to (1) the development workstation on which you
