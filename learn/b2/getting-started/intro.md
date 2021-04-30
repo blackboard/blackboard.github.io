@@ -7,7 +7,7 @@ author: Scott Hurrey
 ---
 
 # Introduction to Building Blocks
-(NOTE: For new development, build REST and LTI integrations.)
+NOTE: For new development, build REST and LTI integrations. Use the Developer AMI listed under DVBA for your Blackboard Learn server.
 
 Blackboard Building Blocks, a key component of Blackboard Learn's open
 architecture, allow you to enhance the online education experience for your
