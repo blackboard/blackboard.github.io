@@ -7,9 +7,9 @@ author: Scott Hurrey
 ---
 
 # Introduction to Building Blocks
-NOTE: For new development, build REST and LTI integrations. Use the Developer AMI listed under DVBA for your Blackboard Learn server.
+NOTE: For new development, Blackboard recommends building REST and LTI integrations and NOT Building Blocks(B2s). B2s do not work within the Ultra Course UI; REST and LTI works for all Learn deployment and UI options. Use the Developer AMI listed under DVBA for your Blackboard Learn server.
 
-Blackboard Building Blocks, a key component of Blackboard Learn's open
+Blackboard Building Blocks, one of several components of Blackboard Learn's open
 architecture, allow you to enhance the online education experience for your
 students and faculty. You may assemble a solution of homegrown, commercial and
 open source software and tools using Blackboard Building Blocks that best
