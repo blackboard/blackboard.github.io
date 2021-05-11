@@ -3,6 +3,7 @@ layout: post
 title: Use One-Time Session Token to Authenticate with UEF
 date: 2021-05-10 16:13
 category: blog
+id: 20210511-uefnocookies
 author: Scott Hurrey
 tags: ['uef','ultra','lti','rest']
 summary: As browsers continue to lock down cookies, particularly with iFrames, there is a new way to handle authentication with the Ultra Extension Framework.
