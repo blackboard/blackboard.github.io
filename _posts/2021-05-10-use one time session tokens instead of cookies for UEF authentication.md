@@ -9,7 +9,7 @@ tags: ['uef','ultra','lti','rest']
 summary: As browsers continue to lock down cookies, particularly with iFrames, there is a new way to handle authentication with the Ultra Extension Framework.
 ---
 
-# Use One-Time Session Token to Authenticate with UEF
+# Use One-Time Session Token to Authenticate with UEF
 
 In testing with the [Google Canary Chrome Browser](https://www.google.com/chrome/canary/), one of our clients discovered an issue that was blocking users from logging in to their Blackboard Learn instance. After much troubleshooting, we discovered a multi-layer issue that brings us to, you guessed it, [cookies](https://docs.blackboard.com/blog/2020/10/15/Cookies-and-Browsers). 
 
@@ -17,10 +17,12 @@ Here is a brief description of the contributing factors:
 
 First, the client had built a custom Ultra login page. The page included code designed to ensure that Learn login pages would never render inside of an iframe within Learn. It looks like this:
 
+```
 if ( top != self )
 {
     top.location.replace( self.location.href );
 }
+```
 
 In and of itself there's nothing wrong with it. We, at Blackboard, have removed it from the default Ultra login page, but many clients use it in Original login pages, and so it's moved with them into Ultra.
 
@@ -46,6 +48,7 @@ This one-time session cookie is added to the claims in the LTI 1.3 JWT and the f
 
 In LTI 1.3, you will see the value in the `https://blackboard.com/lti/claim/one_time_session_token` claim. This token is made up of a specially generated token value. It should also be followed by a comma and the user's UUID. The bug is that the comma is missing. Luckily, the user's UUID is the sub token in the same set of LTI claims. We intend to fix this, but to ensure your code works both now and after the fix, you can simply look for the comma. If it's not there, append it and the sub and you will be off and running. Here's a Python 3 code snippet to illustrate how this might look. We will be updating our UEF sample code, but at the time of this writing, we have not done so.
 
+```
     # Get the value of the one time session token from the LTI claim
     one_time_session_token  = message_launch_data['https://blackboard.com/lti/claim/one_time_session_token']
 
@@ -68,6 +71,7 @@ In LTI 1.3, you will see the value in the `https://blackboard.com/lti/claim/one_
 
     # Redirect the successful LTI validation to the Authorization Code endpoint
     return(redirect(learn_url + '/learn/api/public/v1/oauth2/authorizationCode?' + encoded_params))
+```
  
 ### LTI 1.1
 
