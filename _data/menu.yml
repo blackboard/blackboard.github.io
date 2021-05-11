@@ -737,6 +737,10 @@
       id: blog-home
       submenu_url: /blogs/blog-home
       target: _self
+    - submenu_item: UEF Without Cookies
+      id: 20210511-uefnocookies
+      submenu_url: /blog/2021/05/11/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html
+      target: _self
     - submenu_item: Create a User With Limited Entitlements for REST
       id: 20210106-howtocreatelimiteduser
       submenu_url: /announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls
@@ -752,9 +756,5 @@
     - submenu_item: Cookies and Browsers
       id: 20201015-cookiesandbrowsers
       submenu_url: /blog/2020/10/15/Cookies-and-Browsers
-      target: _self
-    - submenu_item: Student ID Template Variable
-      id: 20201007-studentidtemplate
-      submenu_url: /announcement/2020/10/07/New-Student-Id-Template-Variable.html
       target: _self
 
