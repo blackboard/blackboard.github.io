@@ -739,7 +739,7 @@
       target: _self
     - submenu_item: UEF Without Cookies
       id: 20210511-uefnocookies
-      submenu_url: /blog/2021/05/11/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html
+      submenu_url: /blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html
       target: _self
     - submenu_item: Create a User With Limited Entitlements for REST
       id: 20210106-howtocreatelimiteduser
