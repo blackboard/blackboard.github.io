@@ -1,0 +1,454 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Accessibility Attributes | Ultra Extension Framework Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Ultra Extension Framework Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="index.html">Pages</a>
+				</li>
+				<li>
+					<a href="AccessibilityAttributes.html"> Accessibility Attributes</a>
+				</li>
+			</ul>
+			<h1> Accessibility Attributes</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#accessibility-attributes" id="accessibility-attributes" style="color: inherit; text-decoration: none;">
+					<h1><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility Attributes</a></h1>
+				</a>
+				<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
+					<h2>Table of Contents</h2>
+				</a>
+				<ul>
+					<li><a href="#aria-activedescendant">aria-activedescendant</a></li>
+					<li><a href="#aria-atomic">aria-atomic</a></li>
+					<li><a href="#aria-autocomplete">aria-autocomplete</a></li>
+					<li><a href="#aria-busy">aria-busy</a></li>
+					<li><a href="#aria-checked">aria-checked</a></li>
+					<li><a href="#aria-colcount">aria-colcount</a></li>
+					<li><a href="#aria-colindex">aria-colindex</a></li>
+					<li><a href="#aria-colspan">aria-colspan</a></li>
+					<li><a href="#aria-controls">aria-controls</a></li>
+					<li><a href="#aria-current">aria-current</a></li>
+					<li><a href="#aria-describedby">aria-describedby</a></li>
+					<li><a href="#aria-details">aria-details</a></li>
+					<li><a href="#aria-disabled">aria-disabled</a></li>
+					<li><a href="#aria-dropeffect">aria-dropeffect</a></li>
+					<li><a href="#aria-errormessage">aria-errormessage</a></li>
+					<li><a href="#aria-expanded">aria-expanded</a></li>
+					<li><a href="#aria-flowto">aria-flowto</a></li>
+					<li><a href="#aria-grabbed">aria-grabbed</a></li>
+					<li><a href="#aria-haspopup">aria-haspopup</a></li>
+					<li><a href="#aria-hidden">aria-hidden</a></li>
+					<li><a href="#aria-invalid">aria-invalid</a></li>
+					<li><a href="#aria-keyshortcuts">aria-keyshortcuts</a></li>
+					<li><a href="#aria-label">aria-label</a></li>
+					<li><a href="#labelledby-colcount">aria-labelledby</a></li>
+					<li><a href="#aria-level">aria-level</a></li>
+					<li><a href="#aria-live">aria-live</a></li>
+					<li><a href="#aria-modal">aria-modal</a></li>
+					<li><a href="#aria-multiline">aria-multiline</a></li>
+					<li><a href="#aria-multiselectable">aria-multiselectable</a></li>
+					<li><a href="#aria-orientation">aria-orientation</a></li>
+					<li><a href="#aria-owns">aria-owns</a></li>
+					<li><a href="#aria-placeholder">aria-placeholder</a></li>
+					<li><a href="#aria-posinset">aria-posinset</a></li>
+					<li><a href="#aria-pressed">aria-pressed</a></li>
+					<li><a href="#aria-readonly">aria-readonly</a></li>
+					<li><a href="#aria-relevant">aria-relevant</a></li>
+					<li><a href="#aria-required">aria-required</a></li>
+					<li><a href="#aria-roledescription">aria-roledescription</a></li>
+					<li><a href="#aria-rowcount">aria-rowcount</a></li>
+					<li><a href="#aria-rowindex">aria-rowindex</a></li>
+					<li><a href="#aria-rowspan">aria-rowspan</a></li>
+					<li><a href="#aria-selected">aria-selected</a></li>
+					<li><a href="#aria-setsize">aria-setsize</a></li>
+					<li><a href="#aria-sort">aria-sort</a></li>
+					<li><a href="#aria-valuemax">aria-valuemax</a></li>
+					<li><a href="#aria-valuemin">aria-valuemin</a></li>
+					<li><a href="#aria-valuenow">aria-valuenow</a></li>
+					<li><a href="#aria-valuetext">aria-valuetext</a></li>
+				</ul>
+				<a href="#aria-activedescendant" id="aria-activedescendant" style="color: inherit; text-decoration: none;">
+					<h3>aria-activedescendant</h3>
+				</a>
+				<p>Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.</p>
+				<a href="#aria-atomic" id="aria-atomic" style="color: inherit; text-decoration: none;">
+					<h3>aria-atomic</h3>
+				</a>
+				<p>Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the <a href="#aria-relevant">aria-relevant</a> attribute.</p>
+				<a href="#aria-autocomplete" id="aria-autocomplete" style="color: inherit; text-decoration: none;">
+					<h3>aria-autocomplete</h3>
+				</a>
+				<p>Indicates whether inputting text could trigger display of one or more predictions of the user[s intended value for an input and specifies how predictions would be
+				presented if they are made.</p>
+				<a href="#aria-busy" id="aria-busy" style="color: inherit; text-decoration: none;">
+					<h3>aria-busy</h3>
+				</a>
+				<p>Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.</p>
+				<a href="#aria-checked" id="aria-checked" style="color: inherit; text-decoration: none;">
+					<h3>aria-checked</h3>
+				</a>
+				<p>Indicates the current &quot;checked&quot; state of checkboxes, radio buttons, and other widgets.</p>
+				<p>See <a href="#aria-pressed">aria-pressed</a> and <a href="#aria-selected">aria-selected</a>.</p>
+				<a href="#aria-colcount" id="aria-colcount" style="color: inherit; text-decoration: none;">
+					<h3>aria-colcount</h3>
+				</a>
+				<p>Defines the total number of columns in a table, grid, or treegrid.</p>
+				<p>See <a href="#aria-colindex">aria-colindex</a>.</p>
+				<a href="#aria-colindex" id="aria-colindex" style="color: inherit; text-decoration: none;">
+					<h3>aria-colindex</h3>
+				</a>
+				<p>Defines an element&#39;s column index or position with respect to the total number of columns within a table, grid, or treegrid.</p>
+				<p>See <a href="#aria-colcount">aria-colcount</a> and <a href="#aria-colspan">aria-colspan</a>.</p>
+				<a href="#aria-colspan" id="aria-colspan" style="color: inherit; text-decoration: none;">
+					<h3>aria-colspan</h3>
+				</a>
+				<p>Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.</p>
+				<p>See <a href="#aria-colindex">aria-colindex</a> and <a href="#aria-rowspan">aria-rowspan</a>.</p>
+				<a href="#aria-controls" id="aria-controls" style="color: inherit; text-decoration: none;">
+					<h3>aria-controls</h3>
+				</a>
+				<p>Identifies the element (or elements) whose contents or presence are controlled by the current element.</p>
+				<p>See <a href="#aria-owns">aria-owns</a>.</p>
+				<a href="#aria-current" id="aria-current" style="color: inherit; text-decoration: none;">
+					<h3>aria-current</h3>
+				</a>
+				<p>Indicates the element that represents the current item within a container or set of related elements.</p>
+				<a href="#aria-describedby" id="aria-describedby" style="color: inherit; text-decoration: none;">
+					<h3>aria-describedby</h3>
+				</a>
+				<p>Identifies the element (or elements) that describes the object.</p>
+				<p>See <a href="#aria-labelledby">aria-labelledby</a></p>
+				<a href="#aria-details" id="aria-details" style="color: inherit; text-decoration: none;">
+					<h3>aria-details</h3>
+				</a>
+				<p>Identifies the element that provides a detailed, extended description for the object.</p>
+				<p>See <a href="#aria-describedby">aria-describedby</a>.</p>
+				<a href="#aria-disabled" id="aria-disabled" style="color: inherit; text-decoration: none;">
+					<h3>aria-disabled</h3>
+				</a>
+				<p>Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</p>
+				<p>See <a href="#aria-hidden">aria-hidden</a> and <a href="#aria-readonly">aria-readonly</a>.</p>
+				<a href="#aria-dropeffect" id="aria-dropeffect" style="color: inherit; text-decoration: none;">
+					<h3>aria-dropeffect</h3>
+				</a>
+				<p>Indicates what functions can be performed when a dragged object is released on the drop target.</p>
+				<p><strong>Deprecated</strong> in ARIA 1.1</p>
+				<a href="#aria-errormessage" id="aria-errormessage" style="color: inherit; text-decoration: none;">
+					<h3>aria-errormessage</h3>
+				</a>
+				<p>Identifies the element that provides an error message for the object.</p>
+				<p>See <a href="#aria-invalid">aria-invalid</a> and <a href="#aria-describedby">aria-describedby</a>.</p>
+				<a href="#aria-expanded" id="aria-expanded" style="color: inherit; text-decoration: none;">
+					<h3>aria-expanded</h3>
+				</a>
+				<p>Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.</p>
+				<a href="#aria-flowto" id="aria-flowto" style="color: inherit; text-decoration: none;">
+					<h3>aria-flowto</h3>
+				</a>
+				<p>Identifies the next element (or elements) in an alternate reading order of content which, at the user&#39;s discretion, allows assistive technology to override the general default of reading in document source order.</p>
+				<a href="#aria-grabbed" id="aria-grabbed" style="color: inherit; text-decoration: none;">
+					<h3>aria-grabbed</h3>
+				</a>
+				<p>Indicates an element&#39;s &quot;grabbed&quot; state in a drag-and-drop operation.</p>
+				<p><strong>Deprecated</strong> in ARIA 1.1</p>
+				<a href="#aria-haspopup" id="aria-haspopup" style="color: inherit; text-decoration: none;">
+					<h3>aria-haspopup</h3>
+				</a>
+				<p>Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.</p>
+				<a href="#aria-hidden" id="aria-hidden" style="color: inherit; text-decoration: none;">
+					<h3>aria-hidden</h3>
+				</a>
+				<p>Indicates whether the element is exposed to an accessibility API.</p>
+				<p>See <a href="#aria-disabled">aria-disabled</a>.</p>
+				<a href="#aria-invalid" id="aria-invalid" style="color: inherit; text-decoration: none;">
+					<h3>aria-invalid</h3>
+				</a>
+				<p>Indicates the entered value does not conform to the format expected by the application.</p>
+				<p>See <a href="#aria-errormessage">aria-errormessage</a>.</p>
+				<a href="#aria-keyshortcuts" id="aria-keyshortcuts" style="color: inherit; text-decoration: none;">
+					<h3>aria-keyshortcuts</h3>
+				</a>
+				<p>Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.</p>
+				<a href="#aria-label" id="aria-label" style="color: inherit; text-decoration: none;">
+					<h3>aria-label</h3>
+				</a>
+				<p>Defines a string value that labels the current element.</p>
+				<p>See <a href="#aria-labelledby">aria-labelledby</a>.</p>
+				<a href="#aria-labelledby" id="aria-labelledby" style="color: inherit; text-decoration: none;">
+					<h3>aria-labelledby</h3>
+				</a>
+				<p>Identifies the element (or elements) that labels the current element.</p>
+				<p>See <a href="#aria-describedby">aria-describedby</a>.</p>
+				<a href="#aria-level" id="aria-level" style="color: inherit; text-decoration: none;">
+					<h3>aria-level</h3>
+				</a>
+				<p>Defines the hierarchical level of an element within a structure.</p>
+				<a href="#aria-live" id="aria-live" style="color: inherit; text-decoration: none;">
+					<h3>aria-live</h3>
+				</a>
+				<p>Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</p>
+				<a href="#aria-modal" id="aria-modal" style="color: inherit; text-decoration: none;">
+					<h3>aria-modal</h3>
+				</a>
+				<p>Indicates whether an element is modal when displayed.</p>
+				<a href="#aria-multiline" id="aria-multiline" style="color: inherit; text-decoration: none;">
+					<h3>aria-multiline</h3>
+				</a>
+				<p>Indicates whether a text box accepts multiple lines of input or only a single line.</p>
+				<a href="#aria-multiselectable" id="aria-multiselectable" style="color: inherit; text-decoration: none;">
+					<h3>aria-multiselectable</h3>
+				</a>
+				<p>Indicates that the user may select more than one item from the current selectable descendants.</p>
+				<a href="#aria-orientation" id="aria-orientation" style="color: inherit; text-decoration: none;">
+					<h3>aria-orientation</h3>
+				</a>
+				<p>Indicates whether the element[s orientation is horizontal, vertical, or unknown/ambiguous.</p>
+				<a href="#aria-owns" id="aria-owns" style="color: inherit; text-decoration: none;">
+					<h3>aria-owns</h3>
+				</a>
+				<p>Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship.</p>
+				<p>See <a href="#aria-controls">aria-controls</a>.</p>
+				<a href="#aria-placeholder" id="aria-placeholder" style="color: inherit; text-decoration: none;">
+					<h3>aria-placeholder</h3>
+				</a>
+				<p>Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. A hint could be a sample value or a brief description of the expected format.</p>
+				<a href="#aria-posinset" id="aria-posinset" style="color: inherit; text-decoration: none;">
+					<h3>aria-posinset</h3>
+				</a>
+				<p>Defines an element&#39;s number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.</p>
+				<p>See <a href="#aria-setsize">aria-setsize</a>.</p>
+				<a href="#aria-pressed" id="aria-pressed" style="color: inherit; text-decoration: none;">
+					<h3>aria-pressed</h3>
+				</a>
+				<p>Indicates the current &quot;pressed&quot; state of toggle buttons.</p>
+				<p>See <a href="#aria-checked">aria-checked</a> and <a href="#aria-selected">aria-selected</a>.</p>
+				<a href="#aria-readonly" id="aria-readonly" style="color: inherit; text-decoration: none;">
+					<h3>aria-readonly</h3>
+				</a>
+				<p>Indicates that the element is not editable, but is otherwise operable.</p>
+				<p>See <a href="#aria-disabled">aria-disabled</a>.</p>
+				<a href="#aria-relevant" id="aria-relevant" style="color: inherit; text-decoration: none;">
+					<h3>aria-relevant</h3>
+				</a>
+				<p>Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.</p>
+				<p>See <a href="#aria-atomic">aria-atomic</a>.</p>
+				<a href="#aria-required" id="aria-required" style="color: inherit; text-decoration: none;">
+					<h3>aria-required</h3>
+				</a>
+				<p>Indicates that user input is required on the element before a form may be submitted.</p>
+				<a href="#aria-roledescription" id="aria-roledescription" style="color: inherit; text-decoration: none;">
+					<h3>aria-roledescription</h3>
+				</a>
+				<p>Defines a human-readable, author-localized description for the role of an element.</p>
+				<a href="#aria-rowcount" id="aria-rowcount" style="color: inherit; text-decoration: none;">
+					<h3>aria-rowcount</h3>
+				</a>
+				<p>Defines the total number of rows in a table, grid, or treegrid.</p>
+				<p>See <a href="#aria-rowindex">aria-rowindex</a>.</p>
+				<a href="#aria-rowindex" id="aria-rowindex" style="color: inherit; text-decoration: none;">
+					<h3>aria-rowindex</h3>
+				</a>
+				<p>Defines an element[s row index or position with respect to the total number of rows within a table, grid, or treegrid.</p>
+				<p>See <a href="#aria-rowcount">aria-rowcount</a> and <a href="#aria-rowspan">aria-rowspan</a>.</p>
+				<a href="#aria-rowspan" id="aria-rowspan" style="color: inherit; text-decoration: none;">
+					<h3>aria-rowspan</h3>
+				</a>
+				<p>Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.</p>
+				<p>See <a href="#aria-rowindex">aria-rowindex</a> and <a href="#aria-colspan">aria-colspan</a>.</p>
+				<a href="#aria-selected" id="aria-selected" style="color: inherit; text-decoration: none;">
+					<h3>aria-selected</h3>
+				</a>
+				<p>Indicates the current &quot;selected&quot; state of various widgets.</p>
+				<p>See <a href="#aria-checked">aria-checked</a> and <a href="#aria-pressed">aria-pressed</a>.</p>
+				<a href="#aria-setsize" id="aria-setsize" style="color: inherit; text-decoration: none;">
+					<h3>aria-setsize</h3>
+				</a>
+				<p>Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.</p>
+				<p>See <a href="#aria-posinset">aria-posinset</a>.</p>
+				<a href="#aria-sort" id="aria-sort" style="color: inherit; text-decoration: none;">
+					<h3>aria-sort</h3>
+				</a>
+				<p>Indicates if items in a table or grid are sorted in ascending or descending order.</p>
+				<a href="#aria-valuemax" id="aria-valuemax" style="color: inherit; text-decoration: none;">
+					<h3>aria-valuemax</h3>
+				</a>
+				<p>Defines the maximum allowed value for a range widget.</p>
+				<a href="#aria-valuemin" id="aria-valuemin" style="color: inherit; text-decoration: none;">
+					<h3>aria-valuemin</h3>
+				</a>
+				<p>Defines the minimum allowed value for a range widget.</p>
+				<a href="#aria-valuenow" id="aria-valuenow" style="color: inherit; text-decoration: none;">
+					<h3>aria-valuenow</h3>
+				</a>
+				<p>Defines the current value for a range widget.</p>
+				<p>See <a href="#aria-valuetext">aria-valuetext</a>.</p>
+				<a href="#aria-valuetext" id="aria-valuetext" style="color: inherit; text-decoration: none;">
+					<h3>aria-valuetext</h3>
+				</a>
+				<p>Defines the human readable text alternative of aria-valuenow for a range widget.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label ">
+						<span>Pages</span>
+					</li>
+					<li class="current ">
+						<a href="AccessibilityAttributes.html"> <wbr>Accessibility <wbr>Attributes</a>
+					</li>
+					<li class=" ">
+						<a href="CourseDetails.html"> <wbr>Course <wbr>Details</a>
+					</li>
+					<li class=" ">
+						<a href="HelpProviderScenarios.html"> <wbr>Help <wbr>Provider <wbr>Scenarios</a>
+					</li>
+					<li class=" ">
+						<a href="MessagingRecommendations.html"> <wbr>Messaging <wbr>Recommendations</a>
+					</li>
+					<li class=" ">
+						<a href="OriginalityReporting.html"> <wbr>Originality <wbr>Reporting</a>
+					</li>
+					<li class=" ">
+						<a href="RightToLeft.html"> <wbr>Right <wbr>To <wbr>Left</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

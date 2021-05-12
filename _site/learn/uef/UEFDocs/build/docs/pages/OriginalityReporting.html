@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Originality Reporting | Ultra Extension Framework Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Ultra Extension Framework Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="index.html">Pages</a>
+				</li>
+				<li>
+					<a href="OriginalityReporting.html"> Originality Reporting</a>
+				</li>
+			</ul>
+			<h1> Originality Reporting</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#originality-reporting" id="originality-reporting" style="color: inherit; text-decoration: none;">
+					<h1>Originality Reporting</h1>
+				</a>
+				<p>The Ultra Extension Framework allows an integration to provide Originality
+					Reporting for assignments in Learn Ultra in conjunction with Learn&#39;s Submission
+				Services framework.</p>
+				<a href="#learn-submission-services-framework" id="learn-submission-services-framework" style="color: inherit; text-decoration: none;">
+					<h2>Learn Submission Services Framework</h2>
+				</a>
+				<p>The Submission Services framework in Learn exposes extension points for custom
+					Building Blocks (B2s) to be notified of new gradable content in a course and
+					students&#39; submissions against those content items. UEF builds on that with APIs
+					to support UI integration into Learn Ultra so that those custom extensions from
+					Learn B2s can be configured and displayed in Ultra courses. Details about how
+					to implement the Learn side of a Submission Services tool in a custom B2 via the
+					<code>SubmissionService</code>, <code>SubmittableItemEventHandler</code>, and <code>ItemSubmissionEventHandler</code>
+				interfaces is outside the scope of this document.</p>
+				<a href="#uef" id="uef" style="color: inherit; text-decoration: none;">
+					<h2>UEF</h2>
+				</a>
+				<p>Each UEF originality reporting extension is linked to its corresponding Submission
+					Services extension in Learn by specifying the same unique handle in both places.
+					All Submission Services extensions must provide a unique handle, and any UEF
+				extension designed to work with that Learn B2 extension must have the same handle.</p>
+				<pre><code class="language-javascript">sendMessage({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">'submission-tool:register'</span>,
+  <span class="hljs-attr">submissionServicesUniqueHandle</span>: <span class="hljs-string">'&lt;your_unique_handle&gt;'</span>,
+});</code></pre>
+				<p>Learn Ultra discovers available Submission Services tools via its own internal API
+					to Learn, and the unique handles provided by Learn are the source of record. UEF
+					originality reporting extensions will only show up in Ultra UI if Learn reports
+					that a Submission Services tool of the same unique handle is available for use on
+				that content item, subject to Learn&#39;s built-in mechanisms for B2/tool availability.</p>
+				<a href="#originality-report-configuration" id="originality-report-configuration" style="color: inherit; text-decoration: none;">
+					<h3>Originality Report Configuration</h3>
+				</a>
+				<p>A UEF portal has been added to the Assessment settings panel, in which an
+					extension can render its own settings after Originality Reporting is enabled by
+					an instructor. The portal&#39;s selector is
+					<code>course.content.assessment.settings.originalityReport.panel.settings</code>,
+				and will pass along the <code>courseId</code> and <code>contentId</code> as parameters:</p>
+				<pre><code class="language-json">{
+  <span class="hljs-attr">"courseId"</span>: <span class="hljs-string">"&lt;course_id&gt;"</span>,
+  <span class="hljs-attr">"contentId"</span>: <span class="hljs-string">"&lt;content_id&gt;"</span>
+}</code></pre>
+				<a href="#saving-configuration" id="saving-configuration" style="color: inherit; text-decoration: none;">
+					<h4>Saving Configuration</h4>
+				</a>
+				<p>When the instructor saves the Assessment settings, a UEF message will be passed
+					to the extension notifying it that it should save the settings changes made by
+					the instructor, and Ultra will wait for the extension to respond, indicating
+					that the save succeeded or failed. When a successful response is received from
+					the integration, Learn will notify the corresponding B2 of the new Originality
+				enablement state for the current content item.</p>
+				<p>The message from Ultra will provide a <code>correlationId</code> that will need to be
+					provided when responding to the message, as well as the <code>contentId</code> of the item
+					being saved and its <code>contentHandle</code> that indicates its content type. It will also
+				include the enabled state of the originality report setting:</p>
+				<pre><code class="language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"eventType"</span>: <span class="hljs-string">"submission-tool:settings-saved"</span>,
+    <span class="hljs-attr">"correlationId"</span>: <span class="hljs-string">"&lt;uuid&gt;"</span>,
+
+    <span class="hljs-attr">"contentId"</span>: <span class="hljs-string">"&lt;content_id&gt;"</span>,
+    <span class="hljs-attr">"contentHandle"</span>: <span class="hljs-string">"&lt;content_handle&gt;"</span>,
+    <span class="hljs-attr">"enabled"</span>: &lt;boolean&gt;
+  }
+}</code></pre>
+				<p>After sending that message to the extension, UEF expects an extension to check
+					its rendered DOM and save off the corresponding settings by whatever mechanism
+					it communicates to its tool implementation, e.g. via a Rest API provided by the
+				custom Learn B2 that does the Submission Services implementation in Learn.</p>
+				<p>The UEF extension must respond with a success or failure message within 5 seconds:</p>
+				<pre><code class="language-javascript">sendMessage({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">'submission-tool:settings-saved:response'</span>,
+  <span class="hljs-attr">correlationId</span>: <span class="hljs-string">'&lt;uuid&gt;'</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-literal">true</span>,
+});
+
+sendMessage({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">'submission-tool:settings-saved:response'</span>,
+  <span class="hljs-attr">correlationId</span>: <span class="hljs-string">'&lt;uuid&gt;'</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-comment">// you may supply a human readable error message to display to the user</span>
+  <span class="hljs-attr">error</span>: <span class="hljs-string">'There was an error saving the configuration'</span>,
+});</code></pre>
+				<p>If 5 seconds isn&#39;t enough time to save the configuration changes, the extension
+					can request more processing time by responding with a
+				<code>submission-tool:settings-saved:processing</code> message:</p>
+				<pre><code class="language-javascript">sendMessage({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">'submission-tool:settings-saved:processing'</span>,
+  <span class="hljs-attr">correlationId</span>: <span class="hljs-string">'&lt;uuid&gt;'</span>,
+});</code></pre>
+				<a href="#displaying-originality-results" id="displaying-originality-results" style="color: inherit; text-decoration: none;">
+					<h3>Displaying Originality Results</h3>
+				</a>
+				<p>UEF provides two different portals for displaying Originality information.</p>
+				<a href="#overall-status" id="overall-status" style="color: inherit; text-decoration: none;">
+					<h4>Overall Status</h4>
+				</a>
+				<p>The first portal is for an icon indicating the overall status of each
+					submission in the submission list and will appear in each submission&#39;s row. The
+					portal&#39;s selector is
+				<code>components.directives.grade.submission-list-row.originality</code>.</p>
+				<a href="#report" id="report" style="color: inherit; text-decoration: none;">
+					<h4>Report</h4>
+				</a>
+				<p>Two portals are provided for displaying the results of the Originality report,
+					one from the grader&#39;s perspective and one from the student&#39;s. An assignment&#39;s
+					grader will see a portal with the selector
+					<code>components.directives.attempt-grading.originality-report</code>,
+					and a student will see one with
+				<code>components.directives.attempt-review.originality-report</code>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label ">
+						<span>Pages</span>
+					</li>
+					<li class=" ">
+						<a href="AccessibilityAttributes.html"> <wbr>Accessibility <wbr>Attributes</a>
+					</li>
+					<li class=" ">
+						<a href="CourseDetails.html"> <wbr>Course <wbr>Details</a>
+					</li>
+					<li class=" ">
+						<a href="HelpProviderScenarios.html"> <wbr>Help <wbr>Provider <wbr>Scenarios</a>
+					</li>
+					<li class=" ">
+						<a href="MessagingRecommendations.html"> <wbr>Messaging <wbr>Recommendations</a>
+					</li>
+					<li class="current ">
+						<a href="OriginalityReporting.html"> <wbr>Originality <wbr>Reporting</a>
+					</li>
+					<li class=" ">
+						<a href="RightToLeft.html"> <wbr>Right <wbr>To <wbr>Left</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

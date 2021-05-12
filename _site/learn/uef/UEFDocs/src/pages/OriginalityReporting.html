@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Originality Reporting | Blackboard Dev docs</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Originality Reporting" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This site has been created in order to allow our Client’s developers to review our documentation and APIs to develop awesome new applications!" />
+<meta property="og:description" content="This site has been created in order to allow our Client’s developers to review our documentation and APIs to develop awesome new applications!" />
+<link rel="canonical" href="http://localhost:4000/learn/uef/UEFDocs/src/pages/OriginalityReporting.html" />
+<meta property="og:url" content="http://localhost:4000/learn/uef/UEFDocs/src/pages/OriginalityReporting.html" />
+<meta property="og:site_name" content="Blackboard Dev docs" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Originality Reporting","url":"http://localhost:4000/learn/uef/UEFDocs/src/pages/OriginalityReporting.html","description":"This site has been created in order to allow our Client’s developers to review our documentation and APIs to develop awesome new applications!","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=445a6bc4da888e69c3254f5e105c23f7ccbe3a5f">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Blackboard Dev docs</a></h1>
+      
+
+      <h1 id="originality-reporting">Originality Reporting</h1>
+
+<p>The Ultra Extension Framework allows an integration to provide Originality
+Reporting for assignments in Learn Ultra in conjunction with Learn’s Submission
+Services framework.</p>
+
+<h2 id="learn-submission-services-framework">Learn Submission Services Framework</h2>
+
+<p>The Submission Services framework in Learn exposes extension points for custom
+Building Blocks (B2s) to be notified of new gradable content in a course and
+students’ submissions against those content items. UEF builds on that with APIs
+to support UI integration into Learn Ultra so that those custom extensions from
+Learn B2s can be configured and displayed in Ultra courses. Details about how
+to implement the Learn side of a Submission Services tool in a custom B2 via the
+<code class="language-plaintext highlighter-rouge">SubmissionService</code>, <code class="language-plaintext highlighter-rouge">SubmittableItemEventHandler</code>, and <code class="language-plaintext highlighter-rouge">ItemSubmissionEventHandler</code>
+interfaces is outside the scope of this document.</p>
+
+<h2 id="uef">UEF</h2>
+
+<p>Each UEF originality reporting extension is linked to its corresponding Submission
+Services extension in Learn by specifying the same unique handle in both places.
+All Submission Services extensions must provide a unique handle, and any UEF
+extension designed to work with that Learn B2 extension must have the same handle.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">sendMessage</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">submission-tool:register</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">submissionServicesUniqueHandle</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;your_unique_handle&gt;</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Learn Ultra discovers available Submission Services tools via its own internal API
+to Learn, and the unique handles provided by Learn are the source of record. UEF
+originality reporting extensions will only show up in Ultra UI if Learn reports
+that a Submission Services tool of the same unique handle is available for use on
+that content item, subject to Learn’s built-in mechanisms for B2/tool availability.</p>
+
+<h3 id="originality-report-configuration">Originality Report Configuration</h3>
+
+<p>A UEF portal has been added to the Assessment settings panel, in which an
+extension can render its own settings after Originality Reporting is enabled by
+an instructor. The portal’s selector is
+<code class="language-plaintext highlighter-rouge">course.content.assessment.settings.originalityReport.panel.settings</code>,
+and will pass along the <code class="language-plaintext highlighter-rouge">courseId</code> and <code class="language-plaintext highlighter-rouge">contentId</code> as parameters:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"courseId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;course_id&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;content_id&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="saving-configuration">Saving Configuration</h4>
+
+<p>When the instructor saves the Assessment settings, a UEF message will be passed
+to the extension notifying it that it should save the settings changes made by
+the instructor, and Ultra will wait for the extension to respond, indicating
+that the save succeeded or failed. When a successful response is received from
+the integration, Learn will notify the corresponding B2 of the new Originality
+enablement state for the current content item.</p>
+
+<p>The message from Ultra will provide a <code class="language-plaintext highlighter-rouge">correlationId</code> that will need to be
+provided when responding to the message, as well as the <code class="language-plaintext highlighter-rouge">contentId</code> of the item
+being saved and its <code class="language-plaintext highlighter-rouge">contentHandle</code> that indicates its content type. It will also
+include the enabled state of the originality report setting:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"eventType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"submission-tool:settings-saved"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"correlationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;uuid&gt;"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nl">"contentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;content_id&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contentHandle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;content_handle&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;boolean&gt;</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>After sending that message to the extension, UEF expects an extension to check
+its rendered DOM and save off the corresponding settings by whatever mechanism
+it communicates to its tool implementation, e.g. via a Rest API provided by the
+custom Learn B2 that does the Submission Services implementation in Learn.</p>
+
+<p>The UEF extension must respond with a success or failure message within 5 seconds:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">sendMessage</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">submission-tool:settings-saved:response</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">correlationId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;uuid&gt;</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="nx">sendMessage</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">submission-tool:settings-saved:response</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">correlationId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;uuid&gt;</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="c1">// you may supply a human readable error message to display to the user</span>
+  <span class="na">error</span><span class="p">:</span> <span class="dl">'</span><span class="s1">There was an error saving the configuration</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>If 5 seconds isn’t enough time to save the configuration changes, the extension
+can request more processing time by responding with a
+<code class="language-plaintext highlighter-rouge">submission-tool:settings-saved:processing</code> message:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">sendMessage</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">submission-tool:settings-saved:processing</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">correlationId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;uuid&gt;</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="displaying-originality-results">Displaying Originality Results</h3>
+
+<p>UEF provides two different portals for displaying Originality information.</p>
+
+<h4 id="overall-status">Overall Status</h4>
+
+<p>The first portal is for an icon indicating the overall status of each
+submission in the submission list and will appear in each submission’s row. The
+portal’s selector is
+<code class="language-plaintext highlighter-rouge">components.directives.grade.submission-list-row.originality</code>.</p>
+
+<h4 id="report">Report</h4>
+
+<p>Two portals are provided for displaying the results of the Originality report,
+one from the grader’s perspective and one from the student’s. An assignment’s
+grader will see a portal with the selector
+<code class="language-plaintext highlighter-rouge">components.directives.attempt-grading.originality-report</code>,
+and a student will see one with
+<code class="language-plaintext highlighter-rouge">components.directives.attempt-review.originality-report</code>.</p>
+
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/blackboard/blackboard.github.io/edit/gh-pages/learn/uef/UEFDocs/src/pages/OriginalityReporting.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

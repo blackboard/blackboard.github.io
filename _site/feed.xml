@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-26T12:36:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackboard Dev docs</title><subtitle>This site has been created in order to allow our Client&apos;s developers to review our documentation and APIs to develop awesome new applications!</subtitle><entry><title type="html">How to Create a User With Limited Entitlements For REST API Calls</title><link href="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html" rel="alternate" type="text/html" title="How to Create a User With Limited Entitlements For REST API Calls" /><published>2021-01-06T12:59:00-06:00</published><updated>2021-01-06T12:59:00-06:00</updated><id>http://localhost:4000/announcement/2021/01/06/How%20to%20Create%20a%20User%20With%20Limited%20Entitlements%20For%20REST%20API%20Calls</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html">&lt;h1 id=&quot;how-to-create-a-user-with-limited-entitlements-for-rest-api-calls&quot;&gt;How to Create a User With Limited Entitlements For REST API Calls&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-12T08:50:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackboard Dev docs</title><subtitle>This site has been created in order to allow our Client's developers to review our documentation and APIs to develop awesome new applications!</subtitle><entry><title type="html">Use One-Time Session Token to Authenticate with UEF</title><link href="http://localhost:4000/blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html" rel="alternate" type="text/html" title="Use One-Time Session Token to Authenticate with UEF" /><published>2021-05-10T16:13:00-04:00</published><updated>2021-05-10T16:13:00-04:00</updated><id>http://localhost:4000/blog/2021/05/10/use%20one%20time%20session%20tokens%20instead%20of%20cookies%20for%20UEF%20authentication</id><content type="html" xml:base="http://localhost:4000/blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html">&lt;h1 id=&quot;useone-timesessiontokentoauthenticatewithuef&quot;&gt;Use One-Time Session Token to Authenticate with UEF&lt;/h1&gt;
+
+&lt;p&gt;In testing with the &lt;a href=&quot;https://www.google.com/chrome/canary/&quot;&gt;Google Canary Chrome Browser&lt;/a&gt;, one of our clients discovered an issue that was blocking users from logging in to their Blackboard Learn instance. After much troubleshooting, we discovered a multi-layer issue that brings us to, you guessed it, &lt;a href=&quot;https://docs.blackboard.com/blog/2020/10/15/Cookies-and-Browsers&quot;&gt;cookies&lt;/a&gt;. &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;This affects clients in SaaS with Ultra Base Navigation enabled using Ultra integrations that rely on UEF&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here is a brief description of the contributing factors:&lt;/p&gt;
+
+&lt;p&gt;First, the client had built a custom Ultra login page. The page included code designed to ensure that Learn login pages would never render inside of an iframe within Learn. It looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if ( top != self )
+{
+    top.location.replace( self.location.href );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In and of itself there’s nothing wrong with it. We, at Blackboard, have removed it from the default Ultra login page, but many clients use it in Original login pages, and so it’s moved with them into Ultra.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are unsure whether you have a custom login page, visit &lt;a href=&quot;https://help.blackboard.com/Learn/Administrator/SaaS/User_Interface_Options/Ultra_Experience/Institution_Branding/Customize_the_Login_Page&quot;&gt;help.blackboard.com&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Secondly, when a user logged in, Ultra Extensions automatically fired off an LTI launch to UEF-enabled tools. The way UEF works is: after the LTI launch is validated, the tool redirects to the Learn REST endpoint to initiate a UserAuth flow. In our documentation, we call this a Three-Legged OAuth or [3LO] (https://docs.blackboard.com/learn/rest/getting-started/3lo). In most cases, it’s a process that relies on a session cookie to hold everything together. This impending release of Chrome (and other browsers) will block this cookie because everything is happening across domains and involves the use of iframes. &lt;/p&gt;
+
+&lt;p&gt;So what happens is that, even though the integration is configured in Learn to not force the end-user to authorize the integration, the lack of the session cookie means that Learn has no idea that this user is logged in, so it pops open the login page. &lt;/p&gt;
+
+&lt;p&gt;Remember that code snippet above in the custom login page? Well, that takes over the entire browser page with the Learn login. And when the user logs in again, it renders the JavaScript meant for the UEF iframe into the page. In other words, it overtakes your Learn browser session. There is no way to actually get past that screen.&lt;/p&gt;
+
+&lt;p&gt;Related, this same issue affects Safari users when &lt;a href=&quot;https://support.apple.com/guide/safari/prevent-cross-site-tracking-sfri40732/mac&quot;&gt;cross-site tracking is disabled&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;h2 id=&quot;sowhatcan-youdo&quot;&gt;So what can you do?&lt;/h2&gt;
+
+&lt;p&gt;Well, that depends upon who is reading this blog. If you are an administrator trying to get your users back in Learn, the most immediate fix is to remove that snippet from your login page. It won’t fix your broken UEF integration, but it will at least let your users log in and interact with Learn. &lt;/p&gt;
+
+&lt;p&gt;If you are a developer that has built a UEF integration, we actually implemented a fix for this in April: a way to bypass the need for a session cookie in this process. In the LTI launch, we now provide what is called a one-time session cookie. This is present in both LTI 1.1 and 1.3 launches. &lt;/p&gt;
+
+&lt;p&gt;If you are using LTI 1.3, there’s a small bug in this. I will share a workaround that will both get around this bug, but not fail when the bug is fixed.&lt;/p&gt;
+
+&lt;p&gt;This one-time session cookie is added to the claims in the LTI 1.3 JWT and the form POST parameters in LTI 1.1. You can grab that value from the LTI launch, return it as a parameter in your 3LO authorization code request, and your problem will be solved.  &lt;/p&gt;
+
+&lt;h3 id=&quot;lti13&quot;&gt;LTI 1.3&lt;/h3&gt;
+
+&lt;p&gt;In LTI 1.3, you will see the value in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://blackboard.com/lti/claim/one_time_session_token&lt;/code&gt; claim. This token is made up of a specially generated token value. It should also be followed by a comma and the user’s UUID. The bug is that the comma is missing. Luckily, the user’s UUID is the sub token in the same set of LTI claims. We intend to fix this, but to ensure your code works both now and after the fix, you can simply look for the comma. If it’s not there, append it and the sub and you will be off and running. Here’s a Python 3 code snippet to illustrate how this might look. We will be updating our UEF sample code, but at the time of this writing, we have not done so.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    # Get the value of the one time session token from the LTI claim
+    one_time_session_token  = message_launch_data['https://blackboard.com/lti/claim/one_time_session_token']
+
+    # If there is no comma in the value, we've hit the bug. Add it and the user's UUID
+    if &quot;,&quot; not in one_time_session_token:
+        one_time_session_token += &quot;,&quot; + message_launch_data['sub']
+
+    # Add the one_time_session_cookie to the query parameters to send to the Authorization Code endpoint
+    params = {
+        'redirect_uri' : Config.config['app_url'] + '/authcode/',
+        'response_type' : 'code',
+        'client_id' : Config.config['learn_rest_key'],
+        'one_time_session_token' : one_time_session_token,
+        'scope' : '*',
+        'state' : str(uuid.uuid4())
+    }
+
+    # Encode the parameters
+    encoded_params = urllib.parse.urlencode(params)
+
+    # Redirect the successful LTI validation to the Authorization Code endpoint
+    return(redirect(learn_url + '/learn/api/public/v1/oauth2/authorizationCode?' + encoded_params))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id=&quot;lti11&quot;&gt;LTI 1.1&lt;/h3&gt;
+
+&lt;p&gt;By now, I hope you are using LTI 1.3, but I know many are not. As a result, we also added a one-time session token to LTI 1.1 launches. This will come in the form POST parameter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ext_one_time_session_token&lt;/code&gt;. Just like in the 1.3 example, your application should take this value from the LTI launch, append it to the authorization code request endpoint as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;one_time_session_cookie=that_token&lt;/code&gt; and redirect them to the authorization code endpoint. &lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;We have validated this fix with one of the partners that was affected. If you are a developer, please fix the issue immediately! If you are an administrator of a Learn SaaS instance using Ultra, and you have UEF integrations, make sure you do not have that JavaScript snippet on your login page. And if you do, please remove it. Then let your UEF integration partners and developers know that this fix must be made as soon as possible. &lt;/p&gt;
+
+&lt;p&gt;Regardless of whether you are an administrator or a developer, please feel free to reach out to us at developers@blackboard.com with any questions.&lt;/p&gt;
+
+&lt;p&gt;Happy coding!&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="blog" /><category term="uef" /><category term="ultra" /><category term="lti" /><category term="rest" /><summary type="html">Use One-Time Session Token to Authenticate with UEF</summary></entry><entry><title type="html">How to Create a User With Limited Entitlements For REST API Calls</title><link href="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html" rel="alternate" type="text/html" title="How to Create a User With Limited Entitlements For REST API Calls" /><published>2021-01-06T12:59:00-05:00</published><updated>2021-01-06T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/06/How%20to%20Create%20a%20User%20With%20Limited%20Entitlements%20For%20REST%20API%20Calls</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html">&lt;h1 id=&quot;how-to-create-a-user-with-limited-entitlements-for-rest-api-calls&quot;&gt;How to Create a User With Limited Entitlements For REST API Calls&lt;/h1&gt;
 
 &lt;p&gt;First, as our documentation states, a Blackboard Learn admin should never be told to associate a user with Learn admin privileges with any REST API integration, see this document. Hence we often get questions from folks on how to create a user to associate with a REST API integration that has limited capability on a Learn system. One way is to research and design your REST application to use OAuth 2 3-legged Authentication. See the documents referenced below. 3LO guarentees that the user using your REST Application can only do what they can do via the Learn UX when they are logged into Learn.&lt;/p&gt;
 
@@ -9,13 +89,13 @@
 &lt;p&gt;Reference Documentation:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn]&quot;&gt;https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn&quot;&gt;https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.blackboard.com/learn/rest/getting-started/basic-authentication&quot;&gt;https://docs.blackboard.com/learn/rest/getting-started/basic-authentication&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.blackboard.com/learn/rest/getting-started/3lo&quot;&gt;https://docs.blackboard.com/learn/rest/getting-started/3lo&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md&quot;&gt;https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.blackboard.com/learn/rest/getting-started/tutorials&quot;&gt;https://docs.blackboard.com/learn/rest/getting-started/tutorials&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://community.blackboard.com/blogs/4/18&quot;&gt;Bookmarklet to help map entitlements to permissions&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="rest" /><category term="learn" /><category term="api" /><summary type="html">How to Create a User With Limited Entitlements For REST API Calls</summary></entry><entry><title type="html">Caliper Documentation Updated for 1.1</title><link href="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html" rel="alternate" type="text/html" title="Caliper Documentation Updated for 1.1" /><published>2021-01-05T12:59:00-06:00</published><updated>2021-01-05T12:59:00-06:00</updated><id>http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html">&lt;h1 id=&quot;caliper-documentation-updated-for-11&quot;&gt;Caliper Documentation Updated for 1.1&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="rest" /><category term="learn" /><category term="api" /><summary type="html">How to Create a User With Limited Entitlements For REST API Calls</summary></entry><entry><title type="html">Caliper Documentation Updated for 1.1</title><link href="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html" rel="alternate" type="text/html" title="Caliper Documentation Updated for 1.1" /><published>2021-01-05T12:59:00-05:00</published><updated>2021-01-05T12:59:00-05:00</updated><id>http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1</id><content type="html" xml:base="http://localhost:4000/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html">&lt;h1 id=&quot;caliper-documentation-updated-for-11&quot;&gt;Caliper Documentation Updated for 1.1&lt;/h1&gt;
 
 &lt;p&gt;We have spent some time over the holiday break updating and organizing our documentation better. One of the longest outstanding changes was to update the Caliper event samples from 1.0 to 1.1.&lt;/p&gt;
 
@@ -23,7 +103,7 @@
 
 &lt;p&gt;Over the next few weeks, we will be highlighting some of the other key updates that we hope will help ease the onboarding process for new developers and make finding exactly what you need when you need it for everyone.&lt;/p&gt;
 
-&lt;p&gt;Happy Coding!&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="announcement" /><category term="standards" /><category term="caliper" /><category term="update" /><summary type="html">Caliper Documentation Updated for 1.1</summary></entry><entry><title type="html">SOAP EOL Explained</title><link href="http://localhost:4000/blog/2020/12/16/SOAP-EOL-Explained.html" rel="alternate" type="text/html" title="SOAP EOL Explained" /><published>2020-12-16T12:00:00-06:00</published><updated>2020-12-16T12:00:00-06:00</updated><id>http://localhost:4000/blog/2020/12/16/SOAP-EOL-Explained</id><content type="html" xml:base="http://localhost:4000/blog/2020/12/16/SOAP-EOL-Explained.html">&lt;h1 id=&quot;soap-eol-explained&quot;&gt;SOAP EOL Explained&lt;/h1&gt;
+&lt;p&gt;Happy Coding!&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="announcement" /><category term="standards" /><category term="caliper" /><category term="update" /><summary type="html">Caliper Documentation Updated for 1.1</summary></entry><entry><title type="html">SOAP EOL Explained</title><link href="http://localhost:4000/blog/2020/12/16/SOAP-EOL-Explained.html" rel="alternate" type="text/html" title="SOAP EOL Explained" /><published>2020-12-16T12:00:00-05:00</published><updated>2020-12-16T12:00:00-05:00</updated><id>http://localhost:4000/blog/2020/12/16/SOAP-EOL-Explained</id><content type="html" xml:base="http://localhost:4000/blog/2020/12/16/SOAP-EOL-Explained.html">&lt;h1 id=&quot;soap-eol-explained&quot;&gt;SOAP EOL Explained&lt;/h1&gt;
 
 &lt;p&gt;Back in the day, January 4, 2019 to be exact, Blackboard announced deprecation of our SOAP Web Services with this article &lt;a href=&quot;https://blackboard.secure.force.com/publickbarticleview?id=kA039000000Tm3cCAC&amp;amp;homepage=true&quot;&gt;Blackboard SOAP Web Services Deprecation&lt;/a&gt;&lt;/p&gt;
 
@@ -39,7 +119,7 @@
 
 &lt;p&gt;If you have additional questions, drop a line to developers@blackboard.com and we’ll update this blog post with the answer.&lt;/p&gt;
 
-&lt;p&gt;Happy 2021!&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="blog" /><category term="soap" /><category term="learn" /><category term="eol" /><category term="api" /><summary type="html">SOAP EOL Explained</summary></entry><entry><title type="html">Cookies and Browsers</title><link href="http://localhost:4000/blog/2020/10/15/Cookies-and-Browsers.html" rel="alternate" type="text/html" title="Cookies and Browsers" /><published>2020-10-15T12:00:00-05:00</published><updated>2020-10-15T12:00:00-05:00</updated><id>http://localhost:4000/blog/2020/10/15/Cookies-and-Browsers</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/15/Cookies-and-Browsers.html">&lt;h1 id=&quot;cookies-and-browsers&quot;&gt;Cookies and Browsers&lt;/h1&gt;
+&lt;p&gt;Happy 2021!&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="blog" /><category term="soap" /><category term="learn" /><category term="eol" /><category term="api" /><summary type="html">SOAP EOL Explained</summary></entry><entry><title type="html">Cookies and Browsers</title><link href="http://localhost:4000/blog/2020/10/15/Cookies-and-Browsers.html" rel="alternate" type="text/html" title="Cookies and Browsers" /><published>2020-10-15T12:00:00-04:00</published><updated>2020-10-15T12:00:00-04:00</updated><id>http://localhost:4000/blog/2020/10/15/Cookies-and-Browsers</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/15/Cookies-and-Browsers.html">&lt;h1 id=&quot;cookies-and-browsers&quot;&gt;Cookies and Browsers&lt;/h1&gt;
 
 &lt;p&gt;Most people like cookies. Internet browsers used to like cookies, but a lot has changed in the last few years.&lt;/p&gt;
 
@@ -56,7 +136,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://web.dev/samesite-cookies-explained/&quot;&gt;Samesite Cookies Explained&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://web.dev/samesite-cookie-recipes/&quot;&gt;Samesite Cookie Recipes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Eric Preston</name></author><category term="blog" /><category term="lti" /><category term="learn" /><category term="api" /><summary type="html">Cookies and Browsers</summary></entry><entry><title type="html">New! Student Id Template Variable</title><link href="http://localhost:4000/announcement/2020/10/07/New-Student-Id-Template-Variable.html" rel="alternate" type="text/html" title="New! Student Id Template Variable" /><published>2020-10-07T08:40:00-05:00</published><updated>2020-10-07T08:40:00-05:00</updated><id>http://localhost:4000/announcement/2020/10/07/New-Student-Id-Template-Variable</id><content type="html" xml:base="http://localhost:4000/announcement/2020/10/07/New-Student-Id-Template-Variable.html">&lt;h1 id=&quot;new-student-id-template-variable&quot;&gt;New! Student Id Template Variable&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Eric Preston</name></author><category term="blog" /><category term="lti" /><category term="learn" /><category term="api" /><summary type="html">Cookies and Browsers</summary></entry><entry><title type="html">New! Student Id Template Variable</title><link href="http://localhost:4000/announcement/2020/10/07/New-Student-Id-Template-Variable.html" rel="alternate" type="text/html" title="New! Student Id Template Variable" /><published>2020-10-07T08:40:00-04:00</published><updated>2020-10-07T08:40:00-04:00</updated><id>http://localhost:4000/announcement/2020/10/07/New-Student-Id-Template-Variable</id><content type="html" xml:base="http://localhost:4000/announcement/2020/10/07/New-Student-Id-Template-Variable.html">&lt;h1 id=&quot;new-student-id-template-variable&quot;&gt;New! Student Id Template Variable&lt;/h1&gt;
 
 &lt;p&gt;New in SaaS and the forthcoming 3900 release* &lt;a href=&quot;/learn/b2/advanced/dynamic-rendering-with-template-variables&quot;&gt;an @X@user.student_id@X@ template variable!&lt;/a&gt;.&lt;/p&gt;
 
@@ -64,11 +144,11 @@
   &lt;li&gt;Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;-markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="learn" /><category term="template-variables" /><summary type="html">New! Student Id Template Variable</summary></entry><entry><title type="html">Oct 2020 - Changes that will impact Learn B2 Integrations</title><link href="http://localhost:4000/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations.html" rel="alternate" type="text/html" title="Oct 2020 - Changes that will impact Learn B2 Integrations" /><published>2020-10-04T08:40:00-05:00</published><updated>2020-10-04T08:40:00-05:00</updated><id>http://localhost:4000/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations</id><content type="html" xml:base="http://localhost:4000/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations.html">&lt;h1 id=&quot;changes-that-will-impact-b2-integrations&quot;&gt;Changes that will impact B2 Integrations&lt;/h1&gt;
+&lt;p&gt;-markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="learn" /><category term="template-variables" /><summary type="html">New! Student Id Template Variable</summary></entry><entry><title type="html">Oct 2020 - Changes that will impact Learn B2 Integrations</title><link href="http://localhost:4000/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations.html" rel="alternate" type="text/html" title="Oct 2020 - Changes that will impact Learn B2 Integrations" /><published>2020-10-04T08:40:00-04:00</published><updated>2020-10-04T08:40:00-04:00</updated><id>http://localhost:4000/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations</id><content type="html" xml:base="http://localhost:4000/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations.html">&lt;h1 id=&quot;changes-that-will-impact-b2-integrations&quot;&gt;Changes that will impact B2 Integrations&lt;/h1&gt;
 
 &lt;p&gt;Read &lt;a href=&quot;/learn/b2/resources/preparing-for-saas-and-new-learn-versions&quot;&gt;this article&lt;/a&gt; . Download &lt;a href=&quot;/assets/files/changes-that-will-impact-learn-oct2020.docx&quot;&gt;Oct 2020 - Changes that will impact Learn Integrations.docx&lt;/a&gt; to find out how to get early access for testing.&lt;/p&gt;
 
-&lt;p&gt;-Mark Kauffman&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="building-blocks" /><category term="update" /><summary type="html">Changes that will impact B2 Integrations</summary></entry><entry><title type="html">Ally as a Service and UEF Documentation now available</title><link href="http://localhost:4000/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available.html" rel="alternate" type="text/html" title="Ally as a Service and UEF Documentation now available" /><published>2020-09-03T12:40:00-05:00</published><updated>2020-09-03T12:40:00-05:00</updated><id>http://localhost:4000/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available</id><content type="html" xml:base="http://localhost:4000/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available.html">&lt;h1 id=&quot;ally-as-a-service-and-uef-documentation-now-available&quot;&gt;Ally as a Service and UEF Documentation now available&lt;/h1&gt;
+&lt;p&gt;-Mark Kauffman&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="building-blocks" /><category term="update" /><summary type="html">Changes that will impact B2 Integrations</summary></entry><entry><title type="html">Ally as a Service and UEF Documentation now available</title><link href="http://localhost:4000/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available.html" rel="alternate" type="text/html" title="Ally as a Service and UEF Documentation now available" /><published>2020-09-03T12:40:00-04:00</published><updated>2020-09-03T12:40:00-04:00</updated><id>http://localhost:4000/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available</id><content type="html" xml:base="http://localhost:4000/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available.html">&lt;h1 id=&quot;ally-as-a-service-and-uef-documentation-now-available&quot;&gt;Ally as a Service and UEF Documentation now available&lt;/h1&gt;
 
 &lt;p&gt;Today we launched two new sections of developer documentation - &lt;a href=&quot;/ally/getting-started&quot;&gt;Ally as a Service&lt;/a&gt; (AaaS) and the &lt;a href=&quot;/learn/uef/getting-started&quot;&gt;Learn Ultra Extension Framework&lt;/a&gt; (UEF). These new APIs give you access to integration points and functionality that allows you to bring the power of Blackboard into your applications, and ultimately, your user’s experience.&lt;/p&gt;
 
@@ -78,74 +158,13 @@
 
 &lt;p&gt;As always, &lt;a href=&quot;/community/contact&quot;&gt;let us know&lt;/a&gt; if you have any questions!&lt;/p&gt;
 
-&lt;p&gt;Happy Coding!&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="announcement" /><category term="rest" /><category term="ally" /><category term="learn" /><category term="ultra" /><category term="uef" /><summary type="html">Ally as a Service and UEF Documentation now available</summary></entry><entry><title type="html">New!! REST and UEF Tutorials</title><link href="http://localhost:4000/announcement/2020/08/30/NewRESTandUEF-tutorials.html" rel="alternate" type="text/html" title="New!! REST and UEF Tutorials" /><published>2020-08-30T00:00:00-05:00</published><updated>2020-08-30T00:00:00-05:00</updated><id>http://localhost:4000/announcement/2020/08/30/NewRESTandUEF-tutorials</id><content type="html" xml:base="http://localhost:4000/announcement/2020/08/30/NewRESTandUEF-tutorials.html">&lt;h1 id=&quot;new-rest-and-uef-tutorials&quot;&gt;New!! REST and UEF Tutorials&lt;/h1&gt;
+&lt;p&gt;Happy Coding!&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="announcement" /><category term="rest" /><category term="ally" /><category term="learn" /><category term="ultra" /><category term="uef" /><summary type="html">Ally as a Service and UEF Documentation now available</summary></entry><entry><title type="html">New!! REST and UEF Tutorials</title><link href="http://localhost:4000/announcement/2020/08/30/NewRESTandUEF-tutorials.html" rel="alternate" type="text/html" title="New!! REST and UEF Tutorials" /><published>2020-08-30T00:00:00-04:00</published><updated>2020-08-30T00:00:00-04:00</updated><id>http://localhost:4000/announcement/2020/08/30/NewRESTandUEF-tutorials</id><content type="html" xml:base="http://localhost:4000/announcement/2020/08/30/NewRESTandUEF-tutorials.html">&lt;h1 id=&quot;new-rest-and-uef-tutorials&quot;&gt;New!! REST and UEF Tutorials&lt;/h1&gt;
 
 &lt;p&gt;New!! Visit the &lt;a href=&quot;/learn/rest/getting-started/tutorials&quot;&gt;REST Tutorials&lt;/a&gt; and &lt;a href=&quot;/learn/uef/tutorials&quot;&gt;UEF Tutorials&lt;/a&gt; pages for our tutorials on these topics!!&lt;/p&gt;
 
 &lt;p&gt;Cheers!
--markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="rest" /><category term="uef" /><category term="tutorials" /><summary type="html">New!! REST and UEF Tutorials</summary></entry><entry><title type="html">DevCon 2020 - New LTI Advantage Tutorial</title><link href="http://localhost:4000/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial.html" rel="alternate" type="text/html" title="DevCon 2020 - New LTI Advantage Tutorial" /><published>2020-08-24T00:00:00-05:00</published><updated>2020-08-24T00:00:00-05:00</updated><id>http://localhost:4000/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial</id><content type="html" xml:base="http://localhost:4000/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial.html">&lt;h1 id=&quot;devcon-2020---new-lti-advantage-tutorial&quot;&gt;DevCon 2020 - New LTI Advantage Tutorial&lt;/h1&gt;
+-markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="rest" /><category term="uef" /><category term="tutorials" /><summary type="html">New!! REST and UEF Tutorials</summary></entry><entry><title type="html">DevCon 2020 - New LTI Advantage Tutorial</title><link href="http://localhost:4000/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial.html" rel="alternate" type="text/html" title="DevCon 2020 - New LTI Advantage Tutorial" /><published>2020-08-24T00:00:00-04:00</published><updated>2020-08-24T00:00:00-04:00</updated><id>http://localhost:4000/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial</id><content type="html" xml:base="http://localhost:4000/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial.html">&lt;h1 id=&quot;devcon-2020---new-lti-advantage-tutorial&quot;&gt;DevCon 2020 - New LTI Advantage Tutorial&lt;/h1&gt;
 &lt;p&gt;Be sure to revisit the &lt;a href=&quot;/standards/lti/tutorials/develop-lti-advantage-solution&quot;&gt;Developing an LTI Advantage Solution&lt;/a&gt;  page for the latest and greatest tutorial from DevCon 2020!&lt;/p&gt;
 
 &lt;p&gt;Cheers!
--markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="lti" /><category term="standards" /><category term="learn" /><summary type="html">DevCon 2020 - New LTI Advantage Tutorial Be sure to revisit the Developing an LTI Advantage Solution page for the latest and greatest tutorial from DevCon 2020!</summary></entry><entry><title type="html">DevCon 2020 By The Numbers</title><link href="http://localhost:4000/devcon/2020/08/03/DevCon-2020-by-the-numbers.html" rel="alternate" type="text/html" title="DevCon 2020 By The Numbers" /><published>2020-08-03T00:00:00-05:00</published><updated>2020-08-03T00:00:00-05:00</updated><id>http://localhost:4000/devcon/2020/08/03/DevCon-2020-by-the-numbers</id><content type="html" xml:base="http://localhost:4000/devcon/2020/08/03/DevCon-2020-by-the-numbers.html">&lt;h1 id=&quot;devcon-2020-by-the-numbers&quot;&gt;DevCon 2020 by the numbers!&lt;/h1&gt;
-
-&lt;p&gt;DevCon 2020 is in the books, and what an amazing conference it was. This blog will start a weekly series in which everything Thursday, we will talk about DevCon from a content perspective. To begin this series, I want to set some context about the scope of this conference, so you, the reader, will have a baseline to base your opinions from.&lt;/p&gt;
-
-&lt;p&gt;So let’s start with some basic figures:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Client Registrations: 3,113​&lt;/li&gt;
-  &lt;li&gt;Institutions: 1,276​&lt;/li&gt;
-  &lt;li&gt;Countries: 54​&lt;/li&gt;
-  &lt;li&gt;Badges: 2,348​&lt;/li&gt;
-  &lt;li&gt;358 Unique attendees to live sessions​&lt;/li&gt;
-  &lt;li&gt;2,352 Attendees to live sessions total​&lt;/li&gt;
-  &lt;li&gt;121,842 Collab session minutes&lt;/li&gt;
-  &lt;li&gt;Blackboarders: 300​&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If we really look at this, we can come up with some interesting insights.&lt;/p&gt;
-
-&lt;p&gt;If we base our calculations on unique attendees to live sessions, we can see that the average attendee spent almost 6 hours actively engaged in sessions. We had 71 hours worth of sessions spread out over three separate time zones – Monday - Friday 8am-10am EDT, Monday - Friday 1pm-3pm EDT and on five days, 3pm to 4pm, and Monday-Thursday 8pm-10pm EDT – so the average attendee joining 6 sessions is pretty amazing.&lt;/p&gt;
-
-&lt;p&gt;We also issued 6.6 badges per active attendee programmatically through Badgr. These badges included attending at least 75% of a collab session associated with a session, pathways, which awarded badges based on predetermined groups of session badges, interaction with Ally, and earning points and promotions in the leaderboard.&lt;/p&gt;
-
-&lt;p&gt;Speaking of insights, let’s take a look at a few that show how users interacted with the content provided:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-1.png&quot; alt=&quot;Attendance by Session and Region&quot; title=&quot;Attendance by Session and Region&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-2.png&quot; alt=&quot;Registration by Country&quot; title=&quot;Registration by Country&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-3.png&quot; alt=&quot;Collaborate Minutes By Day&quot; title=&quot;Collaborate Minutes By Day&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-4.png&quot; alt=&quot;Recording Views and Downloads&quot; title=&quot;Recording Views and Downloads&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blogs-devcon-numbers-5.png&quot; alt=&quot;Final Leaderboard&quot; title=&quot;Final Leaderboard&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Numbers and charts are cool, but what really matters from a DevCon perspective, is the experience of the attendees. Here are a few quotes that I think sum up the DevCon 2020 experience more that any statistic or chart can:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“SUPER big high-five / cheers / shout-out and ALL the other superlatives out to @Scott Hurrey and all that helped make this 2020 DevCon !!!!  have greatly enjoyed it in this time of Social Distancing”​&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Kevin Squire, PA Virtual Charter School&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Thanks @shurrey Scott for an awesome experience.. and thank you to all the presenters as well as participants. Look forward to continue networking and finding better solutions for students and faculty.”​&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Arokia Raj, INTI International Universities and Colleges, Malaysia&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“A big thank you to @shurrey and colleagues from @Blackboard for making the 2020 #DevCon a really special online experience. Spreading the event out over a fortnight gave participants a chance to practice and play, not just listen. Fun in dark times.”​&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Malcolm Murray, Durham&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To summarize, DevCon 2020 was a unique experience, and one that gave me a little bit of normalcy. Of course I would rather see everyone in person, but since I can’t, I was extremely happy we could have a virtual get-together.&lt;/p&gt;
-
-&lt;p&gt;Happy Coding!
--scott&lt;/p&gt;</content><author><name>Scott Hurrey</name></author><category term="devcon" /><category term="devcon" /><category term="community" /><category term="recap" /><summary type="html">DevCon 2020 by the numbers!</summary></entry></feed>
+-markk&lt;/p&gt;</content><author><name>Mark Kauffman</name></author><category term="announcement" /><category term="lti" /><category term="standards" /><category term="learn" /><summary type="html">DevCon 2020 - New LTI Advantage Tutorial Be sure to revisit the Developing an LTI Advantage Solution page for the latest and greatest tutorial from DevCon 2020!</summary></entry></feed>

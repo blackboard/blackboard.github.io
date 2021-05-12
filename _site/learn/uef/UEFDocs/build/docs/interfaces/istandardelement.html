@@ -129,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <a href="istandardelement.html" class="tsd-signature-type">IStandardElement</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/portal.ts:97</li>
+							<li>Defined in extension-framework/types/src/messages/portal.ts:123</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,10 +141,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="props" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> props</h3>
-					<div class="tsd-signature tsd-kind-icon">props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">IframeHTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLIFrameElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">IframeHTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLIFrameElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AnchorHTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/portal.ts:93</li>
+							<li>Defined in extension-framework/types/src/messages/portal.ts:119</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -153,16 +153,25 @@
 						</div>
 						<p>The current list of elements and their respective attributes are listed below:</p>
 						<ul>
+							<li>button<ul>
+									<li><code>disabled</code></li>
+								</ul>
+							</li>
 							<li>iframe<ul>
 									<li><code>src</code></li>
 								</ul>
 							</li>
 							<li>img<ul>
-									<li>&#39;src&#39;, &#39;alt&#39;</li>
+									<li>&#39;alt&#39;, &#39;height&#39;, &#39;src&#39;, &#39;width&#39;</li>
+								</ul>
+							</li>
+							<li>a<ul>
+									<li>&#39;href&#39;</li>
 								</ul>
 							</li>
 						</ul>
-						<p><em><strong>Note:</strong> All supported tags accept <code>className</code> and <code>style</code> as attributes.</em></p>
+						<p><em><strong>Note:</strong> All supported tags accept <code>className</code>, <code>dir</code>, <code>onBlur</code>, <code>onClick</code>, <code>onFocus</code>, <code>style</code> as attributes.
+						Aria attributes are also supported such as <code>id</code>, <code>role</code>, <code>tabindex</code>, and many more listed in <a href="../../../build/docs/pages/AccessibilityAttributes.html">here</a>.</em></p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -171,7 +180,7 @@
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/portal.ts:81</li>
+							<li>Defined in extension-framework/types/src/messages/portal.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -180,10 +189,22 @@
 						</div>
 						<p>The current tags that are supported are below:</p>
 						<ul>
-							<li>iframe</li>
-							<li>span</li>
+							<li>bdi</li>
+							<li>bdo</li>
+							<li>button</li>
 							<li>div</li>
+							<li>iframe</li>
 							<li>img</li>
+							<li>span</li>
+							<li>a</li>
+							<li>h1</li>
+							<li>h2</li>
+							<li>h3</li>
+							<li>h4</li>
+							<li>p</li>
+							<li>ul</li>
+							<li>ol</li>
+							<li>li</li>
 						</ul>
 					</div>
 				</section>
@@ -196,10 +217,22 @@
 						<span>Pages</span>
 					</li>
 					<li class=" ">
+						<a href="../pages/AccessibilityAttributes.html"> <wbr>Accessibility <wbr>Attributes</a>
+					</li>
+					<li class=" ">
+						<a href="../pages/CourseDetails.html"> <wbr>Course <wbr>Details</a>
+					</li>
+					<li class=" ">
 						<a href="../pages/HelpProviderScenarios.html"> <wbr>Help <wbr>Provider <wbr>Scenarios</a>
 					</li>
 					<li class=" ">
 						<a href="../pages/MessagingRecommendations.html"> <wbr>Messaging <wbr>Recommendations</a>
+					</li>
+					<li class=" ">
+						<a href="../pages/OriginalityReporting.html"> <wbr>Originality <wbr>Reporting</a>
+					</li>
+					<li class=" ">
+						<a href="../pages/RightToLeft.html"> <wbr>Right <wbr>To <wbr>Left</a>
 					</li>
 				</ul>
 			</nav>

@@ -87,7 +87,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IHelpProviderRequest</span>
+						<a href="icorrelatedmessage.html" class="tsd-signature-type">ICorrelatedMessage</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IHelpProviderRequest</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -98,11 +103,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ihelpproviderrequest.html#correlationid" class="tsd-kind-icon">correlation<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ihelpproviderrequest.html#correlationid" class="tsd-kind-icon">correlation<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ihelpproviderrequest.html#currentroutename" class="tsd-kind-icon">current<wbr>Route<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ihelpproviderrequest.html#eventtype" class="tsd-kind-icon">event<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ihelpproviderrequest.html#helpurl" class="tsd-kind-icon">help<wbr>Url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ihelpproviderrequest.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ihelpproviderrequest.html#timeout" class="tsd-kind-icon">timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="ihelpproviderrequest.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,13 +116,14 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="correlationid" class="tsd-anchor"></a>
 					<h3>correlation<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">correlation<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides <a href="icorrelatedmessage.html">ICorrelatedMessage</a>.<a href="icorrelatedmessage.html#correlationid">correlationId</a></p>
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/help-provider.ts:100</li>
+							<li>Defined in extension-framework/types/src/messages/help-provider.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -131,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">current<wbr>Route<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/help-provider.ts:104</li>
+							<li>Defined in extension-framework/types/src/messages/help-provider.ts:97</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -146,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"help:request"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/help-provider.ts:98</li>
+							<li>Defined in extension-framework/types/src/messages/help-provider.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -161,7 +168,7 @@
 					<div class="tsd-signature tsd-kind-icon">help<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/help-provider.ts:102</li>
+							<li>Defined in extension-framework/types/src/messages/help-provider.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -170,13 +177,30 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="timeout" class="tsd-anchor"></a>
+					<h3>timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="icorrelatedmessage.html">ICorrelatedMessage</a>.<a href="icorrelatedmessage.html#timeout">timeout</a></p>
+						<ul>
+							<li>Defined in extension-framework/types/src/messages/event.ts:20</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The amount of time the integration has to respond to this message.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"event:event"</span></div>
 					<aside class="tsd-sources">
+						<p>Overrides <a href="icorrelatedmessage.html">ICorrelatedMessage</a>.<a href="icorrelatedmessage.html#type">type</a></p>
 						<ul>
-							<li>Defined in extension-framework/types/src/messages/help-provider.ts:96</li>
+							<li>Defined in extension-framework/types/src/messages/help-provider.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,10 +218,22 @@
 						<span>Pages</span>
 					</li>
 					<li class=" ">
+						<a href="../pages/AccessibilityAttributes.html"> <wbr>Accessibility <wbr>Attributes</a>
+					</li>
+					<li class=" ">
+						<a href="../pages/CourseDetails.html"> <wbr>Course <wbr>Details</a>
+					</li>
+					<li class=" ">
 						<a href="../pages/HelpProviderScenarios.html"> <wbr>Help <wbr>Provider <wbr>Scenarios</a>
 					</li>
 					<li class=" ">
 						<a href="../pages/MessagingRecommendations.html"> <wbr>Messaging <wbr>Recommendations</a>
+					</li>
+					<li class=" ">
+						<a href="../pages/OriginalityReporting.html"> <wbr>Originality <wbr>Reporting</a>
+					</li>
+					<li class=" ">
+						<a href="../pages/RightToLeft.html"> <wbr>Right <wbr>To <wbr>Left</a>
 					</li>
 				</ul>
 			</nav>
@@ -215,7 +251,7 @@
 					<li class="current tsd-kind-interface">
 						<a href="ihelpproviderrequest.html" class="tsd-kind-icon">IHelp<wbr>Provider<wbr>Request</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 								<a href="ihelpproviderrequest.html#correlationid" class="tsd-kind-icon">correlation<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -227,7 +263,10 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="ihelpproviderrequest.html#helpurl" class="tsd-kind-icon">help<wbr>Url</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="ihelpproviderrequest.html#timeout" class="tsd-kind-icon">timeout</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 								<a href="ihelpproviderrequest.html#type" class="tsd-kind-icon">type</a>
 							</li>
 						</ul>
