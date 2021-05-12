@@ -6,10 +6,10 @@ category: blog
 id: 20210511-uefnocookies
 author: Scott Hurrey
 tags: ['uef','ultra','lti','rest']
-summary: As browsers continue to lock down cookies, particularly with iFrames, there is a new way to handle authentication with the Ultra Extension Framework.
+summary: As browsers continue to lock down cookies, particularly with iframes, there is a new way to handle authentication with the Ultra Extension Framework.
 ---
 
-# Use One-Time Session Token to Authenticate with UEF
+# Use One-Time Session Token to Authenticate with UEF
 
 In testing with the [Google Canary Chrome Browser](https://www.google.com/chrome/canary/), one of our clients discovered an issue that was blocking users from logging in to their Blackboard Learn instance. After much troubleshooting, we discovered a multi-layer issue that brings us to, you guessed it, [cookies](https://docs.blackboard.com/blog/2020/10/15/Cookies-and-Browsers). 
 
@@ -30,7 +30,7 @@ In and of itself there's nothing wrong with it. We, at Blackboard, have removed 
 
 > If you are unsure whether you have a custom login page, visit [help.blackboard.com](https://help.blackboard.com/Learn/Administrator/SaaS/User_Interface_Options/Ultra_Experience/Institution_Branding/Customize_the_Login_Page) for more information.
 
-Secondly, when a user logged in, Ultra Extensions automatically fired off an LTI launch to UEF-enabled tools. The way UEF works is: after the LTI launch is validated, the tool redirects to the Learn REST endpoint to initiate a UserAuth flow. In our documentation, we call this a Three-Legged OAuth or [3LO] (https://docs.blackboard.com/learn/rest/getting-started/3lo). In most cases, it's a process that relies on a session cookie to hold everything together. This impending release of Chrome (and other browsers) will block this cookie because everything is happening across domains and involves the use of iframes. 
+Secondly, when a user logged in, Ultra Extensions automatically fired off an LTI launch to UEF-enabled tools. The way UEF works is: after the LTI launch is validated, the tool redirects to the Learn REST endpoint to initiate a UserAuth flow. In our documentation, we call this a Three-Legged OAuth or [3LO](https://docs.blackboard.com/learn/rest/getting-started/3lo). In most cases, it's a process that relies on a session cookie to hold everything together. This impending release of Chrome (and other browsers) will block this cookie because everything is happening across domains and involves the use of iframes. 
 
 So what happens is that, even though the integration is configured in Learn to not force the end-user to authorize the integration, the lack of the session cookie means that Learn has no idea that this user is logged in, so it pops open the login page. 
 
@@ -38,7 +38,7 @@ Remember that code snippet above in the custom login page? Well, that takes over
 
 Related, this same issue affects Safari users when [cross-site tracking is disabled](https://support.apple.com/guide/safari/prevent-cross-site-tracking-sfri40732/mac).  
 
-## So what can you do?
+## So what can you do?
 
 Well, that depends upon who is reading this blog. If you are an administrator trying to get your users back in Learn, the most immediate fix is to remove that snippet from your login page. It won't fix your broken UEF integration, but it will at least let your users log in and interact with Learn. 
 
