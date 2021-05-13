@@ -717,7 +717,17 @@
               subsubmenu_content_url: /standards/lti/troubleshooting/turn-on-all-switches
               id: standards-lti-trouble-turn-on-all
               target: _self
+        
+        - subsubmenu_item: Ultra Proctoring Service Integration
+          id: standards-lti-proctoring
+          type: menu
+          subsubmenu_content:
 
+            - subsubmenu_content_name: Ultra Proctoring Service Integration
+              subsubmenu_content_url: /standards/lti/ultra-proctoring-service-integration
+              id: standards-lti-proctoring-service
+              target: _self
+          
 - main_item: Partners
   id: partners-group
   type: content
