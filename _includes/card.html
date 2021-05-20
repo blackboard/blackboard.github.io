@@ -1,5 +1,5 @@
-<div class="col xs12 s12 m6 l4 xl3">
-    <div class="card large">
+<div class="col s5">
+    <div class="card medium">
         <div class="optional-header">
             <a href="/category/{{ post.category | lower | slugify }}/">
                 <div class="thumbnail"><img src="/assets/img/{{ post.category | lower }}.svg" alt="the category is {{ post.category }}" /></div>
@@ -11,10 +11,10 @@
         </div>
         <div class="card-content">
             <div class="primary-text">
-                {{ post.title }}
+                <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
             <div class="supporting-text">
-                {{ post.summary }} <a href="{{ post.url }}">...read more</a>
+                {{ post.summary }}
             </div>
         </div>
         <div class="card-action">
