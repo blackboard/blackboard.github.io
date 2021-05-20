@@ -37,7 +37,7 @@ table{
 }
 
 main p{
-  text-align: justify;
+  text-align: left;
 }
 
 .embed-video{
@@ -840,6 +840,7 @@ a.purple-text:hover {
 .primary-text {
   font-size: 24px;
   padding: 0 16px;
+  line-height: 28px;
 }
 
 .supporting-text {

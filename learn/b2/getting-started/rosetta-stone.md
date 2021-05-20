@@ -37,32 +37,32 @@ You want to know this because this page is infrequently updated. Just log in to 
     *   [9.1 Q4 2108 Cumulative Update 4](https://blackboard.secure.force.com/btbb_articleview?id=kA0390000005GL3) (Build:3500.0.4-rel.19+9180e36)
     *   [9.1 Q4 2018 Cumulative Update 3](https://blackboard.secure.force.com/apex/btbb_articleview?id=kA039000000PvnE) (Build:3500.0.3-rel.26+06aa766)
     *   [9.1 Q4 2018 Cumulative Update 2](https://blackboard.secure.force.com/btbb_articleview?id=kA039000000Tm09) (Build:3500.0.2-rel.32+19c67cc)
-    *   [9.1 Q4 2018 Cumulative Update 1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000Tlvx)(Build:3500.0.1-rel.59+219b76) : Admin->LTI, Content Type \[\]Deep Linking
+    *   [9.1 Q4 2018 Cumulative Update 1](https://blackboard.secure.force.com/btbb_articleview?id=kA039000000Tlvx)(Build:3500.0.1-rel.59+219b76) : Admin->LTI, Content Type \[\]Deep Linking
 *   Blackboard Learn 9.1 Q2 2018 **<< EOL June 2020 >>**
-    *   [9.1 Q2 2018 (Build:3400.0.0-rel.44+9fb1e0e)](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA4390000008SoQ)
-    *   [9.1, Q2 2018 Release (Build: 3400.0.1-rel.90+b74efee)](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA0390000005EnP) : B2s->LTI, CIM, No Content Type Dropdown
+    *   [9.1 Q2 2018 (Build:3400.0.0-rel.44+9fb1e0e)](https://blackboard.secure.force.com/btbb_articleview?id=kA4390000008SoQ)
+    *   [9.1, Q2 2018 Release (Build: 3400.0.1-rel.90+b74efee)](https://blackboard.secure.force.com/btbb_articleview?id=kA0390000005EnP) : B2s->LTI, CIM, No Content Type Dropdown
 *   Blackboard Learn 9.1 Q4 2017 << EOL Dec 2019 >> FIRST AVAILABILITY OF LTI CIM/Deep-linking 1.0
     *   9.1 Q4 2017 CU2 (Build: 3300.0.2-rel.137+ba130da)
-    *   [9.1 Q4 2017 Cumulative Update 1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000H1tF) (Build: 3300.0.1-rel.60+a05276c) : B2s->LTI, +CIM, Content Type Dropdown
+    *   [9.1 Q4 2017 Cumulative Update 1](https://blackboard.secure.force.com/btbb_articleview?id=kA039000000H1tF) (Build: 3300.0.1-rel.60+a05276c) : B2s->LTI, +CIM, Content Type Dropdown
 *   Blackboard Learn 9.1 Q2 2017 << EOL June 2019 >>
-    *   [9.1 Q2 2017 Cumulative Update 2](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000H2K8) (Build: 3200.0.2-rel.37+f07d42b)
+    *   [9.1 Q2 2017 Cumulative Update 2](https://blackboard.secure.force.com/btbb_articleview?id=kA039000000H2K8) (Build: 3200.0.2-rel.37+f07d42b)
     *   9.1 Q2 2017 Cumulative Update 2 (Build: 3200.0.2-rel.34+a87152a)
-    *   [9.1 Q2 2017 Cumulative Update 1](https://community.blackboard.com/external-link.jspa?url=http%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000H1tF) (Build: 3200.0.1-rel.56+af64d14)
-    *   [9.1 Q2 2017](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA439000000Cidz) (Build: 3200.0.0-rel.52+647f084) : LTI still under B2s, No Deep Linking
+    *   [9.1 Q2 2017 Cumulative Update 1](http://blackboard.secure.force.com/btbb_articleview?id=kA039000000H1tF) (Build: 3200.0.1-rel.56+af64d14)
+    *   [9.1 Q2 2017](https://blackboard.secure.force.com/btbb_articleview?id=kA439000000Cidz) (Build: 3200.0.0-rel.52+647f084) : LTI still under B2s, No Deep Linking
 *   Blackboard Learn 9.1 Q4 2016 **<< EOL Dec 2018 >>**
-    *   [9.1 Q4 2016 Cumlative Update 3](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA03900000093Cw) (Build: 3100.0.3-rel.51+917ccd3)
-    *   Build: 3100.0.2 released to SaaS FDO only - Article # [43586](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkAA390000004CeL)
-    *   [9.1 Q4 2016 Cumulative Update 1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA03900000092tp) (Build: 3100.0.1-rel.117+6ef1843)
-    *   [9.1 Q4 2016](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA439000000CgaJ) (Build: 3100.0.0-rel.107+401e) FIRST USE OF Tomcat 8
+    *   [9.1 Q4 2016 Cumlative Update 3](https://blackboard.secure.force.com/btbb_articleview?id=kA03900000093Cw) (Build: 3100.0.3-rel.51+917ccd3)
+    *   Build: 3100.0.2 released to SaaS FDO only - Article # [43586](https://blackboard.secure.force.com/btbb_articleview?id=kAA390000004CeL)
+    *   [9.1 Q4 2016 Cumulative Update 1](https://blackboard.secure.force.com/btbb_articleview?id=kA03900000092tp) (Build: 3100.0.1-rel.117+6ef1843)
+    *   [9.1 Q4 2016](https://blackboard.secure.force.com/btbb_articleview?id=kA439000000CgaJ) (Build: 3100.0.0-rel.107+401e) FIRST USE OF Tomcat 8
 *   Blackboard Learn 9.1 Q2 2016 **<< No longer supported >>**
-    *   [9.1 Q2 2016 Cumulative Update 5](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA03900000093F2) (Build: 3000.1.5-rel.106+a770c2a)
-    *   [9.1 Q2 2016 Cumulative Update 4](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA03900000092kJ) (Build: 3000.1.4-rel.183+298455c)
-    *   [9.1 Q2 2016 Cumulative Update 3](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000LKE3) (Build: 3000.1.3-rel.70+214db31)
-    *   [9.1 Q2 2016 Cumulative Update 2](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA039000000LK5f) (Build: 3000.1.2-rel.52+af05c84)
-    *   [9.1 Q2 2016 Cumulative Update 1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA0390000004fiv) (Build: 3000.1.1-rel.20+6fbf7f6  )
-    *   [9.1 Q2 2016](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA439000000039Z) (Build: 3000.1.0-rel.52+991d) FIRST USE OF Java 8
+    *   [9.1 Q2 2016 Cumulative Update 5](https://blackboard.secure.force.com/btbb_articleview?id=kA03900000093F2) (Build: 3000.1.5-rel.106+a770c2a)
+    *   [9.1 Q2 2016 Cumulative Update 4](https://blackboard.secure.force.com/btbb_articleview?id=kA03900000092kJ) (Build: 3000.1.4-rel.183+298455c)
+    *   [9.1 Q2 2016 Cumulative Update 3](https://blackboard.secure.force.com/btbb_articleview?id=kA039000000LKE3) (Build: 3000.1.3-rel.70+214db31)
+    *   [9.1 Q2 2016 Cumulative Update 2](https://blackboard.secure.force.com/btbb_articleview?id=kA039000000LK5f) (Build: 3000.1.2-rel.52+af05c84)
+    *   [9.1 Q2 2016 Cumulative Update 1](https://blackboard.secure.force.com/btbb_articleview?id=kA0390000004fiv) (Build: 3000.1.1-rel.20+6fbf7f6  )
+    *   [9.1 Q2 2016](https://blackboard.secure.force.com/btbb_articleview?id=kA439000000039Z) (Build: 3000.1.0-rel.52+991d) FIRST USE OF Java 8
 *   Blackboard Learn 9.1 Q4 2015 **<< No longer supported >>**
-    *   [9.1 Q4 2015 Cumulative Update 3](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA03900000092fJ) (Build: 9.1.201510.1176878)
-    *   [9.1 Q4 2015 Cumulative Update 2](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA0390000004fs7) (Build: 9.1.201510.1175205)
-    *   [9.1 Q4 2015 Cumulative Update 1](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA0390000000Djn) (LRNSI-21344)
-    *   [9.1 Q4 2015](https://community.blackboard.com/external-link.jspa?url=https%3A%2F%2Fblackboard.secure.force.com%2Fbtbb_articleview%3Fid%3DkA47000000002kA) (Build: 9.1.201510.1171621)
+    *   [9.1 Q4 2015 Cumulative Update 3](https://blackboard.secure.force.com/btbb_articleview?id=kA03900000092fJ) (Build: 9.1.201510.1176878)
+    *   [9.1 Q4 2015 Cumulative Update 2](https://blackboard.secure.force.com/btbb_articleview?id=kA0390000004fs7) (Build: 9.1.201510.1175205)
+    *   [9.1 Q4 2015 Cumulative Update 1](https://blackboard.secure.force.com/btbb_articleview?id=kA0390000000Djn) (LRNSI-21344)
+    *   [9.1 Q4 2015](https://blackboard.secure.force.com/btbb_articleview?id=kA47000000002kA) (Build: 9.1.201510.1171621)
