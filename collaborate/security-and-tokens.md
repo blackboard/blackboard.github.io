@@ -7,9 +7,9 @@ categories: Collaborate
 
 # Security and Tokens
 
-Blackboard Collaborate relies on JSON web tokens (JWT) to authenticate and authorize incoming REST API calls. You can read more about the JWT standard here. A JSON web token can be signed with either RSA or HMAC. RSA allows the REST Client to sign the JWT with public and private keys via x.509 certificates. HMAC allows the JWT to be signed with a shared secret. Either way, the data can be trusted because it is digitally signed with mutually known credentials.
+Blackboard Collaborate relies on JSON web tokens ([JWT](https://datatracker.ietf.org/doc/html/rfc7519){:target="_blank"}) to authenticate and authorize incoming REST API calls. A JSON web token can be signed with either RSA or HMAC. RSA allows the REST Client to sign the JWT with public and private keys via x.509 certificates. HMAC allows the JWT to be signed with a shared secret. Either way, the data can be trusted because it's digitally signed with mutually known credentials.
 
-[Here is a very simple sample Python script] (https://github.com/ryanhaber/Blackboard-REST-SDK-python/blob/master/bb-collab-simple-sample-get-users.py.) that uses a correctly formed JWT assertion to request an access token and then uses the access token to make a single API request
+[Here's a sample Python script](https://github.com/ryanhaber/Blackboard-REST-SDK-python/blob/master/bb-collab-simple-sample-get-users.py){:target="_blank"} that uses a correctly formed JWT assertion to request an access token and then uses the access token to make a single API request.
 
 ### JWT Assertion
 To get API access to Blackboard Collaborate, you must create a JWT assertion. A JWT assertion is a JSON web token request for access. It includes:
@@ -48,9 +48,9 @@ To create the encodedheader part of the token, base64 encode this JSON.
 ### JWT Payload
 The payload contains information about the calling application that uniquely identifies the client to the REST server. Blackboard Collaborate REST APIs require these pieces of information:
 
-- The issuer of the request, which is the Collaborate REST API key
-- The subject of the request, which must be the same as the issuer
-- Expiration time of the assertion, expressed in UNIX epoch time, within 5 minutes of the time of the request
+- The issuer of the request, which is the Collaborate REST API key.
+- The subject of the request, which must be the same as the issuer.
+- Expiration time of the assertion, expressed in UNIX epoch time, within 5 minutes of the time of the request.
 
 For example:
 
@@ -70,7 +70,7 @@ The signature is basically the string created above (encodedheader.encodedpayloa
 
 ### Building a JWT Request
 
-To request an access, you must make a POST request to the Collaborate API /token endpoint, like the following.
+To request an access, you must make a POST request to the Collaborate API /token endpoint, like the following:
 ~~~ yaml
     POST /token?grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=eyJhbGciOiJIUzI1NiIsIn
     R5cCI6IkpXVCJ9.eyJpc3MiOiJteS1jb2xsYWItcmVzdC1rZXkiLCJzdWIiOiJteS1jb2xsYWItcmVzdC1rZXkiLCJleHAiOiIx
@@ -79,8 +79,9 @@ To request an access, you must make a POST request to the Collaborate API /token
 
 Also note:
 
-- Include a grant_type parameter. The grant_type must always be set to urn:ietf:params:oauth:grant-type:jwt-bearer in Collaborate requests. This grant_type and the assertion are added as query parameters to the Collaborate /token endpoint and requested as a POST.
-- Include a header using for content-Type which is set to form/urlencoded.
+- Include a grant_type parameter. The grant_type must always be set to urn:ietf:params:oauth:grant-type:jwt-bearer in Collaborate requests. 
+- The grant_type and the assertion should be sent in the body of the request.
+- Include a header for content-Type which is set to application/x-www-form-urlencoded.
 
 ### Using the JWT Token
 A properly formed POST to /token returns an access token. To authorize a request to Collaborate, add this access token as a Bear token in your request’s authorization header. The authorization header will look like the following.
@@ -94,5 +95,6 @@ A properly formed POST to /token returns an access token. To authorize a request
 ### Additional Resources
 JSON Web Tokens are a widely adopted standard in modern applications, and thus, there are a ton of resources available for developers interested in JWT beyond the scope of Blackboard Collaborate.
 
-- [JWT.io](https://jwt.io/): This site is dedicated to assisting developers trying to build JWT-enabled applications. There is a debugger that allows you to manually input your secret and your header and payload and generate an assertion. There is also an extensive list of available libraries in multiple languages that handle the bulk of the JWT creation.
-- [RFC 7519](https://tools.ietf.org/html/rfc7519): This is the actual standard specification document.
+- [JWT.io](https://jwt.io/){:target="_blank"}: a site dedicated to assisting developers trying to build JWT-enabled applications. There is a debugger that allows you to manually input your secret and your header and payload and generate an assertion. There is also an extensive list of available libraries in multiple languages that handle the bulk of the JWT creation.
+
+- [RFC 7519](https://tools.ietf.org/html/rfc7519){:target="_blank"}: the actual standard specification document.
