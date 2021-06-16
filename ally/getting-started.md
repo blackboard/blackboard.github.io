@@ -19,9 +19,9 @@ There are a number of ways to test out the API. The easiest is to use the [Ally 
 Click here to learn more about [using the API documentation](about-api-documentation) in this way.
 
 Here are the operations currently available in the API (each page has a sample cURL command at the bottom):
-* [Upload a file to Ally](/ally/uploadfile.html)
-* [Check the processing status for a file](/ally/checkstatus.html)
-* [Retrieve the feedback for the file](/ally/getfeedback.html)
+* [Upload a file to Ally](uploading-files)
+* [Check the processing status for a file](check-status)
+* [Retrieve the feedback for the file](get-feedback)
 
 This list is ever growing, so be sure to check back often to get the latest list of functionality available.
 
