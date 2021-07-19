@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Spring in Building Blocks" 
+title: "Spring in Building Blocks"
 categories: Learn b2
 id: learn-b2-examples-spring-in-b2s
 author: Kelley MacEwen
+status: deprecated
 ---
 
 # Spring in Building Blocks
@@ -24,8 +25,7 @@ author: Kelley MacEwen
 
 ### Download Samples:
 
-Name | Size | Creator | Creation Date**
----|---|---|---
-[ZIP Archive SpringB2_Example1.zip](/attachments/SpringB2_Example1.zip) | 2.82 MB | David Ashman | 19 Jul 2010 03:37 PM
-[ZIP Archive SpringB2_Example2.zip](/attachments/SpringB2_Example2.zip) | 2.82 MB | David Ashman | 19 Jul 2010 03:49 PM
-
+| Name                                                                    | Size    | Creator      | Creation Date\*\*    |
+| ----------------------------------------------------------------------- | ------- | ------------ | -------------------- |
+| [ZIP Archive SpringB2_Example1.zip](/attachments/SpringB2_Example1.zip) | 2.82 MB | David Ashman | 19 Jul 2010 03:37 PM |
+| [ZIP Archive SpringB2_Example2.zip](/attachments/SpringB2_Example2.zip) | 2.82 MB | David Ashman | 19 Jul 2010 03:49 PM |

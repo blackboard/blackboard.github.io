@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -30,26 +30,36 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 plugins:
   - jekyll-feed
   - jekyll-toc
+  - jekyll-redirect-from
 
 sass:
-  sass_dir:           _sass
-  style:              compressed
-  
+  sass_dir: _sass
+  style: compressed
+
 tipue_search:
   include:
     pages: true
-    collections: [ally, blogs, collaborate, community, dvba, learn, legal, mobile, partners, standards]
-
+    collections:
+      [
+        ally,
+        blogs,
+        collaborate,
+        community,
+        dvba,
+        learn,
+        legal,
+        mobile,
+        partners,
+        standards,
+      ]
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
     values:
       toc: true
@@ -59,9 +69,8 @@ toc:
   max_level: 3
 
 jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+  GoogleAnalytics: # Add, if you want to track with Google Analytics
     id: UA-173992978-1
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

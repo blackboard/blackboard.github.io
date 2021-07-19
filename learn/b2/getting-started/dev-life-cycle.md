@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Development Life Cycle" 
+title: "Development Life Cycle"
 categories: Learn b2
 id: learn-b2-gs-dev-live-cycle
 author: Scott Hurrey
@@ -245,8 +245,9 @@ project. In addition to being an exciting experience for them, it will provide
 the development team with valuable feedback relating to if the tool meets the
 needs of your users. This is often called user acceptance testing. Just be
 careful about scope creep. Your version 1 of your tool is just that - version
+
 1. Record everyone's ideas and input but set the expectation that additional
-functionality will be considered for future versions only.
+   functionality will be considered for future versions only.
 
 ## Releasing your product
 
@@ -340,4 +341,3 @@ Block which may be lost should you uninstall a previous version to install the
 new version.
 
 Always thoroughly test any changes you make to your Building Blocks.
-

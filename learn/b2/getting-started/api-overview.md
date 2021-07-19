@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "B2s and Java Permissions" 
+title: "B2s and Java Permissions"
 categories: Learn b2
 id: learn-b2-gs-api-over
 author: Scott Hurrey
+status: deprecated
 ---
 
 # B2s and Java Permissions
@@ -11,8 +12,8 @@ author: Scott Hurrey
 Building Blocks are capable of fulfilling predominantly, but not exclusively
 two scenarios:
 
-  * Plugging-in additional or enhanced functionality to the core Blackboard product
-  * Bridging the Blackboard product to an external system
+- Plugging-in additional or enhanced functionality to the core Blackboard product
+- Bridging the Blackboard product to an external system
 
 A Building Block is simply a java based web application that runs on your
 Blackboard application server. Packaged in the web application is an xml
@@ -145,4 +146,3 @@ possible with the Snapshot enterprise data integration tool.
 
 Various classes to support functions such as byte->kilobyte conversion and
 localized number representation.
-

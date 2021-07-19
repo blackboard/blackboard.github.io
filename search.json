@@ -1,0 +1,41 @@
+---
+---
+[
+    {% for item in site.data.menu %}
+        {% if item.type == "menu" %}
+            {% for sub_item in item.sub_item %}
+                    {% for subsubmenu in sub_item.subsubmenu %}
+                            {% for subsubsubmenu in subsubmenu.subsubmenu_content %}
+                                {
+                                    "title" : "{{ subsubsubmenu.subsubmenu_content_name }}",
+                                    "url" :  "{{ subsubsubmenu.subsubmenu_content_url }}",
+                                    "desc" : "{{ subsubsubmenu.subsubmenu_content_name }}",
+                                    "target": "{{ subsubsubmenu.target }}"
+                                } {% unless forloop.last %},{% endunless %}
+                            {% endfor %}
+                                {% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+                {% unless forloop.last %},{% endunless %}
+        {% elsif item.type == "content" %}
+            {% for subitem in item.sub_item  %}
+            {
+                "title" : "  {{ subitem.submenu_item }}",
+                "url" :  " {{ subitem.submenu_url }}",
+                "desc" : "{{ subsubsubmenu.subsubmenu_content_name }}",
+                "target": "{{ subsubsubmenu.target }}"
+            } {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+            {% unless forloop.last %},{% endunless %}
+        {% endif %}
+    {% endfor %}
+    ,
+    {% for post in site.posts  %}
+        {
+            "title" : "{{ post.title }}",
+            "url" :  "{{ post.url }}"
+        } 
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

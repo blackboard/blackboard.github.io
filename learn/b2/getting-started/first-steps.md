@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "First Steps" 
+title: "First Steps with learn B2s"
 categories: Learn b2
 id: learn-b2-gs-first-steps
 author: Scott Hurrey
+status: deprecated
 ---
 
 # First Steps Using Building Blocks
-NOTE: For new development, Blackboard recommends building REST and LTI integrations and NOT Building Blocks(B2s). B2s do not work within the Ultra Course UI; REST and LTI works for all Learn deployment and UI options. Use the Developer AMI listed under DVBA for your Blackboard Learn server.
+
+> NOTE: For new development, Blackboard recommends building REST and LTI integrations and NOT Building Blocks(B2s). B2s do not work within the Ultra Course UI; REST and LTI works for all Learn deployment and UI options. Use the Developer AMI listed under DVBA for your Blackboard Learn server.
 
 Developing extensions for Learn requires a development environment. Your
 development environment refers to (1) the development workstation on which you
@@ -59,7 +61,6 @@ development project.
 The following tutorials are available to help you get started with Building
 Block development:
 
-  * [Building Block Development Life Cycle](dev-life-cycle)
-  * [Enabling Debugging](enabling-remote-debugging)
-  * [First Project: Gradle, Git, and basic-b2-template](first-project-using-gradle-and-git)
-
+- [Building Block Development Life Cycle](dev-life-cycle)
+- [Enabling Debugging](enabling-remote-debugging)
+- [First Project: Gradle, Git, and basic-b2-template](first-project-using-gradle-and-git)

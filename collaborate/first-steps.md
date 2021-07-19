@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Steps"
+title: "First Steps with Collaborate API"
 id: collab-api-first-steps
 categories: Collaborate
 tipue_search_active: true
