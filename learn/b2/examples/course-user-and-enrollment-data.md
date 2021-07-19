@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Course, User, and Enrollment Data" 
+title: "Course, User, and Enrollment Data"
 categories: Learn b2
 id: learn-b2-examples-course-user-enrollment
 author: Kelley MacEwen
+status: deprecated
 ---
 
 # Course, User, and Enrollment Data
@@ -19,7 +20,7 @@ blackboard.platform.context.ContextManagerFactory.
 
 An example of how to use this API to load user information follows:
 
-~~~ java
+```java
 //initializes context
 
 ContextManagerFactory.getInstance().setContext(request);
@@ -29,7 +30,7 @@ blackboard.data.user.User from the getUser() method.
 
 String firstName =
 ContextManagerFactory.getInstance().getContext().getUser().getGivenName();
-~~~
+```
 
 ### Loading user information by using the UserSearch API
 
@@ -38,7 +39,7 @@ to search for specific users that exist within Blackboard.
 
 An example of how to use this API follows:
 
-~~~ java
+```java
 //Creates and initializes a new user search
 
 UserSearch us = UserSearch.getNameSearch( UserSearch.SearchKey.UserName,
@@ -50,7 +51,7 @@ user)
 List users = UserDbLoader.Default.getInstance().loadByUserSearch(us);
 
 //Iterate through users
-~~~
+```
 
 Search keys exist to search by name, e-mail, system role, username, and
 enrollment count. Search operators exist for search methods including equals,
@@ -62,7 +63,7 @@ of this web site.
 
 To retrieve a persons role within a course, simply use the following code:
 
-~~~ java
+```java
 CourseMembership existing = null;
 
 try {
@@ -73,7 +74,7 @@ try {
   log.severe("BlackboardRole.add: Check on role for " + courseCode + " " + personCode + " failed. " + e.getMessage());
 
 }
-~~~
+```
 
 ## Adding Roles
 
@@ -82,7 +83,7 @@ try {
 Here is a basic example that will get you going. It is all you need. You can
 use this code to associate any person with any subject with any role.
 
-~~~ java
+```java
 CourseMembership newRole = new CourseMembership();
 
 /* Specify which role to allocate */
@@ -113,7 +114,7 @@ try {
   log.severe("Problem adding role: Failed " + role2.subjectCode + " " + role2.username + " " + role2.role + ". " + e.getMessage());
   return false;
 }
-~~~
+```
 
 However this code does not handle very well when there is a problem. For
 example you may only insert one role, per person, per course. You probably
@@ -125,10 +126,10 @@ before inserting.
 The following example is what we use for our blackboard server. It attempts to
 neatly handle exceptions.
 
-~~~ java
+```java
 public static boolean add(String courseCode, String personCode, String role) {
   CourseMembership newRole = new CourseMembership();
-  
+
   /* First we set the specified role */
   try {
     if(role.equals("student"))
@@ -182,7 +183,7 @@ public static boolean add(String courseCode, String personCode, String role) {
       log.fine("BlackboardRole.add: Silently ignoring message. " + person.getId() + " already has this role in " + course.getId() + ".");
       return true;
     }
-    
+
     log.warning("BlackboardRole.add: Overriding existing role for " + person.getId() + " in " + course.getId() + ".");
 
     /* Person already has a role in this course, we will update the current role and issue a warning */
@@ -215,4 +216,4 @@ public static boolean add(String courseCode, String personCode, String role) {
 
   return true;
 }
-~~~
+```

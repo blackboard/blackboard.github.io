@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="/assets/js/search-script.js" type="text/javascript"></script>
      <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
      <script>
@@ -10,7 +11,7 @@
  
        gtag('config', 'UA-173992978-1');
      </script>
-    <title>Dynamic Rendering with Template Variables</title>
+    <title>Ultra Proctoring Service Integration - IMS Proctoring Spec + UEF</title>
 
     <!-- Search --> 
 
@@ -34,45 +35,50 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageCategory = "#learn-b2-advced-dynamic-render";
+        var pageId = "standards-lti-proctoring-service";
+        pageId = "#" + pageId
         $(document).ready(function () {
             
+
             $( "#menu-trigger" ).click(function() {
                 $( ".menu" ).toggle(); 
                 $( ".menu" ).css( "position", "absolute" ); 
             });
              
             new AccordionMenu('.col-menu');
-            var mainContent = $("#maincontent");
-            var mainHeight = mainContent.height();
-            mainHeight += 250;
-            $( ".menu" ).css( "min-height", mainHeight + "px" );
             $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
 
             
             $( "h2,h3" ).addClass( "section scrollspy" );
             $('.scrollspy').scrollSpy();
             
-            var pageTocStatus = "true";
-               /*
-            if (pageTocStatus === "false") {
-            $( "#maincontent" ).css( "width", "80%" );
-            }
-               */
+
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
-            $('.collapsible').collapsible('open', pageCategory);
+            $('.collapsible').collapsible('open', pageId);
 
-            if( $( "li" ).find( pageCategory ) ){
-                $(pageCategory).addClass("open");
-                $("li" + pageCategory ).css("display","block");
-                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
-                $(pageCategory).parentsUntil(".col-menu").addClass("open");
-                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
-                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
-                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            if( $( "li" ).find( pageId ) ){
+                $(pageId).addClass("open");
+                $("li" + pageId ).css("display","block");
+                $( "li" + pageId ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageId).parentsUntil(".col-menu").addClass("open");
+                $( pageId ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageId ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageId ).find( "a" ).css( "border-left-width", "6px" );
             }
+             // This is the index search, I am avoiding to load the whole search.json everywhere
+            if(pageId == "#index"){
+                SimpleJekyllSearch({
+                    searchInput: document.getElementById("search-input"),
+                    resultsContainer: document.getElementById("results-container"),
+                    json: "/search.json",
+                    searchResultTemplate: '<li><a href="{url}" desc="{desc}" target="{target}">{title}</a></li>'
+                });
+            }
+
         });
+
+
     </script>
 
     <!--
@@ -89,15 +95,18 @@
     data-ally-af-style="flag_small"
     src="https://prod.ally.ac/integration/api/ally.ui.js">
     </script>
+    <!-- This is the index search script -->
 </head>
 <body>
 
     <header>
-        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
-        <span id="dev-docs-span-text">Dev Docs</span>
-        <a href="/search"><i class="material-icons">search</i></a>
-        <a href="/feed.xml"><i class="material-icons">rss_feed</i></a>
-        <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
+      <a href="/">  <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span> </a>
+        <div class="header-buttons">
+            <a href="/search"><i class="material-icons">search</i></a>
+            <a href="/feed.xml"><i class="material-icons">rss_feed</i></a>
+            <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
+        </div>
     </header>
 
 <!---  New menu  -->
@@ -116,7 +125,7 @@
                                     <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First Steps with Learn REST API</a></li>
                                             
                                             <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
                                             
@@ -126,7 +135,7 @@
                                             
                                             <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
                                             
-                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >Learn API</a></li>
                                             
                                             <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
                                             
@@ -194,6 +203,8 @@
                                             
                                             <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
                                             
+                                            <li class="content" id="learn-rest-advanced-dynamic_rendering"><a href="/learn/rest/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
                                         </ul>
                                     </li>
                                 
@@ -206,15 +217,15 @@
                                     <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps with UEF</a></li>
                                             
-                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens on UEF</a></li>
                                             
                                             <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
                                             
                                             <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
                                             
-                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn and UEF</a></li>
                                             
                                         </ul>
                                     </li>
@@ -228,29 +239,27 @@
                                     <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction to B2S</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps with Building blocks</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Development life cycle in B2s</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview for B2s</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation on B2s</a></li>
                                             
                                             <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs on B2s</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone for B2s</a></li>
                                             
                                         </ul>
                                     </li>
                                 
                                     <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
                                         <ul>
-                                            
-                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
                                             
                                             <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
                                             
@@ -330,17 +339,17 @@
                                     <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps with SOAP</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction to SOAP</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools in SOAP</a></li>
                                             
                                             <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services and SOAP</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code (SOAP)</a></li>
                                             
                                         </ul>
                                     </li>
@@ -348,11 +357,11 @@
                                     <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C# (SOAP)</a></li>
                                             
-                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C# (SOAP)</a></li>
                                             
-                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library (SOAP)</a></li>
                                             
                                         </ul>
                                     </li>
@@ -360,9 +369,9 @@
                                     <li class="third-level" id="soap-examples"><a href="">Examples</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python (SOAP)</a></li>
                                             
-                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C# (SOAP)</a></li>
                                             
                                         </ul>
                                     </li>
@@ -377,17 +386,17 @@
                     <ul>
                     
                             
-                            <li class="content" id="collab-api-first-steps" ><a href="/collaborate/first-steps">First Steps</a></li>
+                            <li class="content" id="collab-api-first-steps" ><a href="/collaborate/first-steps">First Steps with Collaborate</a></li>
                             
-                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started with collaborate</a></li>
                             
-                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens in Collaborate</a></li>
                             
-                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects in Collaborate</a></li>
                             
-                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">Collaborate API</a></li>
                             
-                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions in Collaborate</a></li>
                             
                     
                     </ul>
@@ -400,7 +409,7 @@
                             
                             <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
                             
-                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs on DVBA</a></li>
                             
                             <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
                             
@@ -411,25 +420,25 @@
                     <ul>
                     
                             
-                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the Ally API Documentation</a></li>
                             
-                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started with Ally</a></li>
                             
-                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            <li class="content" id="ally-api" ><a href="/ally/api">Ally API</a></li>
                             
-                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization in Ally</a></li>
                             
-                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files in Ally</a></li>
                             
-                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status in Ally</a></li>
                             
-                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback in Ally</a></li>
                             
-                            <li class="content" id="ally-getting-batched-feedback" ><a href="/ally/get-batched-feedback">Getting Batched Feedback</a></li>
+                            <li class="content" id="ally-getting-batched-feedback" ><a href="/ally/get-batched-feedback">Getting Batched Feedback in Ally</a></li>
                             
-                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions in Ally</a></li>
                             
-                            <li class="content" id="ally-ui-integration" ><a href="/ally/ui-integration">UI Integration</a></li>
+                            <li class="content" id="ally-ui-integration" ><a href="/ally/ui-integration">UI Integration in Ally</a></li>
                             
                     
                     </ul>
@@ -532,7 +541,7 @@
                                     <li class="third-level" id="standards-lti-deep-linking"><a href="">LTI Deep Linking 2.0</a>
                                         <ul>
                                             
-                                            <li class="content" id="standards-lti-deep-link-json"><a href="/standards/lti/deep-linking/deep-linking-json" target="_self" >Sample Json</a></li>
+                                            <li class="content" id="standards-lti-deep-link-json"><a href="/standards/lti/deep-linking/deep-linking-json" target="_self" >Deep Linking Sample Json</a></li>
                                             
                                         </ul>
                                     </li>
@@ -573,6 +582,14 @@
                                         </ul>
                                     </li>
                                 
+                                    <li class="third-level" id="standards-lti-proctoring"><a href="">Ultra Proctoring Service Integration</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-proctoring-service"><a href="/standards/lti/ultra-proctoring-service-integration" target="_self" >Ultra Proctoring Service Integration</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
                                 </ul>
                             </li>
                         
@@ -584,6 +601,8 @@
                     
                             
                             <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
+                            
+                            <li class="content" id="partners-blackboard-app-catalog-faq" ><a href="/partners/blackboard-app-catalog-faq">Blackboard App catalog FAQ</a></li>
                             
                     
                     </ul>
@@ -613,151 +632,217 @@
 <div id="body_before_container"> 
     
     <main id="maincontent">
-        <h1 id="dynamic-rendering-with-template-variables">Dynamic Rendering with Template Variables</h1>
+        <h1 id="ultra-proctoring-service-integration---ims-proctoring-spec--uef"><strong>Ultra Proctoring Service Integration - IMS Proctoring Spec + UEF</strong></h1>
 
-<p>Template variables allow for integration with other systems by exposing
-information about the user’s context in a way that makes creating URLs to pass
-information to these systems easy.</p>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>There are many proctoring solutions available in the market today. Our clients license a variety of these services and would like to continue to use them in Ultra. Given the sheer number of proctoring services out there, it is not feasible for Blackboard to build and maintain customized integrations with each one. Therefore there was a need for us to develop a solution that would allow all proctoring solutions to be able to integrate with Ultra. </p>
+<h2 id="frameworks-and-specifications"><strong>Frameworks and Specifications</strong></h2>
+<p><strong>Ultra Extension Framework:</strong> This solution utilizes Ultra Extension Framework, allowing proctoring services to render settings directly inside of Ultra assessment settings. This provides a uniform experience for instructors as proctoring settings are now amongst other settings.</p>
 
-<p>Template variables are represented by a series of values given a special
-syntax. This syntax is</p>
+<p><strong>IMS Proctoring Specification:</strong> IMS global recently released V1 of a proctoring spec. This spec is built on top of LTI and provides a baseline for how assessment platforms communicate with proctoring services. As part of this solution, Learn has been updated (and certified by IMS) to support this spec and utilize it for proctoring. Below is a diagram outlining the spec:</p>
 
-<p>@X@object.attribute@X@. When used, these variables are expanded when rendered
-into their corresponding values. Within the UI, they can be used in portal
-modules and within the body of content items in courses.</p>
+<p><img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.001.jpeg" alt="" /></p>
+<h2 id="configuration"><strong>Configuration</strong></h2>
+<h3 id="lti-tool"><strong>LTI Tool</strong></h3>
+<p>Each proctoring provider will need to create an account on the Dev Portal and register an application. Follow the steps below:</p>
 
-<p>Note that not all of these variables will resolve on all pages, For example,
-if the page is not inside a course, there will be no course-related variables
-available.</p>
+<h5 id="create-a-new-group-for-your-organization">Create a new group for your organization</h5>
 
-<h2 id="using-context-variables">Using context variables</h2>
+<ol>
+  <li>Click “My Groups” in the header</li>
+  <li>Click “Create new group”
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.002.png" alt="" /></li>
+  <li>Enter your organization name as the group name</li>
+</ol>
 
-<table>
-  <thead>
-    <tr>
-      <th>Context item</th>
-      <th>Context variable</th>
-      <th>Example output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>User external person key</td>
-      <td>@X@user.batch_uid@X@</td>
-      <td>123-45-6789</td>
-    </tr>
-    <tr>
-      <td>User username (user id)</td>
-      <td>@X@user.id@X@</td>
-      <td>jsmith</td>
-    </tr>
-    <tr>
-      <td>User student_id (student id)</td>
-      <td>@X@user.student_id@X@</td>
-      <td>jsmith</td>
-    </tr>
-    <tr>
-      <td>User full name</td>
-      <td>@X@user.full_name@X@</td>
-      <td>John Smith</td>
-    </tr>
-    <tr>
-      <td>User primary key identifier</td>
-      <td>@X@user.pk_string@X@</td>
-      <td>_521_1</td>
-    </tr>
-    <tr>
-      <td>User locale</td>
-      <td>@X@user.locale@X@</td>
-      <td>en_GB</td>
-    </tr>
-    <tr>
-      <td>User system role(s)</td>
-      <td>@X@user.role@X@</td>
-      <td>System Roles:<br />* C- Course Administrator<br />* U- Guest<br />* N- None<br />* O- Observer<br />* Y- Community Administrator<br />* R- Support<br />* Z- System Admin<br />* H- System Support<br />* A- User Administrator</td>
-    </tr>
-    <tr>
-      <td>User primary institution role</td>
-      <td>@X@user.institution_role@X@<br />@X@user.primary_institution_role@X@</td>
-      <td>student</td>
-    </tr>
-    <tr>
-      <td>User secondary institution role(s)</td>
-      <td>@X@user.secondary_institution_role@X@</td>
-      <td>student,faculty</td>
-    </tr>
-    <tr>
-      <td>Course membership role</td>
-      <td>@X@membership.role@X@</td>
-      <td>Course/Organization Roles:<br />* B- Course Builder/Organization Builder<br />* G- Grader/Grader<br />* U- Guest/Guest<br />* P- Instructor/Leader<br />* S- Student/Participant<br />* T- Teacher’s Assistant/Assistant</td>
-    </tr>
-    <tr>
-      <td>Course external course key</td>
-      <td>@X@course.batch_uid@X@</td>
-      <td>ABC123ABC</td>
-    </tr>
-    <tr>
-      <td>Course course id</td>
-      <td>@X@course.id@X@</td>
-      <td>BIO101</td>
-    </tr>
-    <tr>
-      <td>Course name</td>
-      <td>@X@course.course_name@X@</td>
-      <td>Introduction to Concepts in Biology</td>
-    </tr>
-    <tr>
-      <td>Course primary key identifier</td>
-      <td>@X@course.pk_string@X@</td>
-      <td>_12344_1</td>
-    </tr>
-    <tr>
-      <td>Course URL</td>
-      <td>@X@course.url@X@</td>
-      <td>/courses/1/BIO101/</td>
-    </tr>
-    <tr>
-      <td>Course membership role</td>
-      <td>@X@course.role@X@</td>
-      <td>student</td>
-    </tr>
-    <tr>
-      <td>Course locale</td>
-      <td>@X@course.locale@X@</td>
-      <td>en_US</td>
-    </tr>
-    <tr>
-      <td>Content primary key identifier</td>
-      <td>@X@content.id@X@<br />@X@content.pk_string@X@</td>
-      <td>_23_1</td>
-    </tr>
-    <tr>
-      <td>Content URL</td>
-      <td>@X@content.url@X@</td>
-      <td>/courses/1/BOB101/content/_221_1</td>
-    </tr>
-    <tr>
-      <td>Request <a href="https://www.opengroup.org/onlinepubs/009629399/apdxa.htm">UUID</a></td>
-      <td>@X@request.id@X@</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Request locale</td>
-      <td>@X@request.locale@X@</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Request return URL</td>
-      <td>@X@request.return@X@</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>System host name</td>
-      <td>@X@system.site_id@X@</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>Note: Ultra Extension Framework requires Premium API Access. This will need to be granted to your group by a dev portal administrator. </p>
+
+<h5 id="register-a-new-application-if-you-do-not-already-have-one">Register a new application (if you do not already have one)</h5>
+<ol>
+  <li>Click + sign to add a new application
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.003.png" alt="" /></li>
+  <li>Fill out all required fields</li>
+  <li>Select the group name that you created above in step 1</li>
+  <li>Slide the toggle next to “My Integration supports LTI 1.3” to enter information for LTI 1.3
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.004.png" alt="" /></li>
+</ol>
+
+<h3 id="lti-placements"><strong>LTI Placements</strong></h3>
+<p>Two types of LTI placements will need to be created to successfully integrates as a proctoring service.</p>
+<h4 id="ultra-extension"><strong>Ultra Extension</strong></h4>
+<p>This placement will be the primary means of communication between your application and Ultra Extension Framework. Ultra Extension Framework will be used to render the settings of each proctoring service inside the assessment settings of Ultra. Once your application is authorized with Ultra Extension Framework, your app will be able to use the API to register as a proctoring service and provide HTML to display. See <a href="https://docs.blackboard.com/learn/uef/getting-started">https://docs.blackboard.com/learn/uef/getting-started</a> for more information about UEF including tutorials on how to get started. </p>
+
+<h5 id="create-new-ultra-extension-placement">Create new Ultra Extension placement:</h5>
+<ol>
+  <li>From the “My Applications” screen click the … menu next to your application</li>
+  <li>Select “Manage Placements”</li>
+  <li>Click the “Register” Button</li>
+  <li>Fill out required fields. Be sure to select “Ultra extension” as Type:
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.005.png" alt="" /></li>
+  <li>Click “Register placement”</li>
+</ol>
+
+<h4 id="proctoring"><strong>Proctoring</strong></h4>
+<p>This placement will be used to communicate with your application when a student takes starts a proctored assessment. This placement type is restricted and will need to be created by a Dev Portal admin at Blackboard.</p>
+
+<h5 id="create-new-ultra-extension-placement-1">Create new Ultra Extension placement:</h5>
+<ol>
+  <li>From the “My Applications” screen click the … menu next to your application</li>
+  <li>Select “Manage Placements”</li>
+  <li>Click the “Register” Button</li>
+  <li>Fill out required fields. Be sure to select “Proctoring” as Type:
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.006.png" alt="" /></li>
+  <li>Click “Register placement”</li>
+</ol>
+
+<h3 id="ultra-extension-framework"><strong>Ultra Extension Framework</strong></h3>
+<p>Now that your LTI tool and placements are configured and you have authorized with UEF, it’s time to register as a proctoring service with UEF. Below is an outline of events that will be of interest to you.
+ </p>
+<h4 id="proctoring-serviceregister"><strong>proctoring-service:register</strong></h4>
+<p>You will need to register as a proctoring service with UEF. At this step, you will need the unique handle of the proctoring placement supplied by Blackboard.</p>
+
+<p><strong>proctoring-service:register</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Tell UEF we are a proctoring service
+sendMessage({
+    type: 'proctoring-service:register',
+    proctoringPlacementHandle: &lt;unique_handle_goes_here&gt;
+});
+ 
+ 
+// UEF sent a new message
+if (msg.data.type === 'proctoring-service:register') {
+   
+   // This is UEF responding to your message. A status will be included as well as an error if something went wrong
+   console.log(msg.data.proctoringPlacementHandle);
+   console.log(msg.data.status);
+   console.log(msg.data.errorMessage);
+}
+
+</code></pre></div></div>
+
+<h4 id="proctoring-servicesettings-saved"><strong>proctoring-service:settings-saved</strong></h4>
+
+<p>UEF will send this message when the user saves the assessment settings. This is to notify the proctoring service to save off the current settings for this assessment. This is an asynchronous message so UEF will wait for your response until the timeout is reached. </p>
+
+<p><strong>proctoring-service:settings-saved</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (msg.data.type === 'proctoring-service:settings-saved') {
+   // Settings were saved for this contentId
+   console.log(msg.data.contentId);
+    
+   // Status of proctoring
+   console.log(msg.data.enabled);
+ 
+ 
+   // Your response back to UEF after you have done what you need to
+   sendMessage({
+      type: 'proctoring-service:settings-saved:response',
+      correlationId: msg.data.correlationId,
+      success: true,
+      error: undefined
+   });
+}
+</code></pre></div></div>
+
+<h4 id="eventsubscribe"><strong>event:subscribe</strong></h4>
+<p>You will need to subscribe to portal:new events. Once subscribed, UEF will notify you when a portal (an area to host content) becomes visible in the UI. In this case when the proctoring configuration panel is opened. </p>
+
+<p><strong>event:subscribe</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Tell UEF we want to subscribe to portal events
+sendMessage({
+    type: 'event:subscribe',
+    subscriptions: ['portal:new', 'portal:remove']
+});
+ 
+// UEF sent a new message
+if (msg.data.type === 'event:event') {
+     
+    // The event type is a new portal
+    if (msg.data.eventType === 'portal:new') {
+        
+       // Name of the portal in view
+       console.log(msg.data.selector)
+        
+       // ID of portal in view
+       console.log(msg.data.portalId)
+ 
+ 
+       // Any specific data relavant to this portal
+       console.log(msg.data.selectorData)
+    }
+}
+</code></pre></div></div>
+<h4 id="portalrender"><strong>portal:render</strong></h4>
+<p>This is the message the proctoring service will send to UEF to render the proctoring settings. The selector for proctoring panel is course.content.assessment.settings.proctoring.panel.settings:</p>
+
+<p><strong>portal:render</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// UEF sent a new message
+if (msg.data.type === 'event:event') {
+     
+    // The event type is a new portal
+    if (msg.data.eventType === 'portal:new') {
+         
+       // Check if this matches the proctoring panel selector
+       if (msg.data.selector === 'course.content.assessment.settings.proctoring.panel.settings') {
+           
+          // ID of this portal. This must be sent back to UEF in the portal:render message
+          const portalId = msg.data.portalId;
+            
+          // contentId is included for convience in the selectorData
+          console.log(msg.data.selectorData.contentId);
+           
+          const contentsToSend = {
+             tag: 'div',
+             children: [{
+                tag: 'span',
+                children: `Proctoring Service Settings`
+            }]
+          };
+  
+          // Send message to UEF to render this content
+          sendMessage({
+             type: "portal:render",
+             portalId: portalId,
+             contents: contentsToSend
+          });
+       }
+    }
+}
+</code></pre></div></div>
+
+<h2 id="accessing-assessment-settings"><strong>Accessing assessment settings</strong></h2>
+<p>Pre-requisites: </p>
+
+<ul>
+  <li>Create an Ultra course</li>
+  <li>Create a Test or Assignment</li>
+</ul>
+
+<ol>
+  <li>Click the gear icon next to “Test Settings”
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.007.png" alt="" /></li>
+  <li>Scroll down and click the “Configure proctoring settings” link
+<em>Note: If this section is not present, the proctoring placement has likely not been created or is set to unavailable.
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.008.png" alt="" /></em></li>
+  <li>If the setup was done correctly, you should see your proctoring service in the dropdown menu. If the toggle is enabled the contents you passed to Ultra Extension Framework in the portal:render message should display in the (red) box in the image below
+<img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.009.png" alt="" /></li>
+  <li>
+    <p>If the following error message is shown</p>
+
+    <p><img src="/assets/img/proctoring/Aspose.Words.aaa5fe5c-6d33-4e17-8ca7-9a778984b297.010.png" alt="" /></p>
+
+    <p>One of the following may be true:</p>
+    <ul>
+      <li>Ultra Extension placement has not been created or is set to unavailable</li>
+      <li>Authorization with Ultra Extension Framework failed</li>
+      <li>Error in your JS script Ultra Extension Framework is calling</li>
+    </ul>
+  </li>
+</ol>
+
 
     </main>
     <div id="third-column-menu">
@@ -766,7 +851,16 @@ available.</p>
                 <div id="table-of-contents">
                     <div id="table-of-contents">
                         <ul>
-  <li><a href="#using-context-variables">Using context variables</a></li>
+  <li><a href="#overview"><strong>Overview</strong></a></li>
+  <li><a href="#frameworks-and-specifications"><strong>Frameworks and Specifications</strong></a></li>
+  <li><a href="#configuration"><strong>Configuration</strong></a>
+    <ul>
+      <li><a href="#lti-tool"><strong>LTI Tool</strong></a></li>
+      <li><a href="#lti-placements"><strong>LTI Placements</strong></a></li>
+      <li><a href="#ultra-extension-framework"><strong>Ultra Extension Framework</strong></a></li>
+    </ul>
+  </li>
+  <li><a href="#accessing-assessment-settings"><strong>Accessing assessment settings</strong></a></li>
 </ul>
 
                         </div>
@@ -780,26 +874,11 @@ available.</p>
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Blackboard Dev Docs</h5>
-          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
-            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
-            <h5 class="white-text">Community</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
-              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
-              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
-            </ul>
+          <h5 class="white-text">Contact us</h5>
+          <p class="grey-text text-lighten-4">Reach us out at <a href="mailto:developers@blackboard.com?subject=Support from docs">developers@blackboard.com</a> if you have any questions.</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Quick API Access</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
-          </ul>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">REST Terms and Conditions</h5>
+          <h5 class="white-text">Terms and Conditions</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
@@ -809,10 +888,57 @@ available.</p>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2020 Blackboard, Inc
-      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      <a class="grey-text text-lighten-4 left" target="_blank" href="https://www.blackboard.com">© Blackboard, Inc</a>
       </div>
     </div>
   </footer>
 </body>
+<script>
+
+        // This modifies dynamically the menu height based on the content height
+        let menu = document.getElementsByClassName('menu');
+        const getElementHeight = function(elementName){
+            let element = document.getElementsByTagName(elementName);
+            return element[0].offsetHeight;
+        }  
+
+
+        const updateMenuHeight = function(){
+            let finalSize = getElementHeight('main')
+            finalSize = (finalSize + 200 )+ 'px';
+            return menu[0].style.minHeight = finalSize
+        }
+        
+        window.addEventListener("resize", updateMenuHeight );
+        window.addEventListener("load", updateMenuHeight );
+
+        // Need to resize the whole content when no toc
+        let pageToc = "true";
+        pageToc = pageToc.toLowerCase();
+        const bodyMainContent = document.getElementById('maincontent');
+        const toc = document.getElementById('third-column-menu');
+
+
+        if(bodyMainContent != null){
+        window.addEventListener("resize", function(){
+            if(pageToc == 'false'){
+              if ( toc ){
+                toc.style.display = 'none';
+              }
+                if (window.innerWidth >= 1499 ) {
+                    bodyMainContent.style.width = '76%';
+                    console.log('1499');
+                } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
+                    bodyMainContent.style.width = '70%';
+                    console.log('1250');
+                } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
+                  bodyMainContent.style.width = '63%';
+                } else if (window.innerWidth <= 800 ){
+                  bodyMainContent.style.width = '95%';
+                }
+            }
+        });
+      }
+</script>
+
 </html>

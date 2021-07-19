@@ -4,6 +4,7 @@ title: "B2s and Java Permissions"
 categories: Learn b2
 id: learn-b2-advced-java-permissions
 author: Scott Hurrey
+status: deprecated
 ---
 
 # B2s and Java Permissions
@@ -18,25 +19,27 @@ In order to interact with the Learn environment a Building Block must supply
 the necessary set of java permissions in the permissions element located near
 the bottom of the bb-manifest file. A basic set of permissions may include:
 
-~~~ java
-    <permission type="attribute" name="user.personalinfo" actions="get,set"/>   
-    <permission type="blackboard.persist.PersistPermission" name="user" actions="create,modify"/>   
-    <permission type="java.net.SocketPermission" name="*" actions="resolve,connect"/>   
+```java
+    <permission type="attribute" name="user.personalinfo" actions="get,set"/>
+    <permission type="blackboard.persist.PersistPermission" name="user" actions="create,modify"/>
+    <permission type="java.net.SocketPermission" name="*" actions="resolve,connect"/>
     <permission type="java.util.PropertyPermission" name="*" actions="read,write"/>
-~~~
+```
+
 One permission often seen is:
 
-~~~ java
+```java
     <permission type="java.io.FilePermission" name="&lt;&lt;ALL FILES&gt;&gt;" actions="read,write"/>
-~~~
+```
 
 While convenient to use this particular 'wild card' notation, it provides
 access to all system files. Thus it is more secure to specify files and paths
 directly even if this requires multiple permission entries:
 
-~~~ java
+```java
     <permission type="java.io.FilePermission" name="BB_HOME/logs/my_b2.log" actions="read,write"/>
-~~~
+```
+
 A more comprehensive though not all-inclusive set of permissions is listed at
 the end of this help topic.
 
@@ -67,9 +70,9 @@ Caused by: java.security.**_AccessControlException_**: access denied
 
 This is the logged exception and follows the pattern of:
 
-~~~ java
+```java
 Caused by: java.security.**_AccessControlException_**: access denied (<type> <name> [<actions>])
-~~~
+```
 
 To resolve this error, you simply need to add a new permission element to your
 bb-manifest.xml file using the logged <type> <name> and if specified
@@ -77,9 +80,9 @@ bb-manifest.xml file using the logged <type> <name> and if specified
 
 The format for the permission element is (notice the same terminology in use):
 
-~~~ java
+```java
     <permission type="<type>" name="<name>" actions="<actions>" />
-~~~
+```
 
 Simply enter the values from the error message into the permission element,
 add it to your bb-manifest and re-deploy your Building Block. It is important
@@ -91,15 +94,16 @@ permission element.
 
 Thus:
 
-~~~ java
+```java
 Caused by: java.security.**_AccessControlException_**: access denied
 (java.net.SocketPermission tup6.temple.edu resolve)
-~~~
+```
 
 Becomes:
-~~~ java
+
+```java
     <permission type=”java.net.SocketPermission” name=”tup6.temple.edu” actions=”resolve” />
-~~~
+```
 
 You will need to re-deploy your Building Block after changing your bb-
 manifest. Uninstalling and re-deploying your Building Block or changing the
@@ -115,25 +119,25 @@ Below are some additional permissions for formatting reference.
 Do not include more permissions than are necessary for proper operation of
 your Building Block as this will impact start times.
 
-~~~ java
-    <permission type="blackboard.data.AttributePermission" name="sessionmanager" actions="get" />  
-    <permission type="attribute" name="user.personalinfo" actions="get,set" />   
-    <permission type="persist" name="groupmembership" actions="create" />   
-    <permission type="attribute" name="user.authinfo" actions="get" />   
-    <permission type="java.util.PropertyPermission" name="*" actions="read,write" />    
-    <permission type="persist" name="content" actions="persist" />   
-    <permission type="persist" name="course" actions="create,modify,delete" />    
-    <permission type="persist" name="user" actions="create,modify,delete" />   
-    <permission type="persist" name="userrole" actions="create,modify,delete" />   
-    <permission type="persist" name="coursemembership" actions="persist,create,modify,delete" />                
-    <permission type="persist" name="enrollment" actions="persist,create,modify,delete" />   
-    <permission type="attribute" name="enrollment.rowstatus" actions="get,set" />                
-    <!-- Minimum permissions to support Spring -->   
-    <permission type="java.lang.reflect.ReflectPermission" name="suppressAccessChecks" />   
-    <permission type="java.lang.RuntimePermission" name="accessDeclaredMembers" />   
-    <permission type="java.lang.RuntimePermission" name="createClassLoader" />   
-    <permission type="java.lang.RuntimePermission" name="setContextClassLoader" />                
-    <!--  For logback logging -->   
-    <permission type="java.io.FilePermission" name="${java.home}/lib/*" actions="read" />  
+```java
+    <permission type="blackboard.data.AttributePermission" name="sessionmanager" actions="get" />
+    <permission type="attribute" name="user.personalinfo" actions="get,set" />
+    <permission type="persist" name="groupmembership" actions="create" />
+    <permission type="attribute" name="user.authinfo" actions="get" />
+    <permission type="java.util.PropertyPermission" name="*" actions="read,write" /> 
+    <permission type="persist" name="content" actions="persist" />
+    <permission type="persist" name="course" actions="create,modify,delete" /> 
+    <permission type="persist" name="user" actions="create,modify,delete" />
+    <permission type="persist" name="userrole" actions="create,modify,delete" />
+    <permission type="persist" name="coursemembership" actions="persist,create,modify,delete" />             
+    <permission type="persist" name="enrollment" actions="persist,create,modify,delete" />
+    <permission type="attribute" name="enrollment.rowstatus" actions="get,set" />             
+    <!-- Minimum permissions to support Spring -->
+    <permission type="java.lang.reflect.ReflectPermission" name="suppressAccessChecks" />
+    <permission type="java.lang.RuntimePermission" name="accessDeclaredMembers" />
+    <permission type="java.lang.RuntimePermission" name="createClassLoader" />
+    <permission type="java.lang.RuntimePermission" name="setContextClassLoader" />             
+    <!--  For logback logging -->
+    <permission type="java.io.FilePermission" name="${java.home}/lib/*" actions="read" />
     <permission type="java.io.FilePermission" name="BB_HOME/logs/-" actions="read,write" />
-~~~
+```

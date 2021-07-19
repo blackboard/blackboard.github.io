@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="/assets/js/search-script.js" type="text/javascript"></script>
      <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
      <script>
@@ -41,45 +42,50 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageCategory = "#{{ page.id }}";
+        var pageId = "{{ page.id }}";
+        pageId = "#" + pageId
         $(document).ready(function () {
             
+
             $( "#menu-trigger" ).click(function() {
                 $( ".menu" ).toggle(); 
                 $( ".menu" ).css( "position", "absolute" ); 
             });
              
             new AccordionMenu('.col-menu');
-            var mainContent = $("#maincontent");
-            var mainHeight = mainContent.height();
-            mainHeight += 250;
-            $( ".menu" ).css( "min-height", mainHeight + "px" );
             $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
 
             
             $( "h2,h3" ).addClass( "section scrollspy" );
             $('.scrollspy').scrollSpy();
             
-            var pageTocStatus = "{{ page.toc }}";
-               /*
-            if (pageTocStatus === "false") {
-            $( "#maincontent" ).css( "width", "80%" );
-            }
-               */
+
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
-            $('.collapsible').collapsible('open', pageCategory);
+            $('.collapsible').collapsible('open', pageId);
 
-            if( $( "li" ).find( pageCategory ) ){
-                $(pageCategory).addClass("open");
-                $("li" + pageCategory ).css("display","block");
-                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
-                $(pageCategory).parentsUntil(".col-menu").addClass("open");
-                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
-                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
-                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            if( $( "li" ).find( pageId ) ){
+                $(pageId).addClass("open");
+                $("li" + pageId ).css("display","block");
+                $( "li" + pageId ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageId).parentsUntil(".col-menu").addClass("open");
+                $( pageId ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageId ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageId ).find( "a" ).css( "border-left-width", "6px" );
             }
+             // This is the index search, I am avoiding to load the whole search.json everywhere
+            if(pageId == "#index"){
+                SimpleJekyllSearch({
+                    searchInput: document.getElementById("search-input"),
+                    resultsContainer: document.getElementById("results-container"),
+                    json: "/search.json",
+                    searchResultTemplate: '<li><a href="{url}" desc="{desc}" target="{target}">{title}</a></li>'
+                });
+            }
+
         });
+
+
     </script>
 
     <!--
@@ -96,13 +102,16 @@
     data-ally-af-style="flag_small"
     src="https://prod.ally.ac/integration/api/ally.ui.js">
     </script>
+    <!-- This is the index search script -->
 </head>
 <body>
 
     <header>
-        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
-        <span id="dev-docs-span-text">Dev Docs</span>
-        <a href="/search"><i class="material-icons">search</i></a>
-        <a href="/feed.xml"><i class="material-icons">rss_feed</i></a>
-        <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
+      <a href="/">  <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span> </a>
+        <div class="header-buttons">
+            <a href="/search"><i class="material-icons">search</i></a>
+            <a href="/feed.xml"><i class="material-icons">rss_feed</i></a>
+            <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
+        </div>
     </header>

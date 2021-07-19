@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Event Driven API" 
+title: "Event Driven API"
 categories: Learn b2
 id: learn-b2-advced-event-driven-api
 author: Kelley MacEwen
+status: deprecated
 ---
 
 # Event Driven API
@@ -11,14 +12,14 @@ author: Kelley MacEwen
 The Blackboard Learn Event Driven API is used to programmatically push the
 following data into the Blackboard Learn database from an external system:
 
-  * User
-  * Course
-  * Organization
-  * Enrollment
-  * Staff Student
-  * Organization membership
-  * Course and Organization category
-  * Course and Organization category membership
+- User
+- Course
+- Organization
+- Enrollment
+- Staff Student
+- Organization membership
+- Course and Organization category
+- Course and Organization category membership
 
 The collaboration between the entity and the persistence classes is the
 process by which data is obtained from the institution systems. An instance is
@@ -52,11 +53,11 @@ the storage of the entities into a persistent store or transient data format.
 All data classes have methods to handle persistence actions. The following
 persistence operations are supported:
 
-  * _Insert_: Inserts a record into the Blackboard Learn database.
-  * _Update_: Updates an existing record in the Blackboard Learn database.
-  * _Save_: Updates an existing record if it already exists. Otherwise, if it does not exist, inserts the record in the Blackboard Learn database.
-  * _Remove_: Purges the record from the Blackboard Learn database.
-  * _Change Key_: (Person and Group, Course, and Organization) Changes the primary key. This will automatically update any related Memberships of the changed keys.
+- _Insert_: Inserts a record into the Blackboard Learn database.
+- _Update_: Updates an existing record in the Blackboard Learn database.
+- _Save_: Updates an existing record if it already exists. Otherwise, if it does not exist, inserts the record in the Blackboard Learn database.
+- _Remove_: Purges the record from the Blackboard Learn database.
+- _Change Key_: (Person and Group, Course, and Organization) Changes the primary key. This will automatically update any related Memberships of the changed keys.
 
 ### Create an object
 
@@ -68,17 +69,17 @@ save, delete).
 
 The following Persisters are found in the Event Driven API:
 
-* CourseSitePersister
-* OrganizationPersister
-* EnrollmentPersister
-* OrganizationMembershipPersister
-* StaffStudentPersister
-* PersonPersister
-* CourseCategoryPersister
-* OrganizationCategoryPersister
-* CourseCategoryMembershipPersister
-* OrganizationCategoryMembershipPersister
-* PortalRolePersister
+- CourseSitePersister
+- OrganizationPersister
+- EnrollmentPersister
+- OrganizationMembershipPersister
+- StaffStudentPersister
+- PersonPersister
+- CourseCategoryPersister
+- OrganizationCategoryPersister
+- CourseCategoryMembershipPersister
+- OrganizationCategoryMembershipPersister
+- PortalRolePersister
 
 Persist methods include changeKey, insert, remove, save, update, clone. Change
 key is not relevant for membership type items. Clone is only relevant for
@@ -89,17 +90,17 @@ in the API specifications.
 
 The following Loaders are found in the Event Driven API:
 
-* SourseSiteLoader
-* OrganizationLoader
-* EnrollmentLoader
-* OrganizationMembershipLoader
-* StaffStudentLoader
-* PersonLoader
-* CourseCategoryLoader
-* OrganizationCategoryLoader
-* CourseCategoryMembershipLoader
-* OrganizationCategoryMembershipLoader
-* PortalRoleLoader
+- SourseSiteLoader
+- OrganizationLoader
+- EnrollmentLoader
+- OrganizationMembershipLoader
+- StaffStudentLoader
+- PersonLoader
+- CourseCategoryLoader
+- OrganizationCategoryLoader
+- CourseCategoryMembershipLoader
+- OrganizationCategoryMembershipLoader
+- PortalRoleLoader
 
 Load methods include load by batch_uid and load by template. More information
 about Load methods can be found in the API specifications.
@@ -111,19 +112,19 @@ API:
 
 **DataSourceLoader**
 
-* loadAll()
-* loadAdminObjectCount()
-* loadAllAdminObjectCounts()
-* loadByBatchUid()
-* DataSourcePersister
-* create()
-* disableAdminObjectsByDataType()
-* disableAllAdminObjects()
-* modify()
-* purgeAdminObjectsByDataType()
-* purgeAllAdmiObjects()
-* purgeSnapshotSessions()
-* removeByBatchUid()
+- loadAll()
+- loadAdminObjectCount()
+- loadAllAdminObjectCounts()
+- loadByBatchUid()
+- DataSourcePersister
+- create()
+- disableAdminObjectsByDataType()
+- disableAllAdminObjects()
+- modify()
+- purgeAdminObjectsByDataType()
+- purgeAllAdmiObjects()
+- purgeSnapshotSessions()
+- removeByBatchUid()
 
 ## Persistence package
 
@@ -135,12 +136,12 @@ refer to the Javadocs included with the API.
 The persistence package provides a framework to handle the insert, update,
 save, and delete for the entity objects. The framework includes:
 
-  * BbServiceManage: This class handles the coordination of Blackboard Learn enabled services.
-  * PersistenceService: This class is a singleton, an object only intended to exist once, that manages the different persistence context for the entity objects.
-  * DbPersistenceManager: This class maintains the reference points for each individual loader/persister. An instance of any persister/loader is requested through it.
-  * PersisterInterfaces: This includes the PersonPersister, CoursesitePersister, and so forth.
+- BbServiceManage: This class handles the coordination of Blackboard Learn enabled services.
+- PersistenceService: This class is a singleton, an object only intended to exist once, that manages the different persistence context for the entity objects.
+- DbPersistenceManager: This class maintains the reference points for each individual loader/persister. An instance of any persister/loader is requested through it.
+- PersisterInterfaces: This includes the PersonPersister, CoursesitePersister, and so forth.
 
-~~~ java
+```java
 blackboard.platform.BbServiceManager.init( serviceConfig,bbprops );
 
 blackboard.platform.persistence.PersistenceService pService =
@@ -153,7 +154,7 @@ CoursesiteLoader cLoader=
 (CoursesiteLoader)bManager.getLoader(CoursesiteLoader.TYPE);
 
 PersistenceManager.getLoader=PersonPersister.Default.getInstance()
-~~~
+```
 
 The user must initialize the BbServiceManager before attempting any
 persistence of the admin data objects. After BbServiceManager is initialized
@@ -167,22 +168,22 @@ determine the relationships between the entity and the persistence classes.
 
 The following is an example of how to get a Course site:
 
-~~~ java
+```java
 blackboard.admin.data.course.CourseSite site=new
 
 blackboard.admin.data.course.CourseSite();
-~~~
+```
 
-  1. The program must first initialize the BbServiceManager object. The method call is blackboard.platform.BbServiceManager.init( serviceConfig ); where serviceConfig is a java.io.File object. This object represents a link to the configuration file on the operating system. The file is a detailed list of all services that are active on the instance of the servicemanager as well as any of their configuration files.
-  2. The BbServiceManager object is only initialized once for each execution of the application.
+1. The program must first initialize the BbServiceManager object. The method call is blackboard.platform.BbServiceManager.init( serviceConfig ); where serviceConfig is a java.io.File object. This object represents a link to the configuration file on the operating system. The file is a detailed list of all services that are active on the instance of the servicemanager as well as any of their configuration files.
+2. The BbServiceManager object is only initialized once for each execution of the application.
 
-  3. A virtual host is also needed for proper setup. A virtual host can be obtained by first getting the Virtual Installation Manager using BBServiceManager.lookupService(VirtualInstallationManager.class). The Virtual Installation Manager has a getVirtualHost(String id) method which returns the virtual host.
+3. A virtual host is also needed for proper setup. A virtual host can be obtained by first getting the Virtual Installation Manager using BBServiceManager.lookupService(VirtualInstallationManager.class). The Virtual Installation Manager has a getVirtualHost(String id) method which returns the virtual host.
 
-  4. Next, the ContextManager must be retrieved using BBServiceManager.lookupService(ContextManager.class). Finally, the context can be set by calling the ContextManager’s setContext() method and passing in the virtual host as an argument.
+4. Next, the ContextManager must be retrieved using BBServiceManager.lookupService(ContextManager.class). Finally, the context can be set by calling the ContextManager’s setContext() method and passing in the virtual host as an argument.
 
-  5. The following code sample assumes a “SERVICE_CONFIG_DIR” and “VIRTUAL_HOST_KEY” properties will be set, probably through –D parameters if it is used in a command line application. The SERVICE_CONFIG_DIR should be set to the full path of the Blackboard config directory, while the VIRTUAL_HOST_KEY needs to be the virtual installation you want to test, by default it is bb_bb60.
+5. The following code sample assumes a “SERVICE_CONFIG_DIR” and “VIRTUAL_HOST_KEY” properties will be set, probably through –D parameters if it is used in a command line application. The SERVICE_CONFIG_DIR should be set to the full path of the Blackboard config directory, while the VIRTUAL_HOST_KEY needs to be the virtual installation you want to test, by default it is bb_bb60.
 
-~~~ java
+```java
 // Initialize the BbServiceManager and set the context
 
 //Follow the steps below to determine the relationships between the entity and persistence classes.
@@ -233,12 +234,12 @@ e.toString() + "..exiting.\n");
 System.exit(0);
 
 }
-~~~
+```
 
-  6. The controller creates an entity object and sets its attributes.
-  7. The controller requests a persist action off the Loader / Persister
+6. The controller creates an entity object and sets its attributes.
+7. The controller requests a persist action off the Loader / Persister
 
-~~~ java
+```java
 CourseSiteLoader cLoader=
 
 (CourseSiteLoader)BbServiceManager.getPersistenceService().getDbPersistenceMan
@@ -250,9 +251,9 @@ CourseSitePersister cPersister=
 Manager().getPersister(CoursesSitePersister.TYPE);
 
 PersistenceManager.getLoader=PersonPersister.Default.getInstance()
-~~~
+```
 
-  8. The controller catches any persistence exceptions that occur.
+8. The controller catches any persistence exceptions that occur.
 
 Repeat steps 2, 3, and 4 as needed for different entities and different
 persist actions.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Creating Database Objects with Building Blocks" 
-purple-text-title: ""
+title: "Creating Database Objects with Building Blocks"
+status: deprecated
 categories: Learn b2
 id: learn-b2-bp-dev-using-maven
 author: Scott Hurrey
@@ -53,24 +53,23 @@ reference the correct versions of our public API.
 All Blackboard API libraries are part of the **blackboard.platform** group.
 Blackboard publishes these libraries:
 
-Artifact ID | Description
----|---
-bb-bbxythos | APIs for the content management subsystem.
-bb-cms-admin | APIs pertaining to system administration.
-bb-platform | Core platform APIs. This covers the bulk of the APIs typical Building Blocks will use.
-bb-taglibs | Standard tag libraries provided by the platform.
-bb-ui-webapi | APIs for Building Block developers. Many of the public tags leverage code and resources included in this project.<br />As a webapi, this library must be included in your Building Blocks' WEB-INF/lib path because the platform does not provide it. This webapi includes a resources package that you must expand at the root of your Building Block.
-bb-ws-announcement | Web Service stubs and APIs for the announcements subsystem.
-bb-ws-calendar | Web Service stubs and APIs for the calendar subsystem.
-bb-ws-content | Web Service stubs and APIs for the content subsystem.
-bb-ws-context | Web Service stubs and APIs for the session context subsystem.
-bb-ws-course | Web Service stubs and APIs for the course subsystem.
-bb-ws-coursemembership | Web Service stubs and APIs for the course membership subsystem.
-bb-ws-gradebook | Web Service stubs and APIs for the gradebook subsystem.
-bb-ws-notificationdistributoroperations | Web Service stubs and APIs for the notification subsystem integration.
-bb-ws-user | Web Service stubs and APIs for the user subsystem.
-bb-ws-util | Web Service stubs and APIs for the some helpful utilities.
-bb-manifest-plugin | XSD for validating the XML in your bb-manifest.xml file.
-bb-schema-xsd | XSD for validating the XML in your schema.xml file.
-xsscore | Library supporting bb-bbxythos. Make sure you are using the same version of each file, and do not include in your war file.
-
+| Artifact ID                             | Description                                                                                                                                                                                                                                                                                                                                             |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bb-bbxythos                             | APIs for the content management subsystem.                                                                                                                                                                                                                                                                                                              |
+| bb-cms-admin                            | APIs pertaining to system administration.                                                                                                                                                                                                                                                                                                               |
+| bb-platform                             | Core platform APIs. This covers the bulk of the APIs typical Building Blocks will use.                                                                                                                                                                                                                                                                  |
+| bb-taglibs                              | Standard tag libraries provided by the platform.                                                                                                                                                                                                                                                                                                        |
+| bb-ui-webapi                            | APIs for Building Block developers. Many of the public tags leverage code and resources included in this project.<br />As a webapi, this library must be included in your Building Blocks' WEB-INF/lib path because the platform does not provide it. This webapi includes a resources package that you must expand at the root of your Building Block. |
+| bb-ws-announcement                      | Web Service stubs and APIs for the announcements subsystem.                                                                                                                                                                                                                                                                                             |
+| bb-ws-calendar                          | Web Service stubs and APIs for the calendar subsystem.                                                                                                                                                                                                                                                                                                  |
+| bb-ws-content                           | Web Service stubs and APIs for the content subsystem.                                                                                                                                                                                                                                                                                                   |
+| bb-ws-context                           | Web Service stubs and APIs for the session context subsystem.                                                                                                                                                                                                                                                                                           |
+| bb-ws-course                            | Web Service stubs and APIs for the course subsystem.                                                                                                                                                                                                                                                                                                    |
+| bb-ws-coursemembership                  | Web Service stubs and APIs for the course membership subsystem.                                                                                                                                                                                                                                                                                         |
+| bb-ws-gradebook                         | Web Service stubs and APIs for the gradebook subsystem.                                                                                                                                                                                                                                                                                                 |
+| bb-ws-notificationdistributoroperations | Web Service stubs and APIs for the notification subsystem integration.                                                                                                                                                                                                                                                                                  |
+| bb-ws-user                              | Web Service stubs and APIs for the user subsystem.                                                                                                                                                                                                                                                                                                      |
+| bb-ws-util                              | Web Service stubs and APIs for the some helpful utilities.                                                                                                                                                                                                                                                                                              |
+| bb-manifest-plugin                      | XSD for validating the XML in your bb-manifest.xml file.                                                                                                                                                                                                                                                                                                |
+| bb-schema-xsd                           | XSD for validating the XML in your schema.xml file.                                                                                                                                                                                                                                                                                                     |
+| xsscore                                 | Library supporting bb-bbxythos. Make sure you are using the same version of each file, and do not include in your war file.                                                                                                                                                                                                                             |
