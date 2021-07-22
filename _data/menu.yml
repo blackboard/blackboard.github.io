@@ -719,6 +719,10 @@
       id: blog-home
       submenu_url: /blogs/blog-home
       target: _self
+    - submenu_item: No More Private Keys in Dev Portal
+      id: 20210722-nomoreprivatekeys
+      submenu_url: /announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL
+      target: _self
     - submenu_item: UEF Without Cookies
       id: 20210511-uefnocookies
       submenu_url: /blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html
@@ -726,14 +730,6 @@
     - submenu_item: Create a User With Limited Entitlements for REST
       id: 20210106-howtocreatelimiteduser
       submenu_url: /announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls
-      target: _self
-    - submenu_item: Caliper Documentation Updates
-      id: 20210105-caliperdocupdates
-      submenu_url: /announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1
-      target: _self
-    - submenu_item: SOAP EOL Explained
-      id: 20201216-soapeolexplained
-      submenu_url: /blog/2020/12/16/SOAP-EOL-Explained
       target: _self
     - submenu_item: Cookies and Browsers
       id: 20201015-cookiesandbrowsers

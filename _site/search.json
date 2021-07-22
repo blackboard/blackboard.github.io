@@ -1036,6 +1036,13 @@
             } ,
             
             {
+                "title" : "  No More Private Keys in Dev Portal",
+                "url" :  " /announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
                 "title" : "  UEF Without Cookies",
                 "url" :  " /blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html",
                 "desc" : "",
@@ -1045,20 +1052,6 @@
             {
                 "title" : "  Create a User With Limited Entitlements for REST",
                 "url" :  " /announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls",
-                "desc" : "",
-                "target": ""
-            } ,
-            
-            {
-                "title" : "  Caliper Documentation Updates",
-                "url" :  " /announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1",
-                "desc" : "",
-                "target": ""
-            } ,
-            
-            {
-                "title" : "  SOAP EOL Explained",
-                "url" :  " /blog/2020/12/16/SOAP-EOL-Explained",
                 "desc" : "",
                 "target": ""
             } ,
@@ -1074,6 +1067,12 @@
         
     
     ,
+    
+        {
+            "title" : "LTI 1.3 tools must generate their own keys and JWKS URL",
+            "url" :  "/announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL.html"
+        } 
+        ,
     
         {
             "title" : "Use One-Time Session Token to Authenticate with UEF",
