@@ -51,7 +51,19 @@ Most definitely! The new Blackboard App Catalog confirms our continued investmen
 
 Any Blackboard Partner can submit Apps to the Blackboard App Catalog - join the [Blackboard Partnerships Program](https://www.blackboard.com/partnerships/become-a-partner) to get started!
 
-## 9. What if I have additional questions?
+## 9. What are the various LTI Placement Type(s) available in Learn?
+
+- _**Deep Linking Content Tool:**_ Allows instructors to launch the tool and add content directly from the tool provider.
+- _**Course Content Tool:**_ Allows instructors to add the tool to their course content.
+- _**Course Tool:**_ Appears to instructors in the Course Management section (Original course) and the Books & Tools menu (Ultra course).
+- _**System Tool:**_ Can be opened without accessing a course. Appears in My Institution tab -> Tools menu (Original experience) and Tools base navigation section (Ultra experience).
+- _**Administrator Tool:**_ Allows admins to add the tool to the Tools & Utilities menu on the Admin Panel.
+- _**Ultra Extension:**_ Advanced UEF option
+- _**Proctoring Tool:**_ Proctoring Framework option
+- _**Base Navigation Tool:**_ Advanced UEF option
+- _**Course Navigation Tool:**_ Advanced UEF option
+
+## 10. What if I have additional questions?
 
 Reach out to the [Blackboard App Catalog Team](mailto:appcatalog@blackboard.com?subject=App%20Catalog%20Question) (appcatalog@blackboard.com)
 <br><br>
