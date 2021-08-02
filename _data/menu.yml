@@ -11,6 +11,10 @@
           id: rest-getting-started
           type: menu
           subsubmenu_content:
+            - subsubmenu_content_name: LTI or REST
+              subsubmenu_content_url: /learn/rest/getting-started/lti-or-rest
+              id: learn-rest-gs-lti-or-rest
+              target: _self
             - subsubmenu_content_name: First Steps with Learn REST API
               subsubmenu_content_url: /learn/rest/getting-started/first-steps
               id: learn-rest-gs-first-steps
