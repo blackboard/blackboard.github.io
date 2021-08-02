@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Secure Coding Practices" 
+title: "Secure Coding Practices"
 categories: Learn b2
 id: learn-b2-bp-secure-coding-practices
 author: Scott Hurrey
+status: deprecated
 ---
+
 # Secure Coding Practices
 
 Blackboard takes security seriously and extends that same outlook to
@@ -30,9 +32,8 @@ processing (input validation) as well as prior to display (output validation
 or escaping). This helps ensure system resiliency and prevents security issues
 such as cross-site scripting.
 
-  * Input Validation: When receiving input from the request, always validate and always validate server-side.
-  * Output Validation / Encoding / Escaping: When displaying any input, always ensure it is displayed in the correct context that it will be embedded in.
+- Input Validation: When receiving input from the request, always validate and always validate server-side.
+- Output Validation / Encoding / Escaping: When displaying any input, always ensure it is displayed in the correct context that it will be embedded in.
 
 In addition to input and output validation Learn also affords the ability to
 encrypt data during context passing.
-

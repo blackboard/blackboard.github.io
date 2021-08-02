@@ -1,8 +1,82 @@
-{% include header.html %}
-{% include menu.html %}
-{% include status.html %}
-<main id="maincontent">
-    {{ content }}
+{% include header.html %} {% include menu.html %}
+<main class="homeContent">
+  <div class="home-mainheader">
+      <img
+        src="/assets/img/home-1.png"
+        alt="llustration of a young man sitting in front of a laptop with a cup of coffee"
+        class="home-left"
+      />
+    <div class="home-right">
+      <h1 id="home-title">Developer Documentation</h1>
+      <div class="center-content">
+
+        <img
+          src="/assets/img/home-1.png"
+          alt="llustration of a young man sitting in front of a laptop with a cup of coffee"
+          class="hidden secondImg"
+        />
+
+      <p>
+        Explore the latest Blackboard developer documentation, including
+        tutorials, sample code, articles, and API reference.
+      </p>
+      <div class="input-and-icon">
+        <div id="search-container">
+          <i class="material-icons prefix">search</i>
+          <input id="search-input" class="home-search" type="text" title="Search" placeholder="Search" autocomplete="off" />
+          <ul id="results-container"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="home-secondPart">
+    <h2 class="home-h2">REST APIs</h2>
+    <p>
+      Leverage Blackboard APIs to integrate your application with Learn,
+      Collaborate and Ally.
+    </p>
+    <div class="center-content button-align first-group-buttons">
+      <a
+        class="
+          home-secondary-buttons
+          waves-effect waves-light
+          btn
+          button-align-first
+        "
+        href="https://developer.blackboard.com/portal/displayApi" target="_blank">Discover Learn REST APIs</a
+      >
+      <a class="home-secondary-buttons waves-effect waves-light btn"
+        href="/learn/rest/getting-started/first-steps" target="_self">Get started with our APIs</a
+      >
+    </div>
+    <h2 class="home-h2">LTI</h2>
+    <p>
+      Find out how to turn your application into an LTI-enabled tool for
+      Blackboard Learn.
+    </p>
+    <div class="center-content second-group-buttons">
+      <a
+        class="
+          home-secondary-buttons
+          waves-effect waves-light
+          btn
+          button-align-first
+        "
+        href="/standards/lti/getting-started/getting-started-with-lti" target="_self">Get started with LTI</a
+      >
+      <a class="home-secondary-buttons waves-effect waves-light btn"
+        href="/standards/lti/tutorials/develop-lti-advantage-solution" target="_self">Watch our LTI tutorials</a
+      >
+    </div>
+    <h2 class="home-h2">The latest from our blog:</h2>
+    <ul>
+      {% for post in site.posts limit:5 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </main>
-{% include homethird.html %}
 {% include footer.html %}

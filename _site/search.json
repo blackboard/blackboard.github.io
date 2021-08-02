@@ -1,0 +1,1149 @@
+[
+    
+        
+            
+                    
+                            
+                                {
+                                    "title" : "First Steps with Learn REST API",
+                                    "url" :  "/learn/rest/getting-started/first-steps",
+                                    "desc" : "First Steps with Learn REST API",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Basic Authentication",
+                                    "url" :  "/learn/rest/getting-started/basic-authentication",
+                                    "desc" : "Basic Authentication",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Registry",
+                                    "url" :  "/learn/rest/getting-started/registry",
+                                    "desc" : "Registry",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Releasing your Integration",
+                                    "url" :  "/learn/rest/getting-started/releasing-your-integration",
+                                    "desc" : "Releasing your Integration",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Three-Legged OAuth",
+                                    "url" :  "/learn/rest/getting-started/3lo",
+                                    "desc" : "Three-Legged OAuth",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Learn API",
+                                    "url" :  "/learn/rest/getting-started/api",
+                                    "desc" : "Learn API",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Developer Portal",
+                                    "url" :  "/learn/rest/getting-started/developer-portal",
+                                    "desc" : "Developer Portal",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Framework",
+                                    "url" :  "/learn/rest/getting-started/framework",
+                                    "desc" : "Framework",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Tutorials",
+                                    "url" :  "/learn/rest/getting-started/tutorials",
+                                    "desc" : "Tutorials",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Development Test Site",
+                                    "url" :  "/dvba/developer-ami",
+                                    "desc" : "Development Test Site",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Group, Quotas, Rates",
+                                    "url" :  "/learn/rest/admin/groups-quotas-rates",
+                                    "desc" : "Group, Quotas, Rates",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Production Groups",
+                                    "url" :  "/learn/rest/admin/production-groups",
+                                    "desc" : "Production Groups",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Cloud Registry",
+                                    "url" :  "/learn/rest/admin/cloud-registry",
+                                    "desc" : "Cloud Registry",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Rest and Learn",
+                                    "url" :  "/learn/rest/getting-started/rest-and-learn",
+                                    "desc" : "Rest and Learn",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "C# Demo",
+                                    "url" :  "/learn/rest/examples/csharp-demo",
+                                    "desc" : "C# Demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "cURL attachments demo",
+                                    "url" :  "/learn/rest/examples/curl-attachments-demo",
+                                    "desc" : "cURL attachments demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "cURL demo",
+                                    "url" :  "/learn/rest/examples/curl-demo",
+                                    "desc" : "cURL demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "GoLang demo",
+                                    "url" :  "/learn/rest/examples/golang-demo",
+                                    "desc" : "GoLang demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Java Command Line",
+                                    "url" :  "/learn/rest/examples/java-command-line",
+                                    "desc" : "Java Command Line",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Java Demo",
+                                    "url" :  "/learn/rest/examples/java-demo",
+                                    "desc" : "Java Demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "PHP Demo",
+                                    "url" :  "/learn/rest/examples/php-demo",
+                                    "desc" : "PHP Demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Python Demo",
+                                    "url" :  "/learn/rest/examples/python-demo",
+                                    "desc" : "Python Demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Ruby Demo",
+                                    "url" :  "/learn/rest/examples/ruby-demo",
+                                    "desc" : "Ruby Demo",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Angular Demo (GitHub)",
+                                    "url" :  "https://github.com/blackboard/BBDN-REST-Angular-WithProxy",
+                                    "desc" : "Angular Demo (GitHub)",
+                                    "target": "_blank"
+                                } ,
+                            
+                                {
+                                    "title" : "NodeJS Demo (GitHub)",
+                                    "url" :  "https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node",
+                                    "desc" : "NodeJS Demo (GitHub)",
+                                    "target": "_blank"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "SOAP to REST Mapping",
+                                    "url" :  "/learn/soap/getting-started/soap-to-rest-mapping",
+                                    "desc" : "SOAP to REST Mapping",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "BBML",
+                                    "url" :  "/learn/rest/advanced/bbml",
+                                    "desc" : "BBML",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Content Handler Datatypes",
+                                    "url" :  "/learn/rest/advanced/contenthandler-datatypes",
+                                    "desc" : "Content Handler Datatypes",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Merge and Crosslist Courses",
+                                    "url" :  "/learn/rest/advanced/merge-and-crosslist-courses",
+                                    "desc" : "Merge and Crosslist Courses",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Ultra Assignments",
+                                    "url" :  "/learn/rest/advanced/ultra-assignments",
+                                    "desc" : "Ultra Assignments",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Dynamic Rendering",
+                                    "url" :  "/learn/rest/advanced/dynamic-rendering-with-template-variables",
+                                    "desc" : "Dynamic Rendering",
+                                    "target": "_self"
+                                } 
+                            
+                                
+                        
+                    ,
+                
+                    
+                            
+                                {
+                                    "title" : "First Steps with UEF",
+                                    "url" :  "/learn/uef/getting-started",
+                                    "desc" : "First Steps with UEF",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Security and Tokens on UEF",
+                                    "url" :  "/learn/uef/security-and-tokens",
+                                    "desc" : "Security and Tokens on UEF",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "UEF Documentation",
+                                    "url" :  "/learn/uef/documentation",
+                                    "desc" : "UEF Documentation",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "UEF Tutorials",
+                                    "url" :  "/learn/uef/tutorials",
+                                    "desc" : "UEF Tutorials",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Configuring Learn and UEF",
+                                    "url" :  "/learn/uef/configure-uef",
+                                    "desc" : "Configuring Learn and UEF",
+                                    "target": "_self"
+                                } 
+                            
+                                
+                        
+                    ,
+                
+                    
+                            
+                                {
+                                    "title" : "Introduction to B2S",
+                                    "url" :  "/learn/b2/getting-started/intro",
+                                    "desc" : "Introduction to B2S",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "First Steps with Building blocks",
+                                    "url" :  "/learn/b2/getting-started/first-steps",
+                                    "desc" : "First Steps with Building blocks",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Development life cycle in B2s",
+                                    "url" :  "/learn/b2/getting-started/dev-life-cycle",
+                                    "desc" : "Development life cycle in B2s",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "API Overview for B2s",
+                                    "url" :  "/learn/b2/getting-started/api-overview",
+                                    "desc" : "API Overview for B2s",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "API Documentation on B2s",
+                                    "url" :  "/learn/b2/getting-started/api-documentation",
+                                    "desc" : "API Documentation on B2s",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Starter B2",
+                                    "url" :  "/learn/b2/getting-started/starter-b2",
+                                    "desc" : "Starter B2",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "FAQs on B2s",
+                                    "url" :  "/learn/b2/getting-started/faq",
+                                    "desc" : "FAQs on B2s",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Versioning Rosetta Stone for B2s",
+                                    "url" :  "/learn/b2/getting-started/rosetta-stone",
+                                    "desc" : "Versioning Rosetta Stone for B2s",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Event driven API",
+                                    "url" :  "/learn/b2/advanced/event-driven-api",
+                                    "desc" : "Event driven API",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Java Permissions",
+                                    "url" :  "/learn/b2/advanced/java-permissions",
+                                    "desc" : "Java Permissions",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "First project using gradle and Git",
+                                    "url" :  "/learn/b2/resources/first-project-using-gradle-and-git",
+                                    "desc" : "First project using gradle and Git",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Java 11 FAQs",
+                                    "url" :  "/learn/b2/resources/java11-faq",
+                                    "desc" : "Java 11 FAQs",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Prepare for Java 11",
+                                    "url" :  "/learn/b2/resources/prepare-for-java11",
+                                    "desc" : "Prepare for Java 11",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Preparing for Q2-2016",
+                                    "url" :  "/learn/b2/resources/preparing-for-learn-q2-2016",
+                                    "desc" : "Preparing for Q2-2016",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Moving to SaaS and new Learn versions",
+                                    "url" :  "/learn/b2/resources/preparing-for-saas-and-new-learn-versions",
+                                    "desc" : "Moving to SaaS and new Learn versions",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Enabling remote debugging",
+                                    "url" :  "/learn/b2/resources/enabling-remote-debugging",
+                                    "desc" : "Enabling remote debugging",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Useful Links",
+                                    "url" :  "/learn/b2/resources/useful-links",
+                                    "desc" : "Useful Links",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Scan tool for Learn SaaS",
+                                    "url" :  "/learn/b2/resources/scan-tool-learn-saas",
+                                    "desc" : "Scan tool for Learn SaaS",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Code Quality",
+                                    "url" :  "/learn/b2/best-practices/code-quality",
+                                    "desc" : "Code Quality",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Developing using maven",
+                                    "url" :  "/learn/b2/best-practices/develop-using-maven-repository",
+                                    "desc" : "Developing using maven",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Secure Coding Practices",
+                                    "url" :  "/learn/b2/best-practices/secure-coding-practices",
+                                    "desc" : "Secure Coding Practices",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Security",
+                                    "url" :  "/learn/b2/best-practices/security",
+                                    "desc" : "Security",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Creating database objects",
+                                    "url" :  "/learn/b2/opendb/creating-database-objects",
+                                    "desc" : "Creating database objects",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Intro to OpenDB",
+                                    "url" :  "/learn/b2/opendb/intro-to-opendb",
+                                    "desc" : "Intro to OpenDB",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Schema Definitions",
+                                    "url" :  "/learn/b2/opendb/schema-definitions",
+                                    "desc" : "Schema Definitions",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Schema XML",
+                                    "url" :  "/learn/b2/opendb/schema-xml",
+                                    "desc" : "Schema XML",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Course user and Enrollment data",
+                                    "url" :  "/learn/b2/examples/course-user-and-enrollment-data",
+                                    "desc" : "Course user and Enrollment data",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Schema.XML (GitHub)",
+                                    "url" :  "https://github.com/blackboard/BBDN-schema-sample",
+                                    "desc" : "Schema.XML (GitHub)",
+                                    "target": "_blank"
+                                } ,
+                            
+                                {
+                                    "title" : "Spring in B2s",
+                                    "url" :  "/learn/b2/examples/spring-in-b2s",
+                                    "desc" : "Spring in B2s",
+                                    "target": "_self"
+                                } 
+                            
+                                
+                        
+                    ,
+                
+                    
+                            
+                                {
+                                    "title" : "First Steps with SOAP",
+                                    "url" :  "/learn/soap/getting-started/first-steps",
+                                    "desc" : "First Steps with SOAP",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Introduction to SOAP",
+                                    "url" :  "/learn/soap/getting-started/introduction",
+                                    "desc" : "Introduction to SOAP",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Proxy Tools in SOAP",
+                                    "url" :  "/learn/soap/getting-started/proxy-tools",
+                                    "desc" : "Proxy Tools in SOAP",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "SOAP to REST Mapping",
+                                    "url" :  "/learn/soap/getting-started/soap-to-rest-mapping",
+                                    "desc" : "SOAP to REST Mapping",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Web Services and SOAP",
+                                    "url" :  "/learn/soap/getting-started/web-services",
+                                    "desc" : "Web Services and SOAP",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "About Web Services Sample Code (SOAP)",
+                                    "url" :  "/learn/soap/getting-started/about-web-services-sample-code",
+                                    "desc" : "About Web Services Sample Code (SOAP)",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Build a Sample client using C# (SOAP)",
+                                    "url" :  "/learn/soap/tutorials/build-sample-client-csharp",
+                                    "desc" : "Build a Sample client using C# (SOAP)",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Build a Sample library using C# (SOAP)",
+                                    "url" :  "/learn/soap/tutorials/build-sample-library-csharp",
+                                    "desc" : "Build a Sample library using C# (SOAP)",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Build a Java Client library (SOAP)",
+                                    "url" :  "/learn/soap/tutorials/java-client-library",
+                                    "desc" : "Build a Java Client library (SOAP)",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Course announcements using Python (SOAP)",
+                                    "url" :  "/learn/soap/examples/course-announcements-using-python",
+                                    "desc" : "Course announcements using Python (SOAP)",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Course Membership and role using C# (SOAP)",
+                                    "url" :  "/learn/soap/examples/course-membership-and-role-csharp",
+                                    "desc" : "Course Membership and role using C# (SOAP)",
+                                    "target": "_self"
+                                } 
+                            
+                                
+                        
+                    
+                
+                ,
+        
+    
+        
+            
+            {
+                "title" : "  First Steps with Collaborate",
+                "url" :  " /collaborate/first-steps",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Getting Started with collaborate",
+                "url" :  " /collaborate/getting-started",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Security and Tokens in Collaborate",
+                "url" :  " /collaborate/security-and-tokens",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  API Objects in Collaborate",
+                "url" :  " /collaborate/api-objects",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Collaborate API",
+                "url" :  " /collaborate/api",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Session Definitions in Collaborate",
+                "url" :  " /collaborate/session-definitions",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            ,
+        
+    
+        
+            
+            {
+                "title" : "  Developer AMI",
+                "url" :  " /dvba/developer-ami",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  DVM",
+                "url" :  " /dvba/dvm",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  FAQs on DVBA",
+                "url" :  " /dvba/faq",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  What is DVBA",
+                "url" :  " /dvba/what-is-dvba",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            ,
+        
+    
+        
+            
+            {
+                "title" : "  About the Ally API Documentation",
+                "url" :  " /ally/about-api-documentation",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Getting Started with Ally",
+                "url" :  " /ally/getting-started",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Ally API",
+                "url" :  " /ally/api",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Authorization in Ally",
+                "url" :  " /ally/auth",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Uploading Files in Ally",
+                "url" :  " /ally/uploading-files",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Check Status in Ally",
+                "url" :  " /ally/check-status",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Getting Feedback in Ally",
+                "url" :  " /ally/get-feedback",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Getting Batched Feedback in Ally",
+                "url" :  " /ally/get-batched-feedback",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Feedback Definitions in Ally",
+                "url" :  " /ally/feedback-definitions",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  UI Integration in Ally",
+                "url" :  " /ally/ui-integration",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            ,
+        
+    
+        
+            
+            {
+                "title" : "  Getting involved",
+                "url" :  " /community/getting-involved",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Contact us",
+                "url" :  " /community/contact",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            ,
+        
+    
+        
+            
+            {
+                "title" : "  Bbapp Students launch Schema",
+                "url" :  " /mobile/bbapp-students-launch-schema",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            ,
+        
+    
+        
+            
+                    
+                            
+                                {
+                                    "title" : "Getting Started with Caliper",
+                                    "url" :  "/standards/caliper/getting-started/getting-started-with-caliper",
+                                    "desc" : "Getting Started with Caliper",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Caliper Event Store in Learn",
+                                    "url" :  "/standards/caliper/getting-started/caliper-event-store-for-learn",
+                                    "desc" : "Caliper Event Store in Learn",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Metric Profiles",
+                                    "url" :  "/standards/caliper/getting-started/metric-profiles",
+                                    "desc" : "Metric Profiles",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Event Guide",
+                                    "url" :  "/standards/caliper/events/event-guide",
+                                    "desc" : "Event Guide",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Assessment Events",
+                                    "url" :  "/standards/caliper/events/assessment-events",
+                                    "desc" : "Assessment Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Assignable Events",
+                                    "url" :  "/standards/caliper/events/assignable-events",
+                                    "desc" : "Assignable Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Blog Events",
+                                    "url" :  "/standards/caliper/events/blog-events",
+                                    "desc" : "Blog Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Calculated grade snapshot events",
+                                    "url" :  "/standards/caliper/events/calculated-grade-snapshot-events",
+                                    "desc" : "Calculated grade snapshot events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Course Group Events",
+                                    "url" :  "/standards/caliper/events/course-group-events",
+                                    "desc" : "Course Group Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Content Events",
+                                    "url" :  "/standards/caliper/events/content-events",
+                                    "desc" : "Content Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Forum Events",
+                                    "url" :  "/standards/caliper/events/forum-events",
+                                    "desc" : "Forum Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Grade Events",
+                                    "url" :  "/standards/caliper/events/grade-events",
+                                    "desc" : "Grade Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "LTI Events",
+                                    "url" :  "/standards/caliper/events/lti-events",
+                                    "desc" : "LTI Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Session Events",
+                                    "url" :  "/standards/caliper/events/session-events",
+                                    "desc" : "Session Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "View Events",
+                                    "url" :  "/standards/caliper/events/view-events",
+                                    "desc" : "View Events",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Wiki Events",
+                                    "url" :  "/standards/caliper/events/wiki-events",
+                                    "desc" : "Wiki Events",
+                                    "target": "_self"
+                                } 
+                            
+                                
+                        
+                    ,
+                
+                    
+                            
+                                {
+                                    "title" : "Getting Started with LTI",
+                                    "url" :  "/standards/lti/getting-started/getting-started-with-lti",
+                                    "desc" : "Getting Started with LTI",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Handling OIDC Login",
+                                    "url" :  "/standards/lti/core/oidc-login",
+                                    "desc" : "Handling OIDC Login",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Processing the id_token JWT",
+                                    "url" :  "/standards/lti/core/id-token",
+                                    "desc" : "Processing the id_token JWT",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Deep Linking Sample Json",
+                                    "url" :  "/standards/lti/deep-linking/deep-linking-json",
+                                    "desc" : "Deep Linking Sample Json",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Migrating  from LTI 1.1 to 1.3",
+                                    "url" :  "/standards/lti/migrating/migrating-11",
+                                    "desc" : "Migrating  from LTI 1.1 to 1.3",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Four part Video Tutorial",
+                                    "url" :  "/standards/lti/test-tool/four-part-video-tutorial",
+                                    "desc" : "Four part Video Tutorial",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Develop LTI Advantage Solution",
+                                    "url" :  "/standards/lti/tutorials/develop-lti-advantage-solution",
+                                    "desc" : "Develop LTI Advantage Solution",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "Names and Roles",
+                                    "url" :  "/standards/lti/tutorials/names-and-roles",
+                                    "desc" : "Names and Roles",
+                                    "target": "_self"
+                                } ,
+                            
+                                {
+                                    "title" : "PyLti1p3 Library",
+                                    "url" :  "/standards/lti/tutorials/py-lti-1p3",
+                                    "desc" : "PyLti1p3 Library",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Troubleshooting",
+                                    "url" :  "/standards/lti/troubleshooting/turn-on-all-switches",
+                                    "desc" : "Troubleshooting",
+                                    "target": "_self"
+                                } 
+                            
+                                ,
+                        
+                            
+                                {
+                                    "title" : "Ultra Proctoring Service Integration",
+                                    "url" :  "/standards/lti/ultra-proctoring-service-integration",
+                                    "desc" : "Ultra Proctoring Service Integration",
+                                    "target": "_self"
+                                } 
+                            
+                                
+                        
+                    
+                
+                ,
+        
+    
+        
+            
+            {
+                "title" : "  Become a Partner",
+                "url" :  " /partners/become-a-partner",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Blackboard App catalog FAQ",
+                "url" :  " /partners/blackboard-app-catalog-faq",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            ,
+        
+    
+        
+            
+            {
+                "title" : "  Blog Home",
+                "url" :  " /blogs/blog-home",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  No More Private Keys in Dev Portal",
+                "url" :  " /announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  UEF Without Cookies",
+                "url" :  " /blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Create a User With Limited Entitlements for REST",
+                "url" :  " /announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls",
+                "desc" : "",
+                "target": ""
+            } ,
+            
+            {
+                "title" : "  Cookies and Browsers",
+                "url" :  " /blog/2020/10/15/Cookies-and-Browsers",
+                "desc" : "",
+                "target": ""
+            } 
+            
+            
+        
+    
+    ,
+    
+        {
+            "title" : "LTI 1.3 tools must generate their own keys and JWKS URL",
+            "url" :  "/announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL.html"
+        } 
+        ,
+    
+        {
+            "title" : "Use One-Time Session Token to Authenticate with UEF",
+            "url" :  "/blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html"
+        } 
+        ,
+    
+        {
+            "title" : "How to Create a User With Limited Entitlements For REST API Calls",
+            "url" :  "/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls.html"
+        } 
+        ,
+    
+        {
+            "title" : "Caliper Documentation Updated for 1.1",
+            "url" :  "/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1.html"
+        } 
+        ,
+    
+        {
+            "title" : "SOAP EOL Explained",
+            "url" :  "/blog/2020/12/16/SOAP-EOL-Explained.html"
+        } 
+        ,
+    
+        {
+            "title" : "Cookies and Browsers",
+            "url" :  "/blog/2020/10/15/Cookies-and-Browsers.html"
+        } 
+        ,
+    
+        {
+            "title" : "New! Student Id Template Variable",
+            "url" :  "/announcement/2020/10/07/New-Student-Id-Template-Variable.html"
+        } 
+        ,
+    
+        {
+            "title" : "Oct 2020 - Changes that will impact Learn B2 Integrations",
+            "url" :  "/announcement/2020/10/04/Changes-That-Impact-Learn-B2-Integrations.html"
+        } 
+        ,
+    
+        {
+            "title" : "Ally as a Service and UEF Documentation now available",
+            "url" :  "/announcement/2020/09/03/Ally-as-a-Service-and-UEF-Documentation-now-available.html"
+        } 
+        ,
+    
+        {
+            "title" : "New!! REST and UEF Tutorials",
+            "url" :  "/announcement/2020/08/30/NewRESTandUEF-tutorials.html"
+        } 
+        ,
+    
+        {
+            "title" : "DevCon 2020 - New LTI Advantage Tutorial",
+            "url" :  "/announcement/2020/08/24/DevCon-2020-new-lti-advantage-tutorial.html"
+        } 
+        ,
+    
+        {
+            "title" : "DevCon 2020 By The Numbers",
+            "url" :  "/devcon/2020/08/03/DevCon-2020-by-the-numbers.html"
+        } 
+        ,
+    
+        {
+            "title" : "In Orbit at DevCon 2020",
+            "url" :  "/devcon/2020/07/10/In-Orbit-at-DevCon-2020.html"
+        } 
+        
+    
+]

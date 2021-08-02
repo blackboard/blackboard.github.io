@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Starter Building Block Readme" 
+title: "Starter Building Block Readme"
 categories: Learn b2
 id: learn-b2-gs-starter-b2
 author: Kelley MacEwen
@@ -13,7 +13,7 @@ This is the readme for the Starting Building Block. The Starter Building block
 is available in the [Blackboard maven
 repository](https://bbprepo.blackboard.com/content/repositories/public/blackboard/bbdn/starting-block).
 
->DO NOT INSTALL THE STARTER BLOCK ON A PRODUCTION SYSTEM OR ANY SYSTEM ACCESSIBLE VIA THE PUBLIC INTERNET._ Installing the starting block on a production system presents a security risk.**
+> DO NOT INSTALL THE STARTER BLOCK ON A PRODUCTION SYSTEM OR ANY SYSTEM ACCESSIBLE VIA THE PUBLIC INTERNET.\_ Installing the starting block on a production system presents a security risk.\*\*
 
 ## Introduction
 

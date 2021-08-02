@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="/assets/js/search-script.js" type="text/javascript"></script>
      <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173992978-1"></script>
      <script>
@@ -34,45 +35,50 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageCategory = "#learn-uef-gs-first-steps";
+        var pageId = "learn-uef-gs-first-steps";
+        pageId = "#" + pageId
         $(document).ready(function () {
             
+
             $( "#menu-trigger" ).click(function() {
                 $( ".menu" ).toggle(); 
                 $( ".menu" ).css( "position", "absolute" ); 
             });
              
             new AccordionMenu('.col-menu');
-            var mainContent = $("#maincontent");
-            var mainHeight = mainContent.height();
-            mainHeight += 250;
-            $( ".menu" ).css( "min-height", mainHeight + "px" );
             $( document ).find( "h2" ).css( "border-left-color", "#A234B5" );
 
             
             $( "h2,h3" ).addClass( "section scrollspy" );
             $('.scrollspy').scrollSpy();
             
-            var pageTocStatus = "true";
-               /*
-            if (pageTocStatus === "false") {
-            $( "#maincontent" ).css( "width", "80%" );
-            }
-               */
+
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
-            $('.collapsible').collapsible('open', pageCategory);
+            $('.collapsible').collapsible('open', pageId);
 
-            if( $( "li" ).find( pageCategory ) ){
-                $(pageCategory).addClass("open");
-                $("li" + pageCategory ).css("display","block");
-                $( "li" + pageCategory ).parentsUntil(".col-menu").css( "height","auto" );
-                $(pageCategory).parentsUntil(".col-menu").addClass("open");
-                $( pageCategory ).find( "a" ).css( "border-left-color", "#A234B5" );
-                $( pageCategory ).find( "a" ).css( "maincontentborder-left-style", "solid" );
-                $( pageCategory ).find( "a" ).css( "border-left-width", "6px" );
+            if( $( "li" ).find( pageId ) ){
+                $(pageId).addClass("open");
+                $("li" + pageId ).css("display","block");
+                $( "li" + pageId ).parentsUntil(".col-menu").css( "height","auto" );
+                $(pageId).parentsUntil(".col-menu").addClass("open");
+                $( pageId ).find( "a" ).css( "border-left-color", "#A234B5" );
+                $( pageId ).find( "a" ).css( "maincontentborder-left-style", "solid" );
+                $( pageId ).find( "a" ).css( "border-left-width", "6px" );
             }
+             // This is the index search, I am avoiding to load the whole search.json everywhere
+            if(pageId == "#index"){
+                SimpleJekyllSearch({
+                    searchInput: document.getElementById("search-input"),
+                    resultsContainer: document.getElementById("results-container"),
+                    json: "/search.json",
+                    searchResultTemplate: '<li><a href="{url}" desc="{desc}" target="{target}">{title}</a></li>'
+                });
+            }
+
         });
+
+
     </script>
 
     <!--
@@ -89,15 +95,18 @@
     data-ally-af-style="flag_small"
     src="https://prod.ally.ac/integration/api/ally.ui.js">
     </script>
+    <!-- This is the index search script -->
 </head>
 <body>
 
     <header>
-        <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
-        <span id="dev-docs-span-text">Dev Docs</span>
-        <a href="/search"><i class="material-icons">search</i></a>
-        <a href="/feed.xml"><i class="material-icons">rss_feed</i></a>
-        <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
+      <a href="/">  <img id="bblogoheader" src="/assets/img/bb_logo.png" alt="Blackboard Logo">
+        <span id="dev-docs-span-text">Dev Docs</span> </a>
+        <div class="header-buttons">
+            <a href="/search"><i class="material-icons">search</i></a>
+            <a href="/feed.xml"><i class="material-icons">rss_feed</i></a>
+            <a href="#" id="menu-trigger"><i class="material-icons">menu</i></a>
+        </div>
     </header>
 
 <!---  New menu  -->
@@ -116,7 +125,7 @@
                                     <li class="third-level" id="rest-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First steps</a></li>
+                                            <li class="content" id="learn-rest-gs-first-steps"><a href="/learn/rest/getting-started/first-steps" target="_self" >First Steps with Learn REST API</a></li>
                                             
                                             <li class="content" id="learn-rest-gs-basic-auth"><a href="/learn/rest/getting-started/basic-authentication" target="_self" >Basic Authentication</a></li>
                                             
@@ -126,7 +135,7 @@
                                             
                                             <li class="content" id="learn-rest-gs-3lo"><a href="/learn/rest/getting-started/3lo" target="_self" >Three-Legged OAuth</a></li>
                                             
-                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >API</a></li>
+                                            <li class="content" id="learn-rest-gs-api"><a href="/learn/rest/getting-started/api" target="_self" >Learn API</a></li>
                                             
                                             <li class="content" id="learn-rest-dev-portal"><a href="/learn/rest/getting-started/developer-portal" target="_self" >Developer Portal</a></li>
                                             
@@ -194,6 +203,8 @@
                                             
                                             <li class="content" id="learn-rest-advanced-ultra-assignments"><a href="/learn/rest/advanced/ultra-assignments" target="_self" >Ultra Assignments</a></li>
                                             
+                                            <li class="content" id="learn-rest-advanced-dynamic_rendering"><a href="/learn/rest/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
+                                            
                                         </ul>
                                     </li>
                                 
@@ -206,15 +217,15 @@
                                     <li class="third-level" id="learn-uef-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps</a></li>
+                                            <li class="content" id="learn-uef-gs-first-steps"><a href="/learn/uef/getting-started" target="_self" >First Steps with UEF</a></li>
                                             
-                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens</a></li>
+                                            <li class="content" id="learn-uef-gs-security-and-tokens"><a href="/learn/uef/security-and-tokens" target="_self" >Security and Tokens on UEF</a></li>
                                             
                                             <li class="content" id="learn-uef-gs-documentation"><a href="/learn/uef/documentation" target="_self" >UEF Documentation</a></li>
                                             
                                             <li class="content" id="learn-uef-gs-tutorials"><a href="/learn/uef/tutorials" target="_self" >UEF Tutorials</a></li>
                                             
-                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn</a></li>
+                                            <li class="content" id="learn-uef-gs-configure"><a href="/learn/uef/configure-uef" target="_self" >Configuring Learn and UEF</a></li>
                                             
                                         </ul>
                                     </li>
@@ -228,29 +239,27 @@
                                     <li class="third-level" id="b2-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction</a></li>
+                                            <li class="content" id="learn-b2-gs-intro"><a href="/learn/b2/getting-started/intro" target="_self" >Introduction to B2S</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            <li class="content" id="learn-b2-gs-first-steps"><a href="/learn/b2/getting-started/first-steps" target="_self" >First Steps with Building blocks</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Developent life cycle</a></li>
+                                            <li class="content" id="learn-b2-gs-dev-live-cycle"><a href="/learn/b2/getting-started/dev-life-cycle" target="_self" >Development life cycle in B2s</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview</a></li>
+                                            <li class="content" id="learn-b2-gs-api-over"><a href="/learn/b2/getting-started/api-overview" target="_self" >API Overview for B2s</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation</a></li>
+                                            <li class="content" id="learn-b2-gs-api-doc"><a href="/learn/b2/getting-started/api-documentation" target="_self" >API Documentation on B2s</a></li>
                                             
                                             <li class="content" id="learn-b2-gs-starter-b2"><a href="/learn/b2/getting-started/starter-b2" target="_self" >Starter B2</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs</a></li>
+                                            <li class="content" id="learn-b2-gs-faqs"><a href="/learn/b2/getting-started/faq" target="_self" >FAQs on B2s</a></li>
                                             
-                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone</a></li>
+                                            <li class="content" id="learn-b2-gs-rosetta-stone"><a href="/learn/b2/getting-started/rosetta-stone" target="_self" >Versioning Rosetta Stone for B2s</a></li>
                                             
                                         </ul>
                                     </li>
                                 
                                     <li class="third-level" id="b2-advanced"><a href="">Advanced</a>
                                         <ul>
-                                            
-                                            <li class="content" id="learn-b2-advced-dynamic-render"><a href="/learn/b2/advanced/dynamic-rendering-with-template-variables" target="_self" >Dynamic Rendering</a></li>
                                             
                                             <li class="content" id="learn-b2-advced-event-driven-api"><a href="/learn/b2/advanced/event-driven-api" target="_self" >Event driven API</a></li>
                                             
@@ -330,17 +339,17 @@
                                     <li class="third-level" id="soap-getting-started"><a href="">Getting Started</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps</a></li>
+                                            <li class="content" id="learn-soap-gs-first-steps"><a href="/learn/soap/getting-started/first-steps" target="_self" >First Steps with SOAP</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction</a></li>
+                                            <li class="content" id="learn-soap-gs-intro"><a href="/learn/soap/getting-started/introduction" target="_self" >Introduction to SOAP</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools</a></li>
+                                            <li class="content" id="learn-soap-gs-proxy-tools"><a href="/learn/soap/getting-started/proxy-tools" target="_self" >Proxy Tools in SOAP</a></li>
                                             
                                             <li class="content" id="learn-soap-gs-soap-to-rest"><a href="/learn/soap/getting-started/soap-to-rest-mapping" target="_self" >SOAP to REST Mapping</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services</a></li>
+                                            <li class="content" id="learn-soap-gs-web-services"><a href="/learn/soap/getting-started/web-services" target="_self" >Web Services and SOAP</a></li>
                                             
-                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code</a></li>
+                                            <li class="content" id="learn-soap-gs-about-web-services-sc"><a href="/learn/soap/getting-started/about-web-services-sample-code" target="_self" >About Web Services Sample Code (SOAP)</a></li>
                                             
                                         </ul>
                                     </li>
@@ -348,11 +357,11 @@
                                     <li class="third-level" id="soap-tutorials"><a href="">Tutorials</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C#</a></li>
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-client-c"><a href="/learn/soap/tutorials/build-sample-client-csharp" target="_self" >Build a Sample client using C# (SOAP)</a></li>
                                             
-                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C#</a></li>
+                                            <li class="content" id="learn-soap-tutorials-build-a-sample-library-c"><a href="/learn/soap/tutorials/build-sample-library-csharp" target="_self" >Build a Sample library using C# (SOAP)</a></li>
                                             
-                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library</a></li>
+                                            <li class="content" id="learn-soap-tutorials-build-a-java-client"><a href="/learn/soap/tutorials/java-client-library" target="_self" >Build a Java Client library (SOAP)</a></li>
                                             
                                         </ul>
                                     </li>
@@ -360,9 +369,9 @@
                                     <li class="third-level" id="soap-examples"><a href="">Examples</a>
                                         <ul>
                                             
-                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python</a></li>
+                                            <li class="content" id="learn-soap-examples-course-announcements-py"><a href="/learn/soap/examples/course-announcements-using-python" target="_self" >Course announcements using Python (SOAP)</a></li>
                                             
-                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C#</a></li>
+                                            <li class="content" id="learn-soap-examples-course-membership-and-role-c"><a href="/learn/soap/examples/course-membership-and-role-csharp" target="_self" >Course Membership and role using C# (SOAP)</a></li>
                                             
                                         </ul>
                                     </li>
@@ -377,17 +386,17 @@
                     <ul>
                     
                             
-                            <li class="content" id="collab-api-first-steps" ><a href="/collaborate/first-steps">First Steps</a></li>
+                            <li class="content" id="collab-api-first-steps" ><a href="/collaborate/first-steps">First Steps with Collaborate</a></li>
                             
-                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started</a></li>
+                            <li class="content" id="collab-getting-started" ><a href="/collaborate/getting-started">Getting Started with collaborate</a></li>
                             
-                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens</a></li>
+                            <li class="content" id="collab-security-and-tokens" ><a href="/collaborate/security-and-tokens">Security and Tokens in Collaborate</a></li>
                             
-                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects</a></li>
+                            <li class="content" id="collab-api-objects" ><a href="/collaborate/api-objects">API Objects in Collaborate</a></li>
                             
-                            <li class="content" id="collab-api" ><a href="/collaborate/api">API</a></li>
+                            <li class="content" id="collab-api" ><a href="/collaborate/api">Collaborate API</a></li>
                             
-                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions</a></li>
+                            <li class="content" id="collab-session-definitions" ><a href="/collaborate/session-definitions">Session Definitions in Collaborate</a></li>
                             
                     
                     </ul>
@@ -400,7 +409,7 @@
                             
                             <li class="content" id="DBVA-dvm" ><a href="/dvba/dvm">DVM</a></li>
                             
-                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs</a></li>
+                            <li class="content" id="DBVA-faqs" ><a href="/dvba/faq">FAQs on DVBA</a></li>
                             
                             <li class="content" id="DBVA-what-is-dvba" ><a href="/dvba/what-is-dvba">What is DVBA</a></li>
                             
@@ -411,25 +420,25 @@
                     <ul>
                     
                             
-                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the API Documentation</a></li>
+                            <li class="content" id="ally-about-api-doc" ><a href="/ally/about-api-documentation">About the Ally API Documentation</a></li>
                             
-                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started</a></li>
+                            <li class="content" id="ally-getting-started" ><a href="/ally/getting-started">Getting Started with Ally</a></li>
                             
-                            <li class="content" id="ally-api" ><a href="/ally/api">API</a></li>
+                            <li class="content" id="ally-api" ><a href="/ally/api">Ally API</a></li>
                             
-                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization</a></li>
+                            <li class="content" id="ally-authorization" ><a href="/ally/auth">Authorization in Ally</a></li>
                             
-                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files</a></li>
+                            <li class="content" id="ally-uploading-files" ><a href="/ally/uploading-files">Uploading Files in Ally</a></li>
                             
-                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status</a></li>
+                            <li class="content" id="ally-check-status" ><a href="/ally/check-status">Check Status in Ally</a></li>
                             
-                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback</a></li>
+                            <li class="content" id="ally-getting-feedback" ><a href="/ally/get-feedback">Getting Feedback in Ally</a></li>
                             
-                            <li class="content" id="ally-getting-batched-feedback" ><a href="/ally/get-batched-feedback">Getting Batched Feedback</a></li>
+                            <li class="content" id="ally-getting-batched-feedback" ><a href="/ally/get-batched-feedback">Getting Batched Feedback in Ally</a></li>
                             
-                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions</a></li>
+                            <li class="content" id="ally-api-feedback-def" ><a href="/ally/feedback-definitions">Feedback Definitions in Ally</a></li>
                             
-                            <li class="content" id="ally-ui-integration" ><a href="/ally/ui-integration">UI Integration</a></li>
+                            <li class="content" id="ally-ui-integration" ><a href="/ally/ui-integration">UI Integration in Ally</a></li>
                             
                     
                     </ul>
@@ -532,7 +541,7 @@
                                     <li class="third-level" id="standards-lti-deep-linking"><a href="">LTI Deep Linking 2.0</a>
                                         <ul>
                                             
-                                            <li class="content" id="standards-lti-deep-link-json"><a href="/standards/lti/deep-linking/deep-linking-json" target="_self" >Sample Json</a></li>
+                                            <li class="content" id="standards-lti-deep-link-json"><a href="/standards/lti/deep-linking/deep-linking-json" target="_self" >Deep Linking Sample Json</a></li>
                                             
                                         </ul>
                                     </li>
@@ -573,6 +582,14 @@
                                         </ul>
                                     </li>
                                 
+                                    <li class="third-level" id="standards-lti-proctoring"><a href="">Ultra Proctoring Service Integration</a>
+                                        <ul>
+                                            
+                                            <li class="content" id="standards-lti-proctoring-service"><a href="/standards/lti/ultra-proctoring-service-integration" target="_self" >Ultra Proctoring Service Integration</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                
                                 </ul>
                             </li>
                         
@@ -585,6 +602,8 @@
                             
                             <li class="content" id="partners-become-a-partner" ><a href="/partners/become-a-partner">Become a Partner</a></li>
                             
+                            <li class="content" id="partners-blackboard-app-catalog-faq" ><a href="/partners/blackboard-app-catalog-faq">Blackboard App catalog FAQ</a></li>
+                            
                     
                     </ul>
             
@@ -594,13 +613,11 @@
                             
                             <li class="content" id="blog-home" ><a href="/blogs/blog-home">Blog Home</a></li>
                             
+                            <li class="content" id="20210722-nomoreprivatekeys" ><a href="/announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL">No More Private Keys in Dev Portal</a></li>
+                            
                             <li class="content" id="20210511-uefnocookies" ><a href="/blog/2021/05/10/use-one-time-session-tokens-instead-of-cookies-for-UEF-authentication.html">UEF Without Cookies</a></li>
                             
                             <li class="content" id="20210106-howtocreatelimiteduser" ><a href="/announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls">Create a User With Limited Entitlements for REST</a></li>
-                            
-                            <li class="content" id="20210105-caliperdocupdates" ><a href="/announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1">Caliper Documentation Updates</a></li>
-                            
-                            <li class="content" id="20201216-soapeolexplained" ><a href="/blog/2020/12/16/SOAP-EOL-Explained">SOAP EOL Explained</a></li>
                             
                             <li class="content" id="20201015-cookiesandbrowsers" ><a href="/blog/2020/10/15/Cookies-and-Browsers">Cookies and Browsers</a></li>
                             
@@ -692,26 +709,11 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Blackboard Dev Docs</h5>
-          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
-            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
-            <h5 class="white-text">Community</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
-              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
-              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
-            </ul>
+          <h5 class="white-text">Contact us</h5>
+          <p class="grey-text text-lighten-4">Reach us out at <a href="mailto:developers@blackboard.com?subject=Support from docs">developers@blackboard.com</a> if you have any questions.</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Quick API Access</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
-          </ul>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">REST Terms and Conditions</h5>
+          <h5 class="white-text">Terms and Conditions</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
@@ -721,10 +723,57 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2020 Blackboard, Inc
-      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      <a class="grey-text text-lighten-4 left" target="_blank" href="https://www.blackboard.com">© Blackboard, Inc</a>
       </div>
     </div>
   </footer>
 </body>
+<script>
+
+        // This modifies dynamically the menu height based on the content height
+        let menu = document.getElementsByClassName('menu');
+        const getElementHeight = function(elementName){
+            let element = document.getElementsByTagName(elementName);
+            return element[0].offsetHeight;
+        }  
+
+
+        const updateMenuHeight = function(){
+            let finalSize = getElementHeight('main')
+            finalSize = (finalSize + 200 )+ 'px';
+            return menu[0].style.minHeight = finalSize
+        }
+        
+        window.addEventListener("resize", updateMenuHeight );
+        window.addEventListener("load", updateMenuHeight );
+
+        // Need to resize the whole content when no toc
+        let pageToc = "true";
+        pageToc = pageToc.toLowerCase();
+        const bodyMainContent = document.getElementById('maincontent');
+        const toc = document.getElementById('third-column-menu');
+
+
+        if(bodyMainContent != null){
+        window.addEventListener("resize", function(){
+            if(pageToc == 'false'){
+              if ( toc ){
+                toc.style.display = 'none';
+              }
+                if (window.innerWidth >= 1499 ) {
+                    bodyMainContent.style.width = '76%';
+                    console.log('1499');
+                } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
+                    bodyMainContent.style.width = '70%';
+                    console.log('1250');
+                } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
+                  bodyMainContent.style.width = '63%';
+                } else if (window.innerWidth <= 800 ){
+                  bodyMainContent.style.width = '95%';
+                }
+            }
+        });
+      }
+</script>
+
 </html>

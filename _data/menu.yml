@@ -2,19 +2,20 @@
   main_item_icon: school
   id: learn-group
   type: menu
-  sub_item :
-
+  sub_item:
     - submenu_item: REST
       id: learn-rest
       type: menu
       subsubmenu:
-
         - subsubmenu_item: Getting Started
           id: rest-getting-started
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: First steps
+            - subsubmenu_content_name: LTI or REST
+              subsubmenu_content_url: /learn/rest/getting-started/lti-or-rest
+              id: learn-rest-gs-lti-or-rest
+              target: _self
+            - subsubmenu_content_name: First Steps with Learn REST API
               subsubmenu_content_url: /learn/rest/getting-started/first-steps
               id: learn-rest-gs-first-steps
               target: _self
@@ -34,7 +35,7 @@
               subsubmenu_content_url: /learn/rest/getting-started/3lo
               id: learn-rest-gs-3lo
               target: _self
-            - subsubmenu_content_name: API
+            - subsubmenu_content_name: Learn API
               subsubmenu_content_url: /learn/rest/getting-started/api
               id: learn-rest-gs-api
               target: _self
@@ -67,7 +68,6 @@
           id: rest-admin
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Cloud Registry
               subsubmenu_content_url: /learn/rest/admin/cloud-registry
               id: learn-rest-admin-cloud-registry
@@ -81,7 +81,6 @@
           id: rest-examples
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: C# Demo
               subsubmenu_content_url: /learn/rest/examples/csharp-demo
               id: learn-rest-examples-csharpdemo
@@ -151,22 +150,24 @@
               subsubmenu_content_url: /learn/rest/advanced/ultra-assignments
               id: learn-rest-advanced-ultra-assignments
               target: _self
+            - subsubmenu_content_name: Dynamic Rendering
+              subsubmenu_content_url: /learn/rest/advanced/dynamic-rendering-with-template-variables
+              id: learn-rest-advanced-dynamic_rendering
+              target: _self
 
     - submenu_item: UEF
       id: learn-uef
       type: menu
       subsubmenu:
-
         - subsubmenu_item: Getting Started
           id: learn-uef-getting-started
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: First Steps
+            - subsubmenu_content_name: First Steps with UEF
               subsubmenu_content_url: /learn/uef/getting-started
               id: learn-uef-gs-first-steps
               target: _self
-            - subsubmenu_content_name: Security and Tokens
+            - subsubmenu_content_name: Security and Tokens on UEF
               subsubmenu_content_url: /learn/uef/security-and-tokens
               id: learn-uef-gs-security-and-tokens
               target: _self
@@ -178,7 +179,7 @@
               subsubmenu_content_url: /learn/uef/tutorials
               id: learn-uef-gs-tutorials
               target: _self
-            - subsubmenu_content_name: Configuring Learn
+            - subsubmenu_content_name: Configuring Learn and UEF
               subsubmenu_content_url: /learn/uef/configure-uef
               id: learn-uef-gs-configure
               target: _self
@@ -187,29 +188,27 @@
       id: learn-b2
       type: menu
       subsubmenu:
-
         - subsubmenu_item: Getting Started
           id: b2-getting-started
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: Introduction
+            - subsubmenu_content_name: Introduction to B2S
               subsubmenu_content_url: /learn/b2/getting-started/intro
               id: learn-b2-gs-intro
               target: _self
-            - subsubmenu_content_name: First Steps
+            - subsubmenu_content_name: First Steps with Building blocks
               subsubmenu_content_url: /learn/b2/getting-started/first-steps
               id: learn-b2-gs-first-steps
               target: _self
-            - subsubmenu_content_name: Developent life cycle
+            - subsubmenu_content_name: Development life cycle in B2s
               subsubmenu_content_url: /learn/b2/getting-started/dev-life-cycle
               id: learn-b2-gs-dev-live-cycle
               target: _self
-            - subsubmenu_content_name: API Overview
+            - subsubmenu_content_name: API Overview for B2s
               subsubmenu_content_url: /learn/b2/getting-started/api-overview
               id: learn-b2-gs-api-over
               target: _self
-            - subsubmenu_content_name: API Documentation
+            - subsubmenu_content_name: API Documentation on B2s
               subsubmenu_content_url: /learn/b2/getting-started/api-documentation
               id: learn-b2-gs-api-doc
               target: _self
@@ -217,11 +216,11 @@
               subsubmenu_content_url: /learn/b2/getting-started/starter-b2
               id: learn-b2-gs-starter-b2
               target: _self
-            - subsubmenu_content_name: FAQs
+            - subsubmenu_content_name: FAQs on B2s
               subsubmenu_content_url: /learn/b2/getting-started/faq
               id: learn-b2-gs-faqs
               target: _self
-            - subsubmenu_content_name: Versioning Rosetta Stone
+            - subsubmenu_content_name: Versioning Rosetta Stone for B2s
               subsubmenu_content_url: /learn/b2/getting-started/rosetta-stone
               id: learn-b2-gs-rosetta-stone
               target: _self
@@ -230,11 +229,6 @@
           id: b2-advanced
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: Dynamic Rendering
-              subsubmenu_content_url: /learn/b2/advanced/dynamic-rendering-with-template-variables
-              id: learn-b2-advced-dynamic-render
-              target: _self
             - subsubmenu_content_name: Event driven API
               subsubmenu_content_url: /learn/b2/advanced/event-driven-api
               id: learn-b2-advced-event-driven-api
@@ -248,7 +242,6 @@
           id: b2-resources
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: First project using gradle and Git
               subsubmenu_content_url: /learn/b2/resources/first-project-using-gradle-and-git
               id: learn-b2-resources-first-project-gradle
@@ -281,7 +274,6 @@
               subsubmenu_content_url: /learn/b2/resources/scan-tool-learn-saas
               id: learn-b2-resources-scan-tool
               target: _self
-
 
         - subsubmenu_item: Best Practices
           id: b2-best-practices
@@ -345,21 +337,19 @@
       id: learn-soap
       type: menu
       subsubmenu:
-
         - subsubmenu_item: Getting Started
           id: soap-getting-started
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: First Steps
+            - subsubmenu_content_name: First Steps with SOAP
               subsubmenu_content_url: /learn/soap/getting-started/first-steps
               id: learn-soap-gs-first-steps
               target: _self
-            - subsubmenu_content_name: Introduction
+            - subsubmenu_content_name: Introduction to SOAP
               subsubmenu_content_url: /learn/soap/getting-started/introduction
               id: learn-soap-gs-intro
               target: _self
-            - subsubmenu_content_name: Proxy Tools
+            - subsubmenu_content_name: Proxy Tools in SOAP
               subsubmenu_content_url: /learn/soap/getting-started/proxy-tools
               id: learn-soap-gs-proxy-tools
               target: _self
@@ -367,11 +357,11 @@
               subsubmenu_content_url: /learn/soap/getting-started/soap-to-rest-mapping
               id: learn-soap-gs-soap-to-rest
               target: _self
-            - subsubmenu_content_name: Web Services
+            - subsubmenu_content_name: Web Services and SOAP
               subsubmenu_content_url: /learn/soap/getting-started/web-services
               id: learn-soap-gs-web-services
               target: _self
-            - subsubmenu_content_name: About Web Services Sample Code
+            - subsubmenu_content_name: About Web Services Sample Code (SOAP)
               subsubmenu_content_url: /learn/soap/getting-started/about-web-services-sample-code
               id: learn-soap-gs-about-web-services-sc
               target: _self
@@ -380,16 +370,15 @@
           id: soap-tutorials
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: Build a Sample client using C#
+            - subsubmenu_content_name: Build a Sample client using C# (SOAP)
               subsubmenu_content_url: /learn/soap/tutorials/build-sample-client-csharp
               id: learn-soap-tutorials-build-a-sample-client-c
               target: _self
-            - subsubmenu_content_name: Build a Sample library using C#
+            - subsubmenu_content_name: Build a Sample library using C# (SOAP)
               subsubmenu_content_url: /learn/soap/tutorials/build-sample-library-csharp
               id: learn-soap-tutorials-build-a-sample-library-c
               target: _self
-            - subsubmenu_content_name: Build a Java Client library
+            - subsubmenu_content_name: Build a Java Client library (SOAP)
               subsubmenu_content_url: /learn/soap/tutorials/java-client-library
               id: learn-soap-tutorials-build-a-java-client
               target: _self
@@ -398,12 +387,11 @@
           id: soap-examples
           type: menu
           subsubmenu_content:
-
-            - subsubmenu_content_name: Course announcements using Python
+            - subsubmenu_content_name: Course announcements using Python (SOAP)
               subsubmenu_content_url: /learn/soap/examples/course-announcements-using-python
               id: learn-soap-examples-course-announcements-py
               target: _self
-            - subsubmenu_content_name: Course Membership and role using C#
+            - subsubmenu_content_name: Course Membership and role using C# (SOAP)
               subsubmenu_content_url: /learn/soap/examples/course-membership-and-role-csharp
               id: learn-soap-examples-course-membership-and-role-c
               target: _self
@@ -412,38 +400,37 @@
   id: collab-group
   type: content
   main_item_icon: mic
-  sub_item :
-      - submenu_item: First Steps
-        submenu_url: /collaborate/first-steps
-        id: collab-api-first-steps
-        target: _self
-      - submenu_item: Getting Started
-        submenu_url: /collaborate/getting-started
-        id: collab-getting-started
-        target: _self
-      - submenu_item: Security and Tokens
-        submenu_url: /collaborate/security-and-tokens
-        id: collab-security-and-tokens
-        target: _self
-      - submenu_item: API Objects
-        submenu_url: /collaborate/api-objects
-        id: collab-api-objects
-        target: _self
-      - submenu_item: API
-        submenu_url: /collaborate/api
-        id: collab-api
-        target: _self
-      - submenu_item: Session Definitions
-        submenu_url: /collaborate/session-definitions
-        id: collab-session-definitions
-        target: _self
-
+  sub_item:
+    - submenu_item: First Steps with Collaborate
+      submenu_url: /collaborate/first-steps
+      id: collab-api-first-steps
+      target: _self
+    - submenu_item: Getting Started with collaborate
+      submenu_url: /collaborate/getting-started
+      id: collab-getting-started
+      target: _self
+    - submenu_item: Security and Tokens in Collaborate
+      submenu_url: /collaborate/security-and-tokens
+      id: collab-security-and-tokens
+      target: _self
+    - submenu_item: API Objects in Collaborate
+      submenu_url: /collaborate/api-objects
+      id: collab-api-objects
+      target: _self
+    - submenu_item: Collaborate API
+      submenu_url: /collaborate/api
+      id: collab-api
+      target: _self
+    - submenu_item: Session Definitions in Collaborate
+      submenu_url: /collaborate/session-definitions
+      id: collab-session-definitions
+      target: _self
 
 - main_item: DBVA
   id: dbva-group
   type: content
   main_item_icon: web_asset
-  sub_item :
+  sub_item:
     - submenu_item: Developer AMI
       submenu_url: /dvba/developer-ami
       id: DBVA-dev-ami
@@ -452,7 +439,7 @@
       submenu_url: /dvba/dvm
       id: DBVA-dvm
       target: _self
-    - submenu_item: FAQs
+    - submenu_item: FAQs on DVBA
       submenu_url: /dvba/faq
       id: DBVA-faqs
       target: _self
@@ -465,44 +452,44 @@
   id: ally-group
   type: content
   main_item_icon: picture_as_pdf
-  sub_item :
-    - submenu_item: About the API Documentation
+  sub_item:
+    - submenu_item: About the Ally API Documentation
       submenu_url: /ally/about-api-documentation
       id: ally-about-api-doc
       target: _self
-    - submenu_item: Getting Started
+    - submenu_item: Getting Started with Ally
       submenu_url: /ally/getting-started
       id: ally-getting-started
       target: _self
-    - submenu_item: API
+    - submenu_item: Ally API
       submenu_url: /ally/api
       id: ally-api
       target: _self
-    - submenu_item: Authorization
+    - submenu_item: Authorization in Ally
       submenu_url: /ally/auth
       id: ally-authorization
       target: _self
-    - submenu_item: Uploading Files
+    - submenu_item: Uploading Files in Ally
       submenu_url: /ally/uploading-files
       id: ally-uploading-files
       target: _self
-    - submenu_item: Check Status
+    - submenu_item: Check Status in Ally
       submenu_url: /ally/check-status
       id: ally-check-status
       target: _self
-    - submenu_item: Getting Feedback
+    - submenu_item: Getting Feedback in Ally
       submenu_url: /ally/get-feedback
       id: ally-getting-feedback
       target: _self
-    - submenu_item: Getting Batched Feedback
+    - submenu_item: Getting Batched Feedback in Ally
       submenu_url: /ally/get-batched-feedback
       id: ally-getting-batched-feedback
       target: _self
-    - submenu_item: Feedback Definitions
+    - submenu_item: Feedback Definitions in Ally
       submenu_url: /ally/feedback-definitions
       id: ally-api-feedback-def
       target: _self
-    - submenu_item: UI Integration
+    - submenu_item: UI Integration in Ally
       submenu_url: /ally/ui-integration
       id: ally-ui-integration
       target: _self
@@ -511,7 +498,7 @@
   id: community-group
   type: content
   main_item_icon: assignment_ind
-  sub_item :
+  sub_item:
     - submenu_item: Getting involved
       submenu_url: /community/getting-involved
       id: community-getting-involved
@@ -525,29 +512,25 @@
   id: mobile-group
   type: content
   main_item_icon: phone_iphone
-  sub_item :
+  sub_item:
     - submenu_item: Bbapp Students launch Schema
       submenu_url: /mobile/bbapp-students-launch-schema
       id: mobile-bbapp-students-launch
       target: _self
 
-
 - main_item: Standards
   id: standards-group
   type: menu
   main_item_icon: lightbulb_outline
-  sub_item :
-
+  sub_item:
     - submenu_item: Caliper
       id: standards-caliper
       type: menu
       subsubmenu:
-
         - subsubmenu_item: Getting Started
           id: standards-caliper-getting-started
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Getting Started with Caliper
               subsubmenu_content_url: /standards/caliper/getting-started/getting-started-with-caliper
               id: standards-caliper-gs-getting-started
@@ -565,7 +548,6 @@
           id: standards-caliper-events
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Event Guide
               subsubmenu_content_url: /standards/caliper/events/event-guide
               id: standards-caliper-events-guide
@@ -619,17 +601,14 @@
               id: standards-caliper-events-wikis
               target: _self
 
-
     - submenu_item: LTI
       id: standards-lti
       type: menu
       subsubmenu:
-
         - subsubmenu_item: Getting Started
           id: standards-lti-getting-started
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Getting Started with LTI
               subsubmenu_content_url: /standards/lti/getting-started/getting-started-with-lti
               id: standards-lti-gs-with-lti
@@ -639,7 +618,6 @@
           id: standards-lti-core-launch
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Handling OIDC Login
               subsubmenu_content_url: /standards/lti/core/oidc-login
               id: standards-lti-core-oidc-login
@@ -654,7 +632,6 @@
           id: standards-lti-deep-linking
           type: menu
           subsubmenu_content:
-
             # - subsubmenu_content_name: Handling Request
             #  subsubmenu_content_url: /standards/lti/deeplink/deep-link-request
             #  id: standards-lti-deep-link-request
@@ -665,7 +642,7 @@
             #  id: standards-lti-deep-link-response
             #  target: _self
 
-            - subsubmenu_content_name: Sample Json
+            - subsubmenu_content_name: Deep Linking Sample Json
               subsubmenu_content_url: /standards/lti/deep-linking/deep-linking-json
               id: standards-lti-deep-link-json
               target: _self
@@ -674,7 +651,6 @@
           id: standards-lti-migrating
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Migrating  from LTI 1.1 to 1.3
               subsubmenu_content_url: /standards/lti/migrating/migrating-11
               id: standards-lti-migrating-11
@@ -684,7 +660,6 @@
           id: standards-lti-test-tool
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Four part Video Tutorial
               subsubmenu_content_url: /standards/lti/test-tool/four-part-video-tutorial
               id: standards-lti-testtool-four-part-video
@@ -694,7 +669,6 @@
           id: standards-lti-tutorials
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Develop LTI Advantage Solution
               subsubmenu_content_url: /standards/lti/tutorials/develop-lti-advantage-solution
               id: standards-lti-tutorials-develop-lti-adtge
@@ -712,40 +686,46 @@
           id: standards-lti-trouble
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Troubleshooting
               subsubmenu_content_url: /standards/lti/troubleshooting/turn-on-all-switches
               id: standards-lti-trouble-turn-on-all
               target: _self
-        
+
         - subsubmenu_item: Ultra Proctoring Service Integration
           id: standards-lti-proctoring
           type: menu
           subsubmenu_content:
-
             - subsubmenu_content_name: Ultra Proctoring Service Integration
               subsubmenu_content_url: /standards/lti/ultra-proctoring-service-integration
               id: standards-lti-proctoring-service
               target: _self
-          
+
 - main_item: Partners
   id: partners-group
   type: content
   main_item_icon: thumb_up
-  sub_item :
+  sub_item:
     - submenu_item: Become a Partner
       id: partners-become-a-partner
       submenu_url: /partners/become-a-partner
+      target: _self
+    - submenu_item: Blackboard App catalog FAQ
+      id: partners-blackboard-app-catalog-faq
+      submenu_url: /partners/blackboard-app-catalog-faq
       target: _self
 
 - main_item: Blogs
   id: blogs-group
   type: content
   main_item_icon: chrome_reader_mode
-  sub_item :
+  sub_item:
     - submenu_item: Blog Home
       id: blog-home
       submenu_url: /blogs/blog-home
+      target: _self
+    - submenu_item: No More Private Keys in Dev Portal
+      id: 20210722-nomoreprivatekeys
+      submenu_url: /announcement/2021/07/22/LTI-1.3-tools-must-generate-their-own-keys-and-JWKS-URL
       target: _self
     - submenu_item: UEF Without Cookies
       id: 20210511-uefnocookies
@@ -755,16 +735,7 @@
       id: 20210106-howtocreatelimiteduser
       submenu_url: /announcement/2021/01/06/How-to-Create-a-User-With-Limited-Entitlements-For-REST-API-Calls
       target: _self
-    - submenu_item: Caliper Documentation Updates
-      id: 20210105-caliperdocupdates
-      submenu_url: /announcement/2021/01/05/Caliper-Documentation-Updated-for-1.1
-      target: _self
-    - submenu_item: SOAP EOL Explained
-      id: 20201216-soapeolexplained
-      submenu_url: /blog/2020/12/16/SOAP-EOL-Explained
-      target: _self
     - submenu_item: Cookies and Browsers
       id: 20201015-cookiesandbrowsers
       submenu_url: /blog/2020/10/15/Cookies-and-Browsers
       target: _self
-

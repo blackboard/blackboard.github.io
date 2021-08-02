@@ -3,26 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Blackboard Dev Docs</h5>
-          <p class="grey-text text-lighten-4">We have created this site as a repository for guides, documentation and more for our Blackboard developer 
-            community. Please feel free to reach us out at developers@blackboard.com if you have any questions. Happy Coding!</p>
-            <h5 class="white-text">Community</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" target="_blank"  href="https://community.blackboard.com/home">Be a part of our Community!</a></li>
-              <li><a class="grey-text text-lighten-3" href="/partners/become-a-partner">Become an official Blackboard partner!</a></li>
-              <li><a class="grey-text text-lighten-3" href="/community/getting-involved">Get involved in the community!</a></li>
-            </ul>
+          <h5 class="white-text">Contact us</h5>
+          <p class="grey-text text-lighten-4">Reach us out at <a href="mailto:developers@blackboard.com?subject=Support from docs">developers@blackboard.com</a> if you have any questions.</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Quick API Access</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/learn/rest/api">Blackboard Learn API</a></li>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/collaborate/api">Blackboard Collaborate API</a></li>
-            <li><a class="grey-text text-lighten-3" target="_blank" href="/ally/api">Blackboard Ally API</a></li>
-          </ul>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">REST Terms and Conditions</h5>
+          <h5 class="white-text">Terms and Conditions</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/deprecation-policy">Deprecation Policy</a></li>
             <li><a class="grey-text text-lighten-3" target="_self" href="/legal/terms-and-conditions">Terms and Conditions</a></li>
@@ -32,10 +17,57 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2020 Blackboard, Inc
-      <a class="grey-text text-lighten-4 right" target="_blank" href="https://www.blackboard.com">Blackboard.com</a>
+      <a class="grey-text text-lighten-4 left" target="_blank" href="https://www.blackboard.com">© Blackboard, Inc</a>
       </div>
     </div>
   </footer>
 </body>
+<script>
+
+        // This modifies dynamically the menu height based on the content height
+        let menu = document.getElementsByClassName('menu');
+        const getElementHeight = function(elementName){
+            let element = document.getElementsByTagName(elementName);
+            return element[0].offsetHeight;
+        }  
+
+
+        const updateMenuHeight = function(){
+            let finalSize = getElementHeight('main')
+            finalSize = (finalSize + 200 )+ 'px';
+            return menu[0].style.minHeight = finalSize
+        }
+        
+        window.addEventListener("resize", updateMenuHeight );
+        window.addEventListener("load", updateMenuHeight );
+
+        // Need to resize the whole content when no toc
+        let pageToc = "{{ page.toc }}";
+        pageToc = pageToc.toLowerCase();
+        const bodyMainContent = document.getElementById('maincontent');
+        const toc = document.getElementById('third-column-menu');
+
+
+        if(bodyMainContent != null){
+        window.addEventListener("resize", function(){
+            if(pageToc == 'false'){
+              if ( toc ){
+                toc.style.display = 'none';
+              }
+                if (window.innerWidth >= 1499 ) {
+                    bodyMainContent.style.width = '76%';
+                    console.log('1499');
+                } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
+                    bodyMainContent.style.width = '70%';
+                    console.log('1250');
+                } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
+                  bodyMainContent.style.width = '63%';
+                } else if (window.innerWidth <= 800 ){
+                  bodyMainContent.style.width = '95%';
+                }
+            }
+        });
+      }
+</script>
+
 </html>

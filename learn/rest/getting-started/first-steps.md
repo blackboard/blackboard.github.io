@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Getting Started"
+title: "First Steps with Learn REST API"
 id: learn-rest-gs-first-steps
 categories: Learn REST
 author: Scott Hurrey
 ---
 
-# Getting started with REST
+# First Steps with Learn REST API
 
 Blackboard offers a suite of education technology tools, both software and
 hardware. REST stands for **Re**presentational **S**tate **T**ransfer. It is a
@@ -17,8 +17,8 @@ workflow is more complicated. For more general questions about REST and using
 REST APIs, see any of the numerous tutorials available online. Most commonly
 used resources include:
 
-  * Blackboard's [developer portal](/learn/rest/developer-portal){:target="_blank"}
-  * Blackboard's [Github repos](https://github.com/search?utf8=%E2%9C%93&q=BBDN-REST){:target="_blank"}
+- Blackboard's [developer portal](/learn/rest/developer-portal){:target="\_blank"}
+- Blackboard's [Github repos](https://github.com/search?utf8=%E2%9C%93&q=BBDN-REST){:target="\_blank"}
 
 ## Before You Get Started
 
@@ -27,8 +27,8 @@ other integration for use with Blackboard products like Blackboard Learn and
 Blackboard Collaborate. The most important ones are your accounts with these
 sites:
 
-  * **Blackboard Developer Portal** is where you register applications so they can work with Blackboard products. It's also where you get your own key and secret that you need to authenticate your application with Blackboard products.
-  * **Blackboard Developer Community** is where you learn to develop with Blackboard products, get the latest news, and discuss with other Blackboard integrators.
+- **Blackboard Developer Portal** is where you register applications so they can work with Blackboard products. It's also where you get your own key and secret that you need to authenticate your application with Blackboard products.
+- **Blackboard Developer Community** is where you learn to develop with Blackboard products, get the latest news, and discuss with other Blackboard integrators.
 
 Note that the Developer Portal and Developer Community require separate
 accounts.
@@ -45,9 +45,9 @@ to speak with us. To discuss deploying your application, please contact us at
 authenticate your project with Blackboard applications, you need to be a
 registered Blackboard developer.To register as a Blackboard developer:
 
-  1. Go to [https://developer.blackboard.com/](https://developer.blackboard.com/){:target="_blank"} and select **Sign Up**. Read and agree to the terms and conditions.
-  2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
-  3. Select **Create Account** and you're on your way.
+1. Go to [https://developer.blackboard.com/](https://developer.blackboard.com/){:target="\_blank"} and select **Sign Up**. Read and agree to the terms and conditions.
+2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
+3. Select **Create Account** and you're on your way.
 
 For more information about the Developer Portal please see [this document](registry)
 
@@ -65,11 +65,11 @@ about integrating your project with Blackboard products. You will benefit from
 the community most by joining in.To register in the Blackboard developer
 community:
 
-  1. Go to [Blackboard Developer Community](/learn/rest/developer-portal){:target="_blank"} and select **Register**.
-  2. If your organization is a Blackboard client or partner organization and you have a Behind the Blackboard login, select **Behind the Blackboard Login**. Otherwise, select **Community Site Login**.
-  3. Enter your email address to receive a link via email.
-  4. In your email's inbox, find the email sent by Blackboard. You might have to check your spam or junk folder. The email's subject is something like _Blackboard Community: Email Validation_. Select the link in your email. You will be taken to a registration page.
-  5. In the registration page, complete all the required fields and select **Create Account**.
+1. Go to [Blackboard Developer Community](/learn/rest/developer-portal){:target="\_blank"} and select **Register**.
+2. If your organization is a Blackboard client or partner organization and you have a Behind the Blackboard login, select **Behind the Blackboard Login**. Otherwise, select **Community Site Login**.
+3. Enter your email address to receive a link via email.
+4. In your email's inbox, find the email sent by Blackboard. You might have to check your spam or junk folder. The email's subject is something like _Blackboard Community: Email Validation_. Select the link in your email. You will be taken to a registration page.
+5. In the registration page, complete all the required fields and select **Create Account**.
 
 #### What Blackboard Application Do I Need?
 
@@ -83,27 +83,27 @@ _I want to programmatically..._ _You'll need to..._
 **Add files, text, and the like to Blackboard Learn**
 
 1. [Authenticate with Blackboard Learn](basic-authentication) via REST API
-2. Check out our [Learn REST API reference](/learn/rest/api){:target="_blank"}
+2. Check out our [Learn REST API reference](/learn/rest/api){:target="\_blank"}
 
 **Bulk add users to Blackboard Learn**
 
 1. [Authenticate with Blackboard Learn](basic-authentication) via REST API
-2. Check out our [Learn REST API reference](/learn/rest/api){:target="_blank"}
+2. Check out our [Learn REST API reference](/learn/rest/api){:target="\_blank"}
 
 **Set up video conference sessions**
 
 1. [Authenticate with Blackboard Collaborate](/collaborate/security-and-tokens) via REST API
-2. Check out our [Collaborate REST API reference](/collaborate/api){:target="_blank"}
+2. Check out our [Collaborate REST API reference](/collaborate/api){:target="\_blank"}
 
 **Invite users to video conference sessions**
 
 1. [Authenticate with Blackboard Collaborate](/collaborate/security-and-tokens) via REST API
-2. Check out our [Collaborate REST API reference](/collaborate/api){:target="_blank"}
+2. Check out our [Collaborate REST API reference](/collaborate/api){:target="\_blank"}
 
 **Get a list of users who attended a video conference session**
 
 1. [Authenticate with Blackboard Collaborate](/collaborate/security-and-tokens) via REST API
-2. heck out our [Collaborate REST API reference](/collaborate/api){:target="_blank"}
+2. heck out our [Collaborate REST API reference](/collaborate/api){:target="\_blank"}
 
 #### Get Development Instances of Blackboard Applications
 
@@ -112,11 +112,11 @@ use to build projects that integrate with Blackboard applications. Among
 others, we offer these popular developer instances. Blackboard does not charge
 a fee for entry-level use.
 
-  * [AWS instance of Blackboard Learn](/dvba/developer-ami)  
-While Blackboard does not charge for entry-level use, AWS may charge various
-fees for their services.
+- [AWS instance of Blackboard Learn](/dvba/developer-ami)  
+  While Blackboard does not charge for entry-level use, AWS may charge various
+  fees for their services.
 
-  * [Developer access to Blackboard Collaborate](/collaborate/getting-started)
+- [Developer access to Blackboard Collaborate](/collaborate/getting-started)
 
 For more information about developer versions of Blackboard applications, see [Developer Versions of Blackboard Applications](/dvba/what-is-dvba).
 
@@ -135,17 +135,17 @@ with Learn](basic-authentication).
 
 ### Look at the Learn REST Reference
 
-Check out the [Learn REST API Reference](https://developer.blackboard.com/portal/displayApi/Learn){:target="_blank"}. In particular,look at the range of endpoints available. Check the **Since** version for endpoint that interest you. This version number indicates the version since which the endpoint has been available. This way, you can make sure that your Blackboard server is is able to use it.
+Check out the [Learn REST API Reference](https://developer.blackboard.com/portal/displayApi/Learn){:target="\_blank"}. In particular,look at the range of endpoints available. Check the **Since** version for endpoint that interest you. This version number indicates the version since which the endpoint has been available. This way, you can make sure that your Blackboard server is is able to use it.
 
 ### Authentication/Authorization
 
-Authentication for REST Integrations follows the [OAuth 2.0 RFC Standard](https://tools.ietf.org/html/rfc6749){:target="_blank"}. Essentially,
+Authentication for REST Integrations follows the [OAuth 2.0 RFC Standard](https://tools.ietf.org/html/rfc6749){:target="\_blank"}. Essentially,
 every developer has a unique key and secret associated with each application they create. They make an HTTP Post to the API requesting client_credentials, which returns an authorization token that grants the application access to the Learn REST API for one hour. This token is then passed in subsequent REST calls until such time that the token expires. This can be done either with [Basic Authentication](basic-authentication) or, as of Blackboard Learn 3200.7 in SaaS or Q4 2017 for self- and managed-hosted clients, using [Three-Legged
 OAuth](3lo).
 
 ### Calling Services
 
-Once your application acquires an access token, it only needs to pass that token as a Bearer token in the Authorization header of your API calls. Review the authentication documentation in the above section for an overview, or find more specific details on the available API endpoints and APIs on the Developer Portal's [Swagger API document](https://developer.blackboard.com/portal/displayApi){:target="_blank"}.In its current implementation, Blackboard Learn REST APIs does not support Cross-Origin Resource Sharing (CORS). To learn about this and see an example to workaround this with Angular2, see the blog entitled [Cross-Origin Resource Sharing; or Why I Can't Use AJAX with Learn APIs](https://community.blackboard.com/blogs/4/17){:target="_blank"}.
+Once your application acquires an access token, it only needs to pass that token as a Bearer token in the Authorization header of your API calls. Review the authentication documentation in the above section for an overview, or find more specific details on the available API endpoints and APIs on the Developer Portal's [Swagger API document](https://developer.blackboard.com/portal/displayApi){:target="\_blank"}.In its current implementation, Blackboard Learn REST APIs does not support Cross-Origin Resource Sharing (CORS). To learn about this and see an example to workaround this with Angular2, see the blog entitled [Cross-Origin Resource Sharing; or Why I Can't Use AJAX with Learn APIs](https://community.blackboard.com/blogs/4/17){:target="\_blank"}.
 
 ### Configure an Instance of Learn to Work with Your Application
 
@@ -153,13 +153,14 @@ Once you have registered with the developer portal and built an integration, dep
 
 ### Glossary
 
-| Term | Definition |
-| ---- | ---------- |
-| Application ID | Unique identifier for the application used to integrate with the<br />Blackboard Learn REST Services. Each unique integration should have its own Application. |
-| Application Key | Each application is assigned a unique key. This is used to authorize REST API<br />calls against Blackboard Learn. |
-| Application Secret | Each application is assigned a unique secret. This is used to authorize REST<br />API calls against Blackboard Learn. |
-| Access Token | A token is a unique string representing an implicit authorization granted by<br />an OAuth 2.0 Service Provider. |
-| CRUD | Create, Read, Update, Delete |
+| Term               | Definition                                                                                                                                                     |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Application ID     | Unique identifier for the application used to integrate with the<br />Blackboard Learn REST Services. Each unique integration should have its own Application. |
+| Application Key    | Each application is assigned a unique key. This is used to authorize REST API<br />calls against Blackboard Learn.                                             |
+| Application Secret | Each application is assigned a unique secret. This is used to authorize REST<br />API calls against Blackboard Learn.                                          |
+| Access Token       | A token is a unique string representing an implicit authorization granted by<br />an OAuth 2.0 Service Provider.                                               |
+| CRUD               | Create, Read, Update, Delete                                                                                                                                   |
+
 {: .striped}
 
 #### More Information
@@ -167,5 +168,5 @@ Once you have registered with the developer portal and built an integration, dep
 We will continue to add new examples, tutorials, and code samples, so make
 sure to check these links regularly.
 
-  * [Developer Portal](https://developer.blackboard.com/){: target='_blank'}
-  * [REST Documentation](https://developer.blackboard.com/portal/displayApi){: target='_blank'}
+- [Developer Portal](https://developer.blackboard.com/){: target='\_blank'}
+- [REST Documentation](https://developer.blackboard.com/portal/displayApi){: target='\_blank'}
