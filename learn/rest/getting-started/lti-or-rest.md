@@ -8,8 +8,7 @@ author: Mark Kauffman
 
 # LTI or REST? (CURRENTLY A WORK IN PROGRESS)
 ## Motivation
-We are often asked, "When should I use LTI and when should I use REST?" 
-"What is the difference?" "What can I do with REST that I can't with LTI
+We are often asked questions like, "When should I use LTI and when should I use REST?" "What is the difference?" "What can I do with REST that I can't with LTI
 (or vise-versa)?" In this document we discuss the differences, the similarities,
 and how you can best design your integration with Blackboard Learn using LTI,
 REST, or some combination of both. 
