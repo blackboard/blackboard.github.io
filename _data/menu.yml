@@ -171,6 +171,10 @@
               subsubmenu_content_url: /learn/uef/security-and-tokens
               id: learn-uef-gs-security-and-tokens
               target: _self
+            - subsubmenu_content_name: Migrating an LTI Tool to UEF
+              subsubmenu_content_url: /learn/uef/lti-to-uef-tutorial
+              id: learn-uef-gs-tutorial-lti
+              target: _self
             - subsubmenu_content_name: UEF Documentation
               subsubmenu_content_url: /learn/uef/documentation
               id: learn-uef-gs-documentation
