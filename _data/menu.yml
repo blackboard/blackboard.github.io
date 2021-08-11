@@ -613,6 +613,10 @@
           id: standards-lti-getting-started
           type: menu
           subsubmenu_content:
+            - subsubmenu_content_name: LTI or REST
+              subsubmenu_content_url: /learn/rest/getting-started/lti-or-rest
+              id: learn-rest-gs-lti-or-rest
+              target: _self
             - subsubmenu_content_name: Getting Started with LTI
               subsubmenu_content_url: /standards/lti/getting-started/getting-started-with-lti
               id: standards-lti-gs-with-lti
@@ -702,6 +706,10 @@
             - subsubmenu_content_name: Ultra Proctoring Service Integration
               subsubmenu_content_url: /standards/lti/ultra-proctoring-service-integration
               id: standards-lti-proctoring-service
+              target: _self
+            - subsubmenu_content_name: Tutorials
+              subsubmenu_content_url: /standards/lti/ultra-proctoring-service-tutorials
+              id: standards-lti-proctoring-service-tutorials
               target: _self
 
 - main_item: Partners
