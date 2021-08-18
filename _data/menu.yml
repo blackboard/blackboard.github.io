@@ -503,6 +503,10 @@
   type: content
   main_item_icon: assignment_ind
   sub_item:
+    - submenu_item: Developer Portal
+      submenu_url: /community/dev-portal
+      id: community-dev-portal
+      target: _self
     - submenu_item: Getting involved
       submenu_url: /community/getting-involved
       id: community-getting-involved
