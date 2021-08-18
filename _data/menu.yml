@@ -726,14 +726,14 @@
       submenu_url: /partners/blackboard-app-catalog-faq
       target: _self
 
-- main_item: REST
+- main_item: REST APIs
   id: rest-bb
   type: content
   main_item_icon: api
   sub_item:
     - submenu_item: Premium APIs
       id: premium-apis-info
-      submenu_url: /REST/premium-apis
+      submenu_url: /rest/premium-apis
       target: _self
    
 - main_item: Blogs
