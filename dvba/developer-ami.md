@@ -48,7 +48,7 @@ Before you begin, you must have an Amazon AWS account. If you do not have an AWS
 
 ### Support for Let’s Encrypt SSL Certificates
 
-Starting with version 3300.6.0 the Learn for REST and LTI Developers AMI supports free Let’s Encrypt SSL Certificates. At this time we do not support alternative SSL certificate processes.
+Starting with version 3300.6.0 the Learn for REST and LTI Developers AMI supports free Let’s Encrypt SSL Certificates. At this time we do not support alternative SSL certificate processes. Here's a [video walkthrough](https://youtu.be/eQu7Ii923DU) of setting up with Let's Encrypt.
 
 **NOTE:** Per the Let’s Encrypt FAQ certificates are valid for only 90 days. In order to update your Let’s Encrypt certificate you must perform a server reboot per below instructions.
 
@@ -84,6 +84,8 @@ $ sudo reboot now
 **Warning:** When you stop and start an existing EC2 instance, AWS resets the public domain name and IP - you must update your DNS entry to reflect the new IP.
 
 **Warning:** Let’s Encrypt has a limit of 20 certificate requests on a domain per week. Repeated stop and starts of an AMI using the same domain may exceed the Let’s Encrypt request limit, requiring you to provide a new domain name. **
+
+**Warning:** Timing is important. If you attempt to access your EC2 before the Let's Encrypt cert installation is complete you will need to rebuild. If you are having issues, [watch this video walkthrough](https://youtu.be/eQu7Ii923DU) of settup and getting a Let's Encrypt certificate working.
 
 #### What does the Blackboard REST and LTI Developer AMI cost?
 
