@@ -70,7 +70,7 @@ The LTI 1.3 spec defines the information you must provide to a Platform (LMS) su
 The LTI spec supports the notion of custom parameters with a launch. These are arbitrary `name=value` tuples that you can provide to uniquely identify the launch, or any other piece of information you need from the platform at launch time. See the following two documents on how to use substitution parameters within custom parameters to receive context-specific data on an LTI launch:  
 
 [IMS LTI 1.3 Parameter Substitution](https://www.imsglobal.org/spec/lti/v1p3/#customproperty)  
-[Blackboard Learn Template Variables](https://docs.blackboard.com/learn/b2/advanced/dynamic-rendering-with-template-variables.html)
+[Blackboard Learn Template Variables](https://docs.blackboard.com/learn/rest/advanced/dynamic-rendering-with-template-variables.html)
 	
 #### Information you Receive
 Once you have registered your application with the Blackboard Developer Portal, you will receive [almost] all the information you need to configuration your application to receive LTI 1.3 launches from a Blackboard Learn instance.  
