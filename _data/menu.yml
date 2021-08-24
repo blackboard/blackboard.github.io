@@ -76,6 +76,10 @@
               subsubmenu_content_url: /learn/rest/getting-started/rest-and-learn
               id: learn-rest-gs-rest-and-learn
               target: _self
+            - subsubmenu_content_name: Rest 3LO and Learn SSO
+              subsubmenu_content_url: /learn/rest/getting-started/rest3LO-and-learnSSO
+              id: learn-rest-gs-rest3LO-and-learnSSO
+              target: _self
 
         - subsubmenu_item: Examples
           id: rest-examples
