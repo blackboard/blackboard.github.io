@@ -5,7 +5,7 @@ id: learn-rest-gs-rest3LO-and-learnSSO
 categories: Learn REST
 author: Mark Kauffman
 ---
-# REST Integrations 3-Legged OAuth and Learn Custom Loign Pagges For System Administrators
+# REST Integrations 3-Legged OAuth and Learn Custom Login Pages For System Administrators
 
 #### Your Custom Login Page and REST 3-Legged OAuth 
 This article is to help Learn administrators ensure that a custom SSO login page works with REST 3LO applications. Several clients have reported that when trying to complete the following workflow with a 3rd-party REST Application their users get stuck on the Learn landing page. Expected 3-legged authentication workflow:
