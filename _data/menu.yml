@@ -433,6 +433,10 @@
       submenu_url: /collaborate/session-definitions
       id: collab-session-definitions
       target: _self
+    - submenu_item: Sessions with REST that show in Scheduler
+      submenu_url: /collaborate/creating-sessions-with-rest
+      id: collab-api-session_with_rest_scheduler
+      target: _self
 
 - main_item: DBVA
   id: dbva-group
