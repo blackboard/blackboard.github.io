@@ -30,7 +30,7 @@ Please make sure that your integration between Blackboard Learn and Blackboard C
 
 Want to view the Learn api? [You may find it here](/learn/rest/getting-started/api)
 
-#### Step 1: Create a course, on Blackboard Learn
+### Step 1: Create a course, on Blackboard Learn
 
 This can be done using Blackboard Learn REST API (You cannot perform POST on browser [without a correct configuration](/learn/rest/getting-started/registry)), but it is also valid if it is created using the GUI, if you are unfamiliar on how to create a course using the GUI, please [review this link](https://help.blackboard.com/Learn/Administrator/SaaS/Courses)
 
