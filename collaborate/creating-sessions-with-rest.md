@@ -21,7 +21,7 @@ We will view the steps to perform this and enable you, the developer on doing th
 > When requesting production credentials, please make sure to ask for the same credentials on your Production b2, this is VERY important, our collaborate team when described on the case as "REST API credentials" they provide different credentials than the ones used on the LTI integration.
 
 2.  I am using POSTMAN but you can use any programming language that is ready for you to query
-3.  (**Optional**) Learn REST API integration credentials ** are not a must** since you should be able to use our API to query the information directly from your browser.
+3.  (**Optional**) Learn REST API integration credentials **are NOT a must** since you should be able to use our API to query the information directly from your browser, however if you want to do this automatically, you need them.
 4.  If you are like me and you are testing everything in POSTMAN then a notepad (I use Sublime 😬) would be helpful
 
 ## Start with Blackboard Learn
