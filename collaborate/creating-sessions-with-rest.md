@@ -14,7 +14,7 @@ The main issue is: "What if I need to create sessions using REST API but I need 
 
 We will view the steps to perform this and enable you, the developer on doing this as fast and easy as possible.
 
-### What do you need?
+## What do you need?
 
 1.  Collaborate PRODUCTION LTI credentials (The SAME that are configured on your collaborate building block in your production environment, unfortunately techpreview does not have access to a visual scheduler) if you need access to your credentials, please [review this link](https://help.blackboard.com/Collaborate/Ultra/Administrator/Integrations/Collaborate_in_Blackboard_Learn_SaaS#get-your-credentials_OTP-1)
 
@@ -24,7 +24,7 @@ We will view the steps to perform this and enable you, the developer on doing th
 3.  (**Optional**) Learn REST API integration credentials ** are not a must** since you should be able to use our API to query the information directly from your browser.
 4.  If you are like me and you are testing everything in POSTMAN then a notepad (I use Sublime 😬) would be helpful
 
-### Start with Blackboard Learn
+## Start with Blackboard Learn
 
 Please make sure that your integration between Blackboard Learn and Blackboard Collaborate are correct, you can review [this link](https://help.blackboard.com/Collaborate/Ultra/Administrator/Integrations/Collaborate_in_Blackboard_Learn_SaaS#configure-the-blackboard-collaborate-ultra-building-block_OTP-2) to make sure they are correct, make sure to test your connection and it returns a successful message.
 
@@ -73,7 +73,7 @@ Learn Server responds with 200:
         }
 ```
 
-#### Step 2: Let's create a user
+### Step 2: Let's create a user
 
 The user can be created also on the Blackboard Learn GUI, when querying the API for the information it should return a message like this, this user can also be created using our Learn API.
 
@@ -110,7 +110,7 @@ The user can be created also on the Blackboard Learn GUI, when querying the API 
         },
 ```
 
-#### Step 3: Make the user an instructor in the course
+### Step 3: Make the user an instructor in the course
 
 You need to enroll the user that was created on the course that we just created.
 
@@ -148,7 +148,7 @@ we have:
 2.  Created a User
 3.  Enrolled the user in the course
 
-### Let's now move on to Collaborate API
+## Let's now move on to Collaborate API
 
 Now we need to perform several steps:
 
@@ -161,7 +161,7 @@ Now we need to perform several steps:
 
 Want to view the collaborate api? [You may find it here](/collaborate/api)
 
-#### Step 1: Create a Context on Collaborate REST API
+### Step 1: Create a Context on Collaborate REST API
 
 What is a context? Well, it is more like a container, it is not a course BUT it can be a course, organization, etc. A context is just a way to group information.
 
@@ -208,7 +208,7 @@ Once you have sent the request, if everything is correct it should return 200 an
 }
 ```
 
-#### Step 2: Creating a user in Collaborate
+### Step 2: Creating a user in Collaborate
 
 Collaborate users are an interesting bit, those are users expected to be part of a session with a specific role, but they do not have any type of role within an admin scheduler, the user needs to be created in order to know who can _view_ the sessions and manage them.
 
@@ -277,7 +277,7 @@ If the request was correct, it may return 200:
 }
 ```
 
-#### Step 3: Creating a session
+### Step 3: Creating a session
 
 A session is pretty straight forward with the API, you may [review this link](/collaborate/session-definitions) for more information
 
@@ -382,7 +382,7 @@ Once this was sent, this is the response when 200 is the message:
 }
 ```
 
-#### Step 4: Relate the session to the context
+### Step 4: Relate the session to the context
 
 This method returns 200 ONLY if the request was correct, it does not return anything else.
 
@@ -542,7 +542,7 @@ When the request is correct, it returns 200 and a url:
 }
 ```
 
-#### Step 6: Checking Learn
+### Step 6: Checking Learn
 
 When all of the steps are correctly done, the session should be displayed on the user's specific course when going to Course tools > Blackboard collaborate ultra.
 
