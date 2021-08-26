@@ -27,6 +27,10 @@
               subsubmenu_content_url: /learn/rest/getting-started/registry
               id: learn-rest-gs-registry
               target: _self
+            - subsubmenu_content_name: Managing Entitlements
+              subsubmenu_content_url: /learn/rest/getting-started/bookmarklet
+              id: learn-rest-gs-entitlements
+              target: _self
             - subsubmenu_content_name: Releasing your Integration
               subsubmenu_content_url: /learn/rest/getting-started/releasing-your-integration
               id: learn-rest-gs-releasing-integration

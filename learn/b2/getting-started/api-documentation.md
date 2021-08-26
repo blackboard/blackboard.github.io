@@ -14,10 +14,10 @@ with each release of Blackboard Learn SaaS to test, to facilitate better
 readiness for SaaS releases to go to production. In order to accomplish this,
 we are automating this process and pushing to the public maven repository:
 
-- [Javadocs](https://bbprepo.blackboard.com/content/repositories/public/bbdn/javadocs/)
-- [Jdiff](https://bbprepo.blackboard.com/content/repositories/public/bbdn/jdiff/)
-- [Taglibs](https://bbprepo.blackboard.com/content/repositories/public/bbdn/taglibs/)
-- [OpenDb](https://bbprepo.blackboard.com/content/repositories/public/bbdn/schema/)
+- [Javadocs](https://bbprepo.blackboard.com/service/rest/repository/browse/public/bbdn/javadocs/)
+- [Jdiff](https://bbprepo.blackboard.com/service/rest/repository/browse/public/bbdn/jdiff/)
+- [Taglibs](https://bbprepo.blackboard.com/service/rest/repository/browse/public/bbdn/taglibs/)
+- [OpenDb](https://bbprepo.blackboard.com/service/rest/repository/browse/public/bbdn/schema/)
 
 Simply navigate to the link and select your version.
 
