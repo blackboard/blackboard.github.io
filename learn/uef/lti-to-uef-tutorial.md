@@ -53,7 +53,9 @@ We will need a way to host our UEF integration on our desktop so we don't have t
 
 ### Step 2: Register your LTI Application in the Developer Portal
 
-The next step is to register our application. Notice that we don't have any code yet. But we do know what our endpoints will be, and the developer portal doesn't really care about your code. It is simply a centralized repository that allows you to register your application once and deploy to any Learn instance. We are the only LMS that provides this centralized registration process.
+The next step is to register our application. Notice that we don't have any code yet. But we do know what our endpoints will be, and the developer portal doesn't really care about your code. It is simply a centralized repository that allows you to register your application once and deploy to any Learn instance. We are the only LMS that provides this centralized registration process. 
+
+> At 2:07 of the video there is discussion of not entering a JWKS URL, leaving that field blank, and having Learn generate a private key for you. The developer portal will no longer allow that. You will need to enter a JWKS URL of ```https:<yourfqdn>/jwks/``` You will need to generate your own public.key and private.key file for your tool's use.
 
 <iframe width="361" height="268" src="https://www.youtube.com/embed/E4PDgQxE5Tg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -68,7 +70,7 @@ The next step is to register our application. Notice that we don't have any code
 9. Leave the group as is
 10. For the Login Initiation URL, enter `https://uef.ngrok.io/login/`. Note the trailing slash. This is required by Flask.
 11. For the Tool Redirect URL, enter `https://uef.ngrok.io/launch/`. Note the trailing slash. This is required by Flask.
-12. Leave the Tool JWKS URL field blank
+12. For the Tool JWKS URL, enter `https://uef.ngrok.io/jwks/`. This is a required update from what is shown in the video.
 13. Leave the signing algorithm as is
 14. Click 'Register application and generate API Key'
 
@@ -93,9 +95,13 @@ The next step is to clone the repository. You do not need a github account for t
 11. In the app directory, there is a file called `lti-template.json`. Copy this file and paste it into the app directory. Rename it to `lti.json`. This **IS** case-sensitive.
 12. Replace both instances of clientId with your application ID.
 13. Save the file.
-14. In the app directory, create a new file called `private.key`. This **IS** case-sensitive.
-15. Paste the private key from the developer portal.
-16. Create a directory outside of your project, and copy these three files and paste them there to prevent accidental loss of these files so you don't have to recreate them later.
+14. In the app directory, generate files called `private.key` and `public.key`. These **ARE** case-sensitive.
+Example: On an *NIX* system with openssl installed do the following.
+```
+openssl genrsa -out private.key 2048
+openssl rsa -in private.key -pubout -out public.key
+```
+16. Create a directory outside of your project, and copy these four files, Config.py, lti.json, public.key and private.key, and paste them there to prevent accidental loss of these files so you don't have to recreate them later.
 
 ### Step 4: Configure your Learn environment
 
