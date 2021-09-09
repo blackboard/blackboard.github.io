@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blackboard App Catalog - FAQ"
-id: partners-blackboard-app-catalog-faq
+id: partners-blackboard_app_catalog_faq
 categories: Learn App-Catalog
 author: Darek Sady
 redirect_from:

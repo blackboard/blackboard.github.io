@@ -68,6 +68,15 @@
             }
         });
       }
+    // This avoids page 404 to update the submenus when 404 is not part of the menu. This is not mandatory but I hate having errors in the console ¯\_(ツ)_/¯
+    const jsPageId = pageId.substring(1);
+    if(jsPageId == "404-notFound"){
+
+    }else{
+    const currentElement = document.getElementById(jsPageId);
+    const listOfLinks = currentElement.parentElement.parentElement.getElementsByTagName("a");
+    listOfLinks.item(0).style.fontWeight = "bold";
+  }
 </script>
 
 </html>

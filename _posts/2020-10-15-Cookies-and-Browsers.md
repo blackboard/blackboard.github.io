@@ -3,9 +3,9 @@ layout: blog
 title: Cookies and Browsers
 date: 2020-10-15 12:00
 category: blog
-id: 20201015-cookiesandbrowsers
+post_id: 20201015-cookiesandbrowsers
 author: Eric Preston
-tags: ['lti', 'learn', 'api']
+tags: ["lti", "learn", "api"]
 toc: false
 summary: Most people like cookies. Internet browsers used to like cookies, but a lot has changed in the last few years.
 ---
@@ -24,5 +24,5 @@ Rather than detail all the scenarios and work arounds here I link to two web pag
 
 The TL;DR is if you must set a cookie in your web application, be careful how you configure that cookie’s properties, and understand that at least in Safari, your cookies may not get passed back to you. The other browser makers are going to get as restrictive as Safari soon.
 
-* [Samesite Cookies Explained](https://web.dev/samesite-cookies-explained/)
-* [Samesite Cookie Recipes](https://web.dev/samesite-cookie-recipes/)
+- [Samesite Cookies Explained](https://web.dev/samesite-cookies-explained/)
+- [Samesite Cookie Recipes](https://web.dev/samesite-cookie-recipes/)

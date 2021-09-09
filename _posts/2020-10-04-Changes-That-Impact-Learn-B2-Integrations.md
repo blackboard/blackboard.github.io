@@ -3,9 +3,9 @@ layout: blog
 title: Oct 2020 - Changes that will impact Learn B2 Integrations
 date: 2020-10-04 08:40
 category: announcement
-id: 20201004-changesthatimpactlearnb2
+post_id: 20201004-changesthatimpactlearnb2
 author: Mark Kauffman
-tags: ['building-blocks','update']
+tags: ["building-blocks", "update"]
 summary: Read more to learn about important changes coming for Building Block Developers.
 ---
 
