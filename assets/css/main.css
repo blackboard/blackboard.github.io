@@ -1119,13 +1119,30 @@ a.purple-text:hover {
   text-decoration-color: #000;
 }
 
+/* 404 Page */
+.homeContent404{
+  width: 75%;
+  text-align: center;
+  float: left;
+}
+.homeContent404 p{
+  text-align: center !important;
+  font-size: 23px;
+}
+
+.homeContent404 h1{
+  margin-top: 50px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
 /* MOBILE */
 
 @media only screen and (max-width: 1499px) {
   #maincontent {
     width: 60%;
   }
-  .homeContent {
+  .homeContent, .homeContent404 {
     width: 70%;
   }
   .secondImg {
@@ -1137,7 +1154,7 @@ a.purple-text:hover {
 }
 
 @media only screen and (max-width: 1250px) {
-  #maincontent .homeContent {
+  #maincontent, .homeContent, .homeContent404 {
     width: 55%;
   }
 
@@ -1151,7 +1168,7 @@ a.purple-text:hover {
 }
 
 @media only screen and (max-width: 1100px) {
-  #maincontent .homeContent {
+  #maincontent, .homeContent, .homeContent404{
     width: 70%;
   }
 
@@ -1164,7 +1181,7 @@ a.purple-text:hover {
 }
 
 @media only screen and (max-width: 985px) {
-  #maincontent {
+  #maincontent, .homeContent404{
     width: 62%;
   }
   .center-content {
@@ -1209,10 +1226,10 @@ a.purple-text:hover {
     display: none;
   }
 
-  #maincontent {
+  #maincontent  {
     width: 94%;
   }
-  .homeContent {
+  .homeContent,.homeContent404 {
     width: 100%;
   }
   #third-column-menu {

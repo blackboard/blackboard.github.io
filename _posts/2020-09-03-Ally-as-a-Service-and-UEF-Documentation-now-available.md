@@ -3,11 +3,12 @@ layout: blog
 title: Ally as a Service and UEF Documentation now available
 date: 2020-09-03 12:40
 category: announcement
-id: 20200903-allyasaserviceanduefdocs
+post_id: 20200903-allyasaserviceanduefdocs
 author: Scott Hurrey
-tags: ['rest', 'ally', 'learn', 'ultra', 'uef']
+tags: ["rest", "ally", "learn", "ultra", "uef"]
 summary: Today we launched two new sections of developer documentation - Ally as a Service (AaaS) and the Ultra Extension Framework (UEF).
 ---
+
 # Ally as a Service and UEF Documentation now available
 
 Today we launched two new sections of developer documentation - [Ally as a Service](/ally/getting-started) (AaaS) and the [Learn Ultra Extension Framework](/learn/uef/getting-started) (UEF). These new APIs give you access to integration points and functionality that allows you to bring the power of Blackboard into your applications, and ultimately, your user's experience.

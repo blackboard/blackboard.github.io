@@ -43,6 +43,9 @@
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
         var pageId = "{{ page.id }}";
+        if (!pageId || pageId.includes('/')){
+            pageId = "{{ page.post_id }}"
+        }
         pageId = "#" + pageId
         $(document).ready(function () {
             
@@ -62,7 +65,7 @@
 
             $('.sidenav').sidenav();
             $('.collapsible').collapsible();
-            $('.collapsible').collapsible('open', pageId);
+            // $('.collapsible').collapsible('open', pageId);
 
             if( $( "li" ).find( pageId ) ){
                 $(pageId).addClass("open");
@@ -74,7 +77,7 @@
                 $( pageId ).find( "a" ).css( "border-left-width", "6px" );
             }
              // This is the index search, I am avoiding to load the whole search.json everywhere
-            if(pageId == "#index"){
+            if(pageId == "#index" || pageId == "#404-notFound"){
                 SimpleJekyllSearch({
                     searchInput: document.getElementById("search-input"),
                     resultsContainer: document.getElementById("results-container"),
@@ -84,8 +87,6 @@
             }
 
         });
-
-
     </script>
 
     <!--
