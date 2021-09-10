@@ -52,7 +52,7 @@ We will group these concepts on 3 parts:
 
 Here you will find a couple of terms that may be kind of confusing, but we will try to explain them as easy as possible:
 
-We use **Sessions**, this is defined correctly [on this post](/collaborate/api-objects), however, there is another term, and this is **Instances**.
+We use **Sessions**, this is defined correctly [on this post](/rest-apis/collaborate/api-objects), however, there is another term, and this is **Instances**.
 
 A Session can have multiple instances, a Session can exist without an instance, but there are no instances without a session, meaning Instances depend on Sessions to exist.
 

@@ -14,17 +14,17 @@ To get started, the first thing you need is a client ID, key, and secret. At thi
 
 Once you have your key and secret, the first step in any REST integration framework is typically to learn how to authenticate and authorize your application. Ally as a Service uses JSON Web Tokens (JWT) in order to generate a token, which is then used as a Bearer token in the Authorization header of each request.
 
-Click here to learn more about [authorization and authentication](auth) for Ally as a Service.
+Click here to learn more about [authorization and authentication](/rest-apis/ally/auth) for Ally as a Service.
 
 There are a number of ways to test out the API. The easiest is to use the [Ally as a Service API documentation](api). You can enter your client ID and your secret, and then interact with the available API directly from the documentation.
 
-Click here to learn more about [using the API documentation](about-api-documentation) in this way.
+Click here to learn more about [using the API documentation](/rest-apis/ally/about-api-documentation) in this way.
 
 Here are the operations currently available in the API (each page has a sample cURL command at the bottom):
 
-- [Upload a file to Ally](uploading-files)
-- [Check the processing status for a file](check-status)
-- [Retrieve the feedback for the file](get-feedback)
+- [Upload a file to Ally](/rest-apis/ally/uploading-files)
+- [Check the processing status for a file](/rest-apis/ally/check-status)
+- [Retrieve the feedback for the file](/rest-apis/ally/get-feedback)
 
 This list is ever growing, so be sure to check back often to get the latest list of functionality available.
 

@@ -28,13 +28,13 @@ We will view the steps to perform this and enable you, the developer on doing th
 
 Please make sure that your integration between Blackboard Learn and Blackboard Collaborate are correct, you can review [this link](https://help.blackboard.com/Collaborate/Ultra/Administrator/Integrations/Collaborate_in_Blackboard_Learn_SaaS#configure-the-blackboard-collaborate-ultra-building-block_OTP-2) to make sure they are correct, make sure to test your connection and it returns a successful message.
 
-Want to view the Learn api? [You may find it here](/learn/rest/getting-started/api)
+Want to view the Learn api? [You may find it here](/rest-apis/learn/getting-started/api)
 
 ### Step 1: Create a course, on Blackboard Learn
 
-This can be done using Blackboard Learn REST API (You cannot perform POST on browser [without a correct configuration](/learn/rest/getting-started/registry)), but it is also valid if it is created using the GUI, if you are unfamiliar on how to create a course using the GUI, please [review this link](https://help.blackboard.com/Learn/Administrator/SaaS/Courses)
+This can be done using Blackboard Learn REST API (You cannot perform POST on browser [without a correct configuration](/rest-apis/learn/getting-started/registry)), but it is also valid if it is created using the GUI, if you are unfamiliar on how to create a course using the GUI, please [review this link](https://help.blackboard.com/Learn/Administrator/SaaS/Courses)
 
-> The URLs used here is just an example and not a public instance, it may be decommissioned at any time without any notice. If you need an instance to play around with our API please review [this link](/dvba/developer-ami)
+> The URLs used here is just an example and not a public instance, it may be decommissioned at any time without any notice. If you need an instance to play around with our API please review [this link](/rest-apis/learn/sandbox/developer-ami)
 
 I already created my course and called it "CourseTest2" and performed a GET call on Learn to get the information about that specific course (Are you new to Learn REST API? Please review [this documentation](https://docs.blackboard.com/learn/rest/getting-started/first-steps))
 
@@ -159,7 +159,7 @@ Now we need to perform several steps:
 5.  Generate the URL
 6.  Check Learn
 
-Want to view the collaborate api? [You may find it here](/collaborate/api)
+Want to view the collaborate api? [You may find it here](/rest-apis/collaborate/api)
 
 ### Step 1: Create a Context on Collaborate REST API
 
@@ -279,7 +279,7 @@ If the request was correct, it may return 200:
 
 ### Step 3: Creating a session
 
-A session is pretty straight forward with the API, you may [review this link](/collaborate/session-definitions) for more information
+A session is pretty straight forward with the API, you may [review this link](/rest-apis/collaborate/session-definitions) for more information
 
 - using [POST /Sessions](https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0#/sessions/post_sessions)
 
