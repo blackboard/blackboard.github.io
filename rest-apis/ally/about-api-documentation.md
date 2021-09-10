@@ -10,7 +10,7 @@ author: Scott Hurrey
 
 The API documentation for Ally as a Service allows a developer to test the API real-time inline on the page. It is a quick and easy way to not only get high-level information about the API itself, but also see how it works. You can upload a file, check the status of processing, and retrieve the report when finished. Doing so and then testing your application with the same file is a quick, easy, and powerful way to validate your work.
 
-To do this, you will need your client ID and your secret. See the [Getting Started Guide](getting-started) for information on how to request your credentials. At the top of the page you will see two text boxes, one for each of these values. Simply plug them in and you are all ready to.
+To do this, you will need your client ID and your secret. See the [Getting Started Guide](/rest-apis/ally/getting-started) for information on how to request your credentials. At the top of the page you will see two text boxes, one for each of these values. Simply plug them in and you are all ready to.
 
 At the bottom of the documentation for the `Upload a File to Ally` endpoint, there is a **Try it now** section, where you can select a file and click submit to upload that file to be processed.
 

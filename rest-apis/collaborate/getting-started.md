@@ -20,7 +20,7 @@ If you are interested in getting started with the Development of integrations wi
 
 Generally speaking, REST API integrations are largely the same. That is the beauty of REST; the developer has a standard set of HTTP Verbs that generally perform the same actions, return the same success and failure codes, and most languages provide software packages and add-ons that make REST calls simple. Usually, the main hurdle is two-fold: What is the business logic behind the APIs, and how does an application authenticate to the services in order to send the REST calls necessary to perform the actions required.
 
-Most REST frameworks rely on some facet of the OAuth 2.0 standard and Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens (JWT) in order to accept the application as a trusted entity. For more detailed information about the JWT Standard and to learn about available libraries for most of today’s popular web application development languages, see https://jwt.io. For more information on Blackboard Collaborate’s implementation see [Authorize and Authenticate in Blackboard Collaborate](https://docs.blackboard.com/collaborate/security-and-tokens).
+Most REST frameworks rely on some facet of the OAuth 2.0 standard and Blackboard Collaborate is no different. Collaborate relies on JSON Web Tokens (JWT) in order to accept the application as a trusted entity. For more detailed information about the JWT Standard and to learn about available libraries for most of today’s popular web application development languages, see https://jwt.io. For more information on Blackboard Collaborate’s implementation see [Authorize and Authenticate in Blackboard Collaborate](/rest-apis/collaborate/security-and-tokens).
 
 #### Examples
 
