@@ -21,7 +21,7 @@ Before releasing your integration you want to ensure there are sufficient site a
 
 This is accomplished by creating a new group named after your company or institution - this new group will receive your production level settings.
 
-Please follow group naming conventions as described in our [Group Naming Requirements](groups-quotas-rates) documentation.
+Please follow group naming conventions as described in our [Group Naming Requirements](/rest-apis/learn/admin/groups-quotas-rates) documentation.
 
 Once you have created your production group, file a support ticket requesting production settings on your group.
 

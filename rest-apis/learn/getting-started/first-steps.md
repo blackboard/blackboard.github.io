@@ -17,7 +17,7 @@ workflow is more complicated. For more general questions about REST and using
 REST APIs, see any of the numerous tutorials available online. Most commonly
 used resources include:
 
-- Blackboard's [developer portal](/learn/rest/developer-portal){:target="\_blank"}
+- Blackboard's [developer portal](/rest-apis/learn/getting-started/developer-portal){:target="\_blank"}
 - Blackboard's [Github repos](https://github.com/search?utf8=%E2%9C%93&q=BBDN-REST){:target="\_blank"}
 
 ## Before You Get Started
@@ -49,7 +49,7 @@ registered Blackboard developer.To register as a Blackboard developer:
 2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
 3. Select **Create Account** and you're on your way.
 
-For more information about the Developer Portal please see [this document](registry)
+For more information about the Developer Portal please see [this document](/rest-apis/learn/getting-started/registry)
 
 **Note:** If you are a Blackboard client, a Blackboard Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Blackboard DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
@@ -65,7 +65,7 @@ about integrating your project with Blackboard products. You will benefit from
 the community most by joining in.To register in the Blackboard developer
 community:
 
-1. Go to [Blackboard Developer Community](/learn/rest/developer-portal){:target="\_blank"} and select **Register**.
+1. Go to [Blackboard Developer Community](/rest-apis/learn/getting-started/developer-portal){:target="\_blank"} and select **Register**.
 2. If your organization is a Blackboard client or partner organization and you have a Behind the Blackboard login, select **Behind the Blackboard Login**. Otherwise, select **Community Site Login**.
 3. Enter your email address to receive a link via email.
 4. In your email's inbox, find the email sent by Blackboard. You might have to check your spam or junk folder. The email's subject is something like _Blackboard Community: Email Validation_. Select the link in your email. You will be taken to a registration page.
@@ -82,28 +82,28 @@ _I want to programmatically..._ _You'll need to..._
 
 **Add files, text, and the like to Blackboard Learn**
 
-1. [Authenticate with Blackboard Learn](basic-authentication) via REST API
-2. Check out our [Learn REST API reference](/learn/rest/api){:target="\_blank"}
+1. [Authenticate with Blackboard Learn](/rest-apis/learn/getting-started/basic-authentication) via REST API
+2. Check out our [Learn REST API reference](/rest-apis/learn/getting-started/api){:target="\_blank"}
 
 **Bulk add users to Blackboard Learn**
 
-1. [Authenticate with Blackboard Learn](basic-authentication) via REST API
-2. Check out our [Learn REST API reference](/learn/rest/api){:target="\_blank"}
+1. [Authenticate with Blackboard Learn](/rest-apis/learn/getting-started/basic-authentication) via REST API
+2. Check out our [Learn REST API reference](/rest-apis/learn/getting-started/api){:target="\_blank"}
 
 **Set up video conference sessions**
 
-1. [Authenticate with Blackboard Collaborate](/collaborate/security-and-tokens) via REST API
-2. Check out our [Collaborate REST API reference](/collaborate/api){:target="\_blank"}
+1. [Authenticate with Blackboard Collaborate](/rest-apis/collaborate/security-and-tokens) via REST API
+2. Check out our [Collaborate REST API reference](/rest-apis/collaborate/api){:target="\_blank"}
 
 **Invite users to video conference sessions**
 
-1. [Authenticate with Blackboard Collaborate](/collaborate/security-and-tokens) via REST API
-2. Check out our [Collaborate REST API reference](/collaborate/api){:target="\_blank"}
+1. [Authenticate with Blackboard Collaborate](/rest-apis/collaborate/security-and-tokens) via REST API
+2. Check out our [Collaborate REST API reference](/rest-apis/collaborate/api){:target="\_blank"}
 
 **Get a list of users who attended a video conference session**
 
-1. [Authenticate with Blackboard Collaborate](/collaborate/security-and-tokens) via REST API
-2. heck out our [Collaborate REST API reference](/collaborate/api){:target="\_blank"}
+1. [Authenticate with Blackboard Collaborate](/rest-apis/collaborate/security-and-tokens) via REST API
+2. heck out our [Collaborate REST API reference](/rest-apis/collaborate/api){:target="\_blank"}
 
 #### Get Development Instances of Blackboard Applications
 
@@ -112,22 +112,22 @@ use to build projects that integrate with Blackboard applications. Among
 others, we offer these popular developer instances. Blackboard does not charge
 a fee for entry-level use.
 
-- [AWS instance of Blackboard Learn](/dvba/developer-ami)  
+- [AWS instance of Blackboard Learn](/rest-apis/learn/sandbox/developer-ami)  
   While Blackboard does not charge for entry-level use, AWS may charge various
   fees for their services.
 
-- [Developer access to Blackboard Collaborate](/collaborate/getting-started)
+- [Developer access to Blackboard Collaborate](/rest-apis/collaborate/getting-started)
 
-For more information about developer versions of Blackboard applications, see [Developer Versions of Blackboard Applications](/dvba/what-is-dvba).
+For more information about developer versions of Blackboard applications, see [Developer Versions of Blackboard Applications](/rest-apis/learn/sandbox/what-is-dvba).
 
 ### Developing with Blackboard Collaborate
 
-Things are a little different for developing with Blackboard Collaborate. For more information, see the [Collaborate REST API Reference](/collaborate/api) and then email us at at [developers@blackboard.com](mailto:developers@blackboard.com). We'll set you up with a key and secret for Blackboard Collaborate. Then read about how to use your key and secret to [authenticate with
-Collaborate](/collaborate/security-and-tokens). The rest of the present topic pertains only to developing with Blackboard Learn.
+Things are a little different for developing with Blackboard Collaborate. For more information, see the [Collaborate REST API Reference](/rest-apis/collaborate/api) and then email us at at [developers@blackboard.com](mailto:developers@blackboard.com). We'll set you up with a key and secret for Blackboard Collaborate. Then read about how to use your key and secret to 
+[authenticate with Collaborate](/rest-apis/collaborate/security-and-tokens). The rest of the present topic pertains only to developing with Blackboard Learn.
 
 ### Developing with Blackboard Learn
 
-Go to the developer portal and [register as a Developer](registry) if you haven't already, and then register your
+Go to the developer portal and [register as a Developer](/rest-apis/learn/getting-started/registry) if you haven't already, and then register your
 application to get a key and secret. Use your key and secret to [authenticate
 with Learn](basic-authentication).
 
@@ -140,7 +140,7 @@ Check out the [Learn REST API Reference](https://developer.blackboard.com/portal
 ### Authentication/Authorization
 
 Authentication for REST Integrations follows the [OAuth 2.0 RFC Standard](https://tools.ietf.org/html/rfc6749){:target="\_blank"}. Essentially,
-every developer has a unique key and secret associated with each application they create. They make an HTTP Post to the API requesting client_credentials, which returns an authorization token that grants the application access to the Learn REST API for one hour. This token is then passed in subsequent REST calls until such time that the token expires. This can be done either with [Basic Authentication](basic-authentication) or, as of Blackboard Learn 3200.7 in SaaS or Q4 2017 for self- and managed-hosted clients, using [Three-Legged
+every developer has a unique key and secret associated with each application they create. They make an HTTP Post to the API requesting client_credentials, which returns an authorization token that grants the application access to the Learn REST API for one hour. This token is then passed in subsequent REST calls until such time that the token expires. This can be done either with [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) or, as of Blackboard Learn 3200.7 in SaaS or Q4 2017 for self- and managed-hosted clients, using [Three-Legged
 OAuth](3lo).
 
 ### Calling Services
@@ -149,7 +149,7 @@ Once your application acquires an access token, it only needs to pass that token
 
 ### Configure an Instance of Learn to Work with Your Application
 
-Once you have registered with the developer portal and built an integration, deploying to a Blackboard Learn SaaS instance is a simple step. The Blackboard Learn administrator that wants to use your integration needs the Application ID you got from the developer portal. The administrator will also need to create a Blackboard Learn user account with sufficient entitlements to associate with your integration. This gives the administrator full control over the entitlements used by your application. For more information on how to configure Learn, please see [Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators](/learn/rest/rest-and-learn).
+Once you have registered with the developer portal and built an integration, deploying to a Blackboard Learn SaaS instance is a simple step. The Blackboard Learn administrator that wants to use your integration needs the Application ID you got from the developer portal. The administrator will also need to create a Blackboard Learn user account with sufficient entitlements to associate with your integration. This gives the administrator full control over the entitlements used by your application. For more information on how to configure Learn, please see [Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators](/rest-apis/learn/admin/rest-and-learn).
 
 ### Glossary
 
