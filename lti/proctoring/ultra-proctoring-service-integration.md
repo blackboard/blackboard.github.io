@@ -37,7 +37,7 @@ Note: Ultra Extension Framework requires Premium API Access. This will need to b
 ### LTI Placements
 Two types of LTI placements will need to be created to successfully integrates as a proctoring service.
 #### Ultra Extension
-This placement will be the primary means of communication between your application and Ultra Extension Framework. Ultra Extension Framework will be used to render the settings of each proctoring service inside the assessment settings of Ultra. Once your application is authorized with Ultra Extension Framework, your app will be able to use the API to register as a proctoring service and provide HTML to display. See <https://docs.blackboard.com/learn/uef/getting-started> for more information about UEF including tutorials on how to get started. 
+This placement will be the primary means of communication between your application and Ultra Extension Framework. Ultra Extension Framework will be used to render the settings of each proctoring service inside the assessment settings of Ultra. Once your application is authorized with Ultra Extension Framework, your app will be able to use the API to register as a proctoring service and provide HTML to display.  <a href="/rest-apis/learn/uef/getting-started">See for more information</a> about UEF including tutorials on how to get started. 
 
 ##### Create new Ultra Extension placement: 
    1. From the "My Applications" screen click the ... menu next to your application

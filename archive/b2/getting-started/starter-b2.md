@@ -10,8 +10,7 @@ status: deprecated
 # Starter Building Block Readme
 
 This is the readme for the Starting Building Block. The Starter Building block
-is available in the [Blackboard maven
-repository](https://bbprepo.blackboard.com/content/repositories/public/blackboard/bbdn/starting-block).
+is available in the [Blackboard maven repository](https://bbprepo.blackboard.com/content/repositories/public/blackboard/bbdn/starting-block).
 
 > DO NOT INSTALL THE STARTER BLOCK ON A PRODUCTION SYSTEM OR ANY SYSTEM ACCESSIBLE VIA THE PUBLIC INTERNET.\_ Installing the starting block on a production system presents a security risk.\*\*
 

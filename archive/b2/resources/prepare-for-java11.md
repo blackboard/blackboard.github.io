@@ -34,9 +34,9 @@ Deployed in February 2020.
 
    When collecting updated Building Blocks, make sure you have the latest version of the B2 from the provider (vendor, open source, or internal). Check vendor websites or contact vendors’ support and get the latest versions of B2s from them. Confirm that the updates have been tested to be Java 11 compatible and validate in your test or stage environment. For open source Building Blocks you use, check community sources such as [OSCELOT](https://github.com/oscelot) to see if updates are available. If you have B2s created by Blackboard Consulting and supported under an ICM contract, contact Blackboard Product Support for the latest version that is Java 11 compatible.
 
-3. **Transition integrations to different integration types**. Some solution providers have transitioned their integrations to other methods, such as leveraging the [Learning Tools Interoperability (LTI) standard](https://imsglobal.org/lti) or [REST APIs](/learn/rest/getting-started) instead of Building Block APIs. In some cases, they may have completely different B2 integrations than the one you’re using. Working with these vendors, determine whether this is appropriate for you. Examples of these integrations requiring transition include Lynda.com and Turning Technologies.
+3. **Transition integrations to different integration types**. Some solution providers have transitioned their integrations to other methods, such as leveraging the [Learning Tools Interoperability (LTI) standard](https://imsglobal.org/lti) or [REST APIs](/rest-apis/learn/getting-started/first-steps) instead of Building Block APIs. In some cases, they may have completely different B2 integrations than the one you’re using. Working with these vendors, determine whether this is appropriate for you. Examples of these integrations requiring transition include Lynda.com and Turning Technologies.
 
-4. **Test and update in-house Building Blocks**. If you have B2s created at your institution, you should confirm their functionality in test/stage and prepare to update them. Guidance about updating Building Blocks can be found [here](/learn/B2s/preparing-for-saas-and-new-learn-versions). We’ve created an automated tool to assist with identifying potential library incompatibilities. While this tool doesn’t necessarily inform you of the functional behavior of the Building Block with Java 11, it provides guidance around library incompatibilities that could lead to a non-functional B2. See the section about the Building Block Scan Tool in the Resources section below.
+4. **Test and update in-house Building Blocks**. If you have B2s created at your institution, you should confirm their functionality in test/stage and prepare to update them. Guidance about updating Building Blocks can be found [here](/archive/b2/resources/preparing-for-saas-and-new-learn-versions). We’ve created an automated tool to assist with identifying potential library incompatibilities. While this tool doesn’t necessarily inform you of the functional behavior of the Building Block with Java 11, it provides guidance around library incompatibilities that could lead to a non-functional B2. See the section about the Building Block Scan Tool in the Resources section below.
 
 5. **Test in test/stage environments**.
 
@@ -56,7 +56,7 @@ Deployed in February 2020.
 
 - **Building Block Scan Tool**. We’ve created an automated tool for scanning B2s and help you determine if there are likely incompatible libraries. The results of the scan will highlight potentially incompatible libraries. While this may indicate likelihood of a need to update a Building Block, it doesn’t replace testing—we’ve seen a few cases where a B2 with compatibility alerts appears to function as expected, and other instances where a B2 has a clear scan but isn’t functioning quite as expected. SaaS clients can run the utility themselves. Self- and Managed Hosting clients can access the utility as part of the 9.1 Q4 2019 release.
 
-  - [Documentation to run the Building Block Java 11 compatibility scanner yourself](/learn/b2/scan-tool-for-learn-saas)
+  - [Documentation to run the Building Block Java 11 compatibility scanner yourself](/archive/b2/resources/scan-tool-for-learn-saas)
 
 - **Testing status for Partner Building Blocks**. As we worked with partners throughout 2019 in preparing for Java 11, we were [updating the status of those Building Blocks on Behind the Blackboard](https://blackboard.secure.force.com/btbb_articleview?id=kAA1O000000KyvZ). This document can be used as a resource, but please note that it was no longer updated afer February 2020. Be certain to check with Building Block suppliers for the most up-to-date information.
 
@@ -64,5 +64,5 @@ Deployed in February 2020.
 
 - **Building Block developer resources**: The developer’s community has many resources for Building Block development.
 
-  - [Preparing a Building Block for a newer version of Learn and ensuring it works with Learn SaaS](/learn/B2s/preparing-for-saas-and-new-learn-versions)
-  - [B2 development frequently asked questions](/learn/b2/faq)
+  - [Preparing a Building Block for a newer version of Learn and ensuring it works with Learn SaaS](/archive/b2/resources/preparing-for-saas-and-new-learn-versions)
+  - [B2 development frequently asked questions](/archive/b2/getting-started/faq)

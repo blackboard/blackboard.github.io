@@ -61,6 +61,6 @@ development project.
 The following tutorials are available to help you get started with Building
 Block development:
 
-- [Building Block Development Life Cycle](dev-life-cycle)
-- [Enabling Debugging](enabling-remote-debugging)
-- [First Project: Gradle, Git, and basic-b2-template](first-project-using-gradle-and-git)
+- [Building Block Development Life Cycle](/archive/b2/getting-started/dev-life-cycle)
+- [Enabling Debugging](/archive/b2/resources/enabling-remote-debugging)
+- [First Project: Gradle, Git, and basic-b2-template](/archive/b2/resources/first-project-using-gradle-and-git)

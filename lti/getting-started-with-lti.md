@@ -79,7 +79,7 @@ The LTI 1.3 spec defines the information you must provide to a Platform (LMS) su
 The LTI spec supports the notion of custom parameters with a launch. These are arbitrary `name=value` tuples that you can provide to uniquely identify the launch, or any other piece of information you need from the platform at launch time. See the following two documents on how to use substitution parameters within custom parameters to receive context-specific data on an LTI launch:
 
 [IMS LTI 1.3 Parameter Substitution](https://www.imsglobal.org/spec/lti/v1p3/#customproperty)  
-[Blackboard Learn Template Variables](https://docs.blackboard.com/learn/rest/advanced/dynamic-rendering-with-template-variables.html)
+[Blackboard Learn Template Variables](/rest-apis/learn/advanced/dynamic-rendering-with-template-variables)
 
 #### Information you Receive
 
@@ -104,7 +104,7 @@ In Blackboard Learn the way an LTI tool is surfaced in the user interface (UI) i
 | Course         | Appears in Ultra Books & Tools, Original Tools                                                                 | Allow student access |
 | System         | Appears in Ultra Base Nav Tools, Original Institution module                                                   |                      |
 | Admin          | Appears in Admin Tools module                                                                                  |                      |
-| UEF            | Special type for extending the Ultra UI; see [UEF docs](https://docs.blackboard.com/learn/uef/getting-started) |                      |
+| UEF            | Special type for extending the Ultra UI; see [UEF docs](/rest-apis/learn/uef/getting-started) |                      |
 
 #### Placement properties
 
