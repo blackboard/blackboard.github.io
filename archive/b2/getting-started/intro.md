@@ -42,9 +42,8 @@ architecture ensures that you can:
 ### Learn More
 
 To learn more about creating Building Blocks, start
-[here](getting-started). To see examples of Building Blocks that have already been created,
-take a look at released building blocks on the Blackboard Learn [extensions
-site](https://www.blackboardextensions.com/) which highlights
+[here](/archive/b2/getting-started/first-steps). To see examples of Building Blocks that have already been created,
+take a look at released building blocks on the Blackboard Learn [extensions site](https://www.blackboardextensions.com/) which highlights
 Building Blocks produced by Blackboard Partners, or take a look at open source
 projects contributed by the Learn developer community at OSCELOT's
 [projects](https://github.com/oscelot) site.
@@ -55,13 +54,11 @@ All Blackboard Learn clients receive a Blackboard developers license at no
 cost. A developers license is a "small footprint" version of Blackboard with
 the Community and Content Management modules turned on. It can be run on a
 development server or even a virtual machine image for development purposes.
-If you require a developer network account visit [Behind the
-Blackboard](https://blackboard.secure.force.com/) (as an
+If you require a developer network account visit [Behind the Blackboard](https://blackboard.secure.force.com/) (as an
 administrator) or contact your sales representative.
 
 ### Commercial Partnerships
 
-If you are interested in becoming a Blackboard partner visit the [Blackboard
-Partnerships](https://www.blackboard.com/partnership/index.aspx)™
+If you are interested in becoming a Blackboard partner visit the [Blackboard Partnerships](https://www.blackboard.com/partnership/index.aspx)™
 program site. Partnering with Blackboard provides access to design guidance
 and support among other benefits.

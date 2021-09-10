@@ -19,7 +19,7 @@ integration from release-to-release.
 
 This help article assumes that you have downloaded the [Web Services Sample
 Code](about-web-services-sample-code) and that you have built
-the [.NET Web Services Library](build-sample-library-dotnet).
+the .NET Web Services Library
 
 ### How to Build
 

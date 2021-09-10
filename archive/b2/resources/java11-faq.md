@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Java 11 for Learn: FAQ
 
-To address recent changes in Oracle’s Java support model, Blackboard Learn is transitioning to adopt a more recent version of Java, Java 11 Corretto JDK. To find details regarding the targeted versions and release dates please review the [latest announcement details](prepare-for-java11)
+To address recent changes in Oracle’s Java support model, Blackboard Learn is transitioning to adopt a more recent version of Java, Java 11 Corretto JDK. To find details regarding the targeted versions and release dates please review the [latest announcement details](/archive/b2/resources/prepare-for-java11)
 
 As with prior Java version changes, it is generally expected that Building Blocks will continue to work as-is. However, Java 9 onwards has significant changes to library management and class reflection which has required numerous changes to the Learn application. To assist developers in updates to existing Building Blocks we are provided guidance through these frequently asked questions:
 

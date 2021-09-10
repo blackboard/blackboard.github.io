@@ -72,12 +72,12 @@ features of your Building Block, you would not need to define this value.
 Tables and other objects can also be created in the reporting schema by using
 the value "stats". As of R9.1SP1, there are no other supported values.
 
-See [Schema Definitions](schema-definitions) for
+See [Schema Definitions](/archive/b2/opendb/schema-definitions) for
 more information on the structure of schema.xml, the containing directory
 structure, and the supporting scripts.
 
 ### Next Steps
 
-Take a look at [Tutorial - Schema.XML](schema-xml) for an in-depth
+Take a look at [Tutorial - Schema.XML](/archive/b2/opendb/schema-xml) for an in-depth
 look and working example using schema.xml to store building block
 configuration details in a custom database table.

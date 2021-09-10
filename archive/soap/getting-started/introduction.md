@@ -40,7 +40,7 @@ Data that can be accessed includes:
 #### Learn More
 
 To learn more about Learn Web Services, start
-[here](web-services).
+[here](/archive/soap/getting-started/web-services).
 
 #### Request a Developers License
 
@@ -48,12 +48,10 @@ All Blackboard Learn clients receive a Blackboard developers license at no
 cost. A developers license is a "small footprint" version of Blackboard with
 the Community and Content Management modules turned on. It can be run on a
 development server or even a virtual machine image for development purposes.
-If you require a developer network account visit [Behind the
-Blackboard](https://blackboard.secure.force.com/) (as an
+If you require a developer network account visit [Behind the Blackboard](https://blackboard.secure.force.com/) (as an
 administrator) or contact your sales representative.
 
 #### Commercial Partnerships
 
-If you are interested in becoming a Blackboard partner visit the [Blackboard
-Partnerships](https://www.blackboard.com/partnerships/partnerships-program.aspx)™ program site. Partnering with Blackboard provides access to
+If you are interested in becoming a Blackboard partner visit the [Blackboard Partnerships](https://www.blackboard.com/partnerships/partnerships-program.aspx)™ program site. Partnering with Blackboard provides access to
 design guidance and support among other benefits.

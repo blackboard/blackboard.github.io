@@ -55,7 +55,7 @@ with the installation of the Learning System product. For assistance, please
 call our Client Support Team at (888) 788-5264. Have your six-digit company ID
 ready when you call.
 
-All others should read up on the available [DVBA](/dvba/what-is-dvba) or request help on the [Developer forums](https://community.blackboard.com/developers){: target='\_blank'}
+All others should read up on the available [DVBA](/rest-apis/learn/sandbox/what-is-dvba) or request help on the [Developer forums](https://community.blackboard.com/developers){: target='\_blank'}
 
 ## API/known issues
 

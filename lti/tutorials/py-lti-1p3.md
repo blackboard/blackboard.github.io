@@ -20,7 +20,7 @@ As with any project, the first step is to clone the project to your local deskto
 
 ### Setting Up Learn
 
-Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the [developer portal](https://developer.blackboard.com). For more information on this process, check out this [document](/learn/REST/registry). Once you have an account set up, you can simply register a new application. You will be prompted to enter several pieces of information. For this project, here is what we need to enter:
+Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the [developer portal](https://developer.blackboard.com). For more information on this process, check out this [document](/rest-apis/learn/getting-started/registry). Once you have an account set up, you can simply register a new application. You will be prompted to enter several pieces of information. For this project, here is what we need to enter:
 
 | Field                | Description                                                                                                                                                           | Example                                                                                      |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ Now that we have the project cloned locally, we need to register the application
 | Tool Redirect URL(s) | The URL to redirect to upon successful completion of the OIDCLogin                                                                                                    | `https:pylti1p3-game.herokuapp.com/launch/`                                                  |
 | Tool JWKS URL        | The publicly accessible URL to the tools public key. We do not use this in this project, so we will leave it blank and let the portal generate our private key        |
 | Signing Algorithm    | The cryptographic algorith used to sign the JWT. Leave this as RS256                                                                                                  |
-| Group                | The developer group to associate with the integration. Here is more information on [groups](/learn/rest/groups-quotas-rates)                                          |
+| Group                | The developer group to associate with the integration. Here is more information on [groups](/rest-apis/learn/admin/groups-quotas-rates)                                          |
 
 Once you fill out this form, click the `Register application and generate API key` button and you will be prompted with several pieces of information. You will only see this once, so make sure you save the data somewhere.
 
