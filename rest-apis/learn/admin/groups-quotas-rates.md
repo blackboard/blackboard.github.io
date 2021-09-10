@@ -35,8 +35,7 @@ group can access it.
 
 Before moving to production, you must designate one group as the production
 group. The best practice is to name your production group after your
-organization. [See the Group Naming Requirements in this document for further
-details](production-groups).
+organization. [See the Group Naming Requirements in this document for further details](/rest-apis/learn/admin/production-groups).
 
 Each developer group is subject to maximum site quotas and to daily limits on
 the number of API requests made. These limits start relatively low because
@@ -44,7 +43,7 @@ they are intended for development and testing only. To qualify for production-
 level site quotas and rate limits, you must designate a production group. To
 designate one of your groups as a production follow the steps provided at the
 end of this document. For more information about using, managing, and naming
-groups, see [Developer Portal Development and Production Groups](production-groups)
+groups, see [Developer Portal Development and Production Groups](/rest-apis/learn/admin/production-groups)
 
 ### Production Groups
 

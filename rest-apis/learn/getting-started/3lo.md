@@ -9,7 +9,7 @@ author: Scott Hurrey
 
 # Three-Legged OAuth
 
-One of the drawbacks associated with [Basic Authentication](basic-authentication) is that the application requires broad access, as the tool
+One of the drawbacks associated with [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) is that the application requires broad access, as the tool
 is acting as a system-level user and enacting for the user. Three-legged OAuth
 (3LO) allows an application to act as a user. This sounds scary, but it
 actually allows for much more granular access control. Rather than a system
@@ -147,5 +147,5 @@ client that sent the authorization code request.
 
 ### Examples
 
-- [Three-legged OAuth in Curl](/learn/rest/examples/curl-demo)
+- [Three-legged OAuth in Curl](/rest-apis/learn/examples/curl-demo)
 - [BBDN-3LO-REST-Swift](https://github.com/blackboard/BBDN-3LO-REST-Swift)

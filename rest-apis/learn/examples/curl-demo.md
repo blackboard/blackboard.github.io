@@ -21,9 +21,9 @@ is the [slide deck](/assets/files/2016.06.22.RestTechnicalDeepDiveForPartners.pp
 
 ### Prerequisites
 
-- You must [register a developer account and application](registry) in the Developer Portal
+- You must [register a developer account and application](/rest-apis/learn/getting-started/registry) in the Developer Portal
 - You must
-  [register your application](/learn/rest/rest-and-learn) in Blackboard Learn
+  [register your application](/rest-apis/learn/admin/rest-and-learn) in Blackboard Learn
 - You must also configure the script as outlined in the README for the project
 
 This cURL command-line demonstration shows you how to:
@@ -46,18 +46,18 @@ make a complete set of CRUD operations to the Learn REST endpoints.
 This help topic assumes the Developer:
 
 - is familiar with cURL.
-- has a REST-enabled [Blackboard Learn instance](/dvba/what-is-dvba).
+- has a REST-enabled [Blackboard Learn instance](/rest-apis/learn/sandbox/what-is-dvba).
 
 ### Walkthrough
 
 To build an integration with the Blackboard REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
-1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](/learn/rest/getting-started/basic-authentication) document.
+1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) document.
 
 **OR**
 
-1. Use the authorizationcode endpoint to log into Learn with a given user's credentials, then obtain an **OAuth 2.0 access token**, using the application key/secret, that only allows access to the system based on that particular user's entitlements as described in the [Three-Legged OAuth](/learn/rest/getting-started/3lo) document.
+1. Use the authorizationcode endpoint to log into Learn with a given user's credentials, then obtain an **OAuth 2.0 access token**, using the application key/secret, that only allows access to the system based on that particular user's entitlements as described in the [Three-Legged OAuth](/rest-apis/learn/getting-started/3lo) document.
 2. Call the appropriate REST endpoint with the **OAuth 2.0 access token** and necessary data to perform a given action.
 
 Every example is shown in bold face, the JSON result is shown in italics.
@@ -564,7 +564,7 @@ curl -k --request PATCH -H "Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvf
 
 ### ACCESS CONTENT
 
-- See [Access Content Attachments](curl-attachments-demo)
+- See [Access Content Attachments](/rest-apis/learn/examples/curl-attachments-demo)
 
 ### COURSE COPY
 

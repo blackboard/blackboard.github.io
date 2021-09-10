@@ -17,7 +17,7 @@ Authentication for REST Integrations follows the [OAuth 2.0 RFC Standard](https:
 **WARNING: Never share or expose an application's key/secret pair. These are used for requesting OAuth tokens, which enable the holder to issue REST requests. Exposing an application key/secret pair or token is a serious security risk. If you think you have exposed a key/secret pair you may request a new pair for the application using the Developer Portal My Applications management page.**
 
 REST calls are subject to quotas and limits. For more information, see
-[Developer Groups, Site Quotas, and Rate Limits](groups-quotas-rates).
+[Developer Groups, Site Quotas, and Rate Limit](/rest-apis/learn/admin/groups-quotas-rates).
 
 ### Before You Start
 
@@ -93,9 +93,8 @@ you made.
 ### Example: Using cURL to Get a Token and Make a REST Call
 
 The easist way to test is using cURL. We will assume you have already
-registered through the [Developer Portal](registry) and
-retrieved your application ID, key, and secret, as well as [added your
-application ID](/learn/rest/rest-and-learn) to
+registered through the [Developer Portal](/rest-apis/learn/getting-started/registry) and
+retrieved your application ID, key, and secret, as well as [added your application ID](/rest-apis/learn/admin/rest-and-learn) to
 the Learn server you wish to integrate with:
 
 1. From the command line, use cURL to send a token request to Learn, signed with their application key and secret:
