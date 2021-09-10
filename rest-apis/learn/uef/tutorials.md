@@ -16,7 +16,7 @@ You will find these tutorials very helpful as you start your Ultra Extension Fra
 
 ### Ultra Extension Framework
 
-This [tutorial](/learn/uef/lti-to-uef-tutorial) starts with a Python-based LTI 1.3 Hello World application and shows you how to convert that project into a UEF integration.
+This [tutorial](/rest-apis/learn/uef/lti-to-uef-tutorial) starts with a Python-based LTI 1.3 Hello World application and shows you how to convert that project into a UEF integration.
 
 The tutorial is also available in a Youtube playlist, if you prefer to learn in this way. If you prefer to go directly to Youtube, [click here](https://www.youtube.com/watch?v=Mp9tFpultaQ&list=PLbewGw29xjRa2ZQ7gs3CgisvBVvyuKhsR&ab_channel=ScottHurrey){:target="\_blank"}
 
