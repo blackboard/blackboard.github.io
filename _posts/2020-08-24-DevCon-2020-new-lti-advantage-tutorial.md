@@ -11,7 +11,7 @@ summary: Be sure to revisit the Developing an LTI Advantage Solution page for th
 
 # DevCon 2020 - New LTI Advantage Tutorial
 
-Be sure to revisit the [Developing an LTI Advantage Solution](/standards/lti/tutorials/develop-lti-advantage-solution) page for the latest and greatest tutorial from DevCon 2020!
+Be sure to revisit the [Developing an LTI Advantage Solution](/lti/tutorials/develop-lti-advantage-solution) page for the latest and greatest tutorial from DevCon 2020!
 
 Cheers!
 -markk

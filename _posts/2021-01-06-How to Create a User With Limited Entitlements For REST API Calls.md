@@ -19,9 +19,9 @@ The answer is yes! [Here's a video explaining exactly how to proceed](https://yo
 
 Reference Documentation:
 
-- [https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn](https://docs.blackboard.com/learn/rest/getting-started/rest-and-learn)
-- [https://docs.blackboard.com/learn/rest/getting-started/basic-authentication](https://docs.blackboard.com/learn/rest/getting-started/basic-authentication)
-- [https://docs.blackboard.com/learn/rest/getting-started/3lo](https://docs.blackboard.com/learn/rest/getting-started/3lo)
+- [Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators](/rest-apis/learn/admin/rest-and-learn)
+- [Basic Authentication with REST](/rest-apis/learn/getting-started/basic-authentication)
+- [Three-Legged OAuth](/rest-apis/learn/getting-started/3lo)
 - [https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md](https://github.com/Kong/mashape-oauth/blob/master/FLOWS.md)
-- [https://docs.blackboard.com/learn/rest/getting-started/tutorials](https://docs.blackboard.com/learn/rest/getting-started/tutorials)
+- [REST Tutorials](/rest-apis/learn/getting-started/tutorials)
 - [Bookmarklet to help map entitlements to permissions](https://community.blackboard.com/blogs/4/18)
