@@ -11,7 +11,7 @@ summary: New!! Visit the REST Tutorials and UEF Tutorials pages for our tutorial
 
 # New!! REST and UEF Tutorials
 
-New!! Visit the [REST Tutorials](/learn/rest/getting-started/tutorials) and [UEF Tutorials](/learn/uef/tutorials) pages for our tutorials on these topics!!
+New!! Visit the [REST Tutorials](/rest-apis/learn/getting-started/tutorials) and [UEF Tutorials](/rest-apis/learn/uef/tutorials) pages for our tutorials on these topics!!
 
 Cheers!
 -markk
