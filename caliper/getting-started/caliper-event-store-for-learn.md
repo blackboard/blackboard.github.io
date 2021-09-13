@@ -4,6 +4,7 @@ title: "Caliper Event Store in Learn"
 categories: Standards Caliper Getting Started
 id: caliper-gs-caliper-event_store_in_learn
 author: Scott Hurrey
+toc: false
 ---
 
 # Configuring Caliper Event Store in Blackboard Learn
