@@ -4,6 +4,7 @@ title: "Rest 3LO and Learn SSO"
 id: rest_apis-learn-admin-rest3LO_and_learnSSO
 categories: Learn REST
 author: Mark Kauffman
+toc: false
 ---
 
 # REST Integrations 3-Legged OAuth and Learn Custom Login Pages For System Administrators
