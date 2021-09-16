@@ -4,3 +4,4 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 
 Redirect 301 /learn/UEF /learn/uef/getting-started
+Redirect 301 /rest/premium-apis /rest-apis/learn/uef/requesting-premium-apis
