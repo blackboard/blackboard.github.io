@@ -8,25 +8,16 @@ author: Scott Hurrey
 
 # Dynamic Rendering with Template Variables
 
-Template variables allow for integration with other systems by exposing
-information about the user's context in a way that makes creating URLs to pass
-information to these systems easy.
+Using template variables you can create URLs to integrate with other systems by including information about the user's context.
 
-Template variables are represented by a series of values given a special
-syntax. This syntax is
+Template variables are represented by a series of values given the special syntax: @X@object.attribute@X@. These variables are expanded when rendered into their corresponding values. Within the UI, they can be used in portal modules and within the body of content items in courses.
 
-@X@object.attribute@X@. When used, these variables are expanded when rendered
-into their corresponding values. Within the UI, they can be used in portal
-modules and within the body of content items in courses.
-
-Note that not all of these variables will resolve on all pages, For example,
-if the page is not inside a course, there will be no course-related variables
-available.
+Note that not all of these variables will resolve on all pages. For example, if the page is not inside a course, there will be no course-related variables available.
 
 ## Using context variables
 
 | Context item                                                             | Context variable                                                     | Example output                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---|---|---|                                                     |
 | User external person key                                                 | @X@user.batch_uid@X@                                                 | 123-45-6789                                                                                                                                                                                                                      |
 | User username (user id)                                                  | @X@user.id@X@                                                        | jsmith                                                                                                                                                                                                                           |
 | User student_id (student id)                                             | @X@user.student_id@X@                                                | jsmith                                                                                                                                                                                                                           |
@@ -50,3 +41,8 @@ available.
 | Request locale                                                           | @X@request.locale@X@                                                 |
 | Request return URL                                                       | @X@request.return@X@                                                 |
 | System host name                                                         | @X@system.site_id@X@                                                 |
+| Course locale                                                            | @X@course.locale@X@                                                  | en_US                                                            |    
+| Institution hierarchy nodes (*use with caution. The output can be a long list that might affect an LTI launch.*)                          | @X@ih_nodes@X@                                                            | db75df7b-04e8-4d3c-b7f9-7f1371a3f325,fb11e84b-ff7f-44ab-bf77-89299b053232                                                           |    
+| Institution primary node	                                                                | @X@ih_primary_node@X@                                                            | fb11e84b-ff7f-44ab-bf77-89299b053232                                                           |    
+| Is it an Ultra course?	                                                                | @X@ultra_status@X@                                                            | false                     |
+

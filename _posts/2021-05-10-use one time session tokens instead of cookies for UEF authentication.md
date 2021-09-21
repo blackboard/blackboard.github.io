@@ -60,7 +60,7 @@ In LTI 1.3, you will see the value in the `https://blackboard.com/lti/claim/one_
     if "," not in one_time_session_token:
         one_time_session_token += "," + message_launch_data['sub']
 
-    # Add the one_time_session_cookie to the query parameters to send to the Authorization Code endpoint
+    # Add the one_time_session_token to the query parameters to send to the Authorization Code endpoint
     params = {
         'redirect_uri' : Config.config['app_url'] + '/authcode/',
         'response_type' : 'code',
@@ -81,7 +81,7 @@ In LTI 1.3, you will see the value in the `https://blackboard.com/lti/claim/one_
 
 ### LTI 1.1
 
-By now, I hope you are using LTI 1.3, but I know many are not. As a result, we also added a one-time session token to LTI 1.1 launches. This will come in the form POST parameter `ext_one_time_session_token`. Just like in the 1.3 example, your application should take this value from the LTI launch, append it to the authorization code request endpoint as `one_time_session_cookie=that_token` and redirect them to the authorization code endpoint.
+By now, I hope you are using LTI 1.3, but I know many are not. As a result, we also added a one-time session token to LTI 1.1 launches. This will come in the form POST parameter `ext_one_time_session_token`. Just like in the 1.3 example, your application should take this value from the LTI launch, append it to the authorization code request endpoint as `one_time_session_token=that_token` and redirect them to the authorization code endpoint.
 
 ## Summary
 
