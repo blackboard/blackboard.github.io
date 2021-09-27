@@ -24,24 +24,25 @@
 </body>
 <script>
 // This modifies dynamically the menu height based on the content height
-var menu = document.getElementsByClassName('menu');
-        var tocHeight = document.getElementsByClassName('toc-parent')
+        var menu = document.getElementsByClassName('menu');
 
         var getElementHeight = function(elementName){
             var element = document.getElementsByClassName(elementName);
             return element[0].offsetHeight;
         }  
 
-        var mainSize = getElementHeight('maincontent')
+        var mainSize = document.getElementsByTagName("main");
+        mainSize = mainSize[0].className;
+
+        mainSize = getElementHeight(mainSize);
 
         var updateMenuHeight = function(){
-            finalSize = (mainSize)+ 'px';
+            finalSize = (mainSize + 300 )+ 'px';
             return menu[0].style.minHeight = finalSize
         }
 
-
         // Resize for the toc parent
-        tocHeight[0].style.height = mainSize + 'px';
+        
         // Resize For the menu
         window.addEventListener("resize", updateMenuHeight );
         window.addEventListener("load", updateMenuHeight );
@@ -50,29 +51,28 @@ var menu = document.getElementsByClassName('menu');
         var pageToc = "{{ page.toc }}";
         pageToc = pageToc.toLowerCase();
         var bodyMainContent = document.getElementsByClassName('maincontent');
-        var toc = document.getElementById('third-column-menu');
+        var toc = document.getElementsByClassName('toc-parent');
 
+if(pageToc == 'false'){
+    toc[0].style.display = 'none';
+  } else {
+    toc[0].style.height = mainSize + 'px';
+ }
 
-        if(bodyMainContent != null){
-        window.addEventListener("resize", function(){
-            if(pageToc == 'false'){
-              if ( toc ){
-                toc.style.display = 'none';
-              }
-                if (window.innerWidth >= 1499 ) {
-                    bodyMainContent[0].style.width = '76%';
-                    console.log('1499');
-                } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
-                    bodyMainContent[0].style.width = '70%';
-                    console.log('1250');
-                } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
-                  bodyMainContent[0].style.width = '63%';
-                } else if (window.innerWidth <= 800 ){
-                  bodyMainContent[0].style.width = '95%';
-                }
-            }
-        });
-      }
+// if(bodyMainContent != null){
+//   window.addEventListener("resize", function(){
+//   if (window.innerWidth >= 1499 ) {
+//       bodyMainContent[0].style.width = '76%';
+//   } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
+//     bodyMainContent[0].style.width = '70%';
+//   } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
+//     bodyMainContent[0].style.width = '63%';
+//   } else if (window.innerWidth <= 800 ){
+//     bodyMainContent[0].style.width = '95%';
+//   }
+//   });
+// }
+      
 
     // This avoids page 404 to update the submenus when 404 is not part of the menu. This is not mandatory but I hate having errors in the console ¯\_(ツ)_/¯
   //   const jsPageId = pageId.substring(1);
