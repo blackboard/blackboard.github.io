@@ -16,18 +16,12 @@
             </div>
         </div>
     {% endif %}
-    <main id="maincontent">
+    <main class="maincontent">
         {{ content }}
     </main>
-    <div id="third-column-menu">
-        <div class="col hide-on-small-only m3 l2">
-            <ul class="section table-of-contents">
-                <div id="table-of-contents">
-                    <div id="table-of-contents">
-                        {% include toc.html html=content h_min=2 h_max=3 %}
-                        </div>
-                    </div>
-            </ul>
-            </div>
-    </div>  
+</div>
+<div class="toc-parent">
+    <ul class="table-of-contents">
+            {% include toc.html html=content h_min=2 h_max=3 %}
+    </ul>
 </div>

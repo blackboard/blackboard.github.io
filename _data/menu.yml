@@ -1,4 +1,5 @@
 - main_item: REST APIs
+  onclick: home_display_restapis()
   # main_item_icon: api
   id: rest_apis
   type: menu
@@ -484,6 +485,13 @@
       id: community-contact_us
       target: _self
 
+- main_item: Blogs
+  #  main_item_icon: book
+  onclick: home_display_blogs()
+  id: blogs
+  type: menu
+
+
 - main_item: Archive
   # main_item_icon: archive
   id: archive
@@ -698,7 +706,3 @@
               id: archive-soap-examples-course_membership_and_role_c
               target: _self
 
-- main_item: Blogs
-  #  main_item_icon: book
-  id: blogs
-  type: menu
