@@ -1,12 +1,14 @@
-.display{
+.display {
   display: block;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.btn:visited, .btn:focus, .btn:active{
+.btn:visited,
+.btn:focus,
+.btn:active {
   background-color: #000 !important;
   color: white;
 }
@@ -472,7 +474,8 @@ h6 {
   margin-right: 3%;
   margin-top: 1%;
 }
-.table-of-contents{
+.table-of-contents {
+  word-break: break-word;
   position: sticky;
   top: 90px;
 }
@@ -1136,36 +1139,36 @@ a.purple-text:hover {
 }
 
 /* 404 Page */
-.homeContent404{
+.homeContent404 {
   width: 75%;
   text-align: center;
   float: left;
 }
-.homeContent404 p{
+.homeContent404 p {
   text-align: center !important;
   font-size: 23px;
 }
 
-.homeContent404 h1{
+.homeContent404 h1 {
   margin-top: 50px;
   font-size: 60px;
   font-weight: bolder;
 }
 
-.home-rest-apis-ul ul{
-padding-left: 0px !important;
+.home-rest-apis-ul ul {
+  padding-left: 0px !important;
 }
 
-.home-rest-apis-ul ul a{
+.home-rest-apis-ul ul a {
   color: black;
   text-decoration: underline;
 }
 
-.home-rest-apis-ul ul a:hover{
+.home-rest-apis-ul ul a:hover {
   text-decoration: none;
 }
 
-.spacey-p{
+.spacey-p {
   margin-bottom: 50px;
 }
 
@@ -1180,7 +1183,8 @@ padding-left: 0px !important;
   .maincontent {
     width: 60%;
   }
-  .homeContent, .homeContent404 {
+  .homeContent,
+  .homeContent404 {
     width: 70%;
   }
   .secondImg {
@@ -1192,7 +1196,9 @@ padding-left: 0px !important;
 }
 
 @media only screen and (max-width: 1250px) {
-  .maincontent, .homeContent, .homeContent404 {
+  .maincontent,
+  .homeContent,
+  .homeContent404 {
     width: 55%;
   }
 
@@ -1206,7 +1212,9 @@ padding-left: 0px !important;
 }
 
 @media only screen and (max-width: 1100px) {
-  .maincontent, .homeContent, .homeContent404{
+  .maincontent,
+  .homeContent,
+  .homeContent404 {
     width: 70%;
   }
 
@@ -1215,9 +1223,9 @@ padding-left: 0px !important;
   }
 }
 
-
 @media only screen and (max-width: 992px) {
-  .maincontent, .homeContent404{
+  .maincontent,
+  .homeContent404 {
     width: 65%;
   }
   .center-content {
@@ -1237,7 +1245,7 @@ padding-left: 0px !important;
   .homeContent {
     width: 63%;
   }
-  .table-of-contents{
+  .table-of-contents {
     display: none;
   }
   .secondImg {
@@ -1252,8 +1260,7 @@ padding-left: 0px !important;
 }
 
 @media only screen and (max-width: 852px) {
-
-  .maincontent{
+  .maincontent {
     width: 62%;
   }
 
@@ -1273,10 +1280,11 @@ padding-left: 0px !important;
     display: none;
   }
 
-  .maincontent  {
+  .maincontent {
     width: 94%;
   }
-  .homeContent,.homeContent404 {
+  .homeContent,
+  .homeContent404 {
     width: 100%;
   }
   .table-of-contents {
