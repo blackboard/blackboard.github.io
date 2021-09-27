@@ -3,6 +3,7 @@ layout: blog
 id: blog-home
 title: Blog
 toc: false
+permalink: /blog-home
 ---
 <h1>Developer Blog</h1>
 

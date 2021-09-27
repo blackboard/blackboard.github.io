@@ -24,59 +24,17 @@
 </body>
 <script>
 
-        // This modifies dynamically the menu height based on the content height
-        let menu = document.getElementsByClassName('menu');
-        const getElementHeight = function(elementName){
-            let element = document.getElementsByTagName(elementName);
-            return element[0].offsetHeight;
-        }  
 
-
-        const updateMenuHeight = function(){
-            let finalSize = getElementHeight('main')
-            finalSize = (finalSize + 200 )+ 'px';
-            return menu[0].style.minHeight = finalSize
-        }
-        
-        window.addEventListener("resize", updateMenuHeight );
-        window.addEventListener("load", updateMenuHeight );
-
-        // Need to resize the whole content when no toc
-        let pageToc = "{{ page.toc }}";
-        pageToc = pageToc.toLowerCase();
-        const bodyMainContent = document.getElementById('maincontent');
-        const toc = document.getElementById('third-column-menu');
-
-
-        if(bodyMainContent != null){
-        window.addEventListener("resize", function(){
-            if(pageToc == 'false'){
-              if ( toc ){
-                toc.style.display = 'none';
-              }
-                if (window.innerWidth >= 1499 ) {
-                    bodyMainContent.style.width = '76%';
-                    console.log('1499');
-                } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
-                    bodyMainContent.style.width = '70%';
-                    console.log('1250');
-                } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
-                  bodyMainContent.style.width = '63%';
-                } else if (window.innerWidth <= 800 ){
-                  bodyMainContent.style.width = '95%';
-                }
-            }
-        });
-      }
     // This avoids page 404 to update the submenus when 404 is not part of the menu. This is not mandatory but I hate having errors in the console ¯\_(ツ)_/¯
-    const jsPageId = pageId.substring(1);
-    if(jsPageId == "404-notFound"){
+  //   const jsPageId = pageId.substring(1);
+  //   if(jsPageId == "404-notFound" || jsPageId == "index"){
 
-    }else{
-    const currentElement = document.getElementById(jsPageId);
-    const listOfLinks = currentElement.parentElement.parentElement.getElementsByTagName("a");
-    listOfLinks.item(0).style.fontWeight = "bold";
-  }
+  //   }else{
+  //   const currentElement = document.getElementById(jsPageId);
+  //   const listOfLinks = currentElement.parentElement.parentElement.getElementsByTagName("a");
+  //   listOfLinks.item(0).style.fontWeight = "bold";
+  // }
+
 </script>
 
 </html>

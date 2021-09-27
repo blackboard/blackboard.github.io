@@ -138,14 +138,21 @@ These are some video resources that we have been working on to explain how REST 
 
 **English**
 
-<iframe class="embed-video" src="https://youtube.com/embed/videoseries?list=PLlarB4q95gffO4fomFZ1hpH2h2nNjIB-t" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe src="https://youtube.com/embed/videoseries?list=PLlarB4q95gffO4fomFZ1hpH2h2nNjIB-t" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 **Spanish (Some of them)**
 
-<iframe class="embed-video" src="https://youtube.com/embed/videoseries?list=PLlarB4q95gfesxtDRRhTmiMymesToKFkF" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container">
+<iframe src="https://youtube.com/embed/videoseries?list=PLlarB4q95gfesxtDRRhTmiMymesToKFkF" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Conclusion
 
 Rest API in collaborate is quite easy to use once all this concepts are clear!
 
-![Course Room view](/assets/img/collab-first-steps-08.png)
+<img class="responsive-img"  src="/assets/img/collab-first-steps-08.png">
+
+if you have further questions, please do not hesitate and contact us!

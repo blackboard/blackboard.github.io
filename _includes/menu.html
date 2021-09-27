@@ -5,11 +5,11 @@
         <a href="/">Home</a>
         {% for main in site.data.menu %}
       </li>
-      <li class="first-level" id="{{ main.id }}">
-        <a href="#"> {{ main.main_item }} </a>
+      <li class="first-level" id="{{ main.id }}" onclick="{{ main.onclick }}">
+        <a href="#">  {{ main.main_item }} </a>
           {% if main.main_item == "Blogs" %}
           <ul>
-            {% for post in site.posts %}
+            {% for post in site.posts limit:5 %}
               <li class="content" id="{{ post.post_id }}">
                 <a href="{{ post.url }}">{{ post.title }}</a>
               </li>
