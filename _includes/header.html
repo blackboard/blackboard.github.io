@@ -86,56 +86,6 @@
                     searchResultTemplate: '<li><a href="{url}" desc="{desc}" target="{target}">{title}</a></li>'
                 });
             }
-        // This modifies dynamically the menu height based on the content height
-        var menu = document.getElementsByClassName('menu');
-        var tocHeight = document.getElementsByClassName('toc-parent')
-
-        var getElementHeight = function(elementName){
-            var element = document.getElementsByClassName(elementName);
-            return element[0].offsetHeight;
-        }  
-
-        var mainSize = getElementHeight('maincontent')
-
-        var updateMenuHeight = function(){
-            finalSize = (mainSize)+ 'px';
-            return menu[0].style.minHeight = finalSize
-        }
-
-
-        // Resize for the toc parent
-        tocHeight[0].style.height = mainSize + 'px';
-        // Resize For the menu
-        window.addEventListener("resize", updateMenuHeight );
-        window.addEventListener("load", updateMenuHeight );
-
-        // Need to resize the whole content when no toc
-        var pageToc = "{{ page.toc }}";
-        pageToc = pageToc.toLowerCase();
-        var bodyMainContent = document.getElementsByClassName('maincontent');
-        var toc = document.getElementById('third-column-menu');
-
-
-        if(bodyMainContent != null){
-        window.addEventListener("resize", function(){
-            if(pageToc == 'false'){
-              if ( toc ){
-                toc.style.display = 'none';
-              }
-                if (window.innerWidth >= 1499 ) {
-                    bodyMainContent[0].style.width = '76%';
-                    console.log('1499');
-                } else if (window.innerWidth <= 1498 && window.innerWidth >= 985){
-                    bodyMainContent[0].style.width = '70%';
-                    console.log('1250');
-                } else if (window.innerWidth <= 985 && window.innerWidth >= 800){
-                  bodyMainContent[0].style.width = '63%';
-                } else if (window.innerWidth <= 800 ){
-                  bodyMainContent[0].style.width = '95%';
-                }
-            }
-        });
-      }
 });
 
 
