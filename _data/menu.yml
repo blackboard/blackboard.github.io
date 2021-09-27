@@ -309,6 +309,10 @@
       url: /lti/getting-started-with-lti
       id: lti-gs_with_lti
       target: _self
+    - submenu_item: LTI Registration and Deployment with Learn
+      url: /lti/lti-registration-and-deployment
+      id: lti-registration-deployment
+      target: _self  
     - submenu_item: Deep Linking 2.0 Sample Json
       url: /lti/deep-linking-two-json
       id: lti-deep_linking_two

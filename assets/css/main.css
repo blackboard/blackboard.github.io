@@ -87,6 +87,11 @@ strong {
   display: none;
 }
 
+.center-image {
+  margin: 0 auto;
+  display: block;
+}
+
 /* HEADER */
 
 header {
