@@ -127,7 +127,6 @@ header {
   float: left;
   background-color: #f8f8f8;
   padding-top: 75px;
-  padding-bottom: 75px;
   display: block;
 }
 
@@ -431,7 +430,7 @@ svg {
 /* BODY */
 
 main {
-  padding-top: 90px;
+  padding-top: 30px;
   display: block;
   width: 66%;
   float: left;
@@ -452,6 +451,7 @@ h1 {
   margin-bottom: 50px;
   line-height: 45px;
   font-weight: 400;
+  margin-top: 60px;
 }
 
 h2 {
@@ -846,9 +846,11 @@ footer h5 {
   margin-top: 30px;
   background-color: #b53434;
   color: white;
-  padding-left: 50%;
-  padding-top: 0px;
   font-size: 24px;
+}
+
+.deprecatedPage p {
+  width: 100%;
 }
 
 .draftPage {

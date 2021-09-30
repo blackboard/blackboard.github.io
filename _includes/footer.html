@@ -23,41 +23,8 @@
   </footer>
 </body>
 <script>
-// This modifies dynamically the menu height based on the content height
-        var menu = document.getElementsByClassName('menu');
 
-        var getElementHeight = function(elementName){
-            var element = document.getElementsByClassName(elementName);
-            return element[0].offsetHeight;
-        }  
 
-        var mainSize = document.getElementsByTagName("main");
-        mainSize = mainSize[0].className;
-
-        mainSize = getElementHeight(mainSize);
-
-        var updateMenuHeight = function(){
-            finalSize = (mainSize + 300 )+ 'px';
-            return menu[0].style.minHeight = finalSize
-        }
-
-        // Resize for the toc parent
-        
-        // Resize For the menu
-        window.addEventListener("resize", updateMenuHeight );
-        window.addEventListener("load", updateMenuHeight );
-
-        // Need to resize the whole content when no toc
-        var pageToc = "{{ page.toc }}";
-        pageToc = pageToc.toLowerCase();
-        var bodyMainContent = document.getElementsByClassName('maincontent');
-        var toc = document.getElementsByClassName('toc-parent');
-
-if(pageToc == 'false'){
-    toc[0].style.display = 'none';
-  } else {
-    toc[0].style.height = mainSize + 'px';
- }
 
 // if(bodyMainContent != null){
 //   window.addEventListener("resize", function(){
@@ -84,6 +51,29 @@ if(pageToc == 'false'){
   //   listOfLinks.item(0).style.fontWeight = "bold";
   // }
 
-</script>
 
+        // This modifies dynamically the menu height based on the content height
+        var menu = document.getElementsByClassName('menu');
+        var mainSize = document.getElementsByTagName("main");
+
+        mainSize = mainSize[0].offsetHeight;
+        mainSize = 200 + mainSize;
+
+        menu[0].style.minHeight = mainSize + "px";
+        
+        // Need to resize the whole content when no toc
+        var pageToc = "{{ page.toc }}";
+        pageToc = pageToc.toLowerCase();
+        var bodyMainContent = document.getElementsByClassName('maincontent');
+        var toc = document.getElementsByClassName('toc-parent');
+
+if(pageToc == 'false'){
+    toc[0].style.display = 'none';
+    bodyMainContent[0].style.width = '81%';
+  } else {
+    mainSize = mainSize - 100;
+    toc[0].style.height = mainSize + 'px';
+ }
+
+</script>
 </html>
