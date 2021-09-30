@@ -42,7 +42,7 @@
     <script type="text/javascript"  src="/assets/js/accordion-menu.js"></script>
     <script type="text/javascript"  src="/assets/js/toc.min.js"></script>
     <script>
-        var pageId = "{{ page.id }}";
+var pageId = "{{ page.id }}";
         if (!pageId || pageId.includes('/')){
             pageId = "{{ page.post_id }}"
         }
@@ -86,8 +86,9 @@
                     searchResultTemplate: '<li><a href="{url}" desc="{desc}" target="{target}">{title}</a></li>'
                 });
             }
-});
+            console.log($('.maincontent').height())
 
+});
 
   // This part will display the rest-apis or blogs menu
   // getting the divs first

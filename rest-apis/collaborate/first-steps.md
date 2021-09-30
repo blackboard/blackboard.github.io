@@ -64,11 +64,11 @@ The way Sessions and Instances co-exist and depend in one another, is that, When
 
 You have your course on learn with course id CS-PYTHON101 and you use the same course for all students, you also have a course room that is already setup on your course and ready to use.
 
-![Course Room view](/assets/img/collab-first-steps-01.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-01.png">
 
 From the course room, you can create new Sessions, this instructor decided to create only one session, open session for all the classes for all 3 groups. When the first student (or the instructor) joins to the session at 8:00 am (or before if early entry is enabled ) an instance of the session is created!, Then, when the last student leaves, there is a 5 minute "grace" period for the instance to be finished, then the instance is completed and stored.
 
-![Course Room view](/assets/img/collab-first-steps-02.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-02.png">
 
 ### Who
 
@@ -82,19 +82,19 @@ For this part, we have 3 concepts that need to be reviewed:
 
 This happens ONLY when you use the integrated enrollment tool within Blackboard Ultra, when using a course room, all the students within the course are automatically enrolled.
 
-![Course Room view](/assets/img/collab-first-steps-03.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-03.png">
 
 #### User
 
 This happens ONLY when you allow Guest Access, meaning that users will see a window asking for their name when using a guest link.
 
-![Course Room view](/assets/img/collab-first-steps-04.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-04.png">
 
 #### Attendee
 
 When an Enrolled user or an User join a Collaborate session, they both become attendees.
 
-![Course Room view](/assets/img/collab-first-steps-05.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-05.png">
 
 ### Optional attributes or characteristics
 
@@ -110,7 +110,7 @@ This is possible by using Context!
 
 Contexts allow you to group your sessions by a specific criteria, this is completely optional and when using Blackboard Collaborate integrated with Learn it is automatically populated with the course id data.
 
-![Course Room view](/assets/img/collab-first-steps-06.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-06.png">
 
 #### Recordings
 
@@ -122,7 +122,7 @@ Why? well, let's say you click on the record button on your current instance, bu
 
 Recording is completely optional!
 
-![Course Room view](/assets/img/collab-first-steps-07.png)
+<img class="responsive-img" src="/assets/img/collab-first-steps-07.png">
 
 ### Who OAC
 
@@ -141,7 +141,6 @@ These are some video resources that we have been working on to explain how REST 
 <div class="video-container">
 <iframe src="https://youtube.com/embed/videoseries?list=PLlarB4q95gffO4fomFZ1hpH2h2nNjIB-t" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 **Spanish (Some of them)**
 
