@@ -12,4 +12,4 @@ In August 2016, our friends at [AllTheDucks](https://www.alltheducks.com) presen
 
 Following DevCon ANZ, the Ducks were kind enough to open source their project and write a blog to help developers learn the Golang REST Application they wrote.
 
-The blog can be found [here](https://blog.alltheducks.com/post/go-rest).
+The blog can be found [here](https://www.alltheducks.com/blog/using-the-learn-rest-api-from-golang).
