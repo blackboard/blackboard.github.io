@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: post
 title: How to Create a User With Limited Entitlements For REST API Calls
 date: 2021-01-06 12:59
-category: announcement
+category: blog
 post_id: 20210106-howtocreatelimiteduser
 author: Mark Kauffman
 tags: ["rest", "learn", "api"]
