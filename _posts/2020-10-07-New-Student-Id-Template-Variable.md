@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: post
 title: Student Id Template Variable
 date: 2020-10-07 08:40
-category: announcement
+category: blog
 author: Mark Kauffman
 post_id: 2020-10-07-student_id_template_variable
 tags: ["learn", "template-variables"]

@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: post
 title: Caliper Documentation Updated for 1.1
 date: 2021-01-05 12:59
-category: announcement
+category: blog
 post_id: 20210105-caliperdocupdates
 author: Scott Hurrey
 tags: ["standards", "caliper", "update"]

@@ -1,11 +1,11 @@
 ---
-layout: blog
+layout: post
 title: DevCon 2020 By The Numbers
 date: August 03, 2020
 post_id: 20200803-devcon2020bythenumbers
 author: Scott Hurrey
 toc: false
-category: devcon
+category: blog
 tags: ["devcon", "community", "recap"]
 summary: DevCon 2020 is in the books, and what an amazing conference it was. This blog will start a weekly series in which everything Thursday, we will talk about DevCon from a content perspective.
 ---

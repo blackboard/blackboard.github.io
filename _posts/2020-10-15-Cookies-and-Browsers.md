@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Cookies and Browsers
 date: 2020-10-15 12:00
 category: blog

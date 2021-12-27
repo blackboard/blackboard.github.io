@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: SOAP EOL Explained
 date: 2020-12-16 12:00
 category: blog

@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Use One-Time Session Token to Authenticate with UEF
 date: 2021-05-10 16:13
 category: blog

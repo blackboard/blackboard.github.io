@@ -1,8 +1,8 @@
 ---
-layout: blog
+layout: post
 title: Ally as a Service and UEF Documentation now available
 date: 2020-09-03 12:40
-category: announcement
+category: blog
 post_id: 20200903-allyasaserviceanduefdocs
 author: Scott Hurrey
 tags: ["rest", "ally", "learn", "ultra", "uef"]
