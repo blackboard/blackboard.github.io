@@ -3,7 +3,6 @@ layout: post
 title: "Become a Partner!"
 id: partners-become_a_partner
 categories: Partners
-toc: false
 ---
 
 # Become a Partner!
