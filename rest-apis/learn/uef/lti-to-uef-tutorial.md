@@ -87,10 +87,10 @@ The next step is to clone the repository. You do not need a github account for t
 3. At the command-line, type: `git clone https://github.com/blackboard/BBDN-UEF-Python.git`
 4. Open this project in your favorite IDE
 5. In the app directory, there is a file called `ConfigTemplate.py`. Copy this file and paste it into the app directory. Rename it to `Config.py`. This **IS** case-sensitive.
-6. Replace learnURL with the URL to your Learn instance, without the `https://`
+6. Replace learnURL with the URL to your Learn instance, without the `https://` **<-Common Gotcha**
 7. Replace restKey with your REST application key.
 8. Replace restSecret with your REST application secret.
-9. Replace myUrl with the https ngrok link created in step 1. Include the `https://`
+9. Replace myUrl with the https ngrok link created in step 1. Include the `https://` **<-Common Gotcha**
 10. Save the file
 11. In the app directory, there is a file called `lti-template.json`. Copy this file and paste it into the app directory. Rename it to `lti.json`. This **IS** case-sensitive.
 12. Replace both instances of clientId with your application ID.
