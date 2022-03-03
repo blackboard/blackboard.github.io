@@ -4,7 +4,7 @@ title: "Mapping Entitlements to Privileges"
 id: rest_apis-learn-getting-started-entitlements
 categories: Learn REST
 author: Scott Hurrey
-toc: false
+toc: true
 ---
 
 # Bookmarklet To Help Map Entitlements To Permissions
