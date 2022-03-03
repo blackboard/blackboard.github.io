@@ -2,7 +2,7 @@
 layout: post
 parent: lti
 id: lti-proctoring-proctoring_service_tutorials
-toc: false
+toc: true
 ---
 
 # Ultra Proctoring Service Tutorials - IMS Proctoring Spec + UEF

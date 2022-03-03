@@ -4,7 +4,7 @@ title: "Configuring Ultra Extension Framework in Learn"
 purple-text-title: "Configuring Ultra Extension Framework in Learn"
 categories: Learn UEF
 id: rest_apis-learn-uef-configure
-toc: false
+toc: true
 ---
 
 # Configuring Ultra Extension Framework in Learn

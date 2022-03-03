@@ -4,7 +4,7 @@ title: "UEF Documentation"
 purple-text-title: "UEF Documentation"
 categories: Learn UEF
 id: rest_apis-learn-uef-documentation
-toc: false
+toc: true
 ---
 
 # UEF Documentation
