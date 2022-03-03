@@ -17,6 +17,8 @@ In case you were wondering, C.R.U.D means:
 - Update
 - Delete
 
+> Please remember to always use https://developer.blackboard.com/portal/displayApi as your first source
+
 # Groups in Ultra Experience (C.R.U.D)
 
 This is how the group manager looks like in ultra. The groups displayed here are group sets:
