@@ -56,7 +56,7 @@
               url: /rest-apis/learn/getting-started/tutorials
               id: rest_apis-learn-getting-started-tutorials
               target: _self
-            - subsubmenu_content_name: Wroking with Groups 
+            - subsubmenu_content_name: Working with Groups 
               url: /rest-apis/learn/getting-started/groups-and-rest-api
               id: rest_apis-learn-getting-started-groups-and-api
               target: _self
