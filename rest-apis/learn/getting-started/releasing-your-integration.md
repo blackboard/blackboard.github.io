@@ -38,7 +38,7 @@ Here are Three steps in releasing your integration:
 	
 	E.G: UserName: SuperSoftware Sudoku User
 
-		 Role Name: SuperSoftware Sudoku Role
+	Role Name: SuperSoftware Sudoku Role
 
 3. In YOUR documentation, you should provide a list of required privileges or entitlements for the integration User role.
 
@@ -49,7 +49,7 @@ E.G: You needed to find the entitlements (from the API documentation) and the Pr
 
 ### Some DON’Ts
 
-1. NEVER USE OR REQUIRE SYSTEM ADMINISTRATOR as your REST integration user
+1: NEVER USE OR REQUIRE SYSTEM ADMINISTRATOR as your REST integration user
 - This places your client at risk.
 - A discerning administrator will not install an integration requiring a Role of System Administrator.
 
