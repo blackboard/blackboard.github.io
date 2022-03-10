@@ -42,23 +42,22 @@ Here are Three steps in releasing your integration:
 
 3. In YOUR documentation, you should provide a list of required privileges or entitlements for the integration User role.
 
-	E.G: You needed to find the entitlements (from the API documentation) and the Privileges (from Learn) in order to develop and test your application with a non-system admin user. It is good practice to share those privileges with your client.
+E.G: You needed to find the entitlements (from the API documentation) and the Privileges (from Learn) in order to develop and test your application with a non-system admin user. It is good practice to share those privileges with your client.
 
-	Note that if your application is utilizing Three Legged OAuth - which uses the logged in user’s privileges - this step is not required.
-
+> Note that if your application is utilizing Three Legged OAuth - which uses the logged in user’s privileges - this step is not required.
 > It is strongly recommended that you include the above information in your client facing documentation.
 
 ### Some DON’Ts
 
 1. NEVER USE OR REQUIRE SYSTEM ADMINISTRATOR as your REST integration user
-	- This places your client at risk.
-	- A discerning administrator will not install an integration requiring a Role of System Administrator.
+- This places your client at risk.
+- A discerning administrator will not install an integration requiring a Role of System Administrator.
 
 2: NEVER ASK YOUR CLIENT TO INSTALL USING THEIR DEVELOPER PORTAL KEY:SECRET
-	- Keys and Secrets should never be shared.
-	- Keys and Secrets should never stored in remote systems. FWIW: the Developer Portal does not store them either.
-	- Production group settings are global to specific to integrations.
+- Keys and Secrets should never be shared.
+- Keys and Secrets should never stored in remote systems. FWIW: the Developer Portal does not store them either.
+- Production group settings are global to specific to integrations.
 
 ### Key Takeaways
-	- Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation. Blackboard nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.
-	- Following secure practices around key:secret management create a safer more secure www.
+- Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation. Blackboard nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.
+- Following secure practices around key:secret management create a safer more secure www.
