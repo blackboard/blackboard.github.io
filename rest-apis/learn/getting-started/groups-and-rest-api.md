@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Working with groups and the API"
-id: rest_apis-learn-getting-started-groups-and-api
+id: rest_apis-learn-getting_started-groups_and_api
 categories: Learn REST groups
 toc: True
 ---
