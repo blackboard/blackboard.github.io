@@ -11,7 +11,6 @@ toc: True
 > Using Bb Learn 3900.34.0-rel.24+41a9160
 
 ## Ultra courses
-
 First we need to see how this is displayed in the GUI, the release criteria or Release conditions is set when clicking under the button that usually says "Visible to students"
 
 ![Adaptive release conditions button in the GUI](/assets/img/adaptive-release-1.png)
@@ -49,7 +48,6 @@ For the rules you need course_id and Content_id
 You can create 1 rule per content_id!
 
 ### Creating a Rule
-
 To create a rule on a specific content id:
 
 - GET {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules
@@ -63,13 +61,11 @@ And in the body:
 ```
 
 ### Returning a Rule
-
 To obtain the rule that exist on a specific content id: 
 
 - GET {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules
 
 ### Updating a Rule
-
 To update a rule you can use (you need to know the rule id first): 
 
 - PATCH {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId
@@ -101,17 +97,14 @@ if you see a 409 conflict:
 Means the rule already exists, as I mentioned, one contentID can only have one rule.
 
 ### Deleting a rule
-
 You can also delete a rule easlily:
 
 - DELETE /learn/api/public/v1/courses/{courseId}/contents/{contentId}/adaptiveRelease/rules/{ruleId}
 
 ## Criteria (C.R.U.D)
-
 You can get all the criteria associated to a content_id using:
 
 ### Returning criteria
-
 - GET {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId/criteria
 
 You should get a result like this (may vary depending on the criteria that has already been setup):
@@ -135,7 +128,6 @@ You should get a result like this (may vary depending on the criteria that has a
 ```
 
 ### Using GradeRange
-
 This criteria specifies a gradable item, a maximun and a minimum score. When the item has been graded and the score is within the range, the content becomes available. A GradeRange criterion can be converted to a GradePercentage criterion by setting the Type to GradePercentage and 
 
 You can get the gradeColumn id using (you need the course_id):
@@ -195,7 +187,6 @@ Explaining the parameters a little bit further:
 Now, lets create the criteria:
 
 ### Creating new criteria
-
 You can create it using (You need course_id, contentId and ruleId):
 
 - POST {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId/criteria
@@ -256,14 +247,13 @@ So, this is basically the same as GradeRange, except that maxScore and minScore 
 ```
 
 ### Using DateRange
-
 Specifies a start and end dates. The content becomes available during the given date range.  
 
 This endpoint needs the following data:
 
-	1. Type -> ["DateRange"], inmutable 
-	2. startDate -> ISODate, Nullable
-	3. endDate -> ISODate, Nullable & endDate > startDate
+1. Type -> ["DateRange"], inmutable 
+2. startDate -> ISODate, Nullable
+3. endDate -> ISODate, Nullable & endDate > startDate
 
 Explaining the parameters a little bit further:
 
@@ -283,7 +273,6 @@ And the body looks like this:
   "startDate": null, 
   "endDate": "2021-03-12T22:00:00Z" 
 } 
-
 ```
 
 Similar to Grade criteria, any date can be explicitly set to null in the request body for both POST and PATCH requests. If “startDate” is set to null, it will be understood as “before endDate”. Similarly, if “endDate” is set to null that means “after startDate” with no particular limit. This comes useful particularly for PATCH requests, as one of the dates can be changed to null without recreating the object. If the value is omitted during creation, it will be set to null instead of having a default value. 
@@ -316,9 +305,7 @@ This means that content will be shown starting that date with no end date.
 
 
 ## Memberships
-
 ### About memberships
-
 By default, all members are selected to be affected by the criteria, however, it is possible to select specific Members or groups of the course to apply these rules on, Before we start talking about the membership criteria, if you've already applied membership criteria to the content and you call:
 
 - GET {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId/criteria
@@ -362,9 +349,7 @@ Returns:
 ```
 
 ## Users
-
 ### Getting the adaptive release users
-
 To get the users you need to now:
 
 1. Course_id
@@ -438,7 +423,7 @@ Returns:
 }
 ```
 
-The ID that you might need to grab is ```json "id": "_47939_1",```
+The ID that you might need to grab is "id": "_47939_1"
 
 Now to post it, we use PUT.
 
@@ -497,13 +482,11 @@ Returns:
 }
 ```
 ## Groups
-
 Since this guide has become a little bit longer than desired, you can check our approach on groups here: https://docs.blackboard.com/rest-apis/learn/getting-started/groups-and-rest-api
 
 Basically, you can create groups and associate them to adaptive release content, please keep in mind you cannot reference a group set, but groups within the set:
 
 ### Put Groups as criteria:
-
 - PUT {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId/criteria/:criterionId/groups
 
 And the body:
@@ -607,9 +590,7 @@ When you retrieve all the criterion related to a rule, you get the following:
 As you can see, the membership criteria has id _389_1, meaning that there is where all the membership criteria will be stored.
 
 ## Read Only Messages you might see
-
 ### ContentComplete (Ultra Only)
-
 This is a Special type of criteria only assigned to the child contents of a learning module, where the “Sequence” release condition can be activated. Each type of content has its own definition of what “complete” means. This behavior is not supported via public API.
 ```json
 {
@@ -619,7 +600,6 @@ This is a Special type of criteria only assigned to the child contents of a lear
 }
 ```
 ### GradeCompleted (Original Only)
- 
 Specifies a gradable item associated to a different content in the same course. Regardless of scores, if the grade item is deemed as completed, the content will become available.
 ```json
 {
@@ -630,7 +610,6 @@ Specifies a gradable item associated to a different content in the same course. 
 ```
 
 ### ContentReviewed (Original Only)
- 
 Specifies a content of the same course. The referenced content must be set to a “reviewed” status from entitled users for the content to become available.
 ```json
 {
