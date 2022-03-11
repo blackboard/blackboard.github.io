@@ -58,7 +58,11 @@
               target: _self
             - subsubmenu_content_name: Working with Groups 
               url: /rest-apis/learn/getting-started/groups-and-rest-api
-              id: rest_apis-learn-getting-started-groups-and-api
+              id: rest_apis-learn-getting_started-groups_and_api
+              target: _self
+            - subsubmenu_content_name: Adaptive Release
+              url: /rest-apis/learn/getting-started/adaptive-release
+              id: rest_apis-learn-getting_started-adaptive_release
               target: _self
 
         - subsubmenu_item: Admin
