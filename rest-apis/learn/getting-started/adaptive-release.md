@@ -32,7 +32,6 @@ Now let's move on to the REST API part
 
 ## Rules (C.R.U.D)
 
-
 First thing is first!
 
 A rule must be born. 
@@ -180,10 +179,10 @@ It returns the following when 200:
 
 This endpoint needs the following data:
 
-	1. Type -> ["GradeRange", "GradePercentage"], mandatory to pick one
-	2. GradeColumnId -> (string id from a specific grade column), mandatory
-	3. maxScore -> (float, nullable)
-    4. minScore ->  (float, nullable)
+1. Type -> ["GradeRange", "GradePercentage"], mandatory to pick one
+2. GradeColumnId -> (string id from a specific grade column), mandatory
+3. maxScore -> (float, nullable)
+4. minScore ->  (float, nullable)
     
 Explaining the parameters a little bit further:
 
@@ -368,10 +367,10 @@ Returns:
 
 To get the users you need to now:
 
-	1. Course_id
-	2. Content_id
-	3. Rule_id
-	4. Criterion_id (Membership)
+1. Course_id
+2. Content_id
+3. Rule_id
+4. Criterion_id (Membership)
 
 You can query using:
 
@@ -447,10 +446,10 @@ You need to pass the same information:
 
 - PUT {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId/criteria/:criterionId/groups
 
-	1. Course_id
-	2. Content_id
-	3. Rule_id
-    4. Criterion_id (Membership)
+1. Course_id
+2. Content_id
+3. Rule_id
+4. Criterion_id (Membership)
     
 Now, you need to use the following body format:
 
