@@ -1,0 +1,103 @@
+---
+layout: post
+title: "Working with Adaptive Release"
+id: rest_apis-learn-getting_started-adaptive_release
+categories: Learn REST groups
+toc: True
+---
+
+# Adaptive Release
+
+> Using Bb Learn 3900.34.0-rel.24+41a9160
+
+## Ultra courses
+
+First we need to see how this is displayed in the GUI, the release criteria or Release conditions is set when clicking under the button that usually says "Visible to students"
+
+![Adaptive release conditions button in the GUI](/assets/img/adaptive-release-1.png)
+
+When clicked, this displays several conditions:
+
+![Adaptive release conditions button in the GUI](/assets/img/adaptive-release-2.png)
+
+For all members, you can use additional conditions such as Date/Time and Performance, this also allows you to pick when will the content appear:
+
+![Adaptive release conditions button in the GUI](/assets/img/adaptive-release-3.png)
+
+It is also possible to release the content to specific members of the course or groups. 
+
+Note: We are aware that there is a known issue where, if you just enrolled a user (and haven't reloaded the page) the roster is not updated on adaptive release -> Specific memebers or groups -> Individual members and search for the user that has just been enrolled, the user does not show up, groups are correctly updated. To solve this, you can just reload the page and roster will be updated.
+
+Now let's move on to the REST API part
+
+## Rules (C.R.U.D)
+
+
+First thing is first!
+
+A rule must be born. 
+
+Yes, we need to create a rule that will contain our criteria (We assume the course and content has already been created), all rules depend on content, you need to create first content, then the rule, then criteria(optional) and define who will receive these rules.
+
+For specific messages that may be returned by the api, please review: https://developer.blackboard.com/portal/displayApi
+
+Also, please make sure to always review the entitlements required for each endpoint, you can check this document to get more information about entitlements: https://docs.blackboard.com/rest-apis/learn/getting-started/bookmarklet
+
+For the rules you need course_id and Content_id
+
+![Adaptive release conditions button in the GUI](/assets/img/adaptive-release-4.png)
+
+You can create 1 rule per content_id!
+
+### Creating a Rule
+
+To create a rule on a specific content id:
+
+- GET {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules
+
+And in the body:
+
+```json
+{
+    "title": "New rules"
+}
+```
+
+### Returning a Rule
+
+To obtain the rule that exist on a specific content id: 
+
+- GET {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules
+
+### Updating a Rule
+
+To update a rule you can use (you need to know the rule id first): 
+
+- PATCH {{baseUrl}}/learn/api/public/v1/courses/:courseId/contents/:contentId/adaptiveRelease/rules/:ruleId
+
+and in the body: 
+
+
+```json
+{
+    "title": "New rules"
+}
+```
+
+If everything goes well, you should see a 201:
+```json
+{
+    "id": "_349_1",
+    "title": "New rules"
+}
+```
+
+if you see a 409 conflict:
+```json
+{
+    "status": 409,
+    "message": "A rule already exists for content [_121047_1]"
+}
+```
+Means the rule already exists, as I mentioned, one contentID can only have one rule.
+
