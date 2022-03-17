@@ -56,12 +56,16 @@
               url: /rest-apis/learn/getting-started/tutorials
               id: rest_apis-learn-getting-started-tutorials
               target: _self
-            - subsubmenu_content_name: Working with Groups 
+            - subsubmenu_content_name: Working with Groups and REST API
               url: /rest-apis/learn/getting-started/groups-and-rest-api
               id: rest_apis-learn-getting_started-groups_and_api
-            - subsubmenu_content_name: Adaptive Release
+            - subsubmenu_content_name: Working with Adaptive Release and REST API
               url: /rest-apis/learn/getting-started/adaptive-release
               id: rest_apis-learn-getting_started-adaptive_release
+              target: _self
+            - subsubmenu_content_name: Working with content and REST API
+              url: /rest-apis/learn/getting-started/creating-content
+              id: rest_apis-learn-getting_started-creating_content_with_API
               target: _self
               
         - subsubmenu_item: Admin
