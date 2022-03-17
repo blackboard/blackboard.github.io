@@ -23,6 +23,8 @@ integration on your, the Blackboard client, behalf. Questions regarding the
 policy and whether you are impacted may be asked here, or posted to
 [developers@blackboard.com](mailto:developers@blackboard.com).
 
+> Rate Limits: By default you get 10.000 calls every 24 hours per site. If you need more, follow the instructions in last two sections of this page.
+
 ### Developer Groups
 
 You manage control of an application using developer groups. When you create
@@ -69,13 +71,13 @@ the developer._
 
 ### Rate Limits
 
-> We provide by default 10.000 calls every 24 hours.
+> We provide by default 10.000 calls every 24 hours. If you need more, follow the instructions in last section of this page.
 
 A rate limit is the number of API requests that can come each day from
 applications that are registered to your developer group. For example, if you
 have a 100K limit and three applications, each application will use a portion
-of that 100K limit. You can monitor the number of requests used so far at an
-application level using the http headers provided in each request response.
+of that 100K limit. *Your application should monitor the number of requests used so far at an
+application level using the http headers provided in each request response.* Inform your user when your application stops or is about to stop working because it hit the rate limit.
 
 | HTTP Header            | Description                                                                  |
 | ---------------------- | ---------------------------------------------------------------------------- |
