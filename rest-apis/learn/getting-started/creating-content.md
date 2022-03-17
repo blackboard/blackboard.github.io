@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Creating content witn REST-PAI"
-id: rest_apis-learn-getting_started-creating_content
+title: "Creating content witn REST-API"
+id: rest_apis-learn-getting_started-creating_content_with_API
 categories: Learn REST API Content
 toc: True
 ---
