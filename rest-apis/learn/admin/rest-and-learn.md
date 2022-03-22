@@ -46,7 +46,7 @@ the permissions that the integration needs to function properly.
 
   4. For third-party integration, set **End User Access** to Yes. End users will sign in with their own Blackboard Learn ID to use the integration. Each user's access is then limited to his or her own permissions. If you set End User Access to No, the integration always has access as if it were the Blackboard Learn user indicated on the form.
   5. **Submit** to save your settings for the integration.
-  6. Select the Learn user in whose name the application acts. This user must have the entitlements required by the REST Application. For more information about identifying required entitlements, see _Converting Documented Entitlements to GUI Privileges_, below.  
+  6. Select the Learn user in whose name the application acts. This user must have the entitlements required by the REST Application. For more information about identifying required entitlements, see _Converting Documented Entitlements to GUI Privileges_, below. Note that the Institution role of this user has no impact on the entitlements, only the privileges on the user's System role. 
 
 Learn user entitlements are allow a REST application to act in your Learn
 environment. The best practice is to restrict these except as necessary to
