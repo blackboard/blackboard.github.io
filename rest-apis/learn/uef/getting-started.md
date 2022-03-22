@@ -40,6 +40,6 @@ We gave several partners early access to the UEF. The following videos are examp
 
   - [Screenshots](http://images.email.blackboard.com/Web/BlackboardInc/%7Baffc825e-e416-4c69-aa09-69cf160a5a57%7D_QwicklyUEFscreenshots.pdf)
 
-If you are a developer and interested in pursuing use of the UEF Premium APIs in your integration with the Blackboard Learn Ultra Experience, what are your next steps? Send an email to BbPartnerTeam <bbpartnerteam@blackboard.com> with the subject "Interested in Partnership That Includes Premium API Access." Ask for time to discuss such with a member of our partnership team.
+If you are a developer and interested in pursuing use of the UEF Premium APIs in your integration with the Blackboard Learn Ultra Experience, what are your next steps? Send an email to BbPartnerTeam <bbpartnerteam@blackboard.com> with the subject "Interested in Partnership That Includes Premium API Access." Ask for time to discuss such with a member of our partnership team. Note that if you are a partner with a partnership-level of Bronze or higher, or you are a client, then you can simply file a Behind the Blackbaord ticket requesting UEF access. In the ticket include the email used to register the REST application, and the name of the group where you will place applications that you want UEF enabled.
 
 Check back here often as this page will be updated frequently with more details.
