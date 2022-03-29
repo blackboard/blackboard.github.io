@@ -20,7 +20,7 @@ Note that Blackboard Learn supports two versions of LTI:
     1. LTI 1.1
     2. LTI 1.3/Advantage
 
-This getting started guide is focused on LTI 1.3/Advantage. LTI 1.1 has been deprecated by the IMS Global, and it's been around for over 10 years. If you are building a new tool, please use LTI 1.3/Advantage.
+This getting started guide is focused on LTI 1.3/Advantage. LTI 1.1 has been deprecated by the IMS Global, and it's been around for over 10 years. Blackboard will continue support of LTI 1.1 tools for the indeterminate future while LTI 1.1 tool developers migrate their tool to LTI 1.3/Advantage. If you are building a new tool, it is ***strongly recommended*** you use LTI 1.3/Advantage.
 
 ### LTI 1.3/Advantage
 
