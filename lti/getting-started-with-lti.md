@@ -24,7 +24,7 @@ This getting started guide is focused on LTI 1.3/Advantage. LTI 1.1 has been dep
 
 ### LTI 1.3/Advantage
 
-The link above takes you to the IMS Global page for LTI Advantage. LTI Advantage consists of the following four specifications:
+LTI Advantage consists of the following four specifications:
 
     1. LTI Core (AKA LTI 1.3)
     2. Deep Linking
@@ -41,11 +41,20 @@ Start with the IMS Security Framework here <https://www.imsglobal.org/ims-securi
 
 Continue with the LTI Advantage specs here <https://www.imsglobal.org/activity/learning-tools-interoperability>
 
+The implementation guide is very helpful as well <https://www.imsglobal.org/spec/lti/v1p3/impl/>
+
 You can test your tool with the IMS LTI Reference Implementation here: <https://lti-ri.imsglobal.org/>. It is written in Ruby and is open source.
 
 We have a sample LTI tool written in React and Node.js which we discuss in a later section.
 
-For IMS members there are other LTI resources here: <https://github.com/IMSGlobal/ltibootcamp>
+There are other LTI resources here: <https://github.com/IMSGlobal/ltibootcamp>
+
+### Building an LTI 1.3 Application
+
+Please see this guide for a recipe on building an LTI 1.3 application. Note that you can develop and LTI application in any programming language and framework, and deploy it to any cloud service provider.
+We cannot provide guidance on what technologies or hosting platforms to use, but we will cover all the steps required for building an application.
+
+[Tool Implementation Guide](/lti/tutorials/implementation-guide)
 
 ### Registering Your Application
 
