@@ -45,20 +45,19 @@ The implementation guide is very helpful as well <https://www.imsglobal.org/spec
 
 You can test your tool with the IMS LTI Reference Implementation here: <https://lti-ri.imsglobal.org/>. It is written in Ruby and is open source.
 
-We have a sample LTI tool written in React and Node.js which we discuss in a later section.
+We have a sample LTI tool written in React and Node.js which we discuss in a later section. That can be found here:
+<https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node>
 
 There are other LTI resources here: <https://github.com/IMSGlobal/ltibootcamp>
 
 ### Building an LTI 1.3 Application
 
-Please see this guide for a recipe on building an LTI 1.3 application. Note that you can develop and LTI application in any programming language and framework, and deploy it to any cloud service provider.
+Please see this guide for a recipe on building an LTI 1.3 application. Note that you can develop an LTI application in any programming language and framework, and deploy it to any cloud service provider.
 We cannot provide guidance on what technologies or hosting platforms to use, but we will cover all the steps required for building an application.
 
 [Tool Implementation Guide](/lti/tutorials/implementation-guide)
 
 ### Registering Your Application
-
-We will go into detail on how to develop an LTI Advantage application in another section, but there are many resources avaiable on how to build an application in the programming language of your choice.
 
 In this section we cover how you register your application with Blackboard and deploy it to a Learn instance. Registration and deployment are not covered in the specification (yet), and each LMS vendor handles it slightly differently.
 
@@ -66,7 +65,7 @@ In this section we cover how you register your application with Blackboard and d
 
 The first thing to understand about registering your application is that Blackboard has you register your tool **ONCE** with our developer portal here <https://developer.blackboard.com>. This is a central, self-service application, running in AWS where you enter information about your application, and are given the values you need for your application to work with LTI Advantage and Learn. It is also the same place you get the ID, key, and secret if you are going to use our public REST API.
 
-**NOTE:** Do not ask institutions to register your tool with the Blackboard Developer Portal. You register it **ONCE** with Blackboard and institutions can deploy it with the Client ID you give them.
+**NOTE:** Do not ask institutions to register your tool with the Blackboard Developer Portal. You register it **ONCE** with Blackboard and institutions can deploy it with the Client ID you give them. They will receive a Deployment ID which they will exchange with you to set up the account. It is the deployment ID, in conjunction with the client ID and issuer, that uniquely identifies the business agreement between the tool vendor and the institution.
 
 #### Information you Provide
 
