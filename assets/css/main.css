@@ -102,9 +102,16 @@ header {
   z-index: 999;
 }
 
+#anthologylogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+}
+
 #anthologylogoheader {
-  height: 20x;
-  margin: 22px 0px 0px 30px;
+  margin: auto;
+  display: block;
 }
 
 #dev-docs-span-text {
@@ -1345,3 +1352,18 @@ a.purple-text:hover {
     width: 70% !important;
   }
 }
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+

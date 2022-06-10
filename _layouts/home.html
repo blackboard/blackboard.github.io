@@ -3,33 +3,41 @@
 <main class="homeContent">
   <div class="home-main">
     <div class="home-mainheader">
-      <div>put scaled ANTHOLOGY-Logo-RGB.png here centered horiz and vert to left of the DevDoc div</div>
+      <div class="home-left">
+        <div class="anthologylogo">
+          <img id="anthologylogoheader" src="/assets/img/ANTHOLOGY-Logo-RGB.svg"/>
+        </div>
+      </div>
       <div class="home-right">
         <h1 id="home-title">Developer Documentation</h1>
         <div class="center-content">
-        <p>
-          Explore the latest Anthology developer documentation, including
-          tutorials, sample code, articles, and API reference.
-        </p>
-        <div class="input-and-icon">
-          <div id="search-container">
-            <i class="material-icons prefix">search</i>
-            <input id="search-input" class="home-search" type="text" title="Search" placeholder="Search" autocomplete="off" />
-            <ul id="results-container"></ul>
+          <p>
+            Explore the latest Anthology developer documentation, including tutorials, sample code, articles, and API reference.
+          </p>
+          <div class="input-and-icon">
+            <div id="search-container">
+              <i class="material-icons prefix">search</i>
+              <input id="search-input" class="home-search" type="text" title="Search" placeholder="Search" autocomplete="off" />
+              <ul id="results-container"></ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </br>
     <div class="clearfix"></div>
     <div class="home-secondPart">
       <div>
         <hr>
-        <p class="spacey-p"> Use the Anthology REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
+        <p class="spacey-p"> Use Anthology REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
         <div class = "row">
          <div class="col s4">
            <img class="responsive-img" src="/assets/img/learndevdocs.png" alt="Screenshot for the course content view of the Learn Platform." >
            <h6><b>Learn</b></h6>
-           <p>Take advantage of our LMS' capabilities by using the API to create users, pull assessments, grade data, manage calendars, and more. </p>
+           <p>Take advantage of our LMS' capabilities by using the API to create users, pull assessments, grade data, manage calendars, and more. 
+          </br>
+           </br>
+           </p>
            <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://developer.blackboard.com/portal/displayApi" target="_blank">Explore Learn API</a>
            <div class="home-rest-apis-ul">
              <ul>
@@ -41,7 +49,7 @@
          <div class="col s4">
            <img class="responsive-img" src="/assets/img/studentdevdocs.png" alt="The Anthology Student Logo.">
            <h6><b>Student</b> </h6>
-           <p>Create integrations across different platforms, applica-ations, and systems using Student APIs to increase institution efficiency through automation and optimization.
+           <p>Create integrations across different platforms, applications, and systems using Student APIs to increase institution efficiency through automation and optimization.
            </p>
            <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://ultra-us-prod-csa.bbcollab.cloud/swagger/" target="_blank">Explore Student API</a>
            <div class="home-rest-apis-ul">
@@ -53,7 +61,8 @@
          <div class="col s4">
            <img class="responsive-img" src="/assets/img/allydevdocs.png" alt="Screenshot showing an image of the Large Hadron Collider. The image is missing a description which results in a 25% accessibility score.">
            <h6><b>Ally</b></h6>
-           <p>Help instructors improve the accessibility of their content by using the API to upload files, check the status, and retrieve reports. </p>
+           <p>Help instructors improve the accessibility of their content by using the API to upload files, check the status, and retrieve reports. </br>
+           </br></p>
              <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://developer.blackboard.com/portal/displayApi/Ally" target="_blank">Explore Ally API</a>
              <div class="home-rest-apis-ul">
                <ul>
@@ -88,12 +97,13 @@
   </div>
   <div class="home-rest-apis hidden">
    <h1><b>REST APIs</b></h1>
-   <p class="spacey-p"> Use the Anthology REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
+   <p class="spacey-p"> Use Anthology REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
    <div class = "row">
     <div class="col s4">
       <img class="responsive-img" src="/assets/img/learndevdocs.png" alt="Screenshot for the course content view of the Learn Platform." >
       <h6><b>Learn</b></h6>
-      <p>Take advantage of our LMS' capabilities by using the API to create users, pull assessments, grade data, manage calendars, and more. </p>
+      <p>Take advantage of our LMS' capabilities by using the API to create users, pull assessments, grade data, manage calendars, and more. </br>
+      </br></p>
       <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://developer.blackboard.com/portal/displayApi" target="_blank">Explore Learn API</a>
       <div class="home-rest-apis-ul">
         <ul>
@@ -105,7 +115,7 @@
     <div class="col s4">
       <img class="responsive-img" src="/assets/img/studentdevdocs.png" alt="The Anthology Student Logo.">
       <h6><b>Student</b> </h6>
-      <p>Create integrations across different platforms, applica-ations, and systems using Student APIs to increase institution efficiency through automation and optimization.
+      <p>Create integrations across different platforms, applications, and systems using Student APIs to increase institution efficiency through automation and optimization.
       </p>
       <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://ultra-us-prod-csa.bbcollab.cloud/swagger/" target="_blank">Explore Student API</a>
       <div class="home-rest-apis-ul">
@@ -117,7 +127,8 @@
     <div class="col s4">
       <img class="responsive-img" src="/assets/img/allydevdocs.png" alt="Screenshot showing an image of the Large Hadron Collider. The image is missing a description which results in a 25% accessibility score.">
       <h6><b>Ally</b></h6>
-      <p>Help instructors improve the accessibility of their content by using the API to upload files, check the status, and retrieve reports. </p>
+      <p>Help instructors improve the accessibility of their content by using the API to upload files, check the status, and retrieve reports. </br>
+      </br></p>
         <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://developer.blackboard.com/portal/displayApi/Ally" target="_blank">Explore Ally API</a>
         <div class="home-rest-apis-ul">
           <ul>
@@ -126,12 +137,22 @@
         </div>
     </div>
    </div>
+   <hr>
+   <h2 class="home-h2">On REST APIs from our blog:</h2>
+   <ul>
+     {% assign sorted-posts = site.posts | where: "tags","rest" %}
+     {% for post in sorted-posts limit:5 %}
+     <li>
+       <a href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+   </ul>
+
   </div>
   
   <div class="home-blogs hidden">
     <h1>Developer blog</h1>
     <h2>Latest Posts</h2>
-
           {% assign rows = site.posts.size | divided_by: 2.0 | ceil %}
             {% for i in (1..rows) %}
           {% assign offset = forloop.index0 | times: 2 %}
