@@ -1180,6 +1180,8 @@ a.purple-text:hover {
 
 .spacey-p {
   margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 150%;
 }
 
 .home-secondary-buttons-black {
