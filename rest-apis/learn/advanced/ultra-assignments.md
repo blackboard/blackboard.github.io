@@ -10,7 +10,7 @@ author: Ryan Haber
 
 ### Overview
 
-Blackboard Learn Ultra experience offers a REST API for managing assessments.
+Learn Ultra experience offers a REST API for managing assessments.
 In Ultra, an assessment is effectively the same thing as an assignment except
 for how they are stored internally. In an assessment, there are questions of
 various types. Each 'question' is a slot for content that may not actually
@@ -48,10 +48,10 @@ that you intend to use to create the object.
 
 Use these objects to further manage the assignment that you created.
 
-### Upload a File to Blackboard Learn
+### Upload a File to Learn
 
 Before you can use a file with a REST API call, you must use an API upload it
-to Blackboard Learn.
+to Learn.
 
 1. Make a POST request to /learn/api/public/v1/uploads.
 2. Use the ID number in the response to further access the uploaded file.

@@ -12,7 +12,7 @@ author: Ryan Haber
 ### Overview
 
 Your institution often needs to manage many courses or sections together. The
-mechanism that Blackboard Learn provides for doing this is referred to as
+mechanism that Learn provides for doing this is referred to as
 course merging or cross-listing. Merged and cross-listed courses are, under
 the hood, the same thing: two or more courses in a parent-child relationship.
 A course set is a parent course together with all its child courses. In
@@ -22,10 +22,10 @@ and place as determined by the registrar and they receive instruction from the
 same instructor(s). All students in the child courses have access to the same
 online content.
 
-Blackboard Learn synchronizes enrollments in child courses with their parent
+Learn synchronizes enrollments in child courses with their parent
 course. Users enrolled in a child course thus have access to the content of
 the parent course. Likewise, when you use management tools in a parent course,
-you will also affect users enrolled in its children courses. Blackboard Learn
+you will also affect users enrolled in its children courses. Learn
 preserves user roles from the last time a user is enrolled into any of the
 courses in the course set. A student can only exist in one course in a course
 set; Learn ignores duplicate enrollments.
@@ -36,7 +36,7 @@ Users with administrative entitlements can merge courses.
 
 You need an authentication token from a user with administrative entitlements
 to merge courses. For a complete list of specific requirements for any
-particular method, see the [Blackboard Learn API
+particular method, see the [Learn API
 reference](https://community.blackboard.com/external-link.jspa?url=https%3A/
 /developer.blackboard.com/portal/displayApi/Learn).
 

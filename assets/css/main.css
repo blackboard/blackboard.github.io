@@ -102,9 +102,16 @@ header {
   z-index: 999;
 }
 
-#bblogoheader {
-  height: 20x;
-  margin: 22px 0px 0px 30px;
+#anthologylogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+}
+
+#anthologylogoheader {
+  margin: auto;
+  display: block;
 }
 
 #dev-docs-span-text {
@@ -112,6 +119,7 @@ header {
   font-size: 18px;
   color: white;
   margin-left: 5px;
+  text-align: center;
 }
 .header-buttons {
   float: right;
@@ -268,6 +276,7 @@ header {
   margin: 0px;
   float: left;
   width: 30%;
+  height: auto;
   margin-left: 5%;
 }
 .home-right {
@@ -1178,6 +1187,8 @@ a.purple-text:hover {
 
 .spacey-p {
   margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 150%;
 }
 
 .home-secondary-buttons-black {
@@ -1341,3 +1352,18 @@ a.purple-text:hover {
     width: 70% !important;
   }
 }
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+

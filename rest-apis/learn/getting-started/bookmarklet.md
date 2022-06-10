@@ -29,4 +29,4 @@ And here is a screen shot after running this script:
 
 As you can see the entitlement is now listed under the role. So now you can simply find the entitlement you are looking for in swagger, and ctrl-f/cmd-f to search for it here. Much easier than before.
 
-As a side effect, you can use this on any page in Blackboard Learn and get useful information. As an example, search for courses or user, and now you can use this script to find out the objects pk1 value.
+As a side effect, you can use this on any page in Learn and get useful information. As an example, search for courses or user, and now you can use this script to find out the objects pk1 value.

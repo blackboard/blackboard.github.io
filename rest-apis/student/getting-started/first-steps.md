@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "First Steps with Learn REST API"
+title: "First Steps with Student REST API"
 id: rest_apis-learn-getting-started-first-steps
 categories: Learn REST
 author: Scott Hurrey
 ---
 
-# First Steps with Learn REST API
+# First Steps with Student REST API
 
 Anthology offers a suite of education technology tools, both software and
 hardware. REST stands for **Re**presentational **S**tate **T**ransfer. It is a

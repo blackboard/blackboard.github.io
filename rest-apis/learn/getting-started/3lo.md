@@ -16,7 +16,7 @@ actually allows for much more granular access control. Rather than a system
 user acting as someone that can modify all courses, the application is now
 acting as Professor X, and as such, only has access to his or her courses.
 
-As of Blackboard Learn 3200.7 (SaaS deployed release), third-party REST
+As of Learn 3200.7 (SaaS deployed release), third-party REST
 applications now have the ability to implement 3LO to authorize a user against
 the APIs and act as that user. In the spirit of sharing pretty pictures, here
 is a nice diagram displaying the workflow:
@@ -49,7 +49,7 @@ state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0
 ```
 
 The result of this action is that Marlee is presented with her school's
-Blackboard Learn login screen. She logs in and is presented with the following
+Learn login screen. She logs in and is presented with the following
 screen, asking her to authorize the application.
 
 ![3-loauth-screenshot](/assets/img/3loauthscreenshot.png)
@@ -89,13 +89,13 @@ as Marlee.
 
 As mentioned above, one of the available scopes that an application can
 request is offline. Essentially, the offline scope allows an application to
-access Blackboard Learn as a user without requiring the user to login each
+access Learn as a user without requiring the user to login each
 time. This might be especially useful in a mobile application to prevent the
 unnecessary redirects each time an application is loaded. The way this works
 is through the use of refresh tokens.
 
 The first time a user accesses the application and the normal 3LO process
-takes place. The user is redirected to Blackboard, they login and authorize,
+takes place. The user is redirected to Learn, they login and authorize,
 and then the application is off an running. The difference is that a refresh
 token is returned in addition to the Bearer token. From this point forward,
 the third party application can automatically request a new bearer token by
@@ -113,7 +113,7 @@ as Marlee.
 
 ### Use Proof Key for Code Exchange (PKCE) with 3-Legged OAuth 2.0
 
-Starting in version 3700.4, Blackboard Learn's 3-Legged OAuth 2.0
+Starting in version 3700.4, Learn's 3-Legged OAuth 2.0
 implementation supports the Proof Key for Code Exchange (PKCE) extension. For
 more information about PKCE, see [OAuth 2.0's RFC 7636: Proof Key for Code Exchange](https://oauth.net/2/pkce).
 

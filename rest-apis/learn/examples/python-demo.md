@@ -16,7 +16,7 @@ discovering, and deleting supported Learn objects.
 
 - You must [register a developer account and application](/rest-apis/learn/getting-started/registry) in the Developer Portal
 - You must
-  [register your application](/rest-apis/learn/admin/rest-and-learn) in Blackboard Learn
+  [register your application](/rest-apis/learn/admin/rest-and-learn) in Learn
 - You must also configure the script as outlined in the README for the project
 
 This webapp allows you to:
@@ -41,11 +41,11 @@ This help topic assumes the Developer:
 
 - Is familiar with Python
 - Has obtained a copy of the[ source code](https://github.com/blackboard/BBDN-REST-DEMO_Python) and run as noted in the project [README.md](https://github.com/blackboard/BBDN-REST-DEMO_Python/blob/master/README.md) file.
-- Has a REST-enabled Blackboard Learn instance.
+- Has a REST-enabled Learn instance.
 
 ### Code Walkthrough
 
-To build an integration with the Blackboard REST Web Services, regardless of
+To build an integration with the Learn REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
 1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) document.

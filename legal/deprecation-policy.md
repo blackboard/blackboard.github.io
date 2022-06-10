@@ -108,7 +108,7 @@ Where appropriate, we follow the Robustness Principle. This means that in some
 cases, an API determines how to handle a request based only on the parts that
 it recognizes. There are some notable exceptions.
 
-* Blackboard Learn ignores request query parameters that it does not recognize.
+* Learn ignores request query parameters that it does not recognize.
 * Property fields of structured data submitted via mutative requests that are not recognized by the server result in a 400 response. This includes fields deprecated in prior versions of an API.
 
 ## Deprecation
@@ -132,7 +132,7 @@ relevant channels. This includes:
 We will give developers the longest possible notice of deprecations to
 publicly accessible REST APIs. We maintain deprecated REST APIs in their
 original forms for at least 1 year. Deprecations take effect with the
-Blackboard Learn semi-annual releases for self-hosted and managed-hosting
+Learn semi-annual releases for self-hosted and managed-hosting
 customers. Exceptions to this policy apply in case of critical security
 vulnerabilities or functional defects.
 

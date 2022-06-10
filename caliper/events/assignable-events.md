@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Assignable Events
 
-Blackboard Learn's Caliper Analytics stream emits an AssignableEvent in four
+Learn's Caliper Analytics stream emits an AssignableEvent in four
 cases:
 
 - **A student starts an assignment**

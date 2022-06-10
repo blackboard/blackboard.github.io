@@ -13,12 +13,12 @@ toc: false
 
 This article is to help Learn administrators ensure that a custom SSO login page works with REST 3LO applications. Several clients have reported that when trying to complete the following workflow with a 3rd-party REST Application their users get stuck on the Learn landing page. Expected 3-legged authentication workflow:
 
-1. Access a 3rd-party application that has a REST integration with a Blackboard Learn system (App).
-2. Use functionality on the App that requires a login to Blackboard Learn. (Performs an /authorizationcode REST Request)
-3. Login to Blackboard Learn via a custom login .jsp page.
-4. Get redirected to back the App. The App can now make REST requests to the Blackboard Learn system.
+1. Access a 3rd-party application that has a REST integration with a Learn system (App).
+2. Use functionality on the App that requires a login to Learn. (Performs an /authorizationcode REST Request)
+3. Login to Learn via a custom login .jsp page.
+4. Get redirected to back the App. The App can now make REST requests to the Learn system.
 
-When the custom login .jsp page is not built to take the 3LO process into account, the user logs into Blackboard Learn and 'sticks' on their Learn landing page. They are never redirected back to the App.
+When the custom login .jsp page is not built to take the 3LO process into account, the user logs into Learn and 'sticks' on their Learn landing page. They are never redirected back to the App.
 
 #### What Went Wrong
 
@@ -32,6 +32,6 @@ As mentioned in the video, when the custom login .jsp uses the \<loginUI:loginFo
 
 Note that you may also need to study how your SSO system needs to be configured to pass through parameters. Such is out of the scope of this document - which is only meant to describe the requirements for your custom login page.
 
-_**Key takeaway:**_ A custom login page can work with REST API integrations only if the Blackboard-provided <loginUI:loginForm/> tag is used to generate the link a user access to sign in. You may customize how that looks with some CSS, but you can never use other HTML to provide the user a login link.
+_**Key takeaway:**_ A custom login page can work with REST API integrations only if the Learn-provided <loginUI:loginForm/> tag is used to generate the link a user access to sign in. You may customize how that looks with some CSS, but you can never use other HTML to provide the user a login link.
 
 \*Credits to Chris Bray from the University of Arkansas for the UARKexampleCustomLogin.jsp example and Dan Gioia of St. Louis Community College for much of the CSS Chris used in the .jsp. Thank you both!

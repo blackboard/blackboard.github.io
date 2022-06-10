@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Session Events
 
-Blackboard Learn's Caliper Analytics stream emits a SessionEvent to cover
+Learn's Caliper Analytics stream emits a SessionEvent to cover
 three use cases:
 
 - **User logs in**

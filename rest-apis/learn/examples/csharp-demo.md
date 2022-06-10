@@ -16,7 +16,7 @@ discovering, and deleting supported Learn objects
 
 - You must [register a developer account and application](/rest-apis/learn/getting-started/registry) in the Developer Portal
 - You must
-  [register your application](/rest-apis/learn/getting-started/rest-and-learn) in Blackboard Learn
+  [register your application](/rest-apis/learn/getting-started/rest-and-learn) in Learn
 - You must also configure the script as outlined in the README for the project
 
 ### Overview
@@ -44,11 +44,11 @@ This help topic assumes the Developer:
 - is familiar with C#
 - has installed Microsoft Visual Studio
 - has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-CSharp) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-CSharp/blob/master/README.md) file.
-- has a REST-enabled Blackboard Learn instance, like the [Developer AMI](/rest-apis/learn/sandbox/developer-ami).
+- has a REST-enabled Learn instance, like the [Developer AMI](/rest-apis/learn/sandbox/developer-ami).
 
 ### Code Walkthrough
 
-To build an integration with the Blackboard REST Web Services, regardless of
+To build an integration with the Learn REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
 1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) document.

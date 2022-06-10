@@ -9,11 +9,11 @@ toc: true
 
 # Configuring Ultra Extension Framework in Learn
 
-The Ultra Extension Framework (UEF) encompasses a broad array of features and functionality, and as such, each UEF-enabled integration will have its own specific configuration settings. However, the setup process followed by a Blackboard Learn System Administrator leverages existing standard configuration workflows already in place. Adding a UEF-enabled integration to a Blackboard Learn environment requires a System Admin to make configuration changes to one or more of the following areas:
+The Ultra Extension Framework (UEF) encompasses a broad array of features and functionality, and as such, each UEF-enabled integration will have its own specific configuration settings. However, the setup process followed by a Learn System Administrator leverages existing standard configuration workflows already in place. Adding a UEF-enabled integration to a Learn environment requires a System Admin to make configuration changes to one or more of the following areas:
 
 **REST API Integrations**: UEF-enabled integrations will need to be added as a REST API integration [Administrator Panel ⇨ REST API Integrations ⇨ Create Integration].
 
-<img alt="Create a REST API Integration in Blackboard Learn" src="/assets/img/1RestAPIintegrations.png" width="50%" />
+<img alt="Create a REST API Integration in Learn" src="/assets/img/1RestAPIintegrations.png" width="50%" />
 
 **LTI Tool Providers**: UEF-enabled integrations will need to be registered as an LTI Tool Provider. We recommend using LTI 1.3, though LTI 1.1 will work.
 
@@ -46,6 +46,6 @@ The Tool Provider Key and Tool Provider Secret would be the ones given by the de
 
 <img alt="Create LTI Placement" src="/assets/img/4CreatePlacement.png" width="50%" />
 
-Cross-Origin Resource Sharing: For UEF-enabled integrations that make direct calls to their Blackboard Learn instance's REST API will need be be configured via the Cross-Origin Resource Sharing (CORS) tool [Administrator Panel ⇨ Cross-Origin Resource Sharing ⇨ Create Configuration].
+Cross-Origin Resource Sharing: For UEF-enabled integrations that make direct calls to their Learn instance's REST API will need be be configured via the Cross-Origin Resource Sharing (CORS) tool [Administrator Panel ⇨ Cross-Origin Resource Sharing ⇨ Create Configuration].
 
 <img alt="Cross Origin Resource Sharing Configuration" src="/assets/img/5CORSSharing.png" width="50%" />

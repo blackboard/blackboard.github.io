@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Blackboard Dev docs"
+title: "Anthology Dev docs"
 email: "developers@blackboard.com"
 description: "This site has been created in order to allow our Client's developers to review our documentation and APIs to develop awesome new applications!"
 baseurl: "" # the subpath of your site, e.g. /blog
