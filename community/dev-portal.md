@@ -8,7 +8,7 @@ author: Hernan Ortiz
 
 # Getting started with the Dev Portal
 
-The [Developer Portal](https://developer.blackboard.com/){: target='\_blank'} allows you to register your own applications so they can work with Blackboard products. Here’s how you can get your API or LTI keys to authenticate your application and take advantage of the Blackboard platform.
+The [Developer Portal](https://developer.blackboard.com/){: target='\_blank'} allows you to register your own applications so they can work with Anthology products. Here’s how you can get your API or LTI keys to authenticate your application and take advantage of the Anthology platform.
 
 ## How to sign up
 

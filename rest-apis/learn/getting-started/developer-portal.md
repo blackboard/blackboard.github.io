@@ -10,5 +10,5 @@ toc: false
 
 If you want to see the developer portal on its source please click [here](https://developer.blackboard.com){: target="\_blank"}
 
-<iframe class="swagger" src="https://developer.blackboard.com" title="Blackboard Learn API">
+<iframe class="swagger" src="https://developer.blackboard.com" title="Learn API">
 </iframe>

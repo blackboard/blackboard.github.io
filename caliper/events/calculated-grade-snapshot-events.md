@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Calculated Grade Snapshot Events
 
-Blackboard Learn's Caliper Analytics stream emits a CalculatedGradeSnapshotEvent nightly for any grade that is recalculated.
+Learn's Caliper Analytics stream emits a CalculatedGradeSnapshotEvent nightly for any grade that is recalculated.
 
 Here is some of the key data that is associated with these events:
 

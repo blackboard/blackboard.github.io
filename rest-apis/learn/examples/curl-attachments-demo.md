@@ -484,7 +484,7 @@ Server: openresty/1.9.3.1
 Set-Cookie: JSESSIONID=96003AD1BF73967D9CE359D5037BDECE; Path=/learn/api;
 Secure
 X-Blackboard-appserver: ip-10-145-23-249.ec2.internal
-X-Blackboard-product: Blackboard Learn &#8482; 3500.7.0-ci.4055+6a82373
+X-Blackboard-product: Learn &#8482; 3500.7.0-ci.4055+6a82373
 X-Frame-Options: SAMEORIGIN
 Content-Length: 0
 Connection: keep-alive

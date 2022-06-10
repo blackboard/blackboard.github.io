@@ -12,9 +12,9 @@ toc: false
 
 ### Overview
 
-This document documents sample JSON between the Blackboard Learn LMS and an
+This document documents sample JSON between the Learn LMS and an
 LTI Advantage Tool Provider. We'll be using https://github.com/blackboard/BBDN-LTI-Tool-Provider-Node for our examples. One use case we're often asked
-about is doing video embeds in Blackboard Learn content. That will be our first, and for now, only example.
+about is doing video embeds in Learn content. That will be our first, and for now, only example.
 
 #### How to Embed LTI Link Items into the editor via Deep Linking
 

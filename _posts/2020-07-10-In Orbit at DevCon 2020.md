@@ -6,12 +6,12 @@ author: Scott Hurrey
 post_id: 20200710-inorbitatdevcon2020
 category: blog
 tags: ["devcon", "community", "recap"]
-summary: DevCon 2020 kicked off in full force this week with clients, partners and Blackboarders around the world coming together in Blackboard Learn Ultra to network, share knowledge, and dig deeper into Blackboard tech.
+summary: DevCon 2020 kicked off in full force this week with clients, partners and Blackboarders around the world coming together in Learn Ultra to network, share knowledge, and dig deeper into Blackboard tech.
 ---
 
 # In Orbit at DevCon 2020
 
-DevCon 2020 kicked off in full force this week with clients, partners and Blackboarders around the world coming together in Blackboard Learn Ultra to network, share knowledge, and dig deeper into Blackboard tech.
+DevCon 2020 kicked off in full force this week with clients, partners and Blackboarders around the world coming together in Learn Ultra to network, share knowledge, and dig deeper into Blackboard tech.
 
 We’ve had a record number of people at DevCon with 2,273 attendees logging in from 973 institutions and 43 countries throughout the week. We also had some amazing content, delivered all over the world.
 
@@ -31,7 +31,7 @@ Next week, we’ll continue running sessions three times each day to accommodate
 
 - The Python and the Postman - REST APIs for Beginners
 - Migrate Your B2 to LTI Advantage and REST
-- Models for Blackboard Learn REST and LTI Integrations
+- Models for Learn REST and LTI Integrations
 - The DevCon Gamification Query: what we built, how we designed it, and how might you adapt it for your institution
 - GUI Admin Tips and Tricks Unconference Sessions
 

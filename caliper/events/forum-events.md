@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Forum Events
 
-Blackboard Learn's Caliper Analytics stream emits a ForumEvent to cover five
+Learn's Caliper Analytics stream emits a ForumEvent to cover five
 use cases:
 
 - **User posts a non-gradable thread**

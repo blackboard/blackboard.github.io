@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Wiki Events
 
-Blackboard Learn's Caliper Analytics stream emits a WikiEvent whenever a
+Learn's Caliper Analytics stream emits a WikiEvent whenever a
 student posts to a wiki in an original experience course. Here is some of the
 key data that is associated with these events:
 

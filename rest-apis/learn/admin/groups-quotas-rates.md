@@ -59,7 +59,7 @@ the Learn administrator when they install your application.
 
 ### Site Quotas
 
-Each developer group has a quota of the maximum number of Blackboard Learn
+Each developer group has a quota of the maximum number of Learn
 sites that can access the group's applications, regardless of number of
 applications. You are responsible for keeping track of the sites where your
 Learn REST Application is installed. If a client attempts to install your REST

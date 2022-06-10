@@ -52,14 +52,14 @@ The platform must receive the following information from the tool:
 
 The tool must receive and store for later use the following information from the platform:
 
-- Issuer - the issuer of the credentials. In Blackboard Learn's case it is always https://blackboard.com
-- Client ID - in Blackboard Learn this is labeled the Application ID. An issuer can have one or more client IDs associated with it.
+- Issuer - the issuer of the credentials. In Learn's case it is always https://blackboard.com
+- Client ID - in Learn this is labeled the Application ID. An issuer can have one or more client IDs associated with it.
 - Public JWKS URL - the JWKS URL of the platform (Learn in this case) with which the tool validates the signature of incoming LTI messages
 - OAuth 2 Token URL - the URL of the platform's OAuth 2 token issuer for use when making LTI service calls, such as for Assignment and Grades, or Names and Roles.
 - OIDC Auth Request URL - the URL the tool must redirect back to after an OIDC login request. This is part of the OIDC login flow for protecting agains CSRF attacks
 - Deployment ID - a single client ID can have one or more deployments, so tools must track each of those deployments. This is an extension created by the LTI specification.
 
-With Blackboard Learn you will also receive an Application Key and and Application Secret. Store these securely. These are what you use if you want to use the Learn public REST API.
+With Learn you will also receive an Application Key and and Application Secret. Store these securely. These are what you use if you want to use the Learn public REST API.
 
 ## LTI Message Launch Flow
 
@@ -71,7 +71,7 @@ The UML sequence diagram below shows all the steps, including some optional ones
 
 ### LTI Launch
 #### OIDC Login
-When a user clicks on an LTI link within Blackboard Learn the Learn server receives a GET request from the browser with information about that LTI link. Once it loads the tool configuration associated with that link the first thing it does is initiate the OIDC Login request with a browser redirect to the registered OIDC Login URI provided by the tool. It passes some information along with the request as query parameters.
+When a user clicks on an LTI link within Learn the Learn server receives a GET request from the browser with information about that LTI link. Once it loads the tool configuration associated with that link the first thing it does is initiate the OIDC Login request with a browser redirect to the registered OIDC Login URI provided by the tool. It passes some information along with the request as query parameters.
 
 The data sent by the platform on the OIDC login are:
 
@@ -79,8 +79,8 @@ The data sent by the platform on the OIDC login are:
 - login_hint - an opaque value to the tool that must be returned back
 - target_link_uri - the URI configured by the tool for this LTI link
 - lti_message_hint - an opaque value to the tool that must be returned back
-- lti_deployment_id - this is optional, but Blackboard Learn always sends it
-- client_id - this is optional, but Blackboard Learn always sends it
+- lti_deployment_id - this is optional, but Learn always sends it
+- client_id - this is optional, but Learn always sends it
 - lti_storage_target - for use if cookies aren't possible
 
 The tool must then redirect or post back to the registered OIDC Authentication Request URI provided by the platform, including a Redirect URI (which must be pre-registered) and a state value, along with the other values passed in by the platform. The Redirect URI declares where the tool wants the subsequent LTI launch to go, and the state is what protects against CSRF. The state should be saved in a cookie, so the tool can verify that the initiator of the request is the same browser that sends the LTI message launch. If a cookie cannot work because of browser restrictions preventing setting of cookies by 3rd parties in iframes, then another option must be pursued. There is a new spec coming soon to help with that.
@@ -126,6 +126,6 @@ An LTI Deep Linking launch is much like a Resource Link launch, except the messa
 
 This claim contains information about what the platform accepts, and a data field that must be sent back.
 
-The tool then presents a UI allowing the user to select or create content the tool provides. It can be LTI links, web links, files, images, or html. Blackboard Learn only supports LTI links and web links at the moment.
+The tool then presents a UI allowing the user to select or create content the tool provides. It can be LTI links, web links, files, images, or html. Learn only supports LTI links and web links at the moment.
 
 You can return one or more content items, and depending on from where the tool was launched the links will appear in the course outline or the rich text editor. If returned to the rich text editor they can be displayed as hyperlinks or embedded in the editor. See [Deep Linking JSON](/lti/deep-linking-two-json) for details on how to configure the rendering of LTI links in the rich text editor.

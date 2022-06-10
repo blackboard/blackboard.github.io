@@ -16,7 +16,7 @@ the use of common tools across platforms with the added ability to analyze the
 usage of that tool for all students regardless of the environment that student
 originates from.
 
-We also have documentation on the [specific events sent](/caliper/events/event-guide) by Blackboard Learn,
+We also have documentation on the [specific events sent](/caliper/events/event-guide) by Learn,
 
 The metric profiles are realized in the form of JSON for Linked Data (JSON-LD)
 payloads containing a set of common objects, each with the ability to add
@@ -24,7 +24,7 @@ application-specific extended data objects. The profile defines a context for
 the data and establishes the relationships between entities to define the
 event and all of its supporting data. The specification defines these payloads
 in such a way to allow for transport-compliant custom events like the
-Blackboard Learn-specific ForumEvent, allowing any event store to be able to
+Learn-specific ForumEvent, allowing any event store to be able to
 accept and interpret these events, even if they are strictly defined in the
 specification itself.
 
@@ -33,7 +33,7 @@ a shared semantic model so there is consistency from event to event.
 
 ![Caliper Outcome Profile](/assets/img/caliper-metric-profiles-1.png)
 
-Blackboard Learn supports the following defined metric profiles:
+Learn supports the following defined metric profiles:
 
 - Session
 - Assessment
@@ -41,7 +41,7 @@ Blackboard Learn supports the following defined metric profiles:
 - Grade
 
 The specification defines a number of tool-specific profiles as well. An
-example of this is the MediaEvent, which Blackboard worked closely with
+example of this is the MediaEvent, which Anthology worked closely with
 Kaltura to implement in the context of the Kaltura LTI integration.
 
 ## JSON Syntax

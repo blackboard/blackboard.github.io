@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Blackboard Caliper Event Guide"
+title: "Learn Caliper Event Guide"
 categories: Standards
 id: caliper-events-guide
 author: Scott Hurrey
 ---
 
-# Blackboard Caliper Event Guide
+# Learn Caliper Event Guide
 
-This document contains a map of the Caliper events emitted by Blackboard
+This document contains a map of the Caliper events emitted by
 Learn. If you are interested in learning more about Moodle's Caliper
 implementation, please visit the [Moodle Documentation](https://docs.moodle.org/dev/Caliper).
 

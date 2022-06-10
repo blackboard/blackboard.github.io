@@ -9,7 +9,7 @@ author: Hernan Ortiz
 # Premium APIs
 
 Premium APIs offer several new capabilities for integrations with
-Blackboard Learn Ultra experience.
+Learn Ultra experience.
 
 ## How to request a Premium API
 
@@ -28,7 +28,7 @@ Once you upgrade your partnership level, please [submit a Behind the Blackboard 
 ### Ultra Extension Framework
 
 UEF is a set of Premium APIs that augment the Ultra experience of
-Blackboard Learn. We designed a robust set of capabilities such as
+Learn. We designed a robust set of capabilities such as
 telemetry, help provider registration, and UI element rendering to
 enable better integrations and richer user experience.
 Take a look at [First steps with UEF](https://docs.blackboard.com/learn/uef/getting-started) to get started.

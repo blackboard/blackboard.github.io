@@ -12,7 +12,7 @@ author: Eric Preston
 
 The Open ID Connect 3rd-party-initiated login is the first step in handling an LTI 1.3 launch.
 
-From Blackboard Learn you will receive a GET request to the URL you registered in the developer portal when you registered your application. The handling of this request is straight forward, but you'll need to note a couple of things.
+From Learn you will receive a GET request to the URL you registered in the developer portal when you registered your application. The handling of this request is straight forward, but you'll need to note a couple of things.
 
 1. You will receive and lti_message_hint as a URL parameter. You must send it back unaltered.
 2. We do send the client_id and lti_deployment_id on the request, but note they are not required by the specification.

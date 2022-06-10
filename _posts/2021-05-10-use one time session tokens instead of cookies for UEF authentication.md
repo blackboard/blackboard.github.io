@@ -11,7 +11,7 @@ summary: As browsers continue to lock down cookies, particularly with iframes, t
 
 # Use One-Time Session Token to Authenticate with UEF
 
-In testing with the [Google Canary Chrome Browser](https://www.google.com/chrome/canary/), one of our clients discovered an issue that was blocking users from logging in to their Blackboard Learn instance. After much troubleshooting, we discovered a multi-layer issue that brings us to, you guessed it, [cookies](https://docs.blackboard.com/blog/2020/10/15/Cookies-and-Browsers).
+In testing with the [Google Canary Chrome Browser](https://www.google.com/chrome/canary/), one of our clients discovered an issue that was blocking users from logging in to their Learn instance. After much troubleshooting, we discovered a multi-layer issue that brings us to, you guessed it, [cookies](https://docs.blackboard.com/blog/2020/10/15/Cookies-and-Browsers).
 
 > **This affects clients in SaaS with Ultra Base Navigation enabled using Ultra integrations that rely on UEF**
 
@@ -26,7 +26,7 @@ if ( top != self )
 }
 ```
 
-In and of itself there's nothing wrong with it. We, at Blackboard, have removed it from the default Ultra login page, but many clients use it in Original login pages, and so it's moved with them into Ultra.
+In and of itself there's nothing wrong with it. We, at Anthology, have removed it from the default Ultra login page, but many clients use it in Original login pages, and so it's moved with them into Ultra.
 
 > If you are unsure whether you have a custom login page, visit [help.blackboard.com](https://help.blackboard.com/Learn/Administrator/SaaS/User_Interface_Options/Ultra_Experience/Institution_Branding/Customize_the_Login_Page) for more information.
 

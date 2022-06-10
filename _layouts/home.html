@@ -3,21 +3,12 @@
 <main class="homeContent">
   <div class="home-main">
     <div class="home-mainheader">
-        <img
-          src="/assets/img/docsindex.png"
-          alt="llustration of a young man sitting in front of a laptop with a cup of coffee"
-          class="home-left"
-        />
+      <div>put scaled ANTHOLOGY-Logo-RGB.png here centered horiz and vert to left of the DevDoc div</div>
       <div class="home-right">
         <h1 id="home-title">Developer Documentation</h1>
         <div class="center-content">
-          <img
-            src="/assets/img/docsindex.png"
-            alt="llustration of a young man sitting in front of a laptop with a cup of coffee"
-            class="hidden secondImg"
-          />
         <p>
-          Explore the latest Blackboard developer documentation, including
+          Explore the latest Anthology developer documentation, including
           tutorials, sample code, articles, and API reference.
         </p>
         <div class="input-and-icon">
@@ -31,44 +22,47 @@
     </div>
     <div class="clearfix"></div>
     <div class="home-secondPart">
-      <h2 class="home-h2">REST APIs</h2>
-      <p>
-        Leverage Blackboard APIs to integrate your application with Learn,
-        Collaborate and Ally.
-      </p>
-      <div class="center-content button-align first-group-buttons">
-        <a
-          class="
-            home-secondary-buttons
-            waves-effect waves-light
-            btn
-            button-align-first
-          "
-          href="https://developer.blackboard.com/portal/displayApi" target="_blank">Discover Learn REST APIs</a
-        >
-        <a class="home-secondary-buttons waves-effect waves-light btn"
-          href="/rest-apis/learn/getting-started/first-steps" target="_self">Get started with our APIs</a
-        >
-      </div>
-      <h2 class="home-h2">LTI</h2>
-      <p>
-        Find out how to turn your application into an LTI-enabled tool for
-        Blackboard Learn.
-      </p>
-      <div class="center-content second-group-buttons">
-        <a
-          class="
-            home-secondary-buttons
-            waves-effect waves-light
-            btn
-            button-align-first
-          "
-          href="/lti/getting-started-with-lti" target="_self">Get started with LTI</a
-        >
-        <a class="home-secondary-buttons waves-effect waves-light btn"
-          href="/lti/tutorials/develop-lti-advantage-solution" target="_self">Watch our LTI tutorials</a
-        >
-      </div>
+      <div>
+        <hr>
+        <p class="spacey-p"> Use the Anthology REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
+        <div class = "row">
+         <div class="col s4">
+           <img class="responsive-img" src="/assets/img/learndevdocs.png" alt="Screenshot for the course content view of the Learn Platform." >
+           <h6><b>Learn</b></h6>
+           <p>Take advantage of our LMS' capabilities by using the API to create users, pull assessments, grade data, manage calendars, and more. </p>
+           <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://developer.blackboard.com/portal/displayApi" target="_blank">Explore Learn API</a>
+           <div class="home-rest-apis-ul">
+             <ul>
+               <li><a href="https://developer.blackboard.com">Request credentials</a></li>
+               <li><a href="/rest-apis/learn/getting-started/registry">Getting started</a></li>
+             </ul>
+           </div>
+         </div>
+         <div class="col s4">
+           <img class="responsive-img" src="/assets/img/studentdevdocs.png" alt="The Anthology Student Logo.">
+           <h6><b>Student</b> </h6>
+           <p>Create integrations across different platforms, applica-ations, and systems using Student APIs to increase institution efficiency through automation and optimization.
+           </p>
+           <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://ultra-us-prod-csa.bbcollab.cloud/swagger/" target="_blank">Explore Student API</a>
+           <div class="home-rest-apis-ul">
+             <ul>
+               <li><a href=" /rest-apis/student/first-steps">Getting started</a></li>
+             </ul>
+           </div>
+         </div>
+         <div class="col s4">
+           <img class="responsive-img" src="/assets/img/allydevdocs.png" alt="Screenshot showing an image of the Large Hadron Collider. The image is missing a description which results in a 25% accessibility score.">
+           <h6><b>Ally</b></h6>
+           <p>Help instructors improve the accessibility of their content by using the API to upload files, check the status, and retrieve reports. </p>
+             <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://developer.blackboard.com/portal/displayApi/Ally" target="_blank">Explore Ally API</a>
+             <div class="home-rest-apis-ul">
+               <ul>
+                 <li><a href="/rest-apis/ally/getting-started">Getting started</a></li>
+               </ul>
+             </div>
+         </div>
+        </div>
+       </div>
       <h2 class="home-h2">The latest from our blog:</h2>
       <ul>
         {% for post in site.posts limit:5 %}
@@ -77,12 +71,23 @@
         </li>
         {% endfor %}
       </ul>
+
+      <h2 class="home-h2">On REST APIs from our blog:</h2>
+      <ul>
+        {% assign sorted-posts = site.posts | where: "tags","rest" %}
+        {% for post in sorted-posts limit:5 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
     </div>
   </div>
   </div>
   <div class="home-rest-apis hidden">
    <h1><b>REST APIs</b></h1>
-   <p class="spacey-p"> Use the Blackboard REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
+   <p class="spacey-p"> Use the Anthology REST APIs to make calls and get the data you need to integrate your application with our platform.  </p>
    <div class = "row">
     <div class="col s4">
       <img class="responsive-img" src="/assets/img/learndevdocs.png" alt="Screenshot for the course content view of the Learn Platform." >
@@ -97,14 +102,14 @@
       </div>
     </div>
     <div class="col s4">
-      <img class="responsive-img" src="/assets/img/collabdevdocs.png" alt="creenshot showing the gallery view of Collaborate with a video call featuring 20 participants.">
-      <h6><b>Collaborate</b> </h6>
-      <p>Everything you need to use our virtual classroom tool's API to create sessions, manage users, and control recordings.</p>
-      <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://ultra-us-prod-csa.bbcollab.cloud/swagger/" target="_blank">Explore Collaborate API</a>
+      <img class="responsive-img" src="/assets/img/studentdevdocs.png" alt="The Anthology Student Logo.">
+      <h6><b>Student</b> </h6>
+      <p>Create integrations across different platforms, applica-ations, and systems using Student APIs to increase institution efficiency through automation and optimization.
+      </p>
+      <a class="waves-effect waves-light btn home-secondary-buttons home-secondary-buttons-black" href="https://ultra-us-prod-csa.bbcollab.cloud/swagger/" target="_blank">Explore Student API</a>
       <div class="home-rest-apis-ul">
         <ul>
-          <li><a href="mailto:developers@blackboard.com?subject= Requesting Credentials for Collaborate&body= We’re happy to provide credentials for a sandbox so you can start developing. Please let us know: 1) Which institution/company are you writing from? 2)What’s your role in the institution/company?  3) Besides the credentials, can we help you with anything else?">Request credentials</a></li>
-          <li><a href=" /rest-apis/collaborate/first-steps">Getting started</a></li>
+          <li><a href=" /rest-apis/student/first-steps">Getting started</a></li>
         </ul>
       </div>
     </div>
@@ -118,21 +123,6 @@
             <li><a href="/rest-apis/ally/getting-started">Getting started</a></li>
           </ul>
         </div>
-    </div>
-   </div>
-   <div class="row">
-    <div class="col s12">
-      <h2 class="home-h2">On REST APIs from our blog:</h2>
-      <div class="home-rest-apis-ul">
-      <ul>
-        {% assign sorted-posts = site.posts | where: "tags","rest" %}
-        {% for post in sorted-posts limit:5 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
     </div>
    </div>
   </div>
@@ -149,7 +139,7 @@
               {% endfor %}
             </div>
             {% endfor %}
-
-      </div>
+    
+  </div>
 </main>
 {% include footer.html %}

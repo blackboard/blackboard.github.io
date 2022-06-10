@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Grade Events
 
-Blackboard Learn's Caliper Analytics stream emits a GradeEvent to cover the
+Learn's Caliper Analytics stream emits a GradeEvent to cover the
 following use cases:
 
 - **Student submits an assignment, a group assignment, or a test**

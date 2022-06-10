@@ -3,13 +3,13 @@
   github: https://github.com/daveyherrera
   email: davey.herrera@blackboard.com
 
-- name: Scott Hurrey
-  position: Developer Community and Standards
-  github: https://github.com/shurrey
-  email: scott.hurrey@blackboard.com
-
 - name: Mark Kauffman
   position: Partner Software Engineer
+  github: https://github.com/mark-b-kauffman
+  email: Mark.Kauffman@blackboard.com
+
+- name: Mark O'Neil
+  position: Product Management, APIs, Platform, and Developer Relations and Standards
   github: https://github.com/mark-b-kauffman
   email: Mark.Kauffman@blackboard.com
 

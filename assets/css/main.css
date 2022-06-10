@@ -102,7 +102,7 @@ header {
   z-index: 999;
 }
 
-#bblogoheader {
+#anthologylogoheader {
   height: 20x;
   margin: 22px 0px 0px 30px;
 }
@@ -112,6 +112,7 @@ header {
   font-size: 18px;
   color: white;
   margin-left: 5px;
+  text-align: center;
 }
 .header-buttons {
   float: right;
@@ -268,6 +269,7 @@ header {
   margin: 0px;
   float: left;
   width: 30%;
+  height: auto;
   margin-left: 5%;
 }
 .home-right {

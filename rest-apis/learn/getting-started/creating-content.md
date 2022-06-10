@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating content witn REST-API"
+title: "Creating content with REST-API"
 id: rest_apis-learn-getting_started-creating_content_with_API
 categories: Learn REST API Content
 toc: True
@@ -8,7 +8,7 @@ toc: True
 
 # Managing content with REST API in ULTRA (C.R.U.D)
 
-> This guide was created using Blackboard Learn Release 3900.37.0-rel.2+bf4004cd
+> This guide was created using Learn Release 3900.37.0-rel.2+bf4004cd
 
 We do talk about original at the end, however, the main process is the same, we focus a bit more in Ultra since there is a bit of difference.
 

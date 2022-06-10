@@ -13,7 +13,7 @@ For the other tasks related in this document, use the REST API Integrations.
 
 To navigate to the REST API Integrations tool:
 
-  1. Select **System Admin** in the main screen of Blackboard Learn.
+  1. Select **System Admin** in the main screen of Learn.
   2. Select the **REST API Integrations** link is in the Building Blocks section:
 
 ![REST API Integrations](/assets/img/rest-and-learn-1.png)
@@ -31,20 +31,20 @@ This list will be empty if you have not created any integrations.
 ### Create an Integration
 
 An integration, here, refers to an external REST application being registered
-to work in conjunction with Blackboard Learn. Before you create an
+to work in conjunction with Learn. Before you create an
 integration, the best practice is to create a Learn user with entitlements
 that match those required by the REST application.
 
 To create an integration and thereby allow an application to work with your
-instance of Blackboard Learn:
+instance of Learn:
 
   1. On the REST API Integrations page, select **Create Integration**.
   2. In the **Application ID** space, enter the application ID proved by the integration's developers.
-  3. Select **Browse** next to Learn User. Search through the list of Blackboard Learn users to find the user that the integration should act as.  
+  3. Select **Browse** next to Learn User. Search through the list of Learn users to find the user that the integration should act as.  
 Select a user that you specially create for the application and that has only
 the permissions that the integration needs to function properly.
 
-  4. For third-party integration, set **End User Access** to Yes. End users will sign in with their own Blackboard Learn ID to use the integration. Each user's access is then limited to his or her own permissions. If you set End User Access to No, the integration always has access as if it were the Blackboard Learn user indicated on the form.
+  4. For third-party integration, set **End User Access** to Yes. End users will sign in with their own Learn ID to use the integration. Each user's access is then limited to his or her own permissions. If you set End User Access to No, the integration always has access as if it were the Learn user indicated on the form.
   5. **Submit** to save your settings for the integration.
   6. Select the Learn user in whose name the application acts. This user must have the entitlements required by the REST Application. For more information about identifying required entitlements, see _Converting Documented Entitlements to GUI Privileges_, below. Note that the Institution role of this user has no impact on the entitlements, only the privileges on the user's System role. 
 
@@ -63,10 +63,10 @@ help the vendor correct the situation.
 
 ![Create REST integration](/assets/img/rest-and-learn-3.png)
 
-**Note:** If you are a Blackboard client, a Blackboard Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Blackboard DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
+**Note:** If you are an Anthology client an Anthology Partner / Vendor / Developer of an LTI or REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
 Contractors are an exception to this policy as they are producing an
-integration on your, the Blackboard client, behalf. Questions regarding the
+integration on your, the Anthology client, behalf. Questions regarding the
 policy and whether you are impacted may be asked here, or posted to
 [developers@blackboard.com](mailto:developers@blackboard.com).
 
@@ -139,4 +139,4 @@ For a more detailed process please see [Releasing your REST Integration](/rest-a
 
 **Step 7:** Include information from Step 6 in your client facing documentation.
 
-_**Key takeaway:**_ Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation. Blackboard nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.
+_**Key takeaway:**_ Providing the required Privileges to Learn Admins reduces the risk of a failure in integration installation and operation. Anthology nor you should want to burden clients with figuring out from the API Docs which Entitlements are needed and look up these Privileges on their own so that your application works as expected.

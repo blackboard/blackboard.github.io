@@ -14,7 +14,7 @@ This document documents gives updates on Names and Roles as new features become 
 
 ### Student Preview User Now Indicated By TestUser Role via Names and Roles Service
 
-This new functionality is seen in the Names and Roles service as implemented in Blackboard Learn. When your LTI 1.3 tool reaches back to Blackboard Learn using the Names and Roles service to get a list of memberships, a Student Preview user listed in the course memberships will have a new role listed in the roles claim. Ex
+This new functionality is seen in the Names and Roles service as implemented in Learn. When your LTI 1.3 tool reaches back to Learn using the Names and Roles service to get a list of memberships, a Student Preview user listed in the course memberships will have a new role listed in the roles claim. Ex
 
 ```http
 "https://purl.imsglobal.org/spec/lti/claim/roles": [

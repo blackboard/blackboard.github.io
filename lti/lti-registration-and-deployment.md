@@ -6,9 +6,9 @@ categories: Standards
 author: Eric Preston
 ---
 
-# LTI Registration and Deployment with Blackboard Learn
+# LTI Registration and Deployment with Learn
 
-## Why do we use a central service at Blackboard?
+## Why do we use a central service at Anthology?
 
 We believe that having Tool vendors register an LTI Tool _once_ through [the Developer Portal](https://developer.blackboard.com/){:target="_blank"} is the best approach. It allows Learn admins to deploy that tool by entering just one piece of information (the Client ID) in the Admin Panel and sharing another piece of information (the Deployment ID) with the Tool vendor.
 
@@ -56,11 +56,11 @@ The Deployment ID is an LTI 1.3 construct to allow multiple deployments of a too
 
 We've gone from three pieces of information to share between a platform and tool in LTI 1.1 to ten pieces of information that must be shared.
 
-## Blackboard Developer Portal
+## Anthology Developer Portal
 
 With LTI 1.3, since keys and secrets are no longer shared, and the signing of messages uses asymmetric public/private key pairs, Blackboard has the opportunity to generate its keys in a central service and do the signing and validation of messages there.
 
-With Blackboard Learn we have split the _registration_ of a tool from the _deployment_ of a tool.
+With Learn we have split the _registration_ of a tool from the _deployment_ of a tool.
 
 Rather than ask a Learn administrator to exchange all of the above information with a Tool vendor (which is information the Learn admin doesn't care about and could easily make mistakes in entering) and in order to make both the Tool vendor and the Learn admin lives a bit better, we have centralized the registration of a tool.
 
@@ -78,8 +78,8 @@ A tool may want a link in the course outline, or in the rich content editor, or 
 
 A tool may want to support Deep Linking so an instructor can select or create content in the Tool and have the links appear in the course.
 
-Blackboard Learn has the concept of LTI Placements to support this. Blackboard allows a Tool vendor to register those placements with the Developer Portal, so an admin doesn't have to do that work.
+Learn has the concept of LTI Placements to support this. Blackboard allows a Tool vendor to register those placements with the Developer Portal, so an admin doesn't have to do that work.
 
 ![LTI diagram](../assets/img/ltidiagram.png){: .center-image }
 
-If you have any other questions about LTI Registration and Deployment with Blackboard Learn, [let us know](mailto: developers@blackboard.com).
+If you have any other questions about LTI Registration and Deployment with Learn, [let us know](mailto: developers@blackboard.com).
