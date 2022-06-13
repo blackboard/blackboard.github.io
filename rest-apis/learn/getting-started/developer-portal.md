@@ -1,14 +1,10 @@
 ---
 layout: post
-title: "Learn Developer Portal"
+title: "Anthology Developer Portal"
 id: rest_apis-learn-getting-started-dev_portal
 categories: Learn REST
-toc: false
 ---
 
-# Learn Developer Portal
+# Anthology Developer Portal
 
-If you want to see the developer portal on its source please click [here](https://developer.blackboard.com){: target="\_blank"}
-
-<iframe class="swagger" src="https://developer.blackboard.com" title="Learn API">
-</iframe>
+Our Developer Portal is where you may view our API documentation, register to use our APIs, and login and register applications. You may visit the [Developer Portal](https://developer.blackboard.com){: target="\_blank"}
