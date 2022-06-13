@@ -40,7 +40,7 @@ This is easy. Just find the document in the folder structure and edit it as you 
 * **Top-Level**: This is all the files that are served on the landing page and common UI
 <!-- * **collab**: All Blackboard Collaborate Documentation -->
 * **connecttxt**: All Anthology ConnectTxt Documentation
-* **dvba**: All documentation related to Developer Versions of Anthology Applications 
+* **dvaa**: All documentation related to Developer Versions of Anthology Applications 
 * **learn**: All documentation related to Learn APIs overall
 * **learn/REST**: All Learn REST API documentation
 * **mobile**: All documentation for Anthology Mobile applications
@@ -203,7 +203,7 @@ The **layout** tag is used to tell jekyll which html template to use. These are 
 
 * collab
 * connecttxt
-* dvba
+* dvaa
 * learn
 * openlms
 * standards
