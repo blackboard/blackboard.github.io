@@ -175,24 +175,15 @@
           id: rest_apis-learn-sandbox
           type: menu
           subsubmenu_content:
-            - subsubmenu_content_name: What is DVBA?
-              url: /rest-apis/learn/sandbox/what-is-dvba
-              id: rest_apis-learn-sandbox-what_is_dvba
-              target: _self
             - subsubmenu_content_name: Developer AMI
               url: /rest-apis/learn/sandbox/developer-ami
               id: rest_apis-learn-sandbox-developer_ami
               target: _self
-            - subsubmenu_content_name: Developer Virtual Machine
-              url: /rest-apis/learn/sandbox/dvm
-              id: rest_apis-learn-sandbox-dev_test_site
-              target: _self
-            - subsubmenu_content_name: DVBA FAQs
-              url: /rest-apis/learn/sandbox/faq
-              id: rest_apis-learn-sandbox-dvba_faqs
-              target: _self
-
-        - subsubmenu_item: Blackboard App
+            # - subsubmenu_content_name: What is DVAA?
+            #   url: /rest-apis/learn/sandbox/what-is-dvaa
+            #   id: rest_apis-learn-sandbox-what_is_dvaa
+            #   target: _sel
+        - subsubmenu_item: Learn App
           id: rest_apis-learn-bbapp
           type: menu
           subsubmenu_content:
@@ -250,7 +241,25 @@
       id: rest_apis-student
       type: menu
       subsubmenu:
-        - subsubmenu_item: NOTHING HERE YET...
+        - subsubmenu_item: Getting Started with Student
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: First Steps with Student REST API
+              url: /rest-apis/student/getting-started/first-steps
+              id: rest_apis-student-getting-started-first-steps
+              target: _self
+        - subsubmenu_item: Examples
+        - subsubmenu_item: Training Videos
+        - subsubmenu_item: Service Catalog
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: About Service Catalog
+              url: /rest-apis/student/servicecatalog/about
+              id: rest_apis-student-servicecatalog-about
+              target: _self
+            - subsubmenu_content_name: Log into mycampusinsight
+              url: https://www.mycampusinsight.com
+              target: _blank
 
     - submenu_item: UEF & Premium APIs
       id: rest_apis-learn-uef
@@ -371,7 +380,7 @@
       url: /partners/become-a-partner
       id: partners-become_a_partner
       target: _self
-    - submenu_item: Blackboard App catalog FAQ
+    - submenu_item: Anthology App catalog FAQ
       url: /partners/blackboard-app-catalog-faq
       id: partners-blackboard_app_catalog_faq
       target: _self

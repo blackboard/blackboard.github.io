@@ -107,11 +107,13 @@ header {
   justify-content: center;
   align-items: center;
   height: 210px;
+  margin: 22px 0px 0px 30px;
 }
 
 #anthologylogoheader {
-  margin: auto;
-  display: block;
+  height: 30px;
+  width:auto;
+  margin: 22px 20px 20px 30px;
 }
 
 #dev-docs-span-text {
@@ -119,8 +121,15 @@ header {
   font-size: 18px;
   color: white;
   margin-left: 5px;
-  text-align: center;
+  min-height: 100px;
+  display: inline-flex;
+  align-items: center;
 }
+
+.header-logo-and-title {
+  float:left;
+}
+
 .header-buttons {
   float: right;
 }
