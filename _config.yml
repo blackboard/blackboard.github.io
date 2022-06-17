@@ -45,12 +45,13 @@ tipue_search:
         blogs,
         collaborate,
         community,
-        dvba,
+        dvaa,
         learn,
         legal,
         mobile,
         partners,
         standards,
+        student,
       ]
 
 defaults:
@@ -59,6 +60,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      pdf: true
   - scope:
       path: ""
     values:
@@ -71,6 +73,7 @@ toc:
 jekyll_analytics:
   GoogleAnalytics: # Add, if you want to track with Google Analytics
     id: UA-173992978-1
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "First Steps with Student REST API"
-id: rest_apis-learn-getting-started-first-steps
-categories: Learn REST
-author: Scott Hurrey
+id: rest_apis-student-getting-started-first-steps
+categories: Student REST
+author: Mark O'Neil
 ---
 
 # First Steps with Student REST API
