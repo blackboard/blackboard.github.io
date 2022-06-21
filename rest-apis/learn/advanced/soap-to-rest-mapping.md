@@ -5,7 +5,16 @@ tipue-search-status: true
 id: rest_apis-learn-advanced-soap_to_rest
 categories: Learn soap
 author: Scott Hurrey
+pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes:
+    - \usepackage{fvextra}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
+{% assign sluggedName = page.name | replace: '.md' %}
+<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+<a href="/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/img/download.png" height="30px"></a></div>
 
 # SOAP to REST migration: Mapping
 
