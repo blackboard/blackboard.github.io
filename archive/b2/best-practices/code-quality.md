@@ -44,10 +44,10 @@ status: deprecated
 
 ## Downloads
 
-#### Blackboard Learn custom PMD rules and Sonar Java profile
+####  Learn custom PMD rules and Sonar Java profile
 
 The latest version is [attached](/attachments/bb_sonar_01.zip) to this post. Please install
-Blackboard custom PMD rules before importing Java rule set.
+Learn custom PMD rules before importing Java rule set.
 
 How to install Blackboard custom PMD rules:
 

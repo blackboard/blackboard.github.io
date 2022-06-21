@@ -9,8 +9,7 @@ status: deprecated
 
 # Event Driven API
 
-The Blackboard Learn Event Driven API is used to programmatically push the
-following data into the Blackboard Learn database from an external system:
+The Blackboard Learn Event Driven API is used to programmatically push the following data into the Blackboard Learn database from an external system:
 
 - User
 - Course

@@ -4,15 +4,23 @@ title: "Premium APIs"
 id: rest_apis-learn-uef-request_premium_apis
 categories: REST
 author: Hernan Ortiz
+pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes:
+    - \usepackage{fvextra}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
+{% assign sluggedName = page.name | replace: '.md' %}
+<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+<a href="/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/img/download.png" height="30px"></a></div>
+
 
 # Premium APIs
-
 Premium APIs offer several new capabilities for integrations with
 Learn Ultra experience.
 
 ## How to request a Premium API
-
 If you’re a Blackboard client or a partner in Bronze level or above,
 please [submit a Behind the Blackboard ticket](https://blackboard.secure.force.com/){: target='\_blank'}
 and we’ll get back to you as soon as possible.
@@ -24,9 +32,7 @@ we offer a variety of partnership levels in the
 Once you upgrade your partnership level, please [submit a Behind the Blackboard ticket](https://blackboard.secure.force.com/){: target='\_blank'}.
 
 ## Our Premium APIs
-
 ### Ultra Extension Framework
-
 UEF is a set of Premium APIs that augment the Ultra experience of
 Learn. We designed a robust set of capabilities such as
 telemetry, help provider registration, and UI element rendering to

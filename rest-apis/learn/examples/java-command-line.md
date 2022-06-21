@@ -4,7 +4,17 @@ title: "Command line REST Application"
 id: rest_apis-learn-examples-java_command_line
 categories: Learn Rest
 author: Scott Hurrey
+pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes:
+    - \usepackage{fvextra}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
+{% assign sluggedName = page.name | replace: '.md' %}
+<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+<a href="/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/img/download.png" height="30px"></a></div>
+
 
 # Tutorial - Build a Java Command Line REST Application
 
@@ -287,6 +297,8 @@ navigate to the directory you cloned to and type `gradle run`.
 
 #### What You Should See
 
+Command line:
+
 ![Hello World](/assets/img/java-command-line-1.png)
 
 #### What We Did
@@ -339,9 +351,12 @@ Let's get started:
 
 Review the [RestDemo.java](https://github.com/blackboard/BBDN-DevCon-REST-Workshop/blob/master/1-Implement-OAuth/RestDemo.java) in the `1-Implement-OAuth` folder to compare to your RestDemo.java if you have issues.
 
-#### What You Should See
+#### What You Should See 
+
+command line:
 
 ![](/assets/img/java-command-line-2.png)
+
 
 #### What We Did
 
@@ -548,6 +563,7 @@ issues.
 
 #### What You Should See
 
+
 For Create:
 
 ![](/assets/img/java-command-line-6.png)
@@ -621,6 +637,8 @@ the 4-Implement-Remaining-Objects folder to compare to your RestDemo.java if
 you have issues.
 
 #### What You Should See
+
+Command line:
 
 ```bash
 shurreymbp:BBDN-DevCon-REST-Workshop shurrey$ cp 4-Implement-Remaining-Objects/RestDemo.java src/main/java/bbdn/rest/

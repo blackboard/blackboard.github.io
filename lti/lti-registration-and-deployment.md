@@ -80,6 +80,6 @@ A tool may want to support Deep Linking so an instructor can select or create co
 
 Learn has the concept of LTI Placements to support this. Blackboard allows a Tool vendor to register those placements with the Developer Portal, so an admin doesn't have to do that work.
 
-![LTI diagram](../assets/img/ltidiagram.png){: .center-image }
+![LTI diagram](/assets/img/ltidiagram.png){: .center-image }
 
 If you have any other questions about LTI Registration and Deployment with Learn, [let us know](mailto: developers@blackboard.com).
