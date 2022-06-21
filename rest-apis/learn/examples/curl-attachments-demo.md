@@ -13,9 +13,9 @@ header-includes:
 ---
 
 {% assign sluggedName = page.name | replace: '.md' %}
-
+<div>&nbsp;</div>
 <div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-<a href="/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/img/download.png" height="30px"></a></div>
+<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
 
 # Using cURL to access content attachments
 

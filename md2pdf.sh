@@ -21,17 +21,36 @@
 #        {% assign sluggedName = page.name | replace: '.md' %}
 #        <div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
 #        <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
+# with a placeholder something like <!-- sluggedName -->
 #
 # Use:
 #   1. Before building the jekyll site:
+#       Remove liquid tags - the script does not handle those.
+#       e.g.:
+#
+#<div>&nbsp;</div>
+#{% assign sluggedName = page.name | replace: '.md' %}
+#<div class="download-btn-placement"><br>modified: {{ page.#last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+#<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" #target="_blank"><img class="download-button" src="/assets/img/#download.png" height="30px"></a></div>
+#and replace with a comment e.g. <!-- slug --> 
+#
 #       $./mk2pdf.sh
 #           This will take all .md files containing "pdf: true" in their frontmatter 
 #           and convert them to PDFs in the top level /assets/pdfs project directory
 #
-#           NOTE: You must manually clean up any files where the /assets path 
+#           NOTE: You must manually clean up any files where the /assets path
 #                 was changed - follow the logs... :-)
 #
-#       Then commit the PDFs to the repo along with any other files/changes
+#           NOTE: You must manually replace the <!-- slug --> 
+#           with the liquid text for displaying the download and #           last modified tag:
+#<div>&nbsp;</div>
+#{% assign sluggedName = page.name | replace: '.md' %}
+#<div class="download-btn-placement"><br>modified: {{ page.#last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+#<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" #target="_blank"><img class="download-button" src="/assets/img/#download.png" height="30px"></a></div>
+#
+#       Then commit the PDFs to the repo along with any other files/changes 
+# NOTE: You do not have to recommit the .md files - if git says you do, and the content has not changed, then you missed undoing a prep change made above.
+#
 #   2. Build and test the site:
 #       $ bundle exec jekyll serve
 #   Done!
