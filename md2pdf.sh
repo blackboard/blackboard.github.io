@@ -68,6 +68,17 @@ echo "`date`: There are $mdFileArraySize .md files to process..." | tee -a  ./md
 #     echo "$cnt: $i"
 # done
 
+AUTOSKIP=false
+AOWP=0
+read -t 15 -r -e -p "Auto skip existing PDFs?(n||<Y>)" AS
+[ -z "${AS}" ] && AUTOSKIP=false
+if [[ $AS == "n" || $AS == "N" || $AS == "no" || $AS == "No" ]] 
+then
+    AUTOSKIP=false
+else
+    AUTOSKIP=true
+fi
+
 counter=0
 #process each file in the mdFileArray
 echo "Generating PDF files..."
@@ -84,7 +95,6 @@ do :
         INPUT="$fullPath"
         TARGET="$rootPath/assets/pdfs$mdFile"
         #what is the pdf path?
-
         pdfPath=${TARGET%/*}
         # echo "PDFPATH: $pdfPath"
         #make it if it doesn't exist
@@ -95,22 +105,59 @@ do :
         # TARGET=${TARGET%.*}
         # TARGET="$TARGET.pdf"
         # echo "TARGET PDF: $TARGET"
+
         pdfFileArray+=("$TARGET")
-        
-        #temporarially remove PDF BLOCK for processing...
-        sed -i '' -E '/^<!-- BOF PDF BLOCK -->/,/^<!-- EOF PDF BLOCK -->/{/^<!-- BOF PDF BLOCK -->/!{/^\<!-- EOF PDF BLOCK -->/!d;};}' "$INPUT"
 
-        # temporarially augment /assets so pandoc can handle /asset links
-        sed -i '' -E "s~/assets~$rootPath/assets~g" "$INPUT"
-        if grep --quiet "$rootPath" "$INPUT"; then
-            # echo "ROOT PATH ADDED TO ASSETS PATH: $INPUT"  | tee -a  ./md2pdf-log.txt
-            changedAssetsArray+=("$INPUT")
+        OWB=false
+        NWB=false
+        WRITETARGET=false
+        if [ -e "$TARGET" ] 
+        then
+            if ! $AUTOSKIP
+            then
+                read -t 15 -r -e -p "$TARGET exists. Overwrite?(<N>||y)" OWP
+                [ -z "${OWP}" ] && OWP=0
+                if [[ $OWP == "y" || $OWP == "Y" || $OWP == "yes" || $OWP == "Yes" ]] 
+                then
+                    OWB=true
+                else
+                    OWB=false
+                fi
+            fi
+        else
+            NWB=true
         fi
-        # now generate the pdf
-        pandoc -o "$TARGET" "$INPUT" --pdf-engine=/Library/TeX/texbin/pdflatex
+        if $OWB
+            then
+                echo "OVERWRITING, $TARGET EXISTS, " | tee -a  ./md2pdf-log.txt
+                WRITETARGET=true
+            elif $NWB 
+            then
+                echo "WRITING NEW $TARGET" | tee -a  ./md2pdf-log.txt
+                WRITETARGET=true
+            else
+                echo "SKIPPING TO NEXT FILE, $TARGET EXISTS" | tee -a  ./md2pdf-log.txt
+                WRITETARGET=false
+            fi
 
-        #Reinsert PDF BLOCK
-        sed -i '' -E '/<!-- BOF PDF BLOCK -->/r pdf-block.txt' "$INPUT";
+        if $WRITETARGET
+        then
+            #do PDF STUFF!
+            #temporarially remove PDF BLOCK for processing...
+            sed -i '' -E '/^<!-- BOF PDF BLOCK -->/,/^<!-- EOF PDF BLOCK -->/{/^<!-- BOF PDF BLOCK -->/!{/^\<!-- EOF PDF BLOCK -->/!d;};}' "$INPUT"
+
+            # temporarially augment /assets so pandoc can handle /asset links
+            sed -i '' -E "s~/assets~$rootPath/assets~g" "$INPUT"
+            if grep --quiet "$rootPath" "$INPUT"; then
+                # echo "ROOT PATH ADDED TO ASSETS PATH: $INPUT"  | tee -a  ./md2pdf-log.txt
+                changedAssetsArray+=("$INPUT")
+            fi
+            # now generate the pdf
+            pandoc -o "$TARGET" "$INPUT" --pdf-engine=/Library/TeX/texbin/pdflatex
+
+            #Reinsert PDF BLOCK
+            sed -i '' -E '/<!-- BOF PDF BLOCK -->/r pdf-block.txt' "$INPUT";
+        fi
     fi
 done
 
