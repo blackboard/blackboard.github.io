@@ -25,28 +25,12 @@
 #
 # Use:
 #   1. Before building the jekyll site:
-#       Remove liquid tags - the script does not handle those.
-#       e.g.:
-#
-#<div>&nbsp;</div>
-#{% assign sluggedName = page.name | replace: '.md' %}
-#<div class="download-btn-placement"><br>modified: {{ page.#last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-#<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" #target="_blank"><img class="download-button" src="/assets/img/#download.png" height="30px"></a></div>
-#and replace with a comment e.g. <!-- slug --> 
-#
 #       $./mk2pdf.sh
 #           This will take all .md files containing "pdf: true" in their frontmatter 
 #           and convert them to PDFs in the top level /assets/pdfs project directory
 #
 #           NOTE: You must manually clean up any files where the /assets path
 #                 was changed - follow the logs... :-)
-#
-#           NOTE: You must manually replace the <!-- slug --> 
-#           with the liquid text for displaying the download and #           last modified tag:
-#<div>&nbsp;</div>
-#{% assign sluggedName = page.name | replace: '.md' %}
-#<div class="download-btn-placement"><br>modified: {{ page.#last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-#<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" #target="_blank"><img class="download-button" src="/assets/img/#download.png" height="30px"></a></div>
 #
 #       Then commit the PDFs to the repo along with any other files/changes 
 # NOTE: You do not have to recommit the .md files - if git says you do, and the content has not changed, then you missed undoing a prep change made above.
@@ -112,6 +96,10 @@ do :
         # TARGET="$TARGET.pdf"
         # echo "TARGET PDF: $TARGET"
         pdfFileArray+=("$TARGET")
+        
+        #temporarially remove PDF BLOCK for processing...
+        sed -i '' -E '/^<!-- BOF PDF BLOCK -->/,/^<!-- EOF PDF BLOCK -->/{/^<!-- BOF PDF BLOCK -->/!{/^\<!-- EOF PDF BLOCK -->/!d;};}' "$INPUT"
+
         # temporarially augment /assets so pandoc can handle /asset links
         sed -i '' -E "s~/assets~$rootPath/assets~g" "$INPUT"
         if grep --quiet "$rootPath" "$INPUT"; then
@@ -120,6 +108,9 @@ do :
         fi
         # now generate the pdf
         pandoc -o "$TARGET" "$INPUT" --pdf-engine=/Library/TeX/texbin/pdflatex
+
+        #Reinsert PDF BLOCK
+        sed -i '' -E '/<!-- BOF PDF BLOCK -->/r pdf-block.txt' "$INPUT";
     fi
 done
 
@@ -140,12 +131,6 @@ do :
     TARGET=${changedAssetsPath%.*}
     ((cnt=cnt+1))
     echo "$cnt: $TARGET.md"
-    # sed -i '' -E "s~$rootPath~~g" "$INPUT"
-    # if grep "$rootPath" "$INPUT"; then
-    #     echo "ROOT PATH NOT REMOVED FROM ASSETS PATH: $INPUT"
-    # else 
-    #     echo "ROOT PATH REMOVED FROM ASSETS PATH: $INPUT"
-    # fi
 done
 echo "" | tee -a ./md2pdf-log.txt 
 echo "IMPORTANT!!!" | tee -a ./md2pdf-log.txt 
