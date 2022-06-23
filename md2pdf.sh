@@ -71,7 +71,7 @@ echo "`date`: There are $mdFileArraySize .md files to process..." | tee -a  ./md
 AUTOSKIP=false
 AOWP=0
 read -t 15 -r -e -p "Auto skip existing PDFs?(n||<Y>)" AS
-[ -z "${AS}" ] && AUTOSKIP=false
+[ -z "${AS}" ] && AUTOSKIP=true
 if [[ $AS == "n" || $AS == "N" || $AS == "no" || $AS == "No" ]] 
 then
     AUTOSKIP=false
