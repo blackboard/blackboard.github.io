@@ -126,6 +126,18 @@ header {
   align-items: center;
 }
 
+.download-button {
+  height: 30px;
+  width:auto;
+}
+
+.download-btn-placement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-position: 50px 100px;
+}
+
 .header-logo-and-title {
   float:left;
 }

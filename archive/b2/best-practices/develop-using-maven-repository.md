@@ -9,7 +9,7 @@ author: Scott Hurrey
 
 # Creating Database Objects with Building Blocks
 
-As Blackboard shifts to a more modular delivery model, with more features
+As Anthology shifts to a more modular delivery model, with more features
 delivered as Building Blocks at regular intervals, the importance of having a
 repository of build objects and documentation has never been more important.
 Blackboard’s own development teams have been using an internal Maven
@@ -24,8 +24,7 @@ Maven Central, the main repository for the Maven ecosystem, contains a
 significant number of popular third party libraries that you may want to use
 in your projects.
 
-When developing Building Blocks, though, you will need some libraries from
-Blackboard Learn. In the past, to include those libraries, you needed to find
+When developing Building Blocks, though, you will need some libraries from Learn. In the past, to include those libraries, you needed to find
 the libraries on a local instance of Blackboard Learn, copy them someplace in
 your source tree, write custom dependency logic and build. Plus when you
 upgraded to a later Learn version for building, or if you wanted to build

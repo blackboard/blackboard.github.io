@@ -5,7 +5,19 @@ id: rest_apis-learn-admin-rest3LO_and_learnSSO
 categories: Learn REST
 author: Mark Kauffman
 toc: false
+pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes:
+    - \usepackage{fvextra}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
+<!-- BOF PDF BLOCK -->
+<div>&nbsp;</div>
+{% assign sluggedName = page.name | replace: '.md' %}
+<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
+<!-- EOF PDF BLOCK -->
 
 # REST Integrations 3-Legged OAuth and Learn Custom Login Pages For System Administrators
 
@@ -28,7 +40,7 @@ The problem is caused by the login link or button that the user clicks on in the
 
 As mentioned in the video, when the custom login .jsp uses the \<loginUI:loginForm/\> tag to create the link/button that the user clicks on to login to the system, that link will be dynamically generated and preserve all of the information that was sent to the Learn system with the /authorizationcode request from the 3rd-party App. You cannot merely have the tag on the page. You must use the <loginUI:loginForm> tag to create the link because that tag uses the necessary Learn internal Java code to correctly build the sign-in link.
 
-[Here is a sample custom login page that works for 3LO and SSO](/assets/files/UARKexampleCustomLogin.jsp)\*. You can study how the CSS modifies the content shown by the \<loginUI:loginForm/\> tag so that it shows up as a "button" with a link that is dynamically generated and maintains the 3LO /authorizationcode request parameters.
+[Here is a sample custom login page that works for 3LO and SSO](/files/UARKexampleCustomLogin.jsp)\*. You can study how the CSS modifies the content shown by the \<loginUI:loginForm/\> tag so that it shows up as a "button" with a link that is dynamically generated and maintains the 3LO /authorizationcode request parameters.
 
 Note that you may also need to study how your SSO system needs to be configured to pass through parameters. Such is out of the scope of this document - which is only meant to describe the requirements for your custom login page.
 

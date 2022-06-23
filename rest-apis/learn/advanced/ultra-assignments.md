@@ -4,7 +4,19 @@ title: "Working with Ultra assignments"
 id: rest_apis-learn-advanced-ultra_assignments
 categories: Learn Rest
 author: Ryan Haber
+pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes:
+    - \usepackage{fvextra}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
+<!-- BOF PDF BLOCK -->
+<div>&nbsp;</div>
+{% assign sluggedName = page.name | replace: '.md' %}
+<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
+<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
+<!-- EOF PDF BLOCK -->
 
 # Use APIs to Work with Ultra Assignments
 
