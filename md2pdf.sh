@@ -106,7 +106,6 @@ do :
         # TARGET="$TARGET.pdf"
         # echo "TARGET PDF: $TARGET"
 
-        pdfFileArray+=("$TARGET")
 
         OWB=false
         NWB=false
@@ -129,13 +128,16 @@ do :
         fi
         if $OWB
             then
+                echo "" 
                 echo "OVERWRITING, $TARGET EXISTS, " | tee -a  ./md2pdf-log.txt
                 WRITETARGET=true
             elif $NWB 
             then
+                echo "" 
                 echo "WRITING NEW $TARGET" | tee -a  ./md2pdf-log.txt
                 WRITETARGET=true
             else
+                echo "" 
                 echo "SKIPPING TO NEXT FILE, $TARGET EXISTS" | tee -a  ./md2pdf-log.txt
                 WRITETARGET=false
             fi
@@ -157,6 +159,7 @@ do :
 
             #Reinsert PDF BLOCK
             sed -i '' -E '/<!-- BOF PDF BLOCK -->/r pdf-block.txt' "$INPUT";
+            pdfFileArray+=("$TARGET")
         fi
     fi
 done
@@ -165,20 +168,28 @@ done
 echo "" | tee -a  ./md2pdf-log.txt
 echo "Converted PDFs:" | tee -a  ./md2pdf-log.txt
 cnt=0
-for i in "${pdfFileArray[@]}"
-do :
-    ((cnt=cnt+1))
-    echo "$cnt: $i" | tee -a ./md2pdf-log.txt
-done
+pdfFileArraySize=${#pdfFileArray[@]}
+if [[ $pdfFileArraySize -gt 0 ]]
+then
+    for i in "${pdfFileArray[@]}"
+    do :
+        ((cnt=cnt+1))
+        echo "$cnt: $i" | tee -a ./md2pdf-log.txt
+    done
 
-echo "" | tee -a ./md2pdf-log.txt
-cnt=0
-for changedAssetsPath in "${changedAssetsArray[@]}"
-do :
-    TARGET=${changedAssetsPath%.*}
-    ((cnt=cnt+1))
-    echo "$cnt: $TARGET.md"
-done
+    echo "" | tee -a ./md2pdf-log.txt
+    cnt=0
+    
+    for changedAssetsPath in "${changedAssetsArray[@]}"
+    do :
+        TARGET=${changedAssetsPath%.*}
+        ((cnt=cnt+1))
+        echo "$cnt: $TARGET.md"
+    done
+else
+    echo "No PDFs were created." | tee -a ./md2pdf-log.txt
+fi
+
 echo "" | tee -a ./md2pdf-log.txt 
 echo "IMPORTANT!!!" | tee -a ./md2pdf-log.txt 
 echo "Before the next commit and Jekyll build globally search and replace \"$rootPath/assets\" with \"/assets\" on the above files." | tee -a ./md2pdf-log.txt 
