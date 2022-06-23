@@ -112,7 +112,7 @@ header {
 
 #anthologylogoheader {
   height: 30px;
-  width:auto;
+  width: auto;
   margin: 22px 20px 20px 30px;
 }
 
@@ -139,7 +139,7 @@ header {
 }
 
 .header-logo-and-title {
-  float:left;
+  float: left;
 }
 
 .header-buttons {
@@ -157,7 +157,7 @@ header {
   background-color: #f8f8f8;
   padding-top: 75px;
   display: block;
-  z-index: 9999
+  z-index: 2;
 }
 
 #menu-trigger {
@@ -1347,12 +1347,16 @@ a.purple-text:hover {
     height: 31px;
     background-color: #b5b5b5;
     display: block;
-    z-index: 999;
+    z-index: 2;
     float: none;
   }
   .header-buttons i {
     margin: 5px 10px 0px 0px;
     color: black;
+  }
+  #anthologylogoheader {
+    height: 30px;
+    margin: 0px 20px 0px 30px;
   }
 }
 @media only screen and (max-width: 524px) {
@@ -1377,7 +1381,7 @@ a.purple-text:hover {
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto auto;
-  background-color: #2196F3;
+  background-color: #2196f3;
   padding: 10px;
 }
 
@@ -1386,5 +1390,3 @@ a.purple-text:hover {
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
 }
-
-
