@@ -179,6 +179,7 @@ then
 
     echo "" | tee -a ./md2pdf-log.txt
     cnt=0
+    
     for changedAssetsPath in "${changedAssetsArray[@]}"
     do :
         TARGET=${changedAssetsPath%.*}
