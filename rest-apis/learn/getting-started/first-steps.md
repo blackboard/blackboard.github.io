@@ -45,13 +45,13 @@ to speak with us. To discuss deploying your application, please contact us at
 authenticate your project with Anthology applications, you need to be a
 registered Anthology developer. To register as a Anthology developer:
 
-1. Go to [https://developer.blackboard.com/](https://developer.blackboard.com/){:target="\_blank"} and select **Sign Up**. Read and agree to the terms and conditions.
+1. Go to [https://developer.anthology.com/](https://developer.anthology.com/){:target="\_blank"} and select **Sign Up**. Read and agree to the terms and conditions.
 2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
 3. Select **Create Account** and you're on your way.
 
 For more information about the Developer Portal please see [this document](/rest-apis/learn/getting-started/registry)
 
-**Note:** If you are an Anthology client, an Anthology Partner / Vendor / Developer of an LTI or REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application.  Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
+**Note:** If you are an Anthology client, an Anthology Partner / Vendor / Developer of an LTI or REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application.  Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.anthology.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
 Contractors are an exception to this policy as they are producing an
 integration on your, the Anthology client, behalf. Questions regarding the
@@ -134,7 +134,7 @@ with Learn](basic-authentication).
 
 ### Look at the Learn REST Reference
 
-Check out the [Learn REST API Reference](https://developer.blackboard.com/portal/displayApi/Learn){:target="\_blank"}. In particular,look at the range of endpoints available. Check the **Since** version for endpoint that interest you. This version number indicates the version since which the endpoint has been available. This way, you can make sure that your Learn server is is able to use it.
+Check out the [Learn REST API Reference](https://developer.anthology.com/portal/displayApi/Learn){:target="\_blank"}. In particular,look at the range of endpoints available. Check the **Since** version for endpoint that interest you. This version number indicates the version since which the endpoint has been available. This way, you can make sure that your Learn server is is able to use it.
 
 ### Authentication/Authorization
 
@@ -144,7 +144,7 @@ OAuth](3lo).
 
 ### Calling Services
 
-Once your application acquires an access token, it only needs to pass that token as a Bearer token in the Authorization header of your API calls. Review the authentication documentation in the above section for an overview, or find more specific details on the available API endpoints and APIs on the Developer Portal's [Swagger API document](https://developer.blackboard.com/portal/displayApi){:target="\_blank"}.In its current implementation, Learn REST APIs does not support Cross-Origin Resource Sharing (CORS). To learn about this and see an example to workaround this with Angular2, see the blog entitled [Cross-Origin Resource Sharing; or Why I Can't Use AJAX with Learn APIs](https://community.blackboard.com/blogs/4/17){:target="\_blank"}.
+Once your application acquires an access token, it only needs to pass that token as a Bearer token in the Authorization header of your API calls. Review the authentication documentation in the above section for an overview, or find more specific details on the available API endpoints and APIs on the Developer Portal's [Swagger API document](https://developer.anthology.com/portal/displayApi){:target="\_blank"}.In its current implementation, Learn REST APIs does not support Cross-Origin Resource Sharing (CORS). To learn about this and see an example to workaround this with Angular2, see the blog entitled [Cross-Origin Resource Sharing; or Why I Can't Use AJAX with Learn APIs](https://community.blackboard.com/blogs/4/17){:target="\_blank"}.
 
 ### Configure an Instance of Learn to Work with Your Application
 
@@ -167,5 +167,5 @@ Once you have registered with the developer portal and built an integration, dep
 We will continue to add new examples, tutorials, and code samples, so make
 sure to check these links regularly.
 
-- [Developer Portal](https://developer.blackboard.com/){: target='\_blank'}
-- [REST Documentation](https://developer.blackboard.com/portal/displayApi){: target='\_blank'}
+- [Developer Portal](https://developer.anthology.com/){: target='\_blank'}
+- [REST Documentation](https://developer.anthology.com/portal/displayApi){: target='\_blank'}

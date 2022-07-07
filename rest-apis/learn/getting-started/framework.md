@@ -26,7 +26,7 @@ There are three actors in the REST API use case:
 
 **_Important Note_**: By default NO integrations are enabled and the Learn server will not allow integrations without a Learn Administrator taking action.
 
-3. **Learn Administrator**: The Developer Portal: This is a new website ([https://developer.blackboard.com](https://developer.blackboard.com/)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Learn.
+3. **Learn Administrator**: The Developer Portal: This is a new website ([https://developer.anthology.com](https://developer.anthology.com/)) where a developer can browse the REST API documentation, register as a REST Developer, and register application references for integrating with Learn.
 
 The REST API Framework Actors, interactions, and data paths
 ![RESTDiagram.png](/assets/img/framework-1.png)

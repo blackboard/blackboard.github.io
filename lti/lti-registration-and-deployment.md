@@ -10,7 +10,7 @@ author: Eric Preston
 
 ## Why do we use a central service at Anthology?
 
-We believe that having Tool vendors register an LTI Tool _once_ through [the Developer Portal](https://developer.blackboard.com/){:target="_blank"} is the best approach. It allows Learn admins to deploy that tool by entering just one piece of information (the Client ID) in the Admin Panel and sharing another piece of information (the Deployment ID) with the Tool vendor.
+We believe that having Tool vendors register an LTI Tool _once_ through [the Developer Portal](https://developer.anthology.com/){:target="_blank"} is the best approach. It allows Learn admins to deploy that tool by entering just one piece of information (the Client ID) in the Admin Panel and sharing another piece of information (the Deployment ID) with the Tool vendor.
 
 _Tool vendor's clients don't need to register individual applications with the Developer Portal. That defeats the entire purpose of building this centralized service to make everyone's life a little simpler._
 

@@ -10,7 +10,7 @@ author: Mark O' Neil
 
 ### What's in the Box?
 
-The Anthology developer portal is located at [https://developer.blackboard.com](https://developer.blackboard.com){:target="\_blank"} There, you can:
+The Anthology developer portal is located at [https://developer.anthology.com](https://developer.anthology.com){:target="\_blank"} There, you can:
 
 - Sign up for a Developer Account
 - Read API Reference Documentation
@@ -34,16 +34,16 @@ registered.
 
 To register as a Anthology developer:
 
-1. Go to https://developer.blackboard.com and select Sign Up. Read and agree to the terms and conditions.
+1. Go to https://developer.anthology.com and select Sign Up. Read and agree to the terms and conditions.
 2. Provide your email address, a password, your first name and last, and select the checkbox to prove you are human.
 3. Select Create Account and you're on your way.
 
-**Note:** If you are an Anthology client - an Anthology Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for it's use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
+**Note:** If you are an Anthology client - an Anthology Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for it's use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.anthology.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
 ### Read API Reference Documentation
 
 To view the API reference documentation go to
-https://developer.blackboard.com and select **Explore
+https://developer.anthology.com and select **Explore
 APIs**.You can also browse [code examples](https://github.com/search?q=org%3Ablackboard+BBDN-REST&unscoped_q=BBDN-REST) and participate in the [developer community
 site](https://community.blackboard.com/developers).
 

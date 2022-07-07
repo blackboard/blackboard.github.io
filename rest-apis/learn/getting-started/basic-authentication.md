@@ -4,6 +4,8 @@ title: "Basic Authentication with REST"
 id: rest_apis-learn-getting-started-basic_auth
 categories: Learn REST
 doc_order_id: 0
+doctitle: "Basic Authentication with REST"
+pdf: true
 ---
 
 # Basic Authentication with REST
@@ -21,14 +23,14 @@ REST calls are subject to quotas and limits. For more information, see
 
 ### Before You Start
 
-- Your Learn instance must be registered at [developer.blackboard.com](https://developer.blackboard.com/).
-- The application ID you receive when registering at developer.blackboard.com must then be registered on your Learn instance. Registering your application on a Learn instance provides the application key:secret pair access to the Learn instance.
+- Your Learn instance must be registered at [developer.anthology.com](https://developer.anthology.com/).
+- The application ID you receive when registering at developer.anthology.com must then be registered on your Learn instance. Registering your application on a Learn instance provides the application key:secret pair access to the Learn instance.
 
 ### To Get a Token Using Basic OAuth 2.0
 
 Use the following high-level steps to fetch a token from your Learn instance.
 Remember that your Learn instance must be registered at
-developer.blackboard.com and that your application must be registered on your
+developer.anthology.com and that your application must be registered on your
 Learn instance. Registering your application with your Learn instance provides
 you with an application key and secret.
 
@@ -78,7 +80,7 @@ authorize other REST calls.
 
 Use cURL or an appropriate HTTP library to make a REST call to the appropriate
 endpoint. For a list of endpoints and the methods supported for each, see the
-Learn REST reference docs at https://developer.blackboard.com/portal/displayApi/Learn.
+Learn REST reference docs at https://developer.anthology.com/portal/displayApi/Learn.
 
 **Headers must include:**
 
@@ -139,4 +141,4 @@ you.
 - Tokens expire after 1 hour, as per the OAuth RFC examples.
 - Tokens are associated with a specific Learn site.
 - Any application may have only one token per Learn site. Asking for a token returns the existing one with an updated expiry time if it has not expired yet.
-- Check the [REST API Documentation](https://developer.blackboard.com/portal/displayApi) for error codes.
+- Check the [REST API Documentation](https://developer.anthology.com/portal/displayApi) for error codes.

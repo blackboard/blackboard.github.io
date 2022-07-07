@@ -19,7 +19,7 @@ In case you were wondering, C.R.U.D means:
 - Update
 - Delete
 
-> Please remember to always use https://developer.blackboard.com/portal/displayApi as your first source
+> Please remember to always use https://developer.anthology.com/portal/displayApi as your first source
 
 # Groups in Ultra Experience (C.R.U.D)
 

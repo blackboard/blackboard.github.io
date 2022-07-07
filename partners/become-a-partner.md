@@ -31,4 +31,4 @@ Purchase your BbDN partnership [here for US Companies](https://shop.blackboard.c
 
 Blackboard Partnerships Team
 
-*REST is an acronym for REpresentational State Transfer and an architectural style for distributed hypermedia systems. Learn has a complete suite of APIs based on this standard. See [developer.blackboard.com](https://developer.blackboard.com). LTI is an industry standard developed by the IMS. Learn supports LTI 1.1 and LTI 1.3 Advantage. See www.imsglobal.org/activity/learning-tools-interoperability 
+*REST is an acronym for REpresentational State Transfer and an architectural style for distributed hypermedia systems. Learn has a complete suite of APIs based on this standard. See [developer.anthology.com](https://developer.anthology.com). LTI is an industry standard developed by the IMS. Learn supports LTI 1.1 and LTI 1.3 Advantage. See www.imsglobal.org/activity/learning-tools-interoperability 

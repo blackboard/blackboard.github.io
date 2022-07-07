@@ -37,7 +37,7 @@ A rule must be born.
 
 Yes, we need to create a rule that will contain our criteria (We assume the course and content has already been created), all rules depend on content, you need to create first content, then the rule, then criteria(optional) and define who will receive these rules.
 
-For specific messages that may be returned by the api, please review: https://developer.blackboard.com/portal/displayApi
+For specific messages that may be returned by the api, please review: https://developer.anthology.com/portal/displayApi
 
 Also, please make sure to always review the entitlements required for each endpoint, you can check this document to get more information about entitlements: https://docs.blackboard.com/rest-apis/learn/getting-started/bookmarklet
 
