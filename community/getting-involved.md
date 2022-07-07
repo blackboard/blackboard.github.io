@@ -3,7 +3,6 @@ layout: post
 title: "Getting Involved"
 id: community-getting_involved
 categories: Community
-toc: false
 author: Scott Hurrey
 ---
 
