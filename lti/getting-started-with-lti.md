@@ -63,7 +63,7 @@ In this section we cover how you register your application with Anthology and de
 
 #### Anthology Developer Portal
 
-The first thing to understand about registering your application is that Anthology has you register your tool **ONCE** with our developer portal here <https://developer.blackboard.com>. This is a central, self-service application, running in AWS where you enter information about your application, and are given the values you need for your application to work with LTI Advantage and Learn. It is also the same place you get the ID, key, and secret if you are going to use our public REST API.
+The first thing to understand about registering your application is that Anthology has you register your tool **ONCE** with our developer portal here <https://developer.anthology.com>. This is a central, self-service application, running in AWS where you enter information about your application, and are given the values you need for your application to work with LTI Advantage and Learn. It is also the same place you get the ID, key, and secret if you are going to use our public REST API.
 
 **NOTE:** Do not ask institutions to register your tool with the Anthology Developer Portal. You register it **ONCE** with Anthology and institutions can deploy it with the Client ID you give them. They will receive a Deployment ID which they will exchange with you to set up the account. It is the deployment ID, in conjunction with the client ID and issuer, that uniquely identifies the business agreement between the tool vendor and the institution.
 

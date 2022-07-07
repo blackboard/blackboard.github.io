@@ -9,7 +9,7 @@ toc: true
 
 # Bookmarklet To Help Map Entitlements To Permissions
 
-One of the most difficult aspects to using the REST API is mapping the entitlements in the swagger documentation at developer.blackboard.com to the permissions available in the UI for creating a system role. Using this custom javascript bookmarklet makes this a lot easier. Here is the code:
+One of the most difficult aspects to using the REST API is mapping the entitlements in the swagger documentation at developer.anthology.com to the permissions available in the UI for creating a system role. Using this custom javascript bookmarklet makes this a lot easier. Here is the code:
 
 ```
 javascript:(function()%7Bif('jQuery'%20in%20window)%7Blet%20showUids%3D(jq)%3D%3E%7Bjq('tbody%23listContainer_databody%20%3E%20tr').each((i%2Ctr)%3D%3E%7B%20var%20val%20%3D%20jq('input%5Btype%3Dcheckbox%5D'%2C%20tr).prop('value')%3B%20jq('th'%2C%20tr).append('%3Cdiv%3E%3Ci%3E'%2Bval%2B'%3C%2Fi%3E%3C%2Fdiv%3E')%3B%20%7D)%7D%3Blet%20ws%3D%5B%5D%3Bws.push(window)%3Blet%20ifr%3DjQuery('iframe').prop('contentWindow')%3Bif(ifr)%7Bws.push(ifr)%3B%7Dws.forEach((w)%3D%3E%7BshowUids(w.jQuery)%3B%7D)%3B%7D%7D)()

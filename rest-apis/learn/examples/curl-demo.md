@@ -4,19 +4,11 @@ title: "cURL Demo"
 id: rest_apis-learn-examples-curl_demo
 categories: Learn Rest
 author: Mark Bykerk Kauffman
+doctitle: "cURL Demo"
 pdf: true
-geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
-header-includes:
- - \usepackage{fvextra}
- - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
- - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
-<!-- BOF PDF BLOCK -->
-<div>&nbsp;</div>
-{% assign sluggedName = page.name | replace: '.md' %}
-<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
-<!-- EOF PDF BLOCK -->
+
+# cURL Demo
 
 ## Introduction
 The rest demo script demonstrates authenticating a REST application,
@@ -331,7 +323,7 @@ https://localhost:9877/learn/api/public/v1/users
 ```
 
 Remember, you can always find the JSON specification for these calls at
-[Explore APIs](https://developer.blackboard.com/portal/displayApi)
+[Explore APIs](https://developer.anthology.com/portal/displayApi)
 
 Example:
 
@@ -366,7 +358,7 @@ curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
 By sheer coincidence this user's ID, '\_7_1', came out to be the same as the DSK
 ID, '\_7_1'.
 
-Note the availability of query parameters in the documentation at https://developer.blackboard.com.
+Note the availability of query parameters in the documentation at https://developer.anthology.com.
 
 Examples:
 
@@ -707,11 +699,11 @@ courseId:mbk-rest-contents/contents/_12907_1/children
 ```
 
 You can, of course, use the id returned in the above to fetch the content item
-using the appropriate GET. Read the documentation at developer.blackboard.com.
+using the appropriate GET. Read the documentation at developer.anthology.com.
 
 ### CREATE ASSIGNMENT WITH ATTACHMENT
 
-**Currently Only Available For Ultra Courses (Remember to check the Learn version for availably of the APIs @ [https://developer.blackboard.com](https://developer.blackboard.com))**
+**Currently Only Available For Ultra Courses (Remember to check the Learn version for availably of the APIs @ [https://developer.anthology.com](https://developer.anthology.com))**
 
 1. Get a course's content root. root will only work with the \_abc_xyz ID
    format. It will not work for courseId:<course_id> format.
@@ -764,7 +756,7 @@ temporary location and goes away sometime after being uploaded. Also, there is
 a bug in the following where if attempts allowed is too large it will fail.
 I've not experimented to find the limit.)
 
-Reference: [POST /learn/api/public/v1/courses/{courseId}/contents/createAssignment](https://developer.blackboard.com/portal/displayApi)
+Reference: [POST /learn/api/public/v1/courses/{courseId}/contents/createAssignment](https://developer.anthology.com/portal/displayApi)
 
 Example:
 
@@ -789,7 +781,7 @@ assignment.
 
 Currently Only Available For Presentation-Only Assignments
 
-**(Reference for all APIs used and the Learn version they are available in is @ [https://developer.blackboard.com](developer.blackboard.com))**
+**(Reference for all APIs used and the Learn version they are available in is @ [https://developer.anthology.com](developer.anthology.com))**
 
 1. Use 3LO to get an access code for the student account that will submit
    the attempt to the assignment. 3LO MUST be used for this process.
@@ -916,4 +908,4 @@ And we see the student's submission with the attachment.
 We hope that the above demonstration gives you a helpful peek under the hood
 as to what is going on when you make REST calls to a Learn system. You can
 take these cURL commands and use them to make all of the REST calls documented
-here: [Explore APIs](https://developer.blackboard.com/portal/displayApi)
+here: [Explore APIs](https://developer.anthology.com/portal/displayApi)

@@ -5,19 +5,9 @@ tipue-search-status: true
 id: rest_apis-learn-advanced-soap_to_rest
 categories: Learn soap
 author: Scott Hurrey
+doctitle: "SOAP to REST"
 pdf: true
-geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
-header-includes:
-    - \usepackage{fvextra}
-    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
-<!-- BOF PDF BLOCK -->
-<div>&nbsp;</div>
-{% assign sluggedName = page.name | replace: '.md' %}
-<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
-<!-- EOF PDF BLOCK -->
 
 # SOAP to REST migration: Mapping
 
@@ -32,7 +22,7 @@ the last few remaining gaps in functionality are closed.
 New REST APIs are rolled out in new versions of Learn, but never
 back-ported to previous releases. To be sure the endpoint you require is
 available, be sure to visit the [Developer
-Portal](https://developer.blackboard.com/portal/displayApi)
+Portal](https://developer.anthology.com/portal/displayApi)
 and check the individual endpoints you need.
 
 ## Announcements

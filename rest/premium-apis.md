@@ -4,19 +4,10 @@ title: "Premium APIs"
 id: rest_apis-learn-uef-request_premium_apis
 categories: REST
 author: Hernan Ortiz
+doctitle: "Premium APIs"
 pdf: true
-geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
-header-includes:
-    - \usepackage{fvextra}
-    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
-<!-- BOF PDF BLOCK -->
-<div>&nbsp;</div>
-{% assign sluggedName = page.name | replace: '.md' %}
-<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
-<!-- EOF PDF BLOCK -->
+
 
 # Premium APIs
 Premium APIs offer several new capabilities for integrations with

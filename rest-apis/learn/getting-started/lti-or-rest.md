@@ -34,7 +34,7 @@ REST stands for **Re**presentational **S**tate **T**ransfer. It is a
 lightweight, flexible web service architecture that allows HTTP commands to be
 sent to Web Applications without unnecessary overhead. (REST documentation references HTTP, but to be secure
 everything with Learn is done over HTTPS.) Anthology has developed and published
-[REST APIs for Learn](https://developer.blackboard.com/portal/displayApi){: target='\_blank'}.
+[REST APIs for Learn](https://developer.anthology.com/portal/displayApi){: target='\_blank'}.
 
 ## LTI DISCUSSION
 
@@ -64,7 +64,7 @@ Now things can get interesting. You might build a pure REST Application, but oft
 We will continue to add new examples, tutorials, and code samples, so make
 sure to check these links regularly.
 
-- [Developer Portal](https://developer.blackboard.com/){: target='\_blank'}
-- [REST Documentation](https://developer.blackboard.com/portal/displayApi){: target='\_blank'}
+- [Developer Portal](https://developer.anthology.com/){: target='\_blank'}
+- [REST Documentation](https://developer.anthology.com/portal/displayApi){: target='\_blank'}
 - [LTI Documentation](https://www.imsglobal.org/activity/learning-tools-interoperability){: target='\_blank'}
 - [Learn & LTI Documentation](/lti/getting-started-with-lti){: target='\_blank'}

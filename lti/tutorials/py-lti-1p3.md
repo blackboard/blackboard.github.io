@@ -27,7 +27,7 @@ and type `git clone https://github.com/dmitry-viskov/pylti1.3-flask-example.git`
 
 #### Developer Portal 
 
-Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the [developer portal](https://developer.blackboard.com). 
+Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the [developer portal](https://developer.anthology.com). 
 For more information on this process, check out this [document](/rest-apis/learn/getting-started/registry). Once you have an account set up, you can simply register a new application. 
 You will be prompted to enter several pieces of information. For this project, here is what we need to enter:
 
@@ -74,9 +74,9 @@ In `game.json`, you will already see a section for Blackboard. It will look like
 ```json
 "https://blackboard.com": {
     "client_id": "your client id",
-    "auth_login_url": "https://developer.blackboard.com/api/v1/gateway/oidcauth",
-    "auth_token_url": "https://developer.blackboard.com/api/v1/gateway/oauth2/jwttoken",
-    "key_set_url": "https://developer.blackboard.com/api/v1/management/applications/<your client id>/jwks.json",
+    "auth_login_url": "https://developer.anthology.com/api/v1/gateway/oidcauth",
+    "auth_token_url": "https://developer.anthology.com/api/v1/gateway/oauth2/jwttoken",
+    "key_set_url": "https://developer.anthology.com/api/v1/management/applications/<your client id>/jwks.json",
     "key_set": null,
     "private_key_file": "private.key",
     "deployment_ids": ["your deployment id"]

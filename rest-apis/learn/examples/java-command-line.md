@@ -4,19 +4,10 @@ title: "Command line REST Application"
 id: rest_apis-learn-examples-java_command_line
 categories: Learn Rest
 author: Scott Hurrey
+doctitle: "Tutorial - Build a Java Command Line REST Application"
 pdf: true
-geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
-header-includes:
-    - \usepackage{fvextra}
-    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
-<!-- BOF PDF BLOCK -->
-<div>&nbsp;</div>
-{% assign sluggedName = page.name | replace: '.md' %}
-<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
-<!-- EOF PDF BLOCK -->
+
 
 # Tutorial - Build a Java Command Line REST Application
 
@@ -32,7 +23,7 @@ assumed to be in place:
 - User has installed and configured [GIT](https://git-scm.com/downloads).
 - User has cloned the [repository](https://github.com/blackboard/BBDN-DevCon-REST-Workshop) to their local working directory.
 - User has Java 11 installed and configured to JAVA_HOME.
-- User has registered for an account on the [Developer Portal](https://developer.blackboard.com/), [registered an application](/rest-apis/learn/getting-started/registry), obtained the key and secret, and [configured](/rest-apis/learn/admin/rest-and-learn) the Developer Virtual Machine to accept it..
+- User has registered for an account on the [Developer Portal](https://developer.anthology.com/), [registered an application](/rest-apis/learn/getting-started/registry), obtained the key and secret, and [configured](/rest-apis/learn/admin/rest-and-learn) the Developer Virtual Machine to accept it..
 
 To watch a recording of the corresponding Webinar, click
 [here](https://us.bbcollab.com/recording/BBAA710721684484425FA10FBA7A1B93).

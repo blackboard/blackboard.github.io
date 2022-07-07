@@ -7,4 +7,4 @@ categories: Learn REST
 
 # Anthology Developer Portal
 
-Our Developer Portal is where you may view our API documentation, register to use our APIs, and login and register applications. You may visit the [Developer Portal](https://developer.blackboard.com){: target="\_blank"}
+Our Developer Portal is where you may view our API documentation, register to use our APIs, and login and register applications. You may visit the [Developer Portal](https://developer.anthology.com){: target="\_blank"}

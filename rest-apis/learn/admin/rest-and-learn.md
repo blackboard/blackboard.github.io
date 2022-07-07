@@ -4,19 +4,10 @@ title: "Rest and Learn"
 id: rest_apis-learn-admin-rest_and_learn
 categories: Learn REST
 author: Mark O'Neil
+doctitle: "Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators"
 pdf: true
-geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
-header-includes:
-    - \usepackage{fvextra}
-    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-    - \usepackage[obeyspaces,spaces,hyphens]{xurl}
 ---
-<!-- BOF PDF BLOCK -->
-<div>&nbsp;</div>
-{% assign sluggedName = page.name | replace: '.md' %}
-<div class="download-btn-placement"><br>modified: {{ page.last_modified_at | date: '%b-%d-%y' }} &nbsp;&nbsp; 
-<a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a></div>
-<!-- EOF PDF BLOCK -->
+
 
 # Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators
 
@@ -76,7 +67,7 @@ help the vendor correct the situation.
 
 ![Create REST integration](/assets/img/rest-and-learn-3.png)
 
-**Note:** If you are an Anthology client, an Anthology Partner / Vendor / Developer of an LTI or REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
+**Note:** If you are an Anthology client, an Anthology Partner / Vendor / Developer of an LTI or REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Anthology DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.anthology.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
 Contractors are an exception to this policy as they are producing an
 integration on your, the Anthology client, behalf. Questions regarding the
