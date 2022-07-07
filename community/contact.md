@@ -3,7 +3,6 @@ layout: post
 title: "Getting Involved"
 id: community-contact_us
 categories: Community
-toc: false
 ---
 
 # How to contact us!

@@ -3,7 +3,6 @@ layout: post
 title: "Bb App students launch schema"
 id: rest_apis-learn-bbapp-student_launch_schema
 categories: Mobile
-toc: false
 author: Scott Hurrey
 ---
 
