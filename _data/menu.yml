@@ -72,10 +72,6 @@
           id: rest_apis-learn-admin
           type: menu
           subsubmenu_content:
-            - subsubmenu_content_name: Cloud Registry
-              url: /rest-apis/learn/admin/cloud-registry
-              id: rest-apis-learn-admin-cloud_registry
-              target: _self
             - subsubmenu_content_name: Rest and Learn
               url: /rest-apis/learn/admin/rest-and-learn
               id: rest_apis-learn-admin-rest_and_learn
@@ -245,7 +241,7 @@
           type: menu
           subsubmenu_content:
             - subsubmenu_content_name: First Steps with Student REST API
-              url: /rest-apis/student/getting-started/first-steps
+              url: /rest-apis/student/getting-started/student-first-steps
               id: rest_apis-student-getting-started-first-steps
               target: _self
         - subsubmenu_item: Examples
@@ -254,7 +250,7 @@
           type: menu
           subsubmenu_content:
             - subsubmenu_content_name: About Service Catalog
-              url: /rest-apis/student/servicecatalog/about
+              url: /rest-apis/student/servicecatalog/about-student-service-catalog
               id: rest_apis-student-servicecatalog-about
               target: _self
             - subsubmenu_content_name: Log into mycampusinsight
