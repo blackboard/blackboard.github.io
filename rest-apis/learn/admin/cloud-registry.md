@@ -9,7 +9,6 @@ doctitle: "Register Developer Instances to the Cloud"
 pdf: true
 ---
 
-
 # Register Developer Instances to the Cloud
 
 You must register developer instances of Blackboard Learn to the Blackboard
