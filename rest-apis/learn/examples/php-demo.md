@@ -4,7 +4,10 @@ title: "PHP Demo"
 id: rest_apis-learn-examples-php-demo
 categories: Learn Rest
 author: Scott Hurrey
+doctitle: "Demo using PHP"
+pdf: true
 ---
+
 
 # Demo using PHP
 
@@ -16,7 +19,7 @@ discovering, and deleting supported Learn objects.
 
 - You must [register a developer account and application](/rest-apis/learn/getting-started/registry) in the Developer Portal
 - You must
-  [register your application](/rest-apis/learn/admin/rest-and-learn) in Blackboard Learn
+  [register your application](/rest-apis/learn/admin/rest-and-learn) in Learn
 - You must also configure the script as outlined in the README for the project
 
 This PHP command line Application allows you to:
@@ -42,11 +45,11 @@ This help topic assumes the Developer:
 - is familiar with PHP
 - has installed PHP and the HTTP_Request2 PHP Library
 - has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-PHP) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-PHP/blob/master/README.md) file.
-- has a REST-enabled Blackboard Learn instance.
+- has a REST-enabled Learn instance.
 
 ### Code Walkthrough
 
-To build an integration with the Blackboard REST Web Services, regardless of
+To build an integration with the Learn REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
 1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) document.

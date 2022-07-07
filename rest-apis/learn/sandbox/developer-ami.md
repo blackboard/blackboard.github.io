@@ -6,21 +6,21 @@ id: rest_apis-learn-sandbox-developer_ami
 categories: DVBA
 ---
 
-# Using the Blackboard Learn AMI for REST and LTI Development
+# Using the Learn AMI for REST and LTI Development
 
-This document outlines usage of the Blackboard REST and LTI Developer AMI made available via the Amazon AWS Marketplace.
+This document outlines usage of the Learn REST and LTI Developer AMI made available via the Amazon AWS Marketplace.
 
 ## Overview
 
-The Blackboard REST and LTI Developer Amazon Machine Image (“AMI”) is an image of a Blackboard Learn server available in the Amazon Marketplace. The AMI allows a developer to spin up a copy of Blackboard Learn for building applications that use the REST APIs and/or Learning Tool Interoperability (“LTI”) to integrate with Learn. This image is a standalone copy of the SaaS deployment of Blackboard Learn that allows development and testing against the Ultra user experience. Once the developer spins up the copy of Learn, it lives in his or her AWS account and the developer has full control over the instance of Learn. All instances are pre-licensed with a developer license. New developer AMIs will be made available in the same cadence as SaaS releases. Please note that there is often a delay of 5-14 days before the AMI is available due to AMI and AWS processing time.
+The Learn REST and LTI Developer Amazon Machine Image (“AMI”) is an image of a Learn server available in the Amazon Marketplace. The AMI allows a developer to spin up a copy of Learn for building applications that use the REST APIs and/or Learning Tool Interoperability (“LTI”) to integrate with Learn. This image is a standalone copy of the SaaS deployment of Learn that allows development and testing against the Ultra user experience. Once the developer spins up the copy of Learn, it lives in his or her AWS account and the developer has full control over the instance of Learn. All instances are pre-licensed with a developer license. New developer AMIs will be made available in the same cadence as SaaS releases. Please note that there is often a delay of 5-14 days before the AMI is available due to AMI and AWS processing time.
 
-This program allows a developer to build an integration for Blackboard Learn without a formal paid partnership. Anyone who wants to test the Ultra experience can create copy. Note that you cannot deploy a custom building block to this AMI. It is meant only for REST and LTI development.
+This program allows a developer to build an integration for Learn without a formal paid partnership. Anyone who wants to test the Ultra experience can create copy. Note that you cannot deploy a custom building block to this AMI. It is meant only for REST and LTI development.
 
 **NOTE:** Building Block installation is NOT supported on the AMIs.
 
 ### Get the Blackboard REST and LTI Developer AMI
 
-The easiest way to find the Developer AMI is by searching the Amazon Marketplace for Blackboard Learn. The results show all of the currently available AMIs. Given the cadence or releases, you should locate the Learn instance you want.
+The easiest way to find the Developer AMI is by searching the Amazon Marketplace for Learn. The results show all of the currently available AMIs. Given the cadence or releases, you should locate the Learn instance you want.
 
 Use the Blackboard REST and LTI Developer AMI
 Before you begin, you must have an Amazon AWS account. If you do not have an AWS account you will need to create one. The steps to set up an AMI are typically as follows.
@@ -30,7 +30,7 @@ Before you begin, you must have an Amazon AWS account. If you do not have an AWS
 - Spin it up and code!
 - When configuring the instance, it is completely up to you how you set up the server. We do have a few recommendations, however.
 
-1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Blackboard Learn effectively and build your cool widget.
+1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Learn effectively and build your cool widget.
 
 - If you see 502 Gateway errors, you may need to increase the size of your AMI. Additionally, you may periodically see a 502 Gateway error during use - keeping in mind EC2s based on this AMI are NOT intended for use as a Production service, you may simply issue a reboot to restart the server maintaining your AWS provisioned public IP and DNS settings.
 
@@ -88,9 +88,9 @@ $ sudo reboot now
 
 **Warning:** Timing is important. If you attempt to access your EC2 before the Let's Encrypt cert installation is complete you will need to rebuild. If you are having issues, [watch this video walkthrough](https://youtu.be/eQu7Ii923DU) of settup and getting a Let's Encrypt certificate working.
 
-#### What does the Blackboard REST and LTI Developer AMI cost?
+#### What does the Learn REST and LTI Developer AMI cost?
 
-The Open Innovation Initiative was created to lower the cost of entry for developing software solutions on the Blackboard Learn platform. This is accomplished by removing the previous Partner program costs and replacing those partner program costs with low hourly AMI usage costs. This enables you the developer to control your costs for prototyping your applications and entering the education software market.
+The Open Innovation Initiative was created to lower the cost of entry for developing software solutions on the Learn platform. This is accomplished by removing the previous Partner program costs and replacing those partner program costs with low hourly AMI usage costs. This enables you the developer to control your costs for prototyping your applications and entering the education software market.
 
 Use of the Developer AMI will result in two charges being made to your account:
 
@@ -102,7 +102,7 @@ Use of the Developer AMI will result in two charges being made to your account:
 
 If you have any questions, feel free to ask in this space or email us at developers@blackboard.com.
 
-#### Log into the Blackboard Learn Application on the AMI
+#### Log into the Learn Application on the AMI
 
 The username is administrator. The password is the instance ID, e.g., i-234234234234. If you look at the log created when you spin it up it is also printed there. You can find the log from the EC2 console.
 
@@ -112,15 +112,15 @@ The first time you go to login, you will see text on the page like the following
 
 Landing page seen the first time you login to the developer AMI
 
-### Configure Your AMI-based Blackboard Learn Instance
+### Configure Your AMI-based Learn Instance
 
-When you set up your instance of Blackboard Learn, you can configure different options. These options are discussed in Enable Learn Tool Interoperability (LTI) Links and Text.
+When you set up your instance of Learn, you can configure different options. These options are discussed in Enable Learn Tool Interoperability (LTI) Links and Text.
 
-#### Triage Your AMI-based Blackboard Learn Instance
+#### Triage Your AMI-based Learn Instance
 
 Note that not stopping your EC2 when you encounter an error will continue to incur EC2 charges and we do not issue refunds.Always stop your EC2 if you encounter an error or do not require a 24x7 development instance.
 
-1. For General Learn System Administration you may visit: [Blackboard Learn SaaS Deployments](https://help.blackboard.com/Learn/Administrator/SaaS)
+1. For General Learn System Administration you may visit: [Learn SaaS Deployments](https://help.blackboard.com/Learn/Administrator/SaaS)
 2. 504 Gateway Error
 3. Visiting https:// displays a 504 error in your browser: 1. Shutdown the instance to stop accumulating charges and try again 2. Or reboot the instance:
 
@@ -138,11 +138,11 @@ The above restarts the instance and will typically correct the 504 error.
 
 ### Migration Cookbook - Recreating Data between AMIs
 
-Currently, there is no formal migration/transfer tool to port Blackboard Learn data between AMI (EC2) instances. However, there are several existing administrative tools that can be leveraged to capture the bulk of T&L (teaching/learning data) like courses, users, institutional roles, and enrollments, etc. from an existing (source) EC2 and reinstate/recreate the data onto a (new) EC2. The resources linked below will guide you through this data transfer process:
+Currently, there is no formal migration/transfer tool to port Learn data between AMI (EC2) instances. However, there are several existing administrative tools that can be leveraged to capture the bulk of T&L (teaching/learning data) like courses, users, institutional roles, and enrollments, etc. from an existing (source) EC2 and reinstate/recreate the data onto a (new) EC2. The resources linked below will guide you through this data transfer process:
 
 1. [Bb Learn EC2 Data Transfer.docx](/assets/files/Bb%20Learn%20EC2%20Data%20Transfer.docx): A Word doc outlining a comprehensive step-by-step overview of the migration/transfer process between a source and destination EC2.
 2. [EC2 Migration SQL Scripts and Feed Files.zip](/assets/files/EC2%20Migration%20SQL%20Scripts%20and%20Feed%20Files.zip): A zip file containing all the SQL scripts (PostgreSQL format) and example feed files referenced in the Data Transfer overview document (above).
 
 #### Notice - AVG on Windows Systems
 
-While using the AVG antivirus product on a Windows system and attempting to create a course using Blackboard Learn, AVG may manifest what we believe is a false positive dialog regarding CVE-2014-0286-A. This can occur while using any browser, though the error message is specific to now unsupported versions of Microsoft Internet Explorer 6 through 11. Our security team has indicated that this is an issue with the AVG software. Blackboard will be reaching out to AVG to discuss. See the AVG website for questions about configuring the AVG software, and for their contact information.
+While using the AVG antivirus product on a Windows system and attempting to create a course using Learn, AVG may manifest what we believe is a false positive dialog regarding CVE-2014-0286-A. This can occur while using any browser, though the error message is specific to now unsupported versions of Microsoft Internet Explorer 6 through 11. Our security team has indicated that this is an issue with the AVG software. See the AVG website for questions about configuring the AVG software, and for their contact information.

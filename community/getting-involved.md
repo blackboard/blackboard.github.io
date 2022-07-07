@@ -11,7 +11,7 @@ author: Scott Hurrey
 
 Getting involved in the Developer community is easy and with options to suit your goals…
 
-- If you have not already done so, register for a Blackboard Developer Community account to interact. Its free, and gives you the ability to participate in all of the Blackboard Communities. If you are interested in contributing to the blogs here on the Community site, let us know.
+- If you have not already done so, register for an Anthology Developer Community account to interact. Its free, and gives you the ability to participate in all of the Anthology Communities. If you are interested in contributing to the blogs here on the Community site, let us know.
 - Build a tutorial
   - If there is an area of the product or a technology that you feel deserves more or better documentation, please consider working with us to build a tutorial so that we can share that information with the community.
 - Host a webinar

@@ -21,7 +21,7 @@ a tool configured at the same time if they use the same fqdn.
 If a tool provider wants to upgrade their tool to LTI 1.3/Advantage but not break all of an institution's existing links
 then they will need to host their LTI 1.3/Advantage tool at the same fqdn.
 
-In Blackboard Learn we automatically upgrade the links for a tool when a Learn administrator deploys the 1.3 version of the tool.
+In Learn we automatically upgrade the links for a tool when a Learn administrator deploys the 1.3 version of the tool.
 
 At deployment time, if Learn sees there is an existing 1.1 tool registered with the same domain(s) as the 1.3
 tool the admin is prompted to migrate the links. If they choose "yes" then we migrate ALL LTI 1.1 links to the

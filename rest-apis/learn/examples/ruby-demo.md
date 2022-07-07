@@ -4,7 +4,11 @@ title: "Ruby Demo"
 id: rest_apis-learn-examples-ruby_demo
 categories: Learn Rest
 author: Scott Hurrey
+doctitle: "Demo using Ruby
+"
+pdf: true
 ---
+
 
 # Demo using Ruby
 
@@ -16,7 +20,7 @@ discovering, and deleting supported Learn objects.
 
 - You must [register a developer account and application](/rest-apis/learn/getting-started/registry) in the Developer Portal
 - You must
-  [register your application](/rest-apis/learn/admin/rest-and-learn) in Blackboard Learn
+  [register your application](/rest-apis/learn/admin/rest-and-learn) in Learn
 - You must also configure the script as outlined in the README for the project
 
 This Ruby command line Application allows you to:
@@ -42,11 +46,11 @@ This help topic assumes the Developer:
 - is familiar with Ruby
 - has installed Ruby and the Ruby rest-client gem.
 - has obtained a copy of the [source code](https://github.com/blackboard/BBDN-REST-Demo-Ruby) and built it in conjunction with the project [README.md](https://github.com/blackboard/BBDN-REST-Demo-Ruby/blob/master/README.md) file.
-- has a REST-enabled Blackboard Learn instance.
+- has a REST-enabled Learn instance.
 
 ### Code Walkthrough
 
-To build an integration with the Blackboard REST Web Services, regardless of
+To build an integration with the Learn REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
 1. Use the Application Key and Secret to obtain an OAuth 2.0 access token, as described in the [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) document.
@@ -118,8 +122,8 @@ should include the objectId being deleted.
 
 **Create**
 
-```ruby
-    payload = "{ \"externalId\":\"BBDN-DSK-RUBY\", \"description\": \"Demo Data Source used for REST Ruby Demo\" }"
+{% assign sluggedName = page.name | replace: '.md' %}
+# Ruby Demo <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
     RestClient.post($DSK_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
            case response.code
                   when 201

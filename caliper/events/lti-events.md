@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # LTI Events
 
-Blackboard Learn's Caliper Analytics stream emits an LTIEvent when any user:
+Learn's Caliper Analytics stream emits an LTIEvent when any user:
 
 - **Clicks an LTI link**
 - **Returns from an LTI link**

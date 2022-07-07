@@ -61,7 +61,7 @@ The following table defines the available settings in the sample JSON package ab
 |         endTime          |                                The ISO\-formatted date to end the session as a string                                 |     “2020\-03\-27T17:00:00\.000Z”      |
 |        noEndDate         |                                  Boolean describing whether the room has an end date                                  |                  TRUE                  |
 |     createdTimezone      |                                          The time zone to create the room in                                          |           “America/New_York”           |
-|    courseRoomEnabled     |   A Boolean specific to Blackboard Learn that describes whether this room is automatically associated with a course   |                 FALSE                  |
+|    courseRoomEnabled     |   A Boolean specific to Learn that describes whether this room is automatically associated with a course   |                 FALSE                  |
 |       boundaryTime       |          Number of minutes a user can join a session before the start time\. Must be 0, 15, 30, 45, or 60\.           |                   15                   |
 |  ParticipantCanUseTools  |  A Boolean that describes whether a use can use tools, such as application sharing, screen sharing, timer, and polls  |                  TRUE                  |
 |      occurrenceType      |                                 Single\-Use or Perpetual session\. Must be “S” or “P”                                 |                  “S”                   |

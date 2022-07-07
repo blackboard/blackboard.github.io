@@ -5,6 +5,8 @@ tipue-search-status: true
 id: rest_apis-learn-advanced-soap_to_rest
 categories: Learn soap
 author: Scott Hurrey
+doctitle: "SOAP to REST"
+pdf: true
 ---
 
 # SOAP to REST migration: Mapping
@@ -12,15 +14,15 @@ author: Scott Hurrey
 The purpose of this document is to provide a mapping from SOAP Web Service
 calls to REST API Endpoints. This is meant to be a quick-start guide to the
 migration process. With SOAP being deprecated in the near term future and
-removed from Blackboard Learn following the public API Deprecation Policy, it
+removed from Learn following the public API Deprecation Policy, it
 is our intention to provide you the information you need in order to migrate
 as painlessly as possible. This is a living document and will up updated as
 the last few remaining gaps in functionality are closed.
 
-New REST APIs are rolled out in new versions of Blackboard Learn, but never
+New REST APIs are rolled out in new versions of Learn, but never
 back-ported to previous releases. To be sure the endpoint you require is
 available, be sure to visit the [Developer
-Portal](https://developer.blackboard.com/portal/displayApi)
+Portal](https://developer.anthology.com/portal/displayApi)
 and check the individual endpoints you need.
 
 ## Announcements

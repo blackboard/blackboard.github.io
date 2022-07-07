@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # View Events
 
-Blackboard Learn's Caliper Analytics stream sends ViewEvent messages to cover
+Learn's Caliper Analytics stream sends ViewEvent messages to cover
 four use cases:
 
 - **User clicks on an assignment link**

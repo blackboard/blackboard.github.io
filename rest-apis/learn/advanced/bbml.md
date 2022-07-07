@@ -4,15 +4,17 @@ title: "BbML"
 id: rest_apis-learn-advanced-bbml
 categories: Learn REST
 author: Scott Hurrey
+doctitle: "BbML"
+pdf: true
 ---
 
-# Blackboard Markup Language BbML
+# BbML 
 
 ### Overview
 
 BbML is a subset of HTML. The parameters of some methods accept BbML-formatted
 text. For more information about particular Learn REST endpoints, see the
-[REST API documentation](https://developer.blackboard.com/portal/displayApi){:target="\_blank"}
+[REST API documentation](https://developer.anthology.com/portal/displayApi){:target="\_blank"}
 
 ### BbML specification - version 1
 
@@ -220,7 +222,7 @@ It would render as follows in Ultra UI:
 When creating content using the Learn Public REST API, it is expected that any
 related file content be uploaded prior to creation. Uploading files can be
 done using the upload file endpoint documented at
-https://developer.blackboard.com/portal/displayApi
+https://developer.anthology.com/portal/displayApi
 
 Once a file has been uploaded, the upload file endpoint will have provided an
 Id which will be used to reference the associated file.

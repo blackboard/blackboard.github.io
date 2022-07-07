@@ -4,12 +4,13 @@ title: "cURL Demo"
 id: rest_apis-learn-examples-curl_demo
 categories: Learn Rest
 author: Mark Bykerk Kauffman
+doctitle: "cURL Demo"
+pdf: true
 ---
 
 # cURL Demo
 
 ## Introduction
-
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
 discovering, and deleting the Data Source and User Learn objects. A video
@@ -17,13 +18,12 @@ presentation using this material plus an explanation of how to register your
 REST application on the Developer Portal, and how to configure your
 application's REST integration on your Learn development system, is available
 [here](http://bit.ly/RestTechDeepDive4Partners). Here
-is the [slide deck](/assets/files/2016.06.22.RestTechnicalDeepDiveForPartners.pptx)
+is the [slide deck](/files/2016.06.22.RestTechnicalDeepDiveForPartners.pptx)
 
 ### Prerequisites
-
 - You must [register a developer account and application](/rest-apis/learn/getting-started/registry) in the Developer Portal
 - You must
-  [register your application](/rest-apis/learn/admin/rest-and-learn) in Blackboard Learn
+  [register your application](/rest-apis/learn/admin/rest-and-learn) in Learn
 - You must also configure the script as outlined in the README for the project
 
 This cURL command-line demonstration shows you how to:
@@ -46,11 +46,11 @@ make a complete set of CRUD operations to the Learn REST endpoints.
 This help topic assumes the Developer:
 
 - is familiar with cURL.
-- has a REST-enabled [Blackboard Learn instance](/rest-apis/learn/sandbox/what-is-dvba).
+- has a REST-enabled [Learn instance](/rest-apis/learn/sandbox/what-is-dvba).
 
 ### Walkthrough
 
-To build an integration with the Blackboard REST Web Services, regardless of
+To build an integration with the Learn REST Web Services, regardless of
 the programming language of choice, can really be summed up in two steps:
 
 1. Use the Application Key and Secret to obtain an **OAuth 2.0 access token**, as described in the [Basic Authentication](/rest-apis/learn/getting-started/basic-authentication) document.
@@ -117,9 +117,7 @@ following format:
 ```html
 https://<LearnHost
   >//learn/api/public/v1/oauth2/authorizationcode?redirect_uri=<REST APP URI>
-    &response_type=code&client_id=<your **app key**>&scope=read</your></REST
-  ></LearnHost
->
+     & response_type=code & client_id=<your **app key**> & scope=read</your></REST></LearnHost>
 ```
 
 Example:
@@ -128,7 +126,7 @@ Place the URI below in your browser address field:
 
 ```html
 https://bd-partner-a-original.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?
-redirect_uri=https://localhost&response_type=code&client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d&scope=read
+redirect_uri=https://localhost & response_type=code & client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d & scope=read
 ```
 
 At this point you are requested to log in.
@@ -139,14 +137,14 @@ and do the above a second time. Once your browser has the cookie-acceptance
 cookie set for a given Learn system the work flow will carry on as follows.**
 
 For this example, after you log in your browser will be directed to:
-`https://localhost/?code=XYTdmQcSGrggzujJm2Ccf8C7dKyqKc7Q` (The code will be
-different every time.) If you provided some other host name in the
-redirect_uri, then that host name would be shown instead of localhost. Now you
-have the code that you will use to retrieve the access token for all
+
+`https://localhost/?code=XYTdmQcSGrggzujJm2Ccf8C7dKyqKc7Q` 
+
+(The code will be different every time.) If you provided some other host name in the redirect_uri, then that host name would be shown instead of localhost. Now you have the code that you will use to retrieve the access token for all
 additional REST calls.
 
 NOTE regarding scope: The developer portal shows an example scope parameter as
-"read write offline". Using curl this would be `&scope=read_write-offline`
+"read write offline". Using curl this would be ` & scope=read_write-offline`
 
 We have to URL encode the space character.
 
@@ -168,14 +166,11 @@ Example:
 ```bash
 curl -k --user d128e50d-c91e-47d3-a97e-9d0c8a77fb5d:kLpiuq34320jqreaiJIRoareASELERREv56
 --data "grant_type=authorization_code"
-https://bd-partner-a-original-new.blackboard.com/learn/api/public/v1/oauth2/
-token?code=ItmqfxQiA9dzIDNwNoNYseM5GNRHHl
-fa\&redirect_uri=https://localhost
+https://bd-partner-a-original-new.blackboard.com/learn/api/public/v1/oauth2/token? code=ItmqfxQiA9dzIDNwNoNYseM5GNRHHlfa & redirect_uri=https://localhost
 ```
 
 ```json
-{"access_token":"Cdf83I0dwRoweXuY1dZDbbW0f0WmDmuF","token_type":"bearer","expi
-res_in":3599,"scope":"read","user_id":"7ac650e5bd0d467882943ed06fbfe72c"}
+{"access_token":"Cdf83I0dwRoweXuY1dZDbbW0f0WmDmuF", "token_type":"bearer", "expires_in":3599, "scope":"read", "user_id":"7ac650e5bd0d467882943ed06fbfe72c"}
 ```
 
 The JSON response is serialized into the Token object as shown above, and you
@@ -219,7 +214,7 @@ Every example is shown in bold face, the JSON result is shown in italics.
 
 ```bash
 curl -k -X POST -H "Authorization: Bearer <Access Token>" -H "Content-Type: application/json"
---data '{"externalId":"<String>","description":"<String>"}'
+--data '{"externalId":"<String>", "description":"<String>"}'
 https://<LearnHost>/learn/api/public/v1/dataSources
 ```
 
@@ -229,7 +224,7 @@ Example:
 
 ```bash
 curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
-"Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL Demo DSK"}'
+"Content-Type: application/json" --data '{"externalId":"CURLDSK", "description":"cURL Demo DSK"}'
 https://localhost:9877/learn/api/public/v1/dataSources
 ```
 
@@ -259,7 +254,7 @@ https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
 
 ```bash
 curl -k --request PATCH -H "Authorization: Bearer <Access Token>" -H
-"Content-Type: application/json" --data '{"externalId":"<String>","description":"<String>"}'
+"Content-Type: application/json" --data '{"externalId":"<String>", "description":"<String>"}'
 https://<LearnHost>/learn/api/public/v1/dataSources/[<primary id>|externalId:<String>]
 ```
 
@@ -267,7 +262,7 @@ Examples:
 
 ```bash
 curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
-"Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL DEMONSTRATION DSK"}'
+"Content-Type: application/json" --data '{"externalId":"CURLDSK", "description":"cURL DEMONSTRATION DSK"}'
  https://localhost:9877/learn/api/public/v1/dataSources/_7_1
 ```
 
@@ -281,7 +276,7 @@ curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBH
 
 ```bash
 curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
-"Content-Type: application/json" --data '{"externalId":"CURLDSK","description":"cURL REST DEMO DSK"}'
+"Content-Type: application/json" --data '{"externalId":"CURLDSK", "description":"cURL REST DEMO DSK"}'
  https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
 ```
 
@@ -313,8 +308,8 @@ https://localhost:9877/learn/api/public/v1/dataSources/externalId:CURLDSK
 ```
 
 ```json
-{"status":404,"message":"Could not find object with ID:
-externalId:CURLDSK","extraInfo":"416d7b944a58482aaed2df50f301861b"}
+{"status":404, "message":"Could not find object with ID:
+externalId:CURLDSK", "extraInfo":"416d7b944a58482aaed2df50f301861b"}
 ```
 
 ### USERS
@@ -328,15 +323,15 @@ https://localhost:9877/learn/api/public/v1/users
 ```
 
 Remember, you can always find the JSON specification for these calls at
-[Explore APIs](https://developer.blackboard.com/portal/displayApi)
+[Explore APIs](https://developer.anthology.com/portal/displayApi)
 
 Example:
 
 ```bash
 curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
-"Content-Type: application/json" --data '{"externalId":"restdemouser","dataSourceId":"_7_1"
-,"userName":"restdemouser","password":"xyzzy","availability":{"available":"Yes"},
-"name":{"given":"demo","family":"user","title":"Mr"},"contact":
+"Content-Type: application/json" --data '{"externalId":"restdemouser", "dataSourceId":"_7_1"
+, "userName":"restdemouser", "password":"xyzzy", "availability":{"available":"Yes"},
+"name":{"given":"demo", "family":"user", "title":"Mr"}, "contact":
 {"email":"no.one@ereh.won"}}' https://localhost:9877/learn/api/public/v1/users
 ```
 
@@ -363,29 +358,29 @@ curl -k -X POST -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
 By sheer coincidence this user's ID, '\_7_1', came out to be the same as the DSK
 ID, '\_7_1'.
 
-Note the availability of query parameters in the documentation at https://developer.blackboard.com.
+Note the availability of query parameters in the documentation at https://developer.anthology.com.
 
 Examples:
 
 ```bash
 curl -k -X GET -H "Authorization: Bearer bsdcojzT9i4qTaNE0T8ugEBcXE2U8jtu"
 https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/users?dataSourceId=_2_1
-\&fields=externalId,userName,studentId
+ & fields=externalId,userName,studentId
 ```
 
 ```json
 {"results":[{"externalId":"[abcd001@examity.com](mailto:abcd001@examity.com)",
-"userName":"[abcd001@examity.com](mailto:abcd001@examity.com)","studentId":"ABCD001"},
-{"externalId":"[abcd002@examity.com](mailto:abcd002@examity.com)","userName":"[abcd002@examity.com]
-(mailto:abcd002@examity.com)","studentId":"[ABCD002@examity.com](mailto:ABCD002@examity.com)"},...
+"userName":"[abcd001@examity.com](mailto:abcd001@examity.com)", "studentId":"ABCD001"},
+{"externalId":"[abcd002@examity.com](mailto:abcd002@examity.com)", "userName":"[abcd002@examity.com]
+(mailto:abcd002@examity.com)", "studentId":"[ABCD002@examity.com](mailto:ABCD002@examity.com)"},...
 ```
 
-On a Windows system, use ^ to escape the &.
+On a Windows system, use ^ to escape the  & .
 
 ```bash
 curl -k -X GET -H "Authorization: Bearer bsdcojzT9i4qTaNE0T8ugEBcXE2U8jtu"
 https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/users?
-dataSourceId=_220_1^&fields=externalId,userName,studentId
+dataSourceId=_220_1^ & fields=externalId,userName,studentId
 ```
 
 **Read**
@@ -459,9 +454,9 @@ Example:
 
 ```bash
 curl -k --request PATCH -H "Authorization: Bearer ti3EVMVQO4RqdAgcpmODZdvjvHuuBHDz" -H
-"Content-Type: application/json" --data '{"externalId":"restdemouser","dataSourceId":"_7_1",
-"userName":"restdemouser","availability":{"available":"Yes"},"name":{"given":"Jane",
-"family":"Demo","title":"Ms"},"contact":{"email":"no.one@ereh.won"}}'
+"Content-Type: application/json" --data '{"externalId":"restdemouser", "dataSourceId":"_7_1",
+"userName":"restdemouser", "availability":{"available":"Yes"}, "name":{"given":"Jane",
+"family":"Demo", "title":"Ms"}, "contact":{"email":"no.one@ereh.won"}}'
  https://localhost:9877/learn/api/public/v1/users/_7_1
 ```
 
@@ -509,8 +504,8 @@ https://localhost:9877/learn/api/public/v1/users/externalId:restdemouser
 ```
 
 ```json
-_{"status":404,"message":"Could not find object with ID:
-externalId:restdemouser","extraInfo":"e709f6982af744dfae18d42f68e73fb1"}_
+_{"status":404, "message":"Could not find object with ID:
+externalId:restdemouser", "extraInfo":"e709f6982af744dfae18d42f68e73fb1"}_
 ```
 
 ### COURSE GRADES
@@ -526,14 +521,14 @@ curl -k -X POST -H "Authorization: Bearer <Authorization Token>" -H "Content-Typ
 Example:
 
 ```bash
-curl -k -X POST -H "Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvfys" -H "Content-Type: application/json" --data '{"id": "7","externalId": "co7extId","name": "co7name","description": "co7desc","externalGrade": true,"created":"2016-06-30T05:34:56.497Z","score": {"possible": 77,"decimalPlaces":0},"availability": {"available": "Yes"},"grading": {"type":"Manual","due": "2016-07-01T05:34:56.498Z", "attemptsAllowed":0,"scoringModel": "Last","anonymousGrading": { "type": "None","releaseAfter":"2016-07-11T05:34:56.498Z"}}}' https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/_50_1/gradebook/columns
+curl -k -X POST -H "Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvfys" -H "Content-Type: application/json" --data '{"id": "7", "externalId": "co7extId", "name": "co7name", "description": "co7desc", "externalGrade": true, "created":"2016-06-30T05:34:56.497Z", "score": {"possible": 77, "decimalPlaces":0}, "availability": {"available": "Yes"}, "grading": {"type":"Manual", "due": "2016-07-01T05:34:56.498Z", "attemptsAllowed":0, "scoringModel": "Last", "anonymousGrading": { "type": "None", "releaseAfter":"2016-07-11T05:34:56.498Z"}}}' https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/_50_1/gradebook/columns
 ```
 
 ```json
-{"id":"**_129_1**","externalId":"co7extId","name":"co7name","description":"co7
-desc","externalGrade":true,"created":"2016-07-01T05:45:37.730Z","score":{"poss
-ible":77.0,"decimalPlaces":0},"availability":{"available":"Yes"},"grading":{"t
-ype":"Manual","due":"2016-07-01T05:34:56.498Z"}}
+{"id":"**_129_1**", "externalId":"co7extId", "name":"co7name", "description":"co7
+desc", "externalGrade":true, "created":"2016-07-01T05:45:37.730Z", "score":{"poss
+ible":77.0, "decimalPlaces":0}, "availability":{"available":"Yes"}, "grading":{"t
+ype":"Manual", "due":"2016-07-01T05:34:56.498Z"}}
 ```
 
 **Add/Update Column Grade**
@@ -547,7 +542,8 @@ curl -k --request PATCH -H "Authorization: Bearer <Access Token>" -H "Content-Ty
 Example:
 
 ```bash
-curl -k --request PATCH -H "Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvfys" -H "Content-Type: application/json" --data '{"text": "A","score": 77,"notes": "Great","feedback": "GoodWork!", "exempt":true}' https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/_50_1/gradebook/columns/_129_1/users/_66_1
+curl -k --request PATCH -H "Authorization: Bearer uFMWyuwgItXL0UzMo6AHG0zOhm0yvfys" -H "Content-Type: application/json" --data '{"text": "A", "score": 77, "notes": "Great", "feedback": "GoodWork!", "exempt":true}' https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/_50_1/gradebook/
+columns/_129_1/users/_66_1
 ```
 
 ```json
@@ -578,16 +574,15 @@ Example:
 curl -k -X POST -H "Authorization: Bearer RcHoSkh8EH9UKo6iCHWXDpCKrmCyOIwr" -H "Content-Type: application/json" --data '{"courseId":"mbk-test-copied201910111502"}' https://partner-smoke-test-a.blackboard.com/learn/api/public/v1/courses/courseId:mbk-test/copy
 ```
 
-A new course with courseId: mbk-test-copied201910111502 is created. The
-contents of mbk-test are copied into it.
+A new course with courseId: mbk-test-copied201910111502 is created. The contents of mbk-test are copied into it.
 
 NOTE: You can NOT copy contents into an already existing course. For example
 we used the GUI to create a course with a courseId: mbk-test-
 copied201910111508. Then we attempted to run the following:
 
 ```bash
-curl -k -X POST -H "Authorization: Bearer RcHoSkh8EH9UKo6iCHWXDpCKrmCyOIwr" -H "Content-Type: application/json" --data '{"courseId":"mbk-test-copied201910111508"}' https://partner-smoke-test-a.blackboard.com/learn/api/p
-ublic/v1/courses/_863_1/copy
+curl -k -X POST -H "Authorization: Bearer RcHoSkh8EH9UKo6iCHWXDpCKrmCyOIwr" -H "Content-Type: application/json" --data '{"courseId":"mbk-test-copied201910111508"}' https://partner-smoke-test-a.blackboard.com/learn/api/public/
+v1/courses/_863_1/copy
 ```
 
 ```json
@@ -610,7 +605,8 @@ have a local file to upload.
 1. Get a course's contents.
 
 ```bash
-curl -k -X GET -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" https://bd-partner-a-original.blackboard.com/learn/api/public/v1/courses/courseId:mbk-rest-contents/contents
+curl -k -X GET -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" https://bd-partner-a-original.blackboard.com/learn/api/public/v1/courses/
+courseId:mbk-rest-contents/contents
 ```
 
 ```json
@@ -679,7 +675,8 @@ curl -X POST -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" https:/
 Then call the appropriate endpoint:
 
 ```bash
-curl -k -X POST -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" -H "Content-Type: application/json" --data '{"title": "Sept 2016 Partner Update","contentHandler": {"id": "resource/x-bb-file","file": {"uploadId": "4B6281344DFDD9B1F36A5719BDB10708-38295ef0c6a74954a1055e1045bcfeeb","fileName":"2016.09.BlackboardPartnerUpdate.pdf", "duplicateFileHandling": "Rename"}}}' https://bd-partner-a-original.blackboard.com/learn/api/public/v1/courses/courseId:mbk-rest-contents/contents/_12907_1/children
+curl -k -X POST -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" -H "Content-Type: application/json" --data '{"title": "Sept 2016 Partner Update", "contentHandler": {"id": "resource/x-bb-file", "file": {"uploadId": "4B6281344DFDD9B1F36A5719BDB10708-38295ef0c6a74954a1055e1045bcfeeb", "fileName":"2016.09.BlackboardPartnerUpdate.pdf", "duplicateFileHandling": "Rename"}}}' https://bd-partner-a-original.blackboard.com/learn/api/public/v1/courses/
+courseId:mbk-rest-contents/contents/_12907_1/children
 ```
 
 ```json
@@ -702,11 +699,11 @@ curl -k -X POST -H "Authorization: Bearer TwniVbrjLoQnNVWexAGBgQEyMaw7GT0P" -H "
 ```
 
 You can, of course, use the id returned in the above to fetch the content item
-using the appropriate GET. Read the documentation at developer.blackboard.com.
+using the appropriate GET. Read the documentation at developer.anthology.com.
 
 ### CREATE ASSIGNMENT WITH ATTACHMENT
 
-**Currently Only Available For Ultra Courses (Remember to check the Learn version for availably of the APIs @ [https://developer.blackboard.com](https://developer.blackboard.com))**
+**Currently Only Available For Ultra Courses (Remember to check the Learn version for availably of the APIs @ [https://developer.anthology.com](https://developer.anthology.com))**
 
 1. Get a course's content root. root will only work with the \_abc_xyz ID
    format. It will not work for courseId:<course_id> format.
@@ -759,12 +756,13 @@ temporary location and goes away sometime after being uploaded. Also, there is
 a bug in the following where if attempts allowed is too large it will fail.
 I've not experimented to find the limit.)
 
-Reference: [POST /learn/api/public/v1/courses/{courseId}/contents/createAssignment](https://developer.blackboard.com/portal/displayApi)
+Reference: [POST /learn/api/public/v1/courses/{courseId}/contents/createAssignment](https://developer.anthology.com/portal/displayApi)
 
 Example:
 
 ```bash
-curl -k -X POST -H "Authorization: Bearer N75W0ceKowxtlMUZtuIqwwvPQtxvx3L5" -H "Content-Type: application/json" --data '{"parentId": "_5108_1", "title":"Assignment Created by REST createAssignment", "instructions": "Simple Instructions", "description": "Assignment with Attachment", "position": 0, "fileUploadIds":["D1-D1165F42C7E11286BDAFDCCD2E2BE935-56c7b14aa4cb499b9a9a2a8cc3156290"],"availability": {"available": "Yes", "allowGuests": true, "adaptiveRelease": { "start": "2018-04-05T18:35:20.050Z", "end": "2018-09-02T18:35:20.050Z" } }, "grading": { "due": "2018-09-02T18:35:20.050Z", "attemptsAllowed": 10 }, "score": { "possible": 100 } }' https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/courses/courseId:mbk-ultra-course/contents/createAssignment
+curl -k -X POST -H "Authorization: Bearer N75W0ceKowxtlMUZtuIqwwvPQtxvx3L5" -H "Content-Type: application/json" --data '{"parentId": "_5108_1", "title":"Assignment Created by REST createAssignment", "instructions": "Simple Instructions", "description": "Assignment with Attachment", "position": 0, "fileUploadIds":["D1-D1165F42C7E11286BDAFDCCD2E2BE935-56c7b14aa4cb499b9a9a2a8cc3156290"], "availability": {"available": "Yes", "allowGuests": true, "adaptiveRelease": { "start": "2018-04-05T18:35:20.050Z", "end": "2018-09-02T18:35:20.050Z" } }, "grading": { "due": "2018-09-02T18:35:20.050Z", "attemptsAllowed": 10 }, "score": { "possible": 100 } }' https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/courses/
+courseId:mbk-ultra-course/contents/createAssignment
 ```
 
 ```json
@@ -783,7 +781,7 @@ assignment.
 
 Currently Only Available For Presentation-Only Assignments
 
-**(Reference for all APIs used and the Learn version they are available in is @ [https://developer.blackboard.com](developer.blackboard.com))**
+**(Reference for all APIs used and the Learn version they are available in is @ [https://developer.anthology.com](developer.anthology.com))**
 
 1. Use 3LO to get an access code for the student account that will submit
    the attempt to the assignment. 3LO MUST be used for this process.
@@ -799,7 +797,7 @@ NOTES:
   (Not the ID.)
 
 ```http
-https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=https://localhost&response_type=code&client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d&scope=read write&state=xyzzy
+https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/oauth2/authorizationcode? redirect_uri=https://localhost & response_type=code & client_id=d128e50d-c91e-47d3-a97e-9d0c8a77fb5d & scope=read write & state=xyzzy
 ```
 
 Your browser should take you to the Learn login page. If you see the dialog to
@@ -814,7 +812,7 @@ Your browser's address field will be redirected to a URL like the following.
 You SHOULD see something about being unreachable in the browser. That's OK.
 
 ```http
-https://localhost/?code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT&state=xyzzy
+https://localhost/?code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT & state=xyzzy
 ```
 
 **Our code is: g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT This is the code we use in the next step to get an access token.**
@@ -826,7 +824,7 @@ Note: the redirect_uri must match the redirect_uri we used when we got the
 code.
 
 ```bash
-curl -k --user d128e50d-c91e-47d3-a97e-9d0c8a77fb5d:sorryyoucanthavemysecret --data "grant_type=authorization_code" https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/oauth2/token?code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT&redirect_uri=https://localhost
+curl -k --user d128e50d-c91e-47d3-a97e-9d0c8a77fb5d:sorryyoucanthavemysecret --data "grant_type=authorization_code" https://bd-partner-a-ultra.blackboard.com/learn/api/public/v1/oauth2/token? code=g84Xx0YaEz1iqS6HFRq0X9MdRTnQ48FT & redirect_uri=https://localhost
 ```
 
 We get an access token back to use for submitting the students assignment
@@ -862,7 +860,7 @@ The "studentSubmision" is in bbML format. Reference: [Blackboard Markup
 Language - BbML](bbml)
 
 ```bash
-curl -k -X POST -H "Authorization: Bearer 4mgoFlQoi4Jq4biKpU4R264wugsKF9R1" -H "Content-Type: application/json" --data '{"studentComments":"this is the student commment","studentSubmission": "<!-- {\"bbMLEditorVersion\":1} --> <a href=\"bbupload://BD-BD9C08679892561211D99DB4C817FE68-67545ce854b54d3fb062e38aefeee47c\" data-bbfile=\"{&quot;render&quot;:&quot;inline&quot;,&quot;linkName&quot;:&quot;2016.03.BlackboardPartnerUpdate.pdf&quot;,&quot;mimeType&quot;:&quot;application/pdf&quot;}\">2016.03.BlackboardPartnerUpdate.pdf<_/a>"}:_' https://bd-partner-a-ultra.blackboard.com/learn/api/public/v2/courses/courseId:mbk-ultra-
+curl -k -X POST -H "Authorization: Bearer 4mgoFlQoi4Jq4biKpU4R264wugsKF9R1" -H "Content-Type: application/json" --data '{"studentComments":"this is the student commment", "studentSubmission": "<!-- {\"bbMLEditorVersion\":1} --> <a href=\"bbupload://BD-BD9C08679892561211D99DB4C817FE68-67545ce854b54d3fb062e38aefeee47c\" data-bbfile=\"{ & quot;render & quot;: & quot;inline & quot;, & quot;linkName & quot;: & quot;2016.03.BlackboardPartnerUpdate.pdf & quot;, & quot;mimeType & quot;: & quot;application/pdf & quot;}\">2016.03.BlackboardPartnerUpdate.pdf<_/a>"}:_' https://bd-partner-a-ultra.blackboard.com/learn/api/public/v2/courses/courseId:mbk-ultra-
 course/gradebook/columns/_3297_1/attempts
 ```
 
@@ -876,7 +874,7 @@ the instructor in the GUI.
   "id": "_528_1",
   "userId": "_649_1",
   "status": "InProgress",
-  "studentSubmission": "<!-- {\"bbMLEditorVersion\":1} -->\n<a href=\"https://bd-partner-a-ultra.blackboard.com/bbcswebdav/xid-23611_1\" data-bbfile=\"{&quot;render&quot;:&quot;inline&quot;,&quot;linkName&quot;:&quot;2016.03.BlackboardPartnerUpdate.pdf&quot;,&quot;mimeType&quot;:&quot;application/pdf&quot;}\">2016.03.BlackboardPartnerUpdate.pdf</a>",
+  "studentSubmission": "<!-- {\"bbMLEditorVersion\":1} -->\n<a href=\"https://bd-partner-a-ultra.blackboard.com/bbcswebdav/xid-23611_1\" data-bbfile=\"{ & quot;render & quot;: & quot;inline & quot;, & quot;linkName & quot;: & quot;2016.03.BlackboardPartnerUpdate.pdf & quot;, & quot;mimeType & quot;: & quot;application/pdf & quot;}\">2016.03.BlackboardPartnerUpdate.pdf</a>",
   "exempt": false,
   "created": "2018-05-18T02:48:18.329Z"
 }
@@ -890,7 +888,7 @@ course/gradebook/columns/_3297_1/attempts_528_1
 ```
 
 ```json
-{"id":"528_1","userId":"_649_1","status":"NeedsGrading","studentSubmission":"<!-- {\"bbMLEditorVersion\":1} -->\n<a href=\"[https://bd-partner-a-ultra.blackboard.com/bbcswebdav/xid-23611_1" data-bbfile=\"{&quot;render&quot;:&quot;inline&quot;,&quot;linkName&quot;:&quot;2016.03.BlackboardPartnerUpdate.pdf&quot;,&quot;mimeType&quot;:&quot;application/pdf&quot;}\">2016.03.BlackboardPartnerUpdate.pdf</a>","exempt":false,"created":"2018-05-18T02:48:18.329Z"}
+{"id":"528_1", "userId":"_649_1", "status":"NeedsGrading", "studentSubmission":"<!-- {\"bbMLEditorVersion\":1} -->\n<a href=\"[https://bd-partner-a-ultra.blackboard.com/bbcswebdav/xid-23611_1" data-bbfile=\"{ & quot;render & quot;: & quot;inline & quot;, & quot;linkName & quot;: & quot;2016.03.BlackboardPartnerUpdate.pdf & quot;, & quot;mimeType & quot;: & quot;application/pdf & quot;}\">2016.03.BlackboardPartnerUpdate.pdf</a>", "exempt":false, "created":"2018-05-18T02:48:18.329Z"}
 ```
 
 {: .code-text-to-normal}
@@ -910,4 +908,4 @@ And we see the student's submission with the attachment.
 We hope that the above demonstration gives you a helpful peek under the hood
 as to what is going on when you make REST calls to a Learn system. You can
 take these cURL commands and use them to make all of the REST calls documented
-here: [Explore APIs](https://developer.blackboard.com/portal/displayApi)
+here: [Explore APIs](https://developer.anthology.com/portal/displayApi)

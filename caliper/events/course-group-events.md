@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Course Group Events
 
-Blackboard Learn's Caliper Analytics stream emits a CourseGroupEvent whenever
+Learn's Caliper Analytics stream emits a CourseGroupEvent whenever
 an instructor creates, updates, or deletes a group in a course.
 
 Here is some of the key data that is associated with these events:

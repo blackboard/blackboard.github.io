@@ -102,9 +102,18 @@ header {
   z-index: 999;
 }
 
-#bblogoheader {
-  height: 20x;
+#anthologylogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
   margin: 22px 0px 0px 30px;
+}
+
+#anthologylogoheader {
+  height: 30px;
+  width: auto;
+  margin: 22px 20px 20px 30px;
 }
 
 #dev-docs-span-text {
@@ -112,7 +121,27 @@ header {
   font-size: 18px;
   color: white;
   margin-left: 5px;
+  min-height: 100px;
+  display: inline-flex;
+  align-items: center;
 }
+
+.download-button {
+  height: 30px;
+  width:auto;
+}
+
+.download-btn-placement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-position: 50px 100px;
+}
+
+.header-logo-and-title {
+  float: left;
+}
+
 .header-buttons {
   float: right;
 }
@@ -128,7 +157,7 @@ header {
   background-color: #f8f8f8;
   padding-top: 75px;
   display: block;
-  z-index: 9999
+  z-index: 2;
 }
 
 #menu-trigger {
@@ -268,6 +297,7 @@ header {
   margin: 0px;
   float: left;
   width: 30%;
+  height: auto;
   margin-left: 5%;
 }
 .home-right {
@@ -1178,6 +1208,8 @@ a.purple-text:hover {
 
 .spacey-p {
   margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 150%;
 }
 
 .home-secondary-buttons-black {
@@ -1315,12 +1347,16 @@ a.purple-text:hover {
     height: 31px;
     background-color: #b5b5b5;
     display: block;
-    z-index: 999;
+    z-index: 2;
     float: none;
   }
   .header-buttons i {
     margin: 5px 10px 0px 0px;
     color: black;
+  }
+  #anthologylogoheader {
+    height: 30px;
+    margin: 0px 20px 0px 30px;
   }
 }
 @media only screen and (max-width: 524px) {
@@ -1340,4 +1376,17 @@ a.purple-text:hover {
   #search-container input {
     width: 70% !important;
   }
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
 }

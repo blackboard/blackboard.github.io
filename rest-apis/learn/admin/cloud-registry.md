@@ -5,6 +5,8 @@ id: rest-apis-learn-admin-cloud_registry
 categories: Learn Rest
 author: Scott Hurrey
 status: deprecated
+doctitle: "Register Developer Instances to the Cloud"
+pdf: true
 ---
 
 # Register Developer Instances to the Cloud
@@ -34,6 +36,4 @@ receive an error message like the following:
 ![Screen+Shot+2016-04-24+at+10.50.13.png](/assets/img/cloud-registry-1.png)
 
 If you see this error message, try connecting to the Virtual Machine at
-[https://localhost:9877](https://localhost:9877/) and following the steps
-above. This should allow you to register to the cloud and then you should be
-able to use it in non-SSL mode.
+[https://localhost:9877](https://localhost:9877/)and following the steps above. This should allow you to register to the cloud and then you should be able to use it in non-SSL mode.

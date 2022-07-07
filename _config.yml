@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Blackboard Dev docs"
+title: "Anthology Dev docs"
 email: "developers@blackboard.com"
 description: "This site has been created in order to allow our Client's developers to review our documentation and APIs to develop awesome new applications!"
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -31,6 +31,11 @@ plugins:
   - jekyll-feed
   - jekyll-toc
   - jekyll-redirect-from
+  - jekyll-last-modified-at
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: '%d-%b-%y'
 
 sass:
   sass_dir: _sass
@@ -45,12 +50,13 @@ tipue_search:
         blogs,
         collaborate,
         community,
-        dvba,
+        dvaa,
         learn,
         legal,
         mobile,
         partners,
         standards,
+        student,
       ]
 
 defaults:
@@ -59,6 +65,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      pdf: true
   - scope:
       path: ""
     values:
@@ -71,6 +78,7 @@ toc:
 jekyll_analytics:
   GoogleAnalytics: # Add, if you want to track with Google Analytics
     id: UA-173992978-1
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -79,14 +87,16 @@ jekyll_analytics:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - archive/
+  - md2pdf*

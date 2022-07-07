@@ -6,17 +6,17 @@ categories: Standards
 author: Scott Hurrey
 ---
 
-# Using the pyLTI1p3 Library with Blackboard Learn
+# Using the pyLTI1p3 Library with Learn
 
 LTI 1.3 is a much better, much more secure option for integrating one application with another in a standard way. Python is an industry-standard language and is in use by many Blackboard institutions for building integrations. 
 The purpose of this document is to demonstrate how to use the [pyLTI1p3](https://pypi.org/project/PyLTI1p3) library, built by [Dmitry Viskov](https://github.com/dmitry-viskov) to easily integrate a Python 
-application with Blackboard Learn's Ultra Experience. For the purposes of this demonstration, we will use Dmitry's [pylti1.3 flask example](https://github.com/dmitry-viskov/pylti1.3-flask-example).
+application with Learn's Ultra Experience. For the purposes of this demonstration, we will use Dmitry's [pylti1.3 flask example](https://github.com/dmitry-viskov/pylti1.3-flask-example).
 
 ### About The Project
 
 The Flask sample is a simple way to test all the LTI Advantage capabilities of any platform that supports it. Essentially, the application is a brick breaker type game. It uses a basic launch to load the game. 
 It uses the Names and Roles Provisioning Service to load a leaderboard, it uses the Assignments and Grades Service to save your score, and you can use Deep Linking to create links to the game with varying degrees of difficulty. 
-Best of all, with a few minor configuration changes, this project works with Blackboard Learn out of the box!
+Best of all, with a few minor configuration changes, this project works with Learn out of the box!
 
 ## Getting Started
 
@@ -27,7 +27,7 @@ and type `git clone https://github.com/dmitry-viskov/pylti1.3-flask-example.git`
 
 #### Developer Portal 
 
-Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the [developer portal](https://developer.blackboard.com). 
+Now that we have the project cloned locally, we need to register the application for use with Learn. We do this via the [developer portal](https://developer.anthology.com). 
 For more information on this process, check out this [document](/rest-apis/learn/getting-started/registry). Once you have an account set up, you can simply register a new application. 
 You will be prompted to enter several pieces of information. For this project, here is what we need to enter:
 
@@ -49,7 +49,7 @@ We have one more step to go. Next to the name of your game, click the ellipsis `
 In the `Name` field, give the placement a name that you want to display to the instructor.
 In the `Desciption` field, type anything you like. Under `Type`, select `Deep Linking content tool`.
 Under `Target link URI`, enter the launch URL to your tool. In our case it is `https://pylti1p3-game.herokuapp.com/launch/`. 
-Now click `Register placement`, and we are ready to deploy the tool in Blackboard Learn.
+Now click `Register placement`, and we are ready to deploy the tool in Learn.
 
 #### Learn System Admin
 
@@ -60,7 +60,7 @@ In the data you received from the developer portal, there was an Application ID.
 Learn will reach out to the Developer Portal, verify your Client ID and then display a form with all the settings available. Many of these settings are read-only. 
 We need to save the `Deployment ID`, make sure the tool is marked as 'Approved', and be sure to enable memberships and posting of grades. Then click submit.
 
-Our game is now installed in Blackboard Learn!
+Our game is now installed in Learn!
 
 
 ### Setting Up The Tool
@@ -74,16 +74,16 @@ In `game.json`, you will already see a section for Blackboard. It will look like
 ```json
 "https://blackboard.com": {
     "client_id": "your client id",
-    "auth_login_url": "https://developer.blackboard.com/api/v1/gateway/oidcauth",
-    "auth_token_url": "https://developer.blackboard.com/api/v1/gateway/oauth2/jwttoken",
-    "key_set_url": "https://developer.blackboard.com/api/v1/management/applications/<your client id>/jwks.json",
+    "auth_login_url": "https://developer.anthology.com/api/v1/gateway/oidcauth",
+    "auth_token_url": "https://developer.anthology.com/api/v1/gateway/oauth2/jwttoken",
+    "key_set_url": "https://developer.anthology.com/api/v1/management/applications/<your client id>/jwks.json",
     "key_set": null,
     "private_key_file": "private.key",
     "deployment_ids": ["your deployment id"]
 }
 ```
 
-The Blackboard URL is the _Issuer_ sent in the LTI launch JWT. This is always the value in Blackboard Learn. The value for `client_id` should be set to your client ID (application ID from the Developer Portal). 
+The Blackboard URL is the _Issuer_ sent in the LTI launch JWT. This is always the value in Learn. The value for `client_id` should be set to your client ID (application ID from the Developer Portal). 
 The `auth_login_url` and `auth_token_url` settings are always the same, and do not need to be changed. The `key_set_url` is always the same, as well, 
 though it contains your client ID, so you will need to replace `<your client id>` with, you guessed it, your client ID. The _deployment ID_ that you received when you registered your tool in learn 
 goes in the `deployment_ids` setting. Save this file.

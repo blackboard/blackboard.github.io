@@ -8,7 +8,7 @@ author: Scott Hurrey
 
 # Blog Events
 
-Blackboard Learn's Caliper Analytics stream emits a BlogEvent whenever a
+Learn's Caliper Analytics stream emits a BlogEvent whenever a
 student submits a blog entry in an original experience course. Here is some of
 the key data that is associated with these events:
 

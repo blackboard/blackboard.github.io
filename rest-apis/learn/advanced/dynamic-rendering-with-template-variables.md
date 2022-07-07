@@ -4,7 +4,10 @@ title: "Dynamic Rendering with Template Variables"
 categories: Learn rest
 id: rest_apis-learn-advanced-dynamic_rendering
 author: Scott Hurrey
+doctitle: "Dynamic Rendering with Template Variables"
+pdf: true
 ---
+
 
 # Dynamic Rendering with Template Variables
 

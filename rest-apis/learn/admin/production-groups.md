@@ -4,7 +4,10 @@ title: "Production groups"
 id: rest_apis-learn-admin-prod-groups
 categories: Learn Rest Admin
 author: Scott Hurrey
+doctitle: "Developer Portal, Development and Production Groups"
+pdf: true
 ---
+
 
 # Developer Portal, Development and Production Groups
 
@@ -39,7 +42,7 @@ This document explains how to create and manage your groups.
 ### Group Naming Requirements
 
 This is a very important topic because the name you give the group is the name
-that shows up in the Blackboard Learn system that is associated with the
+that shows up in the Learn system that is associated with the
 application ID when the Learn Administrator configures the integration. In
 general, you want the Group Name to include at minimum one or two items, 1.The
 name of the company/vendor that owns the application, and optionally 2. the

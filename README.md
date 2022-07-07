@@ -1,11 +1,11 @@
 # Working With The New Developer Documentation
 
-With the recent Community Site transition from Jive to Personify, the necessity to migrate the Developer Documentation became critical. Personify did not offer the tools for content creation, organization, and curation that we required. After vetting several options, we made the decision to host Blackboard Developer Documentation using Github pages. You can now view all current documentation at https://docs.blackboard.com.
+With the recent Community Site transition from Jive to Personify, the necessity to migrate the Developer Documentation became critical. Personify did not offer the tools for content creation, organization, and curation that we required. After vetting several options, we made the decision to host Anthology Developer Documentation using Github pages. You can now view all current documentation at https://docs.anthology.com.
 
 With this change, the process for working with the documentation has changed. The purpose of this document is to show the processes by which we create, update, and delete developer documentation in its new home. In addition, there are new steps required to wire new documents into the navigation flow. We will cover that here, as well.
 
 ## About
-All developer documentation now lives in a [public repository in github](https://github.com/blackboard/blackboard.github.io). This allows anyone to submit new documentation or edit existing documentation via Pull Request. Now, rather than just a handful of Blackboarders, anyone with a github account can contribute. 
+All developer documentation now lives in a [public repository in github](https://github.com/blackboard/blackboard.github.io). This allows anyone to submit new documentation or edit existing documentation via Pull Request. Now, rather than just a handful of Anthologists, anyone with a github account can contribute. 
 
 In addition, all documents are now written using Github Markdown, a much more user-friendly language than html. This allows one not only to be able to easily format documentation, but it also allows you to edit files firectly in the Github user interface. Using [Jekyll](https://jekyllrb.com/) in conjunction with Github Pages to dynamically create static documentation also makes publishing painless. This process is kicked off automatically whenever a commit is made to the master branch on Github. 
 
@@ -38,16 +38,14 @@ This is slightly out of date. When I last did `brew install ruby` it installed v
 This is easy. Just find the document in the folder structure and edit it as you would any other Markdown file. The documents are organized in the following structure:
 
 * **Top-Level**: This is all the files that are served on the landing page and common UI
-* **collab**: All Blackboard Collaborate Documentation
-* **connecttxt**: All Blackboard ConnectTxt Documentation
-* **dvba**: All documentation related to Developer Versions of Blackboard Applications 
+<!-- * **collab**: All Blackboard Collaborate Documentation -->
+* **connecttxt**: All Anthology ConnectTxt Documentation
+* **dvaa**: All documentation related to Developer Versions of Anthology Applications 
 * **learn**: All documentation related to Learn APIs overall
-* **learn/B2s**: All Building Block documentation
-* **learn/REST**: All LEarn REST API documentation
-* **learn/SOAP - Deprecated**: All SOAP Web Services Documentation
-* **mobile**: All documentation for Blackboard Mobile applications
-* **openlms**: All Documentation for Blackboard OpenLMS
-* **standards**: All documentation related to Blackboard's Standards Support
+* **learn/REST**: All Learn REST API documentation
+* **mobile**: All documentation for Anthology Mobile applications
+* **openlms**: All Documentation for Anthology OpenLMS
+* **standards**: All documentation related to Anthology's Standards Support
 * **images**: All images, referenced from documentation as /images/<image file name>
 * **attachments**: All attachments, referenced from documentation as /attachments/<attachment file name>
 
@@ -205,7 +203,7 @@ The **layout** tag is used to tell jekyll which html template to use. These are 
 
 * collab
 * connecttxt
-* dvba
+* dvaa
 * learn
 * openlms
 * standards

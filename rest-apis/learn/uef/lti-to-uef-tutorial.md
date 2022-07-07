@@ -59,7 +59,7 @@ The next step is to register our application. Notice that we don't have any code
 
 <iframe width="361" height="268" src="https://www.youtube.com/embed/E4PDgQxE5Tg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-1. Browse to [the developer portal](https://developer.blackboard.com)
+1. Browse to [the developer portal](https://developer.anthology.com)
 2. If you do not have an account, register for one. The password restrictions are crazy, so be sure to read them before creating your password to save yourself some time and frustration.
 3. Login to your account
 4. Under My Apps, click the + icon to create a new application.

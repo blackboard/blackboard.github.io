@@ -10,7 +10,7 @@ status: deprecated
 # B2 API Documentation
 
 As of 3700.9.0, we will be uploading these files as part of the build process
-with each release of Blackboard Learn SaaS to test, to facilitate better
+with each release of Learn SaaS to test, to facilitate better
 readiness for SaaS releases to go to production. In order to accomplish this,
 we are automating this process and pushing to the public maven repository:
 
@@ -28,14 +28,14 @@ Blackboard](https:///blackboard.secure.force.com/) on the Download
 Files page for each release.
 
 If an API is not shown in the publicly available documentation, it is not a
-public API. Blackboard does not support its use and we do not guarantee any
+public API. Anthology does not support its use and we do not guarantee any
 kind of ongoing maintenance or compatibility. Use unsupported APIs at your own
 risk.
 
 ## API Documentation
 
 Blackboard provides the Building Blocks API and Web Services Specifications
-for Blackboard Learn 9.1 in an HTML package in Javadoc format.
+for Learn 9.1 in an HTML package in Javadoc format.
 
 Blackboard also provides a "diff file" to detail the changes to the Building
 Blocks API and Web Services Specifications since the previous release of

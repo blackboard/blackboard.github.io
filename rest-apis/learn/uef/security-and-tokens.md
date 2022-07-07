@@ -23,7 +23,7 @@ Before we get started, we also need to keep in mind that your Ultra Extension wi
 
 ### How Authentication/Authorization Works
 
-Ok, now that we have talked through the prerequisites and iframe/cookie connection, we are ready to get started. At its most basic, authenticating and authorizing your Ultra Extension is fairly straightforward. Everything starts when a user logs in to Blackboard Learn.
+Ok, now that we have talked through the prerequisites and iframe/cookie connection, we are ready to get started. At its most basic, authenticating and authorizing your Ultra Extension is fairly straightforward. Everything starts when a user logs in to Learn.
 
 ![Workflow diagram of the authorization flow for the Ultra Extension Framework](/assets/img/uefauthflow.png)
 
@@ -46,7 +46,7 @@ If you want an excellent overview of this process, you can check out this youtub
 
 ### Adding OAuth 2.0 Authorization Code Flow
 
-Authorization Code token management is a standard way of authenticating against REST APIs across the web. For Blackboard, we have this documented <<<<link>>>> here. This is a little tricky when combining with LTI for the purposes of UEF. Let’s look at an updated version of the steps listed above to highlight how this is done with regards to UEF specifically.
+Authorization Code token management is a standard way of authenticating against REST APIs across the web. For Learn, we have this documented <<<<link>>>> here. This is a little tricky when combining with LTI for the purposes of UEF. Let’s look at an updated version of the steps listed above to highlight how this is done with regards to UEF specifically.
 
 1. The user logs in
 2. UEF issues a GET to your login URL with query parameters that include information like the issuer and the target link url

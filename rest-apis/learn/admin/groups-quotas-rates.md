@@ -4,9 +4,12 @@ title: "Groups, Site quotas and rate limits"
 id: rest_apis-learn-admin-group_quotas_rates
 categories: Learn REST
 author: Ryan Haber
+doctitle: "Developer Groups, Site quotas and Rate limits"
+pdf: true
 ---
 
-# Developer groups, Site quotas and rate limits
+
+# Developer Groups, Site quotas and Rate limits
 
 ## Overview
 
@@ -16,7 +19,7 @@ developers work on one or more applications and each group is subject to a
 limit on the number of sites that can use their applications and the number of
 API requests their applications can make daily.
 
-**Note:** If you are a Blackboard client, a Blackboard Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Blackboard DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.blackboard.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
+**Note:** If you are a Blackboard client, a Blackboard Partner / Vendor / Developer of a REST Application should NEVER tell you to go to the developer portal and create an App ID with the associated key/secret to install their application. They should never tell you to apply for a Rate/Site increase for their application. Blackboard DOES NOT support that model. Every REST Application developer should give you an App ID to install their REST App and tell you how to configure a system role for its use. Period. The REST Application developer needs to request the increases they need to run their application themselves. If they ask you to go to developer.anthology.com and get an App ID/Key/Secret, please tell them that is wrong. They should have exactly one App ID for their production REST application that they are asking you to install.
 
 Contractors are an exception to this policy as they are producing an
 integration on your, the Blackboard client, behalf. Questions regarding the
@@ -59,7 +62,7 @@ the Learn administrator when they install your application.
 
 ### Site Quotas
 
-Each developer group has a quota of the maximum number of Blackboard Learn
+Each developer group has a quota of the maximum number of Learn
 sites that can access the group's applications, regardless of number of
 applications. You are responsible for keeping track of the sites where your
 Learn REST Application is installed. If a client attempts to install your REST
@@ -96,7 +99,7 @@ ticket on Behind the Blackboard**. Provide the following in your request:
   This should be your CamelCaseCompanyName. Tell us the name in the ticket.
 - **Developer email that owns the production group**. One of your developers
   created the account that is creating REST API apps and groups on
-  developer.blackboard.com. When that developer creates your
+  developer.anthology.com. When that developer creates your
   CamelCaseCompanyName production group, that developer's email is the
   "Developer email" referenced here.
 - A description of the application, both what it does and which APIs used.

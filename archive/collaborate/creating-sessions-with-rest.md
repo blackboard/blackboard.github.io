@@ -6,7 +6,7 @@ categories: Collaborate
 tipue_search_active: true
 ---
 
-# Creating a Collaborate session with REST API that shows up in the Collaborate scheduler in a Blackboard Learn course
+# Creating a Collaborate session with REST API that shows up in the Collaborate scheduler in a Learn course
 
 We have receive requests about this plenty of times, however we think that when this happens it is better to just write a good article that will help everyone to perform this task.
 
@@ -24,15 +24,15 @@ We will view the steps to perform this and enable you, the developer on doing th
 3.  (**Optional**) Learn REST API integration credentials **are NOT a must** since you should be able to use our API to query the information directly from your browser, however if you want to do this automatically, you need them.
 4.  If you are like me and you are testing everything in POSTMAN then a notepad (I use Sublime 😬) would be helpful
 
-## Start with Blackboard Learn
+## Start with Learn
 
-Please make sure that your integration between Blackboard Learn and Blackboard Collaborate are correct, you can review [this link](https://help.blackboard.com/Collaborate/Ultra/Administrator/Integrations/Collaborate_in_Blackboard_Learn_SaaS#configure-the-blackboard-collaborate-ultra-building-block_OTP-2) to make sure they are correct, make sure to test your connection and it returns a successful message.
+Please make sure that your integration between Learn and Blackboard Collaborate are correct, you can review [this link](https://help.blackboard.com/Collaborate/Ultra/Administrator/Integrations/Collaborate_in_Blackboard_Learn_SaaS#configure-the-blackboard-collaborate-ultra-building-block_OTP-2) to make sure they are correct, make sure to test your connection and it returns a successful message.
 
 Want to view the Learn api? [You may find it here](/rest-apis/learn/getting-started/api)
 
-### Step 1: Create a course, on Blackboard Learn
+### Step 1: Create a course, on Learn
 
-This can be done using Blackboard Learn REST API (You cannot perform POST on browser [without a correct configuration](/rest-apis/learn/getting-started/registry)), but it is also valid if it is created using the GUI, if you are unfamiliar on how to create a course using the GUI, please [review this link](https://help.blackboard.com/Learn/Administrator/SaaS/Courses)
+This can be done using Learn REST API (You cannot perform POST on browser [without a correct configuration](/rest-apis/learn/getting-started/registry)), but it is also valid if it is created using the GUI, if you are unfamiliar on how to create a course using the GUI, please [review this link](https://help.blackboard.com/Learn/Administrator/SaaS/Courses)
 
 > The URLs used here is just an example and not a public instance, it may be decommissioned at any time without any notice. If you need an instance to play around with our API please review [this link](/rest-apis/learn/sandbox/developer-ami)
 
@@ -75,7 +75,7 @@ Learn Server responds with 200:
 
 ### Step 2: Let's create a user
 
-The user can be created also on the Blackboard Learn GUI, when querying the API for the information it should return a message like this, this user can also be created using our Learn API.
+The user can be created also on the Learn GUI, when querying the API for the information it should return a message like this, this user can also be created using our Learn API.
 
 - Using: POST ​/learn​/api​/public​/v1​/users
 
@@ -165,7 +165,7 @@ Want to view the collaborate api? [You may find it here](/rest-apis/collaborate/
 
 What is a context? Well, it is more like a container, it is not a course BUT it can be a course, organization, etc. A context is just a way to group information.
 
-How does the information from a course from Blackboard Learn map with Collaborate Context?
+How does the information from a course from Learn map with Collaborate Context?
 
 - using [POST /contexts](https://app.swaggerhub.com/apis-docs/BBDN/collaborate-api/1.0.0#/contexts/post_contexts)
 
@@ -183,7 +183,7 @@ How does the information from a course from Blackboard Learn map with Collaborat
 }
 ```
 
-So, following our example, our request should look like this: please check that the extId maps to the Blackboard Learn UUID.
+So, following our example, our request should look like this: please check that the extId maps to the Learn UUID.
 
 ```json
 {
