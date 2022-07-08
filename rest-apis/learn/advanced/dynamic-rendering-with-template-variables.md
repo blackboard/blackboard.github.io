@@ -1,15 +1,21 @@
 ---
 layout: post
-title: "Dynamic Rendering with Template Variables"
+title: "Template Variables: Dynamic Rendering"
 categories: Learn rest
 id: rest_apis-learn-advanced-dynamic_rendering
 author: Scott Hurrey
 doctitle: "Dynamic Rendering with Template Variables"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Dynamic Rendering with Template Variables
+{% assign sluggedName = page.name | replace: '.md' %}
+# Dynamic Rendering with Template Variables <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 Using template variables you can create URLs to integrate with other systems by including information about the user's context.
 

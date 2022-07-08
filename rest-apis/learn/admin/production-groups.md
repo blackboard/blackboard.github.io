@@ -6,10 +6,16 @@ categories: Learn Rest Admin
 author: Scott Hurrey
 doctitle: "Developer Portal, Development and Production Groups"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Developer Portal, Development and Production Groups
+{% assign sluggedName = page.name | replace: '.md' %}
+# Developer Portal, Development and Production Groups <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 ### What are Groups?
 

@@ -4,13 +4,18 @@ title: "Ruby Demo"
 id: rest_apis-learn-examples-ruby_demo
 categories: Learn Rest
 author: Scott Hurrey
-doctitle: "Demo using Ruby
-"
+doctitle: "Demo using Ruby"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Demo using Ruby
+{% assign sluggedName = page.name | replace: '.md' %}
+# Demo using Ruby <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
@@ -102,7 +107,7 @@ the JSON response back into the appropriate object.
 End points are generally defined as `/learn/api/public/v1/<objecttype>/<objectId>`. Object ID can be either the pk1, like `_1_1`, or as thebatchuid. This value should be prepended by externalId:, like `externalId:test101`.
 
 For example, to retrieve a course by the pk1 `_1_1`, you would call **GET
-/learn/api/public/v1/courses/\_1_1**. To retrieve by the batchuid `test101`, you
+/learn/api/public/v1/courses/\\_1_1**. To retrieve by the batchuid `test101`, you
 would call **GET /learn/api/public/v1/courses/externalId:test101.**
 
 Create is sent to Learn as a HTTP POST message with a JSON body that defines
@@ -122,8 +127,8 @@ should include the objectId being deleted.
 
 **Create**
 
-{% assign sluggedName = page.name | replace: '.md' %}
-# Ruby Demo <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
+
+# Ruby Demo  
     RestClient.post($DSK_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
            case response.code
                   when 201
@@ -155,7 +160,7 @@ should include the objectId being deleted.
 **Update**
 
 ```ruby
-    payload = "{ \"externalId\":\"BBDN-DSK-RUBY\", \"description\": \"Demo Data Source used for REST Ruby Demo - Updated\" }"
+    payload = "{ \\"externalId\\":\\"BBDN-DSK-RUBY\\", \\"description\\": \\"Demo Data Source used for REST Ruby Demo - Updated\\" }"
      
         RestClient.patch($DSK_PATH + $dsk_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
@@ -187,7 +192,7 @@ should include the objectId being deleted.
 **Create**
 
 ```ruby
-    payload = "{ \"externalId\":\"BBDN-TERM-RUBY\", \"dataSourceId\":\"" + $dsk_id + "\", \"name\" : \"REST Demo Term - Ruby\", \"description\": \"Term Used For REST Demo - Ruby\", \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"externalId\\":\\"BBDN-TERM-RUBY\\", \\"dataSourceId\\":\\"" + $dsk_id + "\\", \\"name\\" : \\"REST Demo Term - Ruby\\", \\"description\\": \\"Term Used For REST Demo - Ruby\\", \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
     RestClient.post($TERM_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
          case response.code
                when 201
@@ -219,7 +224,7 @@ should include the objectId being deleted.
 **Update**
 
 ```ruby
-    payload = "{ \"externalId\":\"BBDN-TERM-RUBY\", \"dataSourceId\":\"" + $dsk_id + "\", \"name\" : \"REST Demo Term - Ruby\", \"description\": \"Updated Term Used For REST Demo - Ruby\", \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"externalId\\":\\"BBDN-TERM-RUBY\\", \\"dataSourceId\\":\\"" + $dsk_id + "\\", \\"name\\" : \\"REST Demo Term - Ruby\\", \\"description\\": \\"Updated Term Used For REST Demo - Ruby\\", \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
         RestClient.patch($TERM_PATH + $term_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
           when 200
@@ -250,7 +255,7 @@ should include the objectId being deleted.
 **Create**
 
 ```ruby
-    payload = "{ \"externalId\" : \"BBDN-Java-Ruby-Demo\", \"courseId\" : \"BBDN-Java-Ruby-Demo\", \"name\" : \"Course Used For REST Demo - Ruby\", \"description\" : \"Course Used For REST Demo - Ruby\", \"allowGuests\" : \"false\", \"readOnly\" : \"false\", \"termId\" : \"" + $term_id + "\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"externalId\\" : \\"BBDN-Java-Ruby-Demo\\", \\"courseId\\" : \\"BBDN-Java-Ruby-Demo\\", \\"name\\" : \\"Course Used For REST Demo - Ruby\\", \\"description\\" : \\"Course Used For REST Demo - Ruby\\", \\"allowGuests\\" : \\"false\\", \\"readOnly\\" : \\"false\\", \\"termId\\" : \\"" + $term_id + "\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
         RestClient.post($COURSE_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
           when 201
@@ -282,7 +287,7 @@ should include the objectId being deleted.
 **Update**
 
 ```ruby
-    payload = "{ \"externalId\" : \"BBDN-Java-Ruby-Demo\", \"courseId\" : \"BBDN-Java-Ruby-Demo\", \"name\" : \"Course Used For REST Demo - Ruby\", \"description\" : \"Updated Course Used For REST Demo - Ruby\", \"allowGuests\" : \"false\", \"readOnly\" : \"false\", \"termId\" : \"" + $term_id + "\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"externalId\\" : \\"BBDN-Java-Ruby-Demo\\", \\"courseId\\" : \\"BBDN-Java-Ruby-Demo\\", \\"name\\" : \\"Course Used For REST Demo - Ruby\\", \\"description\\" : \\"Updated Course Used For REST Demo - Ruby\\", \\"allowGuests\\" : \\"false\\", \\"readOnly\\" : \\"false\\", \\"termId\\" : \\"" + $term_id + "\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
         RestClient.patch($COURSE_PATH + $course_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
         case response.code
           when 200
@@ -313,7 +318,7 @@ should include the objectId being deleted.
 **Create**
 
 ```ruby
-    payload = "{ \"externalId\" : \"bbdnrestdemorubyuser\", \"userName\" : \"restrubyuser\", \"password\" : \"Bl@ckb0ard!\", \"studentId\" : \"restrubyuser\", \"dataSourceId\" : \"" + $dsk_id + "\", \"name\" : { \"given\" : \"Ruby\", \"family\" : \"Rest Demo\" }, \"contact\" : { \"email\" : \"developers@blackboard.com\" }, \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"externalId\\" : \\"bbdnrestdemorubyuser\\", \\"userName\\" : \\"restrubyuser\\", \\"password\\" : \\"Bl@ckb0ard!\\", \\"studentId\\" : \\"restrubyuser\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"name\\" : { \\"given\\" : \\"Ruby\\", \\"family\\" : \\"Rest Demo\\" }, \\"contact\\" : { \\"email\\" : \\"developers@blackboard.com\\" }, \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
      
           RestClient.post($USER_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
           case response.code
@@ -346,7 +351,7 @@ should include the objectId being deleted.
 **Update**
 
 ```ruby
-    payload = "{ \"externalId\" : \"bbdnrestdemorubyuser\", \"userName\" : \"restrubyuser\", \"password\" : \"Bl@ckb0ard!\", \"studentId\" : \"restrubyuser\", \"dataSourceId\" : \"" + $dsk_id + "\", \"name\" : { \"given\" : \"Ruby\", \"family\" : \"Rest Demo\", \"middle\" : \"updated\" }, \"contact\" : { \"email\" : \"developers@blackboard.com\" }, \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"externalId\\" : \\"bbdnrestdemorubyuser\\", \\"userName\\" : \\"restrubyuser\\", \\"password\\" : \\"Bl@ckb0ard!\\", \\"studentId\\" : \\"restrubyuser\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"name\\" : { \\"given\\" : \\"Ruby\\", \\"family\\" : \\"Rest Demo\\", \\"middle\\" : \\"updated\\" }, \\"contact\\" : { \\"email\\" : \\"developers@blackboard.com\\" }, \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
      
           RestClient.patch($USER_PATH + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
           case response.code
@@ -378,7 +383,7 @@ should include the objectId being deleted.
 **Create**
 
 ```ruby
-    payload = "{ \"courseRoleId\" : \"Student\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"courseRoleId\\" : \\"Student\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
      
           RestClient.put($COURSE_PATH + $course_id + '/users/' + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
           case response.code
@@ -411,7 +416,7 @@ should include the objectId being deleted.
 **Update**
 
 ```ruby
-    payload = "{ \"userId\" : \"" + $user_id + "\", \"courseId\" : \"" + $course_id + "\", \"courseRoleId\" : \"Instructor\", \"dataSourceId\" : \"" + $dsk_id + "\", \"availability\" : { \"available\" : \"Yes\" } }"
+    payload = "{ \\"userId\\" : \\"" + $user_id + "\\", \\"courseId\\" : \\"" + $course_id + "\\", \\"courseRoleId\\" : \\"Instructor\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
      
           RestClient.patch($COURSE_PATH + $course_id + '/users/' + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
           case response.code

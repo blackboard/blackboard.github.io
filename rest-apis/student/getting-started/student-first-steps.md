@@ -1,15 +1,21 @@
 ---
 layout: post
-title: "First Steps with Student REST API"
+title: "Student REST API: First Steps"
 id: rest_apis-student-getting-started-first-steps
 categories: Student REST
 author: Mark O'Neil
 doctitle: "First Steps with Student REST API"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# First Steps with Student REST API
+{% assign sluggedName = page.name | replace: '.md' %}
+# First Steps with Student REST API <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 Anthology offers a suite of education technology tools, both software and
 hardware. REST stands for **Re**presentational **S**tate **T**ransfer. It is a

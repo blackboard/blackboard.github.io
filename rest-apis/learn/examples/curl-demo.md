@@ -4,11 +4,19 @@ title: "cURL Demo"
 id: rest_apis-learn-examples-curl_demo
 categories: Learn Rest
 author: Mark Bykerk Kauffman
-doctitle: "cURL Demo"
+doctitle: "cURL Demos"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
+
 ---
 
-# cURL Demo
+{% assign sluggedName = page.name | replace: '.md' %}
+# cURL Demos <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 ## Introduction
 The rest demo script demonstrates authenticating a REST application,

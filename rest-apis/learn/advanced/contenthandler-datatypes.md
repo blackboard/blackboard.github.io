@@ -1,15 +1,21 @@
 ---
 layout: post
-title: "Data types for contentHandler"
+title: "ContentHandler Data Types "
 id: rest_apis-learn-advanced-content_hndlr
 categories: Learn REST
 author: Ryan Haber
 doctitle: "Data types for contentHandler"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Data types for contentHandler
+{% assign sluggedName = page.name | replace: '.md' %}
+# Data types for contentHandler <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 Learn's `/contents` endpoints accommodate different types of content
 by using different handlers. Use the contentHandler field of requests and

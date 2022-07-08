@@ -7,10 +7,16 @@ categories: Learn Rest
 author: Ryan Haber
 doctitle: "Use APIs to Merge and Cross-list Courses"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Use APIs to Merge and Cross-list Courses
+{% assign sluggedName = page.name | replace: '.md' %}
+# Use APIs to Merge and Cross-list Courses <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 ### Overview
 
