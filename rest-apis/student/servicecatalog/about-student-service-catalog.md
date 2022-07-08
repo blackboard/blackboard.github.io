@@ -6,6 +6,7 @@ categories: Student RESTj
 author: Mark O'Neil
 doctitle: "Anthology Student Service Catalog"
 pdf: true
+
 geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
 header-includes: |
   \usepackage{fvextra}
@@ -13,6 +14,7 @@ header-includes: |
   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
   \usepackage{hyperref}
 ---
+
 
 {% assign sluggedName = page.name | replace: '.md' %}
 # Anthology Student Service Catalog <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
