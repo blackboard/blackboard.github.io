@@ -6,10 +6,16 @@ categories: Learn Rest
 author: Ryan Haber
 doctitle: "Use APIs to Work with Ultra Assignments"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Use APIs to Work with Ultra Assignments
+{% assign sluggedName = page.name | replace: '.md' %}
+# Use APIs to Work with Ultra Assignments <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 ### Overview
 

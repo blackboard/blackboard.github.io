@@ -4,12 +4,12 @@ title: "Premium APIs"
 id: rest_apis-learn-uef-request_premium_apis
 categories: REST
 author: Hernan Ortiz
-doctitle: "Premium APIs"
+doctitle: "Premium Public APIs"
 pdf: true
 ---
 
 
-# Premium APIs
+# Premium Public APIs
 Premium APIs offer several new capabilities for integrations with
 Learn Ultra experience.
 
