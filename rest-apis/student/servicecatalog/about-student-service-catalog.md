@@ -6,7 +6,6 @@ categories: Student RESTj
 author: Mark O'Neil
 doctitle: "Anthology Student Service Catalog"
 pdf: true
-
 geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
 header-includes: |
   \usepackage{fvextra}
