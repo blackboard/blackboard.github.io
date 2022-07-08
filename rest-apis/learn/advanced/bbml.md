@@ -4,11 +4,18 @@ title: "BbML"
 id: rest_apis-learn-advanced-bbml
 categories: Learn REST
 author: Scott Hurrey
-doctitle: "BbML"
+doctitle: "BbML: Blackboard Markup Language"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-# BbML 
+{% assign sluggedName = page.name | replace: '.md' %}
+# BbML: Blackboard Markup Language <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 ### Overview
 

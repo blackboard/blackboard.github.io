@@ -6,10 +6,16 @@ categories: Learn Rest
 author: Scott Hurrey
 doctitle: "Demo using Golang"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Demo using Golang
+{% assign sluggedName = page.name | replace: '.md' %}
+# Demo using Golang <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 In August 2016, our friends at [AllTheDucks](https://www.alltheducks.com) presented on their work integrating with the Learn REST APIs using [Golang](https://golang.org).
 

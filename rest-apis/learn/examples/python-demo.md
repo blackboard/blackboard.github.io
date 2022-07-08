@@ -6,10 +6,16 @@ categories: Learn Rest
 author: Mark O'Neil
 doctitle: "Demo using Python"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Demo using Python
+{% assign sluggedName = page.name | replace: '.md' %}
+# Demo using Python <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 The rest demo script demonstrates authenticating a REST application,
 management and use of the authorization token, and creating, updating,
@@ -228,8 +234,8 @@ reading, updating and deleting Term objects.
     Update
     self.PAYLOAD = {
            "externalId":self.termExternalId,
-{% assign sluggedName = page.name | replace: '.md' %}
-# Python Demo <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
+
+# Python Demo  
            "description": "Term used for REST Python demo",
            "availability": {
                   "duration":"continuous"

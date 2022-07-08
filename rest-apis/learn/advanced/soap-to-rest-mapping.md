@@ -1,15 +1,22 @@
 ---
 layout: post
-title: "SOAP to REST"
+title: "SOAP-to-REST"
 tipue-search-status: true
 id: rest_apis-learn-advanced-soap_to_rest
 categories: Learn soap
 author: Scott Hurrey
 doctitle: "SOAP to REST"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-# SOAP to REST migration: Mapping
+{% assign sluggedName = page.name | replace: '.md' %}
+# SOAP to REST <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 The purpose of this document is to provide a mapping from SOAP Web Service
 calls to REST API Endpoints. This is meant to be a quick-start guide to the

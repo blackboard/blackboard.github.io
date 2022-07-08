@@ -6,10 +6,16 @@ categories: Learn REST
 author: Mark Kauffman
 doctitle: "REST Integrations 3-Legged OAuth and Learn Custom Login Pages For System Administrators"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# REST Integrations 3-Legged OAuth and Learn Custom Login Pages For System Administrators
+{% assign sluggedName = page.name | replace: '.md' %}
+# REST Integrations 3-Legged OAuth and Learn Custom Login Pages For System Administrators <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 #### Your Custom Login Page and REST 3-Legged OAuth
 

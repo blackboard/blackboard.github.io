@@ -6,10 +6,16 @@ categories: Learn REST
 author: Mark O'Neil
 doctitle: "Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators
+{% assign sluggedName = page.name | replace: '.md' %}
+# Managing REST Integrations in Learn: The REST Integrations Tool for System Administrators <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 ### Overview of the REST API Integrations Tool
 

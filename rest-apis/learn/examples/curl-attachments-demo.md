@@ -6,10 +6,16 @@ categories: Learn Rest
 author: Mark O'Neil
 doctitle: "Using cURL to access content attachments"
 pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
 ---
 
-
-# Using cURL to access content attachments
+{% assign sluggedName = page.name | replace: '.md' %}
+# Using cURL to access content attachments <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
 
 The Learn REST API supports accessing Content Item information and URLs for
 downloading content attachments.
