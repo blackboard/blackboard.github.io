@@ -18,14 +18,14 @@ In order to work on documentation locally, you just need to do a few things. Fir
 **Note**: If you are on MacOS, you have a default Ruby installed. Jekyll and Bundler require Ruby, but a new version of Ruby that MacOS provides. If you are on a Mac, you can issue the following commands in a terminal session to work around this:
 This is slightly out of date. When I last did `brew install ruby` it installed version 3.x.
 
- ``` 
-    brew install tree
-    brew install rbenv ruby-build
-    echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-    source ~/.bash_profile
-    rbenv install 2.7.0
-    rbenv global 2.7.0
-    gem install jekyll bundler
+```
+$ brew install tree
+$ brew install rbenv ruby-build
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+$ source ~/.bash_profile
+$ rbenv install 2.7.0
+$ rbenv global 2.7.0
+$ gem install jekyll bundler
 ```
 
 1. Clone the repository to your desktop. This is as simple as navigating to a command prompt and typing `git clone <your repo>.git`. If you already have this repo cloned, be sure to use git pull instead to ensure you are starting with the most current files.
@@ -104,7 +104,7 @@ If you only include these values at the top-level, you will get a flat menu stru
 The result when including a category, is a hierarchy like this (based on the above YAML):
 
 ```
-  Learn
+Learn
 --Getting Started
 --About
 ```
@@ -119,7 +119,7 @@ Under categories, the following information is required:
 The result when including a category with topics, is a hierarchy like this (based on the above YAML):
 
 ```
-  Learn
+Learn
 --Getting Started
 ----Basic Authentication
 ----Three-Legged OAuth
@@ -137,7 +137,7 @@ For topics, the following information is required:
 So given the learn.yml file above, let's add our new document:
 
 ```
-  - name: Learn
+- name: Learn
   link: /learn/Integrate%20with%20Blackboard%20Learn.html
   parentId: learn
 - name: REST
@@ -172,7 +172,7 @@ So given the learn.yml file above, let's add our new document:
 Notice that we have set the file extension to **.html**. While yes, we are creating a Markdown file, jekyll is building a static website from that Markdown based on html templates that we have created. When the end user clicks the link in the menu or on the sitemap, it is loading a dynamically generated html file. For illustration of what we have just done, this is our new document hierarchy:
 
 ```
-  Learn
+Learn
 --Getting Started
 ----Basic Authentication
 ----Three-Legged OAuth
@@ -185,7 +185,7 @@ Notice that we have set the file extension to **.html**. While yes, we are creat
 So now our learn.yml is updated and now we are ready to create the new document. Our documents are standard Markdown documents, with one specific modification. We must provide configuration and metadata at the top. All documents should contain a header similar to the following:
 
 ```
-  ---
+---
 layout: learn
 parent: rest
 category: getting-started
@@ -212,7 +212,104 @@ In our YAML file, we specified a parentId. This parentId is the value to assign 
 
 For the metadata, simply provide the title of your document, the author's name, any category information you wish to provide, as well as any tags you wish to provide. We aren't doing anything with either currently, but that could change. Either way, both of these values are optional. Always ensure there is a blank line between the `<hr />` tag and the first line of the document. Omitting this can cause Markdown formatting in the first paragraph to fail to render properly.
 
+If you are interested in providing a PDF download of your article see the Generating PDFs section below.
+
 Once you have finished, save your changes, and commit to your forked repository. Now you can use the built-in tools available in Github to issue a pull request. This request will be reviewed by the Developer Relations and Standards team and merged, as appropriate.
+
+## Generating PDFs
+Included in this project is a bash script, `md2pdf.sh`, which converts `.md` files to `.pdf` files found in and below the target jekyll directory where the `.md` file contains `pdf: true` in it's frontmatter. PDFs are saved in the project `/assets` directory following the site structure e.g. `/assets/pdfs/rest-apis/learn/advanced/bbml.pdf`
+ 
+### Setup:
+Generating PDFs requires the installation of a LaTex tool, and the Pandoc file conversion tool. These instructions are for OSX - google for best installation options for you operating system.
+
+```
+   $ brew install MacTex (or system comparable LaTeX commandline tool)
+   $ brew install pandoc
+```
+
+Now you are ready to prepare for generating PDFs from your `.md` files!
+   
+```
+   $ cd jekyll directory
+   $ place a copy of md2pdf.sh at the top level of your project
+   $ chmod -x md2pdf.sh
+```
+
+Also, create a branch for your changes if you have not already done so.
+   
+### Prepare your .md files for conversion
+There is some required formatting on your `.md` files for successful conversion. Specifically you need to add two lines to the document frontmatter and ensure the necessary title matter matches.
+
+Edit all pages on which you want to support PDFs:
+Add to the frontmatter:
+
+```
+---
+...
+doctitle: <the text you are using as the title in your # tag> (See example in README.md)
+pdf: true
+---
+```
+
+and add two returns after frontmatterclose before your doc title.
+
+Here is a complete example pre-conversion:
+
+```
+---
+layout: post
+title: "BbML"
+id: rest_apis-learn-advanced-bbml
+categories: Learn REST
+author: Scott Hurrey
+doctitle: "BbML: Blackboard Markup Language"
+pdf: true
+---
+
+
+# BbML: Blackboard Markup Language
+<the remainder of your document follows> 
+```
+
+### Now convert your document:
+
+Change to your branch containing your new document
+and before building the jekyll site:
+
+`$./mk2pdf.sh` or `$./mk2pdf.sh <path to a single .md file>`. *It is recommended you use the single file command.*
+
+      NOTE: You should recommit your .md file(s) as PDF generation related frontmatter and pdf download links are added. :-)
+      
+Here is a complete example of a converted .md file:
+
+```
+---
+layout: post
+title: "BbML"
+id: rest_apis-learn-advanced-bbml
+categories: Learn REST
+author: Scott Hurrey
+doctitle: "BbML: Blackboard Markup Language"
+pdf: true
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2.5cm"
+header-includes: |
+  \usepackage{fvextra}
+  \usepackage[obeyspaces,spaces,hyphens]{xurl}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+  \usepackage{hyperref}
+---
+
+{% assign sluggedName = page.name | replace: '.md' %}
+# BbML: Blackboard Markup Language <a href="/assets/pdfs{{page.dir}}{{sluggedName}}.pdf" target="_blank"><img class="download-button" src="/assets/img/download.png" height="30px"></a> 
+```
+
+ Now you Build and test the site:
+
+  `$ bundle exec jekyll serve`
+
+If the PDF link on your doc works and the PDF looks good then file a PR with blackboard/blackboard.github.io, and Merge.
+
+Done!
 
 ## Github Operations
 
