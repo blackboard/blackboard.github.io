@@ -269,6 +269,27 @@ The end result of all this would be as follows:
 </a>
 ```
 
+You can also use files that are already uploaded to the content collection by
+referencing the id of the file you want to attach to the BbML.
+
+Once the file has been uploaded into the content collection, the upload endpoint will
+return an id that will be used to associate the respective file.
+
+Similar to the anchor tag with the “bbupload” notation and adding a `data-bbfile`
+attribute as seen above, the anchor tag should look like this:
+
+```html
+<a
+  href="bbresource://<resourceFileId>"
+  data-bbfile='{"render":"inline","linkName":"filename.ext","mimeType":"image/jpeg"}'
+>
+       filename.ext
+</a>
+```
+
+Be careful with the `resourceFileId`, it should match one of the next formats `_1234_1` or 
+`xid-1234_1` any other format will not be received
+
 ### File Type Documentation
 
 The editor recognizes the following values for data-bbfile, with the arguments
