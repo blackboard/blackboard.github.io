@@ -227,10 +227,7 @@ GEM
       sawyer (~> 0.9)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-<<<<<<< HEAD
     posix-spawn (0.3.15)
-=======
->>>>>>> 5afca07 (Updated the css abit)
     public_suffix (4.0.7)
     racc (1.6.0)
     rb-fsevent (0.11.1)
