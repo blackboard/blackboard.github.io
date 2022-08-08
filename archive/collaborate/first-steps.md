@@ -16,7 +16,7 @@ Please keep in mind that this only applies for Blackboard Collaborate Ultra
 
 ### Need credentials for a sandbox? We got you!
 
-If you need credentials in order to start developing (wether you are a client or a partner), please write us an email to developers@blackboard.com letting us know the following:
+If you need credentials in order to start developing (wether you are a client or a partner), please write us an email to developers@anthology.com letting us know the following:
 
 1. Institution or company you are writing us from
 2. Introduce yourself! (Name, what do you do at the company)

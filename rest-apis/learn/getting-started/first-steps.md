@@ -41,7 +41,7 @@ portal, you can see which client systems are using the integrations. Signing
 up is free, and you can develop your integration at no cost. There may be cost
 involved in deploying your integration, but before that happens, you'll have
 to speak with us. To discuss deploying your application, please contact us at
-[developers@blackboard.com](mailto:developers@blackboard.com). Before you can
+[developers@anthology.com](mailto:developers@anthology.com). Before you can
 authenticate your project with Anthology applications, you need to be a
 registered Anthology developer. To register as a Anthology developer:
 
@@ -56,7 +56,7 @@ For more information about the Developer Portal please see [this document](/rest
 Contractors are an exception to this policy as they are producing an
 integration on your, the Anthology client, behalf. Questions regarding the
 policy and whether you are impacted may be asked here, or posted to
-[developers@blackboard.com](mailto:developers@blackboard.com)
+[developers@anthology.com](mailto:developers@anthology.com)
 
 ### Join the Community
 
@@ -121,7 +121,7 @@ others, we offer these popular developer instances.
 
 <!-- ### Developing with Blackboard Collaborate
 
-Things are a little different for developing with Blackboard Collaborate. For more information, see the [Collaborate REST API Reference](/rest-apis/collaborate/api) and then email us at at [developers@blackboard.com](mailto:developers@blackboard.com). We'll set you up with a key and secret for Blackboard Collaborate. Then read about how to use your key and secret to 
+Things are a little different for developing with Blackboard Collaborate. For more information, see the [Collaborate REST API Reference](/rest-apis/collaborate/api) and then email us at at [developers@anthology.com](mailto:developers@anthology.com). We'll set you up with a key and secret for Blackboard Collaborate. Then read about how to use your key and secret to 
 [authenticate with Collaborate](/rest-apis/collaborate/security-and-tokens). The rest of the present topic pertains only to developing with Learn. -->
 
 ### Developing with Learn

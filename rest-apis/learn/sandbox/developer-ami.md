@@ -71,7 +71,7 @@ After starting your AMI there are a few steps to installing and using Let’s En
 
 ```yaml
 ssldomain: devmen.hopto.org
-sslemail: developers@blackboard.com
+sslemail: developers@anthology.com
 ```
 
 4. SSH to your EC2 instance and from the command line reboot the instance using the command:
@@ -100,7 +100,7 @@ Use of the Developer AMI will result in two charges being made to your account:
 2. Software charge
    A Software charge of $0.05/hr (US dollars) is added to the AWS infrastructure charge.
 
-If you have any questions, feel free to ask in this space or email us at developers@blackboard.com.
+If you have any questions, feel free to ask in this space or email us at developers@anthology.com.
 
 #### Log into the Learn Application on the AMI
 

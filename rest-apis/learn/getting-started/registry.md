@@ -26,7 +26,7 @@ integrations. Signing up is free, and you can develop your integration at no
 cost. There may be cost involved in deploying your integration, but before
 that happens, you'll speak with us and we'll provide further guidance. To
 discuss deploying your application, please contact the developer experience
-team at [developers@blackboard.com](mailto:developers@blackboard.com).
+team at [developers@anthology.com](mailto:developers@anthology.com).
 
 You don't have to register right away, but before you can authenticate your
 project so it works with Anthology applications, you will need to be

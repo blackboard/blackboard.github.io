@@ -24,5 +24,5 @@ Getting involved in the Developer community is easy and with options to suit you
   - Check the [Calendar of Events](https://community.blackboard.com/developers) for upcoming deadlines or regularly meeting groups which may benefit from your experience
 - [Host an event](mailto:bbpartnerteam@blackboard.com)
 - E-mail [BbDN](mailto:bbpartnerteam@blackboard.com) with your event details so that we can add it to our events calendar.
-- [Give us feedback](mailto:developers@blackboard.com)
+- [Give us feedback](mailto:developers@anthology.com)
 - [Sponsor an event](https://www.blackboard.com/Contact-Us/Events-Center/Industry-Events.aspx){: target='\_blank'}

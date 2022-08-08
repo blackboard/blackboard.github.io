@@ -146,7 +146,7 @@ https://tools.ietf.org/html/rfc7234#section-5.5](https://tools.ietf.org/html/rfc
 ### Implementing API Deprecations
 
 For details related to the mechanics of deprecating Learn REST APIs please
-email [developers@blackboard.com](mailto:developers@blackboard.com).
+email [developers@anthology.com](mailto:developers@anthology.com).
 
 ### Best Practices
 

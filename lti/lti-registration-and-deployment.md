@@ -82,4 +82,4 @@ Learn has the concept of LTI Placements to support this. Blackboard allows a Too
 
 ![LTI diagram](/assets/img/ltidiagram.png){: .center-image }
 
-If you have any other questions about LTI Registration and Deployment with Learn, [let us know](mailto: developers@blackboard.com).
+If you have any other questions about LTI Registration and Deployment with Learn, [let us know](mailto: developers@anthology.com).

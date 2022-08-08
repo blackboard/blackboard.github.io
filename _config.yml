@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "Anthology Dev docs"
-email: "developers@blackboard.com"
+email: "developers@anthology.com"
 description: "This site has been created in order to allow our Client's developers to review our documentation and APIs to develop awesome new applications!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

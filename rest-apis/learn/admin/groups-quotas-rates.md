@@ -30,7 +30,7 @@ API requests their applications can make daily.
 Contractors are an exception to this policy as they are producing an
 integration on your, the Blackboard client, behalf. Questions regarding the
 policy and whether you are impacted may be asked here, or posted to
-[developers@blackboard.com](mailto:developers@blackboard.com).
+[developers@anthology.com](mailto:developers@anthology.com).
 
 > Rate Limits: By default you get 10.000 calls every 24 hours per site. If you need more, follow the instructions in last two sections of this page.
 
@@ -111,5 +111,5 @@ ticket on Behind the Blackboard**. Provide the following in your request:
 - A description of the application, both what it does and which APIs used.
 
 If you are an open-initiative developer please make your request by email to
-[developers@blackboard.com](mailto:developers@blackboard.com). In your
+[developers@anthology.com](mailto:developers@anthology.com). In your
 request, provide the same information as indicated above.
