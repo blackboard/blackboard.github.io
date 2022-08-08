@@ -68,7 +68,7 @@ gives the REST application full access to all data and operations of your
 Learn environment possibly resulting in IRREPARABLE harm. If a vendor requests
 a System Admin user for their application, do not allow it. In such a case,
 please provide the vendor's contact and application information to
-[developers@blackboard.com](mailto:developers@blackboard.com) so that we can
+[developers@anthology.com](mailto:developers@anthology.com) so that we can
 help the vendor correct the situation.
 
 ![Create REST integration](/assets/img/rest-and-learn-3.png)
@@ -78,7 +78,7 @@ help the vendor correct the situation.
 Contractors are an exception to this policy as they are producing an
 integration on your, the Anthology client, behalf. Questions regarding the
 policy and whether you are impacted may be asked here, or posted to
-[developers@blackboard.com](mailto:developers@blackboard.com).
+[developers@anthology.com](mailto:developers@anthology.com).
 
 ### Managing your REST Integration
 

@@ -23,6 +23,6 @@ For self and managed-hosted clients that are on 3900.0.0 and are now upgrading u
 
 Another common quesiton is from those using the Learn LIS 2.0 SIS integration, which is SOAP based. No, we are keeping the LIS 2.0 SIS integration in the product at this time. It will not be affected.
 
-If you have additional questions, drop a line to developers@blackboard.com and we'll update this blog post with the answer.
+If you have additional questions, drop a line to developers@anthology.com and we'll update this blog post with the answer.
 
 Happy 2021!

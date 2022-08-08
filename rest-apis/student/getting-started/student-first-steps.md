@@ -50,7 +50,7 @@ portal, you can see which client systems are using the integrations. Signing
 up is free, and you can develop your integration at no cost. There may be cost
 involved in deploying your integration, but before that happens, you'll have
 to speak with us. To discuss deploying your application, please contact us at
-[developers@blackboard.com](mailto:developers@blackboard.com). Before you can
+[developers@anthology.com](mailto:developers@anthology.com). Before you can
 authenticate your project with Anthology applications, you need to be a
 registered Anthology developer. To register as a Anthology developer:
 
@@ -65,7 +65,7 @@ For more information about the Developer Portal please see [this document](/rest
 Contractors are an exception to this policy as they are producing an
 integration on your, the Anthology client, behalf. Questions regarding the
 policy and whether you are impacted may be asked here, or posted to
-[developers@blackboard.com](mailto:developers@blackboard.com)
+[developers@anthology.com](mailto:developers@anthology.com)
 
 ### Join the Community
 

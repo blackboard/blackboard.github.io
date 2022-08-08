@@ -87,6 +87,6 @@ By now, I hope you are using LTI 1.3, but I know many are not. As a result, we a
 
 We have validated this fix with one of the partners that was affected. If you are a developer, please fix the issue immediately! If you are an administrator of a Learn SaaS instance using Ultra, and you have UEF integrations, make sure you do not have that JavaScript snippet on your login page. And if you do, please remove it. Then let your UEF integration partners and developers know that this fix must be made as soon as possible.
 
-Regardless of whether you are an administrator or a developer, please feel free to reach out to us at developers@blackboard.com with any questions.
+Regardless of whether you are an administrator or a developer, please feel free to reach out to us at developers@anthology.com with any questions.
 
 Happy coding!

@@ -217,6 +217,6 @@ Cool, right? But let's put the finishing touches on this thing. We might need da
 
 ## Summary
 
-I hope you found that fun and enlightening. As always, if you have questions, comments, or concerns, reach out to us at [developers@blackboard.com](mailto:developers@blackboard.com) and let us know!
+I hope you found that fun and enlightening. As always, if you have questions, comments, or concerns, reach out to us at [developers@anthology.com](mailto:developers@anthology.com) and let us know!
 
 -Happy Coding

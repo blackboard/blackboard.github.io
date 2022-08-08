@@ -14,7 +14,7 @@ Getting started requires a few key decisions on the developer's part. Firstly, t
 
 #### Requesting Access
 
-If you are interested in getting started with the Development of integrations with Blackboard Collaborate Ultra, send an email to developers@blackboard.com. Please tell us who you are, what institution you represent, and how you intend to use the APIs.
+If you are interested in getting started with the Development of integrations with Blackboard Collaborate Ultra, send an email to developers@anthology.com. Please tell us who you are, what institution you represent, and how you intend to use the APIs.
 
 #### Authorization and Authentication
 

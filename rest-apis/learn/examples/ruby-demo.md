@@ -318,7 +318,7 @@ should include the objectId being deleted.
 **Create**
 
 ```ruby
-    payload = "{ \\"externalId\\" : \\"bbdnrestdemorubyuser\\", \\"userName\\" : \\"restrubyuser\\", \\"password\\" : \\"Bl@ckb0ard!\\", \\"studentId\\" : \\"restrubyuser\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"name\\" : { \\"given\\" : \\"Ruby\\", \\"family\\" : \\"Rest Demo\\" }, \\"contact\\" : { \\"email\\" : \\"developers@blackboard.com\\" }, \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
+    payload = "{ \\"externalId\\" : \\"bbdnrestdemorubyuser\\", \\"userName\\" : \\"restrubyuser\\", \\"password\\" : \\"Bl@ckb0ard!\\", \\"studentId\\" : \\"restrubyuser\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"name\\" : { \\"given\\" : \\"Ruby\\", \\"family\\" : \\"Rest Demo\\" }, \\"contact\\" : { \\"email\\" : \\"developers@anthology.com\\" }, \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
      
           RestClient.post($USER_PATH, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
           case response.code
@@ -351,7 +351,7 @@ should include the objectId being deleted.
 **Update**
 
 ```ruby
-    payload = "{ \\"externalId\\" : \\"bbdnrestdemorubyuser\\", \\"userName\\" : \\"restrubyuser\\", \\"password\\" : \\"Bl@ckb0ard!\\", \\"studentId\\" : \\"restrubyuser\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"name\\" : { \\"given\\" : \\"Ruby\\", \\"family\\" : \\"Rest Demo\\", \\"middle\\" : \\"updated\\" }, \\"contact\\" : { \\"email\\" : \\"developers@blackboard.com\\" }, \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
+    payload = "{ \\"externalId\\" : \\"bbdnrestdemorubyuser\\", \\"userName\\" : \\"restrubyuser\\", \\"password\\" : \\"Bl@ckb0ard!\\", \\"studentId\\" : \\"restrubyuser\\", \\"dataSourceId\\" : \\"" + $dsk_id + "\\", \\"name\\" : { \\"given\\" : \\"Ruby\\", \\"family\\" : \\"Rest Demo\\", \\"middle\\" : \\"updated\\" }, \\"contact\\" : { \\"email\\" : \\"developers@anthology.com\\" }, \\"availability\\" : { \\"available\\" : \\"Yes\\" } }"
      
           RestClient.patch($USER_PATH + $user_id, payload, :content_type => :json, :accept => :json, :Authorization => $auth){ |response, request, result, &block|
           case response.code
