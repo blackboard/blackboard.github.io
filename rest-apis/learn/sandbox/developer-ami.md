@@ -10,6 +10,10 @@ categories: DVBA
 
 This document outlines usage of the Learn REST and LTI Developer AMI made available via the Amazon AWS Marketplace.
 
+Please note that AMI licenses are not upgradable. You must subscribe to a newer release and migrate any content or tools prior to license expiration. Please review the **Migration Cookbook - Recreating Data between AMIs** section below.
+
+
+
 ## Overview
 
 The Learn REST and LTI Developer Amazon Machine Image (“AMI”) is an image of a Learn server available in the Amazon Marketplace. The AMI allows a developer to spin up a copy of Learn for building applications that use the REST APIs and/or Learning Tool Interoperability (“LTI”) to integrate with Learn. This image is a standalone copy of the SaaS deployment of Learn that allows development and testing against the Ultra user experience. Once the developer spins up the copy of Learn, it lives in his or her AWS account and the developer has full control over the instance of Learn. All instances are pre-licensed with a developer license. New developer AMIs will be made available in the same cadence as SaaS releases. Please note that there is often a delay of 5-14 days before the AMI is available due to AMI and AWS processing time.
@@ -32,7 +36,7 @@ Before you begin, you must have an Amazon AWS account. If you do not have an AWS
 
 1. We recommend using the Large Tier instance type. This gives you enough storage and power to run Learn effectively and build your cool widget.
 
-- If you see 502 Gateway errors, you may need to increase the size of your AMI. Additionally, you may periodically see a 502 Gateway error during use - keeping in mind EC2s based on this AMI are NOT intended for use as a Production service, you may simply issue a reboot to restart the server maintaining your AWS provisioned public IP and DNS settings.
+- If you see 502 Gateway errors, you may need to increase the size of your AMI. Additionally, you may periodically see a 502 Gateway error during use - keeping in mind EC2s based on this AMI are NOT intended for use as a Production service, you may simply issue a reboot to restart the server retaining your AWS provisioned public IP and DNS settings.
 
 2. We recommend you adjust the security settings to allow:
 
@@ -137,6 +141,8 @@ Note that not stopping your EC2 when you encounter an error will continue to inc
 The above restarts the instance and will typically correct the 504 error.
 
 ### Migration Cookbook - Recreating Data between AMIs
+
+Prior to the expiration of an AMI license (which is not upgradable) if you wish, you may migrate existing Learn data to your new subscription.
 
 Currently, there is no formal migration/transfer tool to port Learn data between AMI (EC2) instances. However, there are several existing administrative tools that can be leveraged to capture the bulk of T&L (teaching/learning data) like courses, users, institutional roles, and enrollments, etc. from an existing (source) EC2 and reinstate/recreate the data onto a (new) EC2. The resources linked below will guide you through this data transfer process:
 
