@@ -1,0 +1,35 @@
+Tue Jul  5 17:43:05 MDT 2022: Starting conversion of .md files to .pdf!
+Tue Jul  5 17:43:05 MDT 2022: Building array of .md files...
+Tue Jul  5 17:43:05 MDT 2022: There are 202 .md files to process...
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/advanced/ultra-assignments.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/advanced/contenthandler-datatypes.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/advanced/dynamic-rendering-with-template-variables.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/advanced/soap-to-rest-mapping.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/advanced/merge-and-crosslist-courses.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/advanced/bbml.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/admin/cloud-registry.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/admin/groups-quotas-rates.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/admin/rest3LO-and-learnSSO.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/admin/rest-and-learn.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/admin/production-groups.pdf EXISTS
+WRITING NEW /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/getting-started/basic-authentication.pdf
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/golang-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/java-command-line.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/ruby-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/java-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/curl-attachments-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/curl-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/php-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/csharp-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/examples/python-demo.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/student/servicecatalog/about-student-service-catalog.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/student/getting-started/student-first-steps.pdf EXISTS
+SKIPPING TO NEXT FILE, /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest/premium-apis.pdf EXISTS
+
+Converted PDFs:
+1: /Users/dherrera/Documents/Projects/blackboard.github.io/assets/pdfs/rest-apis/learn/getting-started/basic-authentication.pdf
+
+
+IMPORTANT!!!
+Before the next commit and Jekyll build globally search and replace "/Users/dherrera/Documents/Projects/blackboard.github.io/assets" with "/assets" on the above files.
+MD to PDF Conversion completed!
