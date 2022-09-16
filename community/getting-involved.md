@@ -16,13 +16,17 @@ Getting involved in the Developer community is easy and with options to suit you
 - Host a webinar
   - Please consider hosting a Webinar on any topic that you feel would benefit the developer community. We are able to provide a conference line and Collaborate software to support your webinar. Contact us if you are interested.
   - The Developer Office Hours is interested in hosting your presentation. Contact us if you have a topic on which you would like to present.
-- [Contribute an idea](https://community.blackboard.com/developers){: target='\_blank'} for a Building Block or LTI Tool
+- [Contribute an idea](https://community.anthology.com/developers){: target='\_blank'} for a Building Block or LTI Tool
 - [Collaborate on a project](https://github.com/oscelot){: target='\_blank'}
 - [Share your solution](https://github.com/oscelot){: target='\_blank'}
-- [Link to your blog](https://community.blackboard.com/developers){: target='\_blank'}
+- [Link to your blog](https://community.anthology.com/developers){: target='\_blank'}
 - Present at a conference or user group event
-  - Check the [Calendar of Events](https://community.blackboard.com/developers) for upcoming deadlines or regularly meeting groups which may benefit from your experience
-- [Host an event](mailto:bbpartnerteam@blackboard.com)
-- E-mail [BbDN](mailto:bbpartnerteam@blackboard.com) with your event details so that we can add it to our events calendar.
+  - Check the [Calendar of Events](https://community.anthology.com/developers) for upcoming deadlines or regularly meeting groups which may benefit from your experience
+- [Host an event](mailto:bbpartnerteam@anthology.com)
+- E-mail [BbDN](mailto:bbpartnerteam@anthology.com) with your event details so that we can add it to our events calendar.
 - [Give us feedback](mailto:developers@anthology.com)
-- [Sponsor an event](https://www.blackboard.com/Contact-Us/Events-Center/Industry-Events.aspx){: target='\_blank'}
+- Join the [Anthology Techies Slack channel](https://join.slack.com/t/blackboardtechies/shared_invite/)
+
+### Tech office hours call
+
+Join our call, every wednesday at 10:00 AM Central on [this link](https://bit.ly/technical-office-hours)
