@@ -14,8 +14,6 @@ header-includes: |
   \usepackage{hyperref}
 ---
 
-{% assign sluggedName = page.name | replace: '.md' %}
----
 layout: post
 title: "Student REST API: First Steps"
 id: rest_apis-student-getting-started-first-steps
@@ -58,6 +56,6 @@ where {campusdomain} is the name/host of your institution's Anthology installati
 
 We will continue to add new examples, tutorials, and code samples so make sure to check these links regularly.
 
-- [Student Developer Docs](https://docs.anthology.com) navigate to REST APIs>Student.
+- [Student Developer Docs](https://docs.anthology.com) (navigate to REST APIs>Student)
 - [Developer Portal](https://developer.anthology.com/){: target='\_blank'}
 - [REST Documentation](https://developer.anthology.com/portal/displayApi){: target='\_blank'}
