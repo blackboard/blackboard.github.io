@@ -76,9 +76,6 @@ main li {
   list-style-type: disc !important;
 }
 
-ul:not(.browser-default) > li {
-  list-style-type: disc !important;
-}
 strong {
   font-weight: bold;
 }
@@ -128,7 +125,7 @@ header {
 
 .download-button {
   height: 30px;
-  width:auto;
+  width: auto;
 }
 
 .download-btn-placement {
@@ -151,7 +148,6 @@ header {
 }
 
 /* MENU */
-
 
 .menu {
   float: left;
@@ -421,9 +417,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
 .home-secondPart li {
   list-style-type: none !important;
 }
-ul:not(.browser-default) > li {
-  list-style-type: none !important;
-}
 .home-secondPart li a {
   color: black;
   text-decoration: underline;
@@ -432,6 +425,7 @@ ul:not(.browser-default) > li {
 .home-secondPart li a:hover {
   text-decoration: none;
 }
+
 #content #sidebar {
   /* Sidebar*/
   width: 19%;
@@ -517,7 +511,7 @@ h6 {
   top: 90px;
 }
 
-.table-of-contents li {
+.table-of-contents ul {
   list-style: none !important;
   list-style-type: none !important;
 }

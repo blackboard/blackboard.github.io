@@ -11,20 +11,25 @@ permalink: /calendar
 
 > Tested with Blackboard Learn version 3900.48.0
 
-Please always remember you may find information about the model here: https://developer.anthology.com/portal/displayApi
+You can review the model in our [developer portal](https://developer.anthology.com/portal/displayApi) for details on each attribute on each endpoint:
+![model of each endpoint](assets/img/calendar_api-model.png)
 
-You can review the model in developer.anthology.com for details on each attribute on each endpoint:
-![Model for each endpoint in Learn's apis](assets/img/calendar_api-model.png)
+## Introduction
 
 Let's say you are a student and let's say you want to keep track of your day to day, what do you do? Yes, a to-do list... Not quite, You can use the tools that already exist and a Calendar is more than enough to know your dues, create activites with a deadline or just to know what is today's date.
 
-We have 3 (three) types of calendars:
+This also applies to administrators, developers and instructors, what if you want to create new items for your students based on gradebook columns, or reminders of meetings? What about an integration with third party tools such as Zoom or Collaborate where you can set the link of the meeting, the occurrency and how frequent the event is? Well, this API will help you do that!
+
+To start, we have four different "types" of calendars
 
 - Institutional
 - Personal
-- Course
+- Course/gradebook
+- Office Hours
 
-The Institutional/Personal calendar is marked as such in the calendar, where can you see them? Well in Ultra, in the main menu, you may see a Schedule/Calendar on your main menu at login:
+### Where is the Institutional and Personal Calendar?
+
+The Institutional/Personal calendar is marked as such in the calendar, Where can you see them? Well in Ultra, in the main menu, you may see a Schedule/Calendar on your main menu at login:
 
 ![Calendar api image in learn](assets/img/calendar-apis-calendar_index.png)
 
@@ -34,11 +39,43 @@ When you click in the gear in the top right of the page it will allow you to fil
 
 The course calendars show up automatically when you are enrolled in a course, those will show up here as well when enrolled.
 
-> Want to learn even more about calendars? Please go to: https://help.blackboard.com/Learn/Administrator/SaaS/User_Interface_Options/Ultra_Experience/Base_Navigation/Calendar to go above and beyond!
+> Want to learn even more about calendars? Please visit [Our calendar guide](https://help.blackboard.com/Learn/Administrator/SaaS/User_Interface_Options/Ultra_Experience/Base_Navigation/Calendar) to go above and beyond!
+
+### What about in a course?
+
+**For Students, Instructors and course builders**
+
+All users that are part of a course see the same things, both calendar and the Course schedule.
+
+![Calendar api image in learn in a course](assets/img/calendar-apis_calendar-instructors.png)
+
+There are clearly several differences between users given each role capabilities:
+
+![Course view for an instructor vs student](/assets/img/calendar-apis-student_view-vs-inst.png)
+
+### Creating a new Item in Learn
+
+As an Instructor, when you want to create a new item for the Course schedule, The UI looks like this:
+
+![Calendar flow in the GUI](/assets/img/calendar-apis_instructor-calendar-schedule.png)
+
+When the item is finally created, it looks then like a small card, you can edit it or delete it:
+
+![Calendar event card](/assets/img/calendar-apis-event-card.png)
+
+### Mapping a calendar Item to the API payload
+
+This is an example of how a Course schedule item looks like in the GUI and in the payload when calling it using:
+
+- GET /learn/api/public/v1/calendars/items?courseId=\_905_1
+
+![Mapping between calendar an the API payload](/assets/img/calendar-apis-calendar-mapping.png)
 
 ## Calendar C.R.U.D
 
-It is not possible to create, update or delete calendars, you can only read them.
+It is not possible to create, update or delete calendars, you can only read them, **this is because**, the calendars are either Personal or Institutional by default, the course schedules are added to Calendar once a person is enrolled.
+
+#### Payload example
 
 - **GET /learn/api/public/v1/calendars**
 
@@ -56,7 +93,7 @@ It is not possible to create, update or delete calendars, you can only read them
 }
 ```
 
-A little example of how this looks in real life:
+A little example of how this looks in real life, when you are enrolled in a course, a calendar is automatically generated, If you only have 1 course, then it will look something like this when you make an API call:
 
 - **GET /learn/api/public/v1/calendars (example)**
 
@@ -72,12 +109,16 @@ A little example of how this looks in real life:
       "name": "Personal"
     },
     {
-      "id": "_66_1",
-      "name": "arcade-101: Arcade!"
-    }
+      "id": "_905_1",
+      "name": "CalendarCourseLearning: Calendar Course Learning"
+    }n
   ]
 }
 ```
+
+When looking at this on Learn, Instructors and Students have a pretty much identical view, the only difference is the Calendar capability to manage Course calendar items:
+
+![Difference between instructor view and student view in calendars](/assets/img/calendar-apis-student_view-vs-inst.png)
 
 ## Calendar Items C.R.U.D
 
@@ -165,7 +206,7 @@ In order to use calendar items you need the following:
 
 This endpoint creates a calendar item, items can be single or recurring.
 
-#### Personal an institutional calendars
+#### Personal and institutional calendars
 
 - If you are using CalendarItems of type OfficeHours, those will be assigned to the current user.
 - To create a Institutional calendar item you need 'system.calendar-item.EXECUTE' entitlement
@@ -235,7 +276,7 @@ Now we can return specific items per calendar, remove them or update them:
 - CalendarItems of type gradebook are a representation of a specific gradable items, therefore, read-only. Modifications to GradeBookColumn items performed via the gradebook column endpoints will be reflected in the CalendarItems endpoints.
 - If you want to use the columnIds from Gradebook Column as a calendar Item id, you can get those from /learn/api/public/v2/courses/{courseId}/gradebook/columns/{columnId}
 
-#### Personal an institutional calendars
+#### Personal and institutional calendars
 
 - All users can view insitution calendar items
 - Any user may view their own calendar items, not other's calendar items
@@ -302,7 +343,7 @@ Now we can return specific items per calendar, remove them or update them:
 
 With this endpoint you can delete a calendar item or series, however, the following must be true in order to delete a calendar item:
 
-#### Personal an institutional calendars
+#### Personal and institutional calendars
 
 - The user must have the 'system.calendar-item.EXECUTE' entitlement
 - Any user may delete their own calendar items
@@ -339,7 +380,7 @@ With this endpoint you can update a calendar item or series, however, the follow
 
 > When updating the series the existing CalendarItems will be removed and a new set of CalendarItems will be created. This is the same behavior as experienced via the UI.
 
-#### Personal an institutional calendars
+#### Personal and institutional calendars
 
 - The user must have the 'system.calendar-item.EXECUTE' entitlement
 - Any user may update their own calendar items
