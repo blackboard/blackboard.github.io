@@ -1,41 +1,42 @@
 ---
 layout: post
 title: "Using the calendar APIs with Ultra"
-id: rest_apis-learn-getting-started-calendar-api
-categories: Learn REST getting-started calendar
+id: rest_apis-learn-working_with_learn_apis-calendar_apis
+categories: Learn REST Working-with APIs Calendar
+date: 03/10/2022 (date in DD/MM/YYYY format)
 Author: Davey Herrera
-permalink: /calendar
 ---
 
-# Using the calendars API with Ultra
+# Using the calendars APIs with Ultra
 
 > Tested with Blackboard Learn version 3900.48.0
 
 You can review the model in our [developer portal](https://developer.anthology.com/portal/displayApi) for details on each attribute on each endpoint:
-![model of each endpoint](assets/img/calendar_api-model.png)
+![model of each endpoint](/assets/img/calendar_api-model.png)
 
 ## Introduction
 
-Let's say you are a student and let's say you want to keep track of your day to day, what do you do? Yes, a to-do list... Not quite, You can use the tools that already exist and a Calendar is more than enough to know your dues, create activites with a deadline or just to know what is today's date.
+Let's say you are a student and let's say you want to keep track of your day to day, what do you do? Yes, a to-do list... Not quite, You can use the tools that already exist and a Calendar is more than enough to know your due dates, create activites with a deadline or just to know what is today's date.
 
-This also applies to administrators, developers and instructors, what if you want to create new items for your students based on gradebook columns, or reminders of meetings? What about an integration with third party tools such as Zoom or Collaborate where you can set the link of the meeting, the occurrency and how frequent the event is? Well, this API will help you do that!
+This also applies to administrators and instructors, what if you want to create new items for your students based on gradebook columns, or reminders of meetings? What about an integration with third party tools such as Zoom or Collaborate where you can set the link of the meeting, the occurrency and how frequent the event is? Well, this API will help you do that!
 
-To start, we have four different "types" of calendars
+To start, we have five different "types" of calendars (We will reference this types as calendarItemType)
 
 - Institutional
 - Personal
 - Course/gradebook
 - Office Hours
+- GradebookColumn
 
 ### Where is the Institutional and Personal Calendar?
 
 The Institutional/Personal calendar is marked as such in the calendar, Where can you see them? Well in Ultra, in the main menu, you may see a Schedule/Calendar on your main menu at login:
 
-![Calendar api image in learn](assets/img/calendar-apis-calendar_index.png)
+![Calendar api image in learn](/assets/img/calendar-apis-calendar_index.png)
 
 When you click in the gear in the top right of the page it will allow you to filter per calendar, You can select which calendars you want to see, Including Personal and institutional:
 
-![Calendar api image in learn - submenu](assets/img/calendar-api-personal_calendar.png)
+![Calendar api image in learn - submenu](/assets/img/calendar-api-personal_calendar.png)
 
 The course calendars show up automatically when you are enrolled in a course, those will show up here as well when enrolled.
 
@@ -47,7 +48,7 @@ The course calendars show up automatically when you are enrolled in a course, th
 
 All users that are part of a course see the same things, both calendar and the Course schedule.
 
-![Calendar api image in learn in a course](assets/img/calendar-apis_calendar-instructors.png)
+![Calendar api image in learn in a course](/assets/img/calendar-apis_calendar-instructors.png)
 
 There are clearly several differences between users given each role capabilities:
 
@@ -73,7 +74,9 @@ This is an example of how a Course schedule item looks like in the GUI and in th
 
 ## Calendar C.R.U.D
 
-It is not possible to create, update or delete calendars, you can only read them, **this is because**, the calendars are either Personal or Institutional by default, the course schedules are added to Calendar once a person is enrolled.
+It is not possible to create, update or delete calendars, you can only read them, **this is because**, the calendars are either Personal or Institutional by default, The course calendars are added automatically when the user is enrolled on a course.
+
+There is an important difference that needs to be made and that is Calendar items are part of calendars and calendar items are owned by the persosns who have access to them. The only way calendar items are created, updated or deleted by an application is if it is acting on behalf of the person who owns the calendar.
 
 #### Payload example
 
@@ -127,7 +130,7 @@ We are not able to create, update or delete Calendars **BUT** We can create new 
 Please keep in mind that:
 
 - All users can view their own institutional items in calendar
-- Al users can view their own personal items in calendar
+- All users can view their own personal items in calendar
 
 ### Pre-requisites
 

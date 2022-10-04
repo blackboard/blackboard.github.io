@@ -41,9 +41,9 @@
               id: rest_apis-learn-getting-started-3lo
               target: _self
             - subsubmenu_content_name: Learn API
-              url: /rest-apis/learn/getting-started/api
+              url: https://developer.anthology.com/portal/displayApi
               id: rest_apis-learn-getting-started-api
-              target: _self
+              target: _blank
             - subsubmenu_content_name: Developer Portal
               url: /rest-apis/learn/getting-started/developer-portal
               id: rest_apis-learn-getting-started-dev_portal
@@ -56,18 +56,7 @@
               url: /rest-apis/learn/getting-started/tutorials
               id: rest_apis-learn-getting-started-tutorials
               target: _self
-            - subsubmenu_content_name: Working with Groups and REST API
-              url: /rest-apis/learn/getting-started/groups-and-rest-api
-              id: rest_apis-learn-getting_started-groups_and_api
-            - subsubmenu_content_name: Working with Adaptive Release and REST API
-              url: /rest-apis/learn/getting-started/adaptive-release
-              id: rest_apis-learn-getting_started-adaptive_release
-              target: _self
-            - subsubmenu_content_name: Working with content and REST API
-              url: /rest-apis/learn/getting-started/creating-content
-              id: rest_apis-learn-getting_started-creating_content_with_API
-              target: _self
-              
+
         - subsubmenu_item: Admin
           id: rest_apis-learn-admin
           type: menu
@@ -87,6 +76,27 @@
             - subsubmenu_content_name: Production Groups
               url: /rest-apis/learn/admin/production-groups
               id: rest_apis-learn-admin-prod-groups
+              target: _self
+
+        - subsubmenu_item: Working with Learn APIs
+          id: rest_apis-learn-working_with_learn_apis
+          type: menu
+          subsubmenu_content:
+            - subsubmenu_content_name: Working with Groups and REST API
+              url: /rest-apis/learn/working-with-apis/groups-and-rest-api
+              id: rest_apis-learn-working_with_learn_apis-groups_and_api
+              target: _self
+            - subsubmenu_content_name: Working with Adaptive Release and REST API
+              url: /rest-apis/learn/working-with-apis/adaptive-release
+              id: rest_apis-learn-working_with_learn_apis-adaptive_release
+              target: _self
+            - subsubmenu_content_name: Working with content and REST API
+              url: /rest-apis/learn/working-with-apis/creating-content
+              id: rest_apis-learn-working_with_learn_apis-creating_content_with_API
+              target: _self
+            - subsubmenu_content_name: Working with Calendar API
+              url: /rest-apis/learn/working-with-apis/using-calendar-api
+              id: rest_apis-learn-working_with_learn_apis-calendar_apis
               target: _self
 
         - subsubmenu_item: Examples
@@ -301,7 +311,7 @@
     - submenu_item: LTI Registration and Deployment with Learn
       url: /lti/lti-registration-and-deployment
       id: lti-registration-deployment
-      target: _self  
+      target: _self
     - submenu_item: Deep Linking 2.0 Sample Json
       url: /lti/deep-linking-two-json
       id: lti-deep_linking_two
@@ -483,4 +493,3 @@
   onclick: home_display_blogs()
   id: blogs
   type: menu
-
