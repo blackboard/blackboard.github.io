@@ -45,9 +45,9 @@
               id: rest_apis-learn-getting-started-api
               target: _blank
             - subsubmenu_content_name: Developer Portal
-              url: /rest-apis/learn/getting-started/developer-portal
+              url: https://developer.anthology.com/portal/displayApi
               id: rest_apis-learn-getting-started-dev_portal
-              target: _self
+              target: _blank
             - subsubmenu_content_name: Framework
               url: /rest-apis/learn/getting-started/framework
               id: rest_apis-learn-getting-started-framework
@@ -82,21 +82,25 @@
           id: rest_apis-learn-working_with_learn_apis
           type: menu
           subsubmenu_content:
-            - subsubmenu_content_name: Working with Groups and REST API
+            - subsubmenu_content_name: Working with Groups and REST APIs
               url: /rest-apis/learn/working-with-apis/groups-and-rest-api
               id: rest_apis-learn-working_with_learn_apis-groups_and_api
               target: _self
-            - subsubmenu_content_name: Working with Adaptive Release and REST API
+            - subsubmenu_content_name: Working with Adaptive Release and REST APIs
               url: /rest-apis/learn/working-with-apis/adaptive-release
               id: rest_apis-learn-working_with_learn_apis-adaptive_release
               target: _self
-            - subsubmenu_content_name: Working with content and REST API
+            - subsubmenu_content_name: Working with content and REST APIs
               url: /rest-apis/learn/working-with-apis/creating-content
               id: rest_apis-learn-working_with_learn_apis-creating_content_with_API
               target: _self
-            - subsubmenu_content_name: Working with Calendar API
+            - subsubmenu_content_name: Working with Calendar APIs
               url: /rest-apis/learn/working-with-apis/using-calendar-api
               id: rest_apis-learn-working_with_learn_apis-calendar_apis
+              target: _self
+            - subsubmenu_content_name: Using the course TOC APIs
+              url: /rest-apis/learn/working-with-apis/course-toc
+              id: rest_apis-learn-working_with_learn_apis-course_toc
               target: _self
 
         - subsubmenu_item: Examples
