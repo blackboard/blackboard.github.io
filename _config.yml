@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+repository: blackboard/blackboard.github.io
 title: "Anthology Dev docs"
 email: "developers@anthology.com"
 description: "This site has been created in order to allow our Client's developers to review our documentation and APIs to develop awesome new applications!"
