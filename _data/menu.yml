@@ -316,6 +316,10 @@
       url: /lti/lti-registration-and-deployment
       id: lti-registration-deployment
       target: _self
+    - submenu_item: Sanctioned LTI Registration and Deployment with Learn
+      url: /lti/sanctioned-lti-registration-and-deployment
+      id: sanctioned-lti-registration-deployment
+      target: _self      
     - submenu_item: Deep Linking 2.0 Sample Json
       url: /lti/deep-linking-two-json
       id: lti-deep_linking_two
