@@ -6,7 +6,7 @@ categories: Learn REST APIS Attendance
 author: Davey Herrera
 date: 21/10/2022
 toc: True
-pernalink: /attendance
+permalink: /attendance
 ---
 
 # Using Attedance APIs
