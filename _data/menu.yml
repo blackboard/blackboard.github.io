@@ -102,6 +102,10 @@
               url: /rest-apis/learn/working-with-apis/course-toc
               id: rest_apis-learn-working_with_learn_apis-course_toc
               target: _self
+            - subsubmenu_content_name: Using Attendance APIs
+              url: /rest-apis/learn/working-with-apis/attendance
+              id: rest_apis-learn-working_with_learn_apis-attendance
+              target: _self
 
         - subsubmenu_item: Examples
           id: rest_apis-learn-examples
@@ -319,7 +323,7 @@
     - submenu_item: Sanctioned LTI Registration and Deployment with Learn
       url: /lti/sanctioned-lti-registration-and-deployment
       id: sanctioned-lti-registration-deployment
-      target: _self      
+      target: _self
     - submenu_item: Deep Linking 2.0 Sample Json
       url: /lti/deep-linking-two-json
       id: lti-deep_linking_two

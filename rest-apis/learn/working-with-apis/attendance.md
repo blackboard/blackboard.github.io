@@ -6,18 +6,17 @@ categories: Learn REST APIS Attendance
 author: Davey Herrera
 date: 21/10/2022
 toc: True
-permalink: /attendance
 ---
 
-# Using Attedance APIs
+# Using Attendance APIs
 
 > Tested Using Blackboard Learn Release 3900.50.0-rel.21+840a19d
 
 ## Introduction
 
-Let's say you have several clases that require you to know if a student arrived at all to a class, was late, completely Absent and later student is excused because something happened.
+Let's say you have several classes that require you to know if a student arrived at all to a class, was late, completely Absent and later student is excused because something happened.
 
-Well, this API will allow you do so or to integrate it with your attendance system and add a grade to the mix in the grade center.
+Well, this API will allow you to do so or to integrate it with your attendance system and add a grade to the mix in the grade center.
 
 Many instructors use attendance data as part of their students' overall grades. Also, some institutions and programs have attendance policies that require instructors to track the number of class meetings students have missed.
 
@@ -31,7 +30,7 @@ Jumping ahead a bit, Attendance can be found within Ultra course view and Origin
 
 ![Image showing the location of attendance in original and Ultra course](/assets/img/docs-site_attendance-1.png)
 
-Alright, that is how you find attendance but what about its components, what makes attendance... Attendance!:
+Alright, that is how you find attendance but what about its components? Let´s review them:
 
 1. User/Attendees
 2. Meeting / Meetings
@@ -75,7 +74,7 @@ Given this idea of objects and groups I have broken down the endpoints to make t
 
 Hopefully this last image is helpful, if you have any questions, please contact us at developers@anthology.com
 
-> A very important note to keep in mind: As of the date of creation of this document, If you create an attendance meeting using theREST API, the attendance status CANNOT be modified using the GUI, it can ONLY be modified using REST API. This does not apply to meetings created in the GUI, you can modify those using either the GUI or the REST API.
+> A very important note to keep in mind: As of the date of creation of this document, If you create an attendance meeting using the REST API, the attendance status CANNOT be modified using the GUI, it can ONLY be modified using REST API. This does not apply to meetings created in the GUI, you can modify those using either the GUI or the REST API.
 
 ### Meeting related endpoints
 
@@ -112,7 +111,7 @@ And in the body:
 }
 ```
 
-When the api is succesful, it returns 200:
+When the api is successful, it returns 200:
 
 ```json
 {
@@ -251,7 +250,7 @@ Returns 200
 
 - **DELETE** /learn/api/public/v1/courses/{courseId}/meetings
 
-When it is succesful returns 204
+When it is successful returns 204
 
 ### User related endpoints
 
@@ -275,7 +274,7 @@ Body
 }
 ```
 
-when it is succesful, it returns 201, it looks like this in the GUI:
+when it is successful, it returns 201, it looks like this in the GUI:
 
 ![A meeting in Ultra course view with an attendance record](/assets/img/docs-site_attendance-10.png)
 
@@ -325,7 +324,7 @@ Returns when 200:
 
 - **DELETE** /learn/api/public/v1/courses/:courseId/meetings/:meetingId/users/:userId
 
-When succesful, returns 204 NO CONTENT
+When successful, returns 204 NO CONTENT
 
 ![A meeting in Ultra course view with an attendance record removed](/assets/img/docs-site_attendance-12.png)
 
@@ -458,7 +457,7 @@ This endpoint is very powerful, be careful when using it since it will remove AL
 
 - **DELETE** / learn/api/public/v1/courses/{courseId}/meetings/users/{userId}
 
-When succesful, returns 204 NO CONTENT.
+When successful, returns 204 NO CONTENT.
 
 #### Remove all attendance records in ALL COURSES for one user
 
