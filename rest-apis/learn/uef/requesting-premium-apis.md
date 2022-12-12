@@ -15,13 +15,13 @@ Learn Ultra experience.
 
 If you’re an Anthology client or a partner in Bronze level or above,
 please [submit a Behind the Blackboard ticket](https://blackboard.secure.force.com/){: target='\_blank'}
-and we’ll get back to you as soon as possible.
+and we’ll get back to you as soon as possible. In your request, include the Group name(s) on which you want the APIs enabled, and the email address of the developer that owns the Group(s).
 
 If you’re a Blackboard Developer Network Partner (BbDN), a Community
 Partner or a third-party developer interested in our Premium APIs,
 we offer a variety of partnership levels in the
 [Anthology Partnership Program](https://www.blackboard.com/partnerships/become-a-partner){: target='\_blank'}.
-Once you upgrade your partnership level, please [submit a Behind the Blackboard ticket](https://blackboard.secure.force.com/){: target='\_blank'}.
+Once you upgrade your partnership level, please [submit a Behind the Blackboard ticket](https://blackboard.secure.force.com/){: target='\_blank'}. In your request, include the Group name(s) on which you want the APIs enabled, and the email address of the developer that owns the Group(s).
 
 ## Our Premium APIs
 
