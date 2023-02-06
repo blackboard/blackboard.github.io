@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LTI 1.3 Tool Implementation Guide"
-id: lti-lti_impl_guide
+id: lti-tutorials-implementation-guide
 categories: Standards
 author: Eric Preston
 ---
