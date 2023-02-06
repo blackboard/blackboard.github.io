@@ -337,6 +337,10 @@
       id: lti-tutorials
       type: menu
       subsubmenu:
+        - subsubmenu_item: Implementation Guide
+          url: /lti/tutorials/implementation-guide
+          id: lti-tutorials-implementation-guide
+          target: _self
         - subsubmenu_item: Develop LTI Advantage Solution
           url: /lti/tutorials/develop-lti-advantage-solution
           id: lti-tutorials-develop_lti_advantage
