@@ -291,6 +291,14 @@
           url: /rest-apis/learn/uef/lti-to-uef-tutorial
           id: rest_apis-learn-uef_tutorial_lti
           target: _self
+        - subsubmenu_item: LTI Launch context added
+          url: /rest-apis/learn/uef/lti_launch_context_added
+          id: rest_apis-learn-uef-launch_context_added_nwl
+          target: _self
+        - subsubmenu_item: Communication page-level analytics
+          url: /rest-apis/learn/uef/communication_page_lvl_analytics-id
+          id: rest_apis-learn-uef-communication_page_lvl_analytics
+          target: _self
         - subsubmenu_item: UEF Documentation
           url: /rest-apis/learn/uef/documentation
           id: rest_apis-learn-uef-documentation
