@@ -11,11 +11,11 @@ toc: true
 
 ## Introduction
 
-This development's purpose is to send a new event called **lti:launch** Even when the route is directed to new window launch from LTI service, which inclujdes toolHref (launchUrl) and placementId along with it.
+This enhancement to the UEF integration framework provides the ability for an integration to send a newEvent **lti:launch** even when the route is directed to new window launch from the LTI service, which inclujdes toolHref (launchUrl) and the placementId along with it.
 
 ### Updated response for existing EventTypes
 
-Currently when navigation to LTI laumch inside the same page, the route event type we subscribe is eventType: **"route","route:changing"**. As expected the LTI launch in the same window, will have the previously mentioned events and the URL is added as toolHref and placementId in the same url as the **blti_placement_id**.
+Currently when navigation to the LTI laumch inside the same page, the route event type we subscribe to is eventType: **"route","route:changing"**. As expected the LTI launch in the same window, will have the previously defined events and the launch URL is added as toolHref and the placementId in the same url as the **blti_placement_id**.
 
 #### Sample Response:
 
