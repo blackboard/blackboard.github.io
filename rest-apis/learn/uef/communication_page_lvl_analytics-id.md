@@ -9,15 +9,15 @@ toc: true
 
 ## Introduction
 
-The idea of this development is the let the UEF integration know if an analytics-id exists (or not) on the page, so if our Integration Partners want to add some functionality on the screen based on the elements visibility, they are sure of the object they want to target.
+This enhancement to the UEF integration allows the framework to know if an analytics-id exists (or not) on the page, so should partners want to add functionality onto a page based on an elements visibility they are sure of the object they want to target.
 
 ## Outline of page-level analytics-id to integration
 
-In order to provide a number of key functionalities that are already being offered in Learn Original, client needs the ability to ask UEF about the presence of specific elements in the current focused panel and in view port on the page based on the analytics-id. The response will be a true or false as to whether the element is present on screen.
+In order to provide a number of key functionalities that are already being supported in Learn Original, Some partner integration need the ability to ask UEF about the presence of specific elements in the current focused panel and in view port on the page based on the analytics-id. The response will be a true or false as to whether the element is present on screen.
 
 ## Batch Processing and Rate-limiting
 
-All the requests received under one second will be batched and a single response will be sent at the end of one second to its respective integration portal.
+All of the requests received under one second will be batched and a single response will be sent at the end of one second to its respective integration portal.
 
 - If Single Integration - rate limiting to 20 requests / second.
 - If Multiple Integration - rate limiting to 15 requests /second to each integration.
@@ -30,11 +30,11 @@ Two key's must be present in request Json -> **Type and AnalyticsIds.**
 
 - **Type** → This key must contain the String value which indicates the request type and purpose of request.
 
-- **AnalyticsIds** → This key should have the list of analytics Id's for which the page components presence will be checked in current view port and in active panel with 100% visibility.
+- **AnalyticsIds** → This key should have the list of analytics Id's for which the page components presence will be checked in the current view port and in the active panel with 100% visibility.
 
-The type of this request event integration will be always **"analytics:visible"**
+The type of this request event integration will always be **"analytics:visible"**
 
-Below is the example of request structure
+Below is the example of the request structure
 
 ### Request Event
 
@@ -47,11 +47,11 @@ Below is the example of request structure
 
 ## Response Structure
 
-Two key's will be present in response Json -> **Type** and **Result**. This response will have all "analyticsId" which was sent in request event along with "isElementVisible" flag to indicate whether the requested analytic Id is present in view port and in active panel with 100% visibility or not.
+Two key's will be present in the response Json -> **Type** and **Result**. This response will have all "analyticsId" which was sent in the request event along with "isElementVisible" flag to indicate whether the requested analytic Id is present in the view port and in the active panel with 100% visibility or not.
 
-- **Type** → This will have String value that indicates request type and purpose of request.
+- **Type** → This will have the String value that indicates the request type and the purpose of the request.
 - **Result** → This will have two parameters -> AnalyticsId and isElementVisible.
-- **AnalyticsId** → This key will have the analytics id that was sent in request event.
+- **AnalyticsId** → This key will have the analytics id that was sent in the request event.
 - **isElementVisible** → This key will have either True/False that indicates whether the given analytics ID is visible in view port and in active panel with 100% visibility or not.
 
 ### Response event
