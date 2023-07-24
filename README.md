@@ -1,6 +1,6 @@
 # Working With The New Developer Documentation
 
-With the recent Community Site transition from Jive to Personify, the necessity to migrate the Developer Documentation became critical. Personify did not offer the tools for content creation, organization, and curation that we required. After vetting several options, we made the decision to host Anthology Developer Documentation using Github pages. You can now view all current documentation at https://docs.anthology.com.
+With the not-so-recent Community Site transition from Jive to Personify, the necessity to migrate the Developer Documentation became critical. Personify did not offer the tools for content creation, organization, and curation that we required. After vetting several options, we made the decision to host Anthology Developer Documentation using Github pages. You can now view all current documentation at https://docs.anthology.com.
 
 With this change, the process for working with the documentation has changed. The purpose of this document is to show the processes by which we create, update, and delete developer documentation in its new home. In addition, there are new steps required to wire new documents into the navigation flow. We will cover that here, as well.
 
